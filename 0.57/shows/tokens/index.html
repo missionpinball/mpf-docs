@@ -33831,21 +33831,21 @@ different situations with different lights, slides, sounds, etc.</p>
 <h2 id="shows-without-tokens">Shows without tokens</h2>
 <p>To understand how tokens work, let's first look at a show that does not
 include any tokens, like this:</p>
-<div class="highlight"><pre><span></span><code>##! show: my_show
-- time: 0
-  lights:
-    led_01: red
-- time: 1
-  lights:
-    led_01: off
+<div class="highlight"><pre><span></span><code><span class="c1">##! show: my_show</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">led_01</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">led_01</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">off</span>
 </code></pre></div>
 <p>The example show above is simple. When it starts, it sets <em>led_01</em> to
 red, then 1 second later, it turns it off. You can run this show in a
 loop to flash <em>led_01</em> between red and off.</p>
 <p>If you called this show <em>flash_red</em>, you could play it via the
 <em>show_player:</em> section of your config, like this:</p>
-<div class="highlight"><pre><span></span><code>show_player:
-  some_event: flash_red
+<div class="highlight"><pre><span></span><code><span class="nt">show_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">some_event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flash_red</span>
 </code></pre></div>
 <p>The problem with this show is that it's hard-coded. It only works for
 <em>led_01</em>, and it only cycles the colors between red and off.</p>
@@ -33856,13 +33856,13 @@ combination you'd ever want. :(</p>
 <h2 id="adding-tokens-to-shows">Adding tokens to shows</h2>
 <p>This is where tokens come in. Consider a slightly modified version of
 the show above using a token instead of a hard-coded LED name:</p>
-<div class="highlight"><pre><span></span><code>##! show: my_show
-- time: 0
-  lights:
-    (led): red
-- time: 1
-  lights:
-    (led): off
+<div class="highlight"><pre><span></span><code><span class="c1">##! show: my_show</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">(led)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">(led)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">off</span>
 </code></pre></div>
 <p>Notice the second show is identical to the first, except every reference
 to <code>led_01</code> has been replaced with <code>(led)</code>.</p>
@@ -33872,13 +33872,13 @@ the fly.</p>
 <p>So in the second show here, when you run the show, you could tell it
 "replace the "leds" token with the value "led_02", which would make
 a show like this:</p>
-<div class="highlight"><pre><span></span><code>##! show: my_show
-- time: 0
-  lights:
-    led_02: red
-- time: 1
-  lights:
-    led_02: off
+<div class="highlight"><pre><span></span><code><span class="c1">##! show: my_show</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">led_02</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">led_02</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">off</span>
 </code></pre></div>
 <p>The actual way that you start and send tokens to shows varies depending
 on what you're doing in MPF. (Typically they're tied to shots or
@@ -33886,60 +33886,60 @@ events.)</p>
 <p>For example, here's how you'd do it via the <em>show_player:</em>. (In this
 example, we also add <code>loops: -1</code> which will cause the show to loop
 (repeat) indefinitely.</p>
-<div class="highlight"><pre><span></span><code>show_player:
-  some_event:
-    flash_red:
-      loops: -1
-      show_tokens:
-        led: led_02
+<div class="highlight"><pre><span></span><code><span class="nt">show_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">some_event</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">flash_red</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">loops</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-1</span>
+<span class="w">      </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">led</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led_02</span>
 </code></pre></div>
 <p>MPF can run multiple instances of a show at the same time, so you could
 run the above show multiple times (at the same time), passing different
 tokens to each one, meaning you could use the same show to flash lots of
 lights at once:</p>
-<div class="highlight"><pre><span></span><code>show_player:
-  some_event:
-    flash_red:
-      loops: -1
-      show_tokens:
-        led: led_02
-  some_other_event:
-    flash_red:
-      loops: -1
-      show_tokens:
-        led: led_03
+<div class="highlight"><pre><span></span><code><span class="nt">show_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">some_event</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">flash_red</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">loops</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-1</span>
+<span class="w">      </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">led</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led_02</span>
+<span class="w">  </span><span class="nt">some_other_event</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">flash_red</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">loops</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-1</span>
+<span class="w">      </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">led</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led_03</span>
 </code></pre></div>
 <h2 id="putting-multiple-values-into-a-single-token">Putting multiple values into a single token</h2>
 <p>You can also use tags to insert multiple values into a single token. For
 example, consider the following section from your machine config:</p>
-<div class="highlight"><pre><span></span><code>lights:
-  led_01:
-    number: 00
-    tags: tag1
-  led_02:
-    number: 01
-    tags: tag1
+<div class="highlight"><pre><span></span><code><span class="nt">lights</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">led_01</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">00</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tag1</span>
+<span class="w">  </span><span class="nt">led_02</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">01</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tag1</span>
 </code></pre></div>
 <p>You can see that both <em>led_01</em> and <em>led_02</em> have the <em>tag1</em> tag applied.
 So if you play the show above (with the <em>leds</em> token), you can actually
 pass the tag name to the token instead:</p>
-<div class="highlight"><pre><span></span><code>show_player:
-  some_event:
-    flash_red:
-      loops: -1
-      show_tokens:
-        led: tag1
+<div class="highlight"><pre><span></span><code><span class="nt">show_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">some_event</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">flash_red</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">loops</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-1</span>
+<span class="w">      </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">led</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tag1</span>
 </code></pre></div>
 <p>This would result in a show that was equivalent to:</p>
-<div class="highlight"><pre><span></span><code>##! show: my_show
-- time: 0
-  lights:
-    led_01: red
-    led_02: red
-- time: 1
-  lights:
-    led_01: off
-    led_02: off
+<div class="highlight"><pre><span></span><code><span class="c1">##! show: my_show</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">led_01</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
+<span class="w">    </span><span class="nt">led_02</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">led_01</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">off</span>
+<span class="w">    </span><span class="nt">led_02</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">off</span>
 </code></pre></div>
 <h2 id="token-names-are-arbitrary">Token names are arbitrary</h2>
 <p>The token show we've been working with so far includes a token called
@@ -33948,22 +33948,22 @@ for. However, MPF doesn't care what the actual token name is. All it's
 doing is a find-and-replace when the show starts with whatever token
 names it was passed.</p>
 <p>For example, this is a perfectly valid show:</p>
-<div class="highlight"><pre><span></span><code>##! show: my_show
-- time: 0
-  lights:
-    (corndog): red
-- time: 1
-  lights:
-    (corndog): off
+<div class="highlight"><pre><span></span><code><span class="c1">##! show: my_show</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">(corndog)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">(corndog)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">off</span>
 </code></pre></div>
 <p>In this case, you'd just pass a value for the <em>corndog</em> token when you
 play the show:</p>
-<div class="highlight"><pre><span></span><code>show_player:
-  some_event:
-    flash_red:
-      loops: -1
-      show_tokens:
-        corndog: led_02
+<div class="highlight"><pre><span></span><code><span class="nt">show_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">some_event</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">flash_red</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">loops</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-1</span>
+<span class="w">      </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">corndog</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led_02</span>
 </code></pre></div>
 <h2 id="tokens-can-be-values-too">Tokens can be values too</h2>
 <p>You can use tokens anywhere in a show. The actual find-and-replace is
@@ -33971,25 +33971,25 @@ pretty simple, just looking for words in parentheses and then
 substituting them with the tokens key/value pairs that were passed when
 the show starts.</p>
 <p>You can also pass multiple tokens. Consider the following show:</p>
-<div class="highlight"><pre><span></span><code>##! show: my_show
-- time: 0
-  lights:
-    (led): (color1)
-- time: 1
-  lights:
-    (led): (color2)
+<div class="highlight"><pre><span></span><code><span class="c1">##! show: my_show</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">(led)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(color1)</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">(led)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(color2)</span>
 </code></pre></div>
 <p>Notice there are three tokens in this show: <em>led</em>, <em>color1</em>, and
 <em>color2</em>. You might call this show <em>color_cycle</em>, which you could then
 play like this:</p>
-<div class="highlight"><pre><span></span><code>show_player:
-  some_event:
-    color_cycle:
-      loops: -1
-      show_tokens:
-        led: led_02
-        color1: green
-        color2: blue
+<div class="highlight"><pre><span></span><code><span class="nt">show_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">some_event</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">color_cycle</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">loops</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-1</span>
+<span class="w">      </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">led</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led_02</span>
+<span class="w">        </span><span class="nt">color1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">green</span>
+<span class="w">        </span><span class="nt">color2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">blue</span>
 </code></pre></div>
 <h2 id="using-mpf-variable-values-in-tokens">Using mpf variable values in tokens</h2>
 <p>In the above explainations the token values, e.g. led_02 were objects you have defined in your config file. You can as well use values of variables mpf is having, e.g. machine variables, or parameter values of an event.</p>
@@ -33998,30 +33998,30 @@ play like this:</p>
 <p><div class="highlight"><pre><span></span><code>INFO : EventManager : Event: ======&#39;player_turn_started&#39;====== Args={&#39;player&#39;: &lt;Player 1&gt;, &#39;number&#39;: 1}
 </code></pre></div>
 The event <code>player_turn_started</code> has for example the argument <code>number</code> for the number of the player whose turn has started.</p>
-<div class="highlight"><pre><span></span><code>show_player:
-  player_turn_started:
-    player_num: #The name of the show to be started upon this event
-      show_tokens:
-        txt: (number)
+<div class="highlight"><pre><span></span><code><span class="nt">show_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">player_turn_started</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">player_num</span><span class="p">:</span><span class="w"> </span><span class="c1">#The name of the show to be started upon this event</span>
+<span class="w">      </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">txt</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(number)</span>
 </code></pre></div>
 <p>The number of the player whose turn started is being displayed in the show where you have used the placeholder <code>txt</code>. The argument <code>number</code> is probably used in many events. When using event arguments as tokens, just use the argument name without any prefix or dot notation.</p>
 <h3 id="variable-values">Variable values</h3>
 <p>You can use as well variable values to be used in a token. For example if you want to access a player variable you can access it with <code>current_player.&lt;variable&gt;</code></p>
-<p><div class="highlight"><pre><span></span><code>show_player:
-  player_turn_started:
-    ball_num: #The name of the show to be started upon this event
-      show_tokens:
-        txt: (current_player.ball)
+<p><div class="highlight"><pre><span></span><code><span class="nt">show_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">player_turn_started</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">ball_num</span><span class="p">:</span><span class="w"> </span><span class="c1">#The name of the show to be started upon this event</span>
+<span class="w">      </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">txt</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(current_player.ball)</span>
 </code></pre></div>
 In this example the ball number of the player is being used in your show once the player's turn has started. In case you want to access a variable of a specific player (which is not necessarily the current player) you can use <code>players[&lt;player_number&gt;].&lt;variable&gt;</code> where <code>player_number</code> is the player starting with 0, e.g. the second player needs the value 1 in this example.</p>
 <p>You can as well access game variables, machine variables or settings. Just use the notation <code>game.&lt;variable&gt;</code> or <code>machine.&lt;variable&gt;</code> or <code>settings.&lt;variable&gt;</code>. You can learn more about using variables as tokens in the <a href="../../config/instructions/dynamic_values/">Dynamic Values</a> reference page.</p>
 <h3 id="formatting-of-variable-values">Formatting of variable values</h3>
 <p>mpf is being build with Python, thus you find in some config files things which are Python specific. An example is how to tell mpf how to format the variable value. In some config files you might find something like this</p>
-<div class="highlight"><pre><span></span><code>show_player:
-  player_turn_started:
-    ball_num: #The name of the show to be started upon this event
-      show_tokens:
-        txt: &quot;{(current_player.ball):d}&quot;
+<div class="highlight"><pre><span></span><code><span class="nt">show_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">player_turn_started</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">ball_num</span><span class="p">:</span><span class="w"> </span><span class="c1">#The name of the show to be started upon this event</span>
+<span class="w">      </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">txt</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{(current_player.ball):d}&quot;</span>
 </code></pre></div>
 <p>That <code>:d</code> tells mpf to format the value as a decimal. To learn about the other Python formatting options see for example here https://docs.python.org/2/library/string.html#format-specification-mini-language</p>
 <h2 id="tokens-vs-tags">Tokens vs Tags</h2>

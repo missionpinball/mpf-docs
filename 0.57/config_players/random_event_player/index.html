@@ -33671,28 +33671,28 @@ icons & this code generated via https://realfavicongenerator.net
 <a href="../">config player</a>
 that's used to post random events from a list of events.</p>
 <p>This is an example:</p>
-<div class="highlight"><pre><span></span><code># in your global config:
-random_event_player:
-  play_random_event_global:
-    scope: machine
-    events:
-      - event1
-      - event2
-      - event3
-##! mode: base
-# in your mode:
-random_event_player:
-  play_random_event:
-    events:
-      - event1
-      - event2
-      - event3
-  play_random_event_with_weight:
-    events:
-      unlikely_event1: 2
-      unlikely_event2: 3
-      likely_event1: 45
-      likely_event2: 50
+<div class="highlight"><pre><span></span><code><span class="c1"># in your global config:</span>
+<span class="nt">random_event_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">play_random_event_global</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">scope</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">machine</span>
+<span class="w">    </span><span class="nt">events</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">event1</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">event2</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">event3</span>
+<span class="c1">##! mode: base</span>
+<span class="c1"># in your mode:</span>
+<span class="nt">random_event_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">play_random_event</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">events</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">event1</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">event2</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">event3</span>
+<span class="w">  </span><span class="nt">play_random_event_with_weight</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">events</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">unlikely_event1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="w">      </span><span class="nt">unlikely_event2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="w">      </span><span class="nt">likely_event1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">45</span>
+<span class="w">      </span><span class="nt">likely_event2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">50</span>
 </code></pre></div>
 <p>When <code>play_random_event</code> is posted a random event is posted
 out of the list <code>event1</code>, <code>event2</code> or

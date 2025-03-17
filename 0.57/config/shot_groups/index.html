@@ -33958,43 +33958,43 @@ to <a href="../../examples/">config file examples</a> for more examples of real 
 <p>You can group shots together via the <code>shot_groups:</code> section of your
 config file.</p>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>#! switches:
-#!   lane_l:
-#!     number:
-#!   lane_a:
-#!     number:
-#!   lane_n:
-#!     number:
-#!   lane_e:
-#!     number:
-#!   upper_standup:
-#!     number:
-##! mode: mode1
-#! shots:
-#!   lane_l:
-#!     switch: lane_l
-#!     show_tokens:
-#!       light: lane_l
-#!   lane_a:
-#!     switch: lane_a
-#!     show_tokens:
-#!       light: lane_a
-#!   lane_n:
-#!     switch: lane_n
-#!     show_tokens:
-#!       light: lane_n
-#!   lane_e:
-#!     switch: lane_e
-#!     show_tokens:
-#!       light: lane_e
-shot_groups:
-  upper_lanes:
-    shots: lane_l, lane_a, lane_n, lane_e
-    rotate_left_events: sw_left_flipper
-    rotate_right_events: sw_right_flipper
-    reset_events: upper_lanes_default_lit_complete
-    enable_events: ball_started
-    disable_events: ball_ending
+<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
+<span class="c1">#!   lane_l:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   lane_a:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   lane_n:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   lane_e:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   upper_standup:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">##! mode: mode1</span>
+<span class="c1">#! shots:</span>
+<span class="c1">#!   lane_l:</span>
+<span class="c1">#!     switch: lane_l</span>
+<span class="c1">#!     show_tokens:</span>
+<span class="c1">#!       light: lane_l</span>
+<span class="c1">#!   lane_a:</span>
+<span class="c1">#!     switch: lane_a</span>
+<span class="c1">#!     show_tokens:</span>
+<span class="c1">#!       light: lane_a</span>
+<span class="c1">#!   lane_n:</span>
+<span class="c1">#!     switch: lane_n</span>
+<span class="c1">#!     show_tokens:</span>
+<span class="c1">#!       light: lane_n</span>
+<span class="c1">#!   lane_e:</span>
+<span class="c1">#!     switch: lane_e</span>
+<span class="c1">#!     show_tokens:</span>
+<span class="c1">#!       light: lane_e</span>
+<span class="nt">shot_groups</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">upper_lanes</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">shots</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lane_l, lane_a, lane_n, lane_e</span>
+<span class="w">    </span><span class="nt">rotate_left_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sw_left_flipper</span>
+<span class="w">    </span><span class="nt">rotate_right_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sw_right_flipper</span>
+<span class="w">    </span><span class="nt">reset_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">upper_lanes_default_lit_complete</span>
+<span class="w">    </span><span class="nt">enable_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ball_started</span>
+<span class="w">    </span><span class="nt">disable_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ball_ending</span>
 </code></pre></div>
 <p>Creating a shot group has several advantages, including:</p>
 <ul>

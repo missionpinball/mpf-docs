@@ -33829,10 +33829,10 @@ of having to list out all the individual LEDs.</p>
 up logic which fires when any device with a certain tag is activated, for example.</p>
 <h2 id="tags-and-events">Tags and Events</h2>
 <p>For example, look at this config where we add a couple of tags to the start button switch:</p>
-<div class="highlight"><pre><span></span><code>switches:
-  mygame_switch_button_start:
-    number: 1
-    tags: start, skyfall
+<div class="highlight"><pre><span></span><code><span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">mygame_switch_button_start</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start, skyfall</span>
 </code></pre></div>
 <p>In this case, whenever the start switch is activated, there will be two
 events fired. You will see something like this in the log:</p>
@@ -33859,35 +33859,35 @@ configurations.</p>
 <p>For this example, a game with 3 popbumpers will all behave in the same
 way. To start we will give 100 points for every hit of a pop bumper.</p>
 <p>Firstly we define the popbumper switches.</p>
-<div class="highlight"><pre><span></span><code>switches:
-  mygame_popbumper_left:
-    number: 55
-    tags: mygame_popbumper
-  mygame_popbumper_top:
-    number: 56
-    tags: mygame_popbumper
-  mygame_popbumper_right:
-    number: 57
-    tags: mygame_popbumper
+<div class="highlight"><pre><span></span><code><span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">mygame_popbumper_left</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">55</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mygame_popbumper</span>
+<span class="w">  </span><span class="nt">mygame_popbumper_top</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">56</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mygame_popbumper</span>
+<span class="w">  </span><span class="nt">mygame_popbumper_right</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">57</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mygame_popbumper</span>
 </code></pre></div>
 <p>Now we want to score 100 points every time a pop bumper is hit. We have
 two ways of accomplishing this same goal. One with pure events and one
 with tags.</p>
 <p>Example with events:</p>
-<div class="highlight"><pre><span></span><code>##! mode: my_mode
-variable_player:
-  mygame_popbumper_left_active:
-    score: 100
-  mygame_popbumper_top_active:
-    score: 100
-  mygame_popbumper_right_active:
-    score: 100
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: my_mode</span>
+<span class="nt">variable_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">mygame_popbumper_left_active</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="w">  </span><span class="nt">mygame_popbumper_top_active</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="w">  </span><span class="nt">mygame_popbumper_right_active</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
 </code></pre></div>
 <p>Now with tags:</p>
-<div class="highlight"><pre><span></span><code>##! mode: my_mode
-variable_player:
-  sw_mygame_popbumper:
-    score: 100
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: my_mode</span>
+<span class="nt">variable_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">sw_mygame_popbumper</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
 </code></pre></div>
 <p>As you can see, if you have a repeating event you can save yourself some
 time and coding by using tags. Any switch tagged as <em>mygame_popbumper</em>
@@ -33904,39 +33904,39 @@ should not tag those switches (MPF will also complain if you do).</p>
 after it was plunged. At that point it is obviously on the playfield and
 ball search should not start.</p>
 <p>All we need to do is add a tag:</p>
-<div class="highlight"><pre><span></span><code>switches:
-  mygame_orbit_l:
-    number: 55
-    tags: playfield_active
-  mygame_orbit_r:
-    number: 56
-    tags: playfield_active
+<div class="highlight"><pre><span></span><code><span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">mygame_orbit_l</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">55</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">playfield_active</span>
+<span class="w">  </span><span class="nt">mygame_orbit_r</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">56</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">playfield_active</span>
 </code></pre></div>
 <h2 id="reserved-tags-in-mpf">Reserved Tags in MPF</h2>
 <p>MPF contains some reserved tags that are used for certain devices. An
 example of this is a ball trough, as follows.</p>
 <h3 id="ball-device-tags">Ball Device Tags</h3>
-<div class="highlight"><pre><span></span><code>#! switches:
-#!   s_test1:
-#!     number: 1
-#!   mygame_switch_trough_1:
-#!     number: 2
-#!   mygame_switch_trough_2:
-#!     number: 3
-#!   mygame_switch_trough_3:
-#!     number: 4
-#! coils:
-#!   mygame_coil_trough_eject:
-#!     number: 1
-ball_devices:
-#!   mygame_balldevice_shooter_lane:
-#!     ball_switches: s_test1
-#!     mechanical_eject: true
-  mygame_balldevice_trough:
-    ball_switches: mygame_switch_trough_1, mygame_switch_trough_2, mygame_switch_trough_3
-    eject_coil: mygame_coil_trough_eject
-    eject_targets: mygame_balldevice_shooter_lane
-    tags: trough, home
+<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
+<span class="c1">#!   s_test1:</span>
+<span class="c1">#!     number: 1</span>
+<span class="c1">#!   mygame_switch_trough_1:</span>
+<span class="c1">#!     number: 2</span>
+<span class="c1">#!   mygame_switch_trough_2:</span>
+<span class="c1">#!     number: 3</span>
+<span class="c1">#!   mygame_switch_trough_3:</span>
+<span class="c1">#!     number: 4</span>
+<span class="c1">#! coils:</span>
+<span class="c1">#!   mygame_coil_trough_eject:</span>
+<span class="c1">#!     number: 1</span>
+<span class="nt">ball_devices</span><span class="p">:</span>
+<span class="c1">#!   mygame_balldevice_shooter_lane:</span>
+<span class="c1">#!     ball_switches: s_test1</span>
+<span class="c1">#!     mechanical_eject: true</span>
+<span class="w">  </span><span class="nt">mygame_balldevice_trough</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">ball_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mygame_switch_trough_1, mygame_switch_trough_2, mygame_switch_trough_3</span>
+<span class="w">    </span><span class="nt">eject_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mygame_coil_trough_eject</span>
+<span class="w">    </span><span class="nt">eject_targets</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mygame_balldevice_shooter_lane</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">trough, home</span>
 </code></pre></div>
 <p>The two tags on the ball trough device assist MPF in determining various
 characteristics of this device. Namely that it is considered a 'home'

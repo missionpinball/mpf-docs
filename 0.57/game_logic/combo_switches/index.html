@@ -33716,11 +33716,11 @@ long they have to be held, and how long they have to be released.</p>
 <h2 id="built-in-flipper-cancel-combo">Built-in flipper cancel combo</h2>
 <p>MPF's <code>mpfconfig.yaml</code> (the built-in machine config that's merged in
 with all machine configs) includes the following section:</p>
-<div class="highlight"><pre><span></span><code>combo_switches:
-  both_flippers:
-    tag_1: left_flipper
-    tag_2: right_flipper
-    events_when_both: flipper_cancel
+<div class="highlight"><pre><span></span><code><span class="nt">combo_switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">both_flippers</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">tag_1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">left_flipper</span>
+<span class="w">    </span><span class="nt">tag_2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">right_flipper</span>
+<span class="w">    </span><span class="nt">events_when_both</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flipper_cancel</span>
 </code></pre></div>
 <p>This means if you tag add <code>tags: left_flipper</code> to your left flipper
 button and <code>tags: right_flipper</code> to your right flipper button, you'll
@@ -33732,40 +33732,40 @@ player hits the flipper buttons within 500ms, then you can copy and add
 this section to your own machine config file and it will overwrite this
 default config.</p>
 <p>Here is an example of using flipper_cancel to cancel a show:</p>
-<div class="highlight"><pre><span></span><code>switches:
-  s_flipper_left:
-    tags: left_flipper
-    number:
-  s_flipper_right:
-    tags: right_flipper
-    number:
+<div class="highlight"><pre><span></span><code><span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_flipper_left</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">left_flipper</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_flipper_right</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">right_flipper</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
 
-shows:
-  mode_intro:
-    - duration: 5
-      slides:
-        mode_intro_slide:
-          widgets:
-            - type: text
-              text: Hit 50 switches to light jackpot
-              color: white
-              font_size: 100
-show_player:
-  start_mode_intro_show:
-    mode_intro:
-      loops: 0
-      events_when_stopped: mode_intro_show_ended
-  flipper_cancel:
-    mode_intro:
-      action: stop
-##! test
-#! post start_mode_intro_show
-#! advance_time_and_run .1
-#! assert_slide_active mode_intro_slide
-#! hit_switch s_flipper_left
-#! hit_switch s_flipper_right
-#! advance_time_and_run .1
-#! assert_slide_not_active mode_intro_slide
+<span class="nt">shows</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">mode_intro</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+<span class="w">      </span><span class="nt">slides</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">mode_intro_slide</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">widgets</span><span class="p">:</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">              </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Hit 50 switches to light jackpot</span>
+<span class="w">              </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">white</span>
+<span class="w">              </span><span class="nt">font_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="nt">show_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">start_mode_intro_show</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">mode_intro</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">loops</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">      </span><span class="nt">events_when_stopped</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mode_intro_show_ended</span>
+<span class="w">  </span><span class="nt">flipper_cancel</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">mode_intro</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stop</span>
+<span class="c1">##! test</span>
+<span class="c1">#! post start_mode_intro_show</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_slide_active mode_intro_slide</span>
+<span class="c1">#! hit_switch s_flipper_left</span>
+<span class="c1">#! hit_switch s_flipper_right</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_slide_not_active mode_intro_slide</span>
 </code></pre></div>
 <p>The start_mode_intro_show will play for 5 seconds unless both flipper
 buttons are pressed which will cancel the show.</p>

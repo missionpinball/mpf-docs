@@ -33679,32 +33679,32 @@ specialized features.</p>
 <p>All tracks can be a <a href="../ducking/">ducking</a> target regardless of the type of track.</p>
 </div>
 <p>Example track configuration:</p>
-<div class="highlight"><pre><span></span><code>sound_system:
-  buffer: 2048
-  frequency: 44100
-  channels: 2
-  tracks:
-    music:
-      volume: 0.5
-      simultaneous_sounds: 1
-      events_when_stopped: music_track_stopped
-      events_when_played: music_track_played
-      events_when_paused: music_track_paused
-    sfx:
-      volume: 0.4
-      simultaneous_sounds: 8
-      preload: true
-    voice:
-      volume: 0.6
-      simultaneous_sounds: 1
-      preload: true
-    loops:
-      type: sound_loop
-      volume: 0.6
-    playlist:
-      type: playlist
-      volume: 0.6
-      crossfade_time: 2s
+<div class="highlight"><pre><span></span><code><span class="nt">sound_system</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">buffer</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2048</span>
+<span class="w">  </span><span class="nt">frequency</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">44100</span>
+<span class="w">  </span><span class="nt">channels</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="w">  </span><span class="nt">tracks</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">music</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">volume</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.5</span>
+<span class="w">      </span><span class="nt">simultaneous_sounds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">      </span><span class="nt">events_when_stopped</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">music_track_stopped</span>
+<span class="w">      </span><span class="nt">events_when_played</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">music_track_played</span>
+<span class="w">      </span><span class="nt">events_when_paused</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">music_track_paused</span>
+<span class="w">    </span><span class="nt">sfx</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">volume</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.4</span>
+<span class="w">      </span><span class="nt">simultaneous_sounds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8</span>
+<span class="w">      </span><span class="nt">preload</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">voice</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">volume</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.6</span>
+<span class="w">      </span><span class="nt">simultaneous_sounds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">      </span><span class="nt">preload</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">loops</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sound_loop</span>
+<span class="w">      </span><span class="nt">volume</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.6</span>
+<span class="w">    </span><span class="nt">playlist</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">playlist</span>
+<span class="w">      </span><span class="nt">volume</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.6</span>
+<span class="w">      </span><span class="nt">crossfade_time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2s</span>
 </code></pre></div>
 <hr />
 <div class="admonition question">

@@ -34135,15 +34135,15 @@ using MPF with a Stern SPIKE machine. Note that we have a how to guide
 which includes
 <a href="../../hardware/spike/">all the SPIKE-specific settings</a> throughout your entire config file, so be sure to read that
 if you have a SPIKE machine.</p>
-<div class="highlight"><pre><span></span><code>hardware:
-  platform: spike
-spike:
-  port: /dev/ttyUSB0
-  baud: 115200
-  runtime_baud: 3000000
-  flow_control: true
-  debug: false
-  nodes: 0, 1, 8, 9, 10, 11
+<div class="highlight"><pre><span></span><code><span class="nt">hardware</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">spike</span>
+<span class="nt">spike</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/dev/ttyUSB0</span>
+<span class="w">  </span><span class="nt">baud</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">115200</span>
+<span class="w">  </span><span class="nt">runtime_baud</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3000000</span>
+<span class="w">  </span><span class="nt">flow_control</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">debug</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">  </span><span class="nt">nodes</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0, 1, 8, 9, 10, 11</span>
 </code></pre></div>
 <h2 id="required-settings">Required settings</h2>
 <p>The following sections are required in the <code>spike:</code> section of your

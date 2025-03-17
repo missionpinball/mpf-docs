@@ -33578,11 +33578,11 @@ icons & this code generated via https://realfavicongenerator.net
 </ul>
 <p>The following snippet will end a running game by long-pressing the start
 button:</p>
-<div class="highlight"><pre><span></span><code>timed_switches:
-  game_cancel:
-    switch_tags: start
-    time: 5s
-    events_when_active: end_game
+<div class="highlight"><pre><span></span><code><span class="nt">timed_switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">game_cancel</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch_tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start</span>
+<span class="w">    </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5s</span>
+<span class="w">    </span><span class="nt">events_when_active</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">end_game</span>
 </code></pre></div>
 <p>Please note that this will also work on ball one and will not inhibit
 bonus nor high_score mode. Let us know in the forum if you need this.</p>

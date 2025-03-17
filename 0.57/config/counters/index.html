@@ -34144,16 +34144,16 @@ to <a href="../../examples/">config file examples</a> for more examples of real 
 <p>The <code>counters:</code> section of your config is where you configure counter
 logic blocks. See also
 <a href="../../game_logic/logic_blocks/counters/">counters</a>. The structure of counter logic blocks is like this:</p>
-<div class="highlight"><pre><span></span><code>##! mode: mode1
-counters:
-  the_name_of_this_counter:
-    count_events: my_count_event
-    count_complete_value: 10
-  some_other_counter:
-    count_events: s_my_switch_active
-    starting_count: 50
-    count_interval: 10
-    count_complete_value: 100
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: mode1</span>
+<span class="nt">counters</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">the_name_of_this_counter</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">count_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my_count_event</span>
+<span class="w">    </span><span class="nt">count_complete_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="w">  </span><span class="nt">some_other_counter</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">count_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_my_switch_active</span>
+<span class="w">    </span><span class="nt">starting_count</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">50</span>
+<span class="w">    </span><span class="nt">count_interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="w">    </span><span class="nt">count_complete_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
 </code></pre></div>
 <p>Note that the actual name of the counter doesn't really matter. Mainly
 it's used in the logs and for event names.</p>
@@ -34161,12 +34161,12 @@ it's used in the logs and for event names.</p>
 using something like <code>(YOUR_COUNTER_count)</code> in a slide or widget you can
 use a
 <a href="../../config_players/variable_player/">variable_player</a> to restore the old behavior:</p>
-<div class="highlight"><pre><span></span><code>##! mode: my_mode
-variable_player:
-  logicblock_YOUR_COUNTER_updated:
-    YOUR_COUNTER_count:
-      int: value
-      action: set
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: my_mode</span>
+<span class="nt">variable_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">logicblock_YOUR_COUNTER_updated</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">YOUR_COUNTER_count</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">int</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">set</span>
 </code></pre></div>
 <h2 id="required-settings">Required settings</h2>
 <p>The following sections are required in the <code>counters:</code> section of your
@@ -34195,13 +34195,13 @@ supports adding/substracting from the count or jumping to a certain
 value.</p>
 <p>For instance in the following example <code>add_five_event</code> will add <code>5</code> to
 the counter:</p>
-<div class="highlight"><pre><span></span><code>counters:
-  counter_with_control_events:
-    count_events: count_up
-    control_events:
-      - event: add_five_event
-        action: add
-        value: 5
+<div class="highlight"><pre><span></span><code><span class="nt">counters</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">counter_with_control_events</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">count_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">count_up</span>
+<span class="w">    </span><span class="nt">control_events</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">add_five_event</span>
+<span class="w">        </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">add</span>
+<span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
 </code></pre></div>
 <h3 id="count_complete_value">count_complete_value:</h3>
 <p>Single value, type: <code>integer</code> or <code>template</code>

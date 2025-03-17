@@ -33844,11 +33844,11 @@ the SW-16 <code>board address</code> (0-15, as configured by the DIP switches),
 then the <code>bank number</code> (Bank A is 0, Bank B is 1), then the switch
 <code>input number</code> (0-7).</p>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>switches:
-  my_switch:
-    number: A0-B0-0    # SW-16 board at address 0, Bank A, Switch 0
-  my_other_switch:
-    number: A2-B1-5    # SW-16 board at address 2, Bank B, Switch 5
+<div class="highlight"><pre><span></span><code><span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_switch</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A0-B0-0</span><span class="w">    </span><span class="c1"># SW-16 board at address 0, Bank A, Switch 0</span>
+<span class="w">  </span><span class="nt">my_other_switch</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A2-B1-5</span><span class="w">    </span><span class="c1"># SW-16 board at address 2, Bank B, Switch 5</span>
 </code></pre></div>
 <h3 id="direct-numbering">Direct Numbering</h3>
 <p>You can also use the internal number. As mentioned in the SW-16 manual
@@ -33858,11 +33858,11 @@ you can calculate those using:</p>
 <p>However, we recommend the above syntax because it will perform this
 calcuation for you.</p>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>switches:
-  my_switch:
-    number: 0     # SW-16 board at address 0, Bank A, Switch 0
-  my_other_switch:
-    number: 45    # SW-16 board at address 2, Bank B, Switch 5
+<div class="highlight"><pre><span></span><code><span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_switch</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span><span class="w">     </span><span class="c1"># SW-16 board at address 0, Bank A, Switch 0</span>
+<span class="w">  </span><span class="nt">my_other_switch</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">45</span><span class="w">    </span><span class="c1"># SW-16 board at address 2, Bank B, Switch 5</span>
 </code></pre></div>
 <h3 id="connecting-switches">Connecting Switches</h3>
 <p>Switches are connected between the input pin and ground. On SW-16
@@ -33884,13 +33884,13 @@ MPF.</p>
 <p><img alt="image" src="../../images/multimorphic_p3_roc.png" /></p>
 <h3 id="burst-switches-as-burst-optos">Burst Switches as Burst Optos</h3>
 <p>You can configure burst optos using the following syntax:</p>
-<div class="highlight"><pre><span></span><code>switches:
-  burst_opto_1_20:
-    number: burst-1-20     # burst input with switch 1 and driver 20
-  burst_opto_2_20:
-    number: burst-2-20     # burst input with switch 2 and driver 20
-  burst_opto_10_5:
-    number: burst-10-5     # burst input with switch 10 and driver 5
+<div class="highlight"><pre><span></span><code><span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">burst_opto_1_20</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">burst-1-20</span><span class="w">     </span><span class="c1"># burst input with switch 1 and driver 20</span>
+<span class="w">  </span><span class="nt">burst_opto_2_20</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">burst-2-20</span><span class="w">     </span><span class="c1"># burst input with switch 2 and driver 20</span>
+<span class="w">  </span><span class="nt">burst_opto_10_5</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">burst-10-5</span><span class="w">     </span><span class="c1"># burst input with switch 10 and driver 5</span>
 </code></pre></div>
 <p>Make sure to disable DIP switches 1 and 2 on the P3-Roc. You can
 configure up to five switches per driver.</p>
@@ -33912,11 +33912,11 @@ PCBA-0003-0003).</p>
 <h3 id="burst-switches-as-local-inputs">Burst Switches as Local Inputs</h3>
 <p>If you want to use burst switches as local inputs set DIP switch 2 to
 <code>on</code> on the P3-Roc. You can use those 64 inputs as direct inputs:</p>
-<div class="highlight"><pre><span></span><code>switches:
-  local_switch0:
-    number: direct-0       # local input 0
-  local_switch20:
-    number: direct-20      # local input 20
+<div class="highlight"><pre><span></span><code><span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">local_switch0</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">direct-0</span><span class="w">       </span><span class="c1"># local input 0</span>
+<span class="w">  </span><span class="nt">local_switch20</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">direct-20</span><span class="w">      </span><span class="c1"># local input 20</span>
 </code></pre></div>
 <p>Make sure to assign IDs &gt;= 4 to all SW-16 boards if you set DIP 2.
 Local switches behave just like any other switch on the P3-Roc. Hardware
@@ -33948,17 +33948,17 @@ basis with a switch's <code>debounce:</code> setting.</p>
 <p>Valid options are <code>normal</code>, <code>quick</code>, and <code>auto</code>.</p>
 <p>To disable debouncing for a switch, add <code>debounce: quick</code> to the switch
 config, like this:</p>
-<div class="highlight"><pre><span></span><code>switches:
-  my_switch:
-    number: A0-B0-0
-    debounce: quick
+<div class="highlight"><pre><span></span><code><span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_switch</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A0-B0-0</span>
+<span class="w">    </span><span class="nt">debounce</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">quick</span>
 </code></pre></div>
 <p>To force debouncing to always be used (which is also the default on the
 P-ROC, so not really needed), configure it like this:</p>
-<div class="highlight"><pre><span></span><code>switches:
-  my_switch:
-    number: A0-B0-0
-    debounce: normal
+<div class="highlight"><pre><span></span><code><span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_switch</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A0-B0-0</span>
+<span class="w">    </span><span class="nt">debounce</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">normal</span>
 </code></pre></div>
 <h2 id="what-if-it-did-not-work">What if it did not work?</h2>
 <p>Have a look at our

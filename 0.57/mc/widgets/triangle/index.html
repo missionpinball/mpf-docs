@@ -33682,18 +33682,18 @@ icons & this code generated via https://realfavicongenerator.net
 <p>The triangle widget is used to draw triangles on a
 <a href="../../slides/">slide</a>.</p>
 <p>Here's an example:</p>
-<div class="highlight"><pre><span></span><code>#config_version=5
-slide_player:
-  mc_ready:
-    triangle_example:
-      - type: triangle
-        color: blue
-        points: 0, 0, 100, 0, 100, 100
-      - type: triangle
-        points: 400, 400, 300, 200, 600, 500
-        color: red
-      - type: triangle
-        points: 200, 500, 100, 400, 300, 400
+<div class="highlight"><pre><span></span><code><span class="c1">#config_version=5</span>
+<span class="nt">slide_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">mc_ready</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">triangle_example</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">triangle</span>
+<span class="w">        </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">blue</span>
+<span class="w">        </span><span class="nt">points</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0, 0, 100, 0, 100, 100</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">triangle</span>
+<span class="w">        </span><span class="nt">points</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">400, 400, 300, 200, 600, 500</span>
+<span class="w">        </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">triangle</span>
+<span class="w">        </span><span class="nt">points</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">200, 500, 100, 400, 300, 400</span>
 </code></pre></div>
 <p>The example above results in the following:</p>
 <p><img alt="image" src="../../images/triangle.png" /></p>

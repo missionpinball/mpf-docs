@@ -33741,15 +33741,15 @@ completed in the specific order they're listed.</p>
 <p>An example might be if you have to hit four shots in a specific order to
 complete a mode, like this example from the World Tour mode of <em>Brooks
 'n Dunn</em>:</p>
-<div class="highlight"><pre><span></span><code>##! mode: my_mode
-sequences:
-  finish_world_tour:
-    events:
-      - shot_north_america_hit
-      - shot_south_america_hit
-      - shot_europe_hit
-      - shot_australia_hit
-    events_when_complete: wt_done
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: my_mode</span>
+<span class="nt">sequences</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">finish_world_tour</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">events</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">shot_north_america_hit</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">shot_south_america_hit</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">shot_europe_hit</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">shot_australia_hit</span>
+<span class="w">    </span><span class="nt">events_when_complete</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wt_done</span>
 </code></pre></div>
 <p>The example above has a single sequence logic block called
 "finish_world_tour". When it's enabled, it starts watching for the
@@ -33779,56 +33779,56 @@ or whatever you want.</p>
 <p><em>completed</em></p>
 <p>:   True if the block is completed. Otherwise False.</p>
 <p>This is an example:</p>
-<div class="highlight"><pre><span></span><code>##! mode: my_mode
-sequences:
-  test_sequence:
-    events:
-      - shot1_hit
-      - shot2_hit
-      - shot3_hit
-    reset_on_complete: false
-event_player:
-  test_event{device.sequences.test_sequence.value == 1}: shot1_was_hit
-  test_event{device.sequences.test_sequence.value == 2}: shot2_was_hit
-  test_event{device.sequences.test_sequence.value == 3}: shot3_was_hit
-  test_event{device.sequences.test_sequence.completed}: sequence_completed
-##! test
-#! start_game
-#! start_mode my_mode
-#! mock_event shot1_was_hit
-#! mock_event shot2_was_hit
-#! mock_event shot3_was_hit
-#! mock_event sequence_completed
-#! assert_int_condition 0 device.sequences.test_sequence.value
-#! post test_event
-#! assert_event_not_called shot1_was_hit
-#! assert_event_not_called shot2_was_hit
-#! assert_event_not_called shot3_was_hit
-#! post shot1_hit
-#! assert_int_condition 1 device.sequences.test_sequence.value
-#! assert_bool_condition False device.sequences.test_sequence.completed
-#! post test_event
-#! assert_event_called shot1_was_hit
-#! assert_event_not_called shot2_was_hit
-#! assert_event_not_called shot3_was_hit
-#! assert_event_not_called sequence_completed
-#! post shot3_hit
-#! post shot2_hit
-#! post test_event
-#! assert_event_called shot1_was_hit
-#! assert_event_called shot2_was_hit
-#! assert_event_not_called shot3_was_hit
-#! assert_event_not_called sequence_completed
-#! assert_int_condition 2 device.sequences.test_sequence.value
-#! assert_bool_condition False device.sequences.test_sequence.completed
-#! post shot3_hit
-#! post test_event
-#! assert_event_called shot1_was_hit
-#! assert_event_called shot2_was_hit
-#! assert_event_called shot3_was_hit
-#! assert_event_called sequence_completed
-#! assert_int_condition 3 device.sequences.test_sequence.value
-#! assert_bool_condition True device.sequences.test_sequence.completed
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: my_mode</span>
+<span class="nt">sequences</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">test_sequence</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">events</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">shot1_hit</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">shot2_hit</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">shot3_hit</span>
+<span class="w">    </span><span class="nt">reset_on_complete</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="nt">event_player</span><span class="p">:</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">test_event{device.sequences.test_sequence.value == 1}</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">shot1_was_hit</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">test_event{device.sequences.test_sequence.value == 2}</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">shot2_was_hit</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">test_event{device.sequences.test_sequence.value == 3}</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">shot3_was_hit</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">test_event{device.sequences.test_sequence.completed}</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sequence_completed</span>
+<span class="c1">##! test</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! start_mode my_mode</span>
+<span class="c1">#! mock_event shot1_was_hit</span>
+<span class="c1">#! mock_event shot2_was_hit</span>
+<span class="c1">#! mock_event shot3_was_hit</span>
+<span class="c1">#! mock_event sequence_completed</span>
+<span class="c1">#! assert_int_condition 0 device.sequences.test_sequence.value</span>
+<span class="c1">#! post test_event</span>
+<span class="c1">#! assert_event_not_called shot1_was_hit</span>
+<span class="c1">#! assert_event_not_called shot2_was_hit</span>
+<span class="c1">#! assert_event_not_called shot3_was_hit</span>
+<span class="c1">#! post shot1_hit</span>
+<span class="c1">#! assert_int_condition 1 device.sequences.test_sequence.value</span>
+<span class="c1">#! assert_bool_condition False device.sequences.test_sequence.completed</span>
+<span class="c1">#! post test_event</span>
+<span class="c1">#! assert_event_called shot1_was_hit</span>
+<span class="c1">#! assert_event_not_called shot2_was_hit</span>
+<span class="c1">#! assert_event_not_called shot3_was_hit</span>
+<span class="c1">#! assert_event_not_called sequence_completed</span>
+<span class="c1">#! post shot3_hit</span>
+<span class="c1">#! post shot2_hit</span>
+<span class="c1">#! post test_event</span>
+<span class="c1">#! assert_event_called shot1_was_hit</span>
+<span class="c1">#! assert_event_called shot2_was_hit</span>
+<span class="c1">#! assert_event_not_called shot3_was_hit</span>
+<span class="c1">#! assert_event_not_called sequence_completed</span>
+<span class="c1">#! assert_int_condition 2 device.sequences.test_sequence.value</span>
+<span class="c1">#! assert_bool_condition False device.sequences.test_sequence.completed</span>
+<span class="c1">#! post shot3_hit</span>
+<span class="c1">#! post test_event</span>
+<span class="c1">#! assert_event_called shot1_was_hit</span>
+<span class="c1">#! assert_event_called shot2_was_hit</span>
+<span class="c1">#! assert_event_called shot3_was_hit</span>
+<span class="c1">#! assert_event_called sequence_completed</span>
+<span class="c1">#! assert_int_condition 3 device.sequences.test_sequence.value</span>
+<span class="c1">#! assert_bool_condition True device.sequences.test_sequence.completed</span>
 </code></pre></div>
 <h2 id="related-events">Related Events</h2>
 <ul>

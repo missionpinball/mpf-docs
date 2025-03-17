@@ -33586,21 +33586,21 @@ icons & this code generated via https://realfavicongenerator.net
 Luckily, a show can use any <a href="../../config_players/">Config Players</a> and there is a
 <a href="../../config_players/show_player/">Show player</a>.</p>
 <p>This is an example of an attract mode:</p>
-<div class="highlight"><pre><span></span><code>##! show: my_show
-- duration: 3s
-  shows:
-    attract_show_collectlights:
-      loops: 1
-      speed: 10
-      show_tokens:
-        color: blue
-- duration: 3s
-  shows:
-    attract_show_collectlights:
-      loops: 1
-      speed: 10
-      show_tokens:
-        color: red
+<div class="highlight"><pre><span></span><code><span class="c1">##! show: my_show</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3s</span>
+<span class="w">  </span><span class="nt">shows</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">attract_show_collectlights</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">loops</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">      </span><span class="nt">speed</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="w">      </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">blue</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3s</span>
+<span class="w">  </span><span class="nt">shows</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">attract_show_collectlights</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">loops</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">      </span><span class="nt">speed</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="w">      </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
 </code></pre></div>
 <p>It will first run a show in blue and then the same show in red. You
 would usually also add some sounds and slides which can be also in other

@@ -34138,30 +34138,30 @@ individual achievement group, and then indented under each of those are
 the settings for that group.</p>
 <p>Here's an example achievement_groups section from Brooks &amp; Dunn. (This
 is related to the example in the achievements config documentation.)</p>
-<div class="highlight"><pre><span></span><code>##! mode: mode1
-#! # create some empty achievements for the group
-#! achievements:
-#!   world_tour:
-#!     enable_events: world_tour_fail, ball_will_end
-#!   money_bags:
-#!     enable_events: money_bags_fail, ball_will_end
-#!   music_awards:
-#!     enable_events: music_awards_fail, ball_will_end
-#!   jukebox:
-#!     enable_events: jukebox_fail, ball_will_end
-#!   play_poker:
-#!     enable_events: play_poker_fail, ball_will_end
-achievement_groups:
-  my_group:
-    achievements: world_tour, money_bags, music_awards, jukebox, play_poker
-    enable_events: enable_mission_selection
-    start_selected_events: shot_lower_vuk_from_playfield_hit
-    select_random_achievement_events: rotate_mission_rotator
-    events_when_enabled: mission_rotator_ready
-    rotate_right_events: sw_toggle
-    show_tokens:
-      leds: l_begin_round
-    show_when_enabled: flash
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: mode1</span>
+<span class="c1">#! # create some empty achievements for the group</span>
+<span class="c1">#! achievements:</span>
+<span class="c1">#!   world_tour:</span>
+<span class="c1">#!     enable_events: world_tour_fail, ball_will_end</span>
+<span class="c1">#!   money_bags:</span>
+<span class="c1">#!     enable_events: money_bags_fail, ball_will_end</span>
+<span class="c1">#!   music_awards:</span>
+<span class="c1">#!     enable_events: music_awards_fail, ball_will_end</span>
+<span class="c1">#!   jukebox:</span>
+<span class="c1">#!     enable_events: jukebox_fail, ball_will_end</span>
+<span class="c1">#!   play_poker:</span>
+<span class="c1">#!     enable_events: play_poker_fail, ball_will_end</span>
+<span class="nt">achievement_groups</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_group</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">achievements</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">world_tour, money_bags, music_awards, jukebox, play_poker</span>
+<span class="w">    </span><span class="nt">enable_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">enable_mission_selection</span>
+<span class="w">    </span><span class="nt">start_selected_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">shot_lower_vuk_from_playfield_hit</span>
+<span class="w">    </span><span class="nt">select_random_achievement_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rotate_mission_rotator</span>
+<span class="w">    </span><span class="nt">events_when_enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mission_rotator_ready</span>
+<span class="w">    </span><span class="nt">rotate_right_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sw_toggle</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">leds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_begin_round</span>
+<span class="w">    </span><span class="nt">show_when_enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flash</span>
 </code></pre></div>
 <p>More examples:</p>
 <ul>

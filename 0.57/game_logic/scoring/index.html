@@ -33572,10 +33572,10 @@ icons & this code generated via https://realfavicongenerator.net
 player when a certain event is posted. This event could be a switch hit
 (i.e. for <code>s_your_switch</code> use the event
 <code>s_your_switch_active</code>).</p>
-<div class="highlight"><pre><span></span><code>##! mode: mode1
-variable_player:
-  s_your_switch_active:
-    score: 100
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: mode1</span>
+<span class="nt">variable_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_your_switch_active</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
 </code></pre></div>
 <p>Furthermore, you can add or set any other player or machine variable.
 You can also use
@@ -33585,131 +33585,131 @@ simplest way to implement multipliers is to use a
 <a href="../../player_vars/">player variable</a> to
 keep the multiplier and multiply it to your scoring entries in
 <a href="../../config/variable_player/">variable_player</a>. This is an example for simple scoring with multiplier:</p>
-<div class="highlight"><pre><span></span><code># set initial value for your multiplier player variable (to have it start
-# at 1 instead of 0)
-player_vars:
-  multiplier:
-    value_type: int
-    initial_value: 1
-##! mode: my_mode
-# in your mode:
-variable_player:
-  increment_multiplier:
-    multiplier: 1
-  score_something:
-    score: 100 * current_player.multiplier
-##! test
-#! start_game
-#! assert_player_variable 1 multiplier
-#! start_mode my_mode
-#! post score_something
-#! assert_player_variable 100 score
-#! post increment_multiplier
-#! assert_player_variable 2 multiplier
-#! post score_something
-#! assert_player_variable 300 score
+<div class="highlight"><pre><span></span><code><span class="c1"># set initial value for your multiplier player variable (to have it start</span>
+<span class="c1"># at 1 instead of 0)</span>
+<span class="nt">player_vars</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">multiplier</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">value_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">int</span>
+<span class="w">    </span><span class="nt">initial_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="c1">##! mode: my_mode</span>
+<span class="c1"># in your mode:</span>
+<span class="nt">variable_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">increment_multiplier</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">multiplier</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">score_something</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100 * current_player.multiplier</span>
+<span class="c1">##! test</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! assert_player_variable 1 multiplier</span>
+<span class="c1">#! start_mode my_mode</span>
+<span class="c1">#! post score_something</span>
+<span class="c1">#! assert_player_variable 100 score</span>
+<span class="c1">#! post increment_multiplier</span>
+<span class="c1">#! assert_player_variable 2 multiplier</span>
+<span class="c1">#! post score_something</span>
+<span class="c1">#! assert_player_variable 300 score</span>
 </code></pre></div>
 <p>The multiplier will be tracked per player and carry over to the next
 ball. At start we set it to <code>1</code> using a <a href="../../config/player_vars/"><code>player_vars:</code></a>
 entry in config for every player.</p>
 <p>You can also reset the multiplier on every ball if you want:</p>
-<div class="highlight"><pre><span></span><code>##! mode: my_mode
-# in your mode:
-variable_player:
-  # set initial state on mode start of mode &quot;my_mode&quot;
-  mode_my_mode_started:
-    multiplier:
-      int: 1
-      action: set
-  increment_multiplier:
-    multiplier: 1
-  score_something:
-    score: 100 * current_player.multiplier
-##! test
-#! start_game
-#! assert_player_variable 0 multiplier
-#! start_mode my_mode
-#! assert_player_variable 1 multiplier
-#! post score_something
-#! assert_player_variable 100 score
-#! post increment_multiplier
-#! assert_player_variable 2 multiplier
-#! post score_something
-#! assert_player_variable 300 score
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: my_mode</span>
+<span class="c1"># in your mode:</span>
+<span class="nt">variable_player</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># set initial state on mode start of mode &quot;my_mode&quot;</span>
+<span class="w">  </span><span class="nt">mode_my_mode_started</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">multiplier</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">int</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">set</span>
+<span class="w">  </span><span class="nt">increment_multiplier</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">multiplier</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">score_something</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100 * current_player.multiplier</span>
+<span class="c1">##! test</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! assert_player_variable 0 multiplier</span>
+<span class="c1">#! start_mode my_mode</span>
+<span class="c1">#! assert_player_variable 1 multiplier</span>
+<span class="c1">#! post score_something</span>
+<span class="c1">#! assert_player_variable 100 score</span>
+<span class="c1">#! post increment_multiplier</span>
+<span class="c1">#! assert_player_variable 2 multiplier</span>
+<span class="c1">#! post score_something</span>
+<span class="c1">#! assert_player_variable 300 score</span>
 </code></pre></div>
 <p>Sometimes you want to increase your multipliers after multiple events
 were posted. For instance, you might want to increase the multiplier
 after the player completed two shot_groups:</p>
-<div class="highlight"><pre><span></span><code># set initial value for your multiplier player variable (to have it start
-# at 1 instead of 0)
-player_vars:
-  multiplier:
-    value_type: int
-    initial_value: 1
-##! mode: my_mode
-# in your mode:
-accruals:
-  bonus_multiplier:
-    events:
-      - robo_lanes_shots_lit_complete
-      - tech_lanes_shots_lit_complete
-    events_when_complete: increment_multiplier, light_bonus_2x_led
-    start_enabled: true
-variable_player:
-  increment_multiplier:
-    multiplier: 1
-  score_something:
-    score: 100 * current_player.multiplier
-##! test
-#! start_game
-#! assert_player_variable 1 multiplier
-#! start_mode my_mode
-#! post score_something
-#! assert_player_variable 100 score
-#! post robo_lanes_shots_lit_complete
-#! assert_player_variable 1 multiplier
-#! post tech_lanes_shots_lit_complete
-#! assert_player_variable 2 multiplier
-#! post score_something
-#! assert_player_variable 300 score
+<div class="highlight"><pre><span></span><code><span class="c1"># set initial value for your multiplier player variable (to have it start</span>
+<span class="c1"># at 1 instead of 0)</span>
+<span class="nt">player_vars</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">multiplier</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">value_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">int</span>
+<span class="w">    </span><span class="nt">initial_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="c1">##! mode: my_mode</span>
+<span class="c1"># in your mode:</span>
+<span class="nt">accruals</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">bonus_multiplier</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">events</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">robo_lanes_shots_lit_complete</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tech_lanes_shots_lit_complete</span>
+<span class="w">    </span><span class="nt">events_when_complete</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">increment_multiplier, light_bonus_2x_led</span>
+<span class="w">    </span><span class="nt">start_enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="nt">variable_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">increment_multiplier</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">multiplier</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">score_something</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100 * current_player.multiplier</span>
+<span class="c1">##! test</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! assert_player_variable 1 multiplier</span>
+<span class="c1">#! start_mode my_mode</span>
+<span class="c1">#! post score_something</span>
+<span class="c1">#! assert_player_variable 100 score</span>
+<span class="c1">#! post robo_lanes_shots_lit_complete</span>
+<span class="c1">#! assert_player_variable 1 multiplier</span>
+<span class="c1">#! post tech_lanes_shots_lit_complete</span>
+<span class="c1">#! assert_player_variable 2 multiplier</span>
+<span class="c1">#! post score_something</span>
+<span class="c1">#! assert_player_variable 300 score</span>
 </code></pre></div>
 <p>You can also combine two (or more) multipliers (see
 <a href="../../config/instructions/dynamic_values/">dynamic values</a> for details about other possible placeholders and math
 operators):</p>
-<div class="highlight"><pre><span></span><code># set initial value for your multiplier player variables (to have it start
-# at 1 instead of 0)
-player_vars:
-  multiplier:
-    value_type: int
-    initial_value: 1
-  mode_multiplier:
-    value_type: int
-    initial_value: 1
-##! mode: my_mode
-# in your mode:
-variable_player:
-  increment_multiplier:
-    multiplier: 1
-  increment_mode_multiplier:
-    mode_multiplier: 1
-  score_something:
-    score: 100 * current_player.multiplier * current_player.mode_multiplier
-##! test
-#! start_game
-#! assert_player_variable 1 multiplier
-#! start_mode my_mode
-#! post score_something
-#! assert_player_variable 100 score
-#! post increment_multiplier
-#! assert_player_variable 2 multiplier
-#! assert_player_variable 1 mode_multiplier
-#! post score_something
-#! assert_player_variable 300 score
-#! post increment_mode_multiplier
-#! assert_player_variable 2 multiplier
-#! assert_player_variable 2 mode_multiplier
-#! post score_something
-#! assert_player_variable 700 score
+<div class="highlight"><pre><span></span><code><span class="c1"># set initial value for your multiplier player variables (to have it start</span>
+<span class="c1"># at 1 instead of 0)</span>
+<span class="nt">player_vars</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">multiplier</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">value_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">int</span>
+<span class="w">    </span><span class="nt">initial_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">mode_multiplier</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">value_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">int</span>
+<span class="w">    </span><span class="nt">initial_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="c1">##! mode: my_mode</span>
+<span class="c1"># in your mode:</span>
+<span class="nt">variable_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">increment_multiplier</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">multiplier</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">increment_mode_multiplier</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">mode_multiplier</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">score_something</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100 * current_player.multiplier * current_player.mode_multiplier</span>
+<span class="c1">##! test</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! assert_player_variable 1 multiplier</span>
+<span class="c1">#! start_mode my_mode</span>
+<span class="c1">#! post score_something</span>
+<span class="c1">#! assert_player_variable 100 score</span>
+<span class="c1">#! post increment_multiplier</span>
+<span class="c1">#! assert_player_variable 2 multiplier</span>
+<span class="c1">#! assert_player_variable 1 mode_multiplier</span>
+<span class="c1">#! post score_something</span>
+<span class="c1">#! assert_player_variable 300 score</span>
+<span class="c1">#! post increment_mode_multiplier</span>
+<span class="c1">#! assert_player_variable 2 multiplier</span>
+<span class="c1">#! assert_player_variable 2 mode_multiplier</span>
+<span class="c1">#! post score_something</span>
+<span class="c1">#! assert_player_variable 700 score</span>
 </code></pre></div>
 <p>You may also just add multipliers instead of multiply them. For instance
 you could use:
@@ -33726,43 +33726,43 @@ case, it is sometimes better to use
 is active and the player made more than two loops (just for the sake of
 the example - you could also move the scoring into super_multiball and
 remove the first condition):</p>
-<div class="highlight"><pre><span></span><code># set initial value for your multiplier player variables (to have it start
-# at 1 instead of 0)
-player_vars:
-  multiplier:
-    value_type: int
-    initial_value: 1
-  loops_made:
-    value_type: int
-    initial_value: 0
-##! mode: super_extraball
-##! mode: my_mode
-# in your mode:
-variable_player:
-  made_loop:
-    loops_made: 1
-  score_something:
-    score: 100 * current_player.multiplier
-  score_something{mode.super_extraball.active and current_player.loops_made &gt; 2}:
-    score: 1000000
-##! test
-#! start_game
-#! assert_player_variable 1 multiplier
-#! start_mode my_mode
-#! post score_something
-#! assert_player_variable 100 score
-#! post made_loop
-#! post made_loop
-#! assert_player_variable 2 loops_made
-#! post score_something
-#! assert_player_variable 200 score
-#! post made_loop
-#! assert_player_variable 3 loops_made
-#! post score_something
-#! assert_player_variable 300 score
-#! start_mode super_extraball
-#! post score_something
-#! assert_player_variable 1000400 score
+<div class="highlight"><pre><span></span><code><span class="c1"># set initial value for your multiplier player variables (to have it start</span>
+<span class="c1"># at 1 instead of 0)</span>
+<span class="nt">player_vars</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">multiplier</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">value_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">int</span>
+<span class="w">    </span><span class="nt">initial_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">loops_made</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">value_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">int</span>
+<span class="w">    </span><span class="nt">initial_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="c1">##! mode: super_extraball</span>
+<span class="c1">##! mode: my_mode</span>
+<span class="c1"># in your mode:</span>
+<span class="nt">variable_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">made_loop</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">loops_made</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">score_something</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100 * current_player.multiplier</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">score_something{mode.super_extraball.active and current_player.loops_made &gt; 2}</span><span class="p p-Indicator">:</span>
+<span class="w">    </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000000</span>
+<span class="c1">##! test</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! assert_player_variable 1 multiplier</span>
+<span class="c1">#! start_mode my_mode</span>
+<span class="c1">#! post score_something</span>
+<span class="c1">#! assert_player_variable 100 score</span>
+<span class="c1">#! post made_loop</span>
+<span class="c1">#! post made_loop</span>
+<span class="c1">#! assert_player_variable 2 loops_made</span>
+<span class="c1">#! post score_something</span>
+<span class="c1">#! assert_player_variable 200 score</span>
+<span class="c1">#! post made_loop</span>
+<span class="c1">#! assert_player_variable 3 loops_made</span>
+<span class="c1">#! post score_something</span>
+<span class="c1">#! assert_player_variable 300 score</span>
+<span class="c1">#! start_mode super_extraball</span>
+<span class="c1">#! post score_something</span>
+<span class="c1">#! assert_player_variable 1000400 score</span>
 </code></pre></div>
 <p>Related How To Guides</p>
 <ul>

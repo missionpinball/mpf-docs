@@ -33767,13 +33767,13 @@ MPF supports both .xml, .fnt, and .txt files for font descriptor files
 associated font descriptor file) from True Type Fonts:
 <a href="http://kvazars.com/littera/">http://kvazars.com/littera/</a></p>
 <p>Here's an example:</p>
-<div class="highlight"><pre><span></span><code>bitmap_fonts:
-  F1fuv:
-    file: F1fuv.png
-    descriptor: [&#39; !&quot;#$%&amp;,()*+`-./&#39;, &#39;0123456789:;&lt;=&gt;?&#39;, &#39;@ABCDEFGHIJKLMNO&#39;, &#39;PQRSTUVWXYZ[\]^_&#39;, &#39;&#39;&#39;abcdefghijklmno&#39;, &#39;pqrstuvwxyz{|}~ &#39;]
-  example_font:
-    file: example_font.png
-    descriptor: example_font_descriptor.xml
+<div class="highlight"><pre><span></span><code><span class="nt">bitmap_fonts</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">F1fuv</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">F1fuv.png</span>
+<span class="w">    </span><span class="nt">descriptor</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&#39;</span><span class="nv"> </span><span class="s">!&quot;#$%&amp;,()*+`-./&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;0123456789:;&lt;=&gt;?&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;@ABCDEFGHIJKLMNO&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;PQRSTUVWXYZ[\]^_&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;</span><span class="se">&#39;&#39;</span><span class="s">abcdefghijklmno&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;pqrstuvwxyz{|}~</span><span class="nv"> </span><span class="s">&#39;</span><span class="p p-Indicator">]</span>
+<span class="w">  </span><span class="nt">example_font</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example_font.png</span>
+<span class="w">    </span><span class="nt">descriptor</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example_font_descriptor.xml</span>
 </code></pre></div>
 <h2 id="optional-settings">Optional settings</h2>
 <p>The following sections are optional in the <code>bitmap_fonts:</code> section of

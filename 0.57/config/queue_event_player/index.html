@@ -33780,10 +33780,10 @@ section of a step.</p>
 <p>This section is particularly useful with the
 <a href="../queue_relay_player/">queue_relay_player:</a>.</p>
 <p>Here's an example:</p>
-<div class="highlight"><pre><span></span><code>queue_event_player:
-  some_event:
-    queue_event: my_queue
-    events_when_finished: my_queue_done
+<div class="highlight"><pre><span></span><code><span class="nt">queue_event_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">some_event</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">queue_event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my_queue</span>
+<span class="w">    </span><span class="nt">events_when_finished</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my_queue_done</span>
 </code></pre></div>
 <p>In the example above, when the regular event <em>some_event</em> is posted, a
 new queue event called <em>my_queue</em> will be posted. After all the handlers

@@ -33575,75 +33575,75 @@ icons & this code generated via https://realfavicongenerator.net
 
 <h1 id="how-to-temporarily-disable-flippers">How to temporarily disable flippers</h1>
 <p><a href="../../../about/help/">Help us to write it</a></p>
-<div class="highlight"><pre><span></span><code>switches:
-  s_left_flipper:
-    number: 1
-    tags: left_flipper
-  s_right_flipper:
-    number: 2
-    tags: right_flipper
-coils:
-  c_flipper_left:
-    number: 0
-    allow_enable: true
-    default_hold_power: 0.125
-  c_flipper_right:
-    number: 1
-    allow_enable: true
-    default_hold_power: 0.125
-flippers:
-  flipper_left:
-    main_coil: c_flipper_left
-    activation_switch: s_left_flipper
-    hold_coil:
-    enable_events: ball_started, flipper_on
-    disable_events: ball_will_end, flipper_off
-  flipper_right:
-    main_coil: c_flipper_right
-    activation_switch: s_right_flipper
-    hold_coil:
-    enable_events: ball_started, flipper_on
-    disable_events: ball_will_end, flipper_off
-##! mode: flipper_mode
-mode:
-  priority: 1000
-event_player:
-  mode_flipper_mode_started: flippers_on
-  timer_flippers_disabled_started: flippers_off
-  timer_flippers_disabled_complete: flippers_on
-timers:
-  flippers_button_active_left:
-    control_events:
-      - event: s_flipper_left_active
-        action: restart
-      - event: s_flipper_left_inactive
-        action: stop
-    start_value: 0
-    end_value: 10
-    direction: up
-    tick_interval: 1s
-  flippers_button_active_right:
-    control_events:
-      - event: s_flipper_right_active
-        action: restart
-      - event: s_flipper_right_inactive
-        action: stop
-    start_value: 0
-    end_value: 10
-    direction: up
-    tick_interval: 1s
-  flippers_disabled:
-    control_events:
-      - event: timer_flippers_button_active_left_complete
-        action: start
-      - event: timer_flippers_button_active_right_complete
-        action: start
-      - event: timer_flippers_disabled_complete
-        action: reset
-    start_value: 0
-    end_value: 3
-    direction: up
-    tick_interval: 1s
+<div class="highlight"><pre><span></span><code><span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_left_flipper</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">left_flipper</span>
+<span class="w">  </span><span class="nt">s_right_flipper</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">right_flipper</span>
+<span class="nt">coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">c_flipper_left</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">allow_enable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">default_hold_power</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.125</span>
+<span class="w">  </span><span class="nt">c_flipper_right</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">allow_enable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">default_hold_power</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.125</span>
+<span class="nt">flippers</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">flipper_left</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">main_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_flipper_left</span>
+<span class="w">    </span><span class="nt">activation_switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_left_flipper</span>
+<span class="w">    </span><span class="nt">hold_coil</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">enable_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ball_started, flipper_on</span>
+<span class="w">    </span><span class="nt">disable_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ball_will_end, flipper_off</span>
+<span class="w">  </span><span class="nt">flipper_right</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">main_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_flipper_right</span>
+<span class="w">    </span><span class="nt">activation_switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_right_flipper</span>
+<span class="w">    </span><span class="nt">hold_coil</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">enable_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ball_started, flipper_on</span>
+<span class="w">    </span><span class="nt">disable_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ball_will_end, flipper_off</span>
+<span class="c1">##! mode: flipper_mode</span>
+<span class="nt">mode</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">priority</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="nt">event_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">mode_flipper_mode_started</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flippers_on</span>
+<span class="w">  </span><span class="nt">timer_flippers_disabled_started</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flippers_off</span>
+<span class="w">  </span><span class="nt">timer_flippers_disabled_complete</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flippers_on</span>
+<span class="nt">timers</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">flippers_button_active_left</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">control_events</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_flipper_left_active</span>
+<span class="w">        </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">restart</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_flipper_left_inactive</span>
+<span class="w">        </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stop</span>
+<span class="w">    </span><span class="nt">start_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">end_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="w">    </span><span class="nt">direction</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">up</span>
+<span class="w">    </span><span class="nt">tick_interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<span class="w">  </span><span class="nt">flippers_button_active_right</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">control_events</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_flipper_right_active</span>
+<span class="w">        </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">restart</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_flipper_right_inactive</span>
+<span class="w">        </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stop</span>
+<span class="w">    </span><span class="nt">start_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">end_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="w">    </span><span class="nt">direction</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">up</span>
+<span class="w">    </span><span class="nt">tick_interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<span class="w">  </span><span class="nt">flippers_disabled</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">control_events</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">timer_flippers_button_active_left_complete</span>
+<span class="w">        </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">timer_flippers_button_active_right_complete</span>
+<span class="w">        </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">timer_flippers_disabled_complete</span>
+<span class="w">        </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">reset</span>
+<span class="w">    </span><span class="nt">start_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">end_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="w">    </span><span class="nt">direction</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">up</span>
+<span class="w">    </span><span class="nt">tick_interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
 </code></pre></div>
 <hr />
 <div class="admonition question">

@@ -33661,23 +33661,23 @@ outlane. It is often paired with a
 compensate for missed kickbacks.</p>
 <p><a href="../../about/help/">TODO: Add a picture of a kickback</a></p>
 <p>This is an example:</p>
-<div class="highlight"><pre><span></span><code>switches:
-  s_kickback:
-    number: 5
-coils:
-  c_kickback:
-    number: 7
-    default_pulse_ms: 15
-kickbacks:
-  ac_kickback:
-    coil: c_kickback
-    switch: s_kickback
-ball_saves:
-  kickback_ball_save:
-    active_time: 5s
-    enable_events: kickback_ac_kickback_fired
-    auto_launch: true
-    balls_to_save: 1
+<div class="highlight"><pre><span></span><code><span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_kickback</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+<span class="nt">coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">c_kickback</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">7</span>
+<span class="w">    </span><span class="nt">default_pulse_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">15</span>
+<span class="nt">kickbacks</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">ac_kickback</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_kickback</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_kickback</span>
+<span class="nt">ball_saves</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">kickback_ball_save</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">active_time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5s</span>
+<span class="w">    </span><span class="nt">enable_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kickback_ac_kickback_fired</span>
+<span class="w">    </span><span class="nt">auto_launch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">balls_to_save</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
 </code></pre></div>
 <h2 id="monitorable-properties">Monitorable Properties</h2>
 <p>For

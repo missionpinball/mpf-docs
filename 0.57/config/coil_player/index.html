@@ -33785,12 +33785,12 @@ coil/solenoid/driver actions (pulse, enable, disable, etc.) based on
 events. It's also used in shows (via the <code>coils:</code> section) to perform
 coil actions in that show step.</p>
 <p>Example from a config file:</p>
-<div class="highlight"><pre><span></span><code>coil_player:
-  some_event: coil_1
-  some_other_event:
-    coil_2:
-      action: enable
-      hold_power: .5
+<div class="highlight"><pre><span></span><code><span class="nt">coil_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">some_event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">coil_1</span>
+<span class="w">  </span><span class="nt">some_other_event</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">coil_2</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">enable</span>
+<span class="w">      </span><span class="nt">hold_power</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.5</span>
 </code></pre></div>
 <p>In the example above, when the event called <code>some_event</code> is posted,
 coil_1 will pulse. When the event <code>some_other_event</code> is posted, coil_2
@@ -33804,10 +33804,10 @@ the full config. (What's an "express config?" Details
 <a href="../instructions/express_config/">here</a>.</p>
 <p>The coil player's express config is the "pulse" action.</p>
 <p>Example coil player from a show:</p>
-<div class="highlight"><pre><span></span><code>##! show: test
-- time: 0
-  coils:
-    coil1: pulse
+<div class="highlight"><pre><span></span><code><span class="c1">##! show: test</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">  </span><span class="nt">coils</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">coil1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pulse</span>
 </code></pre></div>
 <p>See <a href="../../config_players/coil_player/">Coil player</a> for
 details.</p>

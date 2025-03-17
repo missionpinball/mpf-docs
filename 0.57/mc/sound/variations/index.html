@@ -33718,10 +33718,10 @@ we'll add it to your machine configuration file, but give it an easier
 name to remember (<code>triangle_01</code>) using the <code>file:</code> setting (or you could
 simply rename the file to <em>triangle_01.wav</em> and omit the <em>file:</em>
 setting):</p>
-<div class="highlight"><pre><span></span><code>sounds:
-  triangle_01:
-    file: 13147__looppool__triangle1.wav
-    volume: 0.7
+<div class="highlight"><pre><span></span><code><span class="nt">sounds</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">triangle_01</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">13147__looppool__triangle1.wav</span>
+<span class="w">    </span><span class="nt">volume</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.7</span>
 </code></pre></div>
 <p>Now add a few variations of the sound. I used my favorite sound editor
 to slightly adjust the pitch and frequency content of the triangle sound
@@ -33731,30 +33731,30 @@ them in the same directory as your first sound file. We are now ready to
 add them to the <code>sounds:</code> section in the machine configuration file (I
 named the sound variations <em>triangle_02</em>, <em>triangle_03</em>, and
 <em>triangle_04</em>:</p>
-<div class="highlight"><pre><span></span><code>sounds:
-  triangle_01:
-    file: 13147__looppool__triangle1.wav
-    volume: 0.7
-  triangle_02:
-    volume: 0.7
-  triangle_03:
-    volume: 0.7
-  triangle_04:
-    volume: 0.7
+<div class="highlight"><pre><span></span><code><span class="nt">sounds</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">triangle_01</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">13147__looppool__triangle1.wav</span>
+<span class="w">    </span><span class="nt">volume</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.7</span>
+<span class="w">  </span><span class="nt">triangle_02</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">volume</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.7</span>
+<span class="w">  </span><span class="nt">triangle_03</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">volume</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.7</span>
+<span class="w">  </span><span class="nt">triangle_04</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">volume</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.7</span>
 </code></pre></div>
 <h2 id="3-configure-the-sound-pool">3. Configure the sound pool</h2>
 <p>We now have 4 variations of the same basic triangle sound. It's time to
 put them all into a single sound pool object so we can treat them as a
 single sound. To do so, we need to add a <code>sound_pools:</code> section to our
 machine configuration file as follows:</p>
-<div class="highlight"><pre><span></span><code>sound_pools:
-  triangle:
-    type: random
-    sounds:
-      - triangle_01
-      - triangle_02
-      - triangle_03
-      - triangle_04
+<div class="highlight"><pre><span></span><code><span class="nt">sound_pools</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">triangle</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">random</span>
+<span class="w">    </span><span class="nt">sounds</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">triangle_01</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">triangle_02</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">triangle_03</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">triangle_04</span>
 </code></pre></div>
 <p>We now have a sound pool asset called <code>triangle</code> that acts just like a
 sound asset, except that each time <code>triangle</code> is played, one of the 4
@@ -33767,15 +33767,15 @@ played more often than the other sounds. How can we make that happen?
 It's very easy to do. We can add weights to each sound in the pool that
 specify the probability of each sound being selected. Let's look at our
 <code>sound_pools:</code> section again:</p>
-<div class="highlight"><pre><span></span><code>sound_pools:
-  triangle:
-    type: random
-    track: sfx
-    sounds:
-      - triangle_01|5
-      - triangle_02|2
-      - triangle_03|2
-      - triangle_04|1
+<div class="highlight"><pre><span></span><code><span class="nt">sound_pools</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">triangle</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">random</span>
+<span class="w">    </span><span class="nt">track</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sfx</span>
+<span class="w">    </span><span class="nt">sounds</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">triangle_01|5</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">triangle_02|2</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">triangle_03|2</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">triangle_04|1</span>
 </code></pre></div>
 <p>Notice we've added a pipe character (<code>|</code>) to the end of each sound
 followed by a numeric value. These values assign a relative weight to
@@ -33791,15 +33791,15 @@ only include that sound if the condition evaluates to true at playback
 time. If the selection is random, excluded events will not be weighted
 in the distribution. If the selection is sequential, excluded events
 will simply be skipped.</p>
-<div class="highlight"><pre><span></span><code>sound_pools:
-  triangle:
-    type: random
-    track: sfx
-    sounds:
-      - triangle_01
-      - triangle_02{current_player.triangles_found&gt;1}|2
-      - triangle_03{current_player.triangles_found&gt;2}
-      - triangle_04{device.achievements.supertriangle.state==&quot;complete&quot;}|5
+<div class="highlight"><pre><span></span><code><span class="nt">sound_pools</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">triangle</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">random</span>
+<span class="w">    </span><span class="nt">track</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sfx</span>
+<span class="w">    </span><span class="nt">sounds</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">triangle_01</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">triangle_02{current_player.triangles_found&gt;1}|2</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">triangle_03{current_player.triangles_found&gt;2}</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">triangle_04{device.achievements.supertriangle.state==&quot;complete&quot;}|5</span>
 </code></pre></div>
 <p>Sound conditions are formatted the same as all
 <a href="../../../events/overview/conditional/">conditional events</a>. Any sound in a pool can have a weight, a condition, both,

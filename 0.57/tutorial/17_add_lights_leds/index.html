@@ -33819,24 +33819,24 @@ lights with those names in your machine so you'll have to change them
 to names that actually exist for you. If you have matrix lights, add
 entries to your <code>attract_light_show.yaml</code> file so that it looks
 something like like this:</p>
-<div class="highlight"><pre><span></span><code>##! show: attract_light_show
-#show_version=5
-- duration: 1
-  lights:
-    l_light2: 0
-    l_light1: ff
-- duration: 1
-  lights:
-    l_light1: 0
-    l_light2: ff
-- duration: 1
-  lights:
-    l_light2: 0
-    l_light3: ff
-- duration: 1
-  lights:
-    l_light3: 0
-    l_light2: ff
+<div class="highlight"><pre><span></span><code><span class="c1">##! show: attract_light_show</span>
+<span class="c1">#show_version=5</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">l_light2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">l_light1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ff</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">l_light1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">l_light2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ff</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">l_light2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">l_light3</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ff</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">l_light3</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">l_light2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ff</span>
 </code></pre></div>
 <p>Matrix lights don't have color setting since their color is determined
 by the color of the bulb and/or the color of the insert. So the <code>0</code> and
@@ -33849,38 +33849,38 @@ you have RGB LEDs, then you can have some more fun and actually specify
 different colors for each light at each step. For example, if you just
 wanted to have a show that cycled three RGB LEDs through the colors of
 the rainbow, you could create a show like this:</p>
-<div class="highlight"><pre><span></span><code>##! show: attract_light_show
-#show_version=5
-- duration: 1
-  lights:
-    l_led1: red
-    l_led2: red
-    l_led3: ff0000
-- duration: 1
-  lights:
-    l_led1: ff6600
-    l_led2: ff6600
-    l_led3: ff6600
-- duration: 1
-  lights:
-    l_led1: ffcc00
-    l_led2: ffcc00
-    l_led3: ffcc00
-- duration: 1
-  lights:
-    l_led1: lime
-    l_led2: 00ff00
-    l_led3: 00ff00
-- duration: 1
-  lights:
-    l_led1: blue
-    l_led2: 0000ff
-    l_led3: 0000ff
-- duration: 1
-  lights:
-    l_led1: ff00aa
-    l_led2: ff00aa
-    l_led3: ff00aa
+<div class="highlight"><pre><span></span><code><span class="c1">##! show: attract_light_show</span>
+<span class="c1">#show_version=5</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">l_led1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
+<span class="w">    </span><span class="nt">l_led2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
+<span class="w">    </span><span class="nt">l_led3</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ff0000</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">l_led1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ff6600</span>
+<span class="w">    </span><span class="nt">l_led2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ff6600</span>
+<span class="w">    </span><span class="nt">l_led3</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ff6600</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">l_led1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ffcc00</span>
+<span class="w">    </span><span class="nt">l_led2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ffcc00</span>
+<span class="w">    </span><span class="nt">l_led3</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ffcc00</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">l_led1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lime</span>
+<span class="w">    </span><span class="nt">l_led2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">00ff00</span>
+<span class="w">    </span><span class="nt">l_led3</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">00ff00</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">l_led1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">blue</span>
+<span class="w">    </span><span class="nt">l_led2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0000ff</span>
+<span class="w">    </span><span class="nt">l_led3</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0000ff</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">l_led1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ff00aa</span>
+<span class="w">    </span><span class="nt">l_led2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ff00aa</span>
+<span class="w">    </span><span class="nt">l_led3</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ff00aa</span>
 </code></pre></div>
 <p>Obviously this is just the very beginning of what you can do. You can
 create shows that are hundreds of steps involving dozens of lights.
@@ -33904,11 +33904,11 @@ first one which would be really confusing. In fact if MPF sees that, MPF
 will exit and print a warning about the duplicate so you can fix it.)</p>
 <p>MPF offers a way around this though, in that you can add a <code>.1</code> to the
 end of the event name, like this:</p>
-<div class="highlight"><pre><span></span><code>##! mode: test_mode
-#config_version=5
-show_player:
-  mode_attract_started: attract_display_loop
-  mode_attract_started.1: attract_light_show
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: test_mode</span>
+<span class="c1">#config_version=5</span>
+<span class="nt">show_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">mode_attract_started</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">attract_display_loop</span>
+<span class="w">  </span><span class="nt">mode_attract_started.1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">attract_light_show</span>
 </code></pre></div>
 <p>Adding the <code>.1</code> doesn't really affect anything in terms of how this
 works, it just makes it so this is valid YAML and both entries get set.
@@ -33962,27 +33962,27 @@ setting name and value, but then it also sees <code>speed: 4</code> indented und
 it. The YAML processor doesn't know what to do?</p>
 <p>To fix this, we need to make a slight change to our YAML file, like
 this:</p>
-<div class="highlight"><pre><span></span><code>##! mode: test_mode
-#config_version=5
-show_player:
-  mode_attract_started: attract_display_loop
-  mode_attract_started.1:
-    attract_light_show:
-      speed: 4
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: test_mode</span>
+<span class="c1">#config_version=5</span>
+<span class="nt">show_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">mode_attract_started</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">attract_display_loop</span>
+<span class="w">  </span><span class="nt">mode_attract_started.1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">attract_light_show</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">speed</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span>
 </code></pre></div>
 <p>What we've done is moved the show name (<code>attract_light_show</code>) under the
 event name (<code>mode_attract_started.1</code>), and then we added the speed
 setting under there.</p>
 <p>If you wanted to, you could consolidate the duplicate
 <code>mode_attract_started</code> entries like so:</p>
-<div class="highlight"><pre><span></span><code>##! mode: test_mode
-#config_version=5
-show_player:
-  mode_attract_started:
-    attract_display_loop:
-      speed: 1
-    attract_light_show:
-      speed: 4
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: test_mode</span>
+<span class="c1">#config_version=5</span>
+<span class="nt">show_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">mode_attract_started</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">attract_display_loop</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">speed</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">attract_light_show</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">speed</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span>
 </code></pre></div>
 <p>Either option is fine, and you'll probably end up with both techniques
 scattered throughout your configs.</p>

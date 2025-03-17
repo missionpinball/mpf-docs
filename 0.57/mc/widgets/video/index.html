@@ -33887,26 +33887,26 @@ widget, then create a list (with dashes) of <code>event:</code>, <code>action:</
 (optionally) <code>value:</code> settings. Then when the event is posted, the
 action will be applied to the video.</p>
 <p>Consider the example below:</p>
-<div class="highlight"><pre><span></span><code>slides:
-  my_slide:
-    - type: video
-      video: my_video
-      control_events:
-        - event: play_my_vid
-          action: play
-        - event: wizard_caught
-          action: stop
-        - event: some_event
-          action: pause
-        - event: what_event
-          action: seek
-          value: .5
-        - event: move_it
-          action: position
-          value: 4.2
-        - event: mute_me
-          action: volume
-          value: 0
+<div class="highlight"><pre><span></span><code><span class="nt">slides</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_slide</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">video</span>
+<span class="w">      </span><span class="nt">video</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my_video</span>
+<span class="w">      </span><span class="nt">control_events</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">play_my_vid</span>
+<span class="w">          </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">play</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wizard_caught</span>
+<span class="w">          </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stop</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">some_event</span>
+<span class="w">          </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pause</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">what_event</span>
+<span class="w">          </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">seek</span>
+<span class="w">          </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.5</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">move_it</span>
+<span class="w">          </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">position</span>
+<span class="w">          </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4.2</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mute_me</span>
+<span class="w">          </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">volume</span>
+<span class="w">          </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
 </code></pre></div>
 <p>In the example above, when the event <em>play_my_vid</em> is posted, the video
 will start playing. When the event <em>wizard_caught</em> is posted, the video

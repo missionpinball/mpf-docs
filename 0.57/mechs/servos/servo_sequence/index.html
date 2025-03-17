@@ -33591,23 +33591,23 @@ solution is that you can easily integrate and synchonize it with sounds
 and lights.</p>
 <p>The following example will move the servo six times when <code>my_toy_hit</code> is
 posted (three times to open and three times to close):</p>
-<div class="highlight"><pre><span></span><code>servos:
-  my_toy:
-    positions:
-      0.0: open_mouth
-      1.0: close_mouth
-    reset_position: 1.0
-    number: 1
-shows:
-  toy_hit:
-    - duration: 1s
-      events: open_mouth
-    - duration: 2s
-      events: close_mouth
-show_player:
-  my_toy_hit:
-    toy_hit:
-      loops: 2
+<div class="highlight"><pre><span></span><code><span class="nt">servos</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_toy</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">positions</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">0.0</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">open_mouth</span>
+<span class="w">      </span><span class="nt">1.0</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">close_mouth</span>
+<span class="w">    </span><span class="nt">reset_position</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="nt">shows</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">toy_hit</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<span class="w">      </span><span class="nt">events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">open_mouth</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2s</span>
+<span class="w">      </span><span class="nt">events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">close_mouth</span>
+<span class="nt">show_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_toy_hit</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">toy_hit</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">loops</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
 </code></pre></div>
 <p>To see how this can be used in a real machine we recommend this
 explanation video by the pinball amigos:</p>

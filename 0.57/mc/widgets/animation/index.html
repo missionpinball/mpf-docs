@@ -33987,31 +33987,31 @@ away.</p>
 <h2 id="1-understanding-animations-in-mpf">1. Understanding animations in MPF</h2>
 <p>MPF animations are properties of widgets. For example, here's a basic
 widget with no animations:</p>
-<div class="highlight"><pre><span></span><code>slides:
-  slide_1:
-    widgets:
-      - type: text
-        text: MY TEXT
-        color: red
+<div class="highlight"><pre><span></span><code><span class="nt">slides</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">slide_1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">widgets</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MY TEXT</span>
+<span class="w">        </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
 </code></pre></div>
 <p>To add animations to a widget, you simply add an <code>animations:</code> setting
 to that widget, and then under there you add specific animation steps
 and settings. For example:</p>
-<div class="highlight"><pre><span></span><code>slides:
-  slide_1:
-    widgets:
-      - type: text
-        text: MY TEXT
-        color: red
-        animations:
-          show_slide:                   # animation trigger event
-            - property: opacity         # name of the widget property we&#39;re animating
-              value: 1                  # target value of that property for this step
-              duration: .5s             # duration for this step (how long it takes to get there)
-            - property: opacity         # second step in the animation (starts with a hyphen)
-              value: 0
-              duration: .5s
-              repeat: true              # added to the final step, tells this animation to repeat (loop)
+<div class="highlight"><pre><span></span><code><span class="nt">slides</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">slide_1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">widgets</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MY TEXT</span>
+<span class="w">        </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
+<span class="w">        </span><span class="nt">animations</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">show_slide</span><span class="p">:</span><span class="w">                   </span><span class="c1"># animation trigger event</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">property</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">opacity</span><span class="w">         </span><span class="c1"># name of the widget property we&#39;re animating</span>
+<span class="w">              </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w">                  </span><span class="c1"># target value of that property for this step</span>
+<span class="w">              </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.5s</span><span class="w">             </span><span class="c1"># duration for this step (how long it takes to get there)</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">property</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">opacity</span><span class="w">         </span><span class="c1"># second step in the animation (starts with a hyphen)</span>
+<span class="w">              </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">              </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.5s</span>
+<span class="w">              </span><span class="nt">repeat</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w">              </span><span class="c1"># added to the final step, tells this animation to repeat (loop)</span>
 </code></pre></div>
 <p>In the example above, an <code>animations:</code> setting has been added to the
 widget. Then under there, you add the name of the event you want to use
@@ -34135,29 +34135,29 @@ it so that step runs at the same time as the step before it. This means
 you can animate multiple properties at once.</p>
 <p>For example, to make the text grow and shrink while also fading on and
 off:</p>
-<div class="highlight"><pre><span></span><code>slides:
-  slide_1:
-    widgets:
-      - type: text
-        text: MY TEXT
-        color: red
-        font_size: 50
-        animations:
-          show_slide:
-            - property: opacity
-              value: 1
-              duration: .5s
-            - property: font_size
-              value: 100
-              timing: with_previous         # makes this step run at the same time as the previous one
-              duration: .5s                 # specify a duration for each step, even when with_previous
-            - property: opacity
-              value: 0
-              duration: .5s
-              repeat: true
-            - property: font_size
-              value: 50
-              duration: .5s
+<div class="highlight"><pre><span></span><code><span class="nt">slides</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">slide_1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">widgets</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MY TEXT</span>
+<span class="w">        </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
+<span class="w">        </span><span class="nt">font_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">50</span>
+<span class="w">        </span><span class="nt">animations</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">show_slide</span><span class="p">:</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">property</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">opacity</span>
+<span class="w">              </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">              </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.5s</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">property</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">font_size</span>
+<span class="w">              </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="w">              </span><span class="nt">timing</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">with_previous</span><span class="w">         </span><span class="c1"># makes this step run at the same time as the previous one</span>
+<span class="w">              </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.5s</span><span class="w">                 </span><span class="c1"># specify a duration for each step, even when with_previous</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">property</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">opacity</span>
+<span class="w">              </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">              </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.5s</span>
+<span class="w">              </span><span class="nt">repeat</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">property</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">font_size</span>
+<span class="w">              </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">50</span>
+<span class="w">              </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.5s</span>
 </code></pre></div>
 <p>Notice that the animation in the example above has 4 steps, but steps #2
 and #4 have the setting <code>timing: with_previous</code>. You can chain together
@@ -34191,32 +34191,32 @@ slide is shown).</p>
 different animations to take place when different events occur. You can
 mix and match these as much as you want, including mixing the
 "special" animation trigger events with regular MPF events.</p>
-<div class="highlight"><pre><span></span><code>slides:
-  slide1:
-    widgets:
-      - type: text
-        text: I&#39;M GOING TO MOVE
-        x: 50
-        y: 50
-    animations:
-      move_up:
-        property: y          # if there&#39;s just one animation step, we don&#39;t need the hyphen
-        value: 100
-      move_down:
-        property: y
-        value: 0
-      move_right:
-        property: x
-        value: 100
-      move_left:
-        property: x
-        value: 0
-      move_home:
-        - property: x
-          value: 50
-        - property: y
-          value: 50
-          timing: with_previous
+<div class="highlight"><pre><span></span><code><span class="nt">slides</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">slide1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">widgets</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">I&#39;M GOING TO MOVE</span>
+<span class="w">        </span><span class="nt">x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">50</span>
+<span class="w">        </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">50</span>
+<span class="w">    </span><span class="nt">animations</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">move_up</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">property</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">y</span><span class="w">          </span><span class="c1"># if there&#39;s just one animation step, we don&#39;t need the hyphen</span>
+<span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="w">      </span><span class="nt">move_down</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">property</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">y</span>
+<span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">      </span><span class="nt">move_right</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">property</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">x</span>
+<span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="w">      </span><span class="nt">move_left</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">property</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">x</span>
+<span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">      </span><span class="nt">move_home</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">property</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">x</span>
+<span class="w">          </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">50</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">property</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">y</span>
+<span class="w">          </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">50</span>
+<span class="w">          </span><span class="nt">timing</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">with_previous</span>
 </code></pre></div>
 <p>In the above example, we have five different animation events
 configured. These are just regular MPF events which you can use from
@@ -34230,17 +34230,17 @@ both run together to move the widget back to its initial position.</p>
 for each event.</p>
 <p>You can also use a property from your event. For instance, you can move
 a widget based on a player variable:</p>
-<div class="highlight"><pre><span></span><code>slides:
-  slide1:
-    widgets:
-      - type: text
-        text: I&#39;M GOING TO MOVE
-        x: 50
-        y: 50
-    animations:
-      player_loops:           # this is posted when the player variable &quot;loops&quot; changes
-        property: y
-        value: (value)        # this is the value of loops
+<div class="highlight"><pre><span></span><code><span class="nt">slides</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">slide1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">widgets</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">I&#39;M GOING TO MOVE</span>
+<span class="w">        </span><span class="nt">x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">50</span>
+<span class="w">        </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">50</span>
+<span class="w">    </span><span class="nt">animations</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">player_loops</span><span class="p">:</span><span class="w">           </span><span class="c1"># this is posted when the player variable &quot;loops&quot; changes</span>
+<span class="w">        </span><span class="nt">property</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">y</span>
+<span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(value)</span><span class="w">        </span><span class="c1"># this is the value of loops</span>
 </code></pre></div>
 <h2 id="6-looping-and-repeating-animations">6. Looping and repeating animations</h2>
 <p>So far, every animation sequence we've looked at will just run through
@@ -34249,32 +34249,32 @@ once and then stop. However, you can add <code>repeat: true</code> (or
 that animation to loop back to the beginning and keep repeating.</p>
 <p>Of course you can mix-and-match repeating animations with one time
 animations. For example:</p>
-<div class="highlight"><pre><span></span><code>slides:
-  slide1:
-    widgets:
-      - type: text
-        text: BOO!
-        y: -50
-        font_size: 90
-        animations:
-          show_slide:
-            property: y
-            value: 50
-            duration: 500ms
-          pulse_boo:
-            - property: font_size
-              value: 100
-              duration: 250ms
-            - property: font_size
-              value: 90
-              duration: 250ms
-              repeat: true
-          bye_boo:
-            - property: y
-              value: 100
-            - property: x
-              value: 150
-              timing: with_previous
+<div class="highlight"><pre><span></span><code><span class="nt">slides</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">slide1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">widgets</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">BOO!</span>
+<span class="w">        </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-50</span>
+<span class="w">        </span><span class="nt">font_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">90</span>
+<span class="w">        </span><span class="nt">animations</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">show_slide</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">property</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">y</span>
+<span class="w">            </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">50</span>
+<span class="w">            </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">500ms</span>
+<span class="w">          </span><span class="nt">pulse_boo</span><span class="p">:</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">property</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">font_size</span>
+<span class="w">              </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="w">              </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">250ms</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">property</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">font_size</span>
+<span class="w">              </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">90</span>
+<span class="w">              </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">250ms</span>
+<span class="w">              </span><span class="nt">repeat</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">          </span><span class="nt">bye_boo</span><span class="p">:</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">property</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">y</span>
+<span class="w">              </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">property</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">x</span>
+<span class="w">              </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">150</span>
+<span class="w">              </span><span class="nt">timing</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">with_previous</span>
 </code></pre></div>
 <p>In the example above, when the slide is shown (or when the widget is
 added if this config was in your <code>widgets:</code> section and you added it via
@@ -34292,29 +34292,29 @@ degrees. When the rotation completes, the widget is at rotation 360
 degrees. Repeating the step fails to cause the widget to move because it
 is already at destination. To create continuously rotating widgets, a
 two step process is required:</p>
-<div class="highlight"><pre><span></span><code>slides:
-  slide1:
-    widgets:
-      - type: text
-        text: I&#39;M GOING TO ROTATE
-        x: 50
-        y: 50
-        animations:
-          show_slide:
-            - property: rotation
-              value: 0
-              relative: false
-              duration: 0
-            - property: rotation
-              value: 360
-              relative: false
-              duration: 2s
-              repeat: true
+<div class="highlight"><pre><span></span><code><span class="nt">slides</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">slide1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">widgets</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">I&#39;M GOING TO ROTATE</span>
+<span class="w">        </span><span class="nt">x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">50</span>
+<span class="w">        </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">50</span>
+<span class="w">        </span><span class="nt">animations</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">show_slide</span><span class="p">:</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">property</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rotation</span>
+<span class="w">              </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">              </span><span class="nt">relative</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">              </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">property</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rotation</span>
+<span class="w">              </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">360</span>
+<span class="w">              </span><span class="nt">relative</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">              </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2s</span>
+<span class="w">              </span><span class="nt">repeat</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 
-#! slide_player:
-#!   show_slide: slide1
-##! test
-#! post show_slide
+<span class="c1">#! slide_player:</span>
+<span class="c1">#!   show_slide: slide1</span>
+<span class="c1">##! test</span>
+<span class="c1">#! post show_slide</span>
 </code></pre></div>
 <p>The first step creates a reset point setting the widget at 0 degrees.
 This assures that there is always a destination to rotate to which is
@@ -34328,23 +34328,23 @@ currently at. This is easy to do using a relative property value of 0 as
 shown in the following example. So you still have the step in the
 animation, it just isn't doing anything since the widget's property is
 already at the desired target value. For example:</p>
-<div class="highlight"><pre><span></span><code>slides:
-  slide1:
-    widgets:
-      - type: image
-        image: flying_toaster
-        y: -50
-    animations:
-      show_slide:
-        - property: y
-          value: 50
-          duration: 1s
-        - property: y
-          value: 0
-          relative: true
-          duration: 2s
-        - property: y
-          value: 200
+<div class="highlight"><pre><span></span><code><span class="nt">slides</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">slide1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">widgets</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">image</span>
+<span class="w">        </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flying_toaster</span>
+<span class="w">        </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-50</span>
+<span class="w">    </span><span class="nt">animations</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">show_slide</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">property</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">y</span>
+<span class="w">          </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">50</span>
+<span class="w">          </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">property</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">y</span>
+<span class="w">          </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">          </span><span class="nt">relative</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">          </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2s</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">property</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">y</span>
+<span class="w">          </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">200</span>
 </code></pre></div>
 <p>The the example above, the <code>flying_toaster</code> image will move in from the
 bottom of the screen (to <code>y:50</code>) in 1 second, then pause for 2 seconds
@@ -34361,49 +34361,49 @@ how this works and descriptions of all the options.</p>
 <p>Much like <a href="../reusable_widgets/">named widgets</a>, you can also create pre-defined animations that you can
 easily apply to any widget. You do this by adding those animations to
 the <code>animations:</code> section of your config, like this:</p>
-<div class="highlight"><pre><span></span><code>animations:
-  fade_in:
-    property: opacity
-    value: 1
-    duration: 1s
-  fade_out:
-    property: opacity
-    value: 0
-    duration: 1s
+<div class="highlight"><pre><span></span><code><span class="nt">animations</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">fade_in</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">property</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">opacity</span>
+<span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<span class="w">  </span><span class="nt">fade_out</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">property</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">opacity</span>
+<span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
 </code></pre></div>
 <p>Now you can use these animations, by name, in any widget or
 widget_player config where you would ordinarily define your own
 animations.</p>
 <p>For example, to configure a widget to fade in (assuming the widget was
 initially created with <code>opacity: 0</code>:</p>
-<div class="highlight"><pre><span></span><code>widgets:
-  hello_widget:
-    - type: text
-      text: HELLO
-      animations:
-        show_slide: fade_in
+<div class="highlight"><pre><span></span><code><span class="nt">widgets</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">hello_widget</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HELLO</span>
+<span class="w">      </span><span class="nt">animations</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">show_slide</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fade_in</span>
 </code></pre></div>
 <p>Again remember this can be done anywhere you configure an animation. So
 if you later wanted to fade that text out when the event
 "timer_hurry_up_complete" is posted, you can do it like this:</p>
-<div class="highlight"><pre><span></span><code>widgets:
-  hello_widget:
-    - type: text
-      text: HELLO
-      animations:
-        show_slide: fade_in
-        timer_hurry_up_complete: fade_out
+<div class="highlight"><pre><span></span><code><span class="nt">widgets</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">hello_widget</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HELLO</span>
+<span class="w">      </span><span class="nt">animations</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">show_slide</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fade_in</span>
+<span class="w">        </span><span class="nt">timer_hurry_up_complete</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fade_out</span>
 </code></pre></div>
 <h2 id="10-chaining-multiple-named-animations-together">10. Chaining multiple named animations together</h2>
 <p>When working with named animations, you can chain together multiple
 named animations for a single event by specifying them as a list, like
 this:</p>
-<div class="highlight"><pre><span></span><code>widgets:
-  hello_widget:
-    - type: text
-      text: HELLO
-      animations:
-        some_event: fade_in, fade_out, pulse
+<div class="highlight"><pre><span></span><code><span class="nt">widgets</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">hello_widget</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HELLO</span>
+<span class="w">      </span><span class="nt">animations</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">some_event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fade_in, fade_out, pulse</span>
 </code></pre></div>
 <p>Any animation with <code>timing: with_previous</code> in the first step will run
 with the previous one, meaning you can create lots of little effects and
@@ -34411,21 +34411,21 @@ sub-animations and then combine them in reusable ways throughout your
 config.</p>
 <p>You can even use the same animation over and over in a sequence to
 repeat something a certain number of times. For example:</p>
-<div class="highlight"><pre><span></span><code>animations:
-  pulse:
-    - property: opacity
-      value: 0
-      duration: 100ms
-    - property: opacity
-      value: 1
-      duration: 100ms
-      timing: after_previous
-widgets:
-  widget1:
-    - type: text
-      text: HELLO
-      animations:
-        flash_3x: pulse, pulse, pulse
+<div class="highlight"><pre><span></span><code><span class="nt">animations</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">pulse</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">property</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">opacity</span>
+<span class="w">      </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">      </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100ms</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">property</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">opacity</span>
+<span class="w">      </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">      </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100ms</span>
+<span class="w">      </span><span class="nt">timing</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">after_previous</span>
+<span class="nt">widgets</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">widget1</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HELLO</span>
+<span class="w">      </span><span class="nt">animations</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">flash_3x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pulse, pulse, pulse</span>
 </code></pre></div>
 <p>In the example above, when the MPF event "flash_3x" is posted, it will
 cause widget1 to pulse three times.</p>
@@ -34434,23 +34434,23 @@ cause widget1 to pulse three times.</p>
 we animate a progress bar based on the player variable <code>progress</code> by
 hooking the width of the bar to the event <code>player_progress</code> which is
 posted when the value changes:</p>
-<div class="highlight"><pre><span></span><code>slides:
-  green_slide:
-    widgets:
-      - type: rectangle
-        y: 50
-        z: 20
-        anchor_x: left
-        anchor_y: center
-        width: 0
-        height: 16
-        corner_radius: 3
-        corner_segments: 3
-        color: 00FF00
-        animations:
-          player_progress:
-            - property: width
-              value: (value)
+<div class="highlight"><pre><span></span><code><span class="nt">slides</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">green_slide</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">widgets</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rectangle</span>
+<span class="w">        </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">50</span>
+<span class="w">        </span><span class="nt">z</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span>
+<span class="w">        </span><span class="nt">anchor_x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">left</span>
+<span class="w">        </span><span class="nt">anchor_y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">center</span>
+<span class="w">        </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">        </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">16</span>
+<span class="w">        </span><span class="nt">corner_radius</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="w">        </span><span class="nt">corner_segments</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="w">        </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">00FF00</span>
+<span class="w">        </span><span class="nt">animations</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">player_progress</span><span class="p">:</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">property</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">width</span>
+<span class="w">              </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(value)</span>
 </code></pre></div>
 <hr />
 <div class="admonition question">

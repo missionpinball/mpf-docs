@@ -33725,22 +33725,22 @@ them.</p>
 your config files when you enter things that take action on events.</p>
 <p>For example, here's a section of a config file that would show a slide
 called "lets_go" when the <em>ball_started</em> event was posted:</p>
-<div class="highlight"><pre><span></span><code>#! slides:
-#!   lets_go:
-#!     - type: text
-#!       text: &quot;MPF IS AWESOME&quot;
-slide_player:
-  ball_started: lets_go
-  ball_ended:
-    lets_go:
-      action: remove
-##! test
-#! start_game
-#! advance_time_and_run .1
-#! assert_text_on_top_slide &quot;MPF IS AWESOME&quot;
-#! drain_all_balls
-#! advance_time_and_run .1
-#! assert_text_on_top_slide &quot;MPF IS AWESOME&quot;
+<div class="highlight"><pre><span></span><code><span class="c1">#! slides:</span>
+<span class="c1">#!   lets_go:</span>
+<span class="c1">#!     - type: text</span>
+<span class="c1">#!       text: &quot;MPF IS AWESOME&quot;</span>
+<span class="nt">slide_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">ball_started</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lets_go</span>
+<span class="w">  </span><span class="nt">ball_ended</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">lets_go</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">remove</span>
+<span class="c1">##! test</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_text_on_top_slide &quot;MPF IS AWESOME&quot;</span>
+<span class="c1">#! drain_all_balls</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_text_on_top_slide &quot;MPF IS AWESOME&quot;</span>
 </code></pre></div>
 <p>The example above will show that slide any time that the <em>ball_started</em>
 event was posted, regardless of what the values of the parameters are.</p>
@@ -33748,66 +33748,66 @@ event was posted, regardless of what the values of the parameters are.</p>
 differently so that the action only takes place if that event is posted
 AND if the parameters have certain values.</p>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>#! slides:
-#!   first_ball_intro:
-#!     - type: text
-#!       text: &quot;FIRST BALL&quot;
-slide_player:
-  ball_started{ball==1}: first_ball_intro
-  ball_ended:
-    first_ball_intro:
-      action: remove
-##! test
-#! start_game
-#! advance_time_and_run .1
-#! assert_text_on_top_slide &quot;FIRST BALL&quot;
-#! drain_all_balls
-#! advance_time_and_run .1
-#! assert_text_not_on_top_slide &quot;FIRST BALL&quot;
+<div class="highlight"><pre><span></span><code><span class="c1">#! slides:</span>
+<span class="c1">#!   first_ball_intro:</span>
+<span class="c1">#!     - type: text</span>
+<span class="c1">#!       text: &quot;FIRST BALL&quot;</span>
+<span class="nt">slide_player</span><span class="p">:</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">ball_started{ball==1}</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">first_ball_intro</span>
+<span class="w">  </span><span class="nt">ball_ended</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">first_ball_intro</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">remove</span>
+<span class="c1">##! test</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_text_on_top_slide &quot;FIRST BALL&quot;</span>
+<span class="c1">#! drain_all_balls</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_text_not_on_top_slide &quot;FIRST BALL&quot;</span>
 </code></pre></div>
 <p>In the above example, the slide "first_ball_intro" will only be posted
 when the <em>ball_started</em> AND when the value of ball is 1. (Since this
 entry doesn't mention "player", then this action would happen when
 ball 1 is started for any player.)</p>
 <p>Of course you can use multiple entries with different values, like this:</p>
-<div class="highlight"><pre><span></span><code>#! slides:
-#!   first_ball_intro:
-#!     - type: text
-#!       text: &quot;FIRST BALL&quot;
-#!   lets_go:
-#!     - type: text
-#!       text: &quot;MPF IS AWESOME&quot;
-slide_player:
-  ball_started{ball==1}: first_ball_intro
-  ball_started{ball&gt;1}: lets_go
-  ball_ended:
-    first_ball_intro:
-      action: remove
-    lets_go:
-      action: remove
-##! test
-#! start_game
-#! advance_time_and_run .1
-#! assert_text_on_top_slide &quot;FIRST BALL&quot;
-#! drain_all_balls
-#! advance_time_and_run .1
-#! assert_text_on_top_slide &quot;MPF IS AWESOME&quot;
+<div class="highlight"><pre><span></span><code><span class="c1">#! slides:</span>
+<span class="c1">#!   first_ball_intro:</span>
+<span class="c1">#!     - type: text</span>
+<span class="c1">#!       text: &quot;FIRST BALL&quot;</span>
+<span class="c1">#!   lets_go:</span>
+<span class="c1">#!     - type: text</span>
+<span class="c1">#!       text: &quot;MPF IS AWESOME&quot;</span>
+<span class="nt">slide_player</span><span class="p">:</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">ball_started{ball==1}</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">first_ball_intro</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">ball_started{ball&gt;1}</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lets_go</span>
+<span class="w">  </span><span class="nt">ball_ended</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">first_ball_intro</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">remove</span>
+<span class="w">    </span><span class="nt">lets_go</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">remove</span>
+<span class="c1">##! test</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_text_on_top_slide &quot;FIRST BALL&quot;</span>
+<span class="c1">#! drain_all_balls</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_text_on_top_slide &quot;MPF IS AWESOME&quot;</span>
 </code></pre></div>
 <p>In this case, when the <em>ball_started</em> event is posted for Ball 1, the
 "first_ball_intro" slide will be shown. And if it's posted with a
 ball after Ball 1, the "lets_go" slide will be posted.</p>
 <p>You can also combine things here using <code>and</code> or <code>or</code>. For example:</p>
-<div class="highlight"><pre><span></span><code>#! slides:
-#!   special_slide: []
-slide_player:
-  ball_started{ball==1 or ball==3}: special_slide
+<div class="highlight"><pre><span></span><code><span class="c1">#! slides:</span>
+<span class="c1">#!   special_slide: []</span>
+<span class="nt">slide_player</span><span class="p">:</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">ball_started{ball==1 or ball==3}</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">special_slide</span>
 </code></pre></div>
 <p>Now the "special_slide" will be shown for either ball 1 <em>or</em> ball 3.</p>
 <p>You can also combine with "and", for example:</p>
-<div class="highlight"><pre><span></span><code>#! slides:
-#!   special_slide: []
-slide_player:
-  ball_started{ball==3 and player==1}: special_slide
+<div class="highlight"><pre><span></span><code><span class="c1">#! slides:</span>
+<span class="c1">#!   special_slide: []</span>
+<span class="nt">slide_player</span><span class="p">:</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">ball_started{ball==3 and player==1}</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">special_slide</span>
 </code></pre></div>
 <p>Now the "special_slide" will only show when the <em>ball_started</em> event
 is posted for player 1, ball 3 (but not player 2, ball 3, etc.).</p>
@@ -33817,12 +33817,12 @@ is posted for player 1, ball 3 (but not player 2, ball 3, etc.).</p>
 player variables from any player (x is the player index), <code>machine.</code> to
 access machine variables, <code>game.</code> game attributes, and <code>settings.</code> to
 access operator settings.</p>
-<div class="highlight"><pre><span></span><code>#! slides:
-#!   you_rule: []
-#!   you_stink: []
-slide_player:
-  ball_started{current_player.score &gt; 1000000}: you_rule
-  ball_started{current_player.score &lt; 10000 and ball == 3}: you_stink
+<div class="highlight"><pre><span></span><code><span class="c1">#! slides:</span>
+<span class="c1">#!   you_rule: []</span>
+<span class="c1">#!   you_stink: []</span>
+<span class="nt">slide_player</span><span class="p">:</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">ball_started{current_player.score &gt; 1000000}</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">you_rule</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">ball_started{current_player.score &lt; 10000 and ball == 3}</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">you_stink</span>
 </code></pre></div>
 <p>The above config will show the slide "you_rule" any time the
 <em>ball_started</em> event is posted and the player's score is more than 1
@@ -33831,10 +33831,10 @@ and the player has less than 10,000 points.</p>
 <p>But wait, there's more!</p>
 <p>You can also use standard math operators (<code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>//</code>,
 etc.) to evaluate whether the action should take place:</p>
-<div class="highlight"><pre><span></span><code>#! slides:
-#!   uh_oh: []
-slide_player:
-  ball_started{ball &gt; 1 and current_player.score &lt; ((ball - 1) * 10000)}: uh_oh
+<div class="highlight"><pre><span></span><code><span class="c1">#! slides:</span>
+<span class="c1">#!   uh_oh: []</span>
+<span class="nt">slide_player</span><span class="p">:</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">ball_started{ball &gt; 1 and current_player.score &lt; ((ball - 1) * 10000)}</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uh_oh</span>
 </code></pre></div>
 <p>This will post the slide "uh_oh" if the player is starting a ball
 after Ball 1 and their score is less than an average of 10k points per
@@ -33847,10 +33847,10 @@ you can if you want. :)</p>
 the <code>value</code> of a <code>counter</code> called <code>your_mode_counter</code> you would use
 <code>device.counters.your_mode_counter.value</code>. In the following example we
 show a slide when the value of the counter is above <code>5</code> in ball <code>3</code></p>
-<div class="highlight"><pre><span></span><code>#! slides:
-#!   nearly_did_all_modes: []
-slide_player:
-  ball_started{ball == 3 and device.counters.your_mode_counter.value &gt; 5}: nearly_did_all_modes
+<div class="highlight"><pre><span></span><code><span class="c1">#! slides:</span>
+<span class="c1">#!   nearly_did_all_modes: []</span>
+<span class="nt">slide_player</span><span class="p">:</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">ball_started{ball == 3 and device.counters.your_mode_counter.value &gt; 5}</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nearly_did_all_modes</span>
 </code></pre></div>
 <p>You can use all
 <a href="../../../config/instructions/dynamic_values/">placeholder variables</a>.</p>
@@ -33862,16 +33862,16 @@ entries with two different events to add and remove the show (or light).
 However, MPF supports subscriptions in config players for certain (not
 all) variables.</p>
 <p>This is an example:</p>
-<div class="highlight"><pre><span></span><code>#! lights:
-#!   led4:
-#!     number:
-#!   led5:
-#!     number:
-light_player:
-  &quot;{machine.test_machine_var == 23}&quot;:
-    led4: red
-  &quot;{current_player.test_player_var == 42}&quot;:
-    led5: red
+<div class="highlight"><pre><span></span><code><span class="c1">#! lights:</span>
+<span class="c1">#!   led4:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   led5:</span>
+<span class="c1">#!     number:</span>
+<span class="nt">light_player</span><span class="p">:</span>
+<span class="w">  </span><span class="s">&quot;{machine.test_machine_var</span><span class="nv"> </span><span class="s">==</span><span class="nv"> </span><span class="s">23}&quot;</span><span class="p p-Indicator">:</span>
+<span class="w">    </span><span class="nt">led4</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
+<span class="w">  </span><span class="s">&quot;{current_player.test_player_var</span><span class="nv"> </span><span class="s">==</span><span class="nv"> </span><span class="s">42}&quot;</span><span class="p p-Indicator">:</span>
+<span class="w">    </span><span class="nt">led5</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
 </code></pre></div>
 <p>If will turn <code>led4</code> to <code>red</code> once the machine variable
 <code>test_machine_var</code> becomes <code>23</code> and turns <code>led4</code> back to <code>off</code> once

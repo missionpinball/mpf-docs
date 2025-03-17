@@ -33790,41 +33790,41 @@ modes if you want).</p>
 use the I-N-D-Y lanes from the Indiana Jones pinball game. We'll assume
 that the machine has switches defined in the <code>switches:</code> config section
 for each of the top lanes, called <code>s_top_lane_1</code> through <code>s_top_lane_4</code>.</p>
-<div class="highlight"><pre><span></span><code>#! switches:
-#!   s_top_lane_1:
-#!     number: 1
-#!   s_top_lane_2:
-#!     number: 2
-#!   s_top_lane_3:
-#!     number: 3
-#!   s_top_lane_4:
-#!     number: 4
-##! mode: top_lanes
-mode:
-  start_events: start_mode_top_lanes
-  stop_events: stop_mode_top_lanes, ball_will_end
+<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
+<span class="c1">#!   s_top_lane_1:</span>
+<span class="c1">#!     number: 1</span>
+<span class="c1">#!   s_top_lane_2:</span>
+<span class="c1">#!     number: 2</span>
+<span class="c1">#!   s_top_lane_3:</span>
+<span class="c1">#!     number: 3</span>
+<span class="c1">#!   s_top_lane_4:</span>
+<span class="c1">#!     number: 4</span>
+<span class="c1">##! mode: top_lanes</span>
+<span class="nt">mode</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">start_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start_mode_top_lanes</span>
+<span class="w">  </span><span class="nt">stop_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stop_mode_top_lanes, ball_will_end</span>
 
-shots:
-  top_lane_i:
-    switch: s_top_lane_1
-  top_lane_n:
-    switch: s_top_lane_2
-  top_lane_d:
-    switch: s_top_lane_3
-  top_lane_y:
-    switch: s_top_lane_4
+<span class="nt">shots</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">top_lane_i</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_top_lane_1</span>
+<span class="w">  </span><span class="nt">top_lane_n</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_top_lane_2</span>
+<span class="w">  </span><span class="nt">top_lane_d</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_top_lane_3</span>
+<span class="w">  </span><span class="nt">top_lane_y</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_top_lane_4</span>
 </code></pre></div>
 <h2 id="step-2-creating-a-profile-for-the-lanes">Step 2. Creating a profile for the lanes</h2>
 <p>We can create a <a href="../../config/shot_profiles/">shot profile</a> for the top lanes that starts with the light on, and turns
 it off after the shot is hit.</p>
-<div class="highlight"><pre><span></span><code>##! mode: top_lanes
-shot_profiles:
-  top_lane_profile:
-    states:
-      - name:
-        show: off
-      - name: hit
-        show: on
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: top_lanes</span>
+<span class="nt">shot_profiles</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">top_lane_profile</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">states</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">show</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">off</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hit</span>
+<span class="w">        </span><span class="nt">show</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">on</span>
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -33839,44 +33839,44 @@ This tells MPF that when it plays the show (in this case, the "on"
 show) for a specific shot, use the light that corresponds to that shot.</p>
 <p>We'll assume the machine has four lights defined in the <code>lights:</code>
 config section, called <code>l_top_lane_1</code> through <code>l_top_lane_4</code></p>
-<div class="highlight"><pre><span></span><code>#! switches:
-#!   s_top_lane_1:
-#!     number: 1
-#!   s_top_lane_2:
-#!     number: 2
-#!   s_top_lane_3:
-#!     number: 3
-#!   s_top_lane_4:
-#!     number: 4
-##! mode: top_lanes
-#! shot_profiles:
-#!   top_lane_profile:
-#!     states:
-#!       - name:
-#!         show: off
-#!       - name: hit
-#!         show: on
-shots:
-  top_lane_i:
-    switch: s_top_lane_1
-    profile: top_lane_profile
-    show_tokens:
-      led: l_top_lane_1
-  top_lane_n:
-    switch: s_top_lane_2
-    profile: top_lane_profile
-    show_tokens:
-      led: l_top_lane_2
-  top_lane_d:
-    switch: s_top_lane_3
-    profile: top_lane_profile
-    show_tokens:
-      led: l_top_lane_3
-  top_lane_y:
-    switch: s_top_lane_4
-    profile: top_lane_profile
-    show_tokens:
-      led: l_top_lane_4
+<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
+<span class="c1">#!   s_top_lane_1:</span>
+<span class="c1">#!     number: 1</span>
+<span class="c1">#!   s_top_lane_2:</span>
+<span class="c1">#!     number: 2</span>
+<span class="c1">#!   s_top_lane_3:</span>
+<span class="c1">#!     number: 3</span>
+<span class="c1">#!   s_top_lane_4:</span>
+<span class="c1">#!     number: 4</span>
+<span class="c1">##! mode: top_lanes</span>
+<span class="c1">#! shot_profiles:</span>
+<span class="c1">#!   top_lane_profile:</span>
+<span class="c1">#!     states:</span>
+<span class="c1">#!       - name:</span>
+<span class="c1">#!         show: off</span>
+<span class="c1">#!       - name: hit</span>
+<span class="c1">#!         show: on</span>
+<span class="nt">shots</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">top_lane_i</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_top_lane_1</span>
+<span class="w">    </span><span class="nt">profile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">top_lane_profile</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">led</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_top_lane_1</span>
+<span class="w">  </span><span class="nt">top_lane_n</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_top_lane_2</span>
+<span class="w">    </span><span class="nt">profile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">top_lane_profile</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">led</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_top_lane_2</span>
+<span class="w">  </span><span class="nt">top_lane_d</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_top_lane_3</span>
+<span class="w">    </span><span class="nt">profile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">top_lane_profile</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">led</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_top_lane_3</span>
+<span class="w">  </span><span class="nt">top_lane_y</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_top_lane_4</span>
+<span class="w">    </span><span class="nt">profile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">top_lane_profile</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">led</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_top_lane_4</span>
 </code></pre></div>
 <h2 id="step-3-creating-a-shot_group-for-the-lanes">Step 3. Creating a shot_group for the lanes</h2>
 <p>To tell MPF that the four lane shots are related to each other, we
@@ -33889,51 +33889,51 @@ together. In this case, we'll use our shot group to:</p>
 <li>Trigger an event when all the shots are hit</li>
 <li>Reset all the shots to be lit</li>
 </ul>
-<div class="highlight"><pre><span></span><code>#! switches:
-#!   s_top_lane_1:
-#!     number: 1
-#!   s_top_lane_2:
-#!     number: 2
-#!   s_top_lane_3:
-#!     number: 3
-#!   s_top_lane_4:
-#!     number: 4
-##! mode: top_lanes
-#! shots:
-#!   top_lane_i:
-#!     switch: s_top_lane_1
-#!     profile: top_lane_profile
-#!     show_tokens:
-#!       led: l_top_lane_1
-#!   top_lane_n:
-#!     switch: s_top_lane_2
-#!     profile: top_lane_profile
-#!     show_tokens:
-#!       led: l_top_lane_2
-#!   top_lane_d:
-#!     switch: s_top_lane_3
-#!     profile: top_lane_profile
-#!     show_tokens:
-#!       led: l_top_lane_3
-#!   top_lane_y:
-#!     switch: s_top_lane_4
-#!     profile: top_lane_profile
-#!     show_tokens:
-#!       led: l_top_lane_4
-#!
-#! shot_profiles:
-#!   top_lane_profile:
-#!     states:
-#!       - name:
-#!         show: off
-#!       - name: hit
-#!         show: on
-shot_groups:
-  top_lane_group:
-    shots: top_lane_i, top_lane_n, top_lane_d, top_lane_y
-    reset_events: top_lane_group_hit_complete
-    rotate_left_events: s_flipper_left_active
-    rotate_right_events: s_flipper_right_active
+<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
+<span class="c1">#!   s_top_lane_1:</span>
+<span class="c1">#!     number: 1</span>
+<span class="c1">#!   s_top_lane_2:</span>
+<span class="c1">#!     number: 2</span>
+<span class="c1">#!   s_top_lane_3:</span>
+<span class="c1">#!     number: 3</span>
+<span class="c1">#!   s_top_lane_4:</span>
+<span class="c1">#!     number: 4</span>
+<span class="c1">##! mode: top_lanes</span>
+<span class="c1">#! shots:</span>
+<span class="c1">#!   top_lane_i:</span>
+<span class="c1">#!     switch: s_top_lane_1</span>
+<span class="c1">#!     profile: top_lane_profile</span>
+<span class="c1">#!     show_tokens:</span>
+<span class="c1">#!       led: l_top_lane_1</span>
+<span class="c1">#!   top_lane_n:</span>
+<span class="c1">#!     switch: s_top_lane_2</span>
+<span class="c1">#!     profile: top_lane_profile</span>
+<span class="c1">#!     show_tokens:</span>
+<span class="c1">#!       led: l_top_lane_2</span>
+<span class="c1">#!   top_lane_d:</span>
+<span class="c1">#!     switch: s_top_lane_3</span>
+<span class="c1">#!     profile: top_lane_profile</span>
+<span class="c1">#!     show_tokens:</span>
+<span class="c1">#!       led: l_top_lane_3</span>
+<span class="c1">#!   top_lane_y:</span>
+<span class="c1">#!     switch: s_top_lane_4</span>
+<span class="c1">#!     profile: top_lane_profile</span>
+<span class="c1">#!     show_tokens:</span>
+<span class="c1">#!       led: l_top_lane_4</span>
+<span class="c1">#!</span>
+<span class="c1">#! shot_profiles:</span>
+<span class="c1">#!   top_lane_profile:</span>
+<span class="c1">#!     states:</span>
+<span class="c1">#!       - name:</span>
+<span class="c1">#!         show: off</span>
+<span class="c1">#!       - name: hit</span>
+<span class="c1">#!         show: on</span>
+<span class="nt">shot_groups</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">top_lane_group</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">shots</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">top_lane_i, top_lane_n, top_lane_d, top_lane_y</span>
+<span class="w">    </span><span class="nt">reset_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">top_lane_group_hit_complete</span>
+<span class="w">    </span><span class="nt">rotate_left_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_flipper_left_active</span>
+<span class="w">    </span><span class="nt">rotate_right_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_flipper_right_active</span>
 </code></pre></div>
 <p>The <code>rotate_left_events</code> and <code>rotate_right_events</code> allow the lane
 changes based on the flipper events.</p>
@@ -33963,61 +33963,61 @@ increase a the bonus multiplier for the end-of-game bonus.</p>
 <p>See <a href="../../game_logic/bonus/">End of Ball Bonus</a> for details
 on <em>bonus_multiplier</em>.</p>
 <h2 id="the-full-mode-config-code">The full mode config code</h2>
-<div class="highlight"><pre><span></span><code>#! switches:
-#!   s_top_lane_1:
-#!     number: 1
-#!   s_top_lane_2:
-#!     number: 2
-#!   s_top_lane_3:
-#!     number: 3
-#!   s_top_lane_4:
-#!     number: 4
-##! mode: top_lanes
-mode:
-  start_events: start_mode_top_lanes
-  stop_events: stop_mode_top_lanes, ball_will_end
+<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
+<span class="c1">#!   s_top_lane_1:</span>
+<span class="c1">#!     number: 1</span>
+<span class="c1">#!   s_top_lane_2:</span>
+<span class="c1">#!     number: 2</span>
+<span class="c1">#!   s_top_lane_3:</span>
+<span class="c1">#!     number: 3</span>
+<span class="c1">#!   s_top_lane_4:</span>
+<span class="c1">#!     number: 4</span>
+<span class="c1">##! mode: top_lanes</span>
+<span class="nt">mode</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">start_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start_mode_top_lanes</span>
+<span class="w">  </span><span class="nt">stop_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stop_mode_top_lanes, ball_will_end</span>
 
-shots:
-  top_lane_i:
-    switch: s_top_lane_1
-    profile: top_lane_profile
-    show_tokens:
-      led: l_top_lane_1
-  top_lane_n:
-    switch: s_top_lane_2
-    profile: top_lane_profile
-    show_tokens:
-      led: l_top_lane_2
-  top_lane_d:
-    switch: s_top_lane_3
-    profile: top_lane_profile
-    show_tokens:
-      led: l_top_lane_3
-  top_lane_y:
-    switch: s_top_lane_4
-    profile: top_lane_profile
-    show_tokens:
-      led: l_top_lane_4
+<span class="nt">shots</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">top_lane_i</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_top_lane_1</span>
+<span class="w">    </span><span class="nt">profile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">top_lane_profile</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">led</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_top_lane_1</span>
+<span class="w">  </span><span class="nt">top_lane_n</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_top_lane_2</span>
+<span class="w">    </span><span class="nt">profile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">top_lane_profile</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">led</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_top_lane_2</span>
+<span class="w">  </span><span class="nt">top_lane_d</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_top_lane_3</span>
+<span class="w">    </span><span class="nt">profile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">top_lane_profile</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">led</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_top_lane_3</span>
+<span class="w">  </span><span class="nt">top_lane_y</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_top_lane_4</span>
+<span class="w">    </span><span class="nt">profile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">top_lane_profile</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">led</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_top_lane_4</span>
 
-shot_groups:
-  top_lane_group:
-    shots: top_lane_i, top_lane_n, top_lane_d, top_lane_y
-    reset_events: top_lane_group_hit_complete
-    rotate_left_events: s_flipper_left_active
-    rotate_right_events: s_flipper_right_active
+<span class="nt">shot_groups</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">top_lane_group</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">shots</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">top_lane_i, top_lane_n, top_lane_d, top_lane_y</span>
+<span class="w">    </span><span class="nt">reset_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">top_lane_group_hit_complete</span>
+<span class="w">    </span><span class="nt">rotate_left_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_flipper_left_active</span>
+<span class="w">    </span><span class="nt">rotate_right_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_flipper_right_active</span>
 
-shot_profiles:
-  top_lane_profile:
-    states:
-      - name:
-        show: off
-      - name: hit
-        show: on
+<span class="nt">shot_profiles</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">top_lane_profile</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">states</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">show</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">off</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hit</span>
+<span class="w">        </span><span class="nt">show</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">on</span>
 
-variable_player:
-  top_lane_group_hit_complete:
-    score: 10000
-    bonus_multiplier: 1
+<span class="nt">variable_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">top_lane_group_hit_complete</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10000</span>
+<span class="w">    </span><span class="nt">bonus_multiplier</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
 </code></pre></div>
 <h2 id="related-docs">Related Docs</h2>
 <ul>

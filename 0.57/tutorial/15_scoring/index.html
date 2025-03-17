@@ -33744,12 +33744,12 @@ posts an event <em>(switch_name)_active</em> . (A second event called
 up.) To give the player points when a switch is hit, add sub-entries to
 the <code>variable_player:</code> section of your config file, with some switch
 name followed by "_active", like this:</p>
-<div class="highlight"><pre><span></span><code>##! mode: base
-variable_player:
-  s_right_inlane_active:
-    score: 100
-  s_left_flipper_active:
-    score: 1000
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: base</span>
+<span class="nt">variable_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_right_inlane_active</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="w">  </span><span class="nt">s_left_flipper_active</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 </code></pre></div>
 <p>Now save your config, start a game (<code>S</code>), hit the <code>L</code> key to launch a
 ball, then hit the <code>Q</code> key to trigger the right inlane switch . You
@@ -33791,21 +33791,21 @@ can just wire up scoring to a switch to see it working.)</p>
 <p>As we said, you can add or subtract value from any player variable via
 the <code>variable_player:</code> section--even player variables that you make up.</p>
 <p>For example, try changing your scoring section to this:</p>
-<div class="highlight"><pre><span></span><code># we will initially set the value to 0 when the machine starts up
-player_vars:
-  potato:
-    initial_value: 0
+<div class="highlight"><pre><span></span><code><span class="c1"># we will initially set the value to 0 when the machine starts up</span>
+<span class="nt">player_vars</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">potato</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">initial_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
 
-##! mode: base
-# in your base mode (modes/base/config/base.yaml)
-variable_player:
-  s_right_inlane_active:
-    score: 100
-  s_left_flipper_active:
-    score: 1000
-    potato: 1
-  s_right_flipper_active:
-    potato: -2
+<span class="c1">##! mode: base</span>
+<span class="c1"># in your base mode (modes/base/config/base.yaml)</span>
+<span class="nt">variable_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_right_inlane_active</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="w">  </span><span class="nt">s_left_flipper_active</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="w">    </span><span class="nt">potato</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">s_right_flipper_active</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">potato</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-2</span>
 </code></pre></div>
 <p>We use the word "potato" here to illustrate that player variables can
 be anything. So now when the left flipper is active, the player variable
@@ -33828,43 +33828,43 @@ display. To do this, let's add another widget to the slide that is show
 when the base mode starts. (So we're going to be editing
 <code>&lt;your_machine&gt;/modes/config/base.yaml</code> again. Add the potato text
 entry, like this:</p>
-<div class="highlight"><pre><span></span><code>#! player_vars:
-#!   potato:
-#!     initial_value: 0
-##! mode: base
-# in your base mode (modes/base/config/base.yaml)
-slide_player:
-  mode_base_started:
-    widgets:
-      - type: text
-        text: (score)
-        number_grouping: true
-        min_digits: 2
-        font_size: 100
-      - type: text
-        text: PLAYER (number)
-        y: 10
-        x: 10
-        font_size: 50
-        anchor_x: left
-        anchor_y: bottom
-      - type: text
-        text: BALL (ball)
-        y: 10
-        x: right-10
-        anchor_x: right
-        anchor_y: bottom
-        font_size: 50
-      - type: text
-        text: &#39;POTATO VALUE: (potato)&#39;
-        y: 40%
-##! test
-#! start_game
-#! start_mode base
-#! advance_time_and_run .1
-#! assert_text_on_top_slide &quot;PLAYER 1&quot;
-#! assert_text_on_top_slide &quot;BALL 1&quot;
-#! assert_text_on_top_slide &quot;POTATO VALUE: 0&quot;
+<div class="highlight"><pre><span></span><code><span class="c1">#! player_vars:</span>
+<span class="c1">#!   potato:</span>
+<span class="c1">#!     initial_value: 0</span>
+<span class="c1">##! mode: base</span>
+<span class="c1"># in your base mode (modes/base/config/base.yaml)</span>
+<span class="nt">slide_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">mode_base_started</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">widgets</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(score)</span>
+<span class="w">        </span><span class="nt">number_grouping</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">        </span><span class="nt">min_digits</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="w">        </span><span class="nt">font_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PLAYER (number)</span>
+<span class="w">        </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="w">        </span><span class="nt">x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="w">        </span><span class="nt">font_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">50</span>
+<span class="w">        </span><span class="nt">anchor_x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">left</span>
+<span class="w">        </span><span class="nt">anchor_y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bottom</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">BALL (ball)</span>
+<span class="w">        </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="w">        </span><span class="nt">x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">right-10</span>
+<span class="w">        </span><span class="nt">anchor_x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">right</span>
+<span class="w">        </span><span class="nt">anchor_y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bottom</span>
+<span class="w">        </span><span class="nt">font_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">50</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;POTATO</span><span class="nv"> </span><span class="s">VALUE:</span><span class="nv"> </span><span class="s">(potato)&#39;</span>
+<span class="w">        </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">40%</span>
+<span class="c1">##! test</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! start_mode base</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_text_on_top_slide &quot;PLAYER 1&quot;</span>
+<span class="c1">#! assert_text_on_top_slide &quot;BALL 1&quot;</span>
+<span class="c1">#! assert_text_on_top_slide &quot;POTATO VALUE: 0&quot;</span>
 </code></pre></div>
 <p>Notice that we put <code>text: 'POTATO VALUE: (potato)'</code> in quotes. That's
 because we actually want to show the colon as part of the text that's

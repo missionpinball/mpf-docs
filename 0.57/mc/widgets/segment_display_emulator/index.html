@@ -33797,26 +33797,26 @@ icons & this code generated via https://realfavicongenerator.net
 <p>The segment display emulator widget is used to emulate hardware segment
 displays on a <a href="../../slides/">slide</a>.</p>
 <p>Here's an example:</p>
-<div class="highlight"><pre><span></span><code>#config_version=5
-slide_player:
-  mc_ready:
-    display_slide:
-      - type: segment_display_emulator
-        name: display1
-        character_count: 7
-        character_slant_angle: 0
-        character_spacing: 20
-        segment_width: 0.11
-        segment_interval: 0.04
-        segment_off_color: 4b4c4a30
-        segment_on_color: fe961bff
-        side_bevel_enabled: true
-        dot_enabled: true
-        comma_enabled: true
-        text: &quot;HELLO&quot;
-        width: 600
-        height: 150
-        y: 100
+<div class="highlight"><pre><span></span><code><span class="c1">#config_version=5</span>
+<span class="nt">slide_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">mc_ready</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">display_slide</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">segment_display_emulator</span>
+<span class="w">        </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">display1</span>
+<span class="w">        </span><span class="nt">character_count</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">7</span>
+<span class="w">        </span><span class="nt">character_slant_angle</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">        </span><span class="nt">character_spacing</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span>
+<span class="w">        </span><span class="nt">segment_width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.11</span>
+<span class="w">        </span><span class="nt">segment_interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.04</span>
+<span class="w">        </span><span class="nt">segment_off_color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4b4c4a30</span>
+<span class="w">        </span><span class="nt">segment_on_color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fe961bff</span>
+<span class="w">        </span><span class="nt">side_bevel_enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">        </span><span class="nt">dot_enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">        </span><span class="nt">comma_enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;HELLO&quot;</span>
+<span class="w">        </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">600</span>
+<span class="w">        </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">150</span>
+<span class="w">        </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
 </code></pre></div>
 <p>The example above results in the following:</p>
 <p><img alt="image" src="../../images/widget_segment_display_emulator.png" /></p>

@@ -33591,15 +33591,15 @@ the name of the show as you'd refer to it in your MPF configs.</p>
 <p>Here is a sample show file. This file might be called something like
 <code>flash_red.yaml</code> and would be located in your machine's <code>/shows</code>
 folder:</p>
-<div class="highlight"><pre><span></span><code>##! show: my_show
-#show_version=5
-- time: 0
-  lights:
-    led1: red
-- time: +1
-  lights:
-    led1: off
-- time: +1
+<div class="highlight"><pre><span></span><code><span class="c1">##! show: my_show</span>
+<span class="c1">#show_version=5</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">led1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">+1</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">led1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">off</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">+1</span>
 </code></pre></div>
 <p>Notice it's essentially the same show we used as an example in the
 section on show config formats. However there's one important change.</p>

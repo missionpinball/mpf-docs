@@ -33776,23 +33776,23 @@ is not accessible from the internet and the network is segmented
 properly.</p>
 <h2 id="config">Config</h2>
 <p>This is an example config:</p>
-<div class="highlight"><pre><span></span><code>hardware:
-  platform: rpi
-raspberry_pi:
-  ip: localhost
-  port: 8888
-switches:
-  s_switch_8:
-    number: 8
-  s_switch_7:
-    number: 7
-coils:
-  output_2:
-    number: 2
-    default_pulse_ms: 1000
-servos:
-  servo_26:
-    number: 26
+<div class="highlight"><pre><span></span><code><span class="nt">hardware</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rpi</span>
+<span class="nt">raspberry_pi</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">ip</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">localhost</span>
+<span class="w">  </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8888</span>
+<span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_switch_8</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8</span>
+<span class="w">  </span><span class="nt">s_switch_7</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">7</span>
+<span class="nt">coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">output_2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="w">    </span><span class="nt">default_pulse_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="nt">servos</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">servo_26</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">26</span>
 </code></pre></div>
 <p>Configure the ip of your RaspberryPi in the <code>raspberry_pi</code> section. You
 may use localhost if you are running MPF on the RPi. Any pin on the RPi

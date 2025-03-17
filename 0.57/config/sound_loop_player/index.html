@@ -34323,32 +34323,32 @@ actions to perform on
 <a href="../sound_loop_sets/">sound loop sets</a> when
 MPF events are received.</p>
 <p>Examples:</p>
-<div class="highlight"><pre><span></span><code>sound_loop_player:
-  play_basic_beat:
-    loops:
-      action: play
-      sound_loop_set: basic_beat
-      timing: loop_end
-  add_hi_hats:
-    loops:
-      action: play_layer
-      layer: 1
-      timing: loop_end
-  stop_hi_hats:
-    loops:
-      action: stop_looping_layer
-      layer: 1
-  add_snare:
-    loops:
-      action: play_layer
-      fade_in: 2s
-      layer: 2
-      timing: now
-  add_claps:
-    loops:
-      action: play_layer
-      layer: 3
-      timing: loop_end
+<div class="highlight"><pre><span></span><code><span class="nt">sound_loop_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">play_basic_beat</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">loops</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">play</span>
+<span class="w">      </span><span class="nt">sound_loop_set</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">basic_beat</span>
+<span class="w">      </span><span class="nt">timing</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">loop_end</span>
+<span class="w">  </span><span class="nt">add_hi_hats</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">loops</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">play_layer</span>
+<span class="w">      </span><span class="nt">layer</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">      </span><span class="nt">timing</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">loop_end</span>
+<span class="w">  </span><span class="nt">stop_hi_hats</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">loops</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stop_looping_layer</span>
+<span class="w">      </span><span class="nt">layer</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">add_snare</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">loops</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">play_layer</span>
+<span class="w">      </span><span class="nt">fade_in</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2s</span>
+<span class="w">      </span><span class="nt">layer</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="w">      </span><span class="nt">timing</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">now</span>
+<span class="w">  </span><span class="nt">add_claps</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">loops</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">play_layer</span>
+<span class="w">      </span><span class="nt">layer</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="w">      </span><span class="nt">timing</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">loop_end</span>
 </code></pre></div>
 <p>Additional information may be found in the
 <a href="../../config_players/sound_loop_player/">sound_player</a> documentation.</p>

@@ -33802,12 +33802,12 @@ of a step.</p>
 widgets to be added to, removed from, or updated on slides (or parent
 frames) based on events being posted.</p>
 <p>This is an example:</p>
-<div class="highlight"><pre><span></span><code>#! widgets:
-#!   widget_1: []
-widget_player:
-  some_event:
-    widget_1:
-      slide: slide_2
+<div class="highlight"><pre><span></span><code><span class="c1">#! widgets:</span>
+<span class="c1">#!   widget_1: []</span>
+<span class="nt">widget_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">some_event</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">widget_1</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">slide</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">slide_2</span>
 </code></pre></div>
 <p>It will add widget_1 to slide_2.</p>
 <p>See <a href="../../config_players/widget_player/">Widget player</a> for

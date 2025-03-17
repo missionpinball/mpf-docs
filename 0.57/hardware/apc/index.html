@@ -33586,33 +33586,33 @@ used to build full custom machines. Uses the
 Documentation</a> on github for
 details.</p>
 <p>This is an example config:</p>
-<div class="highlight"><pre><span></span><code>#config_version=5
-hardware:
-  platform: lisy
-lisy:
-  connection: serial
-  port: com1      # change this for your setup
-  baud: 115200
-digital_outputs:
-  game_over_relay:
-    number: 1
-    type: light
-    enable_events: ball_started
-    disable_events: ball_will_end
-segment_displays:
-  info_display:
-    number: 0
-  player1_display:
-    number: 1
-  player2_display:
-    number: 2
-  player3_display:
-    number: 3
-  player4_display:
-    number: 4
-hardware_sound_systems:
-  default:
-    label: APC
+<div class="highlight"><pre><span></span><code><span class="c1">#config_version=5</span>
+<span class="nt">hardware</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lisy</span>
+<span class="nt">lisy</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">connection</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">serial</span>
+<span class="w">  </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">com1</span><span class="w">      </span><span class="c1"># change this for your setup</span>
+<span class="w">  </span><span class="nt">baud</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">115200</span>
+<span class="nt">digital_outputs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">game_over_relay</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">light</span>
+<span class="w">    </span><span class="nt">enable_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ball_started</span>
+<span class="w">    </span><span class="nt">disable_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ball_will_end</span>
+<span class="nt">segment_displays</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">info_display</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">  </span><span class="nt">player1_display</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">player2_display</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="w">  </span><span class="nt">player3_display</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="w">  </span><span class="nt">player4_display</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span>
+<span class="nt">hardware_sound_systems</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">default</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">APC</span>
 </code></pre></div>
 <p>See the <a href="../lisy/">LISY platform</a> for more details on configuring hardware.</p>
 <ul>

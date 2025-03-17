@@ -34053,8 +34053,8 @@ described in the
 <a href="../../../troubleshooting/general_debugging/">general debugging section</a> of our
 <a href="../../../troubleshooting/">troubleshooting guide</a> this is done by adding <code>debug: true</code> to your <code>p_roc</code> config
 section:</p>
-<div class="highlight"><pre><span></span><code>p_roc:
-  debug: true
+<div class="highlight"><pre><span></span><code><span class="nt">p_roc</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">debug</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
 <p>This will add a lot more debugging and might slow down MPF a bit. We
 recommend to disable/remove it after finishing debugging.</p>
@@ -34062,9 +34062,9 @@ recommend to disable/remove it after finishing debugging.</p>
 <p>If your hardware behaves different from the way you told it to in MPF or
 if you are seeing lags or delays it might be wise to turn on bus
 tracing.</p>
-<div class="highlight"><pre><span></span><code>p_roc:
-  debug: true
-  trace_bus: true
+<div class="highlight"><pre><span></span><code><span class="nt">p_roc</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">debug</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">trace_bus</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
 <p>This logs all calls to libpinproc. This will cause a lot of additional
 log lines and might considerably slow down MPF. Definitely disable this
@@ -34216,8 +34216,8 @@ or <code>30ms</code>).</p>
 <h1 id="reducing-light-update-rate">Reducing light update rate</h1>
 <p>If you got a lot of lights you might run into bus contention issues. You
 can reduce the light update rate in MPF:</p>
-<div class="highlight"><pre><span></span><code>mpf:
-  default_light_hw_update_hz: 30   # defaults to 50
+<div class="highlight"><pre><span></span><code><span class="nt">mpf</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">default_light_hw_update_hz</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span><span class="w">   </span><span class="c1"># defaults to 50</span>
 </code></pre></div>
 <p>If you set this too low fades will be less smooth but otherwise it
 should not affect your game.</p>

@@ -34095,43 +34095,43 @@ to <a href="../../examples/">config file examples</a> for more examples of real 
 </table>
 <p>The <code>steppers:</code> section of your config is where you configure steppers.</p>
 <p>This is an example:</p>
-<div class="highlight"><pre><span></span><code># main config
-p_roc:
-  use_separate_thread: true
-  pd_led_boards:
-    6:
-      use_stepper_0: true
-      stepper_speed: 1352400000  # Determine empiricall. Increasing slows pulsesrate
-switches:
-  s_stepper_home:
-    number: 4/0/5
-steppers:
-  ramp_diverter:
-    number: 6-0
-    homing_mode: switch
-    homing_switch: s_stepper_home
-    homing_direction: clockwise
-    pos_min: 0 # Default. (Neg values are behind home)
-    pos_max: 100 # Default
-    reset_events: machine_reset_phase_3, ball_starting, ball_will_end
-    reset_position: 0 # Default
-    debug: true
-    named_positions:
-      2: move_to_2
-      25: move_to_25
-      45: move_to_45
-##! mode: base
-# base mode
-timers:
-  test_diverter:
-    start_value: 0
-    end_value: 6
-    start_running: true
-    restart_on_complete: true
-event_player:
-  timer_test_diverter_tick{device.timers.test_diverter.ticks==1}: move_to_2
-  timer_test_diverter_tick{device.timers.test_diverter.ticks==3}: move_to_25
-  timer_test_diverter_tick{device.timers.test_diverter.ticks==5}: move_to_45
+<div class="highlight"><pre><span></span><code><span class="c1"># main config</span>
+<span class="nt">p_roc</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">use_separate_thread</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">pd_led_boards</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">6</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">use_stepper_0</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">      </span><span class="nt">stepper_speed</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1352400000</span><span class="w">  </span><span class="c1"># Determine empiricall. Increasing slows pulsesrate</span>
+<span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_stepper_home</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4/0/5</span>
+<span class="nt">steppers</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">ramp_diverter</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">6-0</span>
+<span class="w">    </span><span class="nt">homing_mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">switch</span>
+<span class="w">    </span><span class="nt">homing_switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_stepper_home</span>
+<span class="w">    </span><span class="nt">homing_direction</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">clockwise</span>
+<span class="w">    </span><span class="nt">pos_min</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span><span class="w"> </span><span class="c1"># Default. (Neg values are behind home)</span>
+<span class="w">    </span><span class="nt">pos_max</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span><span class="w"> </span><span class="c1"># Default</span>
+<span class="w">    </span><span class="nt">reset_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">machine_reset_phase_3, ball_starting, ball_will_end</span>
+<span class="w">    </span><span class="nt">reset_position</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span><span class="w"> </span><span class="c1"># Default</span>
+<span class="w">    </span><span class="nt">debug</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">named_positions</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">move_to_2</span>
+<span class="w">      </span><span class="nt">25</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">move_to_25</span>
+<span class="w">      </span><span class="nt">45</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">move_to_45</span>
+<span class="c1">##! mode: base</span>
+<span class="c1"># base mode</span>
+<span class="nt">timers</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">test_diverter</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">start_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">end_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">6</span>
+<span class="w">    </span><span class="nt">start_running</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">restart_on_complete</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="nt">event_player</span><span class="p">:</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">timer_test_diverter_tick{device.timers.test_diverter.ticks==1}</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">move_to_2</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">timer_test_diverter_tick{device.timers.test_diverter.ticks==3}</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">move_to_25</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">timer_test_diverter_tick{device.timers.test_diverter.ticks==5}</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">move_to_45</span>
 </code></pre></div>
 <h2 id="required-settings">Required settings</h2>
 <p>The following sections are required in the <code>steppers:</code> section of your
@@ -34185,13 +34185,13 @@ empty.</p>
 converted to floating point) : <code>string</code></p>
 <p>This is a sub-section mapping of stepper positions to MPF event names.
 For example:</p>
-<div class="highlight"><pre><span></span><code>#! steppers:
-#!   my_stepper:
-#!     number: 1
-    named_positions:
-      0: move_home
-      999: move_to_999
-      -500: move_to_-500 # Negative positions are behind home
+<div class="highlight"><pre><span></span><code><span class="c1">#! steppers:</span>
+<span class="c1">#!   my_stepper:</span>
+<span class="c1">#!     number: 1</span>
+<span class="w">    </span><span class="nt">named_positions</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">0</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">move_home</span>
+<span class="w">      </span><span class="nt">999</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">move_to_999</span>
+<span class="w">      </span><span class="nt">-500</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">move_to_-500</span><span class="w"> </span><span class="c1"># Negative positions are behind home</span>
 </code></pre></div>
 <p>The values in this <code>named_positions:</code> list represent MPF events that,
 when posted, tell this stepper to move to a certain position. So in the
@@ -34221,12 +34221,12 @@ position.</p>
 converted to floating point) : <code>string</code></p>
 <p>This is a sub-section mapping of relative stepper increments to MPF event names (as opposed to absolute rotational positions).
 For example:</p>
-<div class="highlight"><pre><span></span><code>#! steppers:
-#!   my_stepper:
-#!     number: 1
-    relative_positions:
-      50: advance_50 # positive values move the stepper in the direction of the `homing_direction`
-      -50: move_back_50 # Negative positions move the stepper opposite of the `homing_direction`
+<div class="highlight"><pre><span></span><code><span class="c1">#! steppers:</span>
+<span class="c1">#!   my_stepper:</span>
+<span class="c1">#!     number: 1</span>
+<span class="w">    </span><span class="nt">relative_positions</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">50</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">advance_50</span><span class="w"> </span><span class="c1"># positive values move the stepper in the direction of the `homing_direction`</span>
+<span class="w">      </span><span class="nt">-50</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">move_back_50</span><span class="w"> </span><span class="c1"># Negative positions move the stepper opposite of the `homing_direction`</span>
 </code></pre></div>
 <p>The values in this <code>relative_positions:</code> list represent MPF events that,
 when posted, tell this stepper to increment a certain number of "steps". So, in the

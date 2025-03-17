@@ -33746,29 +33746,29 @@ a step.</p>
 </div>
 <p>The <code>light_player:</code> section of your config is where you can control
 lights in config or shows. Example in config:</p>
-<div class="highlight"><pre><span></span><code>light_player:
-  some_event:
-    led1:
-      color: red
-      fade: 200ms
-    led2:
-      color: ff0000
-      fade: 2000ms
+<div class="highlight"><pre><span></span><code><span class="nt">light_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">some_event</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">led1</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
+<span class="w">      </span><span class="nt">fade</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">200ms</span>
+<span class="w">    </span><span class="nt">led2</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ff0000</span>
+<span class="w">      </span><span class="nt">fade</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2000ms</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>shows:
-  rainbow:
-    - lights:
-        (leds): red
-    - lights:
-        (leds): orange
-    - lights:
-        (leds): yellow
-    - lights:
-        (leds): green
-    - lights:
-        (leds): blue
-    - lights:
-        (leds): purple
+<div class="highlight"><pre><span></span><code><span class="nt">shows</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">rainbow</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">(leds)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">(leds)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">orange</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">(leds)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yellow</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">(leds)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">green</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">(leds)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">blue</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">(leds)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">purple</span>
 </code></pre></div>
 <h2 id="optional-settings">Optional settings</h2>
 <p>The following sections are optional in the <code>light_player:</code> section of

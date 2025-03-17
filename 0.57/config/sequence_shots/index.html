@@ -33931,20 +33931,20 @@ start watching for the next one. When that one is activated, it looks
 for the next, and so on. Once the last switch is activated, the shot is
 considered "hit" and the device posts <code>your_sequence_shot_hit</code> (if
 your shot is called <code>your_sequence_shot</code>).</p>
-<div class="highlight"><pre><span></span><code>#! switches:
-#!   top_right_opto:
-#!     number:
-#!   left_rollover:
-#!     number:
-#!   top_center_rollover:
-#!     number:
-sequence_shots:
-  left_orbit:
-    switch_sequence: left_rollover, top_right_opto
-    sequence_timeout: 3s
-  weak_right_orbit:
-    switch_sequence: top_right_opto, top_center_rollover
-    sequence_timeout: 3s
+<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
+<span class="c1">#!   top_right_opto:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   left_rollover:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   top_center_rollover:</span>
+<span class="c1">#!     number:</span>
+<span class="nt">sequence_shots</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">left_orbit</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch_sequence</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">left_rollover, top_right_opto</span>
+<span class="w">    </span><span class="nt">sequence_timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3s</span>
+<span class="w">  </span><span class="nt">weak_right_orbit</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch_sequence</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">top_right_opto, top_center_rollover</span>
+<span class="w">    </span><span class="nt">sequence_timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3s</span>
 </code></pre></div>
 <p>Notice in the example above that there are two different shots with the
 same switches, but the order of the switches is inverted between the
@@ -33959,39 +33959,39 @@ switch is it, it will only advance one sequence. If the next switch is
 hit again, it will advance the other sequence. But if the next switch is
 never hit a second time, then the second shot will not complete.</p>
 <p>Here is an example with events:</p>
-<div class="highlight"><pre><span></span><code>sequence_shots:
-  my_event_based_sequence_shot:
-    event_sequence:
-      - event1
-      - event2
-      - event3
-    cancel_events: cancel
-    delay_event_list:
-      delay1: 1s
-    sequence_timeout: 3s
+<div class="highlight"><pre><span></span><code><span class="nt">sequence_shots</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_event_based_sequence_shot</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">event_sequence</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">event1</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">event2</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">event3</span>
+<span class="w">    </span><span class="nt">cancel_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cancel</span>
+<span class="w">    </span><span class="nt">delay_event_list</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">delay1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<span class="w">    </span><span class="nt">sequence_timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3s</span>
 </code></pre></div>
 <p>And one with switches:</p>
-<div class="highlight"><pre><span></span><code>#! switches:
-#!   seq2_1:
-#!     number:
-#!   seq2_2:
-#!     number:
-#!   seq2_3:
-#!     number:
-#!   seq2_cancel:
-#!     number:
-#!   seq2_delay:
-#!     number:
-sequence_shots:
-  my_switch_based_sequence_shot:
-    switch_sequence:
-      - seq2_1
-      - seq2_2
-      - seq2_3
-    cancel_switches: seq2_cancel
-    delay_switch_list:
-      seq2_delay: 1s
-    sequence_timeout: 3s
+<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
+<span class="c1">#!   seq2_1:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   seq2_2:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   seq2_3:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   seq2_cancel:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   seq2_delay:</span>
+<span class="c1">#!     number:</span>
+<span class="nt">sequence_shots</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_switch_based_sequence_shot</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch_sequence</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">seq2_1</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">seq2_2</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">seq2_3</span>
+<span class="w">    </span><span class="nt">cancel_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">seq2_cancel</span>
+<span class="w">    </span><span class="nt">delay_switch_list</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">seq2_delay</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<span class="w">    </span><span class="nt">sequence_timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3s</span>
 </code></pre></div>
 <h2 id="optional-settings">Optional settings</h2>
 <p>The following sections are optional in the <code>sequence_shots:</code> section of

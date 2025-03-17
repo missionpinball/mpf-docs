@@ -33745,21 +33745,21 @@ default settings for lights in your machine.</p>
 <code>default_fade_ms</code> to make them look softer. Otherwise, they will turn on
 and off very sharply and might look flickery. For instance, Stern uses a
 value of about 40ms for LEDs on modern machines:</p>
-<div class="highlight"><pre><span></span><code>light_settings:
-  default_fade_ms: 40
+<div class="highlight"><pre><span></span><code><span class="nt">light_settings</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">default_fade_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">40</span>
 </code></pre></div>
 <p>Depending on your hardware your color might look a bit off by default.
 Different color channels might achive different brightnesses and white
 might look pinkish or blueish for example. You can set a
 color_correction_profile to compensate for that:</p>
-<div class="highlight"><pre><span></span><code>light_settings:
-  default_color_correction_profile: correction_profile_less_red
-  color_correction_profiles:
-    correction_profile_less_red:
-      whitepoint: [0.9, 1.0, 1.0]
-      gamma: 2.5
-      linear_slope: 1.0
-      linear_cutoff: 0.0
+<div class="highlight"><pre><span></span><code><span class="nt">light_settings</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">default_color_correction_profile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">correction_profile_less_red</span>
+<span class="w">  </span><span class="nt">color_correction_profiles</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">correction_profile_less_red</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">whitepoint</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">0.9</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">1.0</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">1.0</span><span class="p p-Indicator">]</span>
+<span class="w">      </span><span class="nt">gamma</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2.5</span>
+<span class="w">      </span><span class="nt">linear_slope</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0</span>
+<span class="w">      </span><span class="nt">linear_cutoff</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.0</span>
 </code></pre></div>
 <p>Human perception is also not linear. Therefore, <code>linear_slope</code> is used
 to translate perceived brightness to brightness (you can configure
@@ -33769,23 +33769,23 @@ that). If you see flickering at very low brightnesses you can increase
 <a href="../lights/">light</a> in the
 <code>color_correction_profile</code> setting. This might be useful if you use
 different types of lights in your machine:</p>
-<div class="highlight"><pre><span></span><code>light_settings:
-  default_color_correction_profile: correction_profile_less_red
-  color_correction_profiles:
-    correction_profile_less_red:
-      whitepoint: [0.9, 1.0, 1.0]
-      gamma: 2.5
-      linear_slope: 1.0
-      linear_cutoff: 0.0
-    correction_profile_less_blue:
-      whitepoint: [1.0, 1.0, 0.9]
-      gamma: 2.5
-      linear_slope: 0.8
-      linear_cutoff: 0.1
-lights:
-  special_led:
-    number: 42
-    color_correction_profile: correction_profile_less_blue
+<div class="highlight"><pre><span></span><code><span class="nt">light_settings</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">default_color_correction_profile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">correction_profile_less_red</span>
+<span class="w">  </span><span class="nt">color_correction_profiles</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">correction_profile_less_red</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">whitepoint</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">0.9</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">1.0</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">1.0</span><span class="p p-Indicator">]</span>
+<span class="w">      </span><span class="nt">gamma</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2.5</span>
+<span class="w">      </span><span class="nt">linear_slope</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0</span>
+<span class="w">      </span><span class="nt">linear_cutoff</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.0</span>
+<span class="w">    </span><span class="nt">correction_profile_less_blue</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">whitepoint</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">1.0</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">1.0</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">0.9</span><span class="p p-Indicator">]</span>
+<span class="w">      </span><span class="nt">gamma</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2.5</span>
+<span class="w">      </span><span class="nt">linear_slope</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.8</span>
+<span class="w">      </span><span class="nt">linear_cutoff</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.1</span>
+<span class="nt">lights</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">special_led</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">42</span>
+<span class="w">    </span><span class="nt">color_correction_profile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">correction_profile_less_blue</span>
 </code></pre></div>
 <p>Please note, that some hardware platforms (such as the
 <a href="../../hardware/fadecandy/">fadecandy</a>)

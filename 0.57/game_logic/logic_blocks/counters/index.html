@@ -33749,25 +33749,25 @@ one hit, the counting interval, and whether this counter counts up or
 down.</p>
 <p>Here's an example of a counter you could use to track progress towards
 super jets:</p>
-<div class="highlight"><pre><span></span><code>##! mode: my_mode
-counters:
-  super_jets:
-    count_events: sw_pop
-    events_when_hit: pop_hit
-    starting_count: 75
-    count_complete_value: 0
-    direction: down
-    events_when_complete: super_jets_start
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: my_mode</span>
+<span class="nt">counters</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">super_jets</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">count_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sw_pop</span>
+<span class="w">    </span><span class="nt">events_when_hit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pop_hit</span>
+<span class="w">    </span><span class="nt">starting_count</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">75</span>
+<span class="w">    </span><span class="nt">count_complete_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">direction</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">down</span>
+<span class="w">    </span><span class="nt">events_when_complete</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">super_jets_start</span>
 </code></pre></div>
 <p>And here's the logic block we use for the
 <a href="../../../cookbook/TAF_mansion_awards/">Addams Family mansion awards</a> to make sure the mansions is initialized only once per game:</p>
-<div class="highlight"><pre><span></span><code>##! mode: my_mode
-counters:
-  initialize_mansion:
-    count_events: mode_chair_lit_started
-    events_when_complete: initialize_mansion
-    count_complete_value: 1
-    persist_state: true
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: my_mode</span>
+<span class="nt">counters</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">initialize_mansion</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">count_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mode_chair_lit_started</span>
+<span class="w">    </span><span class="nt">events_when_complete</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">initialize_mansion</span>
+<span class="w">    </span><span class="nt">count_complete_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">persist_state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
 <h2 id="monitorable-properties">Monitorable Properties</h2>
 <p>For
@@ -33780,37 +33780,37 @@ counters:
 <p><em>completed</em></p>
 <p>:   True if the block is completed. Otherwise False.</p>
 <p>This is an example:</p>
-<div class="highlight"><pre><span></span><code>##! mode: my_mode
-counters:
-  test_counter:
-    count_events: count_up
-    reset_on_complete: false
-    count_complete_value: 3
-event_player:
-  test_event{device.counters.test_counter.value &gt; 1}: count_above_one
-  test_event{device.counters.test_counter.completed}: count_completed
-##! test
-#! start_game
-#! start_mode my_mode
-#! mock_event count_above_one
-#! mock_event count_completed
-#! post test_event
-#! assert_event_not_called count_above_one
-#! post count_up
-#! assert_int_condition 1 device.counters.test_counter.value
-#! post test_event
-#! assert_event_not_called count_above_one
-#! post count_up
-#! assert_int_condition 2 device.counters.test_counter.value
-#! assert_bool_condition False device.counters.test_counter.completed
-#! post test_event
-#! assert_event_called count_above_one
-#! assert_event_not_called count_completed
-#! post count_up
-#! assert_int_condition 3 device.counters.test_counter.value
-#! assert_bool_condition True device.counters.test_counter.completed
-#! post test_event
-#! assert_event_called count_completed
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: my_mode</span>
+<span class="nt">counters</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">test_counter</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">count_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">count_up</span>
+<span class="w">    </span><span class="nt">reset_on_complete</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">    </span><span class="nt">count_complete_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="nt">event_player</span><span class="p">:</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">test_event{device.counters.test_counter.value &gt; 1}</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">count_above_one</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">test_event{device.counters.test_counter.completed}</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">count_completed</span>
+<span class="c1">##! test</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! start_mode my_mode</span>
+<span class="c1">#! mock_event count_above_one</span>
+<span class="c1">#! mock_event count_completed</span>
+<span class="c1">#! post test_event</span>
+<span class="c1">#! assert_event_not_called count_above_one</span>
+<span class="c1">#! post count_up</span>
+<span class="c1">#! assert_int_condition 1 device.counters.test_counter.value</span>
+<span class="c1">#! post test_event</span>
+<span class="c1">#! assert_event_not_called count_above_one</span>
+<span class="c1">#! post count_up</span>
+<span class="c1">#! assert_int_condition 2 device.counters.test_counter.value</span>
+<span class="c1">#! assert_bool_condition False device.counters.test_counter.completed</span>
+<span class="c1">#! post test_event</span>
+<span class="c1">#! assert_event_called count_above_one</span>
+<span class="c1">#! assert_event_not_called count_completed</span>
+<span class="c1">#! post count_up</span>
+<span class="c1">#! assert_int_condition 3 device.counters.test_counter.value</span>
+<span class="c1">#! assert_bool_condition True device.counters.test_counter.completed</span>
+<span class="c1">#! post test_event</span>
+<span class="c1">#! assert_event_called count_completed</span>
 </code></pre></div>
 <h2 id="related-events">Related Events</h2>
 <ul>

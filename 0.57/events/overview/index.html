@@ -33609,10 +33609,10 @@ examples.</p>
 <p>For example, you might have a <code>variable_player:</code> entry in your config
 which watches for an event called <em>target1_hit</em>, and when it sees it, it
 adds 1000 points to the player's score, like this:</p>
-<div class="highlight"><pre><span></span><code>##! mode: base
-variable_player:
-  target1_hit:
-    score: 1000
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: base</span>
+<span class="nt">variable_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">target1_hit</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 </code></pre></div>
 <p>What's really happening behind the scenes here is MPF's
 variable_player system tells the event system, "Hey, if you see an
@@ -33688,16 +33688,16 @@ events are posted:</p>
 <a href="../../config_players/light_player/">light_player</a>,
 <a href="../../config_players/show_player/">show_player</a>, etc.), you create entries based on event names.</p>
 <p>For example, in a config file:</p>
-<div class="highlight"><pre><span></span><code>#! slides:
-#!   my_slide:
-#!     - type: text
-#!       text: &quot;MPF IS AWESOME&quot;
-slide_player:
-  mpf_is_awesome: my_slide
-##! test
-#! post mpf_is_awesome
-#! advance_time_and_run .1
-#! assert_text_on_top_slide &quot;MPF IS AWESOME&quot;
+<div class="highlight"><pre><span></span><code><span class="c1">#! slides:</span>
+<span class="c1">#!   my_slide:</span>
+<span class="c1">#!     - type: text</span>
+<span class="c1">#!       text: &quot;MPF IS AWESOME&quot;</span>
+<span class="nt">slide_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">mpf_is_awesome</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my_slide</span>
+<span class="c1">##! test</span>
+<span class="c1">#! post mpf_is_awesome</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_text_on_top_slide &quot;MPF IS AWESOME&quot;</span>
 </code></pre></div>
 <p>The above config will show the slide called "my_slide" on the display
 when the event <em>mpf_is_awesome</em> is posted. Of course this could be any
@@ -33707,17 +33707,17 @@ like we discussed above.</p>
 will be some word) which is where you can event event names that cause
 that action to happen. For example, you may have a drop target
 configured like this:</p>
-<div class="highlight"><pre><span></span><code>#! switches:
-#!   s_drop_target_1:
-#!     number: 1
-#! coils:
-#!   c_drop_target_reset:
-#!     number: 1
-drop_targets:
-  my_drop_target:
-    switch: s_drop_target_1
-    reset_coil: c_drop_target_reset
-    reset_events: mpf_is_awesome
+<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
+<span class="c1">#!   s_drop_target_1:</span>
+<span class="c1">#!     number: 1</span>
+<span class="c1">#! coils:</span>
+<span class="c1">#!   c_drop_target_reset:</span>
+<span class="c1">#!     number: 1</span>
+<span class="nt">drop_targets</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_drop_target</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_drop_target_1</span>
+<span class="w">    </span><span class="nt">reset_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_drop_target_reset</span>
+<span class="w">    </span><span class="nt">reset_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mpf_is_awesome</span>
 </code></pre></div>
 <p>In this case, when the event <em>mpf_is_awesome</em> is posted, that will cause
 that drop target to reset. Again, this is just one random example of the

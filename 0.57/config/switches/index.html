@@ -34024,35 +34024,35 @@ to <a href="../../examples/">config file examples</a> for more examples of real 
 <p>The <em>switches:</em> section of the config files is used to map switch names
 to controller board inputs. You can map both direct and matrix switches.
 Here's an example section:</p>
-<div class="highlight"><pre><span></span><code>switches:
-  flipper_lwr_eos:
-    number: SF1
-  flipper_lwr:
-    number: SF6
-  fire_r:
-    number: S12
-    tags: plunger
-  start:
-    number: S13
-    tags: start
-  plumbbob:
-    number: S14
-    tags: tilt
-  outlane_l:
-    number: S16
-    tags: playfield_active
-    debounce: normal
-  inlane_l:
-    number: S17
-    tags: playfield_active
-    debounce: quick
-  trough1:
-    number: S81
-    type: &#39;NC&#39;
-  shooter_lane:
-    number: S82
-    events_when_activated: ball_in
-    events_when_deactivated: ball_out
+<div class="highlight"><pre><span></span><code><span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">flipper_lwr_eos</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SF1</span>
+<span class="w">  </span><span class="nt">flipper_lwr</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SF6</span>
+<span class="w">  </span><span class="nt">fire_r</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">S12</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">plunger</span>
+<span class="w">  </span><span class="nt">start</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">S13</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start</span>
+<span class="w">  </span><span class="nt">plumbbob</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">S14</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tilt</span>
+<span class="w">  </span><span class="nt">outlane_l</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">S16</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">playfield_active</span>
+<span class="w">    </span><span class="nt">debounce</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">normal</span>
+<span class="w">  </span><span class="nt">inlane_l</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">S17</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">playfield_active</span>
+<span class="w">    </span><span class="nt">debounce</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">quick</span>
+<span class="w">  </span><span class="nt">trough1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">S81</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;NC&#39;</span>
+<span class="w">  </span><span class="nt">shooter_lane</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">S82</span>
+<span class="w">    </span><span class="nt">events_when_activated</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ball_in</span>
+<span class="w">    </span><span class="nt">events_when_deactivated</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ball_out</span>
 </code></pre></div>
 <p>Each subsection of <code>switches:</code> is a switch name, which is how you refer
 to the switch in your game code. A fully working example for the Cobra

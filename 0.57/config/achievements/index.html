@@ -34322,63 +34322,63 @@ to <a href="../../examples/">config file examples</a> for more examples of real 
 achievements, and then indented under each of those are the settings for
 that individual achievement.</p>
 <p>Here's an example achievements section from Brooks &amp; Dunn:</p>
-<div class="highlight"><pre><span></span><code>##! mode: mode1
-achievements:
-  world_tour:
-    show_tokens:
-      leds: l_world_tour
-    show_when_selected: flash
-    show_when_started: flash
-    show_when_completed: on
-    events_when_started: start_world_tour_mode
-    restart_after_stop_possible: true
-    events_when_completed: rotate_mission_rotator, light_mission_select
-    complete_events: world_tour_success
-    enable_events: world_tour_fail, ball_will_end
-  money_bags:
-    show_tokens:
-      leds: l_money_bags
-    show_when_selected: flash
-    show_when_started: flash
-    show_when_completed: on
-    events_when_started: start_money_bags_mode
-    restart_after_stop_possible: true
-    events_when_completed: rotate_mission_rotator, light_mission_select
-    complete_events: money_bags_success
-    enable_events: money_bags_fail, ball_will_end
-  music_awards:
-    show_tokens:
-      leds: l_music_awards
-    show_when_selected: flash
-    show_when_started: flash
-    show_when_completed: on
-    events_when_started: start_music_awards_mode
-    restart_after_stop_possible: true
-    complete_events: music_awards_success
-    events_when_completed: rotate_mission_rotator, light_mission_select
-    enable_events: music_awards_fail, ball_will_end
-  jukebox:
-    show_tokens:
-      leds: l_jukebox_insert
-    show_when_selected: flash
-    show_when_started: flash
-    show_when_completed: on
-    events_when_started: start_jukebox_mode
-    restart_after_stop_possible: true
-    events_when_completed: rotate_mission_rotator, light_mission_select
-    complete_events: jukebox_success
-    enable_events: jukebox_fail, ball_will_end
-  play_poker:
-    show_tokens:
-      leds: l_play_poker
-    show_when_selected: flash
-    show_when_started: flash
-    show_when_completed: on
-    events_when_started: start_play_poker_mode
-    restart_after_stop_possible: true
-    events_when_completed: rotate_mission_rotator, light_mission_select
-    complete_events: play_poker_success
-    enable_events: play_poker_fail, ball_will_end
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: mode1</span>
+<span class="nt">achievements</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">world_tour</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">leds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_world_tour</span>
+<span class="w">    </span><span class="nt">show_when_selected</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flash</span>
+<span class="w">    </span><span class="nt">show_when_started</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flash</span>
+<span class="w">    </span><span class="nt">show_when_completed</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">on</span>
+<span class="w">    </span><span class="nt">events_when_started</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start_world_tour_mode</span>
+<span class="w">    </span><span class="nt">restart_after_stop_possible</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">events_when_completed</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rotate_mission_rotator, light_mission_select</span>
+<span class="w">    </span><span class="nt">complete_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">world_tour_success</span>
+<span class="w">    </span><span class="nt">enable_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">world_tour_fail, ball_will_end</span>
+<span class="w">  </span><span class="nt">money_bags</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">leds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_money_bags</span>
+<span class="w">    </span><span class="nt">show_when_selected</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flash</span>
+<span class="w">    </span><span class="nt">show_when_started</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flash</span>
+<span class="w">    </span><span class="nt">show_when_completed</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">on</span>
+<span class="w">    </span><span class="nt">events_when_started</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start_money_bags_mode</span>
+<span class="w">    </span><span class="nt">restart_after_stop_possible</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">events_when_completed</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rotate_mission_rotator, light_mission_select</span>
+<span class="w">    </span><span class="nt">complete_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">money_bags_success</span>
+<span class="w">    </span><span class="nt">enable_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">money_bags_fail, ball_will_end</span>
+<span class="w">  </span><span class="nt">music_awards</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">leds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_music_awards</span>
+<span class="w">    </span><span class="nt">show_when_selected</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flash</span>
+<span class="w">    </span><span class="nt">show_when_started</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flash</span>
+<span class="w">    </span><span class="nt">show_when_completed</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">on</span>
+<span class="w">    </span><span class="nt">events_when_started</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start_music_awards_mode</span>
+<span class="w">    </span><span class="nt">restart_after_stop_possible</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">complete_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">music_awards_success</span>
+<span class="w">    </span><span class="nt">events_when_completed</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rotate_mission_rotator, light_mission_select</span>
+<span class="w">    </span><span class="nt">enable_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">music_awards_fail, ball_will_end</span>
+<span class="w">  </span><span class="nt">jukebox</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">leds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_jukebox_insert</span>
+<span class="w">    </span><span class="nt">show_when_selected</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flash</span>
+<span class="w">    </span><span class="nt">show_when_started</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flash</span>
+<span class="w">    </span><span class="nt">show_when_completed</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">on</span>
+<span class="w">    </span><span class="nt">events_when_started</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start_jukebox_mode</span>
+<span class="w">    </span><span class="nt">restart_after_stop_possible</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">events_when_completed</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rotate_mission_rotator, light_mission_select</span>
+<span class="w">    </span><span class="nt">complete_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">jukebox_success</span>
+<span class="w">    </span><span class="nt">enable_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">jukebox_fail, ball_will_end</span>
+<span class="w">  </span><span class="nt">play_poker</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">leds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_play_poker</span>
+<span class="w">    </span><span class="nt">show_when_selected</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flash</span>
+<span class="w">    </span><span class="nt">show_when_started</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flash</span>
+<span class="w">    </span><span class="nt">show_when_completed</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">on</span>
+<span class="w">    </span><span class="nt">events_when_started</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start_play_poker_mode</span>
+<span class="w">    </span><span class="nt">restart_after_stop_possible</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">events_when_completed</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rotate_mission_rotator, light_mission_select</span>
+<span class="w">    </span><span class="nt">complete_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">play_poker_success</span>
+<span class="w">    </span><span class="nt">enable_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">play_poker_fail, ball_will_end</span>
 </code></pre></div>
 <p>More examples:</p>
 <ul>

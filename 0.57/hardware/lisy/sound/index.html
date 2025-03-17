@@ -33740,21 +33740,21 @@ covered here).</p>
 </div>
 <p>You can configure the external LISY
 <a href="../../../config/hardware_sound_systems/">hardware sound interface</a> like this:</p>
-<div class="highlight"><pre><span></span><code>hardware_sound_systems:
-  default:
-    label: LISY
+<div class="highlight"><pre><span></span><code><span class="nt">hardware_sound_systems</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">default</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LISY</span>
 </code></pre></div>
 <h2 id="built-in-sounds">Built-in sounds</h2>
 <p>Any built-in sounds can be played using their number in the original
 game:</p>
-<div class="highlight"><pre><span></span><code>#! hardware_sound_systems:
-#!   default:
-#!     label: LISY
-hardware_sound_player:
-  some_event_to_play_sound2:
-    2:
-      action: play
-  some_event_to_stop_any_playing_sound: stop
+<div class="highlight"><pre><span></span><code><span class="c1">#! hardware_sound_systems:</span>
+<span class="c1">#!   default:</span>
+<span class="c1">#!     label: LISY</span>
+<span class="nt">hardware_sound_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">some_event_to_play_sound2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">2</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">play</span>
+<span class="w">  </span><span class="nt">some_event_to_stop_any_playing_sound</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stop</span>
 </code></pre></div>
 <p>Whatever those sounds loop or do not depends on the sound and the game.
 In this case the event <code>some_event_to_play_sound2</code> will play the sound
@@ -33768,67 +33768,67 @@ is <code>/boot/mpfcfg/LISY1/xxx</code> and for LISY80 this is
 <code>/boot/mpfcfg/LISY80/xxx</code> (where <code>xxx</code> is the game number set via S2
 according to the appendix in the <a href="http://www.lisy80.com/english/documentation-lisy/">LISY user
 manual</a>).</p>
-<div class="highlight"><pre><span></span><code>#! hardware_sound_systems:
-#!   default:
-#!     label: LISY
-hardware_sound_player:
-  play_file:
-    &quot;some_file&quot;: play_file
-  play_file_loop:
-    &quot;some_file&quot;:
-      action: play_file
-      platform_options:
-        loop: true
-        no_cache: false
+<div class="highlight"><pre><span></span><code><span class="c1">#! hardware_sound_systems:</span>
+<span class="c1">#!   default:</span>
+<span class="c1">#!     label: LISY</span>
+<span class="nt">hardware_sound_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">play_file</span><span class="p">:</span>
+<span class="w">    </span><span class="s">&quot;some_file&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">play_file</span>
+<span class="w">  </span><span class="nt">play_file_loop</span><span class="p">:</span>
+<span class="w">    </span><span class="s">&quot;some_file&quot;</span><span class="p p-Indicator">:</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">play_file</span>
+<span class="w">      </span><span class="nt">platform_options</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">loop</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">        </span><span class="nt">no_cache</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 </code></pre></div>
 <h2 id="text-to-speech">Text-to-speech</h2>
 <p>LISY can also do text-to-speech:</p>
-<div class="highlight"><pre><span></span><code>#! hardware_sound_systems:
-#!   default:
-#!     label: LISY
-hardware_sound_player:
-  event_to_play_text:
-    text:
-      action: text_to_speech
-      value: &quot;Hello MPF&quot;
-      platform_options:
-        loop: false
-        no_cache: true
+<div class="highlight"><pre><span></span><code><span class="c1">#! hardware_sound_systems:</span>
+<span class="c1">#!   default:</span>
+<span class="c1">#!     label: LISY</span>
+<span class="nt">hardware_sound_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">event_to_play_text</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">text</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text_to_speech</span>
+<span class="w">      </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Hello</span><span class="nv"> </span><span class="s">MPF&quot;</span>
+<span class="w">      </span><span class="nt">platform_options</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">loop</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">        </span><span class="nt">no_cache</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
 <h2 id="changing-volume">Changing volume</h2>
 <p>Similarly, you can change volume:</p>
-<div class="highlight"><pre><span></span><code>#! hardware_sound_systems:
-#!   default:
-#!     label: LISY
-hardware_sound_player:
-  event_to_set_volume_to_05:
-    set_volume:
-      action: set_volume
-      value: 0.5
-  increase_volume:
-    increase_volume:
-      action: increase_volume
-      value: 0.1
-  decrease_volume:
-    decrease_volume:
-      action: decrease_volume
-      value: 0.1
+<div class="highlight"><pre><span></span><code><span class="c1">#! hardware_sound_systems:</span>
+<span class="c1">#!   default:</span>
+<span class="c1">#!     label: LISY</span>
+<span class="nt">hardware_sound_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">event_to_set_volume_to_05</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">set_volume</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">set_volume</span>
+<span class="w">      </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.5</span>
+<span class="w">  </span><span class="nt">increase_volume</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">increase_volume</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">increase_volume</span>
+<span class="w">      </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.1</span>
+<span class="w">  </span><span class="nt">decrease_volume</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">decrease_volume</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">decrease_volume</span>
+<span class="w">      </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.1</span>
 </code></pre></div>
 <h2 id="sounds-in-a-show">Sounds in a show</h2>
 <p>You can also use any of the actions above in a show instead of in a
 standalone <a href="../../../config_players/hardware_sound_player/">Hardware Sound player</a>:</p>
-<div class="highlight"><pre><span></span><code>#! hardware_sound_systems:
-#!   default:
-#!     label: LISY
-##! show: test
-- hardware_sounds:
-    text:
-      action: text_to_speech
-      value: &quot;Hello MPF&quot;
-      platform_options:
-        loop: false
-        no_cache: true
-  duration: 2s
+<div class="highlight"><pre><span></span><code><span class="c1">#! hardware_sound_systems:</span>
+<span class="c1">#!   default:</span>
+<span class="c1">#!     label: LISY</span>
+<span class="c1">##! show: test</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">hardware_sounds</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">text</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text_to_speech</span>
+<span class="w">      </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Hello</span><span class="nv"> </span><span class="s">MPF&quot;</span>
+<span class="w">      </span><span class="nt">platform_options</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">loop</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">        </span><span class="nt">no_cache</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2s</span>
 </code></pre></div>
 <h2 id="what-if-it-did-not-work">What if it did not work?</h2>
 <p>Have a look at our

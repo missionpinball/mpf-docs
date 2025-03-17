@@ -33673,105 +33673,105 @@ from CS class.</p>
 </div>
 
 <p>This is an example:</p>
-<div class="highlight"><pre><span></span><code>##! mode: my_mode
-state_machines:
-  my_state:
-    states:
-      start:
-        label: Start state
-      step1:
-        label:
-        show_when_active:
-          show: on
-          show_tokens: None
-        events_when_started: step1_start
-        events_when_stopped: step1_stop
-      step2:
-        label:
-    transitions:
-      - source: start
-        target: step1
-        events: state_machine_proceed
-      - source: step1
-        target: step2
-        events: state_machine_proceed2
-        events_when_transitioning: going_to_step2
-      - source: step2
-        target: start
-        events: state_machine_proceed3
-      - source: step1, step2
-        target: start
-        events: state_machine_reset
-##! test
-#! start_game
-#! start_mode my_mode
-#! mock_event going_to_step2
-#! assert_str_condition start device.state_machines.my_state.state
-#! post state_machine_proceed
-#! assert_str_condition step1 device.state_machines.my_state.state
-#! assert_event_not_called going_to_step2
-#! post state_machine_proceed2
-#! assert_str_condition step2 device.state_machines.my_state.state
-#! assert_event_called going_to_step2
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: my_mode</span>
+<span class="nt">state_machines</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_state</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">states</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">start</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Start state</span>
+<span class="w">      </span><span class="nt">step1</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">label</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">show_when_active</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">show</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">on</span>
+<span class="w">          </span><span class="nt">show_tokens</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">None</span>
+<span class="w">        </span><span class="nt">events_when_started</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">step1_start</span>
+<span class="w">        </span><span class="nt">events_when_stopped</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">step1_stop</span>
+<span class="w">      </span><span class="nt">step2</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">label</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">transitions</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">source</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start</span>
+<span class="w">        </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">step1</span>
+<span class="w">        </span><span class="nt">events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">state_machine_proceed</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">source</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">step1</span>
+<span class="w">        </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">step2</span>
+<span class="w">        </span><span class="nt">events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">state_machine_proceed2</span>
+<span class="w">        </span><span class="nt">events_when_transitioning</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">going_to_step2</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">source</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">step2</span>
+<span class="w">        </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start</span>
+<span class="w">        </span><span class="nt">events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">state_machine_proceed3</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">source</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">step1, step2</span>
+<span class="w">        </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start</span>
+<span class="w">        </span><span class="nt">events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">state_machine_reset</span>
+<span class="c1">##! test</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! start_mode my_mode</span>
+<span class="c1">#! mock_event going_to_step2</span>
+<span class="c1">#! assert_str_condition start device.state_machines.my_state.state</span>
+<span class="c1">#! post state_machine_proceed</span>
+<span class="c1">#! assert_str_condition step1 device.state_machines.my_state.state</span>
+<span class="c1">#! assert_event_not_called going_to_step2</span>
+<span class="c1">#! post state_machine_proceed2</span>
+<span class="c1">#! assert_str_condition step2 device.state_machines.my_state.state</span>
+<span class="c1">#! assert_event_called going_to_step2</span>
 </code></pre></div>
 <h2 id="storing-the-state-in-a-player-variable">Storing the State in a Player Variable</h2>
 <p>If you want to store the state of your state machine in a player
 variable your can use a
 <a href="../../../config/variable_player/">variable_player</a>. You can then use it on slides or in places where conditions
 do not work (yet).</p>
-<div class="highlight"><pre><span></span><code>##! mode: my_mode
-state_machines:
-  my_state:
-    states:
-      start:
-        label: Start state
-      step1:
-        label:
-        show_when_active:
-          show: on
-          show_tokens: None
-        events_when_started: step1_start
-        events_when_stopped: step1_stop
-      step2:
-        label:
-    transitions:
-      - source: start
-        target: step1
-        events: state_machine_proceed
-      - source: step1
-        target: step2
-        events: state_machine_proceed2
-        events_when_transitioning: going_to_step2
-      - source: step2
-        target: start
-        events: state_machine_proceed3
-      - source: step1, step2
-        target: start
-        events: state_machine_reset
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: my_mode</span>
+<span class="nt">state_machines</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_state</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">states</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">start</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Start state</span>
+<span class="w">      </span><span class="nt">step1</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">label</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">show_when_active</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">show</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">on</span>
+<span class="w">          </span><span class="nt">show_tokens</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">None</span>
+<span class="w">        </span><span class="nt">events_when_started</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">step1_start</span>
+<span class="w">        </span><span class="nt">events_when_stopped</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">step1_stop</span>
+<span class="w">      </span><span class="nt">step2</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">label</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">transitions</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">source</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start</span>
+<span class="w">        </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">step1</span>
+<span class="w">        </span><span class="nt">events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">state_machine_proceed</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">source</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">step1</span>
+<span class="w">        </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">step2</span>
+<span class="w">        </span><span class="nt">events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">state_machine_proceed2</span>
+<span class="w">        </span><span class="nt">events_when_transitioning</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">going_to_step2</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">source</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">step2</span>
+<span class="w">        </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start</span>
+<span class="w">        </span><span class="nt">events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">state_machine_proceed3</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">source</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">step1, step2</span>
+<span class="w">        </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start</span>
+<span class="w">        </span><span class="nt">events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">state_machine_reset</span>
 
-variable_player:
-  &quot;{device.state_machines.my_state.state}&quot;:
-    my_player_var:
-      action: set
-      string: &quot;{value}&quot;
+<span class="nt">variable_player</span><span class="p">:</span>
+<span class="w">  </span><span class="s">&quot;{device.state_machines.my_state.state}&quot;</span><span class="p p-Indicator">:</span>
+<span class="w">    </span><span class="nt">my_player_var</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">set</span>
+<span class="w">      </span><span class="nt">string</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{value}&quot;</span>
 
-##! test
-#! start_game
-#! start_mode my_mode
-#! advance_time_and_run .1
-#! mock_event going_to_step2
-#! assert_str_condition start device.state_machines.my_state.state
-#! assert_player_variable start my_player_var
-#! post state_machine_proceed
-#! advance_time_and_run .1
-#! assert_str_condition step1 device.state_machines.my_state.state
-#! assert_player_variable step1 my_player_var
-#! assert_event_not_called going_to_step2
-#! post state_machine_proceed2
-#! advance_time_and_run .1
-#! assert_str_condition step2 device.state_machines.my_state.state
-#! assert_event_called going_to_step2
-#! assert_player_variable step2 my_player_var
+<span class="c1">##! test</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! start_mode my_mode</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! mock_event going_to_step2</span>
+<span class="c1">#! assert_str_condition start device.state_machines.my_state.state</span>
+<span class="c1">#! assert_player_variable start my_player_var</span>
+<span class="c1">#! post state_machine_proceed</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_str_condition step1 device.state_machines.my_state.state</span>
+<span class="c1">#! assert_player_variable step1 my_player_var</span>
+<span class="c1">#! assert_event_not_called going_to_step2</span>
+<span class="c1">#! post state_machine_proceed2</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_str_condition step2 device.state_machines.my_state.state</span>
+<span class="c1">#! assert_event_called going_to_step2</span>
+<span class="c1">#! assert_player_variable step2 my_player_var</span>
 </code></pre></div>
 <h2 id="monitorable-properties">Monitorable Properties</h2>
 <p>For

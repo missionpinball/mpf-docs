@@ -33711,25 +33711,25 @@ ticcmd</a>.</p>
 <p>Connect your stepper according to the Pololu manual.</p>
 <h2 id="configuring-your-stepper">Configuring your stepper</h2>
 <p>Afterwards, you can use steppers from MPF. This is an example:</p>
-<div class="highlight"><pre><span></span><code>#config_version=5
-hardware:
-  stepper_controllers: pololu_tic
+<div class="highlight"><pre><span></span><code><span class="c1">#config_version=5</span>
+<span class="nt">hardware</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">stepper_controllers</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pololu_tic</span>
 
-switches:
-  s_home:
-    number: 1
+<span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_home</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
 
-steppers:
-  stepper1:
-    number: 1
-    homing_mode: switch
-    homing_switch: s_home
-    named_positions:
-      10: test_00
-      20: test_01
-      50: test_10
-    platform_settings:
-      max_acceleration: 20000
+<span class="nt">steppers</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">stepper1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">homing_mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">switch</span>
+<span class="w">    </span><span class="nt">homing_switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_home</span>
+<span class="w">    </span><span class="nt">named_positions</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">10</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">test_00</span>
+<span class="w">      </span><span class="nt">20</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">test_01</span>
+<span class="w">      </span><span class="nt">50</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">test_10</span>
+<span class="w">    </span><span class="nt">platform_settings</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">max_acceleration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20000</span>
 </code></pre></div>
 <p>You can set certain pololu-specific settings in <code>platform_settings</code>. See
 <a href="../../config/tic_stepper_settings/">tic_stepper_settings:</a> for

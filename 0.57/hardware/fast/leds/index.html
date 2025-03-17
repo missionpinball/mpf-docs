@@ -33813,48 +33813,48 @@ This is because serial LEDs are traditionally RGB (or GRB) LEDs with
 exactly three channels. However, this is not true for RGBW or similar
 LEDs which do not work with this style of numbering. Luckily, you can
 chain them instead and have MPF calculate the internal channels for you:</p>
-<div class="highlight"><pre><span></span><code>lights:
-  led_0:
-    start_channel: 0      # you could also use number: 0
-    subtype: led
-    type: rgb    # will use red: 0-0, green: 0-1, blue: 0-2
-  led_1:
-    previous: led_0
-    subtype: led
-    type: rgbw   # will use red: 1-0, green: 1-2, blue: 1-3, white: 2-0
-  led_2:
-    previous: led_1
-    subtype: led
-    type: rgbw   # will use red: 2-1, green: 2-2, blue: 3-0, white: 3-1
+<div class="highlight"><pre><span></span><code><span class="nt">lights</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">led_0</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">start_channel</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span><span class="w">      </span><span class="c1"># you could also use number: 0</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rgb</span><span class="w">    </span><span class="c1"># will use red: 0-0, green: 0-1, blue: 0-2</span>
+<span class="w">  </span><span class="nt">led_1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">previous</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led_0</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rgbw</span><span class="w">   </span><span class="c1"># will use red: 1-0, green: 1-2, blue: 1-3, white: 2-0</span>
+<span class="w">  </span><span class="nt">led_2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">previous</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led_1</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rgbw</span><span class="w">   </span><span class="c1"># will use red: 2-1, green: 2-2, blue: 3-0, white: 3-1</span>
 </code></pre></div>
 <p>Remember that each chain from the Nano will handle up to 64 RGB LEDs. You likely will have more than just 64 LEDs in your machine resulting in multiple chains. When configuring the <code>start_channel</code> or <code>number</code> for subsequent chains, remember to identify the number of the first LED in that chain starting with the first number LED supported in that chain. For example, your first chain should start with LED_0 and your second chain with LED_64, the third with LED_128 and the fourth with LED_192, like this:</p>
-<div class="highlight"><pre><span></span><code>lights:
-  led_0:
-    start_channel: 0      # you could also use number: 0
-    subtype: led
-    type: rgb    # will use red: 0-0, green: 0-1, blue: 0-2
-  led_1:
-    previous: led_0
-    subtype: led
-    type: rgb   # will use red: 1-0, green: 1-2, blue: 1-3
-  led_2:
-    previous: led_1
-    subtype: led
-    type: rgb   # will use red: 2-0, green: 2-1, blue: 2-2
+<div class="highlight"><pre><span></span><code><span class="nt">lights</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">led_0</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">start_channel</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span><span class="w">      </span><span class="c1"># you could also use number: 0</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rgb</span><span class="w">    </span><span class="c1"># will use red: 0-0, green: 0-1, blue: 0-2</span>
+<span class="w">  </span><span class="nt">led_1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">previous</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led_0</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rgb</span><span class="w">   </span><span class="c1"># will use red: 1-0, green: 1-2, blue: 1-3</span>
+<span class="w">  </span><span class="nt">led_2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">previous</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led_1</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rgb</span><span class="w">   </span><span class="c1"># will use red: 2-0, green: 2-1, blue: 2-2</span>
 
-## beginning of second chain
-  led_50:
-    start_channel: 64      # even though you only used 3 LEDs on the first chain, this chain needs to start with &#39;64&#39; to signify this is the beginning of a new chain from the Nano board
-    subtype: led
-    type: rgb    # will use red: 64-0, green: 64-1, blue: 64-2
-  led_51:
-    previous: led_50
-    subtype: led
-    type: rgb   # will use red: 65-0, green: 65-1, blue: 65-2
-  led_52:
-    previous: led_51
-    subtype: led
-    type: rgb   # will use red: 66-0, green: 66-1, blue: 66-2
+<span class="c1">## beginning of second chain</span>
+<span class="w">  </span><span class="nt">led_50</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">start_channel</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">64</span><span class="w">      </span><span class="c1"># even though you only used 3 LEDs on the first chain, this chain needs to start with &#39;64&#39; to signify this is the beginning of a new chain from the Nano board</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rgb</span><span class="w">    </span><span class="c1"># will use red: 64-0, green: 64-1, blue: 64-2</span>
+<span class="w">  </span><span class="nt">led_51</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">previous</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led_50</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rgb</span><span class="w">   </span><span class="c1"># will use red: 65-0, green: 65-1, blue: 65-2</span>
+<span class="w">  </span><span class="nt">led_52</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">previous</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led_51</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rgb</span><span class="w">   </span><span class="c1"># will use red: 66-0, green: 66-1, blue: 66-2</span>
 </code></pre></div>
 <p>See <a href="../../../mechs/lights/ws2812/">WS2811 and WS2812 LEDs in Pinball</a> for details.</p>
 <h2 id="rgb-led-buffering">RGB LED buffering</h2>
@@ -33864,10 +33864,10 @@ then the LED command messages can get backlogged and it will appear that
 you have a "delay" in your LEDs and/or you might get weird colors due
 to corrupt messages.</p>
 <p>To help combat this, there are two settings you can adjust:</p>
-<div class="highlight"><pre><span></span><code>mpf:
-  default_light_hw_update_hz: 50
-fast:
-  rgb_buffer: 3
+<div class="highlight"><pre><span></span><code><span class="nt">mpf</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">default_light_hw_update_hz</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">50</span>
+<span class="nt">fast</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">rgb_buffer</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
 </code></pre></div>
 <p>If you notice that your LEDs seem to be getting behind, you can adjust
 the <code>default_led_hw_update_hz:</code> setting to be lower. (Frankly the 50hz

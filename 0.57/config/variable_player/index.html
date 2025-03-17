@@ -33849,24 +33849,24 @@ variables can be as well specified in the global config file.</p>
 (which is technically adding a value to the player variable called
 <em>score</em>), but in reality you can affect any player or machine variable.</p>
 <p>Here's an example which would work for player variables, but not for machine variables (see below why):</p>
-<div class="highlight"><pre><span></span><code>##! mode: mode1
-variable_player:
-  target_1_hit:
-    score: 1000     # adds 1000 to the player&#39;s &quot;score&quot; variable
-  ramp_1_hit:
-    score: 10000    # adds 10,000 to the player&#39;s &quot;score&quot; variable
-    ramps: 1        # adds 1 to the player&#39;s &quot;ramps&quot; variable
-  ramp_1_timeout:
-    ramps:
-      int: 0          # sets the player&#39;s &quot;ramps&quot; variable to 0.
-      action: set     # means that this event will &quot;set&quot; (or reset) the variable to the value, rather than add to it
-  ramp_2_hit:
-    score:
-      int: 25000 * current_player.ramps     # multiplies the value of the current player&#39;s &quot;ramps&quot; variable by 25,000 and adds the result to the player&#39;s &quot;score&quot; variable
-      block: true      # &quot;blocks&quot; this event from being passed to variable player sections from lower-priority modes
-  counter_treasure_value_complete:
-    treasure_name:
-      string: RUBY     # Sets the player&#39;s &quot;treasure_name&quot; variable to a string called &quot;RUBY&quot;
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: mode1</span>
+<span class="nt">variable_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">target_1_hit</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span><span class="w">     </span><span class="c1"># adds 1000 to the player&#39;s &quot;score&quot; variable</span>
+<span class="w">  </span><span class="nt">ramp_1_hit</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10000</span><span class="w">    </span><span class="c1"># adds 10,000 to the player&#39;s &quot;score&quot; variable</span>
+<span class="w">    </span><span class="nt">ramps</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w">        </span><span class="c1"># adds 1 to the player&#39;s &quot;ramps&quot; variable</span>
+<span class="w">  </span><span class="nt">ramp_1_timeout</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">ramps</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">int</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span><span class="w">          </span><span class="c1"># sets the player&#39;s &quot;ramps&quot; variable to 0.</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">set</span><span class="w">     </span><span class="c1"># means that this event will &quot;set&quot; (or reset) the variable to the value, rather than add to it</span>
+<span class="w">  </span><span class="nt">ramp_2_hit</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">score</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">int</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">25000 * current_player.ramps</span><span class="w">     </span><span class="c1"># multiplies the value of the current player&#39;s &quot;ramps&quot; variable by 25,000 and adds the result to the player&#39;s &quot;score&quot; variable</span>
+<span class="w">      </span><span class="nt">block</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w">      </span><span class="c1"># &quot;blocks&quot; this event from being passed to variable player sections from lower-priority modes</span>
+<span class="w">  </span><span class="nt">counter_treasure_value_complete</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">treasure_name</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">string</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RUBY</span><span class="w">     </span><span class="c1"># Sets the player&#39;s &quot;treasure_name&quot; variable to a string called &quot;RUBY&quot;</span>
 </code></pre></div>
 <p>See as well <a href="../../config_players/variable_player/">Variable player</a>.</p>
 <h2 id="settings">Settings</h2>
@@ -33886,12 +33886,12 @@ your <code>variable_player</code> section:</p>
 <p>You can include any player or machine variable under an event to add a numeric value
 to that variable. This example is for player variables and not for machine variables. (If the variable doesn't exist, it will set the
 player variable to that.) For player variables there is a simplified syntax, for example:</p>
-<div class="highlight"><pre><span></span><code>##! mode: mode1
-variable_player:
-  some_event:
-    score: 1000
-    aliens: 1
-    bonus: 10
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: mode1</span>
+<span class="nt">variable_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">some_event</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="w">    </span><span class="nt">aliens</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">bonus</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
 </code></pre></div>
 <p>The above config will add 1000 to the "score" player variable, 1 to
 the "aliens" player variable, and 20 to the "bonus" player variable
@@ -33899,21 +33899,21 @@ when the event called <em>some_event</em> is posted. Note that you don't even
 need to include a "score" if you just want to add to other player
 vars.</p>
 <p>The fully expanded config for player variables look like this</p>
-<div class="highlight"><pre><span></span><code>##! mode: mode1
-variable_player:
-  some_event:
-    score:
-      int: 1000
-      action: add
-    aliens:
-      int: 1
-      action: add
-    aliens:
-      int: 1
-      action: add
-    bonus:
-      int: 10
-      action: add
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: mode1</span>
+<span class="nt">variable_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">some_event</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">score</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">int</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">add</span>
+<span class="w">    </span><span class="nt">aliens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">int</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">add</span>
+<span class="w">    </span><span class="nt">aliens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">int</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">add</span>
+<span class="w">    </span><span class="nt">bonus</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">int</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">add</span>
 </code></pre></div>
 <p>The above config is the expanded form, the example above still only works for player variables. If you want to use this 
 for machine variables you need to change the <code>action</code> to <code>action: add_machine</code>, see below the settings details for <code>action</code>.</p>
@@ -33933,14 +33933,14 @@ this, you have to indent that setting under the player var name, and
 then specify the value in the "int:" section. For example, if you want
 the example from the above section to reset the aliens player variable
 to 1 instead of adding 1 to the current value, it would look like this:</p>
-<div class="highlight"><pre><span></span><code>##! mode: mode1
-variable_player:
-  some_event:
-    score: 1000
-    aliens:           # the player var you want to reset
-      int: 1          # the integer value you&#39;re resetting this player var to
-      action: set     # means you&#39;re resetting it, rather than adding to it
-    bonus: 10
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: mode1</span>
+<span class="nt">variable_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">some_event</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="w">    </span><span class="nt">aliens</span><span class="p">:</span><span class="w">           </span><span class="c1"># the player var you want to reset</span>
+<span class="w">      </span><span class="nt">int</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w">          </span><span class="c1"># the integer value you&#39;re resetting this player var to</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">set</span><span class="w">     </span><span class="c1"># means you&#39;re resetting it, rather than adding to it</span>
+<span class="w">    </span><span class="nt">bonus</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
 </code></pre></div>
 <p>Starting in MPF 0.33, you can also add and set machine variables, by
 specifying <code>action: add_machine</code> or <code>action: set_machine</code>. In these
@@ -33955,18 +33955,18 @@ you don't also want the base mode to score the 500 points on top of the
 5,000 from the higher mode.</p>
 <p>Note that when you use block, you also have to include the <code>int:</code>,
 <code>float:</code>, or <code>string:</code> setting indented. For example:</p>
-<div class="highlight"><pre><span></span><code>##! mode: mode1
-variable_player:
-  ramp_1_hit:
-    score:
-      int: 5000
-      block: true
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: mode1</span>
+<span class="nt">variable_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">ramp_1_hit</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">score</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">int</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5000</span>
+<span class="w">      </span><span class="nt">block</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
 <p>There is also a shorthand way:</p>
-<div class="highlight"><pre><span></span><code>##! mode: mode1
-variable_player:
-  ramp_1_hit:
-    score: 5000|block
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: mode1</span>
+<span class="nt">variable_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">ramp_1_hit</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5000|block</span>
 </code></pre></div>
 <h3 id="float">float:</h3>
 <p>Single value, type: <code>number</code> or <code>template</code> (will be converted to
@@ -33986,20 +33986,20 @@ takes priority over the <code>float:</code> setting so if both are present only 
 <a href="../instructions/dynamic_values/">placeholders</a> which evaluate to int as well.</p>
 <h3 id="player">player:</h3>
 <p>Single value, type: <code>integer</code>. Defaults to empty.</p>
-<div class="highlight"><pre><span></span><code>##! mode: mode1
-variable_player:
-  add_score_to_player_2:
-    score:
-      int: 1000
-      player: 2
-##! test
-#! start_two_player_game
-#! start_mode mode1
-#! assert_player_variable 0 score
-#! post add_score_to_player_2
-#! assert_player_variable 0 score
-#! drain_all_balls
-#! assert_player_variable 1000 score
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: mode1</span>
+<span class="nt">variable_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">add_score_to_player_2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">score</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">int</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="w">      </span><span class="nt">player</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="c1">##! test</span>
+<span class="c1">#! start_two_player_game</span>
+<span class="c1">#! start_mode mode1</span>
+<span class="c1">#! assert_player_variable 0 score</span>
+<span class="c1">#! post add_score_to_player_2</span>
+<span class="c1">#! assert_player_variable 0 score</span>
+<span class="c1">#! drain_all_balls</span>
+<span class="c1">#! assert_player_variable 1000 score</span>
 </code></pre></div>
 <p>If the <code>player:</code> setting is not used, then this variable_player entry
 will default to the current player.</p>
@@ -34010,26 +34010,26 @@ variable (set via a counter) which tracks the player's current album
 value. We use the variable_player section tied to the events posted when
 the player variable changes and conditional events to set the current
 name of the album value, like this:</p>
-<div class="highlight"><pre><span></span><code>##! mode: mode1
-variable_player:
-  player_album_value{value==1}:
-    album_name:
-      string: SILVER
-  player_album_value{value==2}:
-    album_name:
-      string: GOLD
-  player_album_value{value==3}:
-    album_name:
-      string: PLATINUM
-  player_album_value{value==4}:
-    album_name:
-      string: DOUBLE PLATINUM
-  player_album_value{value==5}:
-    album_name:
-      string: QUINTUPLE PLATINUM
-  player_album_value{value&gt;5}:
-    album_name:
-      string: OFF THE CHARTS!
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: mode1</span>
+<span class="nt">variable_player</span><span class="p">:</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">player_album_value{value==1}</span><span class="p p-Indicator">:</span>
+<span class="w">    </span><span class="nt">album_name</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">string</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SILVER</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">player_album_value{value==2}</span><span class="p p-Indicator">:</span>
+<span class="w">    </span><span class="nt">album_name</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">string</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">GOLD</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">player_album_value{value==3}</span><span class="p p-Indicator">:</span>
+<span class="w">    </span><span class="nt">album_name</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">string</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PLATINUM</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">player_album_value{value==4}</span><span class="p p-Indicator">:</span>
+<span class="w">    </span><span class="nt">album_name</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">string</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DOUBLE PLATINUM</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">player_album_value{value==5}</span><span class="p p-Indicator">:</span>
+<span class="w">    </span><span class="nt">album_name</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">string</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">QUINTUPLE PLATINUM</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">player_album_value{value&gt;5}</span><span class="p p-Indicator">:</span>
+<span class="w">    </span><span class="nt">album_name</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">string</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OFF THE CHARTS!</span>
 </code></pre></div>
 <p>The above config lets us always have a player var called "album_name"
 we can use in slides and widgets which matches the value of the album,

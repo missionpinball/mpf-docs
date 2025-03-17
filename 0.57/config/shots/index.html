@@ -34084,39 +34084,39 @@ shots to the left or right based on certain events happening (slingshot
 hits, flipper button pushes, etc.). A shot can be a member of multiple
 groups at the same time.</p>
 <p>Here's a sample <em>shots:</em> section from a config file:</p>
-<div class="highlight"><pre><span></span><code>#! switches:
-#!   lane_l:
-#!     number:
-#!   lane_a:
-#!     number:
-#!   lane_n:
-#!     number:
-#!   lane_e:
-#!     number:
-#!   upper_standup:
-#!     number:
-##! mode: mode1
-shots:
-  lane_l:
-    switch: lane_l
-    show_tokens:
-      light: lane_l
-  lane_a:
-    switch: lane_a
-    show_tokens:
-      light: lane_a
-  lane_n:
-    switch: lane_n
-    show_tokens:
-      light: lane_n
-  lane_e:
-    switch: lane_e
-    show_tokens:
-      light: lane_e
-  upper_standup:
-    switch: upper_standup
-    show_tokens:
-      leds: led_17, led_19
+<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
+<span class="c1">#!   lane_l:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   lane_a:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   lane_n:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   lane_e:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   upper_standup:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">##! mode: mode1</span>
+<span class="nt">shots</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">lane_l</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lane_l</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">light</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lane_l</span>
+<span class="w">  </span><span class="nt">lane_a</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lane_a</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">light</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lane_a</span>
+<span class="w">  </span><span class="nt">lane_n</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lane_n</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">light</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lane_n</span>
+<span class="w">  </span><span class="nt">lane_e</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lane_e</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">light</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lane_e</span>
+<span class="w">  </span><span class="nt">upper_standup</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">upper_standup</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">leds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led_17, led_19</span>
 </code></pre></div>
 <p>Create one entry in your <code>shots:</code> section for each shot in your machine.
 Don't worry about grouping shots here. (That's done in the
@@ -34151,11 +34151,11 @@ to state to a value that is specified. This is a <code>0</code> index, so the fi
 state is <code>0</code>.</p>
 <p>For instance in the following example <code>set_state_one</code> will set the state
 to <code>1</code>, which is the second state:</p>
-<div class="highlight"><pre><span></span><code>shots:
-  shot_with_control_events:
-    control_events:
-      - events: set_state_one
-        state: 1
+<div class="highlight"><pre><span></span><code><span class="nt">shots</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">shot_with_control_events</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">control_events</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">set_state_one</span>
+<span class="w">        </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
 </code></pre></div>
 <h3 id="delay_switch">delay_switch:</h3>
 <p>One or more sub-entries. Each in the format of string name of a
@@ -34167,32 +34167,32 @@ time. You can use this if you got another lane feeding into your shot
 and you want to prevent it from hitting this shot. Use this with care as
 it might cause issues during multiball.</p>
 <p>This is an example:</p>
-<div class="highlight"><pre><span></span><code>#! switches:
-#!   s_my_shot:
-#!     number:
-#!   s_other_lane:
-#!     number:
-##! mode: mode1
-shots:
-  my_shot:
-    switch: s_my_shot
-    delay_switch:
-      s_other_lane: 2s
-##! test
-#! start_game
-#! start_mode mode1
-#! mock_event my_shot_hit
-#! hit_and_release_switch s_other_lane
-#! hit_and_release_switch s_my_shot
-#! advance_time_and_run .1
-#! assert_event_not_called my_shot_hit
-#! hit_and_release_switch s_my_shot
-#! advance_time_and_run .1
-#! assert_event_not_called my_shot_hit
-#! advance_time_and_run 2
-#! hit_and_release_switch s_my_shot
-#! advance_time_and_run .1
-#! assert_event_called my_shot_hit
+<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
+<span class="c1">#!   s_my_shot:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   s_other_lane:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">##! mode: mode1</span>
+<span class="nt">shots</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_shot</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_my_shot</span>
+<span class="w">    </span><span class="nt">delay_switch</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">s_other_lane</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2s</span>
+<span class="c1">##! test</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! start_mode mode1</span>
+<span class="c1">#! mock_event my_shot_hit</span>
+<span class="c1">#! hit_and_release_switch s_other_lane</span>
+<span class="c1">#! hit_and_release_switch s_my_shot</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_event_not_called my_shot_hit</span>
+<span class="c1">#! hit_and_release_switch s_my_shot</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_event_not_called my_shot_hit</span>
+<span class="c1">#! advance_time_and_run 2</span>
+<span class="c1">#! hit_and_release_switch s_my_shot</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_event_called my_shot_hit</span>
 </code></pre></div>
 <p>In this example an activation of <code>s_other_lane</code> will prevent the shot
 from being hit for two seconds.</p>
@@ -34286,23 +34286,23 @@ single event.</p>
 <p>A subsection containing key-value pairs that are passed to the show
 that's run when this shot is in a certain state.</p>
 <p>For example, consider the following shot config:</p>
-<div class="highlight"><pre><span></span><code>#! switches:
-#!   switch1:
-#!     number:
-##! mode: mode1
-shot_profiles:
-  flash:
-    states:
-      - name: unlit
-        show: &quot;off&quot;
-      - name: lit
-        show: &quot;flash&quot;
-shots:
-  shot1:
-    switch: switch1
-    profile: flash
-    show_tokens:
-      leds: led1
+<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
+<span class="c1">#!   switch1:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">##! mode: mode1</span>
+<span class="nt">shot_profiles</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">flash</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">states</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unlit</span>
+<span class="w">        </span><span class="nt">show</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;off&quot;</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lit</span>
+<span class="w">        </span><span class="nt">show</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;flash&quot;</span>
+<span class="nt">shots</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">shot1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">switch1</span>
+<span class="w">    </span><span class="nt">profile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flash</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">leds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led1</span>
 </code></pre></div>
 <p>The shot above has a show token called <em>leds</em> which is set to <em>led1</em>.
 This means that when a show associated with this shot is played, if that
@@ -34312,15 +34312,15 @@ replaced with the value of <code>led1</code> when that show is played by this sh
 could apply to any shot.</p>
 <p>For example, imagine if you wanted to create a shot to flash an LED
 between red and off. It might look like this:</p>
-<div class="highlight"><pre><span></span><code># show to flash an LED
-shows:
-  flash_light:
-    - time: 0
-      lights:
-        (leds): red
-    - time: 1
-      lights:
-        (leds): off
+<div class="highlight"><pre><span></span><code><span class="c1"># show to flash an LED</span>
+<span class="nt">shows</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">flash_light</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">      </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">(leds)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">      </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">(leds)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">off</span>
 </code></pre></div>
 <p>Assuming the "flash" profile (as defined in the <code>profile: flash</code> in
 the above shot) was configured for the state that show was in, when the

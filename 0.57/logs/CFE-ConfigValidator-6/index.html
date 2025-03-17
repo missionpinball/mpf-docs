@@ -33809,16 +33809,16 @@ icons & this code generated via https://realfavicongenerator.net
 one of your settings in your config.</p>
 <h2 id="examples">Examples</h2>
 <p>For instance, a flipper device references a switch and a coil:</p>
-<div class="highlight"><pre><span></span><code>switches:
-  s_flipper_left:
-    number:
-coils:
-  c_flipper_left:
-    number:
-flippers:
-  left_flipper:
-    main_coil: c_flipper_left
-    activation_switch: s_flipper_left
+<div class="highlight"><pre><span></span><code><span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_flipper_left</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="nt">coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">c_flipper_left</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="nt">flippers</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">left_flipper</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">main_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_flipper_left</span>
+<span class="w">    </span><span class="nt">activation_switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_flipper_left</span>
 </code></pre></div>
 <p>You can see to which type of device a setting references in the
 <a href="../../config/">config reference</a> of your

@@ -33831,28 +33831,28 @@ settings for the machine's sound system. (This section is part of the
 MPF media controller and only available if you're using MPF-MC for your
 media controller.)</p>
 <p>Here's an example of a typical sound configuration.</p>
-<div class="highlight"><pre><span></span><code>machine_vars:
-  master_volume:
-    initial_value: 0.8
+<div class="highlight"><pre><span></span><code><span class="nt">machine_vars</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">master_volume</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">initial_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.8</span>
 
-sound_system:
-  buffer: 1024
-  channels: 1
-  enabled: true
-  frequency: 44100
-  tracks:
-    music:
-      type: standard
-      simultaneous_sounds: 1
-      volume: 0.5
-    voice:
-      type: standard
-      simultaneous_sounds: 1
-      volume: 0.7
-    sfx:
-      type: standard
-      simultaneous_sounds: 8
-      volume: 0.4
+<span class="nt">sound_system</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">buffer</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1024</span>
+<span class="w">  </span><span class="nt">channels</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">frequency</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">44100</span>
+<span class="w">  </span><span class="nt">tracks</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">music</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">standard</span>
+<span class="w">      </span><span class="nt">simultaneous_sounds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">      </span><span class="nt">volume</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.5</span>
+<span class="w">    </span><span class="nt">voice</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">standard</span>
+<span class="w">      </span><span class="nt">simultaneous_sounds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">      </span><span class="nt">volume</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.7</span>
+<span class="w">    </span><span class="nt">sfx</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">standard</span>
+<span class="w">      </span><span class="nt">simultaneous_sounds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8</span>
+<span class="w">      </span><span class="nt">volume</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.4</span>
 </code></pre></div>
 <h2 id="required-settings">Required settings</h2>
 <p>The following sections are required in the <code>sound_system:</code> section of
@@ -33914,9 +33914,9 @@ match.)</p>
 <p>DEPRECATED! Will removed in future MPF versions.</p>
 <p>Master volume has been moved to the machine variable <code>master_volume</code>.
 You can use the following snippet:</p>
-<div class="highlight"><pre><span></span><code>machine_vars:
-  master_volume:
-    initial_value: 0.8
+<div class="highlight"><pre><span></span><code><span class="nt">machine_vars</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">master_volume</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">initial_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.8</span>
 </code></pre></div>
 <p>Note that this only controls the volume of the MPF app, not the host
 OS'es system volume. So you still need to make sure that the host OS is

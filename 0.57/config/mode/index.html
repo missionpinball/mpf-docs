@@ -33981,11 +33981,11 @@ modes that are made available to MPF when it boots up. The <code>mode:</code>
 section we're talking about here goes in a mode-specific config and
 holds the settings for that specific mode.)</p>
 <p>Let's take a look at an example <code>mode:</code> section from a multiball mode:</p>
-<div class="highlight"><pre><span></span><code>##! mode: mode1
-mode:
-  start_events: ball_starting
-  stop_events: timer_mode_timer_complete, shot_right_ramp
-  priority: 300
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: mode1</span>
+<span class="nt">mode</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">start_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ball_starting</span>
+<span class="w">  </span><span class="nt">stop_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">timer_mode_timer_complete, shot_right_ramp</span>
+<span class="w">  </span><span class="nt">priority</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">300</span>
 </code></pre></div>
 <h2 id="optional-settings">Optional settings</h2>
 <p>The following sections are optional in the <code>mode:</code> section of your
@@ -34136,12 +34136,12 @@ an error similar to this:</p>
 </code></pre></div>
 <p>To avoid this unexpected crash of MPF, add <code>game_ending</code> to the
 <code>stop_events:</code></p>
-<div class="highlight"><pre><span></span><code>##! mode: mode1
-mode:
-  start_events: mode_terra_2_start
-  stop_events: mode_complete, game_ending
-  stop_on_ball_end: false
-  game_mode: false
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: mode1</span>
+<span class="nt">mode</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">start_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mode_terra_2_start</span>
+<span class="w">  </span><span class="nt">stop_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mode_complete, game_ending</span>
+<span class="w">  </span><span class="nt">stop_on_ball_end</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">  </span><span class="nt">game_mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 </code></pre></div>
 <p>However, a mode with <code>stop_on_ball_end: False</code> set must be a non game
 mode (i.e. <code>game_mode: False</code> is also set). To prevent crashes you

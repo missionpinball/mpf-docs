@@ -34065,21 +34065,21 @@ lock count on a per-player basis, this will still work even if another
 player previously emptied out the lock. (In that case, the multiball
 will add any additional balls it needs from the trough.)</p>
 <p>Here's an example:</p>
-<div class="highlight"><pre><span></span><code>#! switches:
-#!   s_ball1:
-#!     number:
-#! coils:
-#!   c_eject:
-#!     number:
-ball_devices:
-  bd_bunker:
-    eject_coil: c_eject
-    ball_switches: s_ball1
-##! mode: mode1
-multiball_locks:
-  bunker:
-    balls_to_lock: 3
-    lock_devices: bd_bunker
+<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
+<span class="c1">#!   s_ball1:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#! coils:</span>
+<span class="c1">#!   c_eject:</span>
+<span class="c1">#!     number:</span>
+<span class="nt">ball_devices</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">bd_bunker</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">eject_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_eject</span>
+<span class="w">    </span><span class="nt">ball_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_ball1</span>
+<span class="c1">##! mode: mode1</span>
+<span class="nt">multiball_locks</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">bunker</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">balls_to_lock</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="w">    </span><span class="nt">lock_devices</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bd_bunker</span>
 </code></pre></div>
 <p>Each sub-entry under the <code>multiball_locks:</code> section is the name of the
 multiball lock ("bunker") in the example above. Then each named ball

@@ -33717,8 +33717,8 @@ version. Hence use the video only for general information. For configuration inf
 to segment display LEDs. Each LED channel is connected to a segment. You
 must add light_segment_displays as the segment_displays platform so MPF
 knows to send segment display commands to the light controller:</p>
-<div class="highlight"><pre><span></span><code>hardware:
-  segment_displays: light_segment_displays
+<div class="highlight"><pre><span></span><code><span class="nt">hardware</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">segment_displays</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">light_segment_displays</span>
 </code></pre></div>
 <h2 id="create-the-neoseg-light-groups">Create the NeoSeg Light Groups</h2>
 <p>For each neo segment you would like to use you have to use light group, in other words there is a 1:1 mapping between a light group and the piece of hardware you hold in your hands.</p>
@@ -33726,14 +33726,14 @@ knows to send segment display commands to the light controller:</p>
 creating a light_group using <code>neoseg_displays</code>. This is much easier
 than defining each light for each of the 120 segments in an 8-digit
 display.</p>
-<div class="highlight"><pre><span></span><code>neoseg_displays:
-  neoSeg_0:
-    start_channel: 0-0-0
-    size: 8digit
-    light_template:
-      type: w
-      subtype: led
-      color_correction_profile: NeoSeg_orange
+<div class="highlight"><pre><span></span><code><span class="nt">neoseg_displays</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">neoSeg_0</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">start_channel</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0-0-0</span>
+<span class="w">    </span><span class="nt">size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8digit</span>
+<span class="w">    </span><span class="nt">light_template</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">w</span>
+<span class="w">      </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led</span>
+<span class="w">      </span><span class="nt">color_correction_profile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NeoSeg_orange</span>
 </code></pre></div>
 <p>Here we have created a neoseg_display light_group named "neoSeg_0."
 The group starts at light channel 0-0-0, which is the first light
@@ -33755,26 +33755,26 @@ channel LED.</p>
 brightness of a NeoSeg display. This is especially handy when using
 NeoSeg displays of different colors since each color has a different
 default brightness. Use the whitepoint setting to vary the brightness:</p>
-<div class="highlight"><pre><span></span><code>light_settings:
-  color_correction_profiles:
-    NeoSeg_orange:
-      whitepoint: [.9, .9, .9]
+<div class="highlight"><pre><span></span><code><span class="nt">light_settings</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">color_correction_profiles</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">NeoSeg_orange</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">whitepoint</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">.9</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">.9</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">.9</span><span class="p p-Indicator">]</span>
 </code></pre></div>
 <h2 id="create-segment-displays">Create Segment Displays</h2>
 <p>Once you have the light groups defined, you can arrange them into
 displays. The light group is a <code>neoseg_displays</code> object and the logical display a <a href="../../../../config/segment_displays/"><code>segment_displays</code></a> object. The  <code>segment_displays</code> object is not specific for Cobra serial segments, but being used for all kind of segment displays. You can combine multiple light groups into one logical display.  In other cases you might have a 1:1 mapping between light groups and segment displays. In the latter case it might seem to overcomplicate things but this concept gives you the flexibility you might need. These are the displays that can be targeted by a segment_display_player.</p>
-<div class="highlight"><pre><span></span><code>segment_displays:
-  neoSegTop:
-    number: 1
-    size: 16
-    integrated_dots: true
-    use_dots_for_commas: true
-    default_transition_update_hz: 30
-    platform_settings:
-      light_groups:
-        - neoSeg_0
-        - neoSeg_1
-      type: 14segment
+<div class="highlight"><pre><span></span><code><span class="nt">segment_displays</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">neoSegTop</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">16</span>
+<span class="w">    </span><span class="nt">integrated_dots</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">use_dots_for_commas</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">default_transition_update_hz</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+<span class="w">    </span><span class="nt">platform_settings</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">light_groups</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">neoSeg_0</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">neoSeg_1</span>
+<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">14segment</span>
 </code></pre></div>
 <p>Here we create a 16-digit display called "neoSegTop" built from 2
 8-digit displays -- "neoSeg_0" and "neoSeg_1". The
@@ -33788,130 +33788,130 @@ size to 7 and the 8th digit will remain unused.</p>
 <p>Keep in mind that a <code>segment_display</code> is an own object regardless what <code>light_groups</code> you combine. In the above example the two groups <code>neoSeg_0</code> and <code>neoSeg_1</code> have been combined out of two 8-digit displays. Let us assume <code>light_group</code> <code>neoSeg_0</code> is used for the score of player 1 and <code>neoSeg_1</code> for the score of player 2. That would make it necessary to define two more <code>display_segments</code>, e.g. <code>displayScore1</code> and <code>displayScore2</code> which each consist of only one light group. The combined light_group could be useful if for example after the game ended you want to scroll the text "GAME OVER" from left to right along both displays (assuming they are mounted next to each other) - but is not needed if you only want to display the scores. Now assume the game is over and the final score is shown on <code>displayScore1</code> and <code>displayScore2</code>. If you now run "GAME OVER" on <code>neoSegTop</code> that is independent on the other two displays, so the scores and the text "GAME OVER" is shown at the same time (and thus unreadable since it is a logical AND connection of the texts). Which means that before you run the text "GAME OVER" you need to erase the content of <code>displayScore1</code> and <code>displayScore2</code>. In order to erase the text just send an empty String to it.</p>
 <h2 id="complete-example-config-for-hardware-definition">Complete Example Config for Hardware Definition</h2>
 <p>Below you find a complete example config file how to define your hardware. With this you can use a <code>segment_display_player</code> to diplay a certain text upon a given event.</p>
-<div class="highlight"><pre><span></span><code>#config_version=5
+<div class="highlight"><pre><span></span><code><span class="c1">#config_version=5</span>
 
-hardware:
-  platform: opp
-  driverboards: gen2
-  segment_displays: light_segment_displays
+<span class="nt">hardware</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">opp</span>
+<span class="w">  </span><span class="nt">driverboards</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gen2</span>
+<span class="w">  </span><span class="nt">segment_displays</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">light_segment_displays</span>
 
-#create light group for each NeoSeg display
-neoseg_displays:
-  neoSeg_0:
-    start_channel: 0-0-0
-    size: 8digit
-    light_template:
-      type: w
-      subtype: led
-      color_correction_profile: NeoSeg_orange
-  neoSeg_1:
-    start_channel: 0-0-120
-    size: 8digit
-    light_template:
-      type: w
-      subtype: led
-      color_correction_profile: NeoSeg_white
+<span class="c1">#create light group for each NeoSeg display</span>
+<span class="nt">neoseg_displays</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">neoSeg_0</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">start_channel</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0-0-0</span>
+<span class="w">    </span><span class="nt">size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8digit</span>
+<span class="w">    </span><span class="nt">light_template</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">w</span>
+<span class="w">      </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led</span>
+<span class="w">      </span><span class="nt">color_correction_profile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NeoSeg_orange</span>
+<span class="w">  </span><span class="nt">neoSeg_1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">start_channel</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0-0-120</span>
+<span class="w">    </span><span class="nt">size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8digit</span>
+<span class="w">    </span><span class="nt">light_template</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">w</span>
+<span class="w">      </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led</span>
+<span class="w">      </span><span class="nt">color_correction_profile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NeoSeg_white</span>
 
-  neoSeg_7:
-    start_channel: 0-0-660
-    size: 2digit
-    light_template:
-      type: w
-      subtype: led
-      color_correction_profile: NeoSeg_blue
-  neoSeg_8:
-    start_channel: 0-0-690
-    size: 2digit
-    light_template:
-      type: w
-      subtype: led
-      color_correction_profile: NeoSeg_red
+<span class="w">  </span><span class="nt">neoSeg_7</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">start_channel</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0-0-660</span>
+<span class="w">    </span><span class="nt">size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2digit</span>
+<span class="w">    </span><span class="nt">light_template</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">w</span>
+<span class="w">      </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led</span>
+<span class="w">      </span><span class="nt">color_correction_profile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NeoSeg_blue</span>
+<span class="w">  </span><span class="nt">neoSeg_8</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">start_channel</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0-0-690</span>
+<span class="w">    </span><span class="nt">size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2digit</span>
+<span class="w">    </span><span class="nt">light_template</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">w</span>
+<span class="w">      </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led</span>
+<span class="w">      </span><span class="nt">color_correction_profile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NeoSeg_red</span>
 
-#use light groups to arrange into a segment display
-segment_displays:
-  neoSegTop:
-    number: 1
-    size: 16
-    integrated_dots: true
-    use_dots_for_commas: true
-    default_transition_update_hz: 30
-    platform_settings:
-      light_groups:
-        - neoSeg_0
-        - neoSeg_1
-      type: 14segment
+<span class="c1">#use light groups to arrange into a segment display</span>
+<span class="nt">segment_displays</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">neoSegTop</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">16</span>
+<span class="w">    </span><span class="nt">integrated_dots</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">use_dots_for_commas</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">default_transition_update_hz</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+<span class="w">    </span><span class="nt">platform_settings</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">light_groups</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">neoSeg_0</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">neoSeg_1</span>
+<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">14segment</span>
 
-  neoSegBot:
-    number: 1
-    size: 4
-    integrated_dots: true
-    use_dots_for_commas: true
-    default_transition_update_hz: 30
-    platform_settings:
-      light_groups:
-        - neoSeg_8
-        - neoSeg_7
-      type: 14segment
+<span class="w">  </span><span class="nt">neoSegBot</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span>
+<span class="w">    </span><span class="nt">integrated_dots</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">use_dots_for_commas</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">default_transition_update_hz</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+<span class="w">    </span><span class="nt">platform_settings</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">light_groups</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">neoSeg_8</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">neoSeg_7</span>
+<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">14segment</span>
 
-#use color_correction_profile whitepoint to adjust the brightness of each
-#NeoSeg display
-light_settings:
-  color_correction_profiles:
-    NeoSeg_red:
-      whitepoint: [.8, .8, .8]
-    NeoSeg_white:
-      whitepoint: [.55, .55, .55]
-    NeoSeg_blue:
-      whitepoint: [.5, .5, .5]
-    NeoSeg_orange:
-      whitepoint: [.9, .9, .9]
-    NeoSeg_yellow:
-      whitepoint: [1, 1, 1]
-    NeoSeg_green:
-      whitepoint: [.5, .5, .5]
+<span class="c1">#use color_correction_profile whitepoint to adjust the brightness of each</span>
+<span class="c1">#NeoSeg display</span>
+<span class="nt">light_settings</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">color_correction_profiles</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">NeoSeg_red</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">whitepoint</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">.8</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">.8</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">.8</span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">NeoSeg_white</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">whitepoint</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">.55</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">.55</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">.55</span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">NeoSeg_blue</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">whitepoint</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">.5</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">.5</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">.5</span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">NeoSeg_orange</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">whitepoint</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">.9</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">.9</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">.9</span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">NeoSeg_yellow</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">whitepoint</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">1</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">1</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">1</span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">NeoSeg_green</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">whitepoint</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">.5</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">.5</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">.5</span><span class="p p-Indicator">]</span>
 </code></pre></div>
 <h2 id="complete-example-config-for-show-definition">Complete Example Config for Show Definition</h2>
 <p>Below you find a complete example config file to display scored points. It is not using all possible hardware options like the example above, but it includes the display of a show on the LED segments. To keep this example simple the <code>neoseg_displays</code> object is mapped 1:1 to a <code>segment_displays</code> object.</p>
-<p><div class="highlight"><pre><span></span><code>#config_version=5
+<p><div class="highlight"><pre><span></span><code><span class="c1">#config_version=5</span>
 
-hardware:
-  platform: opp
-  driverboards: gen2
-  segment_displays: light_segment_displays
+<span class="nt">hardware</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">opp</span>
+<span class="w">  </span><span class="nt">driverboards</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gen2</span>
+<span class="w">  </span><span class="nt">segment_displays</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">light_segment_displays</span>
 
-#create light group for each NeoSeg display
-neoseg_displays:
-  neoSeg_0:
-    start_channel: 0-0-0
-    size: 8digit
-    light_template:
-      type: w
-      subtype: led
+<span class="c1">#create light group for each NeoSeg display</span>
+<span class="nt">neoseg_displays</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">neoSeg_0</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">start_channel</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0-0-0</span>
+<span class="w">    </span><span class="nt">size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8digit</span>
+<span class="w">    </span><span class="nt">light_template</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">w</span>
+<span class="w">      </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led</span>
 
-segment_displays:
-  neoSegTop:
-    number: 1
-    size: 16
-    integrated_dots: true
-    use_dots_for_commas: true
-    default_transition_update_hz: 30
-    platform_settings:
-      light_groups:
-        - neoSeg_0
-      type: 14segment
+<span class="nt">segment_displays</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">neoSegTop</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">16</span>
+<span class="w">    </span><span class="nt">integrated_dots</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">use_dots_for_commas</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">default_transition_update_hz</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+<span class="w">    </span><span class="nt">platform_settings</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">light_groups</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">neoSeg_0</span>
+<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">14segment</span>
 
-show_player:
-  player_score{player_num==1}: #of course for more than 1 player you need to have multiple entries
-    p1_score:
-      show_tokens:
-        txt: &quot;{(players[0].score):d}&quot;
+<span class="nt">show_player</span><span class="p">:</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">player_score{player_num==1}</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="c1">#of course for more than 1 player you need to have multiple entries</span>
+<span class="w">    </span><span class="nt">p1_score</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">txt</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{(players[0].score):d}&quot;</span>
 
-shows:
-  p1_score:
-  - duration: -1
-    segment_displays:
-      neoSegTop:
-        text: (txt)
+<span class="nt">shows</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">p1_score</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-1</span>
+<span class="w">    </span><span class="nt">segment_displays</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">neoSegTop</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(txt)</span>
 </code></pre></div>
 To learn more about show tokens and how to use dynamic values take a look <a href="../../../../shows/tokens/">here</a>.</p>
 <hr />

@@ -33927,14 +33927,14 @@ to <a href="../../../examples/">config file examples</a> for more examples of re
 <p>The <code>slide_player:</code> section of your config is where you configure slides
 to be shown (or removed) based on events being posted.</p>
 <p>This is an example:</p>
-<div class="highlight"><pre><span></span><code>#! slides:
-#!   slide1: []
-#!   slide2: []
-#!   slide3: []
-slide_player:
-  event1: slide1
-  event2: slide2
-  event3: slide3
+<div class="highlight"><pre><span></span><code><span class="c1">#! slides:</span>
+<span class="c1">#!   slide1: []</span>
+<span class="c1">#!   slide2: []</span>
+<span class="c1">#!   slide3: []</span>
+<span class="nt">slide_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">event1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">slide1</span>
+<span class="w">  </span><span class="nt">event2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">slide2</span>
+<span class="w">  </span><span class="nt">event3</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">slide3</span>
 </code></pre></div>
 <p>See <a href="../../../config_players/slide_player/">Slide player</a> for
 details.</p>
@@ -33971,21 +33971,21 @@ used here.
 </code></pre>
 <p>For example, to remove <em>slide1</em> when the event <em>remove_slide_1</em> is
 posted:</p>
-<div class="highlight"><pre><span></span><code>#! slides:
-#!   slide1: []
-slide_player:
-  remove_slide_1:           # event name
-    slide1:                 # slide name
-      action: remove
+<div class="highlight"><pre><span></span><code><span class="c1">#! slides:</span>
+<span class="c1">#!   slide1: []</span>
+<span class="nt">slide_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">remove_slide_1</span><span class="p">:</span><span class="w">           </span><span class="c1"># event name</span>
+<span class="w">    </span><span class="nt">slide1</span><span class="p">:</span><span class="w">                 </span><span class="c1"># slide name</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">remove</span>
 </code></pre></div>
 <p>You can also specify a transition for the removal, like this:</p>
-<div class="highlight"><pre><span></span><code>#! slides:
-#!   slide1: []
-slide_player:
-  remove_slide_1:           # event name
-    slide1:                 # slide name
-      action: remove
-      transition: fade
+<div class="highlight"><pre><span></span><code><span class="c1">#! slides:</span>
+<span class="c1">#!   slide1: []</span>
+<span class="nt">slide_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">remove_slide_1</span><span class="p">:</span><span class="w">           </span><span class="c1"># event name</span>
+<span class="w">    </span><span class="nt">slide1</span><span class="p">:</span><span class="w">                 </span><span class="c1"># slide name</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">remove</span>
+<span class="w">      </span><span class="nt">transition</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fade</span>
 </code></pre></div>
 <h3 id="expire">expire:</h3>
 <p>Single value, type: <code>time string (secs)</code>
@@ -33997,26 +33997,26 @@ priority will be shown.</p>
 highest-priority slide, the timer is still running in the background,
 and the slide will still be removed when the timer expires.</p>
 <p>When queueing a slide with the <code>action: queue</code> config, it's important to include an expiration time or else the queue will never advance.</p>
-<div class="highlight"><pre><span></span><code>slides:
-  base:
-    widgets:
-      - type: text
-        text: BASE SLIDE
-        color: ff0000
-        font_size: 100
-  expire_slide:
-    widgets:
-      - type: text
-        text: EXPIRE 5s
-        color: purple
-        y: 66%
-    expire: 5s
-    transition_out:
-      type: wipe
-      duration: 5s
-slide_player:
-  mc_reset_complete.1: expire_slide
-  mc_reset_complete.2: base
+<div class="highlight"><pre><span></span><code><span class="nt">slides</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">base</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">widgets</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">BASE SLIDE</span>
+<span class="w">        </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ff0000</span>
+<span class="w">        </span><span class="nt">font_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="w">  </span><span class="nt">expire_slide</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">widgets</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EXPIRE 5s</span>
+<span class="w">        </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">purple</span>
+<span class="w">        </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">66%</span>
+<span class="w">    </span><span class="nt">expire</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5s</span>
+<span class="w">    </span><span class="nt">transition_out</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wipe</span>
+<span class="w">      </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5s</span>
+<span class="nt">slide_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">mc_reset_complete.1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">expire_slide</span>
+<span class="w">  </span><span class="nt">mc_reset_complete.2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">base</span>
 </code></pre></div>
 <h3 id="max_queue_time">max_queue_time:</h3>
 <p>Single value, type <code>item</code>. Defaults to empty.</p>

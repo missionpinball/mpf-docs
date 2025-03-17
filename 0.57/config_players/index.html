@@ -33726,16 +33726,16 @@ config files, and also in show steps.</p>
 <span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">&lt;depends on the player&gt;</span>
 </code></pre></div>
 <p>For example (show_player; short syntax):</p>
-<div class="highlight"><pre><span></span><code>show_player:
-  event_which_is_posted_elsewhere:
-    your_show: play
+<div class="highlight"><pre><span></span><code><span class="nt">show_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">event_which_is_posted_elsewhere</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">your_show</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">play</span>
 </code></pre></div>
 <p>Another example (show_player; long syntax):</p>
-<div class="highlight"><pre><span></span><code>show_player:
-  event_which_is_posted_elsewhere:
-    your_show:
-      action: play
-      sync_ms: 1000
+<div class="highlight"><pre><span></span><code><span class="nt">show_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">event_which_is_posted_elsewhere</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">your_show</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">play</span>
+<span class="w">      </span><span class="nt">sync_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 </code></pre></div>
 <h3 id="one-line-syntax">One line syntax</h3>
 <p>This is not supported in all players. This usually performs the default
@@ -33744,8 +33744,8 @@ action on the element:</p>
 <span class="w">  </span><span class="nt">event_which_is_posted_elsewhere</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;depends on the player&gt;</span>
 </code></pre></div>
 <p>An example (show_player):</p>
-<div class="highlight"><pre><span></span><code>show_player:
-  event_which_is_posted_elsewhere: your_show
+<div class="highlight"><pre><span></span><code><span class="nt">show_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">event_which_is_posted_elsewhere</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">your_show</span>
 </code></pre></div>
 <h3 id="subscription-syntax">Subscription syntax</h3>
 <p>This is not supported for all variables and all players. It will perform
@@ -33757,9 +33757,9 @@ or disable the light) when the condition becomes false.</p>
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">&lt;depends on the player&gt;</span>
 </code></pre></div>
 <p>An example (light_player):</p>
-<div class="highlight"><pre><span></span><code>light_player:
-  &quot;{current_player.score &gt; 1000000}&quot;:
-    score_1M: white
+<div class="highlight"><pre><span></span><code><span class="nt">light_player</span><span class="p">:</span>
+<span class="w">  </span><span class="s">&quot;{current_player.score</span><span class="nv"> </span><span class="s">&gt;</span><span class="nv"> </span><span class="s">1000000}&quot;</span><span class="p p-Indicator">:</span>
+<span class="w">    </span><span class="nt">score_1M</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">white</span>
 </code></pre></div>
 <p>See <a href="../events/overview/conditional/">Conditional Events</a> for
 details about conditionals.</p>
@@ -33775,18 +33775,18 @@ note that instead of <code>example_player:</code> it becomes <code>examples:</co
 <span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">&lt;depends on the player&gt;</span>
 </code></pre></div>
 <p>For example (show_player; short syntax):</p>
-<div class="highlight"><pre><span></span><code>##! show: test
-- duration: 2s
-  shows:
-    your_show: play
+<div class="highlight"><pre><span></span><code><span class="c1">##! show: test</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2s</span>
+<span class="w">  </span><span class="nt">shows</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">your_show</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">play</span>
 </code></pre></div>
 <p>Another example (show_player; long syntax):</p>
-<div class="highlight"><pre><span></span><code>##! show: test
-- duration: 2s
-  shows:
-    your_show:
-      action: play
-      sync_ms: 1000
+<div class="highlight"><pre><span></span><code><span class="c1">##! show: test</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2s</span>
+<span class="w">  </span><span class="nt">shows</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">your_show</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">play</span>
+<span class="w">      </span><span class="nt">sync_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 </code></pre></div>
 <h3 id="one-line-syntax_1">One line syntax</h3>
 <p>There is no one line syntax in shows.</p>

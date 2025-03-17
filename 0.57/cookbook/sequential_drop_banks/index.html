@@ -33760,66 +33760,66 @@ The final shot does not need to advance from "lit" to "down" because
 the sequence resets when it's hit.</p>
 <p>Each shot also has <code>reset_events</code> configured, so that the entire
 sequence can be reset after completion.</p>
-<div class="highlight"><pre><span></span><code>#! switches:
-#!   s_drop_1:
-#!     number: 1
-#!   s_drop_2:
-#!     number: 2
-#!   s_drop_3:
-#!     number: 3
-#!   s_drop_4:
-#!     number: 4
-#! lights:
-#!   l_drop_1:
-#!     number: 1
-#!   l_drop_2:
-#!     number: 2
-#!   l_drop_3:
-#!     number: 3
-#!   l_drop_4:
-#!     number: 4
-#! shot_profiles:
-#!   drop_sequence:
-#!     states:
-#!       - name: off
-#!       - name: lit
-#!       - name: down
-##! mode: sequential_drops
+<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
+<span class="c1">#!   s_drop_1:</span>
+<span class="c1">#!     number: 1</span>
+<span class="c1">#!   s_drop_2:</span>
+<span class="c1">#!     number: 2</span>
+<span class="c1">#!   s_drop_3:</span>
+<span class="c1">#!     number: 3</span>
+<span class="c1">#!   s_drop_4:</span>
+<span class="c1">#!     number: 4</span>
+<span class="c1">#! lights:</span>
+<span class="c1">#!   l_drop_1:</span>
+<span class="c1">#!     number: 1</span>
+<span class="c1">#!   l_drop_2:</span>
+<span class="c1">#!     number: 2</span>
+<span class="c1">#!   l_drop_3:</span>
+<span class="c1">#!     number: 3</span>
+<span class="c1">#!   l_drop_4:</span>
+<span class="c1">#!     number: 4</span>
+<span class="c1">#! shot_profiles:</span>
+<span class="c1">#!   drop_sequence:</span>
+<span class="c1">#!     states:</span>
+<span class="c1">#!       - name: off</span>
+<span class="c1">#!       - name: lit</span>
+<span class="c1">#!       - name: down</span>
+<span class="c1">##! mode: sequential_drops</span>
 
-mode:
-  start_events: start_mode_sequential_drops
-  stop_events: stop_mode_sequential_drops
-  priority: 200
+<span class="nt">mode</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">start_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start_mode_sequential_drops</span>
+<span class="w">  </span><span class="nt">stop_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stop_mode_sequential_drops</span>
+<span class="w">  </span><span class="nt">priority</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">200</span>
 
-shots:
-  drop_1:
-    advance_events: advance_drop_1, drop_1_lit_hit
-    reset_events: reset_drop_sequence
-    switch: s_drop_1
-    profile: drop_sequence
-    show_tokens:
-      led: l_drop_1
-  drop_2:
-    advance_events: drop_1_lit_hit, drop_2_lit_hit
-    reset_events: reset_drop_sequence
-    switch: s_drop_2
-    profile: drop_sequence
-    show_tokens:
-      led: l_drop_2
-  drop_3:
-    advance_events: drop_2_lit_hit, drop_3_lit_hit
-    reset_events: reset_drop_sequence
-    switch: s_drop_3
-    profile: drop_sequence
-    show_tokens:
-      led: l_drop_3
-  drop_4:
-    advance_events: drop_3_lit_hit
-    reset_events: reset_drop_sequence
-    switch: s_drop_4
-    profile: drop_sequence
-    show_tokens:
-      led: l_drop_4
+<span class="nt">shots</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">drop_1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">advance_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">advance_drop_1, drop_1_lit_hit</span>
+<span class="w">    </span><span class="nt">reset_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">reset_drop_sequence</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_drop_1</span>
+<span class="w">    </span><span class="nt">profile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">drop_sequence</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">led</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_drop_1</span>
+<span class="w">  </span><span class="nt">drop_2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">advance_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">drop_1_lit_hit, drop_2_lit_hit</span>
+<span class="w">    </span><span class="nt">reset_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">reset_drop_sequence</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_drop_2</span>
+<span class="w">    </span><span class="nt">profile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">drop_sequence</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">led</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_drop_2</span>
+<span class="w">  </span><span class="nt">drop_3</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">advance_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">drop_2_lit_hit, drop_3_lit_hit</span>
+<span class="w">    </span><span class="nt">reset_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">reset_drop_sequence</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_drop_3</span>
+<span class="w">    </span><span class="nt">profile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">drop_sequence</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">led</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_drop_3</span>
+<span class="w">  </span><span class="nt">drop_4</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">advance_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">drop_3_lit_hit</span>
+<span class="w">    </span><span class="nt">reset_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">reset_drop_sequence</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_drop_4</span>
+<span class="w">    </span><span class="nt">profile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">drop_sequence</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">led</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_drop_4</span>
 </code></pre></div>
 <h2 id="step-2-create-a-profile-for-the-targets">Step 2. Create a profile for the targets</h2>
 <p>We can create a <a href="../../config/shot_profiles/">shot profile</a> for the targets that starts with the light off, flashes it
@@ -33831,18 +33831,18 @@ is hit, but we don't want that here so we'll set
 shows accept the <code>show_tokens</code> from our shots. In this case, it is the
 LED we wish to control. You can create your own shows to change LED
 color, play sounds, etc.</p>
-<div class="highlight"><pre><span></span><code>##! mode: sequential_drops
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: sequential_drops</span>
 
-shot_profiles:
-  drop_sequence:
-    advance_on_hit: false
-    states:
-      - name: off
-        show: off
-      - name: lit
-        show: flash
-      - name: down
-        show: on
+<span class="nt">shot_profiles</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">drop_sequence</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">advance_on_hit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">    </span><span class="nt">states</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">off</span>
+<span class="w">        </span><span class="nt">show</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">off</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lit</span>
+<span class="w">        </span><span class="nt">show</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flash</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">down</span>
+<span class="w">        </span><span class="nt">show</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">on</span>
 </code></pre></div>
 <h2 id="step-3-create-a-sequence-logic-block-to-track-the-progression">Step 3. Create a Sequence Logic Block to track the progression</h2>
 <p>MPF includes a number of convenient ways for tracking progress called
@@ -33857,16 +33857,16 @@ shot individually.</p>
 starts and when the sequence completes. All logicblocks have a default
 completion event called <em>logicblock_(name)_complete</em> so we don't need
 to explicitly define any completion event.</p>
-<div class="highlight"><pre><span></span><code>##! mode: sequential_drops
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: sequential_drops</span>
 
-sequences:
-  drop_sequence:
-    restart_events: reset_drop_sequence
-    events:
-      - drop_1_lit_hit
-      - drop_2_lit_hit
-      - drop_3_lit_hit
-      - drop_4_lit_hit
+<span class="nt">sequences</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">drop_sequence</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">restart_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">reset_drop_sequence</span>
+<span class="w">    </span><span class="nt">events</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">drop_1_lit_hit</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">drop_2_lit_hit</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">drop_3_lit_hit</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">drop_4_lit_hit</span>
 </code></pre></div>
 <h2 id="step-4-start-advance-and-reset-the-shots">Step 4. Start, advance, and reset the shots</h2>
 <p>We will use events to manage the behavior of the shots and the drop
@@ -33889,62 +33889,62 @@ reset coil for the target so that the target stays up.</p>
 </ul>
 <p>We can apply all of these rules based on the corresponding events, like
 follows.</p>
-<div class="highlight"><pre><span></span><code>##! mode: sequential_drops
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: sequential_drops</span>
 
-event_player:
-  # When the mode starts, reset the drop sequence
-  mode_sequential_drops_started: reset_drop_sequence
+<span class="nt">event_player</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># When the mode starts, reset the drop sequence</span>
+<span class="w">  </span><span class="nt">mode_sequential_drops_started</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">reset_drop_sequence</span>
 
-  # When the sequence is completed, reset the drop sequence
-  logicblock_drop_sequence_complete: reset_drop_sequence
+<span class="w">  </span><span class="c1"># When the sequence is completed, reset the drop sequence</span>
+<span class="w">  </span><span class="nt">logicblock_drop_sequence_complete</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">reset_drop_sequence</span>
 
-  # When the sequence resets, advance the first target
-  reset_drop_sequence: advance_drop_1
+<span class="w">  </span><span class="c1"># When the sequence resets, advance the first target</span>
+<span class="w">  </span><span class="nt">reset_drop_sequence</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">advance_drop_1</span>
 
-  # When an &quot;off&quot; shot is hit, reset its coil
-  drop_1_off_hit: reset_drop_1
-  drop_2_off_hit: reset_drop_2
-  drop_3_off_hit: reset_drop_3
-  drop_4_off_hit: reset_drop_4
+<span class="w">  </span><span class="c1"># When an &quot;off&quot; shot is hit, reset its coil</span>
+<span class="w">  </span><span class="nt">drop_1_off_hit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">reset_drop_1</span>
+<span class="w">  </span><span class="nt">drop_2_off_hit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">reset_drop_2</span>
+<span class="w">  </span><span class="nt">drop_3_off_hit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">reset_drop_3</span>
+<span class="w">  </span><span class="nt">drop_4_off_hit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">reset_drop_4</span>
 </code></pre></div>
 <p>The above configuration requires that each drop target coil has the
 corresponding reset events, as configured below.</p>
-<div class="highlight"><pre><span></span><code>#! switches:
-#!   s_drop_1:
-#!     number: 1
-#!   s_drop_2:
-#!     number: 2
-#!   s_drop_3:
-#!     number: 3
-#!   s_drop_4:
-#!     number: 4
-#! coils:
-#!   c_drop_1:
-#!     number: 1
-#!   c_drop_2:
-#!     number: 2
-#!   c_drop_3:
-#!     number: 3
-#!   c_drop_4:
-#!     number: 4
+<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
+<span class="c1">#!   s_drop_1:</span>
+<span class="c1">#!     number: 1</span>
+<span class="c1">#!   s_drop_2:</span>
+<span class="c1">#!     number: 2</span>
+<span class="c1">#!   s_drop_3:</span>
+<span class="c1">#!     number: 3</span>
+<span class="c1">#!   s_drop_4:</span>
+<span class="c1">#!     number: 4</span>
+<span class="c1">#! coils:</span>
+<span class="c1">#!   c_drop_1:</span>
+<span class="c1">#!     number: 1</span>
+<span class="c1">#!   c_drop_2:</span>
+<span class="c1">#!     number: 2</span>
+<span class="c1">#!   c_drop_3:</span>
+<span class="c1">#!     number: 3</span>
+<span class="c1">#!   c_drop_4:</span>
+<span class="c1">#!     number: 4</span>
 
-drop_targets:
-  drop_1:
-    switch: s_drop_1
-    reset_coil: c_drop_1
-    reset_events: ball_starting, machine_reset_phase_3, reset_drop_1
-  drop_2:
-    switch: s_drop_2
-    reset_coil: c_drop_2
-    reset_events: ball_starting, machine_reset_phase_3, reset_drop_2
-  drop_3:
-    switch: s_drop_3
-    reset_coil: c_drop_3
-    reset_events: ball_starting, machine_reset_phase_3, reset_drop_3
-  drop_4:
-    switch: s_drop_4
-    reset_coil: c_drop_4
-    reset_events: ball_starting, machine_reset_phase_3, reset_drop_4
+<span class="nt">drop_targets</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">drop_1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_drop_1</span>
+<span class="w">    </span><span class="nt">reset_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_drop_1</span>
+<span class="w">    </span><span class="nt">reset_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ball_starting, machine_reset_phase_3, reset_drop_1</span>
+<span class="w">  </span><span class="nt">drop_2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_drop_2</span>
+<span class="w">    </span><span class="nt">reset_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_drop_2</span>
+<span class="w">    </span><span class="nt">reset_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ball_starting, machine_reset_phase_3, reset_drop_2</span>
+<span class="w">  </span><span class="nt">drop_3</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_drop_3</span>
+<span class="w">    </span><span class="nt">reset_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_drop_3</span>
+<span class="w">    </span><span class="nt">reset_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ball_starting, machine_reset_phase_3, reset_drop_3</span>
+<span class="w">  </span><span class="nt">drop_4</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_drop_4</span>
+<span class="w">    </span><span class="nt">reset_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_drop_4</span>
+<span class="w">    </span><span class="nt">reset_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ball_starting, machine_reset_phase_3, reset_drop_4</span>
 </code></pre></div>
 <h2 id="step-5-rewards-for-progression-and-completion">Step 5. Rewards for progression and completion</h2>
 <p>When a drop target is hit, The sequence logic block keeps track of
@@ -33952,13 +33952,13 @@ whether it is the part of the sequence or not. We can easily award
 points for progression with the <em>logicblock_(name)_hit</em> event (when a
 lit target is hit) and the <em>logicblock_(name)_complete</em> event (when
 the full sequence is completed).</p>
-<div class="highlight"><pre><span></span><code>##! mode: sequential_drops
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: sequential_drops</span>
 
-variable_player:
-  logicblock_drop_sequence_hit:
-    score: 1000
-  logicblock_drop_sequence_complete:
-    score: 50_000
+<span class="nt">variable_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">logicblock_drop_sequence_hit</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="w">  </span><span class="nt">logicblock_drop_sequence_complete</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">50_000</span>
 </code></pre></div>
 <h2 id="full-example-code">Full Example Code</h2>
 <p>The full code from this example can be found as a fully-working game

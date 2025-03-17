@@ -34117,9 +34117,9 @@ channels (see below) depending on the <code>subtype</code> configured. For
 instance, if lights are usually RGB the platform will parse the number
 into three channels.</p>
 <p>This is an example:</p>
-<div class="highlight"><pre><span></span><code>lights:
-  my_led:
-    number: 7   # might also be 8-7 or 8-1-0 depending on your platform
+<div class="highlight"><pre><span></span><code><span class="nt">lights</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_led</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">7</span><span class="w">   </span><span class="c1"># might also be 8-7 or 8-1-0 depending on your platform</span>
 </code></pre></div>
 <p>This is often the easiest way to start and will work in most cases.</p>
 <h3 id="channel-numbers">Channel Numbers</h3>
@@ -34129,16 +34129,16 @@ the talking to the hardware. For single-color or white light this can be
 the same as <code>number</code>. However, for some serial LED platforms this might
 be also <code>number * 3</code> or a more complex conversion.</p>
 <p>This is an example:</p>
-<div class="highlight"><pre><span></span><code>lights:
-  rainbow_star:
-    type: rgb
-    channels:
-      red:
-        number: 9-29
-      green:
-        number: 9-30
-      blue:
-        number: 9-40     # this light is not sequential to the previous
+<div class="highlight"><pre><span></span><code><span class="nt">lights</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">rainbow_star</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rgb</span>
+<span class="w">    </span><span class="nt">channels</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">red</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">9-29</span>
+<span class="w">      </span><span class="nt">green</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">9-30</span>
+<span class="w">      </span><span class="nt">blue</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">9-40</span><span class="w">     </span><span class="c1"># this light is not sequential to the previous</span>
 </code></pre></div>
 <p>This syntax allows the greatest flexibility but is also the most verbose
 one.</p>
@@ -34149,14 +34149,14 @@ defined in the color order. Instead of <code>start_channel</code> you can also
 chain lights by configuring the <code>previous</code> light and let MPF (with help
 by the hardware platform) figure out the channel number.</p>
 <p>This is an example:</p>
-<div class="highlight"><pre><span></span><code>lights:
-  rainbow_star:    # this will use red: 9-29, green: 9-30 and blue: 9-31
-    type: rgb
-    start_channel: 9-29
+<div class="highlight"><pre><span></span><code><span class="nt">lights</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">rainbow_star</span><span class="p">:</span><span class="w">    </span><span class="c1"># this will use red: 9-29, green: 9-30 and blue: 9-31</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rgb</span>
+<span class="w">    </span><span class="nt">start_channel</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">9-29</span>
 
-  rainbow_star2:   # this will use red: 9-33, green: 9-32 and blue: 9-34
-    type: grb      # notice the changed order here
-    previous: rainbow_star
+<span class="w">  </span><span class="nt">rainbow_star2</span><span class="p">:</span><span class="w">   </span><span class="c1"># this will use red: 9-33, green: 9-32 and blue: 9-34</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">grb</span><span class="w">      </span><span class="c1"># notice the changed order here</span>
+<span class="w">    </span><span class="nt">previous</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rainbow_star</span>
 </code></pre></div>
 <p>This syntax covers almost all practical cases and is beneficial with
 serial LEDs as the above channels syntax is very verbose. It allows the
@@ -34174,16 +34174,16 @@ config. (If you don't include them, the default will be used).</p>
 corresponding to the multi-color channels of an RGB or RGBW LED. Each
 channel entry can contain any of the <code>lights</code> parameters listed on this
 page, but at least <code>number</code> is required.</p>
-<div class="highlight"><pre><span></span><code>lights:
-  rainbow_star:
-    type: rgb
-    channels:
-      red:
-        number: 9-29
-      green:
-        number: 9-30
-      blue:
-        number: 9-31
+<div class="highlight"><pre><span></span><code><span class="nt">lights</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">rainbow_star</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rgb</span>
+<span class="w">    </span><span class="nt">channels</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">red</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">9-29</span>
+<span class="w">      </span><span class="nt">green</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">9-30</span>
+<span class="w">      </span><span class="nt">blue</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">9-31</span>
 </code></pre></div>
 <p>Note that a light must have either <code>channels</code> or <code>number</code> defined, but
 cannot have both. See <a href="../../mechs/lights/leds/">LEDs</a>
@@ -34237,14 +34237,14 @@ details.</p>
 which has to be configured in the <code>number</code> setting. It can be used if
 you got a light which is connected to a driver in your platform. That
 might be the case for <a href="../../mechs/lights/gis/">GIs</a> for example. This is an example for a driver as light:</p>
-<div class="highlight"><pre><span></span><code>coils:
-  light_connected_to_a_driver:
-    number: 42           # number depends on your platform
-    allow_enable: true   # this will allow 100% enable without pwm
-lights:
-  light_on_a_driver:
-    number: light_connected_to_a_driver    # map this light to a driver
-    platform: drivers
+<div class="highlight"><pre><span></span><code><span class="nt">coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">light_connected_to_a_driver</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">42</span><span class="w">           </span><span class="c1"># number depends on your platform</span>
+<span class="w">    </span><span class="nt">allow_enable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w">   </span><span class="c1"># this will allow 100% enable without pwm</span>
+<span class="nt">lights</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">light_on_a_driver</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">light_connected_to_a_driver</span><span class="w">    </span><span class="c1"># map this light to a driver</span>
+<span class="w">    </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">drivers</span>
 </code></pre></div>
 <h3 id="platform_settings">platform_settings:</h3>
 <p>Single value, type: dict. Defaults to empty.</p>
@@ -34256,19 +34256,19 @@ for details.</p>
 use the previous setting. To do this only specify the number of the
 first light in the chain and then link all consequent light using the
 previous setting:</p>
-<div class="highlight"><pre><span></span><code>lights:
-  led_0:
-    number: 0
-    subtype: led
-    type: rgb
-  led_1:
-    previous: led_0
-    subtype: led
-    type: rgbw
-  led_2:
-    previous: led_1
-    subtype: led
-    type: rgbw
+<div class="highlight"><pre><span></span><code><span class="nt">lights</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">led_0</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rgb</span>
+<span class="w">  </span><span class="nt">led_1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">previous</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led_0</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rgbw</span>
+<span class="w">  </span><span class="nt">led_2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">previous</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led_1</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rgbw</span>
 </code></pre></div>
 <p>MPF will then calculate the number based on the light of the previous
 light. Make sure MPF knows how many channel each light has (i.e. by
@@ -34281,11 +34281,11 @@ how many channels it has using the number parameter. If you got unusual
 types of lights (such as RGBW LEDs) you can instead provide this
 internal address and the number of channels (i.e. using type). This is
 an example:</p>
-<div class="highlight"><pre><span></span><code>lights:
-  led_0:
-    start_channel: 0-0
-    subtype: led
-    type: rgbw
+<div class="highlight"><pre><span></span><code><span class="nt">lights</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">led_0</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">start_channel</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0-0</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rgbw</span>
 </code></pre></div>
 <p>Consult the manual of your platform for details.</p>
 <h3 id="subtype">subtype:</h3>

@@ -33684,15 +33684,15 @@ you see the serial port.</p>
 <p>To use MPF with a SPIKE hardware, you need to configure your platform as
 <code>spike</code> in your machine-wide config file. You'll also need to add a
 "spike:" section with some additional settings:</p>
-<div class="highlight"><pre><span></span><code>hardware:
-  platform: spike
-spike:
-  port: /dev/ttyUSB0
-  baud: 115200
-  flow_control: false
-  debug: false
-  nodes: 0, 1, 8, 9, 10, 11
-  runtime_baud: 115200
+<div class="highlight"><pre><span></span><code><span class="nt">hardware</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">spike</span>
+<span class="nt">spike</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/dev/ttyUSB0</span>
+<span class="w">  </span><span class="nt">baud</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">115200</span>
+<span class="w">  </span><span class="nt">flow_control</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">  </span><span class="nt">debug</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">  </span><span class="nt">nodes</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0, 1, 8, 9, 10, 11</span>
+<span class="w">  </span><span class="nt">runtime_baud</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">115200</span>
 </code></pre></div>
 <p>Some notes on the settings:</p>
 <p>port:</p>
@@ -33725,15 +33725,15 @@ same node.
 </code></pre>
 <p>Once you got your game running you can increase the speed using
 <code>runtime_baud</code>:</p>
-<div class="highlight"><pre><span></span><code>hardware:
-  platform: spike
-spike:
-  port: /dev/ttyUSB0
-  baud: 115200
-  runtime_baud: 2000000
-  flow_control: true
-  debug: false
-  nodes: 0, 1, 8, 9, 10, 11
+<div class="highlight"><pre><span></span><code><span class="nt">hardware</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">spike</span>
+<span class="nt">spike</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/dev/ttyUSB0</span>
+<span class="w">  </span><span class="nt">baud</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">115200</span>
+<span class="w">  </span><span class="nt">runtime_baud</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2000000</span>
+<span class="w">  </span><span class="nt">flow_control</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">debug</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">  </span><span class="nt">nodes</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0, 1, 8, 9, 10, 11</span>
 </code></pre></div>
 <p>This will increase the baudrate after the start of the mpf-spike-bridge.
 You do not have to change anything to use this setting. The following

@@ -34089,9 +34089,9 @@ a step.</p>
 <p>The <code>show_player:</code> section of your config is where you start, stop,
 pause, (etc.) shows.</p>
 <p>Here is an example:</p>
-<div class="highlight"><pre><span></span><code>show_player:
-  some_event: your_show_name
-  some_other_event: another_show
+<div class="highlight"><pre><span></span><code><span class="nt">show_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">some_event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">your_show_name</span>
+<span class="w">  </span><span class="nt">some_other_event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">another_show</span>
 </code></pre></div>
 <p>In the example above, when the event <em>some_event</em> is posted, the show
 called <code>your_show_name</code> will be played (started). When the event
@@ -34133,10 +34133,10 @@ event that starts the show is a
 <a href="../../events/overview/event_types/">queue event</a>.</p>
 <p>For example, the mode stopping events are queue events. So take a look
 at the following config:</p>
-<div class="highlight"><pre><span></span><code>show_player:
-  mode_my_mode_stopping:
-    show_1:
-      block_queue: true
+<div class="highlight"><pre><span></span><code><span class="nt">show_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">mode_my_mode_stopping</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">show_1</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">block_queue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
 <p>In the example above, when the mode called <em>my_mode</em> posts its stopping
 event, show_1 will start playing. However because this show is set to
@@ -34229,13 +34229,13 @@ with additional show_player entries with <code>action: advance</code> entries.</
 <p>This can be useful if you want to have some kind of slow progress based
 on a series of events instead of a show that auto plays.</p>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>show_player:
-  some_event:
-    show_1:
-      manual_advance: true
-  some_advance_event:
-    show_1:
-      action: advance
+<div class="highlight"><pre><span></span><code><span class="nt">show_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">some_event</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">show_1</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">manual_advance</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">some_advance_event</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">show_1</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">advance</span>
 </code></pre></div>
 <p>In the example above, the event <em>some_event</em> will start show_1, but that
 show will stay on its first step since it's set to manually advance.
@@ -34283,11 +34283,11 @@ submit your change. It's easy! <span class="twemoji"><svg xmlns="http://www.w3.o
 show tokens in the show when it's played.</p>
 <p>Read what show tokens are <a href="../../shows/tokens/">here</a>.</p>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>show_player:
-  some_event:
-    show1:
-      show_tokens:
-        led: right_inlane
+<div class="highlight"><pre><span></span><code><span class="nt">show_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">some_event</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">show1</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">led</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">right_inlane</span>
 </code></pre></div>
 <p>In the example above, the show called "show1" will be played, but the
 show token called "led" in the show will be replaced at runtime with

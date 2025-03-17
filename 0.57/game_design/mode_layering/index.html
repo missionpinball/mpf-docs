@@ -33777,32 +33777,32 @@ coding.</p>
 is to separate the various field mode behaviors into different yaml
 files and import all of them into the field helper mode. This keeps each
 file small while giving just a single mode to start and stop.</p>
-<div class="highlight"><pre><span></span><code>##! mode: field
-# modes/field/config/field.yaml
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: field</span>
+<span class="c1"># modes/field/config/field.yaml</span>
 
-mode:
-  start_events: start_mode_field
-  stop_events: stop_mode_field
+<span class="nt">mode</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">start_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start_mode_field</span>
+<span class="w">  </span><span class="nt">stop_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stop_mode_field</span>
 
-config:
-  # add your mode parts here. For instance:
-  # - field_mission_qualifier_shots.yaml
-  # - field_miniwizard_qualifier_shots.yaml
-  # - field_chase_advancement.yaml
-  # - field_dropbank_special.yaml
+<span class="nt">config</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># add your mode parts here. For instance:</span>
+<span class="w">  </span><span class="c1"># - field_mission_qualifier_shots.yaml</span>
+<span class="w">  </span><span class="c1"># - field_miniwizard_qualifier_shots.yaml</span>
+<span class="w">  </span><span class="c1"># - field_chase_advancement.yaml</span>
+<span class="w">  </span><span class="c1"># - field_dropbank_special.yaml</span>
 </code></pre></div>
 <p><strong>Mission modes</strong> replace field mode, usually on their own but you may
 want to allow two or more missions to run concurrently. Giving every
 mission mode a few common event handlers allows the global mode to
 easily manage the transitions into and out of mission modes.</p>
-<div class="highlight"><pre><span></span><code>##! mode: trolls
-# modes/trolls/config/trolls.yaml
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: trolls</span>
+<span class="c1"># modes/trolls/config/trolls.yaml</span>
 
-mode:
-  start_events: start_mode_trolls
-  stop_events: stop_mode_trolls, stop_missions
-  events_when_started: mode_type_mission_started
-  events_when_stopped: mode_type_mission_stopped
+<span class="nt">mode</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">start_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start_mode_trolls</span>
+<span class="w">  </span><span class="nt">stop_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stop_mode_trolls, stop_missions</span>
+<span class="w">  </span><span class="nt">events_when_started</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mode_type_mission_started</span>
+<span class="w">  </span><span class="nt">events_when_stopped</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mode_type_mission_stopped</span>
 </code></pre></div>
 <p><strong>Global mode</strong> can import global-specific config files to consolidate
 all persistent behavior (just like field mode), and uses special events
@@ -33810,56 +33810,56 @@ to handle transitioning between field mode and mission modes. Global
 will automatically attempt to restart field when a mission mode stops,
 so we add a special handler: stop global mode when the ball ends, and
 only restart field mode if global isn't stopping.</p>
-<div class="highlight"><pre><span></span><code>##! mode: global
-# modes/global/config/global.yaml
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: global</span>
+<span class="c1"># modes/global/config/global.yaml</span>
 
-mode:
-  start_events: start_mode_global
-  stop_events: stop_mode_global, ball_will_end
+<span class="nt">mode</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">start_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start_mode_global</span>
+<span class="w">  </span><span class="nt">stop_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stop_mode_global, ball_will_end</span>
 
-config:
-  # add your configs here. For instance:
-  # - global_multiball_madness_light_and_lock.yaml
-  # - global_pop_bumpers.yaml
-  # - global_wizard_qualifier.yaml
+<span class="nt">config</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># add your configs here. For instance:</span>
+<span class="w">  </span><span class="c1"># - global_multiball_madness_light_and_lock.yaml</span>
+<span class="w">  </span><span class="c1"># - global_pop_bumpers.yaml</span>
+<span class="w">  </span><span class="c1"># - global_wizard_qualifier.yaml</span>
 
-event_player:
-  mode_global_started:
-    - start_mode_field
-  mode_global_will_stop:
-    - stop_mode_field
-    - stop_missions
-  mode_type_mission_started:
-    - stop_mode_field
-  mode_type_mission_stopped{not mode[&quot;global&quot;].stopping}:
-    - start_mode_field
+<span class="nt">event_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">mode_global_started</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start_mode_field</span>
+<span class="w">  </span><span class="nt">mode_global_will_stop</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stop_mode_field</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stop_missions</span>
+<span class="w">  </span><span class="nt">mode_type_mission_started</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stop_mode_field</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">mode_type_mission_stopped{not mode[&quot;global&quot;].stopping}</span><span class="p p-Indicator">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start_mode_field</span>
 </code></pre></div>
 <p><strong>Wizard modes</strong> replace global, and use a special set of event handlers
 just like the mission modes.</p>
-<div class="highlight"><pre><span></span><code>##! mode: madness
-# modes/madness/config/madness.yaml
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: madness</span>
+<span class="c1"># modes/madness/config/madness.yaml</span>
 
-mode:
-  start_events: start_mode_madness
-  stop_events: stop_mode_madness, stop_wizards
-  events_when_started: mode_type_wizard_started
-  events_when_stopped: mode_type_wizard_stopped
+<span class="nt">mode</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">start_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start_mode_madness</span>
+<span class="w">  </span><span class="nt">stop_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stop_mode_madness, stop_wizards</span>
+<span class="w">  </span><span class="nt">events_when_started</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mode_type_wizard_started</span>
+<span class="w">  </span><span class="nt">events_when_stopped</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mode_type_wizard_stopped</span>
 </code></pre></div>
 <p><strong>Base mode</strong> runs for the player's entire turn and includes special
 handlers to manage the transition between global mode and wizard modes.
 Just like with global restarting field, base mode restarts global mode
 when a wizard mode stops (unless base mode itself is stopping).</p>
-<div class="highlight"><pre><span></span><code>##! mode: base
-# modes/base/config/base.yaml
-event_player:
-  mode_base_started:
-    - start_mode_global
-  mode_base_will_stop:
-    - stop_mode_global
-  mode_type_wizard_started:
-    - stop_mode_global
-  mode_type_wizard_stopped{not mode[&quot;base&quot;].stopping}:
-    - start_mode_global
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: base</span>
+<span class="c1"># modes/base/config/base.yaml</span>
+<span class="nt">event_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">mode_base_started</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start_mode_global</span>
+<span class="w">  </span><span class="nt">mode_base_will_stop</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stop_mode_global</span>
+<span class="w">  </span><span class="nt">mode_type_wizard_started</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stop_mode_global</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">mode_type_wizard_stopped{not mode[&quot;base&quot;].stopping}</span><span class="p p-Indicator">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start_mode_global</span>
 </code></pre></div>
 <hr />
 <div class="admonition question">

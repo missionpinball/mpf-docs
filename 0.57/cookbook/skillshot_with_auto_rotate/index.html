@@ -33766,34 +33766,34 @@ skillshot target.</p>
 <p>Skillshots are a self-contained set of rules, so it's wise to create a
 separate mode that can be started when a player's ball starts and ended
 after the skillshot is hit (or missed).</p>
-<div class="highlight"><pre><span></span><code>#config_version=5
-modes:
-  - skillshot_with_auto_rotate
-switches:
-  s_dropbank_1:
-    number: 1
-  s_dropbank_2:
-    number: 2
-  s_dropbank_3:
-    number: 3
-  s_dropbank_4:
-    number: 4
-  s_dropbank_5:
-    number: 5
-lights:
-  l_dropbank_1:
-    number: 1
-  l_dropbank_2:
-    number: 2
-  l_dropbank_3:
-    number: 3
-  l_dropbank_4:
-    number: 4
-  l_dropbank_5:
-    number: 5
+<div class="highlight"><pre><span></span><code><span class="c1">#config_version=5</span>
+<span class="nt">modes</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">skillshot_with_auto_rotate</span>
+<span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_dropbank_1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">s_dropbank_2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="w">  </span><span class="nt">s_dropbank_3</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="w">  </span><span class="nt">s_dropbank_4</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span>
+<span class="w">  </span><span class="nt">s_dropbank_5</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+<span class="nt">lights</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">l_dropbank_1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">l_dropbank_2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="w">  </span><span class="nt">l_dropbank_3</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="w">  </span><span class="nt">l_dropbank_4</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span>
+<span class="w">  </span><span class="nt">l_dropbank_5</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
 
-##! mode: skillshot_with_auto_rotate
-# mode will be defined below
+<span class="c1">##! mode: skillshot_with_auto_rotate</span>
+<span class="c1"># mode will be defined below</span>
 </code></pre></div>
 <p>The first thing our mode needs is <a href="../../config/shots/">shots:</a>. Each possible target will be a shot (in this example,
 we'll have five). Each shot has a switch, a light, and a shot profile
@@ -33804,58 +33804,58 @@ be explained in detail in section 4. What's important to note now is
 that the first shot includes <code>advance_events: mode_skillshot_started</code> so
 that this shot will automatically light when the mode starts, as the
 first shot in the rotation.</p>
-<div class="highlight"><pre><span></span><code>#! switches:
-#!   s_dropbank_1:
-#!     number: 1
-#!   s_dropbank_2:
-#!     number: 2
-#!   s_dropbank_3:
-#!     number: 3
-#!   s_dropbank_4:
-#!     number: 4
-#!   s_dropbank_5:
-#!     number: 5
-##! mode: skillshot_with_auto_rotate
-#! shot_profiles:
-#!   skillshot_profile:
-#!     states:
-#!       - name: off
-mode:
-  start_events: start_mode_skillshot_with_auto_rotate
-  stop_events: stop_mode_skillshot_with_auto_rotate
-  priority: 1000
+<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
+<span class="c1">#!   s_dropbank_1:</span>
+<span class="c1">#!     number: 1</span>
+<span class="c1">#!   s_dropbank_2:</span>
+<span class="c1">#!     number: 2</span>
+<span class="c1">#!   s_dropbank_3:</span>
+<span class="c1">#!     number: 3</span>
+<span class="c1">#!   s_dropbank_4:</span>
+<span class="c1">#!     number: 4</span>
+<span class="c1">#!   s_dropbank_5:</span>
+<span class="c1">#!     number: 5</span>
+<span class="c1">##! mode: skillshot_with_auto_rotate</span>
+<span class="c1">#! shot_profiles:</span>
+<span class="c1">#!   skillshot_profile:</span>
+<span class="c1">#!     states:</span>
+<span class="c1">#!       - name: off</span>
+<span class="nt">mode</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">start_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start_mode_skillshot_with_auto_rotate</span>
+<span class="w">  </span><span class="nt">stop_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stop_mode_skillshot_with_auto_rotate</span>
+<span class="w">  </span><span class="nt">priority</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 
-shots:
-  skillshot_drop_1:
-    switch: s_dropbank_1
-    advance_events: mode_skillshot_with_auto_rotate_started, advance_skillshot_1
-    profile: skillshot_profile
-    show_tokens:
-      leds: l_dropbank_1
-  skillshot_drop_2:
-    switch: s_dropbank_2
-    advance_events: advance_skillshot_2
-    profile: skillshot_profile
-    show_tokens:
-      leds: l_dropbank_2
-  skillshot_drop_3:
-    switch: s_dropbank_3
-    advance_events: advance_skillshot_3
-    profile: skillshot_profile
-    show_tokens:
-      leds: l_dropbank_3
-  skillshot_drop_4:
-    switch: s_dropbank_4
-    advance_events: advance_skillshot_4
-    profile: skillshot_profile
-    show_tokens:
-      leds: l_dropbank_4
-  skillshot_drop_5:
-    switch: s_dropbank_5
-    advance_events: advance_skillshot_5
-    profile: skillshot_profile
-    show_tokens:
-      leds: l_dropbank_5
+<span class="nt">shots</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">skillshot_drop_1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_dropbank_1</span>
+<span class="w">    </span><span class="nt">advance_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mode_skillshot_with_auto_rotate_started, advance_skillshot_1</span>
+<span class="w">    </span><span class="nt">profile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">skillshot_profile</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">leds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_dropbank_1</span>
+<span class="w">  </span><span class="nt">skillshot_drop_2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_dropbank_2</span>
+<span class="w">    </span><span class="nt">advance_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">advance_skillshot_2</span>
+<span class="w">    </span><span class="nt">profile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">skillshot_profile</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">leds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_dropbank_2</span>
+<span class="w">  </span><span class="nt">skillshot_drop_3</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_dropbank_3</span>
+<span class="w">    </span><span class="nt">advance_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">advance_skillshot_3</span>
+<span class="w">    </span><span class="nt">profile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">skillshot_profile</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">leds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_dropbank_3</span>
+<span class="w">  </span><span class="nt">skillshot_drop_4</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_dropbank_4</span>
+<span class="w">    </span><span class="nt">advance_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">advance_skillshot_4</span>
+<span class="w">    </span><span class="nt">profile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">skillshot_profile</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">leds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_dropbank_4</span>
+<span class="w">  </span><span class="nt">skillshot_drop_5</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_dropbank_5</span>
+<span class="w">    </span><span class="nt">advance_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">advance_skillshot_5</span>
+<span class="w">    </span><span class="nt">profile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">skillshot_profile</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">leds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_dropbank_5</span>
 </code></pre></div>
 <h2 id="step-2-create-a-profile-for-the-targets">Step 2. Create a profile for the targets</h2>
 <p>We can create a <a href="../../config/shot_profiles/">shot profile</a> for the targets that starts with the light off, lights it
@@ -33873,17 +33873,17 @@ lit shot moving across the targets.</p>
 advanced to the "lit" state and its light will flash. When any shot is
 hit, we'll check whether it is "lit" or not to know whether the
 skillshot should be awarded.</p>
-<div class="highlight"><pre><span></span><code>##! mode: skillshot_with_auto_rotate
-shot_profiles:
-  skillshot_profile:
-    advance_on_hit: false
-    states:
-      - name: off
-        show: off
-      - name: on
-        show: on
-      - name: lit
-        show: flash
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: skillshot_with_auto_rotate</span>
+<span class="nt">shot_profiles</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">skillshot_profile</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">advance_on_hit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">    </span><span class="nt">states</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">off</span>
+<span class="w">        </span><span class="nt">show</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">off</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">on</span>
+<span class="w">        </span><span class="nt">show</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">on</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lit</span>
+<span class="w">        </span><span class="nt">show</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flash</span>
 </code></pre></div>
 <h2 id="step-3-create-a-shot_group-for-the-lanes-and-a-rotation-timer">Step 3. Create a shot_group for the lanes, and a rotation timer</h2>
 <p>To tell MPF that the five shots are related to each other, we create a
@@ -33892,47 +33892,47 @@ the shots in it.</p>
 <p>Shot groups are powerful because they control behavior of all the shots
 together. In this case, we'll use our shot group control the rotation
 of the shots, and a <a href="../../config/timers/">timer</a> to trigger a rotation every half-second.</p>
-<div class="highlight"><pre><span></span><code>#! switches:
-#!   s_dropbank_1:
-#!     number: 1
-#!   s_dropbank_2:
-#!     number: 2
-#!   s_dropbank_3:
-#!     number: 3
-#!   s_dropbank_4:
-#!     number: 4
-#!   s_dropbank_5:
-#!     number: 5
-##! mode: skillshot_with_auto_rotate
-#! shots:
-#!   skillshot_drop_1:
-#!     switch: s_dropbank_1
-#!   skillshot_drop_2:
-#!     switch: s_dropbank_2
-#!   skillshot_drop_3:
-#!     switch: s_dropbank_3
-#!   skillshot_drop_4:
-#!     switch: s_dropbank_4
-#!   skillshot_drop_5:
-#!     switch: s_dropbank_5
+<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
+<span class="c1">#!   s_dropbank_1:</span>
+<span class="c1">#!     number: 1</span>
+<span class="c1">#!   s_dropbank_2:</span>
+<span class="c1">#!     number: 2</span>
+<span class="c1">#!   s_dropbank_3:</span>
+<span class="c1">#!     number: 3</span>
+<span class="c1">#!   s_dropbank_4:</span>
+<span class="c1">#!     number: 4</span>
+<span class="c1">#!   s_dropbank_5:</span>
+<span class="c1">#!     number: 5</span>
+<span class="c1">##! mode: skillshot_with_auto_rotate</span>
+<span class="c1">#! shots:</span>
+<span class="c1">#!   skillshot_drop_1:</span>
+<span class="c1">#!     switch: s_dropbank_1</span>
+<span class="c1">#!   skillshot_drop_2:</span>
+<span class="c1">#!     switch: s_dropbank_2</span>
+<span class="c1">#!   skillshot_drop_3:</span>
+<span class="c1">#!     switch: s_dropbank_3</span>
+<span class="c1">#!   skillshot_drop_4:</span>
+<span class="c1">#!     switch: s_dropbank_4</span>
+<span class="c1">#!   skillshot_drop_5:</span>
+<span class="c1">#!     switch: s_dropbank_5</span>
 
-shot_groups:
-  skillshot:
-    shots:
-      - skillshot_drop_1
-      - skillshot_drop_2
-      - skillshot_drop_3
-      - skillshot_drop_4
-      - skillshot_drop_5
-    rotate_events: timer_skillshot_rotate_tick
+<span class="nt">shot_groups</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">skillshot</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">shots</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">skillshot_drop_1</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">skillshot_drop_2</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">skillshot_drop_3</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">skillshot_drop_4</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">skillshot_drop_5</span>
+<span class="w">    </span><span class="nt">rotate_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">timer_skillshot_rotate_tick</span>
 
-timers:
-  skillshot_rotate:
-    tick_interval: 500ms
-    start_running: true
-    control_events:
-      - event: s_plunger_lane_inactive
-        action: stop
+<span class="nt">timers</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">skillshot_rotate</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">tick_interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">500ms</span>
+<span class="w">    </span><span class="nt">start_running</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">control_events</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_plunger_lane_inactive</span>
+<span class="w">        </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stop</span>
 </code></pre></div>
 <p>The <code>rotate_events</code> will move the state of the shots each time the timer
 ticks, and the ball leaving the plunger lane will stop the timer and
@@ -33946,14 +33946,14 @@ timer stop and advance <em>only</em> the lit shot.</p>
 state is number 0 and the "on" state is number 1. The following code
 will only post the advance event for a shot if that shot is in state
 number 1, a.k.a. "on".</p>
-<div class="highlight"><pre><span></span><code>##! mode: skillshot_with_auto_rotate
-event_player:
-  timer_skillshot_rotate_stopped:
-    - advance_skillshot_1{device.shots.skillshot_drop_1.state==1}
-    - advance_skillshot_2{device.shots.skillshot_drop_2.state==1}
-    - advance_skillshot_3{device.shots.skillshot_drop_3.state==1}
-    - advance_skillshot_4{device.shots.skillshot_drop_4.state==1}
-    - advance_skillshot_5{device.shots.skillshot_drop_5.state==1}
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: skillshot_with_auto_rotate</span>
+<span class="nt">event_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">timer_skillshot_rotate_stopped</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">advance_skillshot_1{device.shots.skillshot_drop_1.state==1}</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">advance_skillshot_2{device.shots.skillshot_drop_2.state==1}</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">advance_skillshot_3{device.shots.skillshot_drop_3.state==1}</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">advance_skillshot_4{device.shots.skillshot_drop_4.state==1}</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">advance_skillshot_5{device.shots.skillshot_drop_5.state==1}</span>
 </code></pre></div>
 <p>Each shot configured in step 1 above has <code>advance_events</code> that
 correspond to its shot number, so the above event player will trigger
@@ -33966,10 +33966,10 @@ this.</p>
 with the state name of the shot that was hit. This way, we can check
 when <em>any</em> shot is hit rather than having to check each shot
 individually.</p>
-<div class="highlight"><pre><span></span><code>##! mode: skillshot_with_auto_rotate
-variable_player:
-  skillshot_lit_hit:
-    score: 20_000
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: skillshot_with_auto_rotate</span>
+<span class="nt">variable_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">skillshot_lit_hit</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20_000</span>
 </code></pre></div>
 <h2 id="step-6-end-the-mode-on-skillshot-hit-or-any-other-hit">Step 6. End the mode on skillshot hit, or any other hit</h2>
 <p>After any skillshot shot is hit, the skillshot mode should end. We can
@@ -33982,11 +33982,11 @@ event. However, when the skillshot is hit the <em>playfield_active</em> event
 will post before the <em>skillshot_lit_hit</em> event, so if we end the mode
 immediately then no score will be awarded. Instead, we add a 1 second
 delay after playfield activation before ending the mode.</p>
-<div class="highlight"><pre><span></span><code>##! mode: skillshot_with_auto_rotate
-event_player:
-  # Add these lines after timer_skillshot_rotate_stopped (defined above)
-  skillshot_hit: stop_mode_skillshot
-  playfield_active: stop_mode_skillshot|1s
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: skillshot_with_auto_rotate</span>
+<span class="nt">event_player</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># Add these lines after timer_skillshot_rotate_stopped (defined above)</span>
+<span class="w">  </span><span class="nt">skillshot_hit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stop_mode_skillshot</span>
+<span class="w">  </span><span class="nt">playfield_active</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stop_mode_skillshot|1s</span>
 </code></pre></div>
 <h2 id="full-example-code">Full Example Code</h2>
 <p>The full code from this example can be found as a fully-working game

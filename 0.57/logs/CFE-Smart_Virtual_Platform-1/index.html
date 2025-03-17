@@ -33761,28 +33761,28 @@ icons & this code generated via https://realfavicongenerator.net
 <code>switches</code> section.</p>
 <h2 id="examples">Examples</h2>
 <p>This is how it should look:</p>
-<div class="highlight"><pre><span></span><code>switches:
-  s_ball_switch1:
-    number:
-  s_ball_switch2:
-    number:
-  s_ball_switch3:
-    number:
-# Two switches should be active at start
-virtual_platform_start_active_switches:
-  - s_ball_switch1
-  - s_ball_switch2
+<div class="highlight"><pre><span></span><code><span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_ball_switch1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_ball_switch2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_ball_switch3</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="c1"># Two switches should be active at start</span>
+<span class="nt">virtual_platform_start_active_switches</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_ball_switch1</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_ball_switch2</span>
 </code></pre></div>
 <p>Alternatively, this could be a comma separated list:</p>
-<div class="highlight"><pre><span></span><code>switches:
-  s_ball_switch1:
-    number:
-  s_ball_switch2:
-    number:
-  s_ball_switch3:
-    number:
-# Two switches should be active at start
-virtual_platform_start_active_switches: s_ball_switch1, s_ball_switch2
+<div class="highlight"><pre><span></span><code><span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_ball_switch1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_ball_switch2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_ball_switch3</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="c1"># Two switches should be active at start</span>
+<span class="nt">virtual_platform_start_active_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_ball_switch1, s_ball_switch2</span>
 </code></pre></div>
 <h2 id="common-pitfalls">Common Pitfalls</h2>
 <h3 id="using-spaces-instead-of-commas">Using spaces instead of commas</h3>

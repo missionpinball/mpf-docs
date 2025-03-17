@@ -33658,38 +33658,38 @@ standardized we define a few custom messages:</p>
     <code>events_to_send</code> in your <code>osc</code> config section.</li>
 </ul>
 <p>This is an example:</p>
-<div class="highlight"><pre><span></span><code>hardware:
-  platform: osc
+<div class="highlight"><pre><span></span><code><span class="nt">hardware</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">osc</span>
 
-osc:
-  remote_ip: 127.0.0.1
-  remote_port: 8000
+<span class="nt">osc</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">remote_ip</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">127.0.0.1</span>
+<span class="w">  </span><span class="nt">remote_port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8000</span>
 
-  events_to_send:
-    - player_score
-    - some_non_osc_switch_active
-    - some_non_osc_switch_inactive
+<span class="w">  </span><span class="nt">events_to_send</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">player_score</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">some_non_osc_switch_active</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">some_non_osc_switch_inactive</span>
 
-lights:
-  test_light1:
-    channels:
-      red:
-        - number: light1/red
-      blue:
-        - number: light1/blue
-      green:
-        - number: light1/green
-  test_light2:
-    number: light2
+<span class="nt">lights</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">test_light1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">channels</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">red</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">light1/red</span>
+<span class="w">      </span><span class="nt">blue</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">light1/blue</span>
+<span class="w">      </span><span class="nt">green</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">light1/green</span>
+<span class="w">  </span><span class="nt">test_light2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">light2</span>
 
-switches:
-  switch_1:
-    number: 1
-  switch_2:
-    number: 2
-  some_non_osc_switch:  # not an OSC switch but used for the events above
-    number: 23
-    platform: virtual
+<span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">switch_1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">switch_2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="w">  </span><span class="nt">some_non_osc_switch</span><span class="p">:</span><span class="w">  </span><span class="c1"># not an OSC switch but used for the events above</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">23</span>
+<span class="w">    </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">virtual</span>
 </code></pre></div>
 <p>You need to install python-osc to use the OSC platform:</p>
 <div class="highlight"><pre><span></span><code><span class="go">pip3 install python-osc</span>

@@ -33749,16 +33749,16 @@ remove colors to or from a blinkenlight based on events. It's also used
 in shows (via the <code>blinkenlights:</code> section) to add or remove colors in
 that show step.</p>
 <p>Example from a config file:</p>
-<div class="highlight"><pre><span></span><code>blinkenlight_player:
-  some_event:
-    my_blinkenlight1:
-      action: add
-      color: red
-      key: mykey1
-  some_other_event:
-    my_blinkenlight1:
-      action: remove
-      key: mykey1
+<div class="highlight"><pre><span></span><code><span class="nt">blinkenlight_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">some_event</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">my_blinkenlight1</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">add</span>
+<span class="w">      </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
+<span class="w">      </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mykey1</span>
+<span class="w">  </span><span class="nt">some_other_event</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">my_blinkenlight1</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">remove</span>
+<span class="w">      </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mykey1</span>
 </code></pre></div>
 <p>In the example above, when the event called <code>some_event</code> is posted, the
 color red will be added to my_blinkenlight1's list of colors (this will
@@ -33768,14 +33768,14 @@ the color, so that it can be removed later using that key. When the
 event <code>some_other_event</code> is posted, the red color (key <code>mykey1</code>) will be
 removed from the blinkenlight.</p>
 <p>Example blinkenlight player from a show:</p>
-<div class="highlight"><pre><span></span><code>##! show: test
-- time: 0
-  blinkenlights:
-    my_blinkenlight1:
-      action: add
-      color: blue
-      key: blue_color
-    my_blinkenlight2: purple
+<div class="highlight"><pre><span></span><code><span class="c1">##! show: test</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">  </span><span class="nt">blinkenlights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">my_blinkenlight1</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">add</span>
+<span class="w">      </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">blue</span>
+<span class="w">      </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">blue_color</span>
+<span class="w">    </span><span class="nt">my_blinkenlight2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">purple</span>
 </code></pre></div>
 <p>The first example shows the full config, while the second shows the
 "express" config. (What's an "express config?" Details

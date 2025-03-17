@@ -33677,9 +33677,9 @@ FAST controller for your switches and a P-ROC for your coils and lamps.)</p>
 machine-wide config is the default platform for all types of mechanisms
 across all of MPF.</p>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>hardware:
-  platform: p_roc
-  driverboards: pdb
+<div class="highlight"><pre><span></span><code><span class="nt">hardware</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">p_roc</span>
+<span class="w">  </span><span class="nt">driverboards</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pdb</span>
 </code></pre></div>
 <p>In the above config, the P-ROC platform will be the default for
 everything. (switches, coils, lights, LEDs, DMDs, servos, etc.)</p>
@@ -33691,10 +33691,10 @@ to specify the default for.</p>
 <p>For example, if you want to use a P-ROC as the default for everything
 except for LEDs, which you want to be FadeCandy, you would do it like
 this:</p>
-<div class="highlight"><pre><span></span><code>hardware:
-  platform: p_roc
-  driverboards: pdb
-  lights: fadecandy
+<div class="highlight"><pre><span></span><code><span class="nt">hardware</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">p_roc</span>
+<span class="w">  </span><span class="nt">driverboards</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pdb</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fadecandy</span>
 </code></pre></div>
 <p>You can enter a device-specific default for the following types of
 devices here:</p>
@@ -33717,28 +33717,28 @@ a <code>platform:</code> setting to that device.</p>
 <p>For example, if you're using a FAST Pinball controller which can
 control up to 256 LEDs, but you also want to add some more LEDs that
 will be attached to a FadeCandy, you could set up your config like this:</p>
-<div class="highlight"><pre><span></span><code>hardware:
-  platform: fast
-lights:
-  led00:
-    number: 0-0
-  led01:
-    number: 0
-    platform: fadecandy
+<div class="highlight"><pre><span></span><code><span class="nt">hardware</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fast</span>
+<span class="nt">lights</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">led00</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0-0</span>
+<span class="w">  </span><span class="nt">led01</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fadecandy</span>
 </code></pre></div>
 <p>In this example, <em>led00</em> will use the FAST platform (and the number 0-0
 is a FAST configuration number), and <em>led01</em> will use the FadeCandy
 platform (and the number 0 is a Fadecandy number).</p>
 <p>You could also invert this, like so:</p>
-<div class="highlight"><pre><span></span><code>hardware:
-  platform: fast
-  lights: fadecandy
-lights:
-  led00:
-    number: 0-0
-    platform: fast
-  led01:
-    number: 0
+<div class="highlight"><pre><span></span><code><span class="nt">hardware</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fast</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fadecandy</span>
+<span class="nt">lights</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">led00</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0-0</span>
+<span class="w">    </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fast</span>
+<span class="w">  </span><span class="nt">led01</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
 </code></pre></div>
 <p>In the example above, <em>led00</em> is still a FAST LED and <em>led01</em> is still a
 FadeCandy LED, but the difference is that while the default platform is

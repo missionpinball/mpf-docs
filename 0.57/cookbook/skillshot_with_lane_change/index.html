@@ -33769,75 +33769,75 @@ after the skillshot is hit (or missed).</p>
 config section for each of the lanes, called <code>s_lane_left</code>,
 <code>s_lane_middle</code>, and <code>s_lane_right</code>. We'll also use corresponding
 lights <code>l_lane_left</code> etc. to indicate which lane is lit.</p>
-<div class="highlight"><pre><span></span><code>#config_version=5
-modes:
-  - skillshot_with_lane_change
-switches:
-  s_lane_left:
-    number: 1
-  s_lane_middle:
-    number: 2
-  s_lane_right:
-    number: 3
-lights:
-  l_lane_left:
-    number: 1
-  l_lane_middle:
-    number: 2
-  l_lane_right:
-    number: 3
-shot_profiles:
-  skillshot_profile:
-    states:
-      - name: off
-      - name: on
+<div class="highlight"><pre><span></span><code><span class="c1">#config_version=5</span>
+<span class="nt">modes</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">skillshot_with_lane_change</span>
+<span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_lane_left</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">s_lane_middle</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="w">  </span><span class="nt">s_lane_right</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="nt">lights</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">l_lane_left</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">l_lane_middle</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="w">  </span><span class="nt">l_lane_right</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="nt">shot_profiles</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">skillshot_profile</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">states</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">off</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">on</span>
 
-##! mode: skillshot_with_lane_change
-#! mode:
-#!   start_events: start_mode_skillshot_with_lane_change
-#!   stop_events: stop_mode_skillshot_with_lane_change
-#!   priority: 1000
+<span class="c1">##! mode: skillshot_with_lane_change</span>
+<span class="c1">#! mode:</span>
+<span class="c1">#!   start_events: start_mode_skillshot_with_lane_change</span>
+<span class="c1">#!   stop_events: stop_mode_skillshot_with_lane_change</span>
+<span class="c1">#!   priority: 1000</span>
 </code></pre></div>
 <p>The first thing our mode needs is <a href="../../config/shots/">shots:</a>. Each lane will count as a shot, and for this example we'll
 have three lanes "left", "middle", and "right".</p>
-<div class="highlight"><pre><span></span><code>#! switches:
-#!   s_lane_left:
-#!     number: 1
-#!   s_lane_middle:
-#!     number: 2
-#!   s_lane_right:
-#!     number: 3
-##! mode: skillshot_with_lane_change
-#! shot_profiles:
-#!   skillshot_profile:
-#!     states:
-#!       - name: off
-#!
+<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
+<span class="c1">#!   s_lane_left:</span>
+<span class="c1">#!     number: 1</span>
+<span class="c1">#!   s_lane_middle:</span>
+<span class="c1">#!     number: 2</span>
+<span class="c1">#!   s_lane_right:</span>
+<span class="c1">#!     number: 3</span>
+<span class="c1">##! mode: skillshot_with_lane_change</span>
+<span class="c1">#! shot_profiles:</span>
+<span class="c1">#!   skillshot_profile:</span>
+<span class="c1">#!     states:</span>
+<span class="c1">#!       - name: off</span>
+<span class="c1">#!</span>
 
-mode:
-  start_events: start_mode_skillshot_with_lane_change
-  stop_events: stop_mode_skillshot_with_lane_change
-  priority: 1000
+<span class="nt">mode</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">start_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start_mode_skillshot_with_lane_change</span>
+<span class="w">  </span><span class="nt">stop_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stop_mode_skillshot_with_lane_change</span>
+<span class="w">  </span><span class="nt">priority</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 
-shots:
-  skillshot_left:
-    advance_events: advance_skillshot_left
-    profile: skillshot_profile
-    switch: s_lane_left
-    show_tokens:
-      led: l_lane_left
-  skillshot_middle:
-    advance_events: advance_skillshot_middle
-    profile: skillshot_profile
-    switch: s_lane_middle
-    show_tokens:
-      led: l_lane_middle
-  skillshot_right:
-    advance_events: advance_skillshot_right
-    profile: skillshot_profile
-    switch: s_lane_right
-    show_tokens:
-      led: l_lane_right
+<span class="nt">shots</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">skillshot_left</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">advance_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">advance_skillshot_left</span>
+<span class="w">    </span><span class="nt">profile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">skillshot_profile</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_lane_left</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">led</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_lane_left</span>
+<span class="w">  </span><span class="nt">skillshot_middle</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">advance_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">advance_skillshot_middle</span>
+<span class="w">    </span><span class="nt">profile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">skillshot_profile</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_lane_middle</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">led</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_lane_middle</span>
+<span class="w">  </span><span class="nt">skillshot_right</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">advance_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">advance_skillshot_right</span>
+<span class="w">    </span><span class="nt">profile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">skillshot_profile</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_lane_right</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">led</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_lane_right</span>
 </code></pre></div>
 <h2 id="step-2-creating-a-profile-for-the-lanes">Step 2. Creating a profile for the lanes</h2>
 <p>We can create a <a href="../../config/shot_profiles/">shot profile</a> for the lanes that starts with the light off and makes it
@@ -33846,15 +33846,15 @@ flash if that lane is lit for the skillshot.</p>
 don't want that here so we'll set <code>advance_on_hit: false</code>. Instead, we
 have explicit <code>advance_events</code> set on the shots so we can advance them
 for the lane change.</p>
-<div class="highlight"><pre><span></span><code>##! mode: skillshot_with_lane_change
-shot_profiles:
-  skillshot_profile:
-    advance_on_hit: false
-    states:
-      - name: off
-        show: off
-      - name: lit
-        show: flash
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: skillshot_with_lane_change</span>
+<span class="nt">shot_profiles</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">skillshot_profile</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">advance_on_hit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">    </span><span class="nt">states</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">off</span>
+<span class="w">        </span><span class="nt">show</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">off</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lit</span>
+<span class="w">        </span><span class="nt">show</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flash</span>
 </code></pre></div>
 <h2 id="step-3-creating-a-shot_group-for-the-lanes">Step 3. Creating a shot_group for the lanes</h2>
 <p>To tell MPF that the lane shots are related to each other, we create a
@@ -33863,28 +33863,28 @@ the shots in it.</p>
 <p>Shot groups are powerful because they control behavior of all the shots
 together. In this case, we'll use our shot group to rotate the lit
 shots.</p>
-<div class="highlight"><pre><span></span><code>#! switches:
-#!   s_lane_left:
-#!     number: 1
-#!   s_lane_middle:
-#!     number: 2
-#!   s_lane_right:
-#!     number: 3
-##! mode: skillshot_with_lane_change
-#! shots:
-#!   skillshot_left:
-#!     switch: s_lane_left
-#!   skillshot_middle:
-#!     switch: s_lane_middle
-#!   skillshot_right:
-#!     switch: s_lane_right
+<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
+<span class="c1">#!   s_lane_left:</span>
+<span class="c1">#!     number: 1</span>
+<span class="c1">#!   s_lane_middle:</span>
+<span class="c1">#!     number: 2</span>
+<span class="c1">#!   s_lane_right:</span>
+<span class="c1">#!     number: 3</span>
+<span class="c1">##! mode: skillshot_with_lane_change</span>
+<span class="c1">#! shots:</span>
+<span class="c1">#!   skillshot_left:</span>
+<span class="c1">#!     switch: s_lane_left</span>
+<span class="c1">#!   skillshot_middle:</span>
+<span class="c1">#!     switch: s_lane_middle</span>
+<span class="c1">#!   skillshot_right:</span>
+<span class="c1">#!     switch: s_lane_right</span>
 
-shot_groups:
-  skillshot:
-    shots: skillshot_left, skillshot_middle, skillshot_right
-    disable_rotation_events: s_plunger_lane_inactive
-    rotate_left_events: s_flipper_left_active
-    rotate_right_events: s_flipper_right_active
+<span class="nt">shot_groups</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">skillshot</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">shots</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">skillshot_left, skillshot_middle, skillshot_right</span>
+<span class="w">    </span><span class="nt">disable_rotation_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_plunger_lane_inactive</span>
+<span class="w">    </span><span class="nt">rotate_left_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_flipper_left_active</span>
+<span class="w">    </span><span class="nt">rotate_right_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_flipper_right_active</span>
 </code></pre></div>
 <p>The <code>rotate_left_events</code> and <code>rotate_right_events</code> trigger the lane
 changes based on the flipper events. The <code>disable_rotation_events</code> will
@@ -33895,13 +33895,13 @@ just remove that line.)</p>
 <p>The starting state of the shot profile is "off", so we need to pick
 one shot at random and advance it to its "lit" state. We'll use the
 <a href="../../config/random_event_player/">random_event_player:</a> for this.</p>
-<div class="highlight"><pre><span></span><code>##! mode: skillshot_with_lane_change
-random_event_player:
-  mode_skillshot_started:
-    events:
-      - advance_skillshot_left
-      - advance_skillshot_middle
-      - advance_skillshot_right
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: skillshot_with_lane_change</span>
+<span class="nt">random_event_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">mode_skillshot_started</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">events</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">advance_skillshot_left</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">advance_skillshot_middle</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">advance_skillshot_right</span>
 </code></pre></div>
 <h2 id="step-5-rewards-for-skillshot">Step 5. Rewards for Skillshot</h2>
 <p>When the player hits the lit skillshot shot, they get an award of
@@ -33910,10 +33910,10 @@ points. We can use the <a href="../../config/variable_player/">variable_player:<
 with the state name of the shot that was hit. By using the shot group
 events, we can check when <em>any</em> shot is hit, rather than having to check
 each shot in the group individually.</p>
-<div class="highlight"><pre><span></span><code>##! mode: skillshot_with_lane_change
-variable_player:
-  skillshot_lit_hit:
-    score: 20_000
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: skillshot_with_lane_change</span>
+<span class="nt">variable_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">skillshot_lit_hit</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20_000</span>
 </code></pre></div>
 <h2 id="step-6-ending-the-mode-on-skillshot-hit-or-any-other-hit">Step 6. Ending the mode on skillshot hit, or any other hit</h2>
 <p>After any skillshot lane is hit, the skillshot mode should end. We can
@@ -33926,10 +33926,10 @@ event. However, when the skillshot is hit the <em>playfield_active</em> event
 will post before the <em>skillshot_lit_hit</em> event, so if we end the mode
 immediately then no score will be awarded. Instead, we add a 1 second
 delay after playfield activation before ending the mode.</p>
-<div class="highlight"><pre><span></span><code>##! mode: skillshot_with_lane_change
-event_player:
-  skillshot_hit: stop_mode_skillshot
-  playfield_active: stop_mode_skillshot|1s
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: skillshot_with_lane_change</span>
+<span class="nt">event_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">skillshot_hit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stop_mode_skillshot</span>
+<span class="w">  </span><span class="nt">playfield_active</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stop_mode_skillshot|1s</span>
 </code></pre></div>
 <h2 id="full-example-code">Full Example Code</h2>
 <p>The full code from this example can be found as a fully-working game

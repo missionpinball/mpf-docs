@@ -33845,16 +33845,16 @@ to <a href="../../examples/">config file examples</a> for more examples of real 
 which are configurable in
 <a href="../../game_logic/service_mode/">service mode</a>.</p>
 <p>This is an example:</p>
-<div class="highlight"><pre><span></span><code>settings:
-  replay_score:
-    label: Replay Score
-    values:
-      500000: &quot;500000 (default)&quot;
-      1000000: &quot;1000000&quot;
-      1500000: &quot;1500000&quot;
-    default: 500000
-    key_type: int
-    sort: 100
+<div class="highlight"><pre><span></span><code><span class="nt">settings</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">replay_score</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Replay Score</span>
+<span class="w">    </span><span class="nt">values</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">500000</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;500000</span><span class="nv"> </span><span class="s">(default)&quot;</span>
+<span class="w">      </span><span class="nt">1000000</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1000000&quot;</span>
+<span class="w">      </span><span class="nt">1500000</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1500000&quot;</span>
+<span class="w">    </span><span class="nt">default</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">500000</span>
+<span class="w">    </span><span class="nt">key_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">int</span>
+<span class="w">    </span><span class="nt">sort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
 </code></pre></div>
 <h2 id="required-settings">Required settings</h2>
 <p>The following sections are required in the <code>settings:</code> section of your

@@ -33585,45 +33585,45 @@ Unfortunately, MC currently cannot subscribe on the value of your
 counter. However, you can use variable_player to set the value of your
 counter to a player variable and then use that variable in your slide.</p>
 <p>This is an example:</p>
-<div class="highlight"><pre><span></span><code>#config_version=5
+<div class="highlight"><pre><span></span><code><span class="c1">#config_version=5</span>
 
-##! mode: my_mode
-counters:
-  my_counter:
-    starting_count: 0
-    count_complete_value: 5
-    count_events: count_up
+<span class="c1">##! mode: my_mode</span>
+<span class="nt">counters</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_counter</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">starting_count</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">count_complete_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+<span class="w">    </span><span class="nt">count_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">count_up</span>
 
-variable_player:
-  counter_my_counter_hit:
-    my_counter:
-      action: set
-      int: (count)
+<span class="nt">variable_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">counter_my_counter_hit</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">my_counter</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">set</span>
+<span class="w">      </span><span class="nt">int</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(count)</span>
 
-slide_player:
-  show_slide:
-    widgets:
-      - type: text
-        text: &quot;Count (player|my_counter)&quot;
+<span class="nt">slide_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">show_slide</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">widgets</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Count</span><span class="nv"> </span><span class="s">(player|my_counter)&quot;</span>
 
-##! test
-#! start_game
-#! start_mode my_mode
-#! post show_slide
-#! advance_time_and_run .1
-#! assert_text_on_top_slide &quot;Count 0&quot;
-#! post count_up
-#! advance_time_and_run .1
-#! assert_text_on_top_slide &quot;Count 1&quot;
-#! post count_up
-#! advance_time_and_run .1
-#! assert_text_on_top_slide &quot;Count 2&quot;
-#! post count_up
-#! advance_time_and_run .1
-#! assert_text_on_top_slide &quot;Count 3&quot;
-#! post count_up
-#! advance_time_and_run .1
-#! assert_text_on_top_slide &quot;Count 4&quot;
+<span class="c1">##! test</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! start_mode my_mode</span>
+<span class="c1">#! post show_slide</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_text_on_top_slide &quot;Count 0&quot;</span>
+<span class="c1">#! post count_up</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_text_on_top_slide &quot;Count 1&quot;</span>
+<span class="c1">#! post count_up</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_text_on_top_slide &quot;Count 2&quot;</span>
+<span class="c1">#! post count_up</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_text_on_top_slide &quot;Count 3&quot;</span>
+<span class="c1">#! post count_up</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_text_on_top_slide &quot;Count 4&quot;</span>
 </code></pre></div>
 <hr />
 <div class="admonition question">

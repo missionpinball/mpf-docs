@@ -33881,11 +33881,11 @@ to <a href="../../examples/">config file examples</a> for more examples of real 
 platform. See <a href="../../hardware/opp/">How to configure Open Pinball Project (OPP) hardware for MPF</a> for
 details.</p>
 <p>This is an example:</p>
-<div class="highlight"><pre><span></span><code>hardware:
-  platform: opp
-  driverboards: gen2
-opp:
-  ports: COM7
+<div class="highlight"><pre><span></span><code><span class="nt">hardware</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">opp</span>
+<span class="w">  </span><span class="nt">driverboards</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gen2</span>
+<span class="nt">opp</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">ports</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">COM7</span>
 </code></pre></div>
 <h2 id="required-settings">Required settings</h2>
 <p>The following sections are required in the <code>opp:</code> section of your
@@ -33903,11 +33903,11 @@ config. (If you don't include them, the default will be used).</p>
 <h3 id="chains">chains:</h3>
 <p>One or more sub-entries. Each in the format of <code>string</code> : <code>string</code></p>
 <p>This is an example:</p>
-<div class="highlight"><pre><span></span><code>opp:
-  ports: /dev/ttyOPP0, /dev/ttyOPP1
-  chains:
-    0: /dev/ttyOPP0
-    1: /dev/ttyOPP1
+<div class="highlight"><pre><span></span><code><span class="nt">opp</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">ports</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/dev/ttyOPP0, /dev/ttyOPP1</span>
+<span class="w">  </span><span class="nt">chains</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">0</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/dev/ttyOPP0</span>
+<span class="w">    </span><span class="nt">1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/dev/ttyOPP1</span>
 </code></pre></div>
 <p>If you switch was number <code>1-3</code> before it will be <code>0-1-3</code> or <code>1-1-3</code>
 afterwards.</p>

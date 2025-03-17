@@ -33732,71 +33732,71 @@ your machine-wide config, like this:</p>
 <p>Most modern pinball machines have bonus scores based on multiple things.</p>
 <p>Use a <a href="../../../config/variable_player/">variable_player:</a> to count
 some bonuses:</p>
-<div class="highlight"><pre><span></span><code>##! mode: mode1
-variable_player:
-  ramp_shot_hit:
-    bonus_ramps: 1
-  s_target1_active:
-    some_variable: 1
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: mode1</span>
+<span class="nt">variable_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">ramp_shot_hit</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">bonus_ramps</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">s_target1_active</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">some_variable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
 </code></pre></div>
 <h2 id="4-add-some-settings-to-your-bonus-mode-config">4. Add some settings to your bonus mode config</h2>
 <p>Now go back into your bonus mode folder open up <code>bonus.yaml</code> config file
 (which should be empty at this point), and enter a basic config:</p>
-<div class="highlight"><pre><span></span><code>##! mode: bonus
-#config_version=5
-mode_settings:
-  display_delay_ms: 1s
-  hurry_up_delay_ms: 0
-  bonus_entries:
-    - event: bonus_ramps
-      score: 400
-    - event: bonus_math
-      score: 1200 * (current_player.some_variable + 2)
-slide_player:
-  mode_bonus_started: bonus_start_slide
-  bonus_ramps: bonus_ramp_slide
-  bonus_math: bonus_math_slide
-  bonus_total: bonus_total_slide
-slides:
-  bonus_start_slide:
-    widgets:
-      - type: text
-        text: Bonus
-  bonus_ramp_slide:
-    - type: text
-      text: &quot;Ramps (player|level)&quot;
-    - type: text
-      text: (score)
-  bonus_math_slide:
-    - type: text
-      text: &quot;Some variable (player|some_variable)&quot;
-    - type: text
-      text: (score)
-  bonus_multiplier_slide:
-    - type: text
-      text: &quot;Multiplier&quot;
-    - type: text
-      text: &quot;(multiplier)X&quot;
-  bonus_total_slide:
-    - type: text
-      text: &quot;Total Bonus&quot;
-    - type: text
-      text: (score)
-##! test
-#! start_game
-#! advance_time_and_run 1
-#! drain_all_balls
-#! advance_time_and_run .1
-#! assert_text_on_top_slide &quot;Ramps 0&quot;
-#! assert_text_on_top_slide &quot;400&quot;
-#! advance_time_and_run 1
-#! assert_text_on_top_slide &quot;Some variable 0&quot;
-#! assert_text_on_top_slide &quot;2400&quot;
-#! advance_time_and_run 1
-#! assert_text_on_top_slide &quot;Total Bonus&quot;
-#! assert_text_on_top_slide &quot;2800&quot;
-#! stop_game 10
-#! advance_time_and_run 1
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: bonus</span>
+<span class="c1">#config_version=5</span>
+<span class="nt">mode_settings</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">display_delay_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<span class="w">  </span><span class="nt">hurry_up_delay_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">  </span><span class="nt">bonus_entries</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bonus_ramps</span>
+<span class="w">      </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">400</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bonus_math</span>
+<span class="w">      </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1200 * (current_player.some_variable + 2)</span>
+<span class="nt">slide_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">mode_bonus_started</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bonus_start_slide</span>
+<span class="w">  </span><span class="nt">bonus_ramps</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bonus_ramp_slide</span>
+<span class="w">  </span><span class="nt">bonus_math</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bonus_math_slide</span>
+<span class="w">  </span><span class="nt">bonus_total</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bonus_total_slide</span>
+<span class="nt">slides</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">bonus_start_slide</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">widgets</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Bonus</span>
+<span class="w">  </span><span class="nt">bonus_ramp_slide</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Ramps</span><span class="nv"> </span><span class="s">(player|level)&quot;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(score)</span>
+<span class="w">  </span><span class="nt">bonus_math_slide</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Some</span><span class="nv"> </span><span class="s">variable</span><span class="nv"> </span><span class="s">(player|some_variable)&quot;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(score)</span>
+<span class="w">  </span><span class="nt">bonus_multiplier_slide</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Multiplier&quot;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;(multiplier)X&quot;</span>
+<span class="w">  </span><span class="nt">bonus_total_slide</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Total</span><span class="nv"> </span><span class="s">Bonus&quot;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(score)</span>
+<span class="c1">##! test</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! advance_time_and_run 1</span>
+<span class="c1">#! drain_all_balls</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_text_on_top_slide &quot;Ramps 0&quot;</span>
+<span class="c1">#! assert_text_on_top_slide &quot;400&quot;</span>
+<span class="c1">#! advance_time_and_run 1</span>
+<span class="c1">#! assert_text_on_top_slide &quot;Some variable 0&quot;</span>
+<span class="c1">#! assert_text_on_top_slide &quot;2400&quot;</span>
+<span class="c1">#! advance_time_and_run 1</span>
+<span class="c1">#! assert_text_on_top_slide &quot;Total Bonus&quot;</span>
+<span class="c1">#! assert_text_on_top_slide &quot;2800&quot;</span>
+<span class="c1">#! stop_game 10</span>
+<span class="c1">#! advance_time_and_run 1</span>
 </code></pre></div>
 <p>You can use
 <a href="../../../config/instructions/dynamic_values/">placeholder variables</a> and math in all your score entries.</p>

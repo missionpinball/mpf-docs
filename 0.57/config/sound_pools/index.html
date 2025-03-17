@@ -33816,31 +33816,31 @@ use for sound pools is to play a random callout from a defined list when
 triggered. (Sound pools are part of the MPF media controller and only
 available if you're using MPF-MC for your media controller.)</p>
 <p>Here's an example of a typical sound_pool configuration.</p>
-<div class="highlight"><pre><span></span><code>sound_pools:
-  drain_callout:
-    type: random_force_all
-    track: voice
-    sounds:
-      - drain_01
-      - drain_02
-      - drain_03
-      - drain_04
-  slingshot:
-    load: preload
-    type: random
-    track: sfx
-    sounds:
-      - slingshot_01|5
-      - slingshot_02|3
-      - slingshot_03|2
-  target_completion:
-    load: on_demand
-    type: sequence
-    track: sfx
-    sounds:
-      - target_completion_01
-      - target_completion_02
-      - target_completion_03
+<div class="highlight"><pre><span></span><code><span class="nt">sound_pools</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">drain_callout</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">random_force_all</span>
+<span class="w">    </span><span class="nt">track</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">voice</span>
+<span class="w">    </span><span class="nt">sounds</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">drain_01</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">drain_02</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">drain_03</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">drain_04</span>
+<span class="w">  </span><span class="nt">slingshot</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">load</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">preload</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">random</span>
+<span class="w">    </span><span class="nt">track</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sfx</span>
+<span class="w">    </span><span class="nt">sounds</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">slingshot_01|5</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">slingshot_02|3</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">slingshot_03|2</span>
+<span class="w">  </span><span class="nt">target_completion</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">load</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">on_demand</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sequence</span>
+<span class="w">    </span><span class="nt">track</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sfx</span>
+<span class="w">    </span><span class="nt">sounds</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">target_completion_01</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">target_completion_02</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">target_completion_03</span>
 </code></pre></div>
 <p>To create a sound pool, add a sub entry to the <code>sound_pools:</code> section of
 your config which will be the name of that sound pool. The name must be

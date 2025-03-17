@@ -33791,10 +33791,10 @@ to <a href="../../examples/">config file examples</a> for more examples of real 
 some other event is posted, at which time the original queue event
 processing continues.</p>
 <p>Here's an example:</p>
-<div class="highlight"><pre><span></span><code>queue_relay_player:
-  game_ending:
-    post: start_my_mode
-    wait_for: my_mode_done
+<div class="highlight"><pre><span></span><code><span class="nt">queue_relay_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">game_ending</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">post</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start_my_mode</span>
+<span class="w">    </span><span class="nt">wait_for</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my_mode_done</span>
 </code></pre></div>
 <p>This entry will watch for the <em>game_ending</em> event to be posted.
 (<em>game_ending</em> is a queue event.) When it's posted, the queue relay

@@ -33667,29 +33667,29 @@ definition in a <code>slides:</code> or <code>widgets:</code> section), the widg
 drawn in the order they are in the config.</p>
 <p>For example, here's a slide that has widget3.1, then widget3.2, then
 widget3.3:</p>
-<div class="highlight"><pre><span></span><code>slides:
-  3_widgets:
-    - type: text
-      text: widget3.1
-      color: red
-      font_size: 80
-      y: 40%
-    - type: text
-      text: widget3.2
-      color: orange
-      font_size: 80
-      y: 50%
-    - type: text
-      text: widget3.3
-      color: violet
-      font_size: 80
-      y: 60%
-#! slide_player:
-#!   show_slide: 3_widgets
-##! test
-#! post show_slide
-#! advance_time_and_run .1
-#! assert_text_on_top_slide &quot;widget3.1&quot;
+<div class="highlight"><pre><span></span><code><span class="nt">slides</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">3_widgets</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">widget3.1</span>
+<span class="w">      </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
+<span class="w">      </span><span class="nt">font_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">80</span>
+<span class="w">      </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">40%</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">widget3.2</span>
+<span class="w">      </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">orange</span>
+<span class="w">      </span><span class="nt">font_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">80</span>
+<span class="w">      </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">50%</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">widget3.3</span>
+<span class="w">      </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">violet</span>
+<span class="w">      </span><span class="nt">font_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">80</span>
+<span class="w">      </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">60%</span>
+<span class="c1">#! slide_player:</span>
+<span class="c1">#!   show_slide: 3_widgets</span>
+<span class="c1">##! test</span>
+<span class="c1">#! post show_slide</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_text_on_top_slide &quot;widget3.1&quot;</span>
 </code></pre></div>
 <p>The result is like this. Note that widget3.1 is on top of widget3.2,
 which is on top of widget3.3:</p>
@@ -33702,32 +33702,32 @@ guide for details.</p>
 how you want the widgets to overlap. Widgets with higher <code>z:</code> values
 will be drawn on top of those with lower values.</p>
 <p>Here's the same example as before, but with <code>z:</code> values added:</p>
-<div class="highlight"><pre><span></span><code>slides:
-  3_widgets:
-    - type: text
-      text: widget3.1
-      color: red
-      font_size: 80
-      y: 40%
-      z: 1
-    - type: text
-      text: widget3.2
-      color: orange
-      font_size: 80
-      y: 50%
-      z: 100
-    - type: text
-      text: widget3.3
-      color: violet
-      font_size: 80
-      y: 60%
-      z: 2
-#! slide_player:
-#!   show_slide: 3_widgets
-##! test
-#! post show_slide
-#! advance_time_and_run .1
-#! assert_text_on_top_slide &quot;widget3.1&quot;
+<div class="highlight"><pre><span></span><code><span class="nt">slides</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">3_widgets</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">widget3.1</span>
+<span class="w">      </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
+<span class="w">      </span><span class="nt">font_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">80</span>
+<span class="w">      </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">40%</span>
+<span class="w">      </span><span class="nt">z</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">widget3.2</span>
+<span class="w">      </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">orange</span>
+<span class="w">      </span><span class="nt">font_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">80</span>
+<span class="w">      </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">50%</span>
+<span class="w">      </span><span class="nt">z</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">widget3.3</span>
+<span class="w">      </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">violet</span>
+<span class="w">      </span><span class="nt">font_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">80</span>
+<span class="w">      </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">60%</span>
+<span class="w">      </span><span class="nt">z</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="c1">#! slide_player:</span>
+<span class="c1">#!   show_slide: 3_widgets</span>
+<span class="c1">##! test</span>
+<span class="c1">#! post show_slide</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_text_on_top_slide &quot;widget3.1&quot;</span>
 </code></pre></div>
 <p>And the results:</p>
 <p><img alt="image" src="../../images/widget_layers_z.jpg" /></p>

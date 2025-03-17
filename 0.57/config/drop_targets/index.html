@@ -34045,39 +34045,39 @@ only used for individual targets. Once you configure them here, then you
 group them into banks in the <code>drop_target_banks:</code> section.) Here's an
 example from <em>Judge Dredd</em>, with five drop targets we've given names
 <em>J</em>, <em>U</em>, <em>D</em>, <em>G</em>, and <em>E</em>.</p>
-<div class="highlight"><pre><span></span><code>#! switches:
-#!   drop_target_j:
-#!     number:
-#!   drop_target_u:
-#!     number:
-#!   drop_target_d:
-#!     number:
-#!   drop_target_g:
-#!     number:
-#!   drop_target_e:
-#!     number:
-#! coils:
-#!   reset_drop_targets:
-#!     number:
-#!   trip_drop_target_d:
-#!     number:
-drop_targets:
-  j:
-    switch: drop_target_j
-    reset_coil: reset_drop_targets
-  u:
-    switch: drop_target_u
-    reset_coil: reset_drop_targets
-  d:
-    switch: drop_target_d
-    reset_coil: reset_drop_targets
-    knockdown_coil: trip_drop_target_d
-  g:
-    switch: drop_target_g
-    reset_coil: reset_drop_targets
-  e:
-    switch: drop_target_e
-    reset_coil: reset_drop_targets
+<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
+<span class="c1">#!   drop_target_j:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   drop_target_u:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   drop_target_d:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   drop_target_g:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   drop_target_e:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#! coils:</span>
+<span class="c1">#!   reset_drop_targets:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   trip_drop_target_d:</span>
+<span class="c1">#!     number:</span>
+<span class="nt">drop_targets</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">j</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">drop_target_j</span>
+<span class="w">    </span><span class="nt">reset_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">reset_drop_targets</span>
+<span class="w">  </span><span class="nt">u</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">drop_target_u</span>
+<span class="w">    </span><span class="nt">reset_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">reset_drop_targets</span>
+<span class="w">  </span><span class="nt">d</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">drop_target_d</span>
+<span class="w">    </span><span class="nt">reset_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">reset_drop_targets</span>
+<span class="w">    </span><span class="nt">knockdown_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">trip_drop_target_d</span>
+<span class="w">  </span><span class="nt">g</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">drop_target_g</span>
+<span class="w">    </span><span class="nt">reset_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">reset_drop_targets</span>
+<span class="w">  </span><span class="nt">e</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">drop_target_e</span>
+<span class="w">    </span><span class="nt">reset_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">reset_drop_targets</span>
 </code></pre></div>
 <p>Important: Not all "drop targets" in your machine will be configured
 as "drop targets." Some machines have drop target mechanisms that

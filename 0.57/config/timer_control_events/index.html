@@ -33778,20 +33778,20 @@ require an additional <code>value:</code> setting. For example, for the "add"
 action which adds time, you need to to specify how much time you want to
 add. But other actions, like "start" or "stop" don't need values.</p>
 <p>Here's an example of control events in action:</p>
-<div class="highlight"><pre><span></span><code>##! mode: mode1
-timers:
-  my_timer:
-    direction: down
-    start_value: 10
-    tick_interval: 125s
-    control_events:
-      - event: start_my_timer
-        action: start
-      - event: reset_my_timer
-        action: reset
-      - event: add_5_secs
-        action: add
-        value: 5
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: mode1</span>
+<span class="nt">timers</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_timer</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">direction</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">down</span>
+<span class="w">    </span><span class="nt">start_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="w">    </span><span class="nt">tick_interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">125s</span>
+<span class="w">    </span><span class="nt">control_events</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start_my_timer</span>
+<span class="w">        </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">reset_my_timer</span>
+<span class="w">        </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">reset</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">add_5_secs</span>
+<span class="w">        </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">add</span>
+<span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
 </code></pre></div>
 <p>In the example above, when the event <em>start_my_timer</em> is posted, the
 timer called "my_timer" will start running. When the event

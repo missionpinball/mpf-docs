@@ -33680,31 +33680,31 @@ pre-defined states.</p>
 <p>One common approach for wizard modes is to have a counter that tracks
 shots to qualify the mode. In this example, hitting three shots will
 enable and immediately start the wizard mode:</p>
-<div class="highlight"><pre><span></span><code>##! mode: wizard_qualify
-# mode: wizard_qualify
-mode:
-  start_events: mode_base_started
-achievements:
-  winterhascome:
-    enable_events: logicblock_winteriscoming_count_complete
-    start_events: achievement_winterhascome_state_enabled
-counters:
-  winteriscoming_count:
-    starting_count: 0
-    count_complete_value: 3
-    count_events: winteriscoming_shot_hit
-##! mode: winterhascome
-# mode: winterhascome
-mode:
-  start_events: achievement_winterhascome_state_started
-##! test
-#! start_game
-#! post mode_base_started
-#! post winteriscoming_shot_hit
-#! post winteriscoming_shot_hit
-#! assert_mode_not_running winterhascome
-#! post winteriscoming_shot_hit
-#! assert_mode_running winterhascome
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: wizard_qualify</span>
+<span class="c1"># mode: wizard_qualify</span>
+<span class="nt">mode</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">start_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mode_base_started</span>
+<span class="nt">achievements</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">winterhascome</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">enable_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">logicblock_winteriscoming_count_complete</span>
+<span class="w">    </span><span class="nt">start_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">achievement_winterhascome_state_enabled</span>
+<span class="nt">counters</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">winteriscoming_count</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">starting_count</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">count_complete_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="w">    </span><span class="nt">count_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">winteriscoming_shot_hit</span>
+<span class="c1">##! mode: winterhascome</span>
+<span class="c1"># mode: winterhascome</span>
+<span class="nt">mode</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">start_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">achievement_winterhascome_state_started</span>
+<span class="c1">##! test</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! post mode_base_started</span>
+<span class="c1">#! post winteriscoming_shot_hit</span>
+<span class="c1">#! post winteriscoming_shot_hit</span>
+<span class="c1">#! assert_mode_not_running winterhascome</span>
+<span class="c1">#! post winteriscoming_shot_hit</span>
+<span class="c1">#! assert_mode_running winterhascome</span>
 </code></pre></div>
 <p>The different achievement states allow you to fine-tune when and how
 modes can be qualified. Achievements can be <em>enabled/disabled</em>,

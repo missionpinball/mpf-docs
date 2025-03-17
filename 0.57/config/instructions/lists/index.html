@@ -33660,32 +33660,32 @@ items to MPF config files. First of all, there are several different
 places we need lists. For example, device tags, logic block events,
 switches that make up shots, etc. For our explanation, we'll use a
 generic list item with generic configurations. Some examples:</p>
-<div class="highlight"><pre><span></span><code>coils:
-  flipperLeft:
-    number: SD18
-    tags: flipper, player   # this is a list
+<div class="highlight"><pre><span></span><code><span class="nt">coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">flipperLeft</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SD18</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flipper, player</span><span class="w">   </span><span class="c1"># this is a list</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>#! switches:
-#!   leftOutlane:
-#!     number:
-#!   rightOutlane:
-#!     number:
-##! mode: mode1
-shots:
-  outlane:
-    switch: leftOutlane, rightOutlane    #this is a list
+<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
+<span class="c1">#!   leftOutlane:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   rightOutlane:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">##! mode: mode1</span>
+<span class="nt">shots</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">outlane</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">leftOutlane, rightOutlane</span><span class="w">    </span><span class="c1">#this is a list</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>auditor:
-  save_events:   # This config wants a list
-    - game_started    # This is the first list item
-    - ball_ended    # This is the second list item
-    - game_ended    # This is the third list item
+<div class="highlight"><pre><span></span><code><span class="nt">auditor</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">save_events</span><span class="p">:</span><span class="w">   </span><span class="c1"># This config wants a list</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">game_started</span><span class="w">    </span><span class="c1"># This is the first list item</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ball_ended</span><span class="w">    </span><span class="c1"># This is the second list item</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">game_ended</span><span class="w">    </span><span class="c1"># This is the third list item</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>accruals:
-  my_accrual:
-    events:
-      - sw_eightball     # this is the first list item
-      - drop_targets_Solids_lit_complete, drop_targets_Stripes_lit_complete     # 2nd list item, which itself has two items
+<div class="highlight"><pre><span></span><code><span class="nt">accruals</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_accrual</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">events</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sw_eightball</span><span class="w">     </span><span class="c1"># this is the first list item</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">drop_targets_Solids_lit_complete, drop_targets_Stripes_lit_complete</span><span class="w">     </span><span class="c1"># 2nd list item, which itself has two items</span>
 </code></pre></div>
 <h2 id="valid-options-for-lists">Valid options for lists</h2>
 <p>Ok, so let's say you have a config item that needs a list. We'll use a

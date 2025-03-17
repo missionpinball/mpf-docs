@@ -33854,11 +33854,11 @@ section called <code>mode:</code>. On the next line, indent four spaces and add 
 entry <code>start_events: ball_starting</code>. On the following line, also indent
 four spaces and type <code>priority: 100</code>. Your <code>base.yaml</code> file should now
 look like this:</p>
-<div class="highlight"><pre><span></span><code>##! mode: my_mode
-#config_version=5
-mode:
-  start_events: ball_started
-  priority: 100
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: my_mode</span>
+<span class="c1">#config_version=5</span>
+<span class="nt">mode</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">start_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ball_started</span>
+<span class="w">  </span><span class="nt">priority</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
 </code></pre></div>
 <p>There are lots more settings besides <code>start_events</code> and <code>priority</code> which
 you can set for a mode. See <a href="../../config/mode/">mode:</a>
@@ -33936,40 +33936,40 @@ it is, like this:</p>
 (<code>&lt;your_machine&gt;/modes/base/config/base.yaml</code>) and add a section called
 <code>slide_player:</code>. Then add the following subsections so your complete
 <code>base.yaml</code> looks like this:</p>
-<div class="highlight"><pre><span></span><code>##! mode: base
-#config_version=5
-mode:
-  start_events: ball_starting
-  priority: 100
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: base</span>
+<span class="c1">#config_version=5</span>
+<span class="nt">mode</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">start_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ball_starting</span>
+<span class="w">  </span><span class="nt">priority</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
 
-slide_player:
-  mode_base_started:
-    widgets:
-      - type: text
-        text: (score)
-        number_grouping: true
-        min_digits: 2
-        font_size: 100
-      - type: text
-        text: PLAYER (number)
-        y: 10
-        x: 10
-        font_size: 50
-        anchor_x: left
-        anchor_y: bottom
-      - type: text
-        text: BALL (ball)
-        y: 10
-        x: right-10
-        anchor_x: right
-        anchor_y: bottom
-        font_size: 50
-##! test
-#! start_game
-#! assert_mode_running base
-#! assert_text_on_top_slide &quot;00&quot;
-#! assert_text_on_top_slide &quot;PLAYER 1&quot;
-#! assert_text_on_top_slide &quot;BALL 1&quot;
+<span class="nt">slide_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">mode_base_started</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">widgets</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(score)</span>
+<span class="w">        </span><span class="nt">number_grouping</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">        </span><span class="nt">min_digits</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="w">        </span><span class="nt">font_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PLAYER (number)</span>
+<span class="w">        </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="w">        </span><span class="nt">x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="w">        </span><span class="nt">font_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">50</span>
+<span class="w">        </span><span class="nt">anchor_x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">left</span>
+<span class="w">        </span><span class="nt">anchor_y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bottom</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">BALL (ball)</span>
+<span class="w">        </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="w">        </span><span class="nt">x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">right-10</span>
+<span class="w">        </span><span class="nt">anchor_x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">right</span>
+<span class="w">        </span><span class="nt">anchor_y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bottom</span>
+<span class="w">        </span><span class="nt">font_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">50</span>
+<span class="c1">##! test</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! assert_mode_running base</span>
+<span class="c1">#! assert_text_on_top_slide &quot;00&quot;</span>
+<span class="c1">#! assert_text_on_top_slide &quot;PLAYER 1&quot;</span>
+<span class="c1">#! assert_text_on_top_slide &quot;BALL 1&quot;</span>
 </code></pre></div>
 <p>We briefly touched on the <code>slide_player:</code> functionality earlier in this
 tutorial and how you can configure it to show certain slides when
@@ -34014,25 +34014,25 @@ in the
 can go into your machine-wide <code>config.yaml</code> and remove the slide_player:
 entry for ball_started:. So now the slide_player: in your machine-wide
 <code>config.yaml</code> should just look like this:</p>
-<div class="highlight"><pre><span></span><code>#! slides:
-#!   welcome_slide:
-#!     widgets:
-#!       - type: text
-#!         text: PINBALL!
-#!         font_size: 50
-#!         color: red
-#!       - type: rectangle
-#!         width: 240
-#!         height: 60
-#!   attract_started:
-#!     widgets:
-#!       - text: ATTRACT MODE
-#!         type: text
-slide_player:
-  init_done: welcome_slide
-  mode_attract_started: attract_started
-##! test
-#! advance_time_and_run .1
+<div class="highlight"><pre><span></span><code><span class="c1">#! slides:</span>
+<span class="c1">#!   welcome_slide:</span>
+<span class="c1">#!     widgets:</span>
+<span class="c1">#!       - type: text</span>
+<span class="c1">#!         text: PINBALL!</span>
+<span class="c1">#!         font_size: 50</span>
+<span class="c1">#!         color: red</span>
+<span class="c1">#!       - type: rectangle</span>
+<span class="c1">#!         width: 240</span>
+<span class="c1">#!         height: 60</span>
+<span class="c1">#!   attract_started:</span>
+<span class="c1">#!     widgets:</span>
+<span class="c1">#!       - text: ATTRACT MODE</span>
+<span class="c1">#!         type: text</span>
+<span class="nt">slide_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">init_done</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">welcome_slide</span>
+<span class="w">  </span><span class="nt">mode_attract_started</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">attract_started</span>
+<span class="c1">##! test</span>
+<span class="c1">#! advance_time_and_run .1</span>
 </code></pre></div>
 <h2 id="what-if-it-didnt-work">What if it didn't work?</h2>
 <ul>

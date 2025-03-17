@@ -33660,27 +33660,27 @@ main display. This would be like what Jersey Jack does in Wizard of Oz
 or The Hobbit.</p>
 <p>Here's what the final version of the relevant sections of your machine
 config file will look like. We'll step through everything one-by-one.</p>
-<div class="highlight"><pre><span></span><code>displays:
-  window:
-    height: 600
-    width: 800
-window:
-  height: 600
-  width: 800
-  title: Mission Pinball Framework
-  resizable: true
-  fullscreen: false
-  borderless: false
-  exit_on_escape: true
-  source_display: window
+<div class="highlight"><pre><span></span><code><span class="nt">displays</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">window</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">600</span>
+<span class="w">    </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">800</span>
+<span class="nt">window</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">600</span>
+<span class="w">  </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">800</span>
+<span class="w">  </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Mission Pinball Framework</span>
+<span class="w">  </span><span class="nt">resizable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">fullscreen</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">  </span><span class="nt">borderless</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">  </span><span class="nt">exit_on_escape</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">source_display</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">window</span>
 </code></pre></div>
 <h2 id="1-add-your-display">1. Add your display</h2>
 <p>The first part of the config file is where you create your display
 called "window" and set its size:</p>
-<div class="highlight"><pre><span></span><code>displays:
-  window:
-    width: 800
-    height: 600
+<div class="highlight"><pre><span></span><code><span class="nt">displays</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">window</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">800</span>
+<span class="w">    </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">600</span>
 </code></pre></div>
 <p>This is just like we covered in the <a href="../../../">multiple_screens</a> section.</p>
 <h2 id="2-add-your-window-configuration">2. Add your window configuration</h2>

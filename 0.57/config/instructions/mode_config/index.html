@@ -33577,11 +33577,11 @@ icons & this code generated via https://realfavicongenerator.net
 <p>Modes usually start with a <code>mode:</code> section (see
 <a href="../../mode/">mode</a>) which defines their
 priority and when they start or stop:</p>
-<div class="highlight"><pre><span></span><code>##! mode: mode1
-mode:
-  start_events: ball_starting
-  stop_events: timer_mode_timer_complete, shot_right_ramp
-  priority: 300
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: mode1</span>
+<span class="nt">mode</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">start_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ball_starting</span>
+<span class="w">  </span><span class="nt">stop_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">timer_mode_timer_complete, shot_right_ramp</span>
+<span class="w">  </span><span class="nt">priority</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">300</span>
 </code></pre></div>
 <p>Not all config sections can be used in your machine-wide config (see
 <a href="../machine_config/">Machine config files</a>). Some

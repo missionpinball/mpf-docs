@@ -33746,16 +33746,16 @@ a <code>debug</code> option. If in doubt check the
 <a href="../../config/">config reference</a>. For
 instance if you suspect an issue with a switch add <code>debug: true</code> to
 it's config:</p>
-<div class="highlight"><pre><span></span><code>switches:
-  my_switch:
-    number: 42
-    debug: true
+<div class="highlight"><pre><span></span><code><span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_switch</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">42</span>
+<span class="w">    </span><span class="nt">debug</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
 <p>Same works with all devices. It will generate more log lines but should
 not affect performance much.</p>
 <p>Most platforms support the same. For instance with a P-Roc:</p>
-<div class="highlight"><pre><span></span><code>p_roc:
-  debug: true
+<div class="highlight"><pre><span></span><code><span class="nt">p_roc</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">debug</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
 <p>For most platforms this will generate a lot of log lines and might also
 affect performance a lot. We recommend to disable it after you finished

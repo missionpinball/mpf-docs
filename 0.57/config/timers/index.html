@@ -33954,28 +33954,28 @@ and other settings.</p>
 </code></pre></div>
 <p>Here's an example timers: section from the "Money Bags" mode in
 <em>Brooks 'n Dunn</em> which contains two timers:</p>
-<div class="highlight"><pre><span></span><code>##! mode: mode1
-timers:
-  mb_intro_timer:
-    start_value: 3
-    end_value: 0
-    direction: down
-    control_events:
-      - action: start
-        event: mode_money_bags_started
-  money_bags_timer:
-    start_value: 15
-    end_value: 0
-    direction: down
-    tick_interval: 1.25s
-    control_events:
-      - action: start
-        event: timer_mb_intro_timer_complete
-      - action: add
-        event: money_bags_advertise_flashing_hit
-        value: 5
-      - action: stop
-        event: logicblock_money_bags_counter_complete
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: mode1</span>
+<span class="nt">timers</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">mb_intro_timer</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">start_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="w">    </span><span class="nt">end_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">direction</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">down</span>
+<span class="w">    </span><span class="nt">control_events</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start</span>
+<span class="w">        </span><span class="nt">event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mode_money_bags_started</span>
+<span class="w">  </span><span class="nt">money_bags_timer</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">start_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">15</span>
+<span class="w">    </span><span class="nt">end_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">direction</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">down</span>
+<span class="w">    </span><span class="nt">tick_interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.25s</span>
+<span class="w">    </span><span class="nt">control_events</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start</span>
+<span class="w">        </span><span class="nt">event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">timer_mb_intro_timer_complete</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">add</span>
+<span class="w">        </span><span class="nt">event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">money_bags_advertise_flashing_hit</span>
+<span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stop</span>
+<span class="w">        </span><span class="nt">event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">logicblock_money_bags_counter_complete</span>
 </code></pre></div>
 <p>In the example above, an intro timer which runs for 3 seconds is started
 by the event <em>mode_money_bags_started</em> (which means this timer starts
@@ -33985,20 +33985,20 @@ counts down to 0 (but at a count interval of 1.25 seconds so it's a bit
 slower than real time. It will also get reset back to 15 each time a
 flashing shot is hit.</p>
 <p>Here's another example of timers from <em>Demo Man's</em> skillshot mode:</p>
-<div class="highlight"><pre><span></span><code>##! mode: mode1
-timers:
-  mode_timer:
-    start_value: 3
-    end_value: 0
-    direction: down
-    tick_interval: 1s
-    control_events:
-      - event: balldevice_playfield_ball_enter
-        action: start
-    start_running: false
-  target_rotator:
-    start_running: true
-    tick_interval: 1s
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: mode1</span>
+<span class="nt">timers</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">mode_timer</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">start_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="w">    </span><span class="nt">end_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">direction</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">down</span>
+<span class="w">    </span><span class="nt">tick_interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<span class="w">    </span><span class="nt">control_events</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">balldevice_playfield_ball_enter</span>
+<span class="w">        </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start</span>
+<span class="w">    </span><span class="nt">start_running</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">  </span><span class="nt">target_rotator</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">start_running</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">tick_interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
 </code></pre></div>
 <p>The skillshot mode starts when the ball is waiting to be plunged. The
 timer called "mode_timer" in the example above starts when the ball

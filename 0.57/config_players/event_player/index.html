@@ -33796,20 +33796,20 @@ that's used to post events.</p>
 </div>
 
 <h2 id="basic-event-playing">Basic Event Playing</h2>
-<div class="highlight"><pre><span></span><code>event_player:
-  ball_starting:
-    - cmd_flippers_enable
-    - cmd_autofire_coils_enable
-    - cmd_drop_targets_reset
-  ball_ending:
-    - cmd_flippers_disable
-    - cmd_autofire_coils_disable
-  tilt:
-    - cmd_flippers_disable
-    - cmd_autofire_coils_disable
-  slam_tilt:
-    - cmd_flippers_disable
-    - cmd_autofire_coils_disable
+<div class="highlight"><pre><span></span><code><span class="nt">event_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">ball_starting</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cmd_flippers_enable</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cmd_autofire_coils_enable</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cmd_drop_targets_reset</span>
+<span class="w">  </span><span class="nt">ball_ending</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cmd_flippers_disable</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cmd_autofire_coils_disable</span>
+<span class="w">  </span><span class="nt">tilt</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cmd_flippers_disable</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cmd_autofire_coils_disable</span>
+<span class="w">  </span><span class="nt">slam_tilt</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cmd_flippers_disable</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cmd_autofire_coils_disable</span>
 </code></pre></div>
 <p>The event player settings above will post the events
 <em>cmd_flippers_enable</em>, <em>cmd_autofire_coils_enable</em>, and
@@ -33825,20 +33825,20 @@ machine-wide or in mode-specific config files. For example, if you want
 a target called "upper" to reset when a mode called "shoot_here"
 starts, you could create an entry like this in the shoot here mode's
 shoot_here.yaml mode configuration file:</p>
-<div class="highlight"><pre><span></span><code>##! mode: shoot_here
-event_player:
-  mode_shoot_here_started: cmd_upper_target_reset
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: shoot_here</span>
+<span class="nt">event_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">mode_shoot_here_started</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cmd_upper_target_reset</span>
 </code></pre></div>
 <h2 id="conditional-event-playing">Conditional Event Playing</h2>
 <p>Events in the event player can be conditional, to allow precise control
 over when an event is played:</p>
-<div class="highlight"><pre><span></span><code>##! mode: base
-event_player:
-  mode_base_started{current_player.score&gt;10000}:
-    - start_mode_superbonusround
-    - play_show_richy_rich
-  start_mode_battle{device.achievements.ironthrone.state!=&quot;completed&quot;}: start_mode_choose_battle
-  start_mode_battle{device.achievements.ironthrone.state==&quot;completed&quot;}: start_mode_victory_lap
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: base</span>
+<span class="nt">event_player</span><span class="p">:</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">mode_base_started{current_player.score&gt;10000}</span><span class="p p-Indicator">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start_mode_superbonusround</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">play_show_richy_rich</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">start_mode_battle{device.achievements.ironthrone.state!=&quot;completed&quot;}</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start_mode_choose_battle</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">start_mode_battle{device.achievements.ironthrone.state==&quot;completed&quot;}</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start_mode_victory_lap</span>
 </code></pre></div>
 <p>In the above example, both "start_mode_superbonusround" and
 "play_show_richy_rich" will only be posted if the player's score is
@@ -33848,14 +33848,14 @@ be posted depending on whether the <em>ironthrone</em> achievement has been
 completed.</p>
 <p>Conditions can also be applied to events within a list, to allow one
 event to trigger a variable number of handlers:</p>
-<div class="highlight"><pre><span></span><code>##! mode: base
-event_player:
-  reenable_nonrecruit_modes:
-    - start_mode_shadowbroker_base
-    - start_mode_n7_assignments
-    - start_mode_overlordlight{device.achievements.collectorship.state!=&quot;complete&quot;}
-    - start_mode_arrival{device.achievements.collectorship.state==&quot;complete&quot;}
-    - start_mode_shopping{current_player.cash&gt;=1000}
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: base</span>
+<span class="nt">event_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">reenable_nonrecruit_modes</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start_mode_shadowbroker_base</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start_mode_n7_assignments</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start_mode_overlordlight{device.achievements.collectorship.state!=&quot;complete&quot;}</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start_mode_arrival{device.achievements.collectorship.state==&quot;complete&quot;}</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start_mode_shopping{current_player.cash&gt;=1000}</span>
 </code></pre></div>
 <p>In the above example, both "start_mode_shadowbroker_base" and
 "start_mode_n7_assignments" will be posted every time. One of either
@@ -33873,14 +33873,14 @@ device states, mathematical calculations) in events.</p>
 <h3 id="dynamic-event-names">Dynamic Event Names</h3>
 <p>An event name can use parenthetical values to dynamically determine the
 event.</p>
-<div class="highlight"><pre><span></span><code>event_player:
-  mode_dynamo_started:
-    # Player variables can be dropped into event names
-    - play_dynamo_show_phase_(current_player.phase_name)
-    # Machine and device states can be used
-    - dynamo_started_with_state_(device.achievements.dynamo.state)
-    # Dynamic evaluations can be done to calculate values
-    - player_score_is_(&quot;high&quot; if current_player.score &gt; 10000 else &quot;low&quot;)
+<div class="highlight"><pre><span></span><code><span class="nt">event_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">mode_dynamo_started</span><span class="p">:</span>
+<span class="w">    </span><span class="c1"># Player variables can be dropped into event names</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">play_dynamo_show_phase_(current_player.phase_name)</span>
+<span class="w">    </span><span class="c1"># Machine and device states can be used</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dynamo_started_with_state_(device.achievements.dynamo.state)</span>
+<span class="w">    </span><span class="c1"># Dynamic evaluations can be done to calculate values</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">player_score_is_(&quot;high&quot; if current_player.score &gt; 10000 else &quot;low&quot;)</span>
 </code></pre></div>
 <p>In the above example:</p>
 <ul>
@@ -33902,21 +33902,21 @@ dynamic values will be converted to their string equivalent.</p>
 <p>An event post can include arguments to provide event handlers with
 additional information about the event. An event configured as an object
 will post the object properties as its arguments:</p>
-<div class="highlight"><pre><span></span><code>event_player:
-  mode_carchase_started:
-    # Objects can be expanded for a key/value pair per line
-    set_environment_sounds:
-      env_name: driving
-    # Objects can be inline for brevity
-    set_initial_laps_count: {count: 10}
+<div class="highlight"><pre><span></span><code><span class="nt">event_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">mode_carchase_started</span><span class="p">:</span>
+<span class="w">    </span><span class="c1"># Objects can be expanded for a key/value pair per line</span>
+<span class="w">    </span><span class="nt">set_environment_sounds</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">env_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">driving</span>
+<span class="w">    </span><span class="c1"># Objects can be inline for brevity</span>
+<span class="w">    </span><span class="nt">set_initial_laps_count</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt">count</span><span class="p">:</span><span class="w"> </span><span class="nv">10</span><span class="p p-Indicator">}</span>
 </code></pre></div>
 <p>You can go a step further and include dynamic values as the values for
 event arguments. To indicate that an argument's value is dynamic, use
 the <code>value:</code> property.</p>
-<div class="highlight"><pre><span></span><code>event_player:
-  mode_dynamo_started:
-    set_dynamo_phase:
-      phase_name: {value: current_player.dynamo_phase}
+<div class="highlight"><pre><span></span><code><span class="nt">event_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">mode_dynamo_started</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">set_dynamo_phase</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">phase_name</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="nv">current_player.dynamo_phase</span><span class="p p-Indicator">}</span>
 </code></pre></div>
 <p>In the above example, if the player variable <code>dynamo_phase</code> had the
 value "attackwave", the event would be posted as such:</p>
@@ -33926,30 +33926,30 @@ value "attackwave", the event would be posted as such:</p>
 to explicitly define types for the value's format. Acceptable types are
 <strong>int</strong>, <strong>float</strong>, <strong>bool</strong>, and <strong>string</strong>. If no type is configured,
 the value will be posted as a string.</p>
-<div class="highlight"><pre><span></span><code>event_player:
-  mode_dynamo_started:
-    # This event arg will be correctly typed
-    set_dynamo_round_with_type:
-      round_number:
-        value: device.counters.dynamo_rounds.value
-        type: int
-    # This event arg will be converted to a string
-    set_dynamo_round_without_type:
-      round_number:
-        value: device.counters.dynamo_rounds.value
+<div class="highlight"><pre><span></span><code><span class="nt">event_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">mode_dynamo_started</span><span class="p">:</span>
+<span class="w">    </span><span class="c1"># This event arg will be correctly typed</span>
+<span class="w">    </span><span class="nt">set_dynamo_round_with_type</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">round_number</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">device.counters.dynamo_rounds.value</span>
+<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">int</span>
+<span class="w">    </span><span class="c1"># This event arg will be converted to a string</span>
+<span class="w">    </span><span class="nt">set_dynamo_round_without_type</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">round_number</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">device.counters.dynamo_rounds.value</span>
 </code></pre></div>
 <h3 id="priority">Priority:</h3>
 <p>Note that as with other config players, event player can accept
 priorties for events to be posted. This can be useful in scenarios such
 as where a player variable must be updated prior to a condtional check,
 so that they happen in the desired order.</p>
-<div class="highlight"><pre><span></span><code>event_player:
-  mode_dynamo_started:
-    reset_pv_tokens_collected_to_0
-      priority: 50
-    play_slide{current_player.pv_tokens_collected &lt;= 5}:
-      priority: 5
-      slide: dynamo_collect_more_tokens_slide
+<div class="highlight"><pre><span></span><code><span class="nt">event_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">mode_dynamo_started</span><span class="p">:</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">reset_pv_tokens_collected_to_0</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">priority</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">50</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">play_slide{current_player.pv_tokens_collected &lt;= 5}</span><span class="p p-Indicator">:</span>
+<span class="w">      </span><span class="nt">priority</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+<span class="w">      </span><span class="nt">slide</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dynamo_collect_more_tokens_slide</span>
 </code></pre></div>
 <h2 id="usage-in-config-files">Usage in config files</h2>
 <p>In config files, the event player is used via the <code>event_player:</code>

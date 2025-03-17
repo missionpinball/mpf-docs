@@ -33602,17 +33602,17 @@ are in. Any settings you specify here are just the defaults, though, and
 you can still override the defaults for an individual asset by adding an
 entry for it to your machine or mode config file.</p>
 <p>Let's take a look at an example:</p>
-<div class="highlight"><pre><span></span><code>assets:
-  images:
-    default:
-      load: preload
-    preload:
-      load: preload
-    on_demand:
-      load: on_demand
-    potato:
-      some_key: some_value
-      something_else: whatever
+<div class="highlight"><pre><span></span><code><span class="nt">assets</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">images</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">default</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">load</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">preload</span>
+<span class="w">    </span><span class="nt">preload</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">load</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">preload</span>
+<span class="w">    </span><span class="nt">on_demand</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">load</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">on_demand</span>
+<span class="w">    </span><span class="nt">potato</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">some_key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">some_value</span>
+<span class="w">      </span><span class="nt">something_else</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">whatever</span>
 </code></pre></div>
 <p>The above config contains the asset settings for <em>image</em> assets. Notice
 there are 4 entries under <code>images:</code>: <code>default</code>, <code>preload</code>, <code>on_demand</code>,

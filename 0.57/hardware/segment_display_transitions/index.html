@@ -33824,23 +33824,23 @@ out to reveal the other text value.</p>
 <p>Transitions are specified as an additional property of a
 <code>segment_display_player:</code> config or the <code>segment_displays:</code> section of a
 show config. For example:</p>
-<div class="highlight"><pre><span></span><code>#! segment_displays:
-#!   display1:
-#!     number: 1
-segment_display_player:
-  jackpot_completed:
-    display1:
-      text: JACKPOT
-      priority: 1000
-      expire: 2s
-      transition:
-        type: push
-        direction: right
-        text: &quot; *** &quot;
-      transition_out:
-        type: push
-        direction: right
-        text: &quot; *** &quot;
+<div class="highlight"><pre><span></span><code><span class="c1">#! segment_displays:</span>
+<span class="c1">#!   display1:</span>
+<span class="c1">#!     number: 1</span>
+<span class="nt">segment_display_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">jackpot_completed</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">display1</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">JACKPOT</span>
+<span class="w">      </span><span class="nt">priority</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="w">      </span><span class="nt">expire</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2s</span>
+<span class="w">      </span><span class="nt">transition</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">push</span>
+<span class="w">        </span><span class="nt">direction</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">right</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;</span><span class="nv"> </span><span class="s">***</span><span class="nv"> </span><span class="s">&quot;</span>
+<span class="w">      </span><span class="nt">transition_out</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">push</span>
+<span class="w">        </span><span class="nt">direction</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">right</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;</span><span class="nv"> </span><span class="s">***</span><span class="nv"> </span><span class="s">&quot;</span>
 </code></pre></div>
 <p>When the event "jackpot_completed" occurs, MPF will update the text in
 the segment display called "display1" using the push transition. After

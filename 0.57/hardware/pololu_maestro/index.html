@@ -33773,8 +33773,8 @@ platform for servos. (MPF supports several different models of servo
 controllers.)</p>
 <p>To do this, add <code>servo_controllers: pololu_maestro</code> to the <code>hardware:</code>
 section of your machine-wide config file, like this:</p>
-<div class="highlight"><pre><span></span><code>hardware:
-  servo_controllers: pololu_maestro
+<div class="highlight"><pre><span></span><code><span class="nt">hardware</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">servo_controllers</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pololu_maestro</span>
 </code></pre></div>
 <p>This tells MPF that you want the default servo platform to be
 <code>pololu_maestro</code>. If you happen to be using multiple different types of
@@ -33786,12 +33786,12 @@ have its platform overwritten in the device config).</p>
 that when you plug in the Maestro, you'll see two serial ports appear.
 You want to use the first one (the lower number).</p>
 <p>Add a section to your machine-wide config like this:</p>
-<div class="highlight"><pre><span></span><code>pololu_maestro:
-  port: COM5
+<div class="highlight"><pre><span></span><code><span class="nt">pololu_maestro</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">COM5</span>
 </code></pre></div>
 <p>On Linux or Mac, it will probably look like this:</p>
-<div class="highlight"><pre><span></span><code>pololu_maestro:
-  port: /dev/ttyACM0
+<div class="highlight"><pre><span></span><code><span class="nt">pololu_maestro</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/dev/ttyACM0</span>
 </code></pre></div>
 <h2 id="4-add-your-servo-devices">4. Add your servo devices</h2>
 <p>Now that all your hardware is configured, you can add the actual servos
@@ -33799,25 +33799,25 @@ to your machine config. In MPF, servos are just like any other device
 (light, LEDs, coils, etc.) You add a <code>servos:</code> section to your config,
 and then create sub entries in there for each servo you have.</p>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>servos:
-  servo1:
-    servo_min: 0.2
-    servo_max: 0.8
-    positions:
-      0.1: servo1_down
-      0.9: servo1_up
-    reset_position: 0.5
-    reset_events: reset_servo1
-    speed_limit: 0.5
-    acceleration_limit: 0.5
-    number: 1
-  servo2:
-    positions:
-      0.2: servo2_left
-      1.0: servo2_home
-    reset_position: 1.0
-    reset_events: reset_servo2
-    number: 2
+<div class="highlight"><pre><span></span><code><span class="nt">servos</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">servo1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">servo_min</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.2</span>
+<span class="w">    </span><span class="nt">servo_max</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.8</span>
+<span class="w">    </span><span class="nt">positions</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">0.1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">servo1_down</span>
+<span class="w">      </span><span class="nt">0.9</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">servo1_up</span>
+<span class="w">    </span><span class="nt">reset_position</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.5</span>
+<span class="w">    </span><span class="nt">reset_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">reset_servo1</span>
+<span class="w">    </span><span class="nt">speed_limit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.5</span>
+<span class="w">    </span><span class="nt">acceleration_limit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.5</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">servo2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">positions</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">0.2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">servo2_left</span>
+<span class="w">      </span><span class="nt">1.0</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">servo2_home</span>
+<span class="w">    </span><span class="nt">reset_position</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0</span>
+<span class="w">    </span><span class="nt">reset_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">reset_servo2</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
 </code></pre></div>
 <p>Okay, there's a lot going on in there. Let's break it down.</p>
 <p>First, all these config options are explained in-depth in the

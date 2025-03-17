@@ -33685,12 +33685,12 @@ RGB DMDs that use the SmartMatrix platform.</p>
 <ol>
 <li>Add <code>pin2dmd</code> to your hardware section:</li>
 </ol>
-<div class="highlight"><pre><span></span><code>hardware:
-  rgb_dmd: pin2dmd
-pin2dmd:
-   # debug: True           # uncomment this if you experience any issues and need debug output
-  resolution: 128x32       # or 192x64 depending on your panel
-  panel: rgb               # or rbg if colors are swapped
+<div class="highlight"><pre><span></span><code><span class="nt">hardware</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">rgb_dmd</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pin2dmd</span>
+<span class="nt">pin2dmd</span><span class="p">:</span>
+<span class="w">   </span><span class="c1"># debug: True           # uncomment this if you experience any issues and need debug output</span>
+<span class="w">  </span><span class="nt">resolution</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">128x32</span><span class="w">       </span><span class="c1"># or 192x64 depending on your panel</span>
+<span class="w">  </span><span class="nt">panel</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rgb</span><span class="w">               </span><span class="c1"># or rbg if colors are swapped</span>
 </code></pre></div>
 <h2 id="3-add-a-physical-rgb-dmd-device-entry">3. Add a physical RGB DMD device entry</h2>
 <p>Once you have your SmartMatrix hardware platform set, you need to create
@@ -33704,10 +33704,10 @@ enter its settings.</p>
 one physical DMD.)</p>
 <p>To do this, create a section in your machine-wide config called
 <code>rgb_dmds:</code>, and then pick a name for the DMD, like this:</p>
-<div class="highlight"><pre><span></span><code>rgb_dmds:
-  default:  # your DMD
-    hardware_brightness: .5      # adjust the brightness of your display if it is too bright
-    fps: 30
+<div class="highlight"><pre><span></span><code><span class="nt">rgb_dmds</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">default</span><span class="p">:</span><span class="w">  </span><span class="c1"># your DMD</span>
+<span class="w">    </span><span class="nt">hardware_brightness</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.5</span><span class="w">      </span><span class="c1"># adjust the brightness of your display if it is too bright</span>
+<span class="w">    </span><span class="nt">fps</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
 </code></pre></div>
 <p>There are several settings you can enter here. (See the
 <a href="../../config/rgb_dmds/">rgb_dmds:</a> for details.). For
@@ -33723,15 +33723,15 @@ crazy bright!)</p>
 the DMD knows what content to show. In MPF, you do this by mapping a
 physical DMD to an
 <a href="../../mc/displays/">MPF display</a>.</p>
-<div class="highlight"><pre><span></span><code>displays:
-  window:  # on screen window - useful for debugging without real hardware
-    width: 600
-    height: 200
-  dmd:  # source display for the DMD
-    width: 128      # 192 if you got a 192x64 pin2dmd panel
-    height: 32      # 64 if you got a 192x64 pin2dmd panel
-    round_anchor_x: left
-    default: true
+<div class="highlight"><pre><span></span><code><span class="nt">displays</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">window</span><span class="p">:</span><span class="w">  </span><span class="c1"># on screen window - useful for debugging without real hardware</span>
+<span class="w">    </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">600</span>
+<span class="w">    </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">200</span>
+<span class="w">  </span><span class="nt">dmd</span><span class="p">:</span><span class="w">  </span><span class="c1"># source display for the DMD</span>
+<span class="w">    </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">128</span><span class="w">      </span><span class="c1"># 192 if you got a 192x64 pin2dmd panel</span>
+<span class="w">    </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">32</span><span class="w">      </span><span class="c1"># 64 if you got a 192x64 pin2dmd panel</span>
+<span class="w">    </span><span class="nt">round_anchor_x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">left</span>
+<span class="w">    </span><span class="nt">default</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
 <p>By default, the DMD will look for a display (in your
 <a href="../../config/displays/">displays:</a> section called "dmd".
@@ -33755,57 +33755,57 @@ try to connect to the Teensy.</p>
 <p>Note that the <a href="../../mc/displays/rgb_dmd/">Using an RGB full-color LED DMD</a>
 guide has more details on the window and slide settings used in this
 machine config.</p>
-<div class="highlight"><pre><span></span><code>hardware:
-  rgb_dmd: pin2dmd
-pin2dmd:
-  # debug: True           # uncomment this if you experience any issues and need debug output
-  resolution: 128x32      # or 192x64 depending on your panel
-  panel: rgb              # or rbg if colors are swapped
-displays:
-  window:  # on screen window
-    width: 600
-    height: 200
-  dmd:  # source display for the DMD
-    width: 128      # 192 if you got a 192x64 pin2dmd panel
-    height: 32      # 64 if you got a 192x64 pin2dmd panel
-    default: true
-    round_anchor_x: left
-window:
-  width: 600
-  height: 200
-  title: Mission Pinball Framework
-rgb_dmds:
-  default:
-    hardware_brightness: .2
-    fps: 30
-slides:
-  window_slide_1:    # slide we&#39;ll show in the on-screen window
-    - type: display  # this widget shows the DMD content in this slide too
-      effects:
-        - type: color_dmd
-      width: 512
-      height: 128
-    - type: text
-      text: MISSION PINBALL FRAMEWORK
-      anchor_y: top
-      y: top-3
-      font_size: 30
-      color: white
-    - type: rectangle
-      width: 514
-      height: 130
-      color: 444444
-  dmd_slide_1:  # slide we&#39;ll show on the physical DMD
-    - type: text
-      text: IT WORKS!
-      font_size: 30
-      color: red
-slide_player:
-  init_done:
-    window_slide_1:
-      target: window
-    dmd_slide_1:
-      target: dmd
+<div class="highlight"><pre><span></span><code><span class="nt">hardware</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">rgb_dmd</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pin2dmd</span>
+<span class="nt">pin2dmd</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># debug: True           # uncomment this if you experience any issues and need debug output</span>
+<span class="w">  </span><span class="nt">resolution</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">128x32</span><span class="w">      </span><span class="c1"># or 192x64 depending on your panel</span>
+<span class="w">  </span><span class="nt">panel</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rgb</span><span class="w">              </span><span class="c1"># or rbg if colors are swapped</span>
+<span class="nt">displays</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">window</span><span class="p">:</span><span class="w">  </span><span class="c1"># on screen window</span>
+<span class="w">    </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">600</span>
+<span class="w">    </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">200</span>
+<span class="w">  </span><span class="nt">dmd</span><span class="p">:</span><span class="w">  </span><span class="c1"># source display for the DMD</span>
+<span class="w">    </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">128</span><span class="w">      </span><span class="c1"># 192 if you got a 192x64 pin2dmd panel</span>
+<span class="w">    </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">32</span><span class="w">      </span><span class="c1"># 64 if you got a 192x64 pin2dmd panel</span>
+<span class="w">    </span><span class="nt">default</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">round_anchor_x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">left</span>
+<span class="nt">window</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">600</span>
+<span class="w">  </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">200</span>
+<span class="w">  </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Mission Pinball Framework</span>
+<span class="nt">rgb_dmds</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">default</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">hardware_brightness</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.2</span>
+<span class="w">    </span><span class="nt">fps</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+<span class="nt">slides</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">window_slide_1</span><span class="p">:</span><span class="w">    </span><span class="c1"># slide we&#39;ll show in the on-screen window</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">display</span><span class="w">  </span><span class="c1"># this widget shows the DMD content in this slide too</span>
+<span class="w">      </span><span class="nt">effects</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">color_dmd</span>
+<span class="w">      </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">512</span>
+<span class="w">      </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">128</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MISSION PINBALL FRAMEWORK</span>
+<span class="w">      </span><span class="nt">anchor_y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">top</span>
+<span class="w">      </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">top-3</span>
+<span class="w">      </span><span class="nt">font_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+<span class="w">      </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">white</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rectangle</span>
+<span class="w">      </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">514</span>
+<span class="w">      </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">130</span>
+<span class="w">      </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">444444</span>
+<span class="w">  </span><span class="nt">dmd_slide_1</span><span class="p">:</span><span class="w">  </span><span class="c1"># slide we&#39;ll show on the physical DMD</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IT WORKS!</span>
+<span class="w">      </span><span class="nt">font_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+<span class="w">      </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
+<span class="nt">slide_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">init_done</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">window_slide_1</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">window</span>
+<span class="w">    </span><span class="nt">dmd_slide_1</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dmd</span>
 </code></pre></div>
 <h2 id="what-if-it-did-not-work">What if it did not work?</h2>
 <p>Have a look at our

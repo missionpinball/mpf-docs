@@ -33670,13 +33670,13 @@ above) which you can use to dial-in your gamma setting.</p>
 <p>The easiest way to show this slide on your physical DMD is to make a
 temporary addition to your machine config to add a slide player, like
 this:</p>
-<div class="highlight"><pre><span></span><code>slide_player:
-  mode_attract_started:
-    dmd_gamma_test:
-      priority: 10000000
-##! test
-#! start_game
-#! assert_slide_on_top dmd_gamma_test
+<div class="highlight"><pre><span></span><code><span class="nt">slide_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">mode_attract_started</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">dmd_gamma_test</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">priority</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10000000</span>
+<span class="c1">##! test</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! assert_slide_on_top dmd_gamma_test</span>
 </code></pre></div>
 <p>This will just show the gamma test slide at a crazy high priority so it
 shows on top of everything else. (Remember if your DMD is not your

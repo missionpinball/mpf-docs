@@ -33692,34 +33692,34 @@ which you can use to stop a mode, play a show, etc.</p>
 <h2 id="displaying-the-value-of-a-timer-on-a-slide">Displaying the value of a timer on a slide</h2>
 <p>If you want to use your timer in a slide you have to set the value to a
 player variable first:</p>
-<div class="highlight"><pre><span></span><code>##! mode: your_mode
-# in your mode
-timers:
-  your_timer:
-    start_value: 0
-    end_value: 20
-    control_events:
-      - action: start
-        event: mode_your_mode_started
-variable_player:
-  timer_your_timer_tick:
-    your_timer_variable_times_100:
-      int: device.timers.your_timer.ticks * 100
-      action: set
-slides:
-  show_timer:
-    widgets:
-      - type: Text
-        text: (player|your_timer_variable_times_100)
-slide_player:
-  mode_your_mode_started: show_timer
-##! test
-#! start_game
-#! start_mode your_mode
-#! advance_time_and_run .1
-#! assert_text_on_top_slide 0
-#! advance_time_and_run 1
-#! assert_text_on_top_slide 100
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: your_mode</span>
+<span class="c1"># in your mode</span>
+<span class="nt">timers</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">your_timer</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">start_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">end_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span>
+<span class="w">    </span><span class="nt">control_events</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start</span>
+<span class="w">        </span><span class="nt">event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mode_your_mode_started</span>
+<span class="nt">variable_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">timer_your_timer_tick</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">your_timer_variable_times_100</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">int</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">device.timers.your_timer.ticks * 100</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">set</span>
+<span class="nt">slides</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">show_timer</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">widgets</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Text</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(player|your_timer_variable_times_100)</span>
+<span class="nt">slide_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">mode_your_mode_started</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">show_timer</span>
+<span class="c1">##! test</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! start_mode your_mode</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_text_on_top_slide 0</span>
+<span class="c1">#! advance_time_and_run 1</span>
+<span class="c1">#! assert_text_on_top_slide 100</span>
 </code></pre></div>
 <p>In this example we update the player variable <code>timer_your_timer_tick</code>
 every time the timer changes based on the tick event. The value is
@@ -33729,63 +33729,63 @@ supports). Afterwards, you can use the variable in your slide.</p>
 <h2 id="displaying-the-value-of-a-timer-on-a-slide-in-minutes-and-seconds">Displaying the value of a timer on a slide in minutes and seconds</h2>
 <p>In this example, we'll display a count-down timer as minutes and seconds. Again, if you want to use your timer in a slide you have to set the value to a
 player variable first:</p>
-<div class="highlight"><pre><span></span><code>##! mode: your_mode
-# in your mode
-timers:
-  your_timer:
-    start_value: 180
-    end_value: 0
-    control_events:
-      - action: start
-        event: mode_your_mode_started
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: your_mode</span>
+<span class="c1"># in your mode</span>
+<span class="nt">timers</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">your_timer</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">start_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">180</span>
+<span class="w">    </span><span class="nt">end_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">control_events</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start</span>
+<span class="w">        </span><span class="nt">event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mode_your_mode_started</span>
 
-variable_player:
-  timer_your_timer_tick:
-    your_timer_minutes:
-      int: device.timers.your_timer.ticks / 60
-      action: set
-    your_timer_seconds:
-      int: device.timers.your_timer.ticks % 60
-      action: set
+<span class="nt">variable_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">timer_your_timer_tick</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">your_timer_minutes</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">int</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">device.timers.your_timer.ticks / 60</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">set</span>
+<span class="w">    </span><span class="nt">your_timer_seconds</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">int</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">device.timers.your_timer.ticks % 60</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">set</span>
 
-slides:
-  show_timer:
-    widgets:
-    - type: text
-      text: &#39;Time Left: (player|your_timer_minutes)&#39;
-      font_size: 72
-      anchor_x: left
-      anchor_y: bottom
-      x: 100
-      y: 906
-      z: 2
-    - type: text
-      text: &#39;:&#39;
-      font_size: 72
-      anchor_x: left
-      anchor_y: bottom
-      x: 350
-      y: 906
-      z: 2
-    - type: text
-      text: &#39;(player|your_timer_seconds)&#39;
-      min_digits: 2
-      font_size: 72
-      anchor_x: left
-      anchor_y: bottom
-      x: 365
-      y: 906
-      z: 2
+<span class="nt">slides</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">show_timer</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">widgets</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Time</span><span class="nv"> </span><span class="s">Left:</span><span class="nv"> </span><span class="s">(player|your_timer_minutes)&#39;</span>
+<span class="w">      </span><span class="nt">font_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">72</span>
+<span class="w">      </span><span class="nt">anchor_x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">left</span>
+<span class="w">      </span><span class="nt">anchor_y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bottom</span>
+<span class="w">      </span><span class="nt">x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="w">      </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">906</span>
+<span class="w">      </span><span class="nt">z</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;:&#39;</span>
+<span class="w">      </span><span class="nt">font_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">72</span>
+<span class="w">      </span><span class="nt">anchor_x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">left</span>
+<span class="w">      </span><span class="nt">anchor_y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bottom</span>
+<span class="w">      </span><span class="nt">x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">350</span>
+<span class="w">      </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">906</span>
+<span class="w">      </span><span class="nt">z</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;(player|your_timer_seconds)&#39;</span>
+<span class="w">      </span><span class="nt">min_digits</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="w">      </span><span class="nt">font_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">72</span>
+<span class="w">      </span><span class="nt">anchor_x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">left</span>
+<span class="w">      </span><span class="nt">anchor_y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bottom</span>
+<span class="w">      </span><span class="nt">x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">365</span>
+<span class="w">      </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">906</span>
+<span class="w">      </span><span class="nt">z</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
 
-slide_player:
-  mode_your_mode_started: show_timer
-##! test
-#! start_game
-#! start_mode your_mode
-#! advance_time_and_run .1
-#! assert_text_on_top_slide 0
-#! advance_time_and_run 1
-#! assert_text_on_top_slide 100
+<span class="nt">slide_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">mode_your_mode_started</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">show_timer</span>
+<span class="c1">##! test</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! start_mode your_mode</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_text_on_top_slide 0</span>
+<span class="c1">#! advance_time_and_run 1</span>
+<span class="c1">#! assert_text_on_top_slide 100</span>
 </code></pre></div>
 <p>In this example we update the player variable <code>timer_your_timer_tick</code> every time the timer changes based on the tick event. The value is divided by 60 to calculate the number of whole minutes remaining and stored as the variable <code>your_timer_minutes</code>. We also calculate any ticks above the whole number of minutes into seconds with the <code>int: device.timers.your_timer.ticks % 60</code> line and store this as <code>your_timer_seconds</code>. We then display these in our slide with a text widget of <code>:</code> placed between the two values.</p>
 <h2 id="related-events">Related Events</h2>

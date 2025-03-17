@@ -33918,48 +33918,48 @@ non-default parameter values for any playlist assets you want to use in
 your game. (This section is part of the MPF media controller and only
 available if you're using MPF-MC for your media controller.)</p>
 <p>Here is an example:</p>
-<div class="highlight"><pre><span></span><code># ---------------------
-# SOUNDS::PLAYLIST
-# ---------------------
-playlists:
-  playlistIntro:
-    shuffle: false
-    repeat: false
-    sounds:
-      - voiceAnnouncerNewsFlash1
-      - voiceAnnouncerMessage1
-      - voiceAnnouncerAliensAttack1
-  playlistHighScore:
-    shuffle: true
-    repeat: true
-    crossfade_mode: override
-    crossfade_time: 5s
-    sounds:
-      - soundHighScore001
-      - soundHighScore002
-      - soundHighScore003
-      - soundHighScore004
-# ---------------------
-# PLAYLIST::PLAYER
-# ---------------------
-playlist_player:
-  # -------------------
-  # ADDED SURPRISE VOICE DURING ATTRACT MODE
-  playlistAttention:
-    trackplaylist:
-      playlist: playlistIntro
-      action: play
-  # -------------------
-  # MUSIC DURING HIGH SCORE ENTRY
-  high_score_enter_initials:
-    trackplaylist:
-      playlist: playlistHighScore
-      shuffle: true
-      repeat: true
-      action: play
-  mode_attract_started:
-    trackplaylist:
-      action: stop
+<div class="highlight"><pre><span></span><code><span class="c1"># ---------------------</span>
+<span class="c1"># SOUNDS::PLAYLIST</span>
+<span class="c1"># ---------------------</span>
+<span class="nt">playlists</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">playlistIntro</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">shuffle</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">    </span><span class="nt">repeat</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">    </span><span class="nt">sounds</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">voiceAnnouncerNewsFlash1</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">voiceAnnouncerMessage1</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">voiceAnnouncerAliensAttack1</span>
+<span class="w">  </span><span class="nt">playlistHighScore</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">shuffle</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">repeat</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">crossfade_mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">override</span>
+<span class="w">    </span><span class="nt">crossfade_time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5s</span>
+<span class="w">    </span><span class="nt">sounds</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">soundHighScore001</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">soundHighScore002</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">soundHighScore003</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">soundHighScore004</span>
+<span class="c1"># ---------------------</span>
+<span class="c1"># PLAYLIST::PLAYER</span>
+<span class="c1"># ---------------------</span>
+<span class="nt">playlist_player</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># -------------------</span>
+<span class="w">  </span><span class="c1"># ADDED SURPRISE VOICE DURING ATTRACT MODE</span>
+<span class="w">  </span><span class="nt">playlistAttention</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">trackplaylist</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">playlist</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">playlistIntro</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">play</span>
+<span class="w">  </span><span class="c1"># -------------------</span>
+<span class="w">  </span><span class="c1"># MUSIC DURING HIGH SCORE ENTRY</span>
+<span class="w">  </span><span class="nt">high_score_enter_initials</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">trackplaylist</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">playlist</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">playlistHighScore</span>
+<span class="w">      </span><span class="nt">shuffle</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">      </span><span class="nt">repeat</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">play</span>
+<span class="w">  </span><span class="nt">mode_attract_started</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">trackplaylist</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stop</span>
 </code></pre></div>
 <h2 id="required-settings">Required settings</h2>
 <p>The following sections are required in the <code>playlists:</code> section of your

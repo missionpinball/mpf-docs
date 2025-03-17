@@ -33686,23 +33686,23 @@ interactively using
 <h2 id="defining-slides-in-the-slides-section-of-a-config-file">Defining slides in the slides: section of a config file</h2>
 <p>The main way to do it is in the "slides" section of a config file,
 like this:</p>
-<div class="highlight"><pre><span></span><code>slides:
-  some_slide:
-    - type: text
-      text: THIS IS MY SLIDE
-  some_other_slide:
-    - type: text
-      text: THIS IS ANOTHER SLIDE
-    - type: text
-      text: WITH MORE WORDS
-      y: bottom
-      anchor_y: bottom
-  tilt_warning_1:
-    - type: text
-      text: WARNING
-  tilt_warning_2:
-    - type: text
-      text: WARNING WARNING
+<div class="highlight"><pre><span></span><code><span class="nt">slides</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">some_slide</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">THIS IS MY SLIDE</span>
+<span class="w">  </span><span class="nt">some_other_slide</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">THIS IS ANOTHER SLIDE</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">WITH MORE WORDS</span>
+<span class="w">      </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bottom</span>
+<span class="w">      </span><span class="nt">anchor_y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bottom</span>
+<span class="w">  </span><span class="nt">tilt_warning_1</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">WARNING</span>
+<span class="w">  </span><span class="nt">tilt_warning_2</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">WARNING WARNING</span>
 </code></pre></div>
 <p>In the example above, we have four main sub-entries in the slides
 section:</p>
@@ -33753,15 +33753,15 @@ a specific slide when some event occurs. Full documentation for the
 slide_player is in the <a href="../showing_slides/">/config/slide_player</a>
 section of the documentation.</p>
 <p>You can define slides in the slide_player like this:</p>
-<div class="highlight"><pre><span></span><code>slide_player:
-  some_event:
-    my_slide_1:
-      - type: text
-        text: THIS IS MY SLIDE
-##! test
-#! post some_event
-#! advance_time_and_run .1
-#! assert_text_on_top_slide &quot;THIS IS MY SLIDE&quot;
+<div class="highlight"><pre><span></span><code><span class="nt">slide_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">some_event</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">my_slide_1</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">THIS IS MY SLIDE</span>
+<span class="c1">##! test</span>
+<span class="c1">#! post some_event</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_text_on_top_slide &quot;THIS IS MY SLIDE&quot;</span>
 </code></pre></div>
 <p>In the above example, when the event <em>some_event</em> is posted, the slide
 player will respond and show the slide called <em>my_slide_1</em> which will
@@ -33784,23 +33784,23 @@ in one of the "_player" sections of the config (like the
 (from a show file or a show configuration section of a config file).</p>
 <p>So here's an example of a slide created within a show for use within a
 specific step in that show:</p>
-<div class="highlight"><pre><span></span><code>#! show_player:
-#!   start_show: my_show
-##! show: my_show
-# show_version=5
-- time: 0
-  slides:
-    my_show_slide_1:
-    - type: text
-      text: MISSION PINBALL
-      color: red
-    - type: rectangle
-      width: 128
-      height: 32
-##! test
-#! post start_show
-#! advance_time_and_run .1
-#! assert_text_on_top_slide &quot;MISSION PINBALL&quot;
+<div class="highlight"><pre><span></span><code><span class="c1">#! show_player:</span>
+<span class="c1">#!   start_show: my_show</span>
+<span class="c1">##! show: my_show</span>
+<span class="c1"># show_version=5</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">  </span><span class="nt">slides</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">my_show_slide_1</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MISSION PINBALL</span>
+<span class="w">      </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rectangle</span>
+<span class="w">      </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">128</span>
+<span class="w">      </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">32</span>
+<span class="c1">##! test</span>
+<span class="c1">#! post start_show</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_text_on_top_slide &quot;MISSION PINBALL&quot;</span>
 </code></pre></div>
 <p>Again, see the <a href="../../../shows/">show documentation</a> for details. Here we're just showing that it's also
 possible to define a slide in a show config.</p>

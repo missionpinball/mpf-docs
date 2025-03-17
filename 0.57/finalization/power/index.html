@@ -33776,50 +33776,50 @@ following code:</p>
 </code></pre></div>
 <p>Create a <code>shutdown_computer.yaml</code> file in the <code>/config</code> folder with the
 following code:</p>
-<div class="highlight"><pre><span></span><code>#! switches:
-#!   s_left_flipper:
-#!     number:
-#!   s_start:
-#!     number:
-##! code: modes/shutdown_computer/code/shutdown_computer.py
-#! from mpf.core.mode import Mode
-#! import os
-#! import platform
-#! class shutdown_computer(Mode):
-#!     def mode_init(self):
-#!         self.log.info(&#39;shutdown_computer mode_init&#39;)
-#!         self.OS_type = platform.system().lower()
-#!     def mode_start(self, **kwargs):
-#!         self.log.info(&#39;shutdown_computer mode_start&#39;)
-#!         self.add_mode_event_handler(&#39;shutdown_host_computer&#39;, self.shutdown_host)
-#!     def shutdown_host(self, **kwargs):
-#!         #shutdown the mpf game if it&#39;s running
-#!         #shutdown the computer
-#!         if self.OS_type == &#39;linux&#39;:
-#!             shutdown_str = &#39;shutdown -t 0&#39;
-#!         elif self.OS_type == &#39;windows&#39;:
-#!             shutdown_str == &#39;shutdown -s -t 0&#39;
-#!         else:
-#!             self.log.warning(f&#39;Sorry this feature is not available in {self.os_type}&#39;)
-#!             return
-#!         os.system(shutdown_str)
-#!     def mode_stop(self, **kwargs):
-#!         self.machine.events.post(&#39;shutdown_computer mode_ended&#39;)
-#!         self.log.info(&#39;shutdown_computer mode_stop&#39;)
-##! mode: shutdown_computer
-#config_version=5
-mode:
-  start_events: mode_base_started
-  stop_events: shutdown_mode_cancel
-  priority: 400
-  code: shutdown_computer.shutdown_computer
+<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
+<span class="c1">#!   s_left_flipper:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   s_start:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">##! code: modes/shutdown_computer/code/shutdown_computer.py</span>
+<span class="c1">#! from mpf.core.mode import Mode</span>
+<span class="c1">#! import os</span>
+<span class="c1">#! import platform</span>
+<span class="c1">#! class shutdown_computer(Mode):</span>
+<span class="c1">#!     def mode_init(self):</span>
+<span class="c1">#!         self.log.info(&#39;shutdown_computer mode_init&#39;)</span>
+<span class="c1">#!         self.OS_type = platform.system().lower()</span>
+<span class="c1">#!     def mode_start(self, **kwargs):</span>
+<span class="c1">#!         self.log.info(&#39;shutdown_computer mode_start&#39;)</span>
+<span class="c1">#!         self.add_mode_event_handler(&#39;shutdown_host_computer&#39;, self.shutdown_host)</span>
+<span class="c1">#!     def shutdown_host(self, **kwargs):</span>
+<span class="c1">#!         #shutdown the mpf game if it&#39;s running</span>
+<span class="c1">#!         #shutdown the computer</span>
+<span class="c1">#!         if self.OS_type == &#39;linux&#39;:</span>
+<span class="c1">#!             shutdown_str = &#39;shutdown -t 0&#39;</span>
+<span class="c1">#!         elif self.OS_type == &#39;windows&#39;:</span>
+<span class="c1">#!             shutdown_str == &#39;shutdown -s -t 0&#39;</span>
+<span class="c1">#!         else:</span>
+<span class="c1">#!             self.log.warning(f&#39;Sorry this feature is not available in {self.os_type}&#39;)</span>
+<span class="c1">#!             return</span>
+<span class="c1">#!         os.system(shutdown_str)</span>
+<span class="c1">#!     def mode_stop(self, **kwargs):</span>
+<span class="c1">#!         self.machine.events.post(&#39;shutdown_computer mode_ended&#39;)</span>
+<span class="c1">#!         self.log.info(&#39;shutdown_computer mode_stop&#39;)</span>
+<span class="c1">##! mode: shutdown_computer</span>
+<span class="c1">#config_version=5</span>
+<span class="nt">mode</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">start_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mode_base_started</span>
+<span class="w">  </span><span class="nt">stop_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">shutdown_mode_cancel</span>
+<span class="w">  </span><span class="nt">priority</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">400</span>
+<span class="w">  </span><span class="nt">code</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">shutdown_computer.shutdown_computer</span>
 
-combo_switches:
-  shutdown_hold:
-    switches_1: s_left_flipper
-    switches_2: s_start
-    hold_time: 5s
-    events_when_both: shutdown_host_computer
+<span class="nt">combo_switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">shutdown_hold</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switches_1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_left_flipper</span>
+<span class="w">    </span><span class="nt">switches_2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_start</span>
+<span class="w">    </span><span class="nt">hold_time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5s</span>
+<span class="w">    </span><span class="nt">events_when_both</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">shutdown_host_computer</span>
 </code></pre></div>
 <p>Enable the mode in your machine config file.</p>
 <p>The above config is an example on how you could shutdown the computer.

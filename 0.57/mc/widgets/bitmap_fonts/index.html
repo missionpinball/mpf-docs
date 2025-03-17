@@ -33720,13 +33720,13 @@ char id=32 x=0 y=550 width=40 height=55 xoffset=0 yoffset=0 xadvance=40 page=0 c
 </ul>
 <h2 id="4-use-the-font-in-your-slide">4. Use the Font in Your Slide</h2>
 <p>You can use the font in your config:</p>
-<div class="highlight"><pre><span></span><code>slides:
-  slideBaseBackglass:
-    widgets:
-      - type: text
-        text: (player1|score)
-        font_name: bitmapFontBallySevenSegment4
-        bitmap_font: true
+<div class="highlight"><pre><span></span><code><span class="nt">slides</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">slideBaseBackglass</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">widgets</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(player1|score)</span>
+<span class="w">        </span><span class="nt">font_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bitmapFontBallySevenSegment4</span>
+<span class="w">        </span><span class="nt">bitmap_font</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
 <p>Alternatively, you can also use bitmap fonts in
 <a href="../styles/">widget styles</a>.</p>

@@ -33641,33 +33641,33 @@ icons & this code generated via https://realfavicongenerator.net
 to it.</p>
 <p><a href="../../about/help/">TODO: Add a picture of a StepRocker</a></p>
 <p>This is an example:</p>
-<div class="highlight"><pre><span></span><code>hardware:
-  platform: virtual
-  stepper_controllers: trinamics_steprocker
+<div class="highlight"><pre><span></span><code><span class="nt">hardware</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">virtual</span>
+<span class="w">  </span><span class="nt">stepper_controllers</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">trinamics_steprocker</span>
 
-trinamics_steprocker:
-  port: /dev/ttyACM0
+<span class="nt">trinamics_steprocker</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/dev/ttyACM0</span>
 
-steppers:
-    # Scenario: 1.8 degree stepper attached to a 7:1 gear ratio with homing flag that you want to control in units of revolutions
-  positionStepper:
-    number: 0
-    homing_direction: clockwise        # when facing the shaft
-    homing_mode: hardware
-    reset_position: 0
-    reset_events: test_reset
-    named_positions:
-      0.0: test_00
-      0.6: test_01
-      1.0: test_10
-    platform_settings:
-      move_current: 25                      # percent
-      hold_current: 5                       # percent
-      homing_speed: 0.1                     # user units/sec
-      microstep_per_fullstep: 16            # 1/16 mode (1 step = 1/16 of a full step)
-      fullstep_per_userunit: 1400           # UU=1 Revolution = 200 full steps per rev (1.8 deg stepper) * 7 gear ratio
-      velocity_limit: 0.5                   # user units/sec   (so, 0.8 RPS of output gear )
-      acceleration_limit: 2.0               # user units/sec^2  (so, 2 RPS^S of output gear)
+<span class="nt">steppers</span><span class="p">:</span>
+<span class="w">    </span><span class="c1"># Scenario: 1.8 degree stepper attached to a 7:1 gear ratio with homing flag that you want to control in units of revolutions</span>
+<span class="w">  </span><span class="nt">positionStepper</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">homing_direction</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">clockwise</span><span class="w">        </span><span class="c1"># when facing the shaft</span>
+<span class="w">    </span><span class="nt">homing_mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hardware</span>
+<span class="w">    </span><span class="nt">reset_position</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">reset_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">test_reset</span>
+<span class="w">    </span><span class="nt">named_positions</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">0.0</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">test_00</span>
+<span class="w">      </span><span class="nt">0.6</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">test_01</span>
+<span class="w">      </span><span class="nt">1.0</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">test_10</span>
+<span class="w">    </span><span class="nt">platform_settings</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">move_current</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">25</span><span class="w">                      </span><span class="c1"># percent</span>
+<span class="w">      </span><span class="nt">hold_current</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span><span class="w">                       </span><span class="c1"># percent</span>
+<span class="w">      </span><span class="nt">homing_speed</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.1</span><span class="w">                     </span><span class="c1"># user units/sec</span>
+<span class="w">      </span><span class="nt">microstep_per_fullstep</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">16</span><span class="w">            </span><span class="c1"># 1/16 mode (1 step = 1/16 of a full step)</span>
+<span class="w">      </span><span class="nt">fullstep_per_userunit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1400</span><span class="w">           </span><span class="c1"># UU=1 Revolution = 200 full steps per rev (1.8 deg stepper) * 7 gear ratio</span>
+<span class="w">      </span><span class="nt">velocity_limit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.5</span><span class="w">                   </span><span class="c1"># user units/sec   (so, 0.8 RPS of output gear )</span>
+<span class="w">      </span><span class="nt">acceleration_limit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2.0</span><span class="w">               </span><span class="c1"># user units/sec^2  (so, 2 RPS^S of output gear)</span>
 </code></pre></div>
 <p>Overview video about
 <a href="../../mechs/steppers/">steppers</a>:</p>

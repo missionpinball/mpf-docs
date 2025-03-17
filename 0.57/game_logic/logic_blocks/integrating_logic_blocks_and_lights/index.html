@@ -33583,62 +33583,62 @@ icons & this code generated via https://realfavicongenerator.net
 <p>You might want to enable lights based on the state of a counter. This is
 an example for integrating lights via light_player using subscriptions
 on the value of the counter:</p>
-<div class="highlight"><pre><span></span><code>lights:
-  l_chest_matrix_green_2:
-    number:
-  l_chest_matrix_green_3:
-    number:
-  l_chest_matrix_green_4:
-    number:
-  l_chest_matrix_green_5:
-    number:
+<div class="highlight"><pre><span></span><code><span class="nt">lights</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">l_chest_matrix_green_2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">l_chest_matrix_green_3</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">l_chest_matrix_green_4</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">l_chest_matrix_green_5</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
 
-counters:
-  my_counter:
-    starting_count: 0
-    count_complete_value: 5
-    count_events: count_up
+<span class="nt">counters</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_counter</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">starting_count</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">count_complete_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+<span class="w">    </span><span class="nt">count_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">count_up</span>
 
-light_player:
-  &quot;{device.counters.my_counter.value &gt; 0}&quot;:
-    l_chest_matrix_green_5: green
-  &quot;{device.counters.my_counter.value &gt; 1}&quot;:
-    l_chest_matrix_green_4: green
-  &quot;{device.counters.my_counter.value &gt; 2}&quot;:
-    l_chest_matrix_green_3: green
-  &quot;{device.counters.my_counter.value &gt; 3}&quot;:
-    l_chest_matrix_green_2: green
+<span class="nt">light_player</span><span class="p">:</span>
+<span class="w">  </span><span class="s">&quot;{device.counters.my_counter.value</span><span class="nv"> </span><span class="s">&gt;</span><span class="nv"> </span><span class="s">0}&quot;</span><span class="p p-Indicator">:</span>
+<span class="w">    </span><span class="nt">l_chest_matrix_green_5</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">green</span>
+<span class="w">  </span><span class="s">&quot;{device.counters.my_counter.value</span><span class="nv"> </span><span class="s">&gt;</span><span class="nv"> </span><span class="s">1}&quot;</span><span class="p p-Indicator">:</span>
+<span class="w">    </span><span class="nt">l_chest_matrix_green_4</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">green</span>
+<span class="w">  </span><span class="s">&quot;{device.counters.my_counter.value</span><span class="nv"> </span><span class="s">&gt;</span><span class="nv"> </span><span class="s">2}&quot;</span><span class="p p-Indicator">:</span>
+<span class="w">    </span><span class="nt">l_chest_matrix_green_3</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">green</span>
+<span class="w">  </span><span class="s">&quot;{device.counters.my_counter.value</span><span class="nv"> </span><span class="s">&gt;</span><span class="nv"> </span><span class="s">3}&quot;</span><span class="p p-Indicator">:</span>
+<span class="w">    </span><span class="nt">l_chest_matrix_green_2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">green</span>
 
-##! test
-#! start_game
-#! assert_light_color l_chest_matrix_green_2 black
-#! assert_light_color l_chest_matrix_green_3 black
-#! assert_light_color l_chest_matrix_green_4 black
-#! assert_light_color l_chest_matrix_green_5 black
-#! post count_up
-#! advance_time_and_run .1
-#! assert_light_color l_chest_matrix_green_2 black
-#! assert_light_color l_chest_matrix_green_3 black
-#! assert_light_color l_chest_matrix_green_4 black
-#! assert_light_color l_chest_matrix_green_5 green
-#! post count_up
-#! advance_time_and_run .1
-#! assert_light_color l_chest_matrix_green_2 black
-#! assert_light_color l_chest_matrix_green_3 black
-#! assert_light_color l_chest_matrix_green_4 green
-#! assert_light_color l_chest_matrix_green_5 green
-#! post count_up
-#! advance_time_and_run .1
-#! assert_light_color l_chest_matrix_green_2 black
-#! assert_light_color l_chest_matrix_green_3 green
-#! assert_light_color l_chest_matrix_green_4 green
-#! assert_light_color l_chest_matrix_green_5 green
-#! post count_up
-#! advance_time_and_run .1
-#! assert_light_color l_chest_matrix_green_2 green
-#! assert_light_color l_chest_matrix_green_3 green
-#! assert_light_color l_chest_matrix_green_4 green
-#! assert_light_color l_chest_matrix_green_5 green
+<span class="c1">##! test</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! assert_light_color l_chest_matrix_green_2 black</span>
+<span class="c1">#! assert_light_color l_chest_matrix_green_3 black</span>
+<span class="c1">#! assert_light_color l_chest_matrix_green_4 black</span>
+<span class="c1">#! assert_light_color l_chest_matrix_green_5 black</span>
+<span class="c1">#! post count_up</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_light_color l_chest_matrix_green_2 black</span>
+<span class="c1">#! assert_light_color l_chest_matrix_green_3 black</span>
+<span class="c1">#! assert_light_color l_chest_matrix_green_4 black</span>
+<span class="c1">#! assert_light_color l_chest_matrix_green_5 green</span>
+<span class="c1">#! post count_up</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_light_color l_chest_matrix_green_2 black</span>
+<span class="c1">#! assert_light_color l_chest_matrix_green_3 black</span>
+<span class="c1">#! assert_light_color l_chest_matrix_green_4 green</span>
+<span class="c1">#! assert_light_color l_chest_matrix_green_5 green</span>
+<span class="c1">#! post count_up</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_light_color l_chest_matrix_green_2 black</span>
+<span class="c1">#! assert_light_color l_chest_matrix_green_3 green</span>
+<span class="c1">#! assert_light_color l_chest_matrix_green_4 green</span>
+<span class="c1">#! assert_light_color l_chest_matrix_green_5 green</span>
+<span class="c1">#! post count_up</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_light_color l_chest_matrix_green_2 green</span>
+<span class="c1">#! assert_light_color l_chest_matrix_green_3 green</span>
+<span class="c1">#! assert_light_color l_chest_matrix_green_4 green</span>
+<span class="c1">#! assert_light_color l_chest_matrix_green_5 green</span>
 </code></pre></div>
 <hr />
 <div class="admonition question">

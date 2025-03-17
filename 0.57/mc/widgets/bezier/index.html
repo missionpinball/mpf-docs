@@ -33829,21 +33829,21 @@ that if you want to draw a straight line, you can use the
 <a href="../line/">Line Widget</a>.)</p>
 <p>Here's an example:</p>
 <p>TODO This example just shows a blank slide in MPF 0.50?</p>
-<div class="highlight"><pre><span></span><code>#config_version=5
-slide_player:
-  mc_ready:
-    bezier_example:
-      - type: bezier
-        points: 10, 10, 150, 450, 300, 100, 790, 590
-        color: lime
-        thickness: 5
-        cap: square
-      - type: bezier
-        points: 0, 600, 400, 400, 400, 0
-        color: pink
-        close: true
-        joint: miter
-        thickness: 10
+<div class="highlight"><pre><span></span><code><span class="c1">#config_version=5</span>
+<span class="nt">slide_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">mc_ready</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">bezier_example</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bezier</span>
+<span class="w">        </span><span class="nt">points</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10, 10, 150, 450, 300, 100, 790, 590</span>
+<span class="w">        </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lime</span>
+<span class="w">        </span><span class="nt">thickness</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+<span class="w">        </span><span class="nt">cap</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">square</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bezier</span>
+<span class="w">        </span><span class="nt">points</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0, 600, 400, 400, 400, 0</span>
+<span class="w">        </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pink</span>
+<span class="w">        </span><span class="nt">close</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">        </span><span class="nt">joint</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">miter</span>
+<span class="w">        </span><span class="nt">thickness</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
 </code></pre></div>
 <p>Which results in the following:</p>
 <p><img alt="image" src="../../images/bezier.png" /></p>

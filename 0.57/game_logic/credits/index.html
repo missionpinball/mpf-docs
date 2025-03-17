@@ -33867,30 +33867,30 @@ a file called <code>credits.yaml</code>. (So that file should be at
 add a section called <code>credits:</code>, and then under there, indent a few
 spaces (it doesn't matter how many, 2 or 4 or whatever you prefer) and
 add a section called <code>categories:</code>. Your file should now look like this:</p>
-<div class="highlight"><pre><span></span><code># in your machine wide config
-switches:
-  s_coin_left:
-    number:
-  s_service_coin:
-    number:
-credits:
-  max_credits: 12
-  free_play: false
-  service_credits_switch: s_service_coin
-  switches:
-    - switch: s_coin_left
-      type: money
-      value: .25
-  pricing_tiers:
-    - price: .50
-      credits: 1
-    - price: 2
-      credits: 5
-  fractional_credit_expiration_time: 15m
-  credit_expiration_time: 2h
-  persist_credits_while_off_time: 1h
-  free_play_string: FREE PLAY
-  credits_string: CREDITS
+<div class="highlight"><pre><span></span><code><span class="c1"># in your machine wide config</span>
+<span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_coin_left</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_service_coin</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="nt">credits</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">max_credits</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">12</span>
+<span class="w">  </span><span class="nt">free_play</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">  </span><span class="nt">service_credits_switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_service_coin</span>
+<span class="w">  </span><span class="nt">switches</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_coin_left</span>
+<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">money</span>
+<span class="w">      </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.25</span>
+<span class="w">  </span><span class="nt">pricing_tiers</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">price</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.50</span>
+<span class="w">      </span><span class="nt">credits</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">price</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="w">      </span><span class="nt">credits</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+<span class="w">  </span><span class="nt">fractional_credit_expiration_time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">15m</span>
+<span class="w">  </span><span class="nt">credit_expiration_time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2h</span>
+<span class="w">  </span><span class="nt">persist_credits_while_off_time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1h</span>
+<span class="w">  </span><span class="nt">free_play_string</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">FREE PLAY</span>
+<span class="w">  </span><span class="nt">credits_string</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CREDITS</span>
 </code></pre></div>
 <p>Full details of what each of these settings does is outlined in the
 <a href="../../config/credits/">credits:</a> of the configuration
@@ -33950,14 +33950,14 @@ just don't add that setting.</p>
 the credits mode to the list of modes that are used in your machine. To
 do this, add <code>- credits</code> to the modes: section in your machine-wide
 config, like this:</p>
-<div class="highlight"><pre><span></span><code>modes:
-  - base
-  - bonus
-  - credits
-##! mode: base
-##! mode: bonus
-#! mode_settings:
-#!   bonus_entries:
+<div class="highlight"><pre><span></span><code><span class="nt">modes</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">base</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bonus</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">credits</span>
+<span class="c1">##! mode: base</span>
+<span class="c1">##! mode: bonus</span>
+<span class="c1">#! mode_settings:</span>
+<span class="c1">#!   bonus_entries:</span>
 </code></pre></div>
 <p>The order doesn't matter here since the priority each mode runs at is
 configured in its own mode configuration file. All you're doing now is
@@ -33972,13 +33972,13 @@ merges in your machine's mode config which can override them.) If you
 look at the built-in <code>credits</code> mode's config (at
 <code>mpf/modes/credits/config/credits.yaml</code>), you'll see it has the
 following <code>mode:</code> section:</p>
-<div class="highlight"><pre><span></span><code>##! mode: credits
-mode:
-  code: mpf.modes.credits.code.credits.Credits
-  priority: 1000010
-  start_events: reset_complete
-  game_mode: false
-  stop_on_ball_end: false
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: credits</span>
+<span class="nt">mode</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">code</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mpf.modes.credits.code.credits.Credits</span>
+<span class="w">  </span><span class="nt">priority</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000010</span>
+<span class="w">  </span><span class="nt">start_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">reset_complete</span>
+<span class="w">  </span><span class="nt">game_mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">  </span><span class="nt">stop_on_ball_end</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 </code></pre></div>
 <p>First is that the priority of this mode is really high, 11000 by
 default. That's because we want this mode to run "on top" of any
@@ -33999,97 +33999,97 @@ machine folder. It should be at
 totally blank, add the required <code>#config_version=5</code> to the top line.
 There are several credit-related things you need to show the player on
 your display. Here are some settings you can use as a starting point:</p>
-<div class="highlight"><pre><span></span><code>switches:
-  s_coin_left:
-    number:
-  s_service_coin:
-    number:
-credits:
-  max_credits: 12
-  free_play: false
-  service_credits_switch: s_service_coin
-  switches:
-    - switch: s_coin_left
-      type: money
-      value: .25
-  pricing_tiers:
-    - price: .50
-      credits: 1
-    - price: 2
-      credits: 5
-  fractional_credit_expiration_time: 15m
-  credit_expiration_time: 2h
-  persist_credits_while_off_time: 1h
-  free_play_string: FREE PLAY
-  credits_string: CREDITS
+<div class="highlight"><pre><span></span><code><span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_coin_left</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_service_coin</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="nt">credits</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">max_credits</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">12</span>
+<span class="w">  </span><span class="nt">free_play</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">  </span><span class="nt">service_credits_switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_service_coin</span>
+<span class="w">  </span><span class="nt">switches</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_coin_left</span>
+<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">money</span>
+<span class="w">      </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.25</span>
+<span class="w">  </span><span class="nt">pricing_tiers</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">price</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.50</span>
+<span class="w">      </span><span class="nt">credits</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">price</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="w">      </span><span class="nt">credits</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+<span class="w">  </span><span class="nt">fractional_credit_expiration_time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">15m</span>
+<span class="w">  </span><span class="nt">credit_expiration_time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2h</span>
+<span class="w">  </span><span class="nt">persist_credits_while_off_time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1h</span>
+<span class="w">  </span><span class="nt">free_play_string</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">FREE PLAY</span>
+<span class="w">  </span><span class="nt">credits_string</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CREDITS</span>
 
-##! mode: credits
-# in modes/credits/config/credits.yaml
-# add some credits slides
-slide_player:
-  credits_added:
-    credit_added_slide:
-      expire: 2s
-  not_enough_credits:
-    not_enough_credits_slide:
-      expire: 2s
-  enabling_free_play:
-    enabling_free_play_slide:
-      expire: 2s
-  enabling_credit_play:
-    enabling_credit_play_slide:
-      expire: 2s
-  max_credits_reached:
-    max_credits_reached_slide:
-      expire: 2s
-  player_added:
-    player_added_slide:
-      expire: 1s
-slides:
-  credit_added_slide:
-    - type: text
-      text: (machine|credits_string)
-  not_enough_credits_slide:
-    - type: text
-      text: (machine|credits_string)
-    - type: text
-      text: INSERT COINS
-  enabling_free_play_slide:
-    - type: text
-      text: ENABLING FREE PLAY
-  enabling_credit_play_slide:
-    - type: text
-      text: ENABLING CREDIT PLAY
-    - type: text
-      text: (machine|credits_string)
-  max_credits_reached_slide:
-    - type: text
-      text: MAX CREDITS REACHED
-  player_added_slide:
-    - type: text
-      text: PLAYER ADDED
-      font_size: 12
-      color: white
-sound_player:
-  credits_added:
-    credit_added_sound:
-      action: play
-      loops: 0
-  not_enough_credits:
-    need_more_money:
-      action: play
-      loops: 0
-  player_added:
-    player_added_sound:
-      action: play
-      loops: 0
-##! test
-#! assert_machine_variable 0 credit_units
-#! hit_and_release_switch s_coin_left
-#! hit_and_release_switch s_coin_left
-#! assert_machine_variable 2 credit_units
-#! start_game
-#! assert_machine_variable 0 credit_units
+<span class="c1">##! mode: credits</span>
+<span class="c1"># in modes/credits/config/credits.yaml</span>
+<span class="c1"># add some credits slides</span>
+<span class="nt">slide_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">credits_added</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">credit_added_slide</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">expire</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2s</span>
+<span class="w">  </span><span class="nt">not_enough_credits</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">not_enough_credits_slide</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">expire</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2s</span>
+<span class="w">  </span><span class="nt">enabling_free_play</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">enabling_free_play_slide</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">expire</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2s</span>
+<span class="w">  </span><span class="nt">enabling_credit_play</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">enabling_credit_play_slide</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">expire</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2s</span>
+<span class="w">  </span><span class="nt">max_credits_reached</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">max_credits_reached_slide</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">expire</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2s</span>
+<span class="w">  </span><span class="nt">player_added</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">player_added_slide</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">expire</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<span class="nt">slides</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">credit_added_slide</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(machine|credits_string)</span>
+<span class="w">  </span><span class="nt">not_enough_credits_slide</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(machine|credits_string)</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">INSERT COINS</span>
+<span class="w">  </span><span class="nt">enabling_free_play_slide</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ENABLING FREE PLAY</span>
+<span class="w">  </span><span class="nt">enabling_credit_play_slide</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ENABLING CREDIT PLAY</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(machine|credits_string)</span>
+<span class="w">  </span><span class="nt">max_credits_reached_slide</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MAX CREDITS REACHED</span>
+<span class="w">  </span><span class="nt">player_added_slide</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PLAYER ADDED</span>
+<span class="w">      </span><span class="nt">font_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">12</span>
+<span class="w">      </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">white</span>
+<span class="nt">sound_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">credits_added</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">credit_added_sound</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">play</span>
+<span class="w">      </span><span class="nt">loops</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">  </span><span class="nt">not_enough_credits</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">need_more_money</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">play</span>
+<span class="w">      </span><span class="nt">loops</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">  </span><span class="nt">player_added</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">player_added_sound</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">play</span>
+<span class="w">      </span><span class="nt">loops</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="c1">##! test</span>
+<span class="c1">#! assert_machine_variable 0 credit_units</span>
+<span class="c1">#! hit_and_release_switch s_coin_left</span>
+<span class="c1">#! hit_and_release_switch s_coin_left</span>
+<span class="c1">#! assert_machine_variable 2 credit_units</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! assert_machine_variable 0 credit_units</span>
 </code></pre></div>
 <p>There are several events that the credit module will post which you can
 use to trigger slides:</p>
@@ -34198,251 +34198,251 @@ tiers. Luckily, there is the
 <a href="../service_mode/">built-in service mode</a> which allows you to add
 <a href="../../config/settings/">more settings</a>. Let us
 add two settings and use them in the credits config:</p>
-<div class="highlight"><pre><span></span><code># in your machine wide config
-switches:
-  s_coin_left:
-    number:
-  s_service_coin:
-    number:
-settings:
-  credits_price_one_credit:
-    label: Price for one credit
-    values:
-      .25: &quot;25ct&quot;
-      .5: &quot;50ct&quot;
-      .75: &quot;75ct&quot;
-      1: &quot;1 dollar&quot;
-      2: &quot;2 dollar&quot;
-      3: &quot;3 dollar&quot;
-      4: &quot;4 dollar&quot;
-      5: &quot;5 dollar&quot;
-    default: .5
-    key_type: float
-    sort: 500
-  credits_price_tier2:
-    label: Price for price tier 2
-    values:
-      .25: &quot;25ct&quot;
-      .5: &quot;50ct&quot;
-      .75: &quot;75ct&quot;
-      1: &quot;1 dollar&quot;
-      2: &quot;2 dollar&quot;
-      3: &quot;3 dollar&quot;
-      4: &quot;4 dollar&quot;
-      5: &quot;5 dollar&quot;
-    default: 2
-    key_type: float
-    sort: 510
-  credits_credits_tier2:
-    label: Number of credits for tier 2
-    values:
-      2: &quot;2&quot;
-      3: &quot;3&quot;
-      4: &quot;4&quot;
-      5: &quot;5&quot;
-      6: &quot;6&quot;
-      7: &quot;7&quot;
-      8: &quot;8&quot;
-      9: &quot;9&quot;
-      10: &quot;10&quot;
-    default: 5
-    key_type: int
-    sort: 520
-credits:
-  max_credits: 12
-  free_play: false
-  service_credits_switch: s_service_coin
-  switches:
-    - switch: s_coin_left
-      type: money
-      value: .25
-  pricing_tiers:
-    - price: settings.credits_price_one_credit
-      credits: 1
-    - price: settings.credits_price_tier2
-      credits: settings.credits_credits_tier2
-  fractional_credit_expiration_time: 15m
-  credit_expiration_time: 2h
-  persist_credits_while_off_time: 1h
-  free_play_string: FREE PLAY
-  credits_string: CREDITS
+<div class="highlight"><pre><span></span><code><span class="c1"># in your machine wide config</span>
+<span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_coin_left</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_service_coin</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="nt">settings</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">credits_price_one_credit</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Price for one credit</span>
+<span class="w">    </span><span class="nt">values</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">.25</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;25ct&quot;</span>
+<span class="w">      </span><span class="nt">.5</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;50ct&quot;</span>
+<span class="w">      </span><span class="nt">.75</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;75ct&quot;</span>
+<span class="w">      </span><span class="nt">1</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1</span><span class="nv"> </span><span class="s">dollar&quot;</span>
+<span class="w">      </span><span class="nt">2</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;2</span><span class="nv"> </span><span class="s">dollar&quot;</span>
+<span class="w">      </span><span class="nt">3</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;3</span><span class="nv"> </span><span class="s">dollar&quot;</span>
+<span class="w">      </span><span class="nt">4</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;4</span><span class="nv"> </span><span class="s">dollar&quot;</span>
+<span class="w">      </span><span class="nt">5</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;5</span><span class="nv"> </span><span class="s">dollar&quot;</span>
+<span class="w">    </span><span class="nt">default</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.5</span>
+<span class="w">    </span><span class="nt">key_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">float</span>
+<span class="w">    </span><span class="nt">sort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">500</span>
+<span class="w">  </span><span class="nt">credits_price_tier2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Price for price tier 2</span>
+<span class="w">    </span><span class="nt">values</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">.25</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;25ct&quot;</span>
+<span class="w">      </span><span class="nt">.5</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;50ct&quot;</span>
+<span class="w">      </span><span class="nt">.75</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;75ct&quot;</span>
+<span class="w">      </span><span class="nt">1</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1</span><span class="nv"> </span><span class="s">dollar&quot;</span>
+<span class="w">      </span><span class="nt">2</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;2</span><span class="nv"> </span><span class="s">dollar&quot;</span>
+<span class="w">      </span><span class="nt">3</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;3</span><span class="nv"> </span><span class="s">dollar&quot;</span>
+<span class="w">      </span><span class="nt">4</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;4</span><span class="nv"> </span><span class="s">dollar&quot;</span>
+<span class="w">      </span><span class="nt">5</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;5</span><span class="nv"> </span><span class="s">dollar&quot;</span>
+<span class="w">    </span><span class="nt">default</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="w">    </span><span class="nt">key_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">float</span>
+<span class="w">    </span><span class="nt">sort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">510</span>
+<span class="w">  </span><span class="nt">credits_credits_tier2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Number of credits for tier 2</span>
+<span class="w">    </span><span class="nt">values</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">2</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;2&quot;</span>
+<span class="w">      </span><span class="nt">3</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;3&quot;</span>
+<span class="w">      </span><span class="nt">4</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;4&quot;</span>
+<span class="w">      </span><span class="nt">5</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;5&quot;</span>
+<span class="w">      </span><span class="nt">6</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;6&quot;</span>
+<span class="w">      </span><span class="nt">7</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;7&quot;</span>
+<span class="w">      </span><span class="nt">8</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;8&quot;</span>
+<span class="w">      </span><span class="nt">9</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;9&quot;</span>
+<span class="w">      </span><span class="nt">10</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;10&quot;</span>
+<span class="w">    </span><span class="nt">default</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+<span class="w">    </span><span class="nt">key_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">int</span>
+<span class="w">    </span><span class="nt">sort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">520</span>
+<span class="nt">credits</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">max_credits</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">12</span>
+<span class="w">  </span><span class="nt">free_play</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">  </span><span class="nt">service_credits_switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_service_coin</span>
+<span class="w">  </span><span class="nt">switches</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_coin_left</span>
+<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">money</span>
+<span class="w">      </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.25</span>
+<span class="w">  </span><span class="nt">pricing_tiers</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">price</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">settings.credits_price_one_credit</span>
+<span class="w">      </span><span class="nt">credits</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">price</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">settings.credits_price_tier2</span>
+<span class="w">      </span><span class="nt">credits</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">settings.credits_credits_tier2</span>
+<span class="w">  </span><span class="nt">fractional_credit_expiration_time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">15m</span>
+<span class="w">  </span><span class="nt">credit_expiration_time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2h</span>
+<span class="w">  </span><span class="nt">persist_credits_while_off_time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1h</span>
+<span class="w">  </span><span class="nt">free_play_string</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">FREE PLAY</span>
+<span class="w">  </span><span class="nt">credits_string</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CREDITS</span>
 </code></pre></div>
 <h2 id="h-check-out-this-complete-credits-config-file">(H) Check out this complete credits config file</h2>
 <p>Here's the complete credits config file from the Demo Man sample game.
 ( <code>demo_man/modes/credits/config/credits.yaml</code>):</p>
 <p>This is an example:</p>
-<div class="highlight"><pre><span></span><code># in your machine wide config
-#! displays:
-#!   window:
-#!     width: 600
-#!     height: 200
-#!   dmd:
-#!     width: 128
-#!     height: 32
-#!     default: true
-switches:
-  s_coin_left:
-    number:
-  s_service_coin:
-    number:
-settings:
-  credits_price_one_credit:
-    label: Price for one credit
-    values:
-      .25: &quot;25ct&quot;
-      .5: &quot;50ct&quot;
-      .75: &quot;75ct&quot;
-      1: &quot;1 dollar&quot;
-      2: &quot;2 dollar&quot;
-      3: &quot;3 dollar&quot;
-      4: &quot;4 dollar&quot;
-      5: &quot;5 dollar&quot;
-    default: .5
-    key_type: float
-    sort: 500
-  credits_price_tier2:
-    label: Price for price tier 2
-    values:
-      .25: &quot;25ct&quot;
-      .5: &quot;50ct&quot;
-      .75: &quot;75ct&quot;
-      1: &quot;1 dollar&quot;
-      2: &quot;2 dollar&quot;
-      3: &quot;3 dollar&quot;
-      4: &quot;4 dollar&quot;
-      5: &quot;5 dollar&quot;
-    default: 2
-    key_type: float
-    sort: 510
-  credits_credits_tier2:
-    label: Number of credits for tier 2
-    values:
-      2: &quot;2&quot;
-      3: &quot;3&quot;
-      4: &quot;4&quot;
-      5: &quot;5&quot;
-      6: &quot;6&quot;
-      7: &quot;7&quot;
-      8: &quot;8&quot;
-      9: &quot;9&quot;
-      10: &quot;10&quot;
-    default: 5
-    key_type: int
-    sort: 520
-credits:
-  max_credits: 12
-  free_play: false
-  service_credits_switch: s_service_coin
-  switches:
-    - switch: s_coin_left
-      type: money
-      value: .25
-  pricing_tiers:
-    - price: settings.credits_price_one_credit
-      credits: 1
-    - price: settings.credits_price_tier2
-      credits: settings.credits_credits_tier2
-  fractional_credit_expiration_time: 15m
-  credit_expiration_time: 2h
-  persist_credits_while_off_time: 1h
-  free_play_string: FREE PLAY
-  credits_string: CREDITS
-##! mode: attract
-# in modes/attract/config/attract.yaml
-# add credits string to your attract show
-show_player:
-  mode_attract_started: attract_display_loop
-shows:
-  attract_display_loop:
-    - duration: 2s
-      slides:
-        press_start:
-          target: dmd
-          widgets:
-            - type: Text
-              text: PRESS START
-          transition:
-            type: move_in
-            duration: 1s
-            direction: top
-    - duration: 2s
-      slides:
-        credits_slide:
-          target: dmd
-          widgets:
-            - type: text
-              text: (machine|credits_string)
-          transition:
-            type: move_in
-            duration: 1s
-            direction: bottom
-##! mode: credits
-# in modes/credits/config/credits.yaml
-# add some credits slides
-slide_player:
-  credits_added:
-    credit_added_slide:
-      expire: 2s
-  not_enough_credits:
-    not_enough_credits_slide:
-      expire: 2s
-  enabling_free_play:
-    enabling_free_play_slide:
-      expire: 2s
-  enabling_credit_play:
-    enabling_credit_play_slide:
-      expire: 2s
-  max_credits_reached:
-    max_credits_reached_slide:
-      expire: 2s
-  player_added:
-    player_added_slide:
-      expire: 1s
-slides:
-  credit_added_slide:
-    - type: text
-      text: (machine|credits_string)
-  not_enough_credits_slide:
-    - type: text
-      text: (machine|credits_string)
-    - type: text
-      text: INSERT COINS
-  enabling_free_play_slide:
-    - type: text
-      text: ENABLING FREE PLAY
-  enabling_credit_play_slide:
-    - type: text
-      text: ENABLING CREDIT PLAY
-    - type: text
-      text: (machine|credits_string)
-  max_credits_reached_slide:
-    - type: text
-      text: MAX CREDITS REACHED
-  player_added_slide:
-    - type: text
-      text: PLAYER ADDED
-      font_size: 12
-      color: white
-sound_player:
-  credits_added:
-    credit_added_sound:
-      action: play
-      loops: 0
-  not_enough_credits:
-    need_more_money:
-      action: play
-      loops: 0
-  player_added:
-    player_added_sound:
-      action: play
-      loops: 0
-##! test
-#! assert_machine_variable 0 credit_units
-#! hit_and_release_switch s_coin_left
-#! hit_and_release_switch s_coin_left
-#! assert_machine_variable 2 credit_units
-#! start_game
-#! assert_machine_variable 0 credit_units
+<div class="highlight"><pre><span></span><code><span class="c1"># in your machine wide config</span>
+<span class="c1">#! displays:</span>
+<span class="c1">#!   window:</span>
+<span class="c1">#!     width: 600</span>
+<span class="c1">#!     height: 200</span>
+<span class="c1">#!   dmd:</span>
+<span class="c1">#!     width: 128</span>
+<span class="c1">#!     height: 32</span>
+<span class="c1">#!     default: true</span>
+<span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_coin_left</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_service_coin</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="nt">settings</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">credits_price_one_credit</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Price for one credit</span>
+<span class="w">    </span><span class="nt">values</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">.25</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;25ct&quot;</span>
+<span class="w">      </span><span class="nt">.5</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;50ct&quot;</span>
+<span class="w">      </span><span class="nt">.75</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;75ct&quot;</span>
+<span class="w">      </span><span class="nt">1</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1</span><span class="nv"> </span><span class="s">dollar&quot;</span>
+<span class="w">      </span><span class="nt">2</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;2</span><span class="nv"> </span><span class="s">dollar&quot;</span>
+<span class="w">      </span><span class="nt">3</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;3</span><span class="nv"> </span><span class="s">dollar&quot;</span>
+<span class="w">      </span><span class="nt">4</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;4</span><span class="nv"> </span><span class="s">dollar&quot;</span>
+<span class="w">      </span><span class="nt">5</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;5</span><span class="nv"> </span><span class="s">dollar&quot;</span>
+<span class="w">    </span><span class="nt">default</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.5</span>
+<span class="w">    </span><span class="nt">key_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">float</span>
+<span class="w">    </span><span class="nt">sort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">500</span>
+<span class="w">  </span><span class="nt">credits_price_tier2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Price for price tier 2</span>
+<span class="w">    </span><span class="nt">values</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">.25</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;25ct&quot;</span>
+<span class="w">      </span><span class="nt">.5</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;50ct&quot;</span>
+<span class="w">      </span><span class="nt">.75</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;75ct&quot;</span>
+<span class="w">      </span><span class="nt">1</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1</span><span class="nv"> </span><span class="s">dollar&quot;</span>
+<span class="w">      </span><span class="nt">2</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;2</span><span class="nv"> </span><span class="s">dollar&quot;</span>
+<span class="w">      </span><span class="nt">3</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;3</span><span class="nv"> </span><span class="s">dollar&quot;</span>
+<span class="w">      </span><span class="nt">4</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;4</span><span class="nv"> </span><span class="s">dollar&quot;</span>
+<span class="w">      </span><span class="nt">5</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;5</span><span class="nv"> </span><span class="s">dollar&quot;</span>
+<span class="w">    </span><span class="nt">default</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="w">    </span><span class="nt">key_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">float</span>
+<span class="w">    </span><span class="nt">sort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">510</span>
+<span class="w">  </span><span class="nt">credits_credits_tier2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Number of credits for tier 2</span>
+<span class="w">    </span><span class="nt">values</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">2</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;2&quot;</span>
+<span class="w">      </span><span class="nt">3</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;3&quot;</span>
+<span class="w">      </span><span class="nt">4</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;4&quot;</span>
+<span class="w">      </span><span class="nt">5</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;5&quot;</span>
+<span class="w">      </span><span class="nt">6</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;6&quot;</span>
+<span class="w">      </span><span class="nt">7</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;7&quot;</span>
+<span class="w">      </span><span class="nt">8</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;8&quot;</span>
+<span class="w">      </span><span class="nt">9</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;9&quot;</span>
+<span class="w">      </span><span class="nt">10</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;10&quot;</span>
+<span class="w">    </span><span class="nt">default</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+<span class="w">    </span><span class="nt">key_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">int</span>
+<span class="w">    </span><span class="nt">sort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">520</span>
+<span class="nt">credits</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">max_credits</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">12</span>
+<span class="w">  </span><span class="nt">free_play</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">  </span><span class="nt">service_credits_switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_service_coin</span>
+<span class="w">  </span><span class="nt">switches</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_coin_left</span>
+<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">money</span>
+<span class="w">      </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.25</span>
+<span class="w">  </span><span class="nt">pricing_tiers</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">price</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">settings.credits_price_one_credit</span>
+<span class="w">      </span><span class="nt">credits</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">price</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">settings.credits_price_tier2</span>
+<span class="w">      </span><span class="nt">credits</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">settings.credits_credits_tier2</span>
+<span class="w">  </span><span class="nt">fractional_credit_expiration_time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">15m</span>
+<span class="w">  </span><span class="nt">credit_expiration_time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2h</span>
+<span class="w">  </span><span class="nt">persist_credits_while_off_time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1h</span>
+<span class="w">  </span><span class="nt">free_play_string</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">FREE PLAY</span>
+<span class="w">  </span><span class="nt">credits_string</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CREDITS</span>
+<span class="c1">##! mode: attract</span>
+<span class="c1"># in modes/attract/config/attract.yaml</span>
+<span class="c1"># add credits string to your attract show</span>
+<span class="nt">show_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">mode_attract_started</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">attract_display_loop</span>
+<span class="nt">shows</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">attract_display_loop</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2s</span>
+<span class="w">      </span><span class="nt">slides</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">press_start</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dmd</span>
+<span class="w">          </span><span class="nt">widgets</span><span class="p">:</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Text</span>
+<span class="w">              </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PRESS START</span>
+<span class="w">          </span><span class="nt">transition</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">move_in</span>
+<span class="w">            </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<span class="w">            </span><span class="nt">direction</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">top</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2s</span>
+<span class="w">      </span><span class="nt">slides</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">credits_slide</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dmd</span>
+<span class="w">          </span><span class="nt">widgets</span><span class="p">:</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">              </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(machine|credits_string)</span>
+<span class="w">          </span><span class="nt">transition</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">move_in</span>
+<span class="w">            </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<span class="w">            </span><span class="nt">direction</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bottom</span>
+<span class="c1">##! mode: credits</span>
+<span class="c1"># in modes/credits/config/credits.yaml</span>
+<span class="c1"># add some credits slides</span>
+<span class="nt">slide_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">credits_added</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">credit_added_slide</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">expire</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2s</span>
+<span class="w">  </span><span class="nt">not_enough_credits</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">not_enough_credits_slide</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">expire</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2s</span>
+<span class="w">  </span><span class="nt">enabling_free_play</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">enabling_free_play_slide</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">expire</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2s</span>
+<span class="w">  </span><span class="nt">enabling_credit_play</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">enabling_credit_play_slide</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">expire</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2s</span>
+<span class="w">  </span><span class="nt">max_credits_reached</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">max_credits_reached_slide</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">expire</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2s</span>
+<span class="w">  </span><span class="nt">player_added</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">player_added_slide</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">expire</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<span class="nt">slides</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">credit_added_slide</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(machine|credits_string)</span>
+<span class="w">  </span><span class="nt">not_enough_credits_slide</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(machine|credits_string)</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">INSERT COINS</span>
+<span class="w">  </span><span class="nt">enabling_free_play_slide</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ENABLING FREE PLAY</span>
+<span class="w">  </span><span class="nt">enabling_credit_play_slide</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ENABLING CREDIT PLAY</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(machine|credits_string)</span>
+<span class="w">  </span><span class="nt">max_credits_reached_slide</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MAX CREDITS REACHED</span>
+<span class="w">  </span><span class="nt">player_added_slide</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PLAYER ADDED</span>
+<span class="w">      </span><span class="nt">font_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">12</span>
+<span class="w">      </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">white</span>
+<span class="nt">sound_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">credits_added</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">credit_added_sound</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">play</span>
+<span class="w">      </span><span class="nt">loops</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">  </span><span class="nt">not_enough_credits</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">need_more_money</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">play</span>
+<span class="w">      </span><span class="nt">loops</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">  </span><span class="nt">player_added</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">player_added_sound</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">play</span>
+<span class="w">      </span><span class="nt">loops</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="c1">##! test</span>
+<span class="c1">#! assert_machine_variable 0 credit_units</span>
+<span class="c1">#! hit_and_release_switch s_coin_left</span>
+<span class="c1">#! hit_and_release_switch s_coin_left</span>
+<span class="c1">#! assert_machine_variable 2 credit_units</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! assert_machine_variable 0 credit_units</span>
 </code></pre></div>
 <p>A game will always cost 1 credit per player. In this example, 50ct will
 give you 1 credit and \$2 will give you 5 credits. When <code>s_coin_left</code> is

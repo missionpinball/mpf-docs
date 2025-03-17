@@ -33707,15 +33707,15 @@ letters (like the "a") from the node. What you're left with is the
 node address and LED number.</p>
 <p>For example, the Shoot Again light with the address <code>8a-LP-47</code> would be
 entered as <code>number: 8-47</code>.</p>
-<div class="highlight"><pre><span></span><code>lights:
-  backlight:
-    number: 0-0    # 0-0 is the special address for the backlight
-  start_button:
-    number: 1-2
-  tourney_start_button:
-    number: 1-3
-  shoot_again:
-    number: 8-47
+<div class="highlight"><pre><span></span><code><span class="nt">lights</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">backlight</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0-0</span><span class="w">    </span><span class="c1"># 0-0 is the special address for the backlight</span>
+<span class="w">  </span><span class="nt">start_button</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1-2</span>
+<span class="w">  </span><span class="nt">tourney_start_button</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1-3</span>
+<span class="w">  </span><span class="nt">shoot_again</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8-47</span>
 </code></pre></div>
 <p>The backbox backlight</p>
 <p>:   Stern SPIKE systems have controllable brightness for the white
@@ -33746,15 +33746,15 @@ your light shows and lights would not show up nicely in the MPF monitor.</p>
 <p>Therefore, you can define a RGB light with multiple channels. What this
 does is create a new virtual RGB LED which is a grouping of the three
 LED channels into the RGB LED. Then you can use it like any light.</p>
-<div class="highlight"><pre><span></span><code>lights:
-  left_lane_arrow_rgb:
-    channels:
-      red:
-        number: 1-10
-      green:
-        number: 1-11
-      blue:
-        number: 1-12
+<div class="highlight"><pre><span></span><code><span class="nt">lights</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">left_lane_arrow_rgb</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">channels</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">red</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1-10</span>
+<span class="w">      </span><span class="nt">green</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1-11</span>
+<span class="w">      </span><span class="nt">blue</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1-12</span>
 </code></pre></div>
 <h2 id="what-if-it-did-not-work">What if it did not work?</h2>
 <p>Have a look at our

@@ -33998,48 +33998,48 @@ example below, we're defining a sound loop set called <em>basic_beat</em> that
 references the sound asset named <em>kick</em>. This is the simplest sound loop
 set definition you can have. The volume of the <em>kick</em> sound will be
 taken from the sound asset definition.</p>
-<div class="highlight"><pre><span></span><code>sound_loop_sets:
-  basic_beat:
-    sound: kick
+<div class="highlight"><pre><span></span><code><span class="nt">sound_loop_sets</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">basic_beat</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">sound</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kick</span>
 </code></pre></div>
 <p><strong>Option 2: Sound Loop Set With Multiple Layers</strong></p>
 <p>When specifying multiple layers use a dash (and a space) to dictate
 where a new layer starts, like this:</p>
-<div class="highlight"><pre><span></span><code>sound_loop_sets:
-  basic_beat:
-    sound: kick
-    volume: 0.5
-    tempo: 130.0
-    layers:
-      - sound: hihat
-        volume: 0.7
-        initial_state: stop
-      - sound: snare
-        volume: 0.6
-        initial_state: stop
-      - sound: clap
-        volume: 0.45
-        initial_state: stop
-    events_when_played: basic_beat_played
-    events_when_stopped: basic_beat_stopped
-    events_when_looping: basic_beat_looped
-    fade_out: 1s
-  basic_beat2:
-    sound: kick2
-    volume: 0.5
-    tempo: 130.0
-    layers:
-      - sound: hihat
-        volume: 0.7
-      - sound: snare
-        volume: 0.6
-      - sound: clap
-        volume: 0.4
-        initial_state: stop
-      - sound: bass_synth
-        volume: 0.5
-        initial_state: play
-    fade_out: 1s
+<div class="highlight"><pre><span></span><code><span class="nt">sound_loop_sets</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">basic_beat</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">sound</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kick</span>
+<span class="w">    </span><span class="nt">volume</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.5</span>
+<span class="w">    </span><span class="nt">tempo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">130.0</span>
+<span class="w">    </span><span class="nt">layers</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">sound</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hihat</span>
+<span class="w">        </span><span class="nt">volume</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.7</span>
+<span class="w">        </span><span class="nt">initial_state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stop</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">sound</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">snare</span>
+<span class="w">        </span><span class="nt">volume</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.6</span>
+<span class="w">        </span><span class="nt">initial_state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stop</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">sound</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">clap</span>
+<span class="w">        </span><span class="nt">volume</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.45</span>
+<span class="w">        </span><span class="nt">initial_state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stop</span>
+<span class="w">    </span><span class="nt">events_when_played</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">basic_beat_played</span>
+<span class="w">    </span><span class="nt">events_when_stopped</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">basic_beat_stopped</span>
+<span class="w">    </span><span class="nt">events_when_looping</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">basic_beat_looped</span>
+<span class="w">    </span><span class="nt">fade_out</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<span class="w">  </span><span class="nt">basic_beat2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">sound</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kick2</span>
+<span class="w">    </span><span class="nt">volume</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.5</span>
+<span class="w">    </span><span class="nt">tempo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">130.0</span>
+<span class="w">    </span><span class="nt">layers</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">sound</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hihat</span>
+<span class="w">        </span><span class="nt">volume</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.7</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">sound</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">snare</span>
+<span class="w">        </span><span class="nt">volume</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.6</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">sound</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">clap</span>
+<span class="w">        </span><span class="nt">volume</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.4</span>
+<span class="w">        </span><span class="nt">initial_state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stop</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">sound</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bass_synth</span>
+<span class="w">        </span><span class="nt">volume</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.5</span>
+<span class="w">        </span><span class="nt">initial_state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">play</span>
+<span class="w">    </span><span class="nt">fade_out</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
 </code></pre></div>
 <h2 id="required-settings">Required settings</h2>
 <p>The following sections are required for each named sound loop set in

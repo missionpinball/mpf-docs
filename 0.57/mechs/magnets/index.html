@@ -33690,22 +33690,22 @@ to four logic level outputs (3 inputs + 1 clock). The board contains
 FETs with flyback diode and a logic buffer for further protection.</p>
 <h2 id="config">Config</h2>
 <p>This is an example:</p>
-<div class="highlight"><pre><span></span><code>coils:
-  magnet_coil:
-    number:
-    default_pulse_ms: 100
-    default_hold_power: 0.375
+<div class="highlight"><pre><span></span><code><span class="nt">coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">magnet_coil</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">default_pulse_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="w">    </span><span class="nt">default_hold_power</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.375</span>
 
-switches:
-  grab_switch:
-    number:
+<span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">grab_switch</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
 
-magnets:
-  magnet:
-    magnet_coil: magnet_coil
-    grab_switch: grab_switch
-    release_ball_events: magnet_release
-    fling_ball_events: magnet_fling
+<span class="nt">magnets</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">magnet</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">magnet_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">magnet_coil</span>
+<span class="w">    </span><span class="nt">grab_switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">grab_switch</span>
+<span class="w">    </span><span class="nt">release_ball_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">magnet_release</span>
+<span class="w">    </span><span class="nt">fling_ball_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">magnet_fling</span>
 </code></pre></div>
 <h2 id="monitorable-properties">Monitorable Properties</h2>
 <p>For

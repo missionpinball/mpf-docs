@@ -33679,22 +33679,22 @@ once without changing state after the first time). This event works well
 to control shows, lights, slides, and to restore them on the next ball.
 However it should not be used for scoring (to handle an event when the
 counter changes, consider the <em>(name)_hit</em> event instead).</p>
-<div class="highlight"><pre><span></span><code>##! mode: my_mode
-counters:
-  my_counter:
-    count_events: my_count_event
-    starting_count: 0
-    count_complete_value: 3
-show_player:
-  logicblock_my_counter_updated{value == 0}:
-    my_show_initial:
-      key: my_counter_show # this is to remove the previous show from the same player
-  logicblock_my_counter_updated{value == 1}:
-    my_show_first_hit:
-      key: my_counter_show # this is to remove the previous show from the same player
-  logicblock_my_counter_updated{value &gt;= 2}:
-    my_show_final:
-      key: my_counter_show # this is to remove the previous show from the same player
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: my_mode</span>
+<span class="nt">counters</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_counter</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">count_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my_count_event</span>
+<span class="w">    </span><span class="nt">starting_count</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">count_complete_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="nt">show_player</span><span class="p">:</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">logicblock_my_counter_updated{value == 0}</span><span class="p p-Indicator">:</span>
+<span class="w">    </span><span class="nt">my_show_initial</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my_counter_show</span><span class="w"> </span><span class="c1"># this is to remove the previous show from the same player</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">logicblock_my_counter_updated{value == 1}</span><span class="p p-Indicator">:</span>
+<span class="w">    </span><span class="nt">my_show_first_hit</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my_counter_show</span><span class="w"> </span><span class="c1"># this is to remove the previous show from the same player</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">logicblock_my_counter_updated{value &gt;= 2}</span><span class="p p-Indicator">:</span>
+<span class="w">    </span><span class="nt">my_show_final</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my_counter_show</span><span class="w"> </span><span class="c1"># this is to remove the previous show from the same player</span>
 </code></pre></div>
 <p>Every time <code>my_counter</code> is updated (or restored) it will post
 <code>logicblock_my_counter_updated</code>. Depending on the value of <code>my_counter</code>
@@ -33703,73 +33703,73 @@ or <code>my_show_final</code> (value is 2 or 3) are shown. All show_players have
 the same key so they will stop any other show playing with the same key.</p>
 <p>Another way to achieve the same thing is this:</p>
 <p>You can even achieve this a bit simpler than in the example. Like this:</p>
-<div class="highlight"><pre><span></span><code>##! mode: my_mode
-counters:
-  my_counter:
-    count_events: my_count_event
-    starting_count: 0
-    count_complete_value: 3
-show_player:
-  logicblock_my_counter_updated{enabled}:
-    my_show:
-      key: my_counter_show
-      start_step: value + 1
-      show_tokens:
-        led1: l_led1
-        led2: l_led2
-        led3: l_led3
-        color: magenta
-  logicblock_my_counter_updated{not enabled}:
-    my_counter_show: stop
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: my_mode</span>
+<span class="nt">counters</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_counter</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">count_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my_count_event</span>
+<span class="w">    </span><span class="nt">starting_count</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">count_complete_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="nt">show_player</span><span class="p">:</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">logicblock_my_counter_updated{enabled}</span><span class="p p-Indicator">:</span>
+<span class="w">    </span><span class="nt">my_show</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my_counter_show</span>
+<span class="w">      </span><span class="nt">start_step</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value + 1</span>
+<span class="w">      </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">led1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_led1</span>
+<span class="w">        </span><span class="nt">led2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_led2</span>
+<span class="w">        </span><span class="nt">led3</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_led3</span>
+<span class="w">        </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">magenta</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">logicblock_my_counter_updated{not enabled}</span><span class="p p-Indicator">:</span>
+<span class="w">    </span><span class="nt">my_counter_show</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stop</span>
 </code></pre></div>
 <p>This will start the show <code>my_show</code> at the value of the counter
 <code>my_counter</code>. For instance when the counter is 0 it will start step 1,
 counter 1 will run step 2 and so on. Once the counter is disabled the
 show it stopped (but other behaviors are possible).</p>
 <p><code>my_show</code> could look like this:</p>
-<div class="highlight"><pre><span></span><code>##! show: my_show
-#show_version=5
-- duration: -1
-  lights:
-    (led1): off
-    (led2): off
-    (led3): off
-- duration: -1
-  lights:
-    (led1): (color)
-    (led2): off
-    (led3): off
-- duration: -1
-  lights:
-    (led1): (color)
-    (led2): (color)
-    (led3): off
-- duration: -1
-  lights:
-    (led1): (color)
-    (led2): (color)
-    (led3): (color)
+<div class="highlight"><pre><span></span><code><span class="c1">##! show: my_show</span>
+<span class="c1">#show_version=5</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-1</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">(led1)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">off</span>
+<span class="w">    </span><span class="nt">(led2)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">off</span>
+<span class="w">    </span><span class="nt">(led3)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">off</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-1</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">(led1)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(color)</span>
+<span class="w">    </span><span class="nt">(led2)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">off</span>
+<span class="w">    </span><span class="nt">(led3)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">off</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-1</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">(led1)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(color)</span>
+<span class="w">    </span><span class="nt">(led2)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(color)</span>
+<span class="w">    </span><span class="nt">(led3)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">off</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-1</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">(led1)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(color)</span>
+<span class="w">    </span><span class="nt">(led2)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(color)</span>
+<span class="w">    </span><span class="nt">(led3)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(color)</span>
 </code></pre></div>
 <h2 id="actions-which-should-only-happen-once">Actions which should only happen once</h2>
 <p>If you want something to happen only once when the logic_block advances
 (and not on mode restart) you should use the <code>_hit</code> event. E.g. for a
 callout use this:</p>
-<div class="highlight"><pre><span></span><code>##! mode: my_mode
-counters:
-  my_counter:
-    count_events: my_count_event
-    starting_count: 0
-    count_complete_value: 10
-sound_player:
-  logicblock_my_counter_hit{remaining == 5}:
-    sound_just_5_remaining:
-      action: play
-  logicblock_my_counter_hit{remaining == 2}:
-    sound_just_2_remaining:
-      action: play
-  logicblock_my_counter_hit{remaining == 1}:
-    sound_just_1_remaining:
-      action: play
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: my_mode</span>
+<span class="nt">counters</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_counter</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">count_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my_count_event</span>
+<span class="w">    </span><span class="nt">starting_count</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">count_complete_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="nt">sound_player</span><span class="p">:</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">logicblock_my_counter_hit{remaining == 5}</span><span class="p p-Indicator">:</span>
+<span class="w">    </span><span class="nt">sound_just_5_remaining</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">play</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">logicblock_my_counter_hit{remaining == 2}</span><span class="p p-Indicator">:</span>
+<span class="w">    </span><span class="nt">sound_just_2_remaining</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">play</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">logicblock_my_counter_hit{remaining == 1}</span><span class="p p-Indicator">:</span>
+<span class="w">    </span><span class="nt">sound_just_1_remaining</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">play</span>
 </code></pre></div>
 <h2 id="other-triggered-events">Other Triggered Events</h2>
 <p>You can also have a show depend on the state of a logic block while
@@ -33777,11 +33777,11 @@ being triggered by another event, using
 <a href="../../../events/overview/conditional/">Conditional Events</a>.</p>
 <p>You can access the value directly from the device variable using
 <code>devices.counters.my_counter.value</code>:</p>
-<div class="highlight"><pre><span></span><code>##! mode: my_mode
-show_player:
-  some_other_event{devices.counters.my_counter.value==0}: my_show_initial
-  some_other_event{devices.counters.my_counter.value==1}: my_show_once_hit
-  some_other_event{devices.counters.my_counter.value==2}: my_show_twice_hit
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: my_mode</span>
+<span class="nt">show_player</span><span class="p">:</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">some_other_event{devices.counters.my_counter.value==0}</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my_show_initial</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">some_other_event{devices.counters.my_counter.value==1}</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my_show_once_hit</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">some_other_event{devices.counters.my_counter.value==2}</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my_show_twice_hit</span>
 </code></pre></div>
 <p>Related Events</p>
 <ul>

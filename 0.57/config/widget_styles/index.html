@@ -33747,41 +33747,41 @@ styles for your widgets.</p>
 A widget will use the style <code>(name)_default</code> if no other style is
 specified. For instance, a default style for all
 <a href="../../mc/widgets/text/">text widgets</a> would look like:</p>
-<div class="highlight"><pre><span></span><code>widget_styles:
-  text_default:
-    font_size: 21
-    color: red
+<div class="highlight"><pre><span></span><code><span class="nt">widget_styles</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">text_default</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">font_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">21</span>
+<span class="w">    </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
 </code></pre></div>
 <h2 id="specifying-widget-styles">Specifying widget styles</h2>
 <p>You can also specify re-usable styles and apply them to widgets. In the
 following example, the text "HELLO" will render at font size 100:</p>
-<div class="highlight"><pre><span></span><code>widget_styles:
-  big_style:
-    font_size: 100
-slides:
-  slide1:
-    - type: text
-      text: HELLO
-      style: big_style
+<div class="highlight"><pre><span></span><code><span class="nt">widget_styles</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">big_style</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">font_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="nt">slides</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">slide1</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HELLO</span>
+<span class="w">      </span><span class="nt">style</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">big_style</span>
 </code></pre></div>
 <p>You can supply multiple styles to a single widget, and they will be
 applied in the order given.</p>
-<div class="highlight"><pre><span></span><code>widget_styles:
-  warning_text:
-    font_size: 12
-    color: yellow
-  bottom_left:
-    anchor_x: left
-    anchor_y: bottom
-    x: 5
-    y: 5
-  hurryup:
-    color: red
-widgets:
-  timer_runout:
-    - type: text
-      text: Hurry!
-      style: warning_text, bottom_left, hurryup
+<div class="highlight"><pre><span></span><code><span class="nt">widget_styles</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">warning_text</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">font_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">12</span>
+<span class="w">    </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yellow</span>
+<span class="w">  </span><span class="nt">bottom_left</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">anchor_x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">left</span>
+<span class="w">    </span><span class="nt">anchor_y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bottom</span>
+<span class="w">    </span><span class="nt">x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+<span class="w">    </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+<span class="w">  </span><span class="nt">hurryup</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
+<span class="nt">widgets</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">timer_runout</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Hurry!</span>
+<span class="w">      </span><span class="nt">style</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">warning_text, bottom_left, hurryup</span>
 </code></pre></div>
 <p>In the above example, the text "Hurry!" will be anchored in the
 lower-left of the display and rendered at size 12 and color red. Notice

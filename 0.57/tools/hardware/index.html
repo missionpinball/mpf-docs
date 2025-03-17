@@ -33685,30 +33685,30 @@ configuration in your hardware platform section to enable this.</p>
 <p>MPF will benchmark latency and jitter of inputs, outputs and rules for
 your hardware setup (i.e. your controller with your OS and hardware).
 This needs to be configured:</p>
-<div class="highlight"><pre><span></span><code>switches:
-  s_test1:
-    number:
-  s_test2:
-    number:
+<div class="highlight"><pre><span></span><code><span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_test1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_test2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
 
-coils:
-  c_coil1:
-    number:
-  c_coil2:
-    number:
-    allow_enable: true
+<span class="nt">coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">c_coil1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">c_coil2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">allow_enable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 
-flippers:
-  f_flipper:
-    activation_switch: s_test1
-    main_coil: c_coil2
+<span class="nt">flippers</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">f_flipper</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">activation_switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_test1</span>
+<span class="w">    </span><span class="nt">main_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_coil2</span>
 
-hardware_benchmark:
-  coil1: c_coil1
-  coil2: c_coil2
-  switch1: s_test1
-  switch2: s_test2
-  flipper: f_flipper
+<span class="nt">hardware_benchmark</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">coil1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_coil1</span>
+<span class="w">  </span><span class="nt">coil2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_coil2</span>
+<span class="w">  </span><span class="nt">switch1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_test1</span>
+<span class="w">  </span><span class="nt">switch2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_test2</span>
+<span class="w">  </span><span class="nt">flipper</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">f_flipper</span>
 </code></pre></div>
 <p>Disconnect or disable high voltage. Then connect <code>s_test1</code>
 to <code>c_coil1</code> and <code>s_test2</code> to

@@ -33684,23 +33684,23 @@ In this example, coil <code>c_player1_reel10</code> has number <code>0-0-0</code
 <p><code>?-0-?</code>: always 0 (1 usb port only drives one MCU)</p>
 <p><code>?-?-0</code>: first output (that is wing 0, pin 0)</p>
 <p>Coil <code>c_player1_reel100</code> is driven by the same card, second output (that is wing 0, pin 1)</p>
-<div class="highlight"><pre><span></span><code>#config_version=6
+<div class="highlight"><pre><span></span><code><span class="c1">#config_version=6</span>
 
-hardware:
-  platform: opp
-  driverboards: gen2
+<span class="nt">hardware</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">opp</span>
+<span class="w">  </span><span class="nt">driverboards</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gen2</span>
 
-opp:
-    ports: /dev/ttyACM0, /dev/ttyACM1,/dev/ttyACM2, /dev/ttyACM3, /dev/ttyACM4, /dev/ttyACM5, /dev/ttyACM6
+<span class="nt">opp</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/dev/ttyACM0, /dev/ttyACM1,/dev/ttyACM2, /dev/ttyACM3, /dev/ttyACM4, /dev/ttyACM5, /dev/ttyACM6</span>
 
-coils:
-  # Board LB_1_16O16, id #0
-  c_player1_reel10:
-    number: 0-0-0
-    default_pulse_ms: 7
-  c_player1_reel100:
-    number: 0-0-1
-    default_pulse_ms: 7
+<span class="nt">coils</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># Board LB_1_16O16, id #0</span>
+<span class="w">  </span><span class="nt">c_player1_reel10</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0-0-0</span>
+<span class="w">    </span><span class="nt">default_pulse_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">7</span>
+<span class="w">  </span><span class="nt">c_player1_reel100</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0-0-1</span>
+<span class="w">    </span><span class="nt">default_pulse_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">7</span>
 </code></pre></div>
 <p>To set the card serial number and configure the wings, one will have to read the <a href="https://gitlab.com/mrechte/open-pinball-project/-/blob/master/doc/brdIntf.fodt">interface manual</a>
 and use a PC with <a href="https://gitlab.com/mrechte/open-pinball-project/-/tree/master/firmware/tools">gen2test.py</a> utility.</p>

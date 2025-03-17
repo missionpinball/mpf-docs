@@ -33677,21 +33677,21 @@ periods of time.</p>
 </ul>
 <h2 id="config">Config</h2>
 <p>Up-Down ramps are configured like a normal diverter:</p>
-<div class="highlight"><pre><span></span><code>#! coils:
-#!   c_ramp1_up:
-#!     number:
-#!   c_ramp2_up:
-#!     number:
-#!   c_ramp2_down:
-#!     number:
-diverters:
-  up_down_one_coil:
-    activation_coil: c_ramp1_up
-    type: hold
-  up_down_two_coils:
-    activation_coil: c_ramp2_up
-    deactivation_coil: c_ramp2_down
-    type: pulse
+<div class="highlight"><pre><span></span><code><span class="c1">#! coils:</span>
+<span class="c1">#!   c_ramp1_up:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   c_ramp2_up:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   c_ramp2_down:</span>
+<span class="c1">#!     number:</span>
+<span class="nt">diverters</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">up_down_one_coil</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">activation_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_ramp1_up</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hold</span>
+<span class="w">  </span><span class="nt">up_down_two_coils</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">activation_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_ramp2_up</span>
+<span class="w">    </span><span class="nt">deactivation_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_ramp2_down</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pulse</span>
 </code></pre></div>
 <p>Related How To guides:</p>
 <ul>

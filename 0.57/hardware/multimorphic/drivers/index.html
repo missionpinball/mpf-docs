@@ -33825,20 +33825,20 @@ example, Output 0 is on Pin 1, and there is a key pin at 2 or 3. Check
 the manual for the exact mapping.</p>
 </div>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>coils:
-  some_coil:
-    number: A0-B1-6
-    default_pulse_ms: 30
+<div class="highlight"><pre><span></span><code><span class="nt">coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">some_coil</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A0-B1-6</span>
+<span class="w">    </span><span class="nt">default_pulse_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
 </code></pre></div>
 <h2 id="burst-switches-as-local-outputs-p3-roc-only">Burst Switches as Local Outputs (P3-Roc only)</h2>
 <p><img alt="image" src="../../images/multimorphic_p3_roc.png" /></p>
 <p>If you want to use burst switches as local outputs set DIP switch 1 to
 <code>on</code> on the P3-Roc. You can use those 64 output as direct outputs:</p>
-<div class="highlight"><pre><span></span><code>coils:
-  local_output0:
-    number: direct-0    # direct driver 0
-  local_output20:
-    number: direct-20   # direct driver 20
+<div class="highlight"><pre><span></span><code><span class="nt">coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">local_output0</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">direct-0</span><span class="w">    </span><span class="c1"># direct driver 0</span>
+<span class="w">  </span><span class="nt">local_output20</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">direct-20</span><span class="w">   </span><span class="c1"># direct driver 20</span>
 </code></pre></div>
 <p>Make sure to assign IDs &gt;= 2 to all PD-16 boards if you set DIP 1 (MPF
 cannot check this for you). Local outputs behave just like any other
@@ -33846,13 +33846,13 @@ output on the P3-Roc. Hardware rules, pulse, hold, pwm etc. will behave
 exactly the same way.</p>
 <p>You may also use outputs as <code>digital_outputs</code>. For instance, to control
 a motor driver circuit:</p>
-<div class="highlight"><pre><span></span><code>digital_outputs:
-  motor_left:
-    number: direct-5
-    type: driver
-  motor_rigth:
-    number: direct-6
-    type: driver
+<div class="highlight"><pre><span></span><code><span class="nt">digital_outputs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">motor_left</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">direct-5</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">driver</span>
+<span class="w">  </span><span class="nt">motor_rigth</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">direct-6</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">driver</span>
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -33874,20 +33874,20 @@ outputs with additional circuits (not directly).</p>
 <p>The P-Roc, P3-Roc and/or PD-16 have the ability to specify the "pulse
 time". Pulse time is the coil's initial kick time. For example,
 consider the following configuration:</p>
-<div class="highlight"><pre><span></span><code>coils:
-  some_coil:
-    number:
-    default_pulse_ms: 30
+<div class="highlight"><pre><span></span><code><span class="nt">coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">some_coil</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">default_pulse_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
 </code></pre></div>
 <p>When MPF sends this coil a pulse command, the coil will be fired for
 30ms.</p>
 <h3 id="pulse-power">Pulse Power</h3>
 <p>You can also set the power of pulses on your coil:</p>
-<div class="highlight"><pre><span></span><code>coils:
-  some_coil:
-    number:
-    default_pulse_ms: 30
-    default_pulse_power: 0.5
+<div class="highlight"><pre><span></span><code><span class="nt">coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">some_coil</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">default_pulse_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+<span class="w">    </span><span class="nt">default_pulse_power</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.5</span>
 </code></pre></div>
 <p>See the hold power section below for internal details about PWM times.
 With the P-Roc and P3-Roc it is not possible to use <code>default_hold_power</code>
@@ -33900,11 +33900,11 @@ It can range from 0.0 to 1.0 and defines the time share the coil is on
 <p>The P-Roc internally uses two parameters which determine how many
 milliseconds the coil will be on (pwm-on time) and off (pwm-off time).
 MPF will calculate those based on your power settings.</p>
-<div class="highlight"><pre><span></span><code>coils:
-  some_coil:
-    number:
-    default_pulse_ms: 32
-    default_hold_power: 0.5
+<div class="highlight"><pre><span></span><code><span class="nt">coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">some_coil</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">default_pulse_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">32</span>
+<span class="w">    </span><span class="nt">default_hold_power</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.5</span>
 </code></pre></div>
 <p>When enabled, this driver will be pulsed for 32ms and then hold on at
 50% duty which will convert to 1ms on, 1ms off, 1ms on, 1ms off and so
@@ -33917,15 +33917,15 @@ pulses. The recycle time is not configurable on the P-Roc but you can
 turn it on or off (default on). Default recycle time (called reload in
 the P/P3-Roc) is <code>64ms</code>.</p>
 <p>This is an example:</p>
-<div class="highlight"><pre><span></span><code>coils:
-  some_coil_with_recycle:
-    number:
-    default_pulse_ms: 32
-    default_recycle: true
-  some_coil_without_recycle:
-    number:
-    default_pulse_ms: 32
-    default_recycle: false
+<div class="highlight"><pre><span></span><code><span class="nt">coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">some_coil_with_recycle</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">default_pulse_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">32</span>
+<span class="w">    </span><span class="nt">default_recycle</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">some_coil_without_recycle</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">default_pulse_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">32</span>
+<span class="w">    </span><span class="nt">default_recycle</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 </code></pre></div>
 <h2 id="what-if-it-did-not-work">What if it did not work?</h2>
 <p>Have a look at our

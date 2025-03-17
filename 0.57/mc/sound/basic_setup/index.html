@@ -33846,20 +33846,20 @@ is recommended that you only allow one music and one voice clip to be
 played at a time and that many sound effects (sfx) can be played
 simultaneously so that is what we have configured in the example below.</p>
 <p>Example:</p>
-<div class="highlight"><pre><span></span><code>sound_system:
-  tracks:
-    music:
-      type: standard
-      simultaneous_sounds: 1
-      volume: 0.5
-    voice:
-      type: standard
-      simultaneous_sounds: 1
-      volume: 0.7
-    sfx:
-      type: standard
-      simultaneous_sounds: 8
-      volume: 0.4
+<div class="highlight"><pre><span></span><code><span class="nt">sound_system</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">tracks</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">music</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">standard</span>
+<span class="w">      </span><span class="nt">simultaneous_sounds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">      </span><span class="nt">volume</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.5</span>
+<span class="w">    </span><span class="nt">voice</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">standard</span>
+<span class="w">      </span><span class="nt">simultaneous_sounds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">      </span><span class="nt">volume</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.7</span>
+<span class="w">    </span><span class="nt">sfx</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">standard</span>
+<span class="w">      </span><span class="nt">simultaneous_sounds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8</span>
+<span class="w">      </span><span class="nt">volume</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.4</span>
 </code></pre></div>
 <h2 id="2-configuring-your-sound-asset-folders">2. Configuring your sound asset folders</h2>
 <p>The next step is to configure your sound asset folders. First you will
@@ -33891,16 +33891,16 @@ sub-directories for each track and want the sounds contained in them to
 play on their respective tracks (<em>music</em>, <em>sfx</em>, and <em>voice</em>) so we set
 the <code>track:</code> setting accordingly.</p>
 <p><code>assets:</code> section in machine configuration file:</p>
-<div class="highlight"><pre><span></span><code>assets:
-  sounds:
-    default:
-      load: on_demand
-    music:
-      track: music
-    sfx:
-      track: sfx
-    voice:
-      track: voice
+<div class="highlight"><pre><span></span><code><span class="nt">assets</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">sounds</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">default</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">load</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">on_demand</span>
+<span class="w">    </span><span class="nt">music</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">track</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">music</span>
+<span class="w">    </span><span class="nt">sfx</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">track</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sfx</span>
+<span class="w">    </span><span class="nt">voice</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">track</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">voice</span>
 </code></pre></div>
 <p>When your machine launches, the asset manager will now search for
 supported audio files in the specified directories and assign the proper
@@ -33927,12 +33927,12 @@ persist each time the game boots up.</p>
 <p>The master volume ranges from 0.0 (silent) to 1.0 (full), and defaults
 to 0.5 (50%). You can set your own default volume by overriding the
 machine variable settings in your machine config file.</p>
-<div class="highlight"><pre><span></span><code>machine_vars:
-  master_volume:
-    initial_value: 0.25   # Set this to any value you want
-    value_type: float
-    persist: true         # If false, the volume will reset to default
-                          # each time the machine boots up
+<div class="highlight"><pre><span></span><code><span class="nt">machine_vars</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">master_volume</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">initial_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.25</span><span class="w">   </span><span class="c1"># Set this to any value you want</span>
+<span class="w">    </span><span class="nt">value_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">float</span>
+<span class="w">    </span><span class="nt">persist</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w">         </span><span class="c1"># If false, the volume will reset to default</span>
+<span class="w">                          </span><span class="c1"># each time the machine boots up</span>
 </code></pre></div>
 <h2 id="5-additional-configuration-for-selected-sounds">5. Additional configuration for selected sounds</h2>
 <p>Now when you start your machine you will have some sounds available
@@ -33958,9 +33958,9 @@ rather just refer to it in my config files as <code>triangle</code> and not
 default). In my <code>sounds:</code> section of my machine configuration file (see
 <a href="../../../config/sounds/">sounds:</a> in the
 documentation for more details) I can put the following text:</p>
-<div class="highlight"><pre><span></span><code>sounds:
-  triangle:
-    file: 22783__franciscopadilla__80-mute-triangle.wav
+<div class="highlight"><pre><span></span><code><span class="nt">sounds</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">triangle</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">22783__franciscopadilla__80-mute-triangle.wav</span>
 </code></pre></div>
 <p>That simple configuration change will allow the sound as to be referred
 to as <code>triangle</code> wherever you refer to that sound in other configuration
@@ -33972,10 +33972,10 @@ sound you load in your machine. This allows you to balance out sounds
 from various sources rather than trying to adjust the levels in each
 sound file using audio editing software. Building on the example above,
 let's set the volume of the <em>triangle</em> sound in our config file:</p>
-<div class="highlight"><pre><span></span><code>sounds:
-  triangle:
-    file: 22783__franciscopadilla__80-mute-triangle.wav
-    volume: 0.85
+<div class="highlight"><pre><span></span><code><span class="nt">sounds</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">triangle</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">22783__franciscopadilla__80-mute-triangle.wav</span>
+<span class="w">    </span><span class="nt">volume</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.85</span>
 </code></pre></div>
 <p><code>volume:</code> controls the volume of the sound and works in conjunction with
 the track volume and the master volume. Volume can either be entered as
@@ -34006,37 +34006,37 @@ your machine.</p>
 <p>The documentation for the <a href="../../../config/sounds/">sounds:</a> configuration section contains further information about all
 these settings.</p>
 <p>Example <code>sounds:</code> configuration demonstrating most common settings:</p>
-<div class="highlight"><pre><span></span><code>sounds:
-  triangle:
-    file: 22783__franciscopadilla__80-mute-triangle.wav
-    volume: 0.85
-    max_queue_time: 0
-  laser:
-    volume: 0.5
-    loops: 3
-    max_queue_time: 0
-  extra_ball:
-    file: extra_ball_12753.wav
-    events_when_started: extra_ball_callout_started
-    events_when_stopped: extra_ball_callout_finished
-    volume: 0.8
-    priority: 50
-    max_queue_time: None
-    ducking:
-      target: music
-      delay: 0
-      attack: 0.3 sec
-      attenuation: 0.45
-      release_point: 2.0 sec
-      release: 1.0 sec
-  slingshot_01:
-    volume: 0.5
-    max_queue_time: 0
-  song_01:
-    volume: 1.0
-    priority: 100
-    about_to_finish_time: 2s
-    events_when_about_to_finish: song_01_about_to_finish
+<div class="highlight"><pre><span></span><code><span class="nt">sounds</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">triangle</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">22783__franciscopadilla__80-mute-triangle.wav</span>
+<span class="w">    </span><span class="nt">volume</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.85</span>
+<span class="w">    </span><span class="nt">max_queue_time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">  </span><span class="nt">laser</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">volume</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.5</span>
+<span class="w">    </span><span class="nt">loops</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="w">    </span><span class="nt">max_queue_time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">  </span><span class="nt">extra_ball</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">extra_ball_12753.wav</span>
+<span class="w">    </span><span class="nt">events_when_started</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">extra_ball_callout_started</span>
+<span class="w">    </span><span class="nt">events_when_stopped</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">extra_ball_callout_finished</span>
+<span class="w">    </span><span class="nt">volume</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.8</span>
+<span class="w">    </span><span class="nt">priority</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">50</span>
+<span class="w">    </span><span class="nt">max_queue_time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">None</span>
+<span class="w">    </span><span class="nt">ducking</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">music</span>
+<span class="w">      </span><span class="nt">delay</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">      </span><span class="nt">attack</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.3 sec</span>
+<span class="w">      </span><span class="nt">attenuation</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.45</span>
+<span class="w">      </span><span class="nt">release_point</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2.0 sec</span>
+<span class="w">      </span><span class="nt">release</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0 sec</span>
+<span class="w">  </span><span class="nt">slingshot_01</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">volume</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.5</span>
+<span class="w">    </span><span class="nt">max_queue_time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">  </span><span class="nt">song_01</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">volume</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0</span>
+<span class="w">    </span><span class="nt">priority</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="w">    </span><span class="nt">about_to_finish_time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2s</span>
+<span class="w">    </span><span class="nt">events_when_about_to_finish</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">song_01_about_to_finish</span>
 </code></pre></div>
 <h2 id="6-hooking-up-an-mpf-event-to-play-a-sound">6. Hooking up an MPF event to play a sound</h2>
 <p>Now that your sounds have been setup and are available in your machine,
@@ -34050,14 +34050,14 @@ configure the sound player in the machine configuration file.</p>
 example (<code>song_01</code>) to play infinitely when the <em>attract</em> mode starts
 and stop when the <em>attract</em> mode stops. Create the following entries in
 the <code>sound_player:</code> section of the machine config file:</p>
-<div class="highlight"><pre><span></span><code>sound_player:
-  mode_attract_started:
-    song_01:
-      action: play
-      loops: -1
-  mode_attract_stopped:
-    song_01:
-      action: stop
+<div class="highlight"><pre><span></span><code><span class="nt">sound_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">mode_attract_started</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">song_01</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">play</span>
+<span class="w">      </span><span class="nt">loops</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-1</span>
+<span class="w">  </span><span class="nt">mode_attract_stopped</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">song_01</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stop</span>
 </code></pre></div>
 <p>That's it. The <code>song_01</code> sound will be played on the music track
 whenever <em>attract</em> mode is started and will stop whenever <em>attract</em> mode

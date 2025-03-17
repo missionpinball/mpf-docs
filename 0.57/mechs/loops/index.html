@@ -33582,15 +33582,15 @@ and one to signal success. To detect only shots where both switches were
 hit in order you can use
 <a href="../../config/sequence_shots/">sequence_shots</a>.</p>
 <p><a href="../../about/help/">TODO: Add a picture of an orbit</a></p>
-<div class="highlight"><pre><span></span><code>switches:
-  s_ramp_entry:
-    number: 1
-  s_ramp_success:
-    number: 2
-sequence_shots:
-  ramp:
-    switch_sequence: s_ramp_entry, s_ramp_success
-    sequence_timeout: 3s
+<div class="highlight"><pre><span></span><code><span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_ramp_entry</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">s_ramp_success</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="nt">sequence_shots</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">ramp</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch_sequence</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_ramp_entry, s_ramp_success</span>
+<span class="w">    </span><span class="nt">sequence_timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3s</span>
 </code></pre></div>
 <p>Additionally, most machines usually play a sound once the entry is hit
 to signal the player that he hit the ramp and another sound on success
@@ -33598,9 +33598,9 @@ to indicate that the ball made it. You can use
 <a href="../../config/sound_player/">sound_player:</a> to achieve that. In
 this example you would use the events <code>s_ramp_entry_active</code> and
 <code>ramp_hit</code> to play the sounds:</p>
-<div class="highlight"><pre><span></span><code>sound_player:
-  s_ramp_entry_active: indicate_ramp
-  s_ramp_success: indicate_ramp_success
+<div class="highlight"><pre><span></span><code><span class="nt">sound_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_ramp_entry_active</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">indicate_ramp</span>
+<span class="w">  </span><span class="nt">s_ramp_success</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">indicate_ramp_success</span>
 </code></pre></div>
 <hr />
 <div class="admonition question">

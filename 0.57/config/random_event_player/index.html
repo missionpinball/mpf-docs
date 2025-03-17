@@ -33800,36 +33800,36 @@ section of a step.</p>
 </div>
 <p>The <code>random_event_player:</code> section of your config is where you can play
 a random event out of a list based on an event.</p>
-<div class="highlight"><pre><span></span><code># in your global config:
-random_event_player:
-  play_random_event_global:
-    scope: machine
-    events:
-      - event1
-      - event2
-      - event3
-##! mode: base
-# in your mode:
-random_event_player:
-  play_random_event:
-    events:
-      - event1
-      - event2
-      - event3
-  play_random_event_with_weight:
-    events:
-      unlikely_event1: 2
-      unlikely_event2: 3
-      likely_event1: 45
-      likely_event2: 50
-  play_random_event_with_weight_and_conditional:
-    events:
-      event1{mode.field.active}: 25
-      event2{device.ball_devices.bd_ramp_lock.balls==2}: 25
-      event3{device.accruals.base_locking_engaged.completed}: 10
-      event4{device.counters.health.value&gt;9}: 30
-      event5{current_player.hearts &lt; current_player.hearts_max}: 10
-    fallback_event: event_posts_if_everything_above_false
+<div class="highlight"><pre><span></span><code><span class="c1"># in your global config:</span>
+<span class="nt">random_event_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">play_random_event_global</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">scope</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">machine</span>
+<span class="w">    </span><span class="nt">events</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">event1</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">event2</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">event3</span>
+<span class="c1">##! mode: base</span>
+<span class="c1"># in your mode:</span>
+<span class="nt">random_event_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">play_random_event</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">events</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">event1</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">event2</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">event3</span>
+<span class="w">  </span><span class="nt">play_random_event_with_weight</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">events</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">unlikely_event1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="w">      </span><span class="nt">unlikely_event2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="w">      </span><span class="nt">likely_event1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">45</span>
+<span class="w">      </span><span class="nt">likely_event2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">50</span>
+<span class="w">  </span><span class="nt">play_random_event_with_weight_and_conditional</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">events</span><span class="p">:</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">event1{mode.field.active}</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">25</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">event2{device.ball_devices.bd_ramp_lock.balls==2}</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">25</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">event3{device.accruals.base_locking_engaged.completed}</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">event4{device.counters.health.value&gt;9}</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">event5{current_player.hearts &lt; current_player.hearts_max}</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="w">    </span><span class="nt">fallback_event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">event_posts_if_everything_above_false</span>
 </code></pre></div>
 <h2 id="optional-settings">Optional settings</h2>
 <p>The following sections are optional in the <code>random_event_player:</code>

@@ -33977,18 +33977,18 @@ accelerometers, including how many G forces trigger different events.</p>
 <p>Like other hardware devices, you create a sub-entry for each
 accelerometer, then under there you configure additional settings. For
 example:</p>
-<div class="highlight"><pre><span></span><code>accelerometers:
-  test_accelerometer:
-    number: 1
-    level_x: 0
-    level_y: 0
-    level_z: 1
-    hit_limits:
-      0.5: event_hit1
-      1.5: event_hit2
-    level_limits:
-      2: event_level1
-      5: event_level2
+<div class="highlight"><pre><span></span><code><span class="nt">accelerometers</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">test_accelerometer</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">level_x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">level_y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">level_z</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">hit_limits</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">0.5</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">event_hit1</span>
+<span class="w">      </span><span class="nt">1.5</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">event_hit2</span>
+<span class="w">    </span><span class="nt">level_limits</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">event_level1</span>
+<span class="w">      </span><span class="nt">5</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">event_level2</span>
 </code></pre></div>
 <h2 id="required-settings">Required settings</h2>
 <p>The following sections are required in the <code>accelerometers:</code> section of

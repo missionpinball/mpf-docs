@@ -33644,27 +33644,27 @@ PD-LED.</p>
 <p>To enable servos you need to configure your PD-LED board in your <code>p_roc</code>
 section. Assuming your PD-LED has the ID 4 you can use the following
 config to enable all servos and and define two of them:</p>
-<div class="highlight"><pre><span></span><code>p_roc:
-  pd_led_boards:
-    4:
-      max_servo_value: 300 # rougly maps to 2ms.
-      use_servo_0: true
-      use_servo_1: true
-      use_servo_2: true
-      use_servo_3: true
-      use_servo_4: true
-      use_servo_5: true
-      use_servo_6: true
-      use_servo_7: true
-      use_servo_8: true
-      use_servo_9: true
-      use_servo_10: true
-      use_servo_11: true
-servos:
-  servos_4_0:
-    number: 4-0
-  servos_4_1:
-    number: 4-1
+<div class="highlight"><pre><span></span><code><span class="nt">p_roc</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">pd_led_boards</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">4</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">max_servo_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">300</span><span class="w"> </span><span class="c1"># rougly maps to 2ms.</span>
+<span class="w">      </span><span class="nt">use_servo_0</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">      </span><span class="nt">use_servo_1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">      </span><span class="nt">use_servo_2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">      </span><span class="nt">use_servo_3</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">      </span><span class="nt">use_servo_4</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">      </span><span class="nt">use_servo_5</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">      </span><span class="nt">use_servo_6</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">      </span><span class="nt">use_servo_7</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">      </span><span class="nt">use_servo_8</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">      </span><span class="nt">use_servo_9</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">      </span><span class="nt">use_servo_10</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">      </span><span class="nt">use_servo_11</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="nt">servos</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">servos_4_0</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4-0</span>
+<span class="w">  </span><span class="nt">servos_4_1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4-1</span>
 </code></pre></div>
 <p>The number of your servos has to be <code>id_of_your_ped_led-number</code>. In this
 case <code>4-0</code> and <code>4-1</code> for the first and second servo on PD-LED 4. You

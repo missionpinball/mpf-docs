@@ -33690,26 +33690,26 @@ I2C platform supported by MPF (see
 <h2 id="1-installing-i2c-servo-controllers">1. Installing I2C Servo Controllers</h2>
 <p>Connect the controller to the I2C port and add the following config
 section:</p>
-<div class="highlight"><pre><span></span><code>hardware:
-  servo_controllers: i2c_servo_controller
+<div class="highlight"><pre><span></span><code><span class="nt">hardware</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">servo_controllers</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">i2c_servo_controller</span>
 </code></pre></div>
 <p>0x40 is actually the default I2C address for this chip but it might be
 different for some chips.</p>
 <h2 id="2-add-your-servos">2. Add your servos</h2>
 <p>Add your servos to config:</p>
-<div class="highlight"><pre><span></span><code>servos:
-  servo1:
-    number: 0  # first servo on controller
+<div class="highlight"><pre><span></span><code><span class="nt">servos</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">servo1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span><span class="w">  </span><span class="c1"># first servo on controller</span>
 </code></pre></div>
 <p>All these config options are explained in-depth in the
 <a href="../../config/servos/">servos: section</a> of the
 config file reference.</p>
 <p>You can also provide an I2C address per servo:</p>
-<div class="highlight"><pre><span></span><code>servos:
-  servo_on_controller_63_0:
-    number: 63-0  # first servo on board with ID 0x3F / 63
-  servo_on_controller_63_1:
-    number: 63-1  # second servo on board with ID 0x3F / 63
+<div class="highlight"><pre><span></span><code><span class="nt">servos</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">servo_on_controller_63_0</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">63-0</span><span class="w">  </span><span class="c1"># first servo on board with ID 0x3F / 63</span>
+<span class="w">  </span><span class="nt">servo_on_controller_63_1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">63-1</span><span class="w">  </span><span class="c1"># second servo on board with ID 0x3F / 63</span>
 </code></pre></div>
 <h2 id="what-if-it-did-not-work">What if it did not work?</h2>
 <p>Have a look at our <a href="../troubleshooting_hardware/">hardware troubleshooting guide</a>.</p>

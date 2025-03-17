@@ -33581,45 +33581,45 @@ icons & this code generated via https://realfavicongenerator.net
 <p>Secondary or upper flippers (e.g. on an upper playfield) are enabled and
 defined just like normal lower flipper.</p>
 <p>This is an example:</p>
-<div class="highlight"><pre><span></span><code>#! switches:
-#!   s_flipper_left:
-#!     number:
-#!   s_flipper_right:
-#!     number:
-#!   flipperUpL:
-#!     number:
-#!   flipperUpR:
-#!     number:
-#! coils:
-#!   c_flipper_lower_left_main:
-#!     number:
-#!   c_flipper_lower_right_main:
-#!     number:
-#!   flipperUpLMain:
-#!     number:
-#!   flipperUpRMain:
-#!     number:
-flippers:
-  lower_left:
-    main_coil: c_flipper_lower_left_main
-    activation_switch: s_flipper_left
-    label: Left Main Flipper
-  lower_right:
-    main_coil: c_flipper_lower_right_main
-    activation_switch: s_flipper_right
-    label: Right Main Flipper
-  upper_left:
-    main_coil: flipperUpLMain
-    activation_switch: flipperUpL
-    enable_events: ball_started, enable_upper_flippers
-    disable_events: ball_will_end, service_mode_entered, disable_upper_flippers
-    label: Upper Left Flipper
-  upper_right:
-    main_coil: flipperUpRMain
-    activation_switch: flipperUpR
-    enable_events: ball_started, enable_upper_flippers
-    disable_events: ball_will_end, service_mode_entered, disable_upper_flippers
-    label: Upper Right Flipper
+<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
+<span class="c1">#!   s_flipper_left:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   s_flipper_right:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   flipperUpL:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   flipperUpR:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#! coils:</span>
+<span class="c1">#!   c_flipper_lower_left_main:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   c_flipper_lower_right_main:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   flipperUpLMain:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   flipperUpRMain:</span>
+<span class="c1">#!     number:</span>
+<span class="nt">flippers</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">lower_left</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">main_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_flipper_lower_left_main</span>
+<span class="w">    </span><span class="nt">activation_switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_flipper_left</span>
+<span class="w">    </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Left Main Flipper</span>
+<span class="w">  </span><span class="nt">lower_right</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">main_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_flipper_lower_right_main</span>
+<span class="w">    </span><span class="nt">activation_switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_flipper_right</span>
+<span class="w">    </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Right Main Flipper</span>
+<span class="w">  </span><span class="nt">upper_left</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">main_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flipperUpLMain</span>
+<span class="w">    </span><span class="nt">activation_switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flipperUpL</span>
+<span class="w">    </span><span class="nt">enable_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ball_started, enable_upper_flippers</span>
+<span class="w">    </span><span class="nt">disable_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ball_will_end, service_mode_entered, disable_upper_flippers</span>
+<span class="w">    </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Upper Left Flipper</span>
+<span class="w">  </span><span class="nt">upper_right</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">main_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flipperUpRMain</span>
+<span class="w">    </span><span class="nt">activation_switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flipperUpR</span>
+<span class="w">    </span><span class="nt">enable_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ball_started, enable_upper_flippers</span>
+<span class="w">    </span><span class="nt">disable_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ball_will_end, service_mode_entered, disable_upper_flippers</span>
+<span class="w">    </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Upper Right Flipper</span>
 </code></pre></div>
 <p>Additionally, we defined <code>disable_upper_flippers</code> as event to disable
 the upper flippers and <code>enable_upper_flippers</code> to re-enable them. This

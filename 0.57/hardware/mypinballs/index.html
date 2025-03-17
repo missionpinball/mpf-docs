@@ -33631,23 +33631,23 @@ displays). See the <a href="wiring/">Direct-wiring MyPinballs to 3rd-Party Segme
 details about how to wire those. Connect it to your PC using USB and
 control up to six segment displays.</p>
 <p>Config looks like this:</p>
-<div class="highlight"><pre><span></span><code>hardware:
-  segment_displays: mypinballs
-mypinballs:
-  port: /dev/ttyUSB0
-segment_displays:
-  display1:
-    number: 1
-  display2:
-    number: 2
-  display3:
-    number: 3
-  display4:
-    number: 4
-  display5:
-    number: 5
-  display6:
-    number: 6
+<div class="highlight"><pre><span></span><code><span class="nt">hardware</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">segment_displays</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mypinballs</span>
+<span class="nt">mypinballs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/dev/ttyUSB0</span>
+<span class="nt">segment_displays</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">display1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">display2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="w">  </span><span class="nt">display3</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="w">  </span><span class="nt">display4</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span>
+<span class="w">  </span><span class="nt">display5</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+<span class="w">  </span><span class="nt">display6</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">6</span>
 </code></pre></div>
 <p>You can configure your serial port in <code>port</code>. See
 <a href="../../mc/displays/alpha_numeric/">segment_display</a> for more informations about how to drive segment display in
@@ -33661,19 +33661,19 @@ controller which can be controlled by MPF via USB.</p>
 <li>PBL-600-0473-00</li>
 </ul>
 <p>Config looks like this:</p>
-<div class="highlight"><pre><span></span><code>hardware:
-  segment_displays: mypinballs
-mypinballs:
-  port: /dev/ttyUSB0
-segment_displays:
-  display1:
-    number: 1
-  display2:
-    number: 2
-  display3:
-    number: 3
-  display4:
-    number: 4
+<div class="highlight"><pre><span></span><code><span class="nt">hardware</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">segment_displays</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mypinballs</span>
+<span class="nt">mypinballs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/dev/ttyUSB0</span>
+<span class="nt">segment_displays</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">display1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">display2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="w">  </span><span class="nt">display3</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="w">  </span><span class="nt">display4</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span>
 </code></pre></div>
 <p>You can configure your serial port in <code>port</code>. See
 <a href="../../mc/displays/alpha_numeric/">segment_display</a> for more informations about how to drive segment display in

@@ -33742,70 +33742,70 @@ turning them on and off).</p>
 section.</p>
 <p>The <code>light_player:</code> section of your config is where you can control
 lights in config or shows. Example in config:</p>
-<div class="highlight"><pre><span></span><code>#! lights:
-#!   led1:
-#!     number:
-#!   led2:
-#!     number:
-light_player:
-  some_event:
-    led1:
-      color: red
-      fade: 200ms
-    led2:
-      color: ff0000
-      fade: 2000ms
+<div class="highlight"><pre><span></span><code><span class="c1">#! lights:</span>
+<span class="c1">#!   led1:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   led2:</span>
+<span class="c1">#!     number:</span>
+<span class="nt">light_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">some_event</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">led1</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
+<span class="w">      </span><span class="nt">fade</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">200ms</span>
+<span class="w">    </span><span class="nt">led2</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ff0000</span>
+<span class="w">      </span><span class="nt">fade</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2000ms</span>
 </code></pre></div>
 <h2 id="usage-in-shows">Usage in shows</h2>
 <p>In shows, the light player is used via the <code>lights:</code> section of a step.</p>
-<div class="highlight"><pre><span></span><code>#! lights:
-#!   l_light:
-#!     number:
-shows:
-  red_color:
-    - lights:
-        l_light: red
-show_player:
-  turn_light_red_event: red_color
-##! test
-#! post turn_light_red_event
-#! advance_time_and_run .1
-#! assert_light_color l_light red
+<div class="highlight"><pre><span></span><code><span class="c1">#! lights:</span>
+<span class="c1">#!   l_light:</span>
+<span class="c1">#!     number:</span>
+<span class="nt">shows</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">red_color</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">l_light</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
+<span class="nt">show_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">turn_light_red_event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red_color</span>
+<span class="c1">##! test</span>
+<span class="c1">#! post turn_light_red_event</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_light_color l_light red</span>
 </code></pre></div>
 <h3 id="setting-multiple-lights">Setting multiple lights</h3>
-<div class="highlight"><pre><span></span><code>lights:
-  l_target1:
-    number:
-  l_target2:
-    number:
-shows:
-  rainbow:
-    - lights:
-        (leds): red
-    - lights:
-        (leds): orange
-    - lights:
-        (leds): yellow
-    - lights:
-        (leds): green
-    - lights:
-        (leds): blue
-    - lights:
-        (leds): purple
-      duration: 3s
-show_player:
-  play_rainbow_show_on_targets:
-    rainbow:
-      show_tokens:
-        leds: l_target1, l_target2
-##! test
-#! post play_rainbow_show_on_targets
-#! advance_time_and_run .1
-#! assert_light_color l_target1 red
-#! assert_light_color l_target2 red
-#! advance_time_and_run 1
-#! assert_light_color l_target1 orange
-#! assert_light_color l_target2 orange
+<div class="highlight"><pre><span></span><code><span class="nt">lights</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">l_target1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">l_target2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="nt">shows</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">rainbow</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">(leds)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">(leds)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">orange</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">(leds)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yellow</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">(leds)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">green</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">(leds)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">blue</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">(leds)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">purple</span>
+<span class="w">      </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3s</span>
+<span class="nt">show_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">play_rainbow_show_on_targets</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">rainbow</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">leds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_target1, l_target2</span>
+<span class="c1">##! test</span>
+<span class="c1">#! post play_rainbow_show_on_targets</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_light_color l_target1 red</span>
+<span class="c1">#! assert_light_color l_target2 red</span>
+<span class="c1">#! advance_time_and_run 1</span>
+<span class="c1">#! assert_light_color l_target1 orange</span>
+<span class="c1">#! assert_light_color l_target2 orange</span>
 </code></pre></div>
 <p>The show <code>rainbow</code> will turn your LED(s) in the placeholder <code>(leds)</code> to
 a different color every second (because 1s is the default duration of a
@@ -33813,46 +33813,46 @@ step). The last step (purple) will stay for 3s. When you post
 <code>play_rainbow_show_on_targets</code> the show is played on two lights which
 are referenced directly.</p>
 <h3 id="setting-lights-via-tags">Setting lights via tags</h3>
-<div class="highlight"><pre><span></span><code>#! lights:
-#!   l_drop1:
-#!     number:
-#!     tags: drops
-#!   l_drop2:
-#!     number:
-#!     tags: drops
-shows:
-  rainbow:
-    - lights:
-        (tag): red
-      duration: 1s
-    - lights:
-        (tag): orange
-      duration: 1s
-    - lights:
-        (tag): yellow
-      duration: 1s
-    - lights:
-        (tag): green
-      duration: 1s
-    - lights:
-        (tag): blue
-      duration: 1s
-    - lights:
-        (tag): purple
-      duration: 1s
-show_player:
-  play_rainbow_show_via_tag:
-    rainbow:
-      show_tokens:
-        tag: drops
-##! test
-#! post play_rainbow_show_via_tag
-#! advance_time_and_run .1
-#! assert_light_color l_drop1 red
-#! assert_light_color l_drop2 red
-#! advance_time_and_run 1
-#! assert_light_color l_drop1 orange
-#! assert_light_color l_drop2 orange
+<div class="highlight"><pre><span></span><code><span class="c1">#! lights:</span>
+<span class="c1">#!   l_drop1:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!     tags: drops</span>
+<span class="c1">#!   l_drop2:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!     tags: drops</span>
+<span class="nt">shows</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">rainbow</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">(tag)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
+<span class="w">      </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">(tag)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">orange</span>
+<span class="w">      </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">(tag)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yellow</span>
+<span class="w">      </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">(tag)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">green</span>
+<span class="w">      </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">(tag)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">blue</span>
+<span class="w">      </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">(tag)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">purple</span>
+<span class="w">      </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<span class="nt">show_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">play_rainbow_show_via_tag</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">rainbow</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">drops</span>
+<span class="c1">##! test</span>
+<span class="c1">#! post play_rainbow_show_via_tag</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_light_color l_drop1 red</span>
+<span class="c1">#! assert_light_color l_drop2 red</span>
+<span class="c1">#! advance_time_and_run 1</span>
+<span class="c1">#! assert_light_color l_drop1 orange</span>
+<span class="c1">#! assert_light_color l_drop2 orange</span>
 </code></pre></div>
 <p>In <code>play_rainbow_show_via_tag</code> we reference (two) lights via the tag
 <code>drops</code>.</p>
@@ -33861,86 +33861,86 @@ show_player:
 <code>(color)-f(time)(unit)</code> (i.e. <code>red-f200ms</code>) or extended syntax which is
 a dict with two entries for <code>color</code> and <code>fade</code>. Here is an example for
 the short syntax:</p>
-<div class="highlight"><pre><span></span><code>#! lights:
-#!   l_rgb:
-#!     number:
-shows:
-  rainbow_with_fade_f_syntax:
-    - lights:
-        l_rgb: red-f1s
-      duration: 1s
-    - lights:
-        l_rgb: orange-f1s
-      duration: 1s
-    - lights:
-        l_rgb: yellow-f1s
-      duration: 1s
-    - lights:
-        l_rgb: green-f1s
-      duration: 1s
-    - lights:
-        l_rgb: blue-f1s
-      duration: 1s
-    - lights:
-        l_rgb: purple-f1s
-      duration: 1s
+<div class="highlight"><pre><span></span><code><span class="c1">#! lights:</span>
+<span class="c1">#!   l_rgb:</span>
+<span class="c1">#!     number:</span>
+<span class="nt">shows</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">rainbow_with_fade_f_syntax</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">l_rgb</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red-f1s</span>
+<span class="w">      </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">l_rgb</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">orange-f1s</span>
+<span class="w">      </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">l_rgb</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yellow-f1s</span>
+<span class="w">      </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">l_rgb</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">green-f1s</span>
+<span class="w">      </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">l_rgb</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">blue-f1s</span>
+<span class="w">      </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">l_rgb</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">purple-f1s</span>
+<span class="w">      </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
 
-show_player:
-  play_rainbow_show: rainbow_with_fade_f_syntax
+<span class="nt">show_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">play_rainbow_show</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rainbow_with_fade_f_syntax</span>
 
-##! test
-#! post play_rainbow_show
-#! advance_time_and_run 1
-#! assert_light_color l_rgb red
-#! advance_time_and_run 1
-#! assert_light_color l_rgb orange
+<span class="c1">##! test</span>
+<span class="c1">#! post play_rainbow_show</span>
+<span class="c1">#! advance_time_and_run 1</span>
+<span class="c1">#! assert_light_color l_rgb red</span>
+<span class="c1">#! advance_time_and_run 1</span>
+<span class="c1">#! assert_light_color l_rgb orange</span>
 </code></pre></div>
 <p>And an example with extended syntax:</p>
-<div class="highlight"><pre><span></span><code>#! lights:
-#!   l_rgb:
-#!     number:
-shows:
-  rainbow_with_fade_extended_syntax:
-    - lights:
-        l_rgb:
-          color: red
-          fade: 1s
-      duration: 1s
-    - lights:
-        l_rgb:
-          color: orange
-          fade: 1s
-      duration: 1s
-    - lights:
-        l_rgb:
-          color: yellow
-          fade: 1s
-      duration: 1s
-    - lights:
-        l_rgb:
-          color: green
-          fade: 1s
-      duration: 1s
-    - lights:
-        l_rgb:
-          color: blue
-          fade: 1s
-      duration: 1s
-    - lights:
-        l_rgb:
-          color: purple
-          fade: 1s
-      duration: 1s
+<div class="highlight"><pre><span></span><code><span class="c1">#! lights:</span>
+<span class="c1">#!   l_rgb:</span>
+<span class="c1">#!     number:</span>
+<span class="nt">shows</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">rainbow_with_fade_extended_syntax</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">l_rgb</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
+<span class="w">          </span><span class="nt">fade</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<span class="w">      </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">l_rgb</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">orange</span>
+<span class="w">          </span><span class="nt">fade</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<span class="w">      </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">l_rgb</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yellow</span>
+<span class="w">          </span><span class="nt">fade</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<span class="w">      </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">l_rgb</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">green</span>
+<span class="w">          </span><span class="nt">fade</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<span class="w">      </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">l_rgb</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">blue</span>
+<span class="w">          </span><span class="nt">fade</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<span class="w">      </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">l_rgb</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">purple</span>
+<span class="w">          </span><span class="nt">fade</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<span class="w">      </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
 
-show_player:
-  play_rainbow_show: rainbow_with_fade_extended_syntax
+<span class="nt">show_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">play_rainbow_show</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rainbow_with_fade_extended_syntax</span>
 
-##! test
-#! post play_rainbow_show
-#! advance_time_and_run 1
-#! assert_light_color l_rgb red
-#! advance_time_and_run 1
-#! assert_light_color l_rgb orange
+<span class="c1">##! test</span>
+<span class="c1">#! post play_rainbow_show</span>
+<span class="c1">#! advance_time_and_run 1</span>
+<span class="c1">#! assert_light_color l_rgb red</span>
+<span class="c1">#! advance_time_and_run 1</span>
+<span class="c1">#! assert_light_color l_rgb orange</span>
 </code></pre></div>
 <p>In most cases simple syntax is sufficient. Extended syntax is easier to
 use with placeholders.</p>

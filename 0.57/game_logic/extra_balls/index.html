@@ -33682,37 +33682,37 @@ limit the maximum number of extra balls.</p>
 <h2 id="score-an-extra-ball-based-on-score">Score an Extra Ball Based on Score</h2>
 <p>Some games (especially EMs) award extra balls based on the score. This
 is an example:</p>
-<div class="highlight"><pre><span></span><code>##! mode: base
-# in your base mode
-extra_balls:
-  score_one:
-    enabled: true
-    award_events: player_score{value&gt;=140000}
-  score_two:
-    enabled: true
-    award_events: player_score{value&gt;=210000}
-  score_three:
-    enabled: true
-    award_events: player_score{value&gt;=300000}
-#! variable_player:
-#!   score_100000:
-#!     score: 100000
-##! test
-#! # start game and score
-#! start_game
-#! start_mode base
-#! post score_100000
-#! assert_player_variable 100000 score
-#! assert_player_variable 0 extra_balls
-#! post score_100000
-#! assert_player_variable 200000 score
-#! assert_player_variable 1 extra_balls
-#! post score_100000
-#! assert_player_variable 300000 score
-#! assert_player_variable 3 extra_balls
-#! post score_100000
-#! assert_player_variable 400000 score
-#! assert_player_variable 3 extra_balls
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: base</span>
+<span class="c1"># in your base mode</span>
+<span class="nt">extra_balls</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">score_one</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">award_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">player_score{value&gt;=140000}</span>
+<span class="w">  </span><span class="nt">score_two</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">award_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">player_score{value&gt;=210000}</span>
+<span class="w">  </span><span class="nt">score_three</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">award_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">player_score{value&gt;=300000}</span>
+<span class="c1">#! variable_player:</span>
+<span class="c1">#!   score_100000:</span>
+<span class="c1">#!     score: 100000</span>
+<span class="c1">##! test</span>
+<span class="c1">#! # start game and score</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! start_mode base</span>
+<span class="c1">#! post score_100000</span>
+<span class="c1">#! assert_player_variable 100000 score</span>
+<span class="c1">#! assert_player_variable 0 extra_balls</span>
+<span class="c1">#! post score_100000</span>
+<span class="c1">#! assert_player_variable 200000 score</span>
+<span class="c1">#! assert_player_variable 1 extra_balls</span>
+<span class="c1">#! post score_100000</span>
+<span class="c1">#! assert_player_variable 300000 score</span>
+<span class="c1">#! assert_player_variable 3 extra_balls</span>
+<span class="c1">#! post score_100000</span>
+<span class="c1">#! assert_player_variable 400000 score</span>
+<span class="c1">#! assert_player_variable 3 extra_balls</span>
 </code></pre></div>
 <h2 id="related-how-to-guides">Related How To guides</h2>
 <div class="admonition success">

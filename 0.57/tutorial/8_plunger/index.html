@@ -33741,17 +33741,17 @@ could be something like "bd_catapult" or whatever you called it.</p>
 <p>Also, if you have a two-stage drain (like a System 11 machine), you'd
 add this to the second device (the one that feeds the plunger).</p>
 <p>Tell the playfield to use the plunger for new balls:</p>
-<div class="highlight"><pre><span></span><code>#! switches:
-#!   s_plunger:
-#!     number: 10
-#! ball_devices:
-#!   bd_plunger:
-#!     ball_switches: s_plunger
-#!     mechanical_eject: true
-playfields:
-  playfield:
-    tags: default
-    default_source_device: bd_plunger
+<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
+<span class="c1">#!   s_plunger:</span>
+<span class="c1">#!     number: 10</span>
+<span class="c1">#! ball_devices:</span>
+<span class="c1">#!   bd_plunger:</span>
+<span class="c1">#!     ball_switches: s_plunger</span>
+<span class="c1">#!     mechanical_eject: true</span>
+<span class="nt">playfields</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">playfield</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span>
+<span class="w">    </span><span class="nt">default_source_device</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bd_plunger</span>
 </code></pre></div>
 <h2 id="3-check-out-the-complete-configyaml-file-so-far">3. Check out the complete config.yaml file so far</h2>
 <p>Again, our example config will probably diverge from yours since you

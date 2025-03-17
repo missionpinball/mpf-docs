@@ -33658,23 +33658,23 @@ done in a mode-based config or in your machine-wide config).</p>
 of a standalone show file on disk. Basically you add a <code>shows:</code> section
 to a config, create sub-sections based on show name, and then add normal
 show items to the config. For example:</p>
-<div class="highlight"><pre><span></span><code>shows:
-  flash_red:
-    - time: 0
-      lights:
-        led1: red
-    - time: +1
-      lights:
-        led1: off
-    - time: +1
-  blue_green_cycle:
-    - time: 0
-      lights:
-        led2: blue
-    - time: +1
-      lights:
-        led2: green
-    - time: +1
+<div class="highlight"><pre><span></span><code><span class="nt">shows</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">flash_red</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">      </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">led1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">+1</span>
+<span class="w">      </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">led1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">off</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">+1</span>
+<span class="w">  </span><span class="nt">blue_green_cycle</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">      </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">led2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">blue</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">+1</span>
+<span class="w">      </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">led2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">green</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">+1</span>
 </code></pre></div>
 <p>The section above contains two shows: <em>flash_red</em> and
 <em>blue_green_cycle</em>.</p>

@@ -33686,9 +33686,9 @@ and we can ease them a bit in software.</p>
 <p>Behind the scenes MPF performs
 <a href="../../../../hardware/voltages_and_power/power_management/">some magic for you to prevent stress on your power supply unit</a>. The default should be fine for most machine but if your PSU
 is very weak try this config:</p>
-<div class="highlight"><pre><span></span><code>psus:
-  default:
-    release_wait_ms: 50    # defaults to 10ms
+<div class="highlight"><pre><span></span><code><span class="nt">psus</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">default</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">release_wait_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">50</span><span class="w">    </span><span class="c1"># defaults to 10ms</span>
 </code></pre></div>
 <h2 id="configuring-pulse-times">Configuring Pulse Times</h2>
 <p>Increasing the pulse time on your reset coil should help with reliably
@@ -33707,36 +33707,36 @@ banks if they are already completely up so this should not cause too
 much stress.</p>
 <p>The following example will try to reset your drop target bank up to
 three times on ball start:</p>
-<div class="highlight"><pre><span></span><code>#! switches:
-#!   s_drop_front:
-#!     number:
-#!   s_drop_middle:
-#!     number:
-#!   s_drop_back:
-#!     number:
-#! coils:
-#!   c_drop_reset:
-#!     number:
-drop_targets:
-  front:
-    switch: s_drop_front
-  middle:
-    switch: s_drop_middle
-  back:
-    switch: s_drop_back
-drop_target_banks:
-  vuk_bank:
-    drop_targets: front, middle, back
-    reset_coils: c_drop_reset
-    reset_on_complete: 1s
-    reset_events:
-      ball_started.1: 0
-      ball_started.2: 1s
-      ball_started.3: 2s
-      machine_reset_phase_3: 0
-##! test
-#! start_game
-#! advance_time_and_run 1
+<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
+<span class="c1">#!   s_drop_front:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   s_drop_middle:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   s_drop_back:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#! coils:</span>
+<span class="c1">#!   c_drop_reset:</span>
+<span class="c1">#!     number:</span>
+<span class="nt">drop_targets</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">front</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_drop_front</span>
+<span class="w">  </span><span class="nt">middle</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_drop_middle</span>
+<span class="w">  </span><span class="nt">back</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_drop_back</span>
+<span class="nt">drop_target_banks</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">vuk_bank</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">drop_targets</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">front, middle, back</span>
+<span class="w">    </span><span class="nt">reset_coils</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_drop_reset</span>
+<span class="w">    </span><span class="nt">reset_on_complete</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<span class="w">    </span><span class="nt">reset_events</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">ball_started.1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">      </span><span class="nt">ball_started.2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<span class="w">      </span><span class="nt">ball_started.3</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2s</span>
+<span class="w">      </span><span class="nt">machine_reset_phase_3</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="c1">##! test</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! advance_time_and_run 1</span>
 </code></pre></div>
 <hr />
 <div class="admonition question">

@@ -33580,9 +33580,9 @@ feature to MPF and MPF-MC to dump all of those. To trigger the debug
 dump start MPF and MPF-MC without the production flag and post the
 <code>debug_dump_stats</code> events. For example, you can add a keyboard key <code>d</code>
 to do that:</p>
-<div class="highlight"><pre><span></span><code>keyboard:
-  d:
-    event: debug_dump_stats
+<div class="highlight"><pre><span></span><code><span class="nt">keyboard</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">d</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">debug_dump_stats</span>
 </code></pre></div>
 <p>The MPF log will contain something like this:</p>
 <div class="highlight"><pre><span></span><code><span class="go">2018-12-10 21:35:55,682 : INFO : EventManager : Event: ======&#39;debug_dump_stats&#39;====== Args={&#39;_from_bcp&#39;: True}</span>

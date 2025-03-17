@@ -33808,10 +33808,10 @@ or <code>p3_roc</code>, MPF assumes your LEDs are connected to a PD-LED board.</
 <code>hardware:</code> section of your machine config to tell it to override the
 default platform for your LEDs and to instead use the <code>fadecandy</code>
 platform, like this:</p>
-<div class="highlight"><pre><span></span><code>hardware:
-  platform: p_roc
-  driverboards: pdb
-  lights: fadecandy
+<div class="highlight"><pre><span></span><code><span class="nt">hardware</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">p_roc</span>
+<span class="w">  </span><span class="nt">driverboards</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pdb</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fadecandy</span>
 </code></pre></div>
 <p>See the <a href="../platform/">Mixing-and-Matching hardware platforms</a> guide for
 more information about setting device-specific default platforms versus
@@ -33830,13 +33830,13 @@ physically connected to Connector 0.</p>
 <p>The following diagram explains how the numbering works:</p>
 <p><img alt="image" src="../images/fadecandy_numbering.jpg" /></p>
 <p>Consider the following config:</p>
-<div class="highlight"><pre><span></span><code>lights:
-  l_led0:
-    number: 0    # first LED on connector 0
-  l_led1:
-    number: 1    # second LED on connector 0
-  l_led2:
-    number: 128    # first LED on connector 2
+<div class="highlight"><pre><span></span><code><span class="nt">lights</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">l_led0</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span><span class="w">    </span><span class="c1"># first LED on connector 0</span>
+<span class="w">  </span><span class="nt">l_led1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w">    </span><span class="c1"># second LED on connector 0</span>
+<span class="w">  </span><span class="nt">l_led2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">128</span><span class="w">    </span><span class="c1"># first LED on connector 2</span>
 </code></pre></div>
 <p>(If you're familiar with the Open Pixel Control protocol, all of the
 LEDs on a single FadeCandy board are on the same OPC channel, which is
@@ -33874,15 +33874,15 @@ certain performance advantages and allows nicer numbering.</p>
 fadecandy. The serial will be shown on the console of
 <code>fcserver</code> when connecting your fadecandy.</p>
 <p>Then configure your lights as follows:</p>
-<div class="highlight"><pre><span></span><code>lights:
-  l_led0_0:
-    number: 0-0    # first LED on connector 0
-  l_led1_0:
-    number: 1-0    # first LED on connector 1
-  l_led1_1:
-    number: 1-1    # second LED on connector 1
-  l_led7_20:
-    number: 7-20    # twentyth LED on connector 7
+<div class="highlight"><pre><span></span><code><span class="nt">lights</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">l_led0_0</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0-0</span><span class="w">    </span><span class="c1"># first LED on connector 0</span>
+<span class="w">  </span><span class="nt">l_led1_0</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1-0</span><span class="w">    </span><span class="c1"># first LED on connector 1</span>
+<span class="w">  </span><span class="nt">l_led1_1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1-1</span><span class="w">    </span><span class="c1"># second LED on connector 1</span>
+<span class="w">  </span><span class="nt">l_led7_20</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">7-20</span><span class="w">    </span><span class="c1"># twentyth LED on connector 7</span>
 </code></pre></div>
 <h2 id="6b-numbering-with-multiple-fadecandy-boards">6b. Numbering with multiple Fadecandy Boards</h2>
 <p>If you want to use multiple FadeCandy boards we suggest the following
@@ -33946,21 +33946,21 @@ config:</p>
 boards (you can use more or less than three). The serial will be shown
 on the console of <code>fcserver</code> when connecting your fadecandy.</p>
 <p>Afterwards, configure your lights as follows:</p>
-<div class="highlight"><pre><span></span><code>lights:
-  l_led0_0:
-    number: 0-0    # first LED on connector 0 on board 0
-  l_led1_0:
-    number: 1-0    # first LED on connector 1 on board 0
-  l_led1_1:
-    number: 1-1    # second LED on connector 1 on board 0
-  l_led7_20:
-    number: 7-20    # twentyth LED on connector 7 on board 0
-  l_led8_0:
-    number: 8-0    # first LED on connector 0 on board 1
-  l_led8_1:
-    number: 8-63    # last LED on connector 1 on board 1
-  l_led17_1:
-    number: 17-1    # second LED on connector 1 on board 2
+<div class="highlight"><pre><span></span><code><span class="nt">lights</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">l_led0_0</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0-0</span><span class="w">    </span><span class="c1"># first LED on connector 0 on board 0</span>
+<span class="w">  </span><span class="nt">l_led1_0</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1-0</span><span class="w">    </span><span class="c1"># first LED on connector 1 on board 0</span>
+<span class="w">  </span><span class="nt">l_led1_1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1-1</span><span class="w">    </span><span class="c1"># second LED on connector 1 on board 0</span>
+<span class="w">  </span><span class="nt">l_led7_20</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">7-20</span><span class="w">    </span><span class="c1"># twentyth LED on connector 7 on board 0</span>
+<span class="w">  </span><span class="nt">l_led8_0</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8-0</span><span class="w">    </span><span class="c1"># first LED on connector 0 on board 1</span>
+<span class="w">  </span><span class="nt">l_led8_1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8-63</span><span class="w">    </span><span class="c1"># last LED on connector 1 on board 1</span>
+<span class="w">  </span><span class="nt">l_led17_1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">17-1</span><span class="w">    </span><span class="c1"># second LED on connector 1 on board 2</span>
 </code></pre></div>
 <h2 id="7-understanding-mpf-light-numbers-and-channels">7. Understanding MPF light numbers and channels</h2>
 <p>In MPF <a href="https://missionpinball.org/latest/config/lights">lights</a> abstract
@@ -33996,19 +33996,19 @@ traditionally RGB (or GRB) LEDs with exactly three channels. However,
 this is not true for RGBW or similar LEDs which do not work with this
 style of numbering. Luckily, you can chain them instead and have MPF
 calculate the internal channels for you:</p>
-<div class="highlight"><pre><span></span><code>lights:
-  led_0:
-    start_channel: 0-0
-    subtype: led
-    type: rgb    # will use red: 0-0, green: 0-1, blue: 0-2
-  led_1:
-    previous: led_0
-    subtype: led
-    type: rgbw   # will use red: 0-3, green: 0-4, blue: 0-5, white: 0-6
-  led_2:
-    previous: led_1
-    subtype: led
-    type: rgbw   # will use red: 0-7, green: 0-8, blue: 0-9, white: 0-10
+<div class="highlight"><pre><span></span><code><span class="nt">lights</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">led_0</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">start_channel</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0-0</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rgb</span><span class="w">    </span><span class="c1"># will use red: 0-0, green: 0-1, blue: 0-2</span>
+<span class="w">  </span><span class="nt">led_1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">previous</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led_0</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rgbw</span><span class="w">   </span><span class="c1"># will use red: 0-3, green: 0-4, blue: 0-5, white: 0-6</span>
+<span class="w">  </span><span class="nt">led_2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">previous</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led_1</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rgbw</span><span class="w">   </span><span class="c1"># will use red: 0-7, green: 0-8, blue: 0-9, white: 0-10</span>
 </code></pre></div>
 <p>See <a href="../../mechs/lights/ws2812/">WS2811 and WS2812 LEDs in Pinball</a> for details.</p>
 <h2 id="8-launch-the-fcserver">8. Launch the fcserver</h2>

@@ -33921,26 +33921,26 @@ handled by the setup mode for Super Jets. In super_jets.yaml, we set up
 our starting events for the mode itself, the values of the jet bumpers
 when Super Jets are active, and also a call to show a slide stating that
 Super Jets are active.</p>
-<div class="highlight"><pre><span></span><code>##! mode: super_jets
-mode:
-  start_events: Super_Jets_Go, Super_Jets_Resume_Go
-  priority: 300
-variable_player:
-  s_left_bumper_active:
-    score: 3000000|block
-  s_middle_bumper_active:
-    score: 3000000|block
-  s_right_bumper_active:
-    score: 3000000|block
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: super_jets</span>
+<span class="nt">mode</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">start_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Super_Jets_Go, Super_Jets_Resume_Go</span>
+<span class="w">  </span><span class="nt">priority</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">300</span>
+<span class="nt">variable_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_left_bumper_active</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3000000|block</span>
+<span class="w">  </span><span class="nt">s_middle_bumper_active</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3000000|block</span>
+<span class="w">  </span><span class="nt">s_right_bumper_active</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3000000|block</span>
 
 
-show_player:
-  mode_super_jets_started:
-    super_jets_startup:
-      loops: 0
-    Super_Jets_on:
-      show_tokens:
-        lights: l_super_jets
+<span class="nt">show_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">mode_super_jets_started</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">super_jets_startup</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">loops</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">Super_Jets_on</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">lights</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_super_jets</span>
 </code></pre></div>
 <p>Stepping through how we're using each setting:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">start_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Super_Jets_Go, Super_Jets_Resume_Go</span>

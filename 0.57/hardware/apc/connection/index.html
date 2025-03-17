@@ -33738,12 +33738,12 @@ needed, a "normal" USB A-B cable will do the job. APC uses the
 <a href="../../lisy/protocol/">LISY protocol</a>
 which is why we have to configure it similarly.</p>
 <p>Add/update the following sections in your machine config:</p>
-<div class="highlight"><pre><span></span><code>hardware:
-  platform: lisy
-lisy:
-  connection: serial
-  port: com1               # replace this with your com port
-  baud: 115200
+<div class="highlight"><pre><span></span><code><span class="nt">hardware</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lisy</span>
+<span class="nt">lisy</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">connection</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">serial</span>
+<span class="w">  </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">com1</span><span class="w">               </span><span class="c1"># replace this with your com port</span>
+<span class="w">  </span><span class="nt">baud</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">115200</span>
 </code></pre></div>
 <p>Once connected to the host computer, it will (hopefully) identify a new
 serial device. This is usually <code>COMx</code> on windows or <code>/dev/ttyUSBx</code> on

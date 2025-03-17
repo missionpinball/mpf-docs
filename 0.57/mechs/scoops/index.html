@@ -33678,69 +33678,69 @@ type. Then connect your coil according to
 <a href="../ball_devices/">ball devices</a>
 since they can count balls and choose to keep or eject it.</p>
 <p>This is an example:</p>
-<div class="highlight"><pre><span></span><code>switches:
-  s_scoop:
-    number: 2
-coils:
-  c_scoop_eject:
-    number: 4
-    default_pulse_ms: 20
-ball_devices:
-  bd_scoop:
-    ball_switches: s_scoop
-    eject_coil: c_scoop_eject
-    eject_timeouts: 1s
+<div class="highlight"><pre><span></span><code><span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_scoop</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="nt">coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">c_scoop_eject</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span>
+<span class="w">    </span><span class="nt">default_pulse_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span>
+<span class="nt">ball_devices</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">bd_scoop</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">ball_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_scoop</span>
+<span class="w">    </span><span class="nt">eject_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_scoop_eject</span>
+<span class="w">    </span><span class="nt">eject_timeouts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
 </code></pre></div>
 <p>It is very common to delay the game when the ball is inside a
 scoop/VUK/saucer to show animations and play sounds. You can achieve
 this using a
 <a href="../../config/queue_relay_player/">queue_relay_player</a> in your mode (you might want to use
 <a href="../../events/overview/conditional/">conditional events</a> to only trigger it when certain condition match):</p>
-<div class="highlight"><pre><span></span><code>switches:
-  s_scoop:
-    number: 2
-coils:
-  c_scoop_eject:
-    number: 4
-    default_pulse_ms: 20
-ball_devices:
-  bd_scoop:
-    ball_switches: s_scoop
-    eject_coil: c_scoop_eject
-    eject_timeouts: 1s
-##! mode: my_mode
-# in your mode
-queue_relay_player:
-  balldevice_bd_scoop_ball_eject_attempt:
-    post: start_mode_success_show
-    wait_for: mode_success_show_ended
-show_player:
-  start_mode_success_show:
-    success_show:
-      loops: 0
-      events_when_completed: mode_success_show_ended
-shows:
-  success_show:
-    - duration: 10
-#!       events: test_event
-      # add lights/sounds/slides here
-##! test
-#! start_game
-#! mock_event test_event
-#! assert_balls_on_playfield 1
-#! hit_switch s_scoop
-#! advance_time_and_run .9
-#! assert_balls_on_playfield 0
-#! advance_time_and_run 2
-#! assert_balls_on_playfield 1
-#! assert_event_not_called test_event
-#! start_mode my_mode
-#! hit_switch s_scoop
-#! advance_time_and_run 2
-#! assert_event_called test_event
-#! assert_balls_on_playfield 0
-#! advance_time_and_run 10
-#! assert_balls_on_playfield 1
+<div class="highlight"><pre><span></span><code><span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_scoop</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="nt">coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">c_scoop_eject</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span>
+<span class="w">    </span><span class="nt">default_pulse_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span>
+<span class="nt">ball_devices</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">bd_scoop</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">ball_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_scoop</span>
+<span class="w">    </span><span class="nt">eject_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_scoop_eject</span>
+<span class="w">    </span><span class="nt">eject_timeouts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<span class="c1">##! mode: my_mode</span>
+<span class="c1"># in your mode</span>
+<span class="nt">queue_relay_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">balldevice_bd_scoop_ball_eject_attempt</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">post</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start_mode_success_show</span>
+<span class="w">    </span><span class="nt">wait_for</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mode_success_show_ended</span>
+<span class="nt">show_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">start_mode_success_show</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">success_show</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">loops</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">      </span><span class="nt">events_when_completed</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mode_success_show_ended</span>
+<span class="nt">shows</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">success_show</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="c1">#!       events: test_event</span>
+<span class="w">      </span><span class="c1"># add lights/sounds/slides here</span>
+<span class="c1">##! test</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! mock_event test_event</span>
+<span class="c1">#! assert_balls_on_playfield 1</span>
+<span class="c1">#! hit_switch s_scoop</span>
+<span class="c1">#! advance_time_and_run .9</span>
+<span class="c1">#! assert_balls_on_playfield 0</span>
+<span class="c1">#! advance_time_and_run 2</span>
+<span class="c1">#! assert_balls_on_playfield 1</span>
+<span class="c1">#! assert_event_not_called test_event</span>
+<span class="c1">#! start_mode my_mode</span>
+<span class="c1">#! hit_switch s_scoop</span>
+<span class="c1">#! advance_time_and_run 2</span>
+<span class="c1">#! assert_event_called test_event</span>
+<span class="c1">#! assert_balls_on_playfield 0</span>
+<span class="c1">#! advance_time_and_run 10</span>
+<span class="c1">#! assert_balls_on_playfield 1</span>
 </code></pre></div>
 <p>When your mode is running the eject will be delayed by 10s (duration of
 your show). Add all your lights, shows and slides to this show. After

@@ -33640,105 +33640,105 @@ icons & this code generated via https://realfavicongenerator.net
 detect certain position using switches (usually 0)</p>
 <p><a href="../../about/help/">TODO: Add a picture of score reels</a></p>
 <p>This is an example:</p>
-<div class="highlight"><pre><span></span><code>lights:
-  light_p1:
-    number:
-    tags: player1
-  light_p2:
-    number:
-    tags: player2
-switches:
-  score_1p_10k_0:
-    number:
-  score_1p_1k_0:
-    number:
-  score_1p_100_0:
-    number:
-  score_1p_10_0:
-    number:
-  score_2p_10k_0:
-    number:
-  score_2p_1k_0:
-    number:
-  score_2p_100_0:
-    number:
-  score_2p_10_0:
-    number:
-coils:
-  player1_10k:
-    number:
-  player1_1k:
-    number:
-  player1_100:
-    number:
-  player1_10:
-    number:
-  player2_10k:
-    number:
-  player2_1k:
-    number:
-  player2_100:
-    number:
-  player2_10:
-    number:
-  chime1:
-    number:
-  chime2:
-    number:
-  chime3:
-    number:
-score_reels:
-  score_1p_10k:
-    coil_inc: player1_10k
-    switch_0: score_1p_10k_0
-    limit_hi: 9
-    limit_lo: 0
-  score_1p_1k:
-    coil_inc: player1_1k
-    switch_0: score_1p_1k_0
-    limit_hi: 9
-    limit_lo: 0
-  score_1p_100:
-    coil_inc: player1_100
-    switch_0: score_1p_100_0
-    limit_hi: 9
-    limit_lo: 0
-  score_1p_10:
-    coil_inc: player1_10
-    switch_0: score_1p_10_0
-    limit_hi: 9
-    limit_lo: 0
-  score_2p_10k:
-    coil_inc: player2_10k
-    switch_0: score_2p_10k_0
-    limit_hi: 9
-    limit_lo: 0
-  score_2p_1k:
-    coil_inc: player2_1k
-    switch_0: score_2p_1k_0
-    limit_hi: 9
-    limit_lo: 0
-  score_2p_100:
-    coil_inc: player2_100
-    switch_0: score_2p_100_0
-    limit_hi: 9
-    limit_lo: 0
-  score_2p_10:
-    coil_inc: player2_10
-    switch_0: score_2p_10_0
-    limit_hi: 9
-    limit_lo: 0
-score_reel_groups:
-  player1:
-    reels: score_1p_10k, score_1p_1k, score_1p_100, score_1p_10, None
-    tags: player1
-    chimes: None, chime1, chime2, chime3, None
-    lights_tag: player1
-  player2:
-    reels: score_2p_10k, score_2p_1k, score_2p_100, score_2p_10, None
-    tags: player2
-    chimes: None, chime1, chime2, chime3, None
-    lights_tag: player2
+<div class="highlight"><pre><span></span><code><span class="nt">lights</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">light_p1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">player1</span>
+<span class="w">  </span><span class="nt">light_p2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">player2</span>
+<span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">score_1p_10k_0</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">score_1p_1k_0</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">score_1p_100_0</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">score_1p_10_0</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">score_2p_10k_0</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">score_2p_1k_0</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">score_2p_100_0</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">score_2p_10_0</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="nt">coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">player1_10k</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">player1_1k</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">player1_100</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">player1_10</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">player2_10k</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">player2_1k</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">player2_100</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">player2_10</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">chime1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">chime2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">chime3</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="nt">score_reels</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">score_1p_10k</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">coil_inc</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">player1_10k</span>
+<span class="w">    </span><span class="nt">switch_0</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">score_1p_10k_0</span>
+<span class="w">    </span><span class="nt">limit_hi</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">9</span>
+<span class="w">    </span><span class="nt">limit_lo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">  </span><span class="nt">score_1p_1k</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">coil_inc</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">player1_1k</span>
+<span class="w">    </span><span class="nt">switch_0</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">score_1p_1k_0</span>
+<span class="w">    </span><span class="nt">limit_hi</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">9</span>
+<span class="w">    </span><span class="nt">limit_lo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">  </span><span class="nt">score_1p_100</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">coil_inc</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">player1_100</span>
+<span class="w">    </span><span class="nt">switch_0</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">score_1p_100_0</span>
+<span class="w">    </span><span class="nt">limit_hi</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">9</span>
+<span class="w">    </span><span class="nt">limit_lo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">  </span><span class="nt">score_1p_10</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">coil_inc</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">player1_10</span>
+<span class="w">    </span><span class="nt">switch_0</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">score_1p_10_0</span>
+<span class="w">    </span><span class="nt">limit_hi</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">9</span>
+<span class="w">    </span><span class="nt">limit_lo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">  </span><span class="nt">score_2p_10k</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">coil_inc</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">player2_10k</span>
+<span class="w">    </span><span class="nt">switch_0</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">score_2p_10k_0</span>
+<span class="w">    </span><span class="nt">limit_hi</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">9</span>
+<span class="w">    </span><span class="nt">limit_lo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">  </span><span class="nt">score_2p_1k</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">coil_inc</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">player2_1k</span>
+<span class="w">    </span><span class="nt">switch_0</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">score_2p_1k_0</span>
+<span class="w">    </span><span class="nt">limit_hi</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">9</span>
+<span class="w">    </span><span class="nt">limit_lo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">  </span><span class="nt">score_2p_100</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">coil_inc</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">player2_100</span>
+<span class="w">    </span><span class="nt">switch_0</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">score_2p_100_0</span>
+<span class="w">    </span><span class="nt">limit_hi</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">9</span>
+<span class="w">    </span><span class="nt">limit_lo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">  </span><span class="nt">score_2p_10</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">coil_inc</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">player2_10</span>
+<span class="w">    </span><span class="nt">switch_0</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">score_2p_10_0</span>
+<span class="w">    </span><span class="nt">limit_hi</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">9</span>
+<span class="w">    </span><span class="nt">limit_lo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="nt">score_reel_groups</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">player1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">reels</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">score_1p_10k, score_1p_1k, score_1p_100, score_1p_10, None</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">player1</span>
+<span class="w">    </span><span class="nt">chimes</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">None, chime1, chime2, chime3, None</span>
+<span class="w">    </span><span class="nt">lights_tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">player1</span>
+<span class="w">  </span><span class="nt">player2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">reels</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">score_2p_10k, score_2p_1k, score_2p_100, score_2p_10, None</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">player2</span>
+<span class="w">    </span><span class="nt">chimes</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">None, chime1, chime2, chime3, None</span>
+<span class="w">    </span><span class="nt">lights_tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">player2</span>
 </code></pre></div>
 <h2 id="related-events">Related Events</h2>
 <ul>

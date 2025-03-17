@@ -33762,14 +33762,14 @@ might alternate between white (Stark) and red (Lannister) to show you
 that both modes will score that shot.</p>
 </div>
 <p>This is an example of a blinkenlight player:</p>
-<div class="highlight"><pre><span></span><code>blinkenlight_player:
-  some_event:
-    my_blinkenlight: red
-  some_other_event:
-    my_blinkenlight:
-      action: add
-      key: blue_color
-      color: blue
+<div class="highlight"><pre><span></span><code><span class="nt">blinkenlight_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">some_event</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">my_blinkenlight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
+<span class="w">  </span><span class="nt">some_other_event</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">my_blinkenlight</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">add</span>
+<span class="w">      </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">blue_color</span>
+<span class="w">      </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">blue</span>
 </code></pre></div>
 <p>In the example above, when the event called <code>some_event</code> is posted, the
 color red will be added to the blinkenlight <code>my_blinkenlight</code>. When the
@@ -33834,28 +33834,28 @@ for example, and you want them both to flash the same colors. You would
 want them to show the same colors at the same time.</p>
 <h2 id="a-cycle-example">A cycle example</h2>
 <p>Let's say you have a blinkenlight that is set up like this:</p>
-<div class="highlight"><pre><span></span><code>#! lights:
-#!   l_left_ramp_arrow:
-#!     channels:
-#!       red:
-#!         number: 1
-#!       green:
-#!         number: 2
-#!       blue:
-#!         number: 3
-#!   l_right_ramp_arrow:
-#!     channels:
-#!       red:
-#!         number: 4
-#!       green:
-#!         number: 5
-#!       blue:
-#!         number: 6
-blinkenlights:
-  blinkenlight_1:
-    cycle_duration: 1s
-    off_when_multiple: false
-    light: l_left_ramp_arrow
+<div class="highlight"><pre><span></span><code><span class="c1">#! lights:</span>
+<span class="c1">#!   l_left_ramp_arrow:</span>
+<span class="c1">#!     channels:</span>
+<span class="c1">#!       red:</span>
+<span class="c1">#!         number: 1</span>
+<span class="c1">#!       green:</span>
+<span class="c1">#!         number: 2</span>
+<span class="c1">#!       blue:</span>
+<span class="c1">#!         number: 3</span>
+<span class="c1">#!   l_right_ramp_arrow:</span>
+<span class="c1">#!     channels:</span>
+<span class="c1">#!       red:</span>
+<span class="c1">#!         number: 4</span>
+<span class="c1">#!       green:</span>
+<span class="c1">#!         number: 5</span>
+<span class="c1">#!       blue:</span>
+<span class="c1">#!         number: 6</span>
+<span class="nt">blinkenlights</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">blinkenlight_1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">cycle_duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<span class="w">    </span><span class="nt">off_when_multiple</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">    </span><span class="nt">light</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_left_ramp_arrow</span>
 </code></pre></div>
 <p>In this case, <code>blinkenlight_1</code> has a <code>cycle_duration</code> value of <code>1s</code>.
 That is, each cycle lasts 1 second, regardless of how many colors the
@@ -34019,10 +34019,10 @@ in mind. You might need to add the colors again when the mode restarts,
 depending on how your game works.</p>
 </div>
 <p>Example blinkenlight player from a show:</p>
-<div class="highlight"><pre><span></span><code>##! show: test
-- time: 0
-  blinkenlights:
-    my_blinkenlight: red
+<div class="highlight"><pre><span></span><code><span class="c1">##! show: test</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">  </span><span class="nt">blinkenlights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">my_blinkenlight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
 </code></pre></div>
 <h2 id="usage-in-config-files">Usage in config files</h2>
 <p>In config files, the blinkenlight player is used via the
@@ -34041,12 +34041,12 @@ colors without a <code>key</code> value as a keyless color. If you later use the
 color will be removed.</p>
 <p>This is better explained with an example. Consider this
 <code>blinkenlight_player</code>:</p>
-<div class="highlight"><pre><span></span><code>blinkenlight_player:
-  some_event:
-    my_blinkenlight: red
-  some_other_event:
-    my_blinkenlight:
-      action: remove
+<div class="highlight"><pre><span></span><code><span class="nt">blinkenlight_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">some_event</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">my_blinkenlight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
+<span class="w">  </span><span class="nt">some_other_event</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">my_blinkenlight</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">remove</span>
 </code></pre></div>
 <p>In this case, the color <code>red</code> will be added to <code>my_blinkenlight</code> when
 the <code>some_event</code> event is posted. This color doesn't have a <code>key</code>
@@ -34064,11 +34064,11 @@ keyless color. Instead of using the full config and specifying an
 <code>action: remove</code> as we did above, you can use the special color <code>stop</code>
 or <code>remove</code> in the express config to do the same thing. The following is
 equivalent to the example above:</p>
-<div class="highlight"><pre><span></span><code>blinkenlight_player:
-  some_event:
-    my_blinkenlight: red
-  some_other_event:
-    my_blinkenlight: remove
+<div class="highlight"><pre><span></span><code><span class="nt">blinkenlight_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">some_event</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">my_blinkenlight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
+<span class="w">  </span><span class="nt">some_other_event</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">my_blinkenlight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">remove</span>
 </code></pre></div>
 <p>In this case, the red color is added to the blinkenlight when
 <code>some_event</code> is posted, and then removed when <code>some_other_event</code> is

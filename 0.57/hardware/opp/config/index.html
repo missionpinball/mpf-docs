@@ -33725,8 +33725,8 @@ icons & this code generated via https://realfavicongenerator.net
 <h2 id="1-configure-the-hardware-platform-for-opp">1. Configure the Hardware platform for OPP</h2>
 <p>To use MPF with OPP, you need to configure your platform as <em>opp</em>, like
 this:</p>
-<div class="highlight"><pre><span></span><code>hardware:
-  platform: opp
+<div class="highlight"><pre><span></span><code><span class="nt">hardware</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">opp</span>
 </code></pre></div>
 <h2 id="2-configure-the-opp-specific-hardware-settings">2. Configure the OPP-specific hardware settings</h2>
 <p>When you use OPP hardware with MPF, you also need to add an <code>opp:</code>
@@ -33750,8 +33750,8 @@ real serial port must use 5V signal levels when talking to OPP hardware.</p>
 <p>If you're using an OPP controller, you need to add the serial port to
 your MPF config. So if you plug in the OPP controller and see a port
 such as <em>COM7</em> appear, you'd set your config like this:</p>
-<div class="highlight"><pre><span></span><code>opp:
-  ports: COM7
+<div class="highlight"><pre><span></span><code><span class="nt">opp</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">ports</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">COM7</span>
 </code></pre></div>
 <p>Full details of the port options as well as the other options available
 here are in the <code>opp:</code> section of the configuration file reference. Note

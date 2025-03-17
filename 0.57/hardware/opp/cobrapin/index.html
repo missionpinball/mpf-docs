@@ -33872,23 +33872,23 @@ The <code>config.yaml</code> below is the only configuration file you need in yo
 project. The config file is fully valid for the Cobra board connected to
 a Linux PC running MPF. If you have a Cobra board but run Windows or
 macOS you have to change the <code>ports</code>.</p>
-<div class="highlight"><pre><span></span><code>#config_version=5
+<div class="highlight"><pre><span></span><code><span class="c1">#config_version=5</span>
 
-hardware:
-   platform: opp
-   driverboards: gen2
+<span class="nt">hardware</span><span class="p">:</span>
+<span class="w">   </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">opp</span>
+<span class="w">   </span><span class="nt">driverboards</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gen2</span>
 
-opp:
-   ports: /dev/ttyACM0, /dev/ttyACM1 # change if your Cobra board uses different ports
+<span class="nt">opp</span><span class="p">:</span>
+<span class="w">   </span><span class="nt">ports</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/dev/ttyACM0, /dev/ttyACM1</span><span class="w"> </span><span class="c1"># change if your Cobra board uses different ports</span>
 
-coils:
-    c_my_coil:
-       number: 1-0-1
-       pulse_events: s_my_switch_active
+<span class="nt">coils</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">c_my_coil</span><span class="p">:</span>
+<span class="w">       </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1-0-1</span>
+<span class="w">       </span><span class="nt">pulse_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_my_switch_active</span>
 
-switches:
-   s_my_switch:
-      number: 0-0-16
+<span class="nt">switches</span><span class="p">:</span>
+<span class="w">   </span><span class="nt">s_my_switch</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0-0-16</span>
 </code></pre></div>
 <p>Some remarks on above <code>config.yaml</code></p>
 <ul>
@@ -33986,165 +33986,165 @@ that might be handy for ground connection. See the two cage clamps at
 the top right, they have a little bridge (this light grey/white box) to
 have all inputs internally connected.</p>
 <h2 id="example-config">Example Config</h2>
-<div class="highlight"><pre><span></span><code>#config_version=5
+<div class="highlight"><pre><span></span><code><span class="c1">#config_version=5</span>
 
-#CobraPin Example Config
+<span class="c1">#CobraPin Example Config</span>
 
-hardware:
-  platform: opp
-  driverboards: gen2
-
-
-opp:
-  #Use the USB ports defined by your OS for the two STM32 boards
-  ports: /dev/ttyACM0, /dev/ttyACM1
-  #USING SERIAL NUMBERS INSTEAD OF CHAINS
-  #  Board 0 has serial number 0, Board 1 has serial number 1.
-  #  This is convenient if your OS tends to reassign the serial port.
-  #  MPF will automatically address the correct board even if the ports
-  #     are swapped.
-
-  #For multiple CobraPin boards in a game, you will either have to give
-  #  the STM32 boards on the second CobraPin board new serial numbers
-  #  (10 and 11 are suggested for the 2nd board since 2 is used by the
-  #  CobraPin Xpansion Board)
-  #  &lt;OR&gt; Use the chains section to assign a port to a board number.
-  #  Mixing these up could cause blown FETs, coils, and fuses. Proceed
-  #  with caution. Test without coil power and use the yellow coil LEDs
-  #  for feedback.
-  #chains:
-     #0: /dev/ttyACM0
-     #1: /dev/ttyACM1
+<span class="nt">hardware</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">opp</span>
+<span class="w">  </span><span class="nt">driverboards</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gen2</span>
 
 
-psus:
-  default:
-    #Gives the capacitors extra time to recharge after firing a coil
-    #  and eases the load on the power supply. Doesn&#39;t affect autofire
-    #  devices like flippers, pops, slings.
-    release_wait_ms: 50
+<span class="nt">opp</span><span class="p">:</span>
+<span class="w">  </span><span class="c1">#Use the USB ports defined by your OS for the two STM32 boards</span>
+<span class="w">  </span><span class="nt">ports</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/dev/ttyACM0, /dev/ttyACM1</span>
+<span class="w">  </span><span class="c1">#USING SERIAL NUMBERS INSTEAD OF CHAINS</span>
+<span class="w">  </span><span class="c1">#  Board 0 has serial number 0, Board 1 has serial number 1.</span>
+<span class="w">  </span><span class="c1">#  This is convenient if your OS tends to reassign the serial port.</span>
+<span class="w">  </span><span class="c1">#  MPF will automatically address the correct board even if the ports</span>
+<span class="w">  </span><span class="c1">#     are swapped.</span>
+
+<span class="w">  </span><span class="c1">#For multiple CobraPin boards in a game, you will either have to give</span>
+<span class="w">  </span><span class="c1">#  the STM32 boards on the second CobraPin board new serial numbers</span>
+<span class="w">  </span><span class="c1">#  (10 and 11 are suggested for the 2nd board since 2 is used by the</span>
+<span class="w">  </span><span class="c1">#  CobraPin Xpansion Board)</span>
+<span class="w">  </span><span class="c1">#  &lt;OR&gt; Use the chains section to assign a port to a board number.</span>
+<span class="w">  </span><span class="c1">#  Mixing these up could cause blown FETs, coils, and fuses. Proceed</span>
+<span class="w">  </span><span class="c1">#  with caution. Test without coil power and use the yellow coil LEDs</span>
+<span class="w">  </span><span class="c1">#  for feedback.</span>
+<span class="w">  </span><span class="c1">#chains:</span>
+<span class="w">     </span><span class="c1">#0: /dev/ttyACM0</span>
+<span class="w">     </span><span class="c1">#1: /dev/ttyACM1</span>
 
 
-#One giant config file can get difficult to manage. You can put any of
-#  these config sections in its own yaml file and link to it with the
-#  config section here
-config:
-  #- switches_config.yaml
-  #- lights_config.yaml
-  #- coils_config.yaml
-  # ...
+<span class="nt">psus</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">default</span><span class="p">:</span>
+<span class="w">    </span><span class="c1">#Gives the capacitors extra time to recharge after firing a coil</span>
+<span class="w">    </span><span class="c1">#  and eases the load on the power supply. Doesn&#39;t affect autofire</span>
+<span class="w">    </span><span class="c1">#  devices like flippers, pops, slings.</span>
+<span class="w">    </span><span class="nt">release_wait_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">50</span>
 
 
-switches:
-
-  #DIRECT SWITCHES
-  #switch numbers are labelled in silkscreen on the board
-  s_left_flipper:
-    number: 0-0-27
-    tags: left_flipper
-  s_right_flipper:
-    number: 0-0-26
-    tags: right_flipper
-  s_startButton:
-    number: 0-0-25
-    tags: start
+<span class="c1">#One giant config file can get difficult to manage. You can put any of</span>
+<span class="c1">#  these config sections in its own yaml file and link to it with the</span>
+<span class="c1">#  config section here</span>
+<span class="nt">config</span><span class="p">:</span>
+<span class="w">  </span><span class="c1">#- switches_config.yaml</span>
+<span class="w">  </span><span class="c1">#- lights_config.yaml</span>
+<span class="w">  </span><span class="c1">#- coils_config.yaml</span>
+<span class="w">  </span><span class="c1"># ...</span>
 
 
-  #MATRIX SWITCHES
-  #valid numbers are 1-0-32 through 1-0-95
-  s_lowerDrop1:
-    number: 1-0-32
+<span class="nt">switches</span><span class="p">:</span>
 
-  # ...
-
-  s_topRollunder:
-    number: 1-0-95
-    ignore_window_ms: 250ms    #tune to assist in debouncing
-
-
-lights:
-
-  #SERIAL LEDS (neopixels)
-  #NEO0 output supports 256 LEDs numbered 0-0-0 to 0-0-255
-  l_shootAgain:
-    number: 0-0-0
-    subtype: led
-    type: grb   #Most WS2812-based LEDs are grb color order.
-                #This line not required for rgb ordered LEDs like the
-                #  WS2811 LEDs shown below
-
-  # ...
-
-  #NEO1 output supports 256 LEDs numbered 1-0-0 to 1-0-255
-  l_gi_1:
-    number: 1-0-0
-    subtype: led
-    tags: gi    #you can group similar LEDs with user defined tags
-  l_gi_2:
-    number: 1-0-255
-    subtype: led
-    tags: gi
+<span class="w">  </span><span class="c1">#DIRECT SWITCHES</span>
+<span class="w">  </span><span class="c1">#switch numbers are labelled in silkscreen on the board</span>
+<span class="w">  </span><span class="nt">s_left_flipper</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0-0-27</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">left_flipper</span>
+<span class="w">  </span><span class="nt">s_right_flipper</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0-0-26</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">right_flipper</span>
+<span class="w">  </span><span class="nt">s_startButton</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0-0-25</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start</span>
 
 
-coils:
-  #coil numbers are labelled in silkscreen on the board
+<span class="w">  </span><span class="c1">#MATRIX SWITCHES</span>
+<span class="w">  </span><span class="c1">#valid numbers are 1-0-32 through 1-0-95</span>
+<span class="w">  </span><span class="nt">s_lowerDrop1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1-0-32</span>
 
-  #There are multiple ways to configure flippers, use the one that
-  #  matches your hardware
-  c_flipper_left:
-    number: 0-0-8
-    allow_enable: true
-    default_hold_power: 1.0
-    default_pulse_ms: 50
-  c_flipper_right:
-    number: 0-0-4
-    allow_enable: true
-    default_hold_power: 1.0
-    default_pulse_ms: 50
-  c_ballRelease:
-    number: 1-0-1
-    default_hold_power: 0.15
-    default_pulse_ms: 30
+<span class="w">  </span><span class="c1"># ...</span>
+
+<span class="w">  </span><span class="nt">s_topRollunder</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1-0-95</span>
+<span class="w">    </span><span class="nt">ignore_window_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">250ms</span><span class="w">    </span><span class="c1">#tune to assist in debouncing</span>
 
 
-flippers:
-  #Add your flipper config
+<span class="nt">lights</span><span class="p">:</span>
+
+<span class="w">  </span><span class="c1">#SERIAL LEDS (neopixels)</span>
+<span class="w">  </span><span class="c1">#NEO0 output supports 256 LEDs numbered 0-0-0 to 0-0-255</span>
+<span class="w">  </span><span class="nt">l_shootAgain</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0-0-0</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">grb</span><span class="w">   </span><span class="c1">#Most WS2812-based LEDs are grb color order.</span>
+<span class="w">                </span><span class="c1">#This line not required for rgb ordered LEDs like the</span>
+<span class="w">                </span><span class="c1">#  WS2811 LEDs shown below</span>
+
+<span class="w">  </span><span class="c1"># ...</span>
+
+<span class="w">  </span><span class="c1">#NEO1 output supports 256 LEDs numbered 1-0-0 to 1-0-255</span>
+<span class="w">  </span><span class="nt">l_gi_1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1-0-0</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gi</span><span class="w">    </span><span class="c1">#you can group similar LEDs with user defined tags</span>
+<span class="w">  </span><span class="nt">l_gi_2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1-0-255</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gi</span>
 
 
-autofire_coils:
-  #Add your autofire cofigs for pops, slings, etc.
+<span class="nt">coils</span><span class="p">:</span>
+<span class="w">  </span><span class="c1">#coil numbers are labelled in silkscreen on the board</span>
+
+<span class="w">  </span><span class="c1">#There are multiple ways to configure flippers, use the one that</span>
+<span class="w">  </span><span class="c1">#  matches your hardware</span>
+<span class="w">  </span><span class="nt">c_flipper_left</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0-0-8</span>
+<span class="w">    </span><span class="nt">allow_enable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">default_hold_power</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0</span>
+<span class="w">    </span><span class="nt">default_pulse_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">50</span>
+<span class="w">  </span><span class="nt">c_flipper_right</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0-0-4</span>
+<span class="w">    </span><span class="nt">allow_enable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">default_hold_power</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0</span>
+<span class="w">    </span><span class="nt">default_pulse_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">50</span>
+<span class="w">  </span><span class="nt">c_ballRelease</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1-0-1</span>
+<span class="w">    </span><span class="nt">default_hold_power</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.15</span>
+<span class="w">    </span><span class="nt">default_pulse_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
 
 
-ball_devices:
-  #Add your ball devices
+<span class="nt">flippers</span><span class="p">:</span>
+<span class="w">  </span><span class="c1">#Add your flipper config</span>
 
 
-playfields:
-  #Define your playfields
+<span class="nt">autofire_coils</span><span class="p">:</span>
+<span class="w">  </span><span class="c1">#Add your autofire cofigs for pops, slings, etc.</span>
 
 
-machine:
-  balls_installed: 3 #How many balls are physically in your game
-  min_balls: 3 #How few balls can be accounted for before you can start a game
+<span class="nt">ball_devices</span><span class="p">:</span>
+<span class="w">  </span><span class="c1">#Add your ball devices</span>
 
 
-game:
-  balls_per_game: 3
-  max_players: 4
+<span class="nt">playfields</span><span class="p">:</span>
+<span class="w">  </span><span class="c1">#Define your playfields</span>
 
 
-modes:
-  #Add all your mode names here
-  #- attract
-  #- base
-  #- etc
+<span class="nt">machine</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">balls_installed</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span><span class="w"> </span><span class="c1">#How many balls are physically in your game</span>
+<span class="w">  </span><span class="nt">min_balls</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span><span class="w"> </span><span class="c1">#How few balls can be accounted for before you can start a game</span>
 
 
-keyboard:   #use to drive your game from the computer for testing
-  z:
-    switch: s_left_flipper
-  &quot;/&quot;:
-    switch: s_right_flipper
+<span class="nt">game</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">balls_per_game</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="w">  </span><span class="nt">max_players</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span>
+
+
+<span class="nt">modes</span><span class="p">:</span>
+<span class="w">  </span><span class="c1">#Add all your mode names here</span>
+<span class="w">  </span><span class="c1">#- attract</span>
+<span class="w">  </span><span class="c1">#- base</span>
+<span class="w">  </span><span class="c1">#- etc</span>
+
+
+<span class="nt">keyboard</span><span class="p">:</span><span class="w">   </span><span class="c1">#use to drive your game from the computer for testing</span>
+<span class="w">  </span><span class="nt">z</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_left_flipper</span>
+<span class="w">  </span><span class="s">&quot;/&quot;</span><span class="p p-Indicator">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_right_flipper</span>
 </code></pre></div>
 <hr />
 <div class="admonition question">

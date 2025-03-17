@@ -34185,65 +34185,65 @@ flippers in newer machines. Early solid-state (pre-WPC) machines used
 enable relays to enable the flippers, and those are configured
 elsewhere. (See the How To guides for details.)</p>
 </div>
-<div class="highlight"><pre><span></span><code>#! switches:
-#!   s_flipper_left:
-#!     number:
-#!   flipperLwL_EOS:
-#!     number:
-#!   s_flipper_right:
-#!     number:
-#!   flipperLwR_EOS:
-#!     number:
-#!   flipperUpL:
-#!     number:
-#!   flipperUpL_EOS:
-#!     number:
-#!   flipperUpR:
-#!     number:
-#!   flipperUpR_EOS:
-#!     number:
-#! coils:
-#!   c_flipper_lower_left_main:
-#!     number:
-#!   c_flipper_lower_left_hold:
-#!     number:
-#!   c_flipper_lower_right_main:
-#!     number:
-#!   c_flipper_lower_right_hold:
-#!     number:
-#!   flipperUpLMain:
-#!     number:
-#!   flipperUpLHold:
-#!     number:
-#!   flipperUpRMain:
-#!     number:
-#!   flipperUpRHold:
-#!     number:
-flippers:
-  lower_left:
-    main_coil: c_flipper_lower_left_main
-    hold_coil: c_flipper_lower_left_hold
-    activation_switch: s_flipper_left
-    eos_switch: flipperLwL_EOS
-    label: Left Main Flipper
-  lower_right:
-    main_coil: c_flipper_lower_right_main
-    hold_coil: c_flipper_lower_right_hold
-    activation_switch: s_flipper_right
-    eos_switch: flipperLwR_EOS
-    label: Right Main Flipper
-  upper_left:
-    main_coil: flipperUpLMain
-    hold_coil: flipperUpLHold
-    activation_switch: flipperUpL
-    eos_switch: flipperUpL_EOS
-    label: Upper Left Flipper
-  upper_right:
-    main_coil: flipperUpRMain
-    hold_coil: flipperUpRHold
-    activation_switch: flipperUpR
-    eos_switch: flipperUpR_EOS
-    label: Upper Right Flipper
+<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
+<span class="c1">#!   s_flipper_left:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   flipperLwL_EOS:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   s_flipper_right:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   flipperLwR_EOS:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   flipperUpL:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   flipperUpL_EOS:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   flipperUpR:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   flipperUpR_EOS:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#! coils:</span>
+<span class="c1">#!   c_flipper_lower_left_main:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   c_flipper_lower_left_hold:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   c_flipper_lower_right_main:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   c_flipper_lower_right_hold:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   flipperUpLMain:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   flipperUpLHold:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   flipperUpRMain:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   flipperUpRHold:</span>
+<span class="c1">#!     number:</span>
+<span class="nt">flippers</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">lower_left</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">main_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_flipper_lower_left_main</span>
+<span class="w">    </span><span class="nt">hold_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_flipper_lower_left_hold</span>
+<span class="w">    </span><span class="nt">activation_switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_flipper_left</span>
+<span class="w">    </span><span class="nt">eos_switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flipperLwL_EOS</span>
+<span class="w">    </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Left Main Flipper</span>
+<span class="w">  </span><span class="nt">lower_right</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">main_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_flipper_lower_right_main</span>
+<span class="w">    </span><span class="nt">hold_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_flipper_lower_right_hold</span>
+<span class="w">    </span><span class="nt">activation_switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_flipper_right</span>
+<span class="w">    </span><span class="nt">eos_switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flipperLwR_EOS</span>
+<span class="w">    </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Right Main Flipper</span>
+<span class="w">  </span><span class="nt">upper_left</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">main_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flipperUpLMain</span>
+<span class="w">    </span><span class="nt">hold_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flipperUpLHold</span>
+<span class="w">    </span><span class="nt">activation_switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flipperUpL</span>
+<span class="w">    </span><span class="nt">eos_switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flipperUpL_EOS</span>
+<span class="w">    </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Upper Left Flipper</span>
+<span class="w">  </span><span class="nt">upper_right</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">main_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flipperUpRMain</span>
+<span class="w">    </span><span class="nt">hold_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flipperUpRHold</span>
+<span class="w">    </span><span class="nt">activation_switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flipperUpR</span>
+<span class="w">    </span><span class="nt">eos_switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flipperUpR_EOS</span>
+<span class="w">    </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Upper Right Flipper</span>
 </code></pre></div>
 <h2 id="required-settings">Required settings</h2>
 <p>The following sections are required in the <code>flippers:</code> section of your
@@ -34346,18 +34346,18 @@ managing them separately.</p>
 use to adjust the (relative) power. It can be used to allow the operator
 to adjust the power in service mode.</p>
 <p>This is an example:</p>
-<div class="highlight"><pre><span></span><code>coils:
-  c_flipper_main:
-    number:
-switches:
-  s_flipper:
-    number: 1
-    tags: left_flipper
-flippers:
-  f_test_flippers_with_settings:
-    main_coil: c_flipper_main
-    power_setting_name: flipper_power
-    activation_switch: s_flipper
+<div class="highlight"><pre><span></span><code><span class="nt">coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">c_flipper_main</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_flipper</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">left_flipper</span>
+<span class="nt">flippers</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">f_test_flippers_with_settings</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">main_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_flipper_main</span>
+<span class="w">    </span><span class="nt">power_setting_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flipper_power</span>
+<span class="w">    </span><span class="nt">activation_switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_flipper</span>
 </code></pre></div>
 <p>MPF comes with a <a href="../settings/">setting</a> called <code>flipper_power</code> by default and you can add additional
 ones.</p>

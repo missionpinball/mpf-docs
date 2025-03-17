@@ -33748,14 +33748,14 @@ happen three times, then you would use a <em>counter</em> logic block instead.</
 <p>For example, let's say you had a mode where you wanted three shots to
 be hit, in any order, and when they were all hit, you lit another shot.
 You'd use an accrual logic block like this:</p>
-<div class="highlight"><pre><span></span><code>##! mode: my_mode
-accruals:
-  name_of_my_logic_block:
-    events:
-      - shot1_hit
-      - shot2_hit
-      - shot3_hit
-    events_when_complete: enable_winning_shot
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: my_mode</span>
+<span class="nt">accruals</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name_of_my_logic_block</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">events</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">shot1_hit</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">shot2_hit</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">shot3_hit</span>
+<span class="w">    </span><span class="nt">events_when_complete</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">enable_winning_shot</span>
 </code></pre></div>
 <p>There are much more settings (as you'll see below), but the basic logic
 block above (which is called "name_of_my_logic_block") will watch for
@@ -33783,56 +33783,56 @@ that it was hit.</p>
 <p><em>completed</em></p>
 <p>:   True if the block is completed. Otherwise False.</p>
 <p>This is an example:</p>
-<div class="highlight"><pre><span></span><code>##! mode: my_mode
-accruals:
-  test_accrual:
-    events:
-      - shot1_hit
-      - shot2_hit
-      - shot3_hit
-    reset_on_complete: false     # this is needed for the last event player
-event_player:
-  test_event{device.accruals.test_accrual.value[0]}: shot1_was_hit
-  test_event{device.accruals.test_accrual.value[1]}: shot2_was_hit
-  test_event{device.accruals.test_accrual.value[2]}: shot3_was_hit
-  test_event{device.accruals.test_accrual.completed}: accrual_completed
-# Note: For this last conditional logic to be able to evaluate as true, the accrual setting
-# reset_on_complete must be set to No/False. Otherwise the accrual will reset instantly and this will never be true.
-##! test
-#! start_game
-#! start_mode my_mode
-#! mock_event shot1_was_hit
-#! mock_event shot2_was_hit
-#! mock_event shot3_was_hit
-#! mock_event accrual_completed
-#! assert_bool_condition False device.accruals.test_accrual.value[0]
-#! assert_bool_condition False device.accruals.test_accrual.value[1]
-#! assert_bool_condition False device.accruals.test_accrual.value[2]
-#! post test_event
-#! assert_event_not_called shot1_was_hit
-#! assert_event_not_called shot2_was_hit
-#! assert_event_not_called shot3_was_hit
-#! post shot1_hit
-#! assert_bool_condition True device.accruals.test_accrual.value[0]
-#! assert_bool_condition False device.accruals.test_accrual.value[1]
-#! assert_bool_condition False device.accruals.test_accrual.value[2]
-#! assert_bool_condition False device.accruals.test_accrual.completed
-#! post test_event
-#! assert_event_called shot1_was_hit
-#! assert_event_not_called shot2_was_hit
-#! assert_event_not_called shot3_was_hit
-#! assert_event_not_called accrual_completed
-#! post shot3_hit
-#! post shot2_hit
-#! post test_event
-#! assert_event_called shot1_was_hit 2
-#! assert_event_called shot2_was_hit
-#! assert_event_called shot3_was_hit
-#! assert_event_called accrual_completed
-#! assert_bool_condition True device.accruals.test_accrual.value[0]
-#! assert_bool_condition True device.accruals.test_accrual.value[1]
-#! assert_bool_condition True device.accruals.test_accrual.value[2]
-#! assert_bool_condition True device.accruals.test_accrual.completed
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: my_mode</span>
+<span class="nt">accruals</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">test_accrual</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">events</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">shot1_hit</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">shot2_hit</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">shot3_hit</span>
+<span class="w">    </span><span class="nt">reset_on_complete</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w">     </span><span class="c1"># this is needed for the last event player</span>
+<span class="nt">event_player</span><span class="p">:</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">test_event{device.accruals.test_accrual.value[0]}</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">shot1_was_hit</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">test_event{device.accruals.test_accrual.value[1]}</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">shot2_was_hit</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">test_event{device.accruals.test_accrual.value[2]}</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">shot3_was_hit</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">test_event{device.accruals.test_accrual.completed}</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">accrual_completed</span>
+<span class="c1"># Note: For this last conditional logic to be able to evaluate as true, the accrual setting</span>
+<span class="c1"># reset_on_complete must be set to No/False. Otherwise the accrual will reset instantly and this will never be true.</span>
+<span class="c1">##! test</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! start_mode my_mode</span>
+<span class="c1">#! mock_event shot1_was_hit</span>
+<span class="c1">#! mock_event shot2_was_hit</span>
+<span class="c1">#! mock_event shot3_was_hit</span>
+<span class="c1">#! mock_event accrual_completed</span>
+<span class="c1">#! assert_bool_condition False device.accruals.test_accrual.value[0]</span>
+<span class="c1">#! assert_bool_condition False device.accruals.test_accrual.value[1]</span>
+<span class="c1">#! assert_bool_condition False device.accruals.test_accrual.value[2]</span>
+<span class="c1">#! post test_event</span>
+<span class="c1">#! assert_event_not_called shot1_was_hit</span>
+<span class="c1">#! assert_event_not_called shot2_was_hit</span>
+<span class="c1">#! assert_event_not_called shot3_was_hit</span>
+<span class="c1">#! post shot1_hit</span>
+<span class="c1">#! assert_bool_condition True device.accruals.test_accrual.value[0]</span>
+<span class="c1">#! assert_bool_condition False device.accruals.test_accrual.value[1]</span>
+<span class="c1">#! assert_bool_condition False device.accruals.test_accrual.value[2]</span>
+<span class="c1">#! assert_bool_condition False device.accruals.test_accrual.completed</span>
+<span class="c1">#! post test_event</span>
+<span class="c1">#! assert_event_called shot1_was_hit</span>
+<span class="c1">#! assert_event_not_called shot2_was_hit</span>
+<span class="c1">#! assert_event_not_called shot3_was_hit</span>
+<span class="c1">#! assert_event_not_called accrual_completed</span>
+<span class="c1">#! post shot3_hit</span>
+<span class="c1">#! post shot2_hit</span>
+<span class="c1">#! post test_event</span>
+<span class="c1">#! assert_event_called shot1_was_hit 2</span>
+<span class="c1">#! assert_event_called shot2_was_hit</span>
+<span class="c1">#! assert_event_called shot3_was_hit</span>
+<span class="c1">#! assert_event_called accrual_completed</span>
+<span class="c1">#! assert_bool_condition True device.accruals.test_accrual.value[0]</span>
+<span class="c1">#! assert_bool_condition True device.accruals.test_accrual.value[1]</span>
+<span class="c1">#! assert_bool_condition True device.accruals.test_accrual.value[2]</span>
+<span class="c1">#! assert_bool_condition True device.accruals.test_accrual.completed</span>
 </code></pre></div>
 <h2 id="related-events">Related Events</h2>
 <ul>

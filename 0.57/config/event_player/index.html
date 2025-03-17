@@ -33668,14 +33668,14 @@ implement game logic. (e.g. "When this happens, do this.")</p>
 here will always be active. If you enter it into a mode-specific config
 file, entries will only be active while that mode is active.</p>
 <p>This is an example:</p>
-<div class="highlight"><pre><span></span><code>event_player:
-  ball_starting:
-    - show_ball_start_animation
-    - play_start_sound
-    - start_first_mode
-  ball_ending:
-    - show_ball_ending_animation
-    - play_drain_sound
+<div class="highlight"><pre><span></span><code><span class="nt">event_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">ball_starting</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">show_ball_start_animation</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">play_start_sound</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start_first_mode</span>
+<span class="w">  </span><span class="nt">ball_ending</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">show_ball_ending_animation</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">play_drain_sound</span>
 </code></pre></div>
 <p>See <a href="../../config_players/event_player/">Event player</a> for
 details.</p>

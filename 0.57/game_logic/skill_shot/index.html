@@ -33588,150 +33588,150 @@ icons & this code generated via https://realfavicongenerator.net
 <li>How to create a lane-change skill shot</li>
 </ul>
 <p>A simple skill shot mode:</p>
-<div class="highlight"><pre><span></span><code>#! switches:
-#!   s_lane_l:
-#!     number:
-#!   s_lane_m:
-#!     number:
-#!   s_lane_r:
-#!     number:
-#! lights:
-#!   l_lane_l:
-#!     number:
-#!   l_lane_m:
-#!     number:
-#!   l_lane_r:
-#!     number:
-##! mode: skill_shot
-mode:
-  start_events: ball_started
-  stop_events:
-    - skill_success
-    - skill_failed
-  priority: 500
-shots:
-  skill_l:
-    switch: s_lane_l
-    profile: skill_shot_profile
-    advance_events: mode_skill_shot_started        # replace &quot;skill_shot&quot; with your mode name
-    show_tokens:
-      light: l_lane_l
-  skill_m:
-    switch: s_lane_m
-    profile: skill_shot_profile
-    show_tokens:
-      light: l_lane_m
-  skill_r:
-    switch: s_lane_r
-    profile: skill_shot_profile
-    show_tokens:
-      light: l_lane_r
-shot_groups:
-  skill_shot:
-    shots: skill_l, skill_m, skill_r
-    rotate_left_events: s_left_flipper_active
-    rotate_right_events: s_right_flipper_active
-shot_profiles:
-  skill_shot_profile:
-    states:
-      - name: unlit
-        show: off
-      - name: flashing
-        show: flash_color
-        show_tokens:
-          color: red
-        speed: 4
-      - name: lit
-        show: on
-    loop: true
-variable_player:
-  skill_success:
-    score: 42
-timers:
-  skill_shot_timeout:
-    start_value: 0
-    end_value: 5     # set the timeout of your skill shot here
-    direction: up
-    tick_interval: 1s
-    start_running: false
-    control_events:
-      - action: start
-        event: balldevice_plunger_lane_ball_eject_success  # replace &quot;plunger_lane&quot; with the name of your plunger device
-state_machines:
-  skill_shot_success:
-    debug: true
-    states:
-      start:
-        label: Skill shot ready
-      success:
-        label: Skill successful
-        events_when_started: skill_success
-      failed:
-        label: Skill failed
-        events_when_started: skill_failed
-    transitions:
-      - source: start
-        target: success
-        events: skill_shot_flashing_hit
-      - source: start
-        target: failed
-        events: skill_shot_unlit_hit, timer_skill_shot_timeout_complete
-##! test
-#! # failure
-#! start_game
-#! assert_mode_running skill_shot
-#! hit_and_release_switch s_lane_l
-#! assert_mode_not_running skill_shot
-#! assert_player_variable 42 score
-#! stop_game
-#! # success
-#! start_game
-#! assert_mode_running skill_shot
-#! hit_and_release_switch s_lane_m
-#! assert_mode_not_running skill_shot
-#! assert_player_variable 0 score
-#! stop_game
-#! # move + success
-#! start_game
-#! assert_mode_running skill_shot
-#! post s_right_flipper_active
-#! hit_and_release_switch s_lane_m
-#! assert_mode_not_running skill_shot
-#! assert_player_variable 42 score
-#! stop_game
-#! # test race between success and failed -&gt; success first
-#! start_game
-#! mock_event skill_success
-#! mock_event skill_failed
-#! assert_mode_running skill_shot
-#! hit_and_release_switches_simultaneously s_lane_l s_lane_m
-#! assert_mode_not_running skill_shot
-#! assert_event_called skill_success
-#! assert_event_not_called skill_failed
-#! stop_game
-#! # test race between success and failed -&gt; failed first
-#! start_game
-#! mock_event skill_success
-#! mock_event skill_failed
-#! assert_mode_running skill_shot
-#! hit_and_release_switches_simultaneously s_lane_m s_lane_l
-#! assert_mode_not_running skill_shot
-#! assert_event_called skill_failed
-#! assert_event_not_called skill_success
-#! stop_game
-#! # test timeout
-#! start_game
-#! mock_event skill_success
-#! mock_event skill_failed
-#! assert_mode_running skill_shot
-#! advance_time_and_run 10
-#! assert_mode_running skill_shot
-#! post balldevice_plunger_lane_ball_eject_success
-#! advance_time_and_run 10
-#! assert_mode_not_running skill_shot
-#! assert_event_called skill_failed
-#! assert_event_not_called skill_success
-#! stop_game
+<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
+<span class="c1">#!   s_lane_l:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   s_lane_m:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   s_lane_r:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#! lights:</span>
+<span class="c1">#!   l_lane_l:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   l_lane_m:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   l_lane_r:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">##! mode: skill_shot</span>
+<span class="nt">mode</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">start_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ball_started</span>
+<span class="w">  </span><span class="nt">stop_events</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">skill_success</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">skill_failed</span>
+<span class="w">  </span><span class="nt">priority</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">500</span>
+<span class="nt">shots</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">skill_l</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_lane_l</span>
+<span class="w">    </span><span class="nt">profile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">skill_shot_profile</span>
+<span class="w">    </span><span class="nt">advance_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mode_skill_shot_started</span><span class="w">        </span><span class="c1"># replace &quot;skill_shot&quot; with your mode name</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">light</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_lane_l</span>
+<span class="w">  </span><span class="nt">skill_m</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_lane_m</span>
+<span class="w">    </span><span class="nt">profile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">skill_shot_profile</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">light</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_lane_m</span>
+<span class="w">  </span><span class="nt">skill_r</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_lane_r</span>
+<span class="w">    </span><span class="nt">profile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">skill_shot_profile</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">light</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_lane_r</span>
+<span class="nt">shot_groups</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">skill_shot</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">shots</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">skill_l, skill_m, skill_r</span>
+<span class="w">    </span><span class="nt">rotate_left_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_left_flipper_active</span>
+<span class="w">    </span><span class="nt">rotate_right_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_right_flipper_active</span>
+<span class="nt">shot_profiles</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">skill_shot_profile</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">states</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unlit</span>
+<span class="w">        </span><span class="nt">show</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">off</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flashing</span>
+<span class="w">        </span><span class="nt">show</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flash_color</span>
+<span class="w">        </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
+<span class="w">        </span><span class="nt">speed</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lit</span>
+<span class="w">        </span><span class="nt">show</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">on</span>
+<span class="w">    </span><span class="nt">loop</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="nt">variable_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">skill_success</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">42</span>
+<span class="nt">timers</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">skill_shot_timeout</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">start_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">end_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span><span class="w">     </span><span class="c1"># set the timeout of your skill shot here</span>
+<span class="w">    </span><span class="nt">direction</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">up</span>
+<span class="w">    </span><span class="nt">tick_interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<span class="w">    </span><span class="nt">start_running</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">    </span><span class="nt">control_events</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start</span>
+<span class="w">        </span><span class="nt">event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">balldevice_plunger_lane_ball_eject_success</span><span class="w">  </span><span class="c1"># replace &quot;plunger_lane&quot; with the name of your plunger device</span>
+<span class="nt">state_machines</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">skill_shot_success</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">debug</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">states</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">start</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Skill shot ready</span>
+<span class="w">      </span><span class="nt">success</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Skill successful</span>
+<span class="w">        </span><span class="nt">events_when_started</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">skill_success</span>
+<span class="w">      </span><span class="nt">failed</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Skill failed</span>
+<span class="w">        </span><span class="nt">events_when_started</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">skill_failed</span>
+<span class="w">    </span><span class="nt">transitions</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">source</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start</span>
+<span class="w">        </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">success</span>
+<span class="w">        </span><span class="nt">events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">skill_shot_flashing_hit</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">source</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start</span>
+<span class="w">        </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">failed</span>
+<span class="w">        </span><span class="nt">events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">skill_shot_unlit_hit, timer_skill_shot_timeout_complete</span>
+<span class="c1">##! test</span>
+<span class="c1">#! # failure</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! assert_mode_running skill_shot</span>
+<span class="c1">#! hit_and_release_switch s_lane_l</span>
+<span class="c1">#! assert_mode_not_running skill_shot</span>
+<span class="c1">#! assert_player_variable 42 score</span>
+<span class="c1">#! stop_game</span>
+<span class="c1">#! # success</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! assert_mode_running skill_shot</span>
+<span class="c1">#! hit_and_release_switch s_lane_m</span>
+<span class="c1">#! assert_mode_not_running skill_shot</span>
+<span class="c1">#! assert_player_variable 0 score</span>
+<span class="c1">#! stop_game</span>
+<span class="c1">#! # move + success</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! assert_mode_running skill_shot</span>
+<span class="c1">#! post s_right_flipper_active</span>
+<span class="c1">#! hit_and_release_switch s_lane_m</span>
+<span class="c1">#! assert_mode_not_running skill_shot</span>
+<span class="c1">#! assert_player_variable 42 score</span>
+<span class="c1">#! stop_game</span>
+<span class="c1">#! # test race between success and failed -&gt; success first</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! mock_event skill_success</span>
+<span class="c1">#! mock_event skill_failed</span>
+<span class="c1">#! assert_mode_running skill_shot</span>
+<span class="c1">#! hit_and_release_switches_simultaneously s_lane_l s_lane_m</span>
+<span class="c1">#! assert_mode_not_running skill_shot</span>
+<span class="c1">#! assert_event_called skill_success</span>
+<span class="c1">#! assert_event_not_called skill_failed</span>
+<span class="c1">#! stop_game</span>
+<span class="c1">#! # test race between success and failed -&gt; failed first</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! mock_event skill_success</span>
+<span class="c1">#! mock_event skill_failed</span>
+<span class="c1">#! assert_mode_running skill_shot</span>
+<span class="c1">#! hit_and_release_switches_simultaneously s_lane_m s_lane_l</span>
+<span class="c1">#! assert_mode_not_running skill_shot</span>
+<span class="c1">#! assert_event_called skill_failed</span>
+<span class="c1">#! assert_event_not_called skill_success</span>
+<span class="c1">#! stop_game</span>
+<span class="c1">#! # test timeout</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! mock_event skill_success</span>
+<span class="c1">#! mock_event skill_failed</span>
+<span class="c1">#! assert_mode_running skill_shot</span>
+<span class="c1">#! advance_time_and_run 10</span>
+<span class="c1">#! assert_mode_running skill_shot</span>
+<span class="c1">#! post balldevice_plunger_lane_ball_eject_success</span>
+<span class="c1">#! advance_time_and_run 10</span>
+<span class="c1">#! assert_mode_not_running skill_shot</span>
+<span class="c1">#! assert_event_called skill_failed</span>
+<span class="c1">#! assert_event_not_called skill_success</span>
+<span class="c1">#! stop_game</span>
 </code></pre></div>
 <p>This works the following way: The three shots <code>skill_l</code>, <code>skill_m</code> and
 <code>skill_r</code> represent the three lanes. <code>skill_l</code> starts lit. The group

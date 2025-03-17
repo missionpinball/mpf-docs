@@ -33893,12 +33893,12 @@ to be able to connect to the LISY board.</p>
 <h3 id="serial-mode">Serial mode</h3>
 <p>If you want to use the serial port, add/update the following sections in
 your machine config:</p>
-<div class="highlight"><pre><span></span><code>hardware:
-  platform: lisy
-lisy:
-  connection: serial
-  port: com1               # replace this with your com port
-  baud: 115200
+<div class="highlight"><pre><span></span><code><span class="nt">hardware</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lisy</span>
+<span class="nt">lisy</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">connection</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">serial</span>
+<span class="w">  </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">com1</span><span class="w">               </span><span class="c1"># replace this with your com port</span>
+<span class="w">  </span><span class="nt">baud</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">115200</span>
 </code></pre></div>
 <p>Connection to LISY can be made via IP or via direct USB connection. For
 the USB connection no special driver Software nor a special USB cable is
@@ -33921,12 +33921,12 @@ new serial device. This is usually <code>COMX</code> on windows:</p>
 <h3 id="network-mode">Network mode</h3>
 <p>Alternatively, if you want to connect using WiFi or Ethernet, add/update
 the following sections in your machine config:</p>
-<div class="highlight"><pre><span></span><code>hardware:
-  platform: lisy
-lisy:
-  connection: network
-  network_port: 5963
-  network_host: a.b.c.d    # replace this with the IP of LISY
+<div class="highlight"><pre><span></span><code><span class="nt">hardware</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lisy</span>
+<span class="nt">lisy</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">connection</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">network</span>
+<span class="w">  </span><span class="nt">network_port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5963</span>
+<span class="w">  </span><span class="nt">network_host</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">a.b.c.d</span><span class="w">    </span><span class="c1"># replace this with the IP of LISY</span>
 </code></pre></div>
 <p>LISY is configured to get its IP address by DHCP, the default hostname
 is <code>lisy</code>. For WLAN your WLAN-SSID and password can be put into a text

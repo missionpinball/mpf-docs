@@ -33682,28 +33682,28 @@ coil typically resets an entire bank) and to get additional events
 posted when the entire bank is up, down or in a mixed state.</p>
 <p><img alt="image" src="../../../images/drop_target_bank.jpg" /></p>
 <p>This is an example:</p>
-<div class="highlight"><pre><span></span><code>#! switches:
-#!   s_drop_front:
-#!     number:
-#!   s_drop_middle:
-#!     number:
-#!   s_drop_back:
-#!     number:
-#! coils:
-#!   c_drop_reset:
-#!     number:
-drop_targets:
-  front:
-    switch: s_drop_front
-  middle:
-    switch: s_drop_middle
-  back:
-    switch: s_drop_back
-drop_target_banks:
-  vuk_bank:
-    drop_targets: front, middle, back
-    reset_coils: c_drop_reset
-    reset_on_complete: 1s
+<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
+<span class="c1">#!   s_drop_front:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   s_drop_middle:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   s_drop_back:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#! coils:</span>
+<span class="c1">#!   c_drop_reset:</span>
+<span class="c1">#!     number:</span>
+<span class="nt">drop_targets</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">front</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_drop_front</span>
+<span class="w">  </span><span class="nt">middle</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_drop_middle</span>
+<span class="w">  </span><span class="nt">back</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_drop_back</span>
+<span class="nt">drop_target_banks</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">vuk_bank</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">drop_targets</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">front, middle, back</span>
+<span class="w">    </span><span class="nt">reset_coils</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_drop_reset</span>
+<span class="w">    </span><span class="nt">reset_on_complete</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
 </code></pre></div>
 <h2 id="monitorable-properties">Monitorable Properties</h2>
 <p>For

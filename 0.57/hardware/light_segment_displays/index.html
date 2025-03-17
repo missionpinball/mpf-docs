@@ -33802,165 +33802,165 @@ Let us know if you need that. However, you can control both using normal
 light shows.</p>
 <h2 id="config">Config</h2>
 <p>This is an example:</p>
-<div class="highlight"><pre><span></span><code>hardware:
-  segment_displays: light_segment_displays
+<div class="highlight"><pre><span></span><code><span class="nt">hardware</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">segment_displays</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">light_segment_displays</span>
 
-lights:
-  segment1_a:
-    number: 1
-  segment1_b:
-    number: 2
-  segment1_c:
-    number: 3
-  segment1_d:
-    number: 4
-  segment1_e:
-    number: 5
-  segment1_f:
-    number: 6
-  segment1_g:
-    number: 7
-  segment2_a:
-    number: 8
-  segment2_b:
-    number: 9
-  segment2_c:
-    number: 10
-  segment2_d:
-    number: 11
-  segment2_e:
-    number: 12
-  segment2_f:
-    number: 13
-  segment2_g:
-    number: 14
+<span class="nt">lights</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">segment1_a</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">segment1_b</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="w">  </span><span class="nt">segment1_c</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="w">  </span><span class="nt">segment1_d</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span>
+<span class="w">  </span><span class="nt">segment1_e</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+<span class="w">  </span><span class="nt">segment1_f</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">6</span>
+<span class="w">  </span><span class="nt">segment1_g</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">7</span>
+<span class="w">  </span><span class="nt">segment2_a</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8</span>
+<span class="w">  </span><span class="nt">segment2_b</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">9</span>
+<span class="w">  </span><span class="nt">segment2_c</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="w">  </span><span class="nt">segment2_d</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">11</span>
+<span class="w">  </span><span class="nt">segment2_e</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">12</span>
+<span class="w">  </span><span class="nt">segment2_f</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">13</span>
+<span class="w">  </span><span class="nt">segment2_g</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">14</span>
 
-segment_displays:
-  display1:
-    number: 1
-    platform_settings:
-      lights:
-        - a: segment1_a
-          b: segment1_b
-          c: segment1_c
-          d: segment1_d
-          e: segment1_e
-          f: segment1_f
-          g: segment1_g
-        - a: segment2_a
-          b: segment2_b
-          c: segment2_c
-          d: segment2_d
-          e: segment2_e
-          f: segment2_f
-          g: segment2_g
-      type: 7segment
+<span class="nt">segment_displays</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">display1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">platform_settings</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">segment1_a</span>
+<span class="w">          </span><span class="nt">b</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">segment1_b</span>
+<span class="w">          </span><span class="nt">c</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">segment1_c</span>
+<span class="w">          </span><span class="nt">d</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">segment1_d</span>
+<span class="w">          </span><span class="nt">e</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">segment1_e</span>
+<span class="w">          </span><span class="nt">f</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">segment1_f</span>
+<span class="w">          </span><span class="nt">g</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">segment1_g</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">segment2_a</span>
+<span class="w">          </span><span class="nt">b</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">segment2_b</span>
+<span class="w">          </span><span class="nt">c</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">segment2_c</span>
+<span class="w">          </span><span class="nt">d</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">segment2_d</span>
+<span class="w">          </span><span class="nt">e</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">segment2_e</span>
+<span class="w">          </span><span class="nt">f</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">segment2_f</span>
+<span class="w">          </span><span class="nt">g</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">segment2_g</span>
+<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">7segment</span>
 </code></pre></div>
 <p>Here is another example for a monochrome serial 16-segment display using
 a WS2811 controller on OPP:</p>
-<div class="highlight"><pre><span></span><code>hardware:
-  segment_displays: light_segment_displays
+<div class="highlight"><pre><span></span><code><span class="nt">hardware</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">segment_displays</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">light_segment_displays</span>
 
-lights:
-  l_neoseg_0_0_a:
-    start_channel: 0-0-60  #When using other RGB pixels in the chain before the display,
-                           #             start_channel = 3 x start_pixel
-                           #Using RGBW,  start_channel = 4 x start pixel
-                           #Here, there are 20 RGB neopixels before the display
-    type: w
-    subtype: led
-  l_neoseg_0_0_m:
-    previous: l_neoseg_0_0_a
-    type: w
-    subtype: led
-  l_neoseg_0_0_k:
-    previous: l_neoseg_0_0_m
-    type: w
-    subtype: led
-  l_neoseg_0_0_h:
-    previous: l_neoseg_0_0_k
-    type: w
-    subtype: led
-  l_neoseg_0_0_u:
-    previous: l_neoseg_0_0_h
-    type: w
-    subtype: led
-  l_neoseg_0_0_s:
-    previous: l_neoseg_0_0_u
-    type: w
-    subtype: led
-  l_neoseg_0_0_t:
-    previous: l_neoseg_0_0_s
-    type: w
-    subtype: led
-  l_neoseg_0_0_g:
-    previous: l_neoseg_0_0_t
-    type: w
-    subtype: led
-  l_neoseg_0_0_f:
-    previous: l_neoseg_0_0_g
-    type: w
-    subtype: led
+<span class="nt">lights</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">l_neoseg_0_0_a</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">start_channel</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0-0-60</span><span class="w">  </span><span class="c1">#When using other RGB pixels in the chain before the display,</span>
+<span class="w">                           </span><span class="c1">#             start_channel = 3 x start_pixel</span>
+<span class="w">                           </span><span class="c1">#Using RGBW,  start_channel = 4 x start pixel</span>
+<span class="w">                           </span><span class="c1">#Here, there are 20 RGB neopixels before the display</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">w</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led</span>
+<span class="w">  </span><span class="nt">l_neoseg_0_0_m</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">previous</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_neoseg_0_0_a</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">w</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led</span>
+<span class="w">  </span><span class="nt">l_neoseg_0_0_k</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">previous</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_neoseg_0_0_m</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">w</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led</span>
+<span class="w">  </span><span class="nt">l_neoseg_0_0_h</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">previous</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_neoseg_0_0_k</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">w</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led</span>
+<span class="w">  </span><span class="nt">l_neoseg_0_0_u</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">previous</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_neoseg_0_0_h</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">w</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led</span>
+<span class="w">  </span><span class="nt">l_neoseg_0_0_s</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">previous</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_neoseg_0_0_u</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">w</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led</span>
+<span class="w">  </span><span class="nt">l_neoseg_0_0_t</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">previous</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_neoseg_0_0_s</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">w</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led</span>
+<span class="w">  </span><span class="nt">l_neoseg_0_0_g</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">previous</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_neoseg_0_0_t</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">w</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led</span>
+<span class="w">  </span><span class="nt">l_neoseg_0_0_f</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">previous</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_neoseg_0_0_g</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">w</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led</span>
 
-  l_neoseg_0_0_e:
-    previous: l_neoseg_0_0_f
-    type: w
-    subtype: led
-  l_neoseg_0_0_dp:
-    previous: l_neoseg_0_0_e
-    type: w
-    subtype: led
-  l_neoseg_0_0_d:
-    previous: l_neoseg_0_0_dp
-    type: w
-    subtype: led
-  l_neoseg_0_0_r:
-    previous: l_neoseg_0_0_d
-    type: w
-    subtype: led
-  l_neoseg_0_0_p:
-    previous: l_neoseg_0_0_r
-    type: w
-    subtype: led
-  l_neoseg_0_0_c:
-    previous: l_neoseg_0_0_p
-    type: w
-    subtype: led
-  l_neoseg_0_0_n:
-    previous: l_neoseg_0_0_c
-    type: w
-    subtype: led
-  l_neoseg_0_0_b:
-    previous: l_neoseg_0_0_n
-    type: w
-    subtype: led
-  l_neoseg_0_0_na:
-    previous: l_neoseg_0_0_b
-    type: w
-    subtype: led
+<span class="w">  </span><span class="nt">l_neoseg_0_0_e</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">previous</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_neoseg_0_0_f</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">w</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led</span>
+<span class="w">  </span><span class="nt">l_neoseg_0_0_dp</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">previous</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_neoseg_0_0_e</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">w</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led</span>
+<span class="w">  </span><span class="nt">l_neoseg_0_0_d</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">previous</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_neoseg_0_0_dp</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">w</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led</span>
+<span class="w">  </span><span class="nt">l_neoseg_0_0_r</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">previous</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_neoseg_0_0_d</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">w</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led</span>
+<span class="w">  </span><span class="nt">l_neoseg_0_0_p</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">previous</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_neoseg_0_0_r</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">w</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led</span>
+<span class="w">  </span><span class="nt">l_neoseg_0_0_c</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">previous</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_neoseg_0_0_p</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">w</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led</span>
+<span class="w">  </span><span class="nt">l_neoseg_0_0_n</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">previous</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_neoseg_0_0_c</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">w</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led</span>
+<span class="w">  </span><span class="nt">l_neoseg_0_0_b</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">previous</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_neoseg_0_0_n</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">w</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led</span>
+<span class="w">  </span><span class="nt">l_neoseg_0_0_na</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">previous</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_neoseg_0_0_b</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">w</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led</span>
 
-segment_displays:
-  display1:
-    number: 1
-    platform_settings:
-      lights:
-        - a: l_neoseg_0_0_a
-          b: l_neoseg_0_0_b
-          c: l_neoseg_0_0_c
-          d: l_neoseg_0_0_d
-          e: l_neoseg_0_0_e
-          f: l_neoseg_0_0_f
-          g: l_neoseg_0_0_g
-          h: l_neoseg_0_0_h
-          k: l_neoseg_0_0_k
-          m: l_neoseg_0_0_m
-          n: l_neoseg_0_0_n
-          p: l_neoseg_0_0_p
-          r: l_neoseg_0_0_r
-          s: l_neoseg_0_0_s
-          t: l_neoseg_0_0_t
-          u: l_neoseg_0_0_u
-      type: 16segment
+<span class="nt">segment_displays</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">display1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">platform_settings</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_neoseg_0_0_a</span>
+<span class="w">          </span><span class="nt">b</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_neoseg_0_0_b</span>
+<span class="w">          </span><span class="nt">c</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_neoseg_0_0_c</span>
+<span class="w">          </span><span class="nt">d</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_neoseg_0_0_d</span>
+<span class="w">          </span><span class="nt">e</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_neoseg_0_0_e</span>
+<span class="w">          </span><span class="nt">f</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_neoseg_0_0_f</span>
+<span class="w">          </span><span class="nt">g</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_neoseg_0_0_g</span>
+<span class="w">          </span><span class="nt">h</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_neoseg_0_0_h</span>
+<span class="w">          </span><span class="nt">k</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_neoseg_0_0_k</span>
+<span class="w">          </span><span class="nt">m</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_neoseg_0_0_m</span>
+<span class="w">          </span><span class="nt">n</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_neoseg_0_0_n</span>
+<span class="w">          </span><span class="nt">p</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_neoseg_0_0_p</span>
+<span class="w">          </span><span class="nt">r</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_neoseg_0_0_r</span>
+<span class="w">          </span><span class="nt">s</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_neoseg_0_0_s</span>
+<span class="w">          </span><span class="nt">t</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_neoseg_0_0_t</span>
+<span class="w">          </span><span class="nt">u</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_neoseg_0_0_u</span>
+<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">16segment</span>
 </code></pre></div>
 <h2 id="what-if-it-did-not-work">What if it did not work?</h2>
 <p>Have a look at our <a href="../troubleshooting_hardware/">hardware troubleshooting guide</a>.</p>

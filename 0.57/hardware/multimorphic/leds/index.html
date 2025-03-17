@@ -33937,10 +33937,10 @@ RGB LED, you specify four parts, separated by dashes:</p>
 </ol>
 <p>You separate those with dashes, so an example PD-LED configuration might
 look like this:</p>
-<div class="highlight"><pre><span></span><code>lights:
-  l_led0:
-    number: 8-0-1-2
-    subtype: led
+<div class="highlight"><pre><span></span><code><span class="nt">lights</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">l_led0</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8-0-1-2</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led</span>
 </code></pre></div>
 <p>The example above configures "l_led0" as the LED connected to PD-LED
 board at address 8, using outputs 0, 1, and 2 as its red, green, and
@@ -33952,46 +33952,46 @@ blue connections.</p>
 <p>This is almost the same as above but it addresses only one output
 (instead of three). You can use the channel syntax as for
 <code>l_led0</code> above:</p>
-<div class="highlight"><pre><span></span><code>lights:
-  l_led0:
-    channels:
-      red:
-        - number: 8-0
-      green:
-        - number: 8-1
-      blue:
-        - number: 8-2
+<div class="highlight"><pre><span></span><code><span class="nt">lights</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">l_led0</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">channels</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">red</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8-0</span>
+<span class="w">      </span><span class="nt">green</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8-1</span>
+<span class="w">      </span><span class="nt">blue</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8-2</span>
 </code></pre></div>
 <p>You might connect different color channels to your PD-LED. For instance
 you might have only a red channel:</p>
-<div class="highlight"><pre><span></span><code>lights:
-  my_red_only_insert:
-    channels:
-      red:
-        - number: 8-0       # board 8 and first channel
+<div class="highlight"><pre><span></span><code><span class="nt">lights</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_red_only_insert</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">channels</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">red</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8-0</span><span class="w">       </span><span class="c1"># board 8 and first channel</span>
 </code></pre></div>
 <p>Or you can configure a white LED:</p>
-<div class="highlight"><pre><span></span><code>lights:
-  my_white_light:
-    channels:
-      white:
-        - number: 8-4
+<div class="highlight"><pre><span></span><code><span class="nt">lights</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_white_light</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">channels</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">white</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8-4</span>
 </code></pre></div>
 <p>Starting from MPF 0.54 you can also have MPF calculate the numbers for
 you:</p>
-<div class="highlight"><pre><span></span><code>lights:
-  led_0:
-    start_channel: 8-0
-    subtype: led
-    type: rgb    # will use red: 8-0, green: 8-1, blue: 8-2
-  led_1:
-    previous: led_0
-    subtype: led
-    type: rgbw   # will use red: 8-3, green: 8-4, blue: 8-5, white: 8-6
-  led_2:
-    previous: led_1
-    subtype: led
-    type: rgbw   # will use red: 8-7, green: 8-8, blue: 8-9, white: 8-10
+<div class="highlight"><pre><span></span><code><span class="nt">lights</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">led_0</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">start_channel</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8-0</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rgb</span><span class="w">    </span><span class="c1"># will use red: 8-0, green: 8-1, blue: 8-2</span>
+<span class="w">  </span><span class="nt">led_1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">previous</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led_0</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rgbw</span><span class="w">   </span><span class="c1"># will use red: 8-3, green: 8-4, blue: 8-5, white: 8-6</span>
+<span class="w">  </span><span class="nt">led_2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">previous</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led_1</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rgbw</span><span class="w">   </span><span class="c1"># will use red: 8-7, green: 8-8, blue: 8-9, white: 8-10</span>
 </code></pre></div>
 <p>You can also configure two red channel, green plus white or any other
 combination. See <a href="../../../mechs/lights/leds/">LEDs</a> for
@@ -34010,10 +34010,10 @@ below).</p>
 <h2 id="parallel-leds">Parallel LEDs</h2>
 <p>Those LEDs are wired individually to the PD-LED.</p>
 <p>This is an example:</p>
-<div class="highlight"><pre><span></span><code>lights:
-  l_led_1:
-    number: 4-0-1-2
-    subtype: led
+<div class="highlight"><pre><span></span><code><span class="nt">lights</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">l_led_1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4-0-1-2</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led</span>
 </code></pre></div>
 <h3 id="led-number">LED number:</h3>
 <p>You can use number 0 to 83 to address your LEDs. The number format is
@@ -34024,11 +34024,11 @@ defined above.</p>
 whether you hook it up between the PD-LED's output and ground, or
 between the output and 3.3v.) You can then use the config file to
 specify which type of LED you have, such as:</p>
-<div class="highlight"><pre><span></span><code>lights:
-  l_shoot_again:
-    number: 8-60-61-62
-    platform_settings:
-      polarity: true
+<div class="highlight"><pre><span></span><code><span class="nt">lights</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">l_shoot_again</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8-60-61-62</span>
+<span class="w">    </span><span class="nt">platform_settings</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">polarity</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
 <p><strong>True</strong> = common cathode (or common ground), <strong>False</strong> = common anode
 (or common 3.3V)</p>
@@ -34075,32 +34075,32 @@ probably build some larger PCBs and connect them using ribbon cables.</p>
 enable a serial LEDs you need to configure your PD-LED board in your
 <code>p_roc</code> section. Assuming your PD-LED has the address 4 you can use the
 following config to enable all serial LEDs and and define a few:</p>
-<div class="highlight"><pre><span></span><code>p_roc:
-  pd_led_boards:
-    4:
-      use_lpd880x_0: true
-      use_lpd880x_1: true
-      use_lpd880x_2: true
-      use_ws281x_0: true
-      use_ws281x_1: true
-      use_ws281x_2: true
-lights:
-  l_serial_chain_0_first:
-    start_channel: 0-100
-    type: rgb
-    subtype: led
-  l_serial_chain_0_second:
-    previous: l_serial_chain_0_first
-    type: rgb
-    subtype: led
-  l_serial_chain_1_first:
-    start_channel: 4-250
-    type: rgb
-    subtype: led
-  l_serial_chain_2_first:
-    start_channel: 4-400
-    type: rgb
-    subtype: led
+<div class="highlight"><pre><span></span><code><span class="nt">p_roc</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">pd_led_boards</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">4</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">use_lpd880x_0</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">      </span><span class="nt">use_lpd880x_1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">      </span><span class="nt">use_lpd880x_2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">      </span><span class="nt">use_ws281x_0</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">      </span><span class="nt">use_ws281x_1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">      </span><span class="nt">use_ws281x_2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="nt">lights</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">l_serial_chain_0_first</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">start_channel</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0-100</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rgb</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led</span>
+<span class="w">  </span><span class="nt">l_serial_chain_0_second</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">previous</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_serial_chain_0_first</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rgb</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led</span>
+<span class="w">  </span><span class="nt">l_serial_chain_1_first</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">start_channel</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4-250</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rgb</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led</span>
+<span class="w">  </span><span class="nt">l_serial_chain_2_first</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">start_channel</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4-400</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rgb</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led</span>
 </code></pre></div>
 <h3 id="led-number_1">LED number:</h3>
 <p>By default MPF maps the first chain (of both LPD880x and WS281x) to LEDs

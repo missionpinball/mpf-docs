@@ -33680,20 +33680,20 @@ support any <code>hold_power</code> or <code>pulse_power</code> other than 1.0. 
 will always enable with full power (which is fine in older machines and
 should not break things). However, you can still choose the pulse length
 using <code>pulse_ms</code>.</p>
-<div class="highlight"><pre><span></span><code>coils:
-  c_some_coil:
-    number: 04
-    default_pulse_ms: 10
-    allow_enable: true
+<div class="highlight"><pre><span></span><code><span class="nt">coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">c_some_coil</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">04</span>
+<span class="w">    </span><span class="nt">default_pulse_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="w">    </span><span class="nt">allow_enable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
 <p>In some Gottlieb machines coils were connected to the lights bank. To
 address those you have to add 100 to their number from the manual. For
 instance, to address a coil which is connected to the light output <code>05</code>
 use coil <code>105</code>:</p>
-<div class="highlight"><pre><span></span><code>coils:
-  c_coil_on_light_bank:
-    number: 107
-    default_pulse_ms: 10
+<div class="highlight"><pre><span></span><code><span class="nt">coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">c_coil_on_light_bank</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">107</span>
+<span class="w">    </span><span class="nt">default_pulse_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
 </code></pre></div>
 <h2 id="what-if-it-did-not-work">What if it did not work?</h2>
 <p>Have a look at our

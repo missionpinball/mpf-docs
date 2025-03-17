@@ -33698,30 +33698,30 @@ P3-ROC.</p>
 <h2 id="1-set-your-platform">1. Set your platform</h2>
 <p>In your machine-wide config file, set the platform.</p>
 <p>For the P-ROC:</p>
-<div class="highlight"><pre><span></span><code>hardware:
-  platform: p_roc
+<div class="highlight"><pre><span></span><code><span class="nt">hardware</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">p_roc</span>
 </code></pre></div>
 <p>For the P3-ROC:</p>
-<div class="highlight"><pre><span></span><code>hardware:
-  platform: p3_roc
+<div class="highlight"><pre><span></span><code><span class="nt">hardware</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">p3_roc</span>
 </code></pre></div>
 <h2 id="2-set-your-driver-boards">2. Set your driver boards:</h2>
 <p>Next, configure the driver boards setting which tells MPF which type of
 driver boards you're using. If you're using the P-ROC driver boards
 (like the PD-16 or PD-8x8), then you set it like this:</p>
 <p>For the P-ROC:</p>
-<div class="highlight"><pre><span></span><code>hardware:
-  platform: p_roc
+<div class="highlight"><pre><span></span><code><span class="nt">hardware</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">p_roc</span>
 
-p_roc:
-  driverboards: pdb
+<span class="nt">p_roc</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">driverboards</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pdb</span>
 </code></pre></div>
 <p>For the P3-ROC:</p>
-<div class="highlight"><pre><span></span><code>hardware:
-  platform: p3_roc
+<div class="highlight"><pre><span></span><code><span class="nt">hardware</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">p3_roc</span>
 
-p_roc:
-  driverboards: pdb
+<span class="nt">p_roc</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">driverboards</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pdb</span>
 </code></pre></div>
 <p>Note that if you're using a P-ROC with an existing machine, then your
 driver boards will be either wpc, stern, etc. See the documentation on
@@ -33732,9 +33732,9 @@ second. If you would like to disable this, or you'd like to change the
 timeout, you can do so in either the <code>p_roc:</code> or <code>p3_roc:</code> section of
 your machine-wide config.</p>
 <p>For the P-ROC or P3-Roc:</p>
-<div class="highlight"><pre><span></span><code>p_roc:
-  use_watchdog: true
-  watchdog_time: 1s
+<div class="highlight"><pre><span></span><code><span class="nt">p_roc</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">use_watchdog</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">watchdog_time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
 </code></pre></div>
 <h2 id="what-if-it-did-not-work">What if it did not work?</h2>
 <p>Have a look at our

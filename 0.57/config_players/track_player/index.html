@@ -33683,36 +33683,36 @@ sub-headings and track names are listed as nested sub-headings below
 that. <code>__all__</code> can be used in place of a track name to apply the action
 to all audio tracks in the sound system.</p>
 <p>Example:</p>
-<div class="highlight"><pre><span></span><code>track_player:
-  pause_music_track:
-    music:
-      action: pause
-      fade: 1 sec
-  resume_music_track:
-    music:
-      action: play
-  stop_sounds_on_all_tracks:
-    __all__:
-      action: stop_all_sounds
-      fade: 0.5 sec
+<div class="highlight"><pre><span></span><code><span class="nt">track_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">pause_music_track</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">music</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pause</span>
+<span class="w">      </span><span class="nt">fade</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1 sec</span>
+<span class="w">  </span><span class="nt">resume_music_track</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">music</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">play</span>
+<span class="w">  </span><span class="nt">stop_sounds_on_all_tracks</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">__all__</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stop_all_sounds</span>
+<span class="w">      </span><span class="nt">fade</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.5 sec</span>
 </code></pre></div>
 <h2 id="usage-in-shows">Usage in shows</h2>
 <p>In shows, the track player is used via the <code>tracks:</code> section of a step.</p>
 <p>Example:</p>
-<div class="highlight"><pre><span></span><code>shows:
-  my_show_with_sound:
-    - time: 0
-      tracks:
-        music:
-          action: set_volume
-          volume: 0.3
-          fade: 0.25 sec
-    - time: 3.5
-      tracks:
-        music:
-          action: set_volume
-          volume: 0.5
-          fade: 0.25 sec
+<div class="highlight"><pre><span></span><code><span class="nt">shows</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_show_with_sound</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">      </span><span class="nt">tracks</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">music</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">set_volume</span>
+<span class="w">          </span><span class="nt">volume</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.3</span>
+<span class="w">          </span><span class="nt">fade</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.25 sec</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3.5</span>
+<span class="w">      </span><span class="nt">tracks</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">music</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">set_volume</span>
+<span class="w">          </span><span class="nt">volume</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.5</span>
+<span class="w">          </span><span class="nt">fade</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.25 sec</span>
 </code></pre></div>
 <h2 id="config-options">Config Options</h2>
 <p>Additional information may be found in the

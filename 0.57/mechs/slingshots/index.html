@@ -33671,17 +33671,17 @@ input.</p>
 </ul>
 <h2 id="config">Config</h2>
 <p>This is an example:</p>
-<div class="highlight"><pre><span></span><code>switches:
-  s_sling_left:
-    number: 5
-coils:
-  c_sling_left:
-    number: 7
-    default_pulse_ms: 15
-autofire_coils:
-  ac_slingshot_left:
-    coil: c_sling_left
-    switch: s_sling_left
+<div class="highlight"><pre><span></span><code><span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_sling_left</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+<span class="nt">coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">c_sling_left</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">7</span>
+<span class="w">    </span><span class="nt">default_pulse_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">15</span>
+<span class="nt">autofire_coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">ac_slingshot_left</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_sling_left</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_sling_left</span>
 </code></pre></div>
 <p>Adjust <code>default_pulse_ms</code> and <code>default_pulse_power</code> in your coil to
 control the strength and sound of your slingshots.</p>

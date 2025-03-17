@@ -33583,35 +33583,35 @@ icons & this code generated via https://realfavicongenerator.net
 events. Specifically, we are using
 <a href="../../../events/diverter_diverter_deactivating/">diverter_(name)_deactivating</a>
 and <a href="../../../events/diverter_diverter_activating/">diverter_(name)_activating</a>. This is an example:</p>
-<div class="highlight"><pre><span></span><code>#! switches:
-#!   s_ball1:
-#!     number:
-#!   s_ball2:
-#!     number:
-#! coils:
-#!   c_eject1:
-#!     number:
-#!   c_eject2:
-#!     number:
-#! ball_devices:
-#!   bd_trough:
-#!     eject_coil: c_eject1
-#!     ball_switches: s_ball1
-#!   bd_target:
-#!     eject_coil: c_eject2
-#!     ball_switches: s_ball2
-diverters:
-  d_diverter:
-    debug: true
-    feeder_devices: bd_trough
-    targets_when_active: playfield
-    targets_when_inactive: bd_target
-servos:
-  s_diverter:
-    number:
-    positions:
-      0.7: diverter_d_diverter_activating
-      0.2: diverter_d_diverter_deactivating
+<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
+<span class="c1">#!   s_ball1:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   s_ball2:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#! coils:</span>
+<span class="c1">#!   c_eject1:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   c_eject2:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#! ball_devices:</span>
+<span class="c1">#!   bd_trough:</span>
+<span class="c1">#!     eject_coil: c_eject1</span>
+<span class="c1">#!     ball_switches: s_ball1</span>
+<span class="c1">#!   bd_target:</span>
+<span class="c1">#!     eject_coil: c_eject2</span>
+<span class="c1">#!     ball_switches: s_ball2</span>
+<span class="nt">diverters</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">d_diverter</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">debug</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">feeder_devices</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bd_trough</span>
+<span class="w">    </span><span class="nt">targets_when_active</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">playfield</span>
+<span class="w">    </span><span class="nt">targets_when_inactive</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bd_target</span>
+<span class="nt">servos</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_diverter</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">positions</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">0.7</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">diverter_d_diverter_activating</span>
+<span class="w">      </span><span class="nt">0.2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">diverter_d_diverter_deactivating</span>
 </code></pre></div>
 <p>This diverter will not wait for the servo to reach the position. If you
 need that let us know in the forum.</p>

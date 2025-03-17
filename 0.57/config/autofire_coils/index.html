@@ -34043,25 +34043,25 @@ to <a href="../../examples/">config file examples</a> for more examples of real 
 settings for the coils which you would like to fire automatically based
 on a switch activation in a pinball machine.</p>
 <p>Here's an example:</p>
-<div class="highlight"><pre><span></span><code>switches:
-  s_left_sling:
-    number: 1
-  s_right_sling:
-    number: 2
-coils:
-  c_left_sling:
-    number: 1
-    default_pulse_ms: 10ms
-  c_right_sling:
-    number: 2
-    default_pulse_ms: 10ms
-autofire_coils:
-  left_sling:
-    coil: c_left_sling
-    switch: s_left_sling
-  right_sling:
-    coil: c_right_sling
-    switch: s_right_sling
+<div class="highlight"><pre><span></span><code><span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_left_sling</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">s_right_sling</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="nt">coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">c_left_sling</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">default_pulse_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10ms</span>
+<span class="w">  </span><span class="nt">c_right_sling</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="w">    </span><span class="nt">default_pulse_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10ms</span>
+<span class="nt">autofire_coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">left_sling</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_left_sling</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_left_sling</span>
+<span class="w">  </span><span class="nt">right_sling</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_right_sling</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_right_sling</span>
 </code></pre></div>
 <p>Note that autofire coils in MPF are 1-to-1 in terms of
 coils-to-switches, so a single entry is for one switch to control one
@@ -34112,19 +34112,19 @@ Defaults to empty.</p>
 <p>You can overwrite <code>recycle</code>, <code>pulse_ms</code>, <code>pulse_power</code> or <code>hold_power</code>
 of the coil for this device.</p>
 <p>This is an example:</p>
-<div class="highlight"><pre><span></span><code>switches:
-  s_left_sling:
-    number: 1
-coils:
-  c_left_sling:
-    number: 1
-    default_pulse_ms: 10ms
-autofire_coils:
-  stronger_left_sling:
-    coil: c_left_sling
-    switch: s_left_sling
-    coil_overwrite:
-      pulse_ms: 20ms
+<div class="highlight"><pre><span></span><code><span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_left_sling</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="nt">coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">c_left_sling</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">default_pulse_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10ms</span>
+<span class="nt">autofire_coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">stronger_left_sling</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_left_sling</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_left_sling</span>
+<span class="w">    </span><span class="nt">coil_overwrite</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">pulse_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20ms</span>
 </code></pre></div>
 <p>In this example we increase <code>pulse_ms</code> of the slingshot. If you define
 multiple versions of a autofire_coil (here slingshot) make sure that you

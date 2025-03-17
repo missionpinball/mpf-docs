@@ -33777,28 +33777,28 @@ Basically, shows are a list of actions combined with a duration after
 which the next element in the list is played. Here is an example of a
 light show with three lights which sequentially turn blue over one
 second:</p>
-<div class="highlight"><pre><span></span><code>##! show: my_show
-#show_version=5
-- duration: .25
-  lights:
-    l_arrow_1: off
-    l_arrow_2: off
-    l_arrow_3: off
-- duration: .25
-  lights:
-    l_arrow_1: blue
-    l_arrow_2: off
-    l_arrow_3: off
-- duration: .25
-  lights:
-    l_arrow_1: blue
-    l_arrow_2: blue
-    l_arrow_3: off
-- duration: .25
-  lights:
-    l_arrow_1: blue
-    l_arrow_2: blue
-    l_arrow_3: blue
+<div class="highlight"><pre><span></span><code><span class="c1">##! show: my_show</span>
+<span class="c1">#show_version=5</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.25</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">l_arrow_1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">off</span>
+<span class="w">    </span><span class="nt">l_arrow_2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">off</span>
+<span class="w">    </span><span class="nt">l_arrow_3</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">off</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.25</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">l_arrow_1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">blue</span>
+<span class="w">    </span><span class="nt">l_arrow_2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">off</span>
+<span class="w">    </span><span class="nt">l_arrow_3</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">off</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.25</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">l_arrow_1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">blue</span>
+<span class="w">    </span><span class="nt">l_arrow_2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">blue</span>
+<span class="w">    </span><span class="nt">l_arrow_3</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">off</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.25</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">l_arrow_1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">blue</span>
+<span class="w">    </span><span class="nt">l_arrow_2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">blue</span>
+<span class="w">    </span><span class="nt">l_arrow_3</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">blue</span>
 </code></pre></div>
 <p>In this simple example it totally makes sense to create the show by
 hand. You could also throw in <a href="../../shows/tokens/">tokens</a> for the lights and reuse the show all over the machine for

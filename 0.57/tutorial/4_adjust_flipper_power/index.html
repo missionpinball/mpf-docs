@@ -33717,19 +33717,19 @@ file. (Notice that you make this change in the <code>coils:</code> section of yo
 config, not the <code>flippers:</code> section.) So let's try changing your
 flipper coils from the default of 10ms to 20ms. Change your config file
 so it looks like this:</p>
-<div class="highlight"><pre><span></span><code>coils:
-  c_flipper_left_main:
-    number: 00
-    default_pulse_ms: 20
-  c_flipper_left_hold:
-    number: 01
-    allow_enable: true
-  c_flipper_right_main:
-    number: 02
-    default_pulse_ms: 20
-  c_flipper_right_hold:
-    number: 03
-    allow_enable: true
+<div class="highlight"><pre><span></span><code><span class="nt">coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">c_flipper_left_main</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">00</span>
+<span class="w">    </span><span class="nt">default_pulse_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span>
+<span class="w">  </span><span class="nt">c_flipper_left_hold</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">01</span>
+<span class="w">    </span><span class="nt">allow_enable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">c_flipper_right_main</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">02</span>
+<span class="w">    </span><span class="nt">default_pulse_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span>
+<span class="w">  </span><span class="nt">c_flipper_right_hold</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">03</span>
+<span class="w">    </span><span class="nt">allow_enable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
 <p>Notice that we only added <code>default_pulse_ms:</code> entries to the two main
 coils, since the hold coils are never pulsed so it doesn't matter what

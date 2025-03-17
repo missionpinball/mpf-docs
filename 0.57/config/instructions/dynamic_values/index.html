@@ -33799,56 +33799,56 @@ etc. (Read on for a full list.)</p>
 scores a multiplier which is the number of shots made times 100k points.</p>
 <p>Without dynamic values, your variable_player (scoring) section would be
 static, like this:</p>
-<div class="highlight"><pre><span></span><code>##! mode: mode1
-variable_player:
-  shot_jackpot_hit:
-    score: 100000
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: mode1</span>
+<span class="nt">variable_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">shot_jackpot_hit</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100000</span>
 </code></pre></div>
 <p>But let's say you have a player variable called "troll_hits" which
 holds the number of trolls hit that you want to multiply by 100,000 when
 the shot is made. You can use the "current_player" dynamic value in
 your variable_player config like this:</p>
-<div class="highlight"><pre><span></span><code>##! mode: mode1
-variable_player:
-  shot_jackpot_hit:
-    score: current_player.troll_hits * 100000
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: mode1</span>
+<span class="nt">variable_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">shot_jackpot_hit</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">current_player.troll_hits * 100000</span>
 </code></pre></div>
 <p>You can access other values dynamically as well, such as a timer ticking
 away a hurry-up or a counter to track how many times a multiplier switch
 has been hit</p>
-<div class="highlight"><pre><span></span><code>##! mode: mode1
-variable_player:
-  collect_hurryup:
-    score: 1000 * device.timers.hurryup_clock.ticks_remaining * device.counters.hurryup_multiplier.value
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: mode1</span>
+<span class="nt">variable_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">collect_hurryup</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000 * device.timers.hurryup_clock.ticks_remaining * device.counters.hurryup_multiplier.value</span>
 </code></pre></div>
 <p>Another example might be operator settings. Rather than hard coding tilt
 warnings to 3, you might want to like the operator choose the tilt
 warnings.</p>
 <p>So instead of this:</p>
-<div class="highlight"><pre><span></span><code>##! mode: tilt
-# in your tilt mode
-tilt:
-  warnings_to_tilt: 3
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: tilt</span>
+<span class="c1"># in your tilt mode</span>
+<span class="nt">tilt</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">warnings_to_tilt</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
 </code></pre></div>
 <p>You would have this instead:</p>
-<div class="highlight"><pre><span></span><code># in your machine config
-settings:
-  warnings_to_tilt:
-    label: Number of tilt warnings
-    values:
-      0: &quot;no warnings&quot;
-      1: &quot;1&quot;
-      2: &quot;2&quot;
-      3: &quot;3&quot;
-      5: &quot;5&quot;
-      10: &quot;10&quot;
-    default: 3
-    key_type: int
-    sort: 600
-##! mode: tilt
-# in your tilt mode
-tilt:
-  warnings_to_tilt: settings.warnings_to_tilt
+<div class="highlight"><pre><span></span><code><span class="c1"># in your machine config</span>
+<span class="nt">settings</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">warnings_to_tilt</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Number of tilt warnings</span>
+<span class="w">    </span><span class="nt">values</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">0</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;no</span><span class="nv"> </span><span class="s">warnings&quot;</span>
+<span class="w">      </span><span class="nt">1</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1&quot;</span>
+<span class="w">      </span><span class="nt">2</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;2&quot;</span>
+<span class="w">      </span><span class="nt">3</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;3&quot;</span>
+<span class="w">      </span><span class="nt">5</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;5&quot;</span>
+<span class="w">      </span><span class="nt">10</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;10&quot;</span>
+<span class="w">    </span><span class="nt">default</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="w">    </span><span class="nt">key_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">int</span>
+<span class="w">    </span><span class="nt">sort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">600</span>
+<span class="c1">##! mode: tilt</span>
+<span class="c1"># in your tilt mode</span>
+<span class="nt">tilt</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">warnings_to_tilt</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">settings.warnings_to_tilt</span>
 </code></pre></div>
 <p>Note the example above requires that you have a <code>settings:</code> section in
 your machine config and that you've defined a setting called
@@ -33934,11 +33934,11 @@ properties available for a specific device are listed in the
 <li><code>mode.my_mode.active</code></li>
 </ul>
 <h2 id="using-ifelse-logic-with-dynamic-values">Using if/else logic with dynamic values</h2>
-<div class="highlight"><pre><span></span><code>##! mode: mode1
-counters:
-  my_counter:
-    count_events: count_up
-    count_complete_value: 5 if player.wizard_complete else 3
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: mode1</span>
+<span class="nt">counters</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_counter</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">count_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">count_up</span>
+<span class="w">    </span><span class="nt">count_complete_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5 if player.wizard_complete else 3</span>
 </code></pre></div>
 <hr />
 <div class="admonition question">

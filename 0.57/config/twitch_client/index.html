@@ -33797,26 +33797,26 @@ to <a href="../../examples/">config file examples</a> for more examples of real 
 built-in Twitch chat monitor.</p>
 <p>Before using this plugin you must install the irc library with
 <code>pip3 install irc</code></p>
-<div class="highlight"><pre><span></span><code>twitch_client:
-  user: TwitchBotAccount
-  password: oauth:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-  channel: ChatChannel
+<div class="highlight"><pre><span></span><code><span class="nt">twitch_client</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">user</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TwitchBotAccount</span>
+<span class="w">  </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">oauth:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</span>
+<span class="w">  </span><span class="nt">channel</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ChatChannel</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>machine_vars:
-  twitch_user:
-    initial_value: &#39;TwitchBotAccount&#39;
-    value_type: str
-  twitch_password:
-    initial_value: &#39;oauth:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&#39;
-    value_type: str
-  twitch_channel:
-    initial_value: &#39;ChatChannel&#39;
-    value_type: str
+<div class="highlight"><pre><span></span><code><span class="nt">machine_vars</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">twitch_user</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">initial_value</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;TwitchBotAccount&#39;</span>
+<span class="w">    </span><span class="nt">value_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">str</span>
+<span class="w">  </span><span class="nt">twitch_password</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">initial_value</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;oauth:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&#39;</span>
+<span class="w">    </span><span class="nt">value_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">str</span>
+<span class="w">  </span><span class="nt">twitch_channel</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">initial_value</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;ChatChannel&#39;</span>
+<span class="w">    </span><span class="nt">value_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">str</span>
 
-twitch_client:
-  user_var: twitch_user
-  password_var: twitch_password
-  channel_var: twitch_channel
+<span class="nt">twitch_client</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">user_var</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">twitch_user</span>
+<span class="w">  </span><span class="nt">password_var</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">twitch_password</span>
+<span class="w">  </span><span class="nt">channel_var</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">twitch_channel</span>
 </code></pre></div>
 <p>DO NOT CHECK YOUR PASSWORD INTO SOURCE CONTROL. If you use a service
 like Github you should not check in your password. If this is stored

@@ -33578,57 +33578,57 @@ icons & this code generated via https://realfavicongenerator.net
 implemented in two ways. Either by reducing <code>pulse_power</code> or by reducing
 <code>pulse_ms</code> (some platforms only support the latter).</p>
 <p>This is an example:</p>
-<div class="highlight"><pre><span></span><code>switches:
-  s_left_flipper:
-    number: 1
-  s_right_flipper:
-    number: 2
-coils:
-  c_flipper_left:
-    number: 0
-    default_pulse_ms: 30
-    default_pulse_power: 0.5
-    default_hold_power: 0.125
-  c_flipper_right:
-    number: 1
-    default_pulse_ms: 30
-    default_pulse_power: 0.5
-    default_hold_power: 0.125
-flippers:
-  left:
-    main_coil: c_flipper_left
-    activation_switch: s_left_flipper
-    enable_events: normal_flippers_enable, ball_started
-    disable_events: weak_flipper_enable, ball_will_end, service_mode_entered
-  right:
-    main_coil: c_flipper_right
-    activation_switch: s_right_flipper
-    enable_events: normal_flippers_enable, ball_started
-    disable_events: weak_flipper_enable, ball_will_end, service_mode_entered
-  left_weak:
-    main_coil: c_flipper_left
-    main_coil_overwrite:
-      pulse_power: 0.3     # alternatively you can use pulse_ms: 20 here
-    activation_switch: s_left_flipper
-    enable_events: weak_flipper_enable
-    disable_events: normal_flippers_enable
-  right_weak:
-    main_coil: c_flipper_right
-    main_coil_overwrite:
-      pulse_power: 0.3     # alternatively you can use pulse_ms: 20 here
-    activation_switch: s_right_flipper
-    enable_events: weak_flipper_enable
-    disable_events: normal_flippers_enable
-##! test
-#! start_game
-#! assert_bool_condition True device.flippers.left.enabled
-#! assert_bool_condition False device.flippers.left_weak.enabled
-#! post weak_flipper_enable
-#! assert_bool_condition False device.flippers.left.enabled
-#! assert_bool_condition True device.flippers.left_weak.enabled
-#! post normal_flippers_enable
-#! assert_bool_condition True device.flippers.left.enabled
-#! assert_bool_condition False device.flippers.left_weak.enabled
+<div class="highlight"><pre><span></span><code><span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_left_flipper</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">s_right_flipper</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="nt">coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">c_flipper_left</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">default_pulse_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+<span class="w">    </span><span class="nt">default_pulse_power</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.5</span>
+<span class="w">    </span><span class="nt">default_hold_power</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.125</span>
+<span class="w">  </span><span class="nt">c_flipper_right</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">default_pulse_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+<span class="w">    </span><span class="nt">default_pulse_power</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.5</span>
+<span class="w">    </span><span class="nt">default_hold_power</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.125</span>
+<span class="nt">flippers</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">left</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">main_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_flipper_left</span>
+<span class="w">    </span><span class="nt">activation_switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_left_flipper</span>
+<span class="w">    </span><span class="nt">enable_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">normal_flippers_enable, ball_started</span>
+<span class="w">    </span><span class="nt">disable_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">weak_flipper_enable, ball_will_end, service_mode_entered</span>
+<span class="w">  </span><span class="nt">right</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">main_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_flipper_right</span>
+<span class="w">    </span><span class="nt">activation_switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_right_flipper</span>
+<span class="w">    </span><span class="nt">enable_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">normal_flippers_enable, ball_started</span>
+<span class="w">    </span><span class="nt">disable_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">weak_flipper_enable, ball_will_end, service_mode_entered</span>
+<span class="w">  </span><span class="nt">left_weak</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">main_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_flipper_left</span>
+<span class="w">    </span><span class="nt">main_coil_overwrite</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">pulse_power</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.3</span><span class="w">     </span><span class="c1"># alternatively you can use pulse_ms: 20 here</span>
+<span class="w">    </span><span class="nt">activation_switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_left_flipper</span>
+<span class="w">    </span><span class="nt">enable_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">weak_flipper_enable</span>
+<span class="w">    </span><span class="nt">disable_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">normal_flippers_enable</span>
+<span class="w">  </span><span class="nt">right_weak</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">main_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_flipper_right</span>
+<span class="w">    </span><span class="nt">main_coil_overwrite</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">pulse_power</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.3</span><span class="w">     </span><span class="c1"># alternatively you can use pulse_ms: 20 here</span>
+<span class="w">    </span><span class="nt">activation_switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_right_flipper</span>
+<span class="w">    </span><span class="nt">enable_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">weak_flipper_enable</span>
+<span class="w">    </span><span class="nt">disable_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">normal_flippers_enable</span>
+<span class="c1">##! test</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! assert_bool_condition True device.flippers.left.enabled</span>
+<span class="c1">#! assert_bool_condition False device.flippers.left_weak.enabled</span>
+<span class="c1">#! post weak_flipper_enable</span>
+<span class="c1">#! assert_bool_condition False device.flippers.left.enabled</span>
+<span class="c1">#! assert_bool_condition True device.flippers.left_weak.enabled</span>
+<span class="c1">#! post normal_flippers_enable</span>
+<span class="c1">#! assert_bool_condition True device.flippers.left.enabled</span>
+<span class="c1">#! assert_bool_condition False device.flippers.left_weak.enabled</span>
 </code></pre></div>
 <p>We define two sets of flippers: Normal and weak flippers. Post
 <code>weak_flipper_enable</code> in your mode to enable weak flippers. Later post

@@ -33715,9 +33715,9 @@ a game, and that requires a start button. Let's add that now.</p>
 <p>First, add the switch for your start button to the <code>switches:</code> section
 of your config file. Again this should be easy by now. In this tutorial
 we'll just call this button <code>s_start</code> and add it like this:</p>
-<div class="highlight"><pre><span></span><code>switches:
-  s_start:
-    number: 11
+<div class="highlight"><pre><span></span><code><span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_start</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">11</span>
 </code></pre></div>
 <h2 id="2-add-a-start-tag-to-your-start-button">2. Add a "start" tag to your Start button</h2>
 <p>Just like the special-purpose tags we used when configuring the ball
@@ -33731,10 +33731,10 @@ switches whatever they want. (Some want to preface with <code>s_</code>, others
 might not, etc.) So we use a "start" tag behind the scenes to make
 whatever switch you want act as the start button. So now your start
 switch in your <code>switches:</code> section should look like this:</p>
-<div class="highlight"><pre><span></span><code>switches:
-  s_start:
-    number: 11
-    tags: start
+<div class="highlight"><pre><span></span><code><span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_start</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">11</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start</span>
 </code></pre></div>
 <h2 id="3-add-keyboard-entries-for-your-start-switch">3. Add keyboard entries for your start switch</h2>
 <p>If you're keeping your keyboard shortcuts up to date, you can create a
@@ -33747,9 +33747,9 @@ game with your computer keyboard but actually play it on physical
 hardware. For your start button keyboard key, how about using the <code>S</code>
 key? To do so, add an entry like this to the <code>keyboard:</code> section of your
 config file:</p>
-<div class="highlight"><pre><span></span><code>keyboard:
-  s:
-    switch: s_start
+<div class="highlight"><pre><span></span><code><span class="nt">keyboard</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_start</span>
 </code></pre></div>
 <h2 id="4-add-at-least-one-playfield-switch">4. Add at least one playfield switch</h2>
 <p>Another thing you need to do is to configure at least one playfield
@@ -33766,18 +33766,18 @@ up your ejects in a real machine and you'll eventually tag all your
 playfield switches with <code>playfield_active</code>, so we're just getting
 starting on this now. To do this, create a new entry in your <code>switches:</code>
 section for one of your playfield switches, for example:</p>
-<div class="highlight"><pre><span></span><code>switches:
-  s_right_inlane:
-    number: 12
-    tags: playfield_active
+<div class="highlight"><pre><span></span><code><span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_right_inlane</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">12</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">playfield_active</span>
 </code></pre></div>
 <p>Note: The tags playfield_active and above the start tag are special
 purpose tags for <a href="../../config/switches/">switches</a>.</p>
 <p>While you're at it, create a keyboard key mapping for this switch in
 the <code>keyboard:</code> section of your config, like this:</p>
-<div class="highlight"><pre><span></span><code>keyboard:
-  q:
-    switch: s_right_inlane
+<div class="highlight"><pre><span></span><code><span class="nt">keyboard</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">q</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_right_inlane</span>
 </code></pre></div>
 <p>If you want you can go ahead and add entries for all your playfield
 switches, though that will take awhile. For now just make sure you have

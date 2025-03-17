@@ -33657,65 +33657,65 @@ to <a href="../../examples/">config file examples</a> for more examples of real 
 </table>
 <p>In the logging section you can configure which how verbose parts of MPFs
 should log.</p>
-<div class="highlight"><pre><span></span><code>logging:
-  console:
-    asset_manager: none
-    ball_controller: none
-    ball_search: basic
-    bcp: basic
-    bcp_client: basic
-    bcp_interface: basic
-    bcp_server: basic
-    clock: none
-    config_players: none       # todo
-    data_manager: none       # todo subclasses
-    delay_manager: none
-    device_manager: none
-    event_manager: none
-    file_manager: none       # todo
-    logic_blocks: none
-    machine_controller: basic
-    mode_controller: basic
-    placeholder_manager: none
-    platforms: none       # todo
-    players: basic       # todo
-    plugins: none       # todo
-    score_reel_controller: none
-    scriptlets: none       # todo
-    service_controller: basic
-    settings_controller: none
-    show_controller: none
-    switch_controller: basic
-    timers: none
-  file:
-    asset_manager: basic
-    ball_controller: basic
-    ball_search: basic
-    bcp: basic
-    bcp_client: basic
-    bcp_interface: basic
-    bcp_server: basic
-    clock: none
-    config_players: basic
-    data_manager: basic
-    delay_manager: none
-    device_manager: basic
-    event_manager: basic
-    file_manager: basic
-    logic_blocks: basic
-    machine_controller: basic
-    mode_controller: basic
-    placeholder_manager: basic
-    platforms: basic
-    players: full
-    plugins: basic
-    score_reel_controller: basic
-    scriptlets: basic
-    service_controller: basic
-    settings_controller: basic
-    show_controller: basic
-    switch_controller: full
-    timers: none
+<div class="highlight"><pre><span></span><code><span class="nt">logging</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">console</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">asset_manager</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">none</span>
+<span class="w">    </span><span class="nt">ball_controller</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">none</span>
+<span class="w">    </span><span class="nt">ball_search</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">basic</span>
+<span class="w">    </span><span class="nt">bcp</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">basic</span>
+<span class="w">    </span><span class="nt">bcp_client</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">basic</span>
+<span class="w">    </span><span class="nt">bcp_interface</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">basic</span>
+<span class="w">    </span><span class="nt">bcp_server</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">basic</span>
+<span class="w">    </span><span class="nt">clock</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">none</span>
+<span class="w">    </span><span class="nt">config_players</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">none</span><span class="w">       </span><span class="c1"># todo</span>
+<span class="w">    </span><span class="nt">data_manager</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">none</span><span class="w">       </span><span class="c1"># todo subclasses</span>
+<span class="w">    </span><span class="nt">delay_manager</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">none</span>
+<span class="w">    </span><span class="nt">device_manager</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">none</span>
+<span class="w">    </span><span class="nt">event_manager</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">none</span>
+<span class="w">    </span><span class="nt">file_manager</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">none</span><span class="w">       </span><span class="c1"># todo</span>
+<span class="w">    </span><span class="nt">logic_blocks</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">none</span>
+<span class="w">    </span><span class="nt">machine_controller</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">basic</span>
+<span class="w">    </span><span class="nt">mode_controller</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">basic</span>
+<span class="w">    </span><span class="nt">placeholder_manager</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">none</span>
+<span class="w">    </span><span class="nt">platforms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">none</span><span class="w">       </span><span class="c1"># todo</span>
+<span class="w">    </span><span class="nt">players</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">basic</span><span class="w">       </span><span class="c1"># todo</span>
+<span class="w">    </span><span class="nt">plugins</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">none</span><span class="w">       </span><span class="c1"># todo</span>
+<span class="w">    </span><span class="nt">score_reel_controller</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">none</span>
+<span class="w">    </span><span class="nt">scriptlets</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">none</span><span class="w">       </span><span class="c1"># todo</span>
+<span class="w">    </span><span class="nt">service_controller</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">basic</span>
+<span class="w">    </span><span class="nt">settings_controller</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">none</span>
+<span class="w">    </span><span class="nt">show_controller</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">none</span>
+<span class="w">    </span><span class="nt">switch_controller</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">basic</span>
+<span class="w">    </span><span class="nt">timers</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">none</span>
+<span class="w">  </span><span class="nt">file</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">asset_manager</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">basic</span>
+<span class="w">    </span><span class="nt">ball_controller</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">basic</span>
+<span class="w">    </span><span class="nt">ball_search</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">basic</span>
+<span class="w">    </span><span class="nt">bcp</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">basic</span>
+<span class="w">    </span><span class="nt">bcp_client</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">basic</span>
+<span class="w">    </span><span class="nt">bcp_interface</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">basic</span>
+<span class="w">    </span><span class="nt">bcp_server</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">basic</span>
+<span class="w">    </span><span class="nt">clock</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">none</span>
+<span class="w">    </span><span class="nt">config_players</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">basic</span>
+<span class="w">    </span><span class="nt">data_manager</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">basic</span>
+<span class="w">    </span><span class="nt">delay_manager</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">none</span>
+<span class="w">    </span><span class="nt">device_manager</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">basic</span>
+<span class="w">    </span><span class="nt">event_manager</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">basic</span>
+<span class="w">    </span><span class="nt">file_manager</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">basic</span>
+<span class="w">    </span><span class="nt">logic_blocks</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">basic</span>
+<span class="w">    </span><span class="nt">machine_controller</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">basic</span>
+<span class="w">    </span><span class="nt">mode_controller</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">basic</span>
+<span class="w">    </span><span class="nt">placeholder_manager</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">basic</span>
+<span class="w">    </span><span class="nt">platforms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">basic</span>
+<span class="w">    </span><span class="nt">players</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">full</span>
+<span class="w">    </span><span class="nt">plugins</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">basic</span>
+<span class="w">    </span><span class="nt">score_reel_controller</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">basic</span>
+<span class="w">    </span><span class="nt">scriptlets</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">basic</span>
+<span class="w">    </span><span class="nt">service_controller</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">basic</span>
+<span class="w">    </span><span class="nt">settings_controller</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">basic</span>
+<span class="w">    </span><span class="nt">show_controller</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">basic</span>
+<span class="w">    </span><span class="nt">switch_controller</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">full</span>
+<span class="w">    </span><span class="nt">timers</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">none</span>
 </code></pre></div>
 <h2 id="related-how-to-guides">Related How To guides</h2>
 <div class="admonition success">

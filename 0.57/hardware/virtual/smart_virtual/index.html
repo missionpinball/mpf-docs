@@ -33796,53 +33796,53 @@ changed if that coil fired on real hardware.</p>
 <p>To understand why the smart virtual platform exists, consider this
 simple machine config for a trough, a plunger lane, and keyboard key
 mappings to simulate their switches:</p>
-<div class="highlight"><pre><span></span><code>switches:
-  s_trough1:
-    number: s31
-  s_trough2:
-    number: s32
-  s_trough3:
-    number: s33
-  s_trough4:
-    number: s34
-  s_plunger_lane:
-    number: s27
-coils:
-  c_trough_eject:
-    number: c01
-    default_pulse_ms: 25
-  c_plunger_eject:
-    number: c03
-    default_pulse_ms: 25
-ball_devices:
-  bd_trough:
-    tags: trough, home, drain
-    ball_switches: s_trough1, s_trough2, s_trough3, s_trough4
-    eject_coil: c_trough_eject
-    eject_targets: bd_plunger
-  bd_plunger:
-    ball_switches: s_plunger_lane
-    eject_coil: c_plunger_eject
-playfields:
-  playfield:
-    default_source_device: bd_plunger
-    tags: default
-keyboard:
-  1:
-    switch: s_trough1
-    toggle: true
-  2:
-    switch: s_trough2
-    toggle: true
-  3:
-    switch: s_trough3
-    toggle: true
-  4:
-    switch: s_trough4
-    toggle: true
-  p:
-    switch: s_plunger_lane
-    toggle: true
+<div class="highlight"><pre><span></span><code><span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_trough1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s31</span>
+<span class="w">  </span><span class="nt">s_trough2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s32</span>
+<span class="w">  </span><span class="nt">s_trough3</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s33</span>
+<span class="w">  </span><span class="nt">s_trough4</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s34</span>
+<span class="w">  </span><span class="nt">s_plunger_lane</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s27</span>
+<span class="nt">coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">c_trough_eject</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c01</span>
+<span class="w">    </span><span class="nt">default_pulse_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">25</span>
+<span class="w">  </span><span class="nt">c_plunger_eject</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c03</span>
+<span class="w">    </span><span class="nt">default_pulse_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">25</span>
+<span class="nt">ball_devices</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">bd_trough</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">trough, home, drain</span>
+<span class="w">    </span><span class="nt">ball_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_trough1, s_trough2, s_trough3, s_trough4</span>
+<span class="w">    </span><span class="nt">eject_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_trough_eject</span>
+<span class="w">    </span><span class="nt">eject_targets</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bd_plunger</span>
+<span class="w">  </span><span class="nt">bd_plunger</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">ball_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_plunger_lane</span>
+<span class="w">    </span><span class="nt">eject_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_plunger_eject</span>
+<span class="nt">playfields</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">playfield</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">default_source_device</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bd_plunger</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span>
+<span class="nt">keyboard</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_trough1</span>
+<span class="w">    </span><span class="nt">toggle</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_trough2</span>
+<span class="w">    </span><span class="nt">toggle</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">3</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_trough3</span>
+<span class="w">    </span><span class="nt">toggle</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">4</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_trough4</span>
+<span class="w">    </span><span class="nt">toggle</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">p</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_plunger_lane</span>
+<span class="w">    </span><span class="nt">toggle</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
 <p>MPF's regular virtual platform interface is "dumb" in the sense that
 all switch actions need to be controlled externally (either via keyboard
@@ -33888,8 +33888,8 @@ MPF will use the smart virtual platform anyone you run it.</p>
 <h3 id="2-manually-setting-the-platform">2. Manually setting the platform</h3>
 <p>You can also manually specify the smart virtual interface in the machine
 config, like this:</p>
-<div class="highlight"><pre><span></span><code>hardware:
-  platform: smart_virtual
+<div class="highlight"><pre><span></span><code><span class="nt">hardware</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">smart_virtual</span>
 </code></pre></div>
 <h3 id="3-via-the-command-line">3. Via the command line</h3>
 <p>You can also specify the smart virtual platform interface via the <code>-X</code>

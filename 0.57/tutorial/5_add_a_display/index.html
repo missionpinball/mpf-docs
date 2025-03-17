@@ -33831,12 +33831,12 @@ you can support multiple displays at the same time.)</p>
 height and width, both defined in terms of the number of pixels. So for
 now, create a single display called "window" set to 800x600 pixels. To
 do this, add the following to your <code>config.yaml</code> file:</p>
-<div class="highlight"><pre><span></span><code>displays:
-  window:
-    width: 800
-    height: 600
-##! test
-#! advance_time_and_run .1
+<div class="highlight"><pre><span></span><code><span class="nt">displays</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">window</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">800</span>
+<span class="w">    </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">600</span>
+<span class="c1">##! test</span>
+<span class="c1">#! advance_time_and_run .1</span>
 </code></pre></div>
 <p>Make sure that the word <code>displays:</code> has no spaces in front of it, since
 it's a top-level config item.</p>
@@ -33901,35 +33901,35 @@ full documentation on <a href="../../mc/slides/">slide</a> later.</p>
 <p>In MPF, all slides have names. You can define slides in the <code>slides:</code>
 section of the config. So let's create a slide called
 "welcome_slide", like this:</p>
-<div class="highlight"><pre><span></span><code>slides:
-  welcome_slide:
-##! test
-#! advance_time_and_run .1
+<div class="highlight"><pre><span></span><code><span class="nt">slides</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">welcome_slide</span><span class="p">:</span>
+<span class="c1">##! test</span>
+<span class="c1">#! advance_time_and_run .1</span>
 </code></pre></div>
 <p>Now let's add a <code>widgets:</code> section under that slide, then under that,
 we'll start creating some widgets.</p>
-<div class="highlight"><pre><span></span><code>slides:
-  welcome_slide:
-    widgets:
-##! test
-#! advance_time_and_run .1
+<div class="highlight"><pre><span></span><code><span class="nt">slides</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">welcome_slide</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">widgets</span><span class="p">:</span>
+<span class="c1">##! test</span>
+<span class="c1">#! advance_time_and_run .1</span>
 </code></pre></div>
 <p>You can add as many widgets as you want to a slide. (And it's pretty
 common for slides to be made up of lots of widgets). For now let's add
 a text widget that reads "PINBALL!". Do this by adding the following
 to your config:</p>
-<div class="highlight"><pre><span></span><code>slides:
-  welcome_slide:
-    widgets:
-      - type: text
-        text: PINBALL!
-#! slide_player:
-#!   show_slide_event: welcome_slide
-##! test
-#! post show_slide_event
-#! advance_time_and_run .1
-#! assert_slide_on_top welcome_slide
-#! assert_text_on_top_slide PINBALL!
+<div class="highlight"><pre><span></span><code><span class="nt">slides</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">welcome_slide</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">widgets</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PINBALL!</span>
+<span class="c1">#! slide_player:</span>
+<span class="c1">#!   show_slide_event: welcome_slide</span>
+<span class="c1">##! test</span>
+<span class="c1">#! post show_slide_event</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_slide_on_top welcome_slide</span>
+<span class="c1">#! assert_text_on_top_slide PINBALL!</span>
 </code></pre></div>
 <p>There are a few things going on there.</p>
 <p>First, notice that before the word <code>type:</code>, there's a dash (hyphen),
@@ -33957,17 +33957,17 @@ that now.</p>
 slide_player watches for certain events to occur, and when they do, it
 "plays" a slide.</p>
 <p>To see this in action, add the following section to your machine config:</p>
-<div class="highlight"><pre><span></span><code>#! slides:
-#!   welcome_slide:
-#!     widgets:
-#!       - type: text
-#!         text: PINBALL!
-slide_player:
-  init_done: welcome_slide
-##! test
-#! advance_time_and_run .1
-#! assert_slide_on_top welcome_slide
-#! assert_text_on_top_slide PINBALL!
+<div class="highlight"><pre><span></span><code><span class="c1">#! slides:</span>
+<span class="c1">#!   welcome_slide:</span>
+<span class="c1">#!     widgets:</span>
+<span class="c1">#!       - type: text</span>
+<span class="c1">#!         text: PINBALL!</span>
+<span class="nt">slide_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">init_done</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">welcome_slide</span>
+<span class="c1">##! test</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_slide_on_top welcome_slide</span>
+<span class="c1">#! assert_text_on_top_slide PINBALL!</span>
 </code></pre></div>
 <p>What this is doing is saying, "When the event called <em>init_done</em>
 happens, play the slide called <em>welcome_slide</em>." The <em>init_done</em> is an
@@ -33996,20 +33996,20 @@ config file. Since this is a text widget, we can look at the
 <a href="../../mc/widgets/text/">documentation for text widgets</a> to see what options we have.</p>
 <p>For example, let's change the font size and the color, by adding
 <code>font_size:</code> and <code>color:</code> lines:</p>
-<div class="highlight"><pre><span></span><code>slides:
-  welcome_slide:
-    widgets:
-      - type: text
-        text: PINBALL!
-        font_size: 50
-        color: red
-#! slide_player:
-#!   show_slide_event: welcome_slide
-##! test
-#! post show_slide_event
-#! advance_time_and_run .1
-#! assert_slide_on_top welcome_slide
-#! assert_text_on_top_slide PINBALL!
+<div class="highlight"><pre><span></span><code><span class="nt">slides</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">welcome_slide</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">widgets</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PINBALL!</span>
+<span class="w">        </span><span class="nt">font_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">50</span>
+<span class="w">        </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
+<span class="c1">#! slide_player:</span>
+<span class="c1">#!   show_slide_event: welcome_slide</span>
+<span class="c1">##! test</span>
+<span class="c1">#! post show_slide_event</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_slide_on_top welcome_slide</span>
+<span class="c1">#! assert_text_on_top_slide PINBALL!</span>
 </code></pre></div>
 <p>Now when you run <code>mpf mc</code> again, you should see this:</p>
 <p><img alt="image" src="../images/mc_pinball_2.png" /></p>
@@ -34022,23 +34022,23 @@ details.)</p>
 slide and that there are lots of different kinds of widgets. Let's add
 a second widget to your welcome slide. This one will be a rectangle
 which appears behind the word "PINBALL!".</p>
-<div class="highlight"><pre><span></span><code>slides:
-  welcome_slide:
-    widgets:
-      - type: text
-        text: PINBALL!
-        font_size: 50
-        color: red
-      - type: rectangle
-        width: 240
-        height: 60
-#! slide_player:
-#!   show_slide_event: welcome_slide
-##! test
-#! post show_slide_event
-#! advance_time_and_run .1
-#! assert_slide_on_top welcome_slide
-#! assert_text_on_top_slide PINBALL!
+<div class="highlight"><pre><span></span><code><span class="nt">slides</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">welcome_slide</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">widgets</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PINBALL!</span>
+<span class="w">        </span><span class="nt">font_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">50</span>
+<span class="w">        </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rectangle</span>
+<span class="w">        </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">240</span>
+<span class="w">        </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">60</span>
+<span class="c1">#! slide_player:</span>
+<span class="c1">#!   show_slide_event: welcome_slide</span>
+<span class="c1">##! test</span>
+<span class="c1">#! post show_slide_event</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_slide_on_top welcome_slide</span>
+<span class="c1">#! assert_text_on_top_slide PINBALL!</span>
 </code></pre></div>
 <p>Again, note that you use a dash followed by a space to denote the start
 of the second widget. This widget's type is "rectangle", with its
@@ -34065,27 +34065,27 @@ the MC to play, and this time we'll make that slide play on a different
 event.</p>
 <p>So in your <code>slides:</code> section, add another slide called
 <code>attract_started</code>, like this:</p>
-<div class="highlight"><pre><span></span><code>slides:
-  welcome_slide:
-    widgets:
-      - type: text
-        text: PINBALL!
-        font_size: 50
-        color: red
-      - type: rectangle
-        width: 240
-        height: 60
-  attract_started:
-    widgets:
-      - text: ATTRACT MODE
-        type: text
-#! slide_player:
-#!   show_slide_event: welcome_slide
-##! test
-#! post show_slide_event
-#! advance_time_and_run .1
-#! assert_slide_on_top welcome_slide
-#! assert_text_on_top_slide PINBALL!
+<div class="highlight"><pre><span></span><code><span class="nt">slides</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">welcome_slide</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">widgets</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PINBALL!</span>
+<span class="w">        </span><span class="nt">font_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">50</span>
+<span class="w">        </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rectangle</span>
+<span class="w">        </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">240</span>
+<span class="w">        </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">60</span>
+<span class="w">  </span><span class="nt">attract_started</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">widgets</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ATTRACT MODE</span>
+<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="c1">#! slide_player:</span>
+<span class="c1">#!   show_slide_event: welcome_slide</span>
+<span class="c1">##! test</span>
+<span class="c1">#! post show_slide_event</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_slide_on_top welcome_slide</span>
+<span class="c1">#! assert_text_on_top_slide PINBALL!</span>
 </code></pre></div>
 <p>Note that <code>attract_started:</code> is indented the same number of spaces as
 <code>welcome_slide:</code>. Also note that in the attract_started slide, we
@@ -34105,31 +34105,31 @@ MPF as well as descriptions of when they're posted. You can use any of
 these as triggers for your slides via the <code>slide_player:</code>.</p>
 <p>Anyway, add the <code>mode_attract_started</code> to your <code>slide_player:</code> like
 this:</p>
-<div class="highlight"><pre><span></span><code>#! slides:
-#!   welcome_slide:
-#!     widgets:
-#!       - type: text
-#!         text: PINBALL!
-#!         font_size: 50
-#!         color: red
-#!       - type: rectangle
-#!         width: 240
-#!         height: 60
-#!   attract_started:
-#!     widgets:
-#!       - text: ATTRACT MODE
-#!         type: text
-slide_player:
-  init_done: welcome_slide
-  mode_attract_started: attract_started
-##! test
-#! advance_time_and_run .1
-#! assert_slide_on_top attract_started
-#! assert_text_on_top_slide &quot;ATTRACT MODE&quot;
-#! start_game
-#! post show_slide_event
-#! advance_time_and_run .1
-#! assert_slide_active welcome_slide
+<div class="highlight"><pre><span></span><code><span class="c1">#! slides:</span>
+<span class="c1">#!   welcome_slide:</span>
+<span class="c1">#!     widgets:</span>
+<span class="c1">#!       - type: text</span>
+<span class="c1">#!         text: PINBALL!</span>
+<span class="c1">#!         font_size: 50</span>
+<span class="c1">#!         color: red</span>
+<span class="c1">#!       - type: rectangle</span>
+<span class="c1">#!         width: 240</span>
+<span class="c1">#!         height: 60</span>
+<span class="c1">#!   attract_started:</span>
+<span class="c1">#!     widgets:</span>
+<span class="c1">#!       - text: ATTRACT MODE</span>
+<span class="c1">#!         type: text</span>
+<span class="nt">slide_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">init_done</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">welcome_slide</span>
+<span class="w">  </span><span class="nt">mode_attract_started</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">attract_started</span>
+<span class="c1">##! test</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_slide_on_top attract_started</span>
+<span class="c1">#! assert_text_on_top_slide &quot;ATTRACT MODE&quot;</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! post show_slide_event</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_slide_active welcome_slide</span>
 </code></pre></div>
 <p>Again, this is saying you want the slide called "attract_started" to
 play when the event called "mode_attract_started" happens.</p>

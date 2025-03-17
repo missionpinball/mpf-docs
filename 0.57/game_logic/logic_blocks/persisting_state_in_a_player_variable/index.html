@@ -33594,29 +33594,29 @@ state of the logic block itself, which is an object with
 <code>enabled</code>, <code>completed</code>, and <code>value</code>
 attributes. Note the difference in accessing the logic block state as a
 dynamic value vs. placeholder text:</p>
-<div class="highlight"><pre><span></span><code>##! mode: my_mode
-counters:
-  logic_block_1:
-    count_events: count_up_event
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: my_mode</span>
+<span class="nt">counters</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">logic_block_1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">count_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">count_up_event</span>
 
-variable_player:
-  counter_logic_block_1_hit:  # this is triggered when the counter changes
-    my_widget_placeholder: 100 * device.counters.logic_block_1.value
-   # The logic block stores the count as the &#39;value&#39; attribute
-widgets:
-  counter_widget:
-    - type: text
-      text: (my_widget_placeholder) Hits!
-  # This placeholder is set by variable_player when the counter changes
-#! widget_player:
-#!   show_widget_event: counter_widget
-##! test
-#! start_game
-#! start_mode my_mode
-#! post show_widget_event
-#! post count_up_event
-#! advance_time_and_run .1
-#! assert_text_on_top_slide &quot;100 Hits!&quot;
+<span class="nt">variable_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">counter_logic_block_1_hit</span><span class="p">:</span><span class="w">  </span><span class="c1"># this is triggered when the counter changes</span>
+<span class="w">    </span><span class="nt">my_widget_placeholder</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100 * device.counters.logic_block_1.value</span>
+<span class="w">   </span><span class="c1"># The logic block stores the count as the &#39;value&#39; attribute</span>
+<span class="nt">widgets</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">counter_widget</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(my_widget_placeholder) Hits!</span>
+<span class="w">  </span><span class="c1"># This placeholder is set by variable_player when the counter changes</span>
+<span class="c1">#! widget_player:</span>
+<span class="c1">#!   show_widget_event: counter_widget</span>
+<span class="c1">##! test</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! start_mode my_mode</span>
+<span class="c1">#! post show_widget_event</span>
+<span class="c1">#! post count_up_event</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_text_on_top_slide &quot;100 Hits!&quot;</span>
 </code></pre></div>
 <p>In this example we persist the value of the counter in the player
 variable <code>counter_hit</code> to use it in a slide.</p>

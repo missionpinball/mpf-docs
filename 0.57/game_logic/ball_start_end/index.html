@@ -33744,97 +33744,97 @@ delay the ball start and the ball will eject instantly.</p>
 <h3 id="showslights">Shows/Lights</h3>
 <p>This might be useful to start music, flash some lights or start
 background shows:</p>
-<div class="highlight"><pre><span></span><code>##! mode: my_mode
-# in your mode
-mode:
-  start_events: ball_started
-show_player:
-  mode_my_mode_started:
-    short_start_show:
-      loops: 0
-shows:
-  short_start_show:
-    - duration: .5s
-#!       events: test_start
-      # add your show here
-##! test
-#! mock_event test_start
-#! start_game
-#! advance_time_and_run 1
-#! assert_event_called test_start
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: my_mode</span>
+<span class="c1"># in your mode</span>
+<span class="nt">mode</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">start_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ball_started</span>
+<span class="nt">show_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">mode_my_mode_started</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">short_start_show</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">loops</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="nt">shows</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">short_start_show</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.5s</span>
+<span class="c1">#!       events: test_start</span>
+<span class="w">      </span><span class="c1"># add your show here</span>
+<span class="c1">##! test</span>
+<span class="c1">#! mock_event test_start</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! advance_time_and_run 1</span>
+<span class="c1">#! assert_event_called test_start</span>
 </code></pre></div>
 <p>This can simply be embedded in any mode (e.g. in your base mode).</p>
 <h3 id="ball-save">Ball Save</h3>
 <p>It is also very common to start a ball save on eject:</p>
-<div class="highlight"><pre><span></span><code>playfields:
-  playfield:
-    default_source_device: bd_plunger
-lights:
-  l_ball_save:
-    number:
-switches:
-  s_plunger:
-    number:
-coils:
-  c_eject:
-    number:
-ball_devices:
-  bd_plunger:
-    eject_coil: c_eject
-    ball_switches: s_plunger
-    tags: home, trough, drain
-    eject_timeouts: 1s
-##! mode: my_mode
-# in your mode
-mode:
-  start_events: ball_started
-ball_saves:
-  ball_save_ball_save:
-    active_time: 10s
-    hurry_up_time: 3s
-    timer_start_events: balldevice_bd_plunger_ejecting_ball
-    auto_launch: true
-    balls_to_save: 1
-show_player:
-  ball_save_ball_save_ball_save_timer_start:
-    flash_color:
-      key: ball_save
-      speed: 2
-      show_tokens:
-        lights: l_ball_save
-        color: orange
-  ball_save_ball_save_ball_save_hurry_up:
-    flash_color:
-      key: ball_save
-      speed: 4
-      show_tokens:
-        lights: l_ball_save
-        color: orange
-  ball_save_ball_save_ball_save_disabled:
-    ball_save: stop
-##! test
-#! hit_switch s_plunger
-#! advance_time_and_run 1
-#! mock_event ball_save_ball_save_ball_save_saving_ball
-#! hit_and_release_switch s_start
-#! advance_time_and_run 2
-#! assert_event_not_called ball_save_ball_save_ball_save_saving_ball
-#! hit_switch s_plunger
-#! advance_time_and_run 1
-#! assert_player_variable 1 ball
-#! assert_event_called ball_save_ball_save_ball_save_saving_ball
-#! advance_time_and_run 5
-#! hit_switch s_plunger
-#! advance_time_and_run 1
-#! assert_player_variable 2 ball
-#! assert_light_flashing l_ball_save orange
-#! advance_time_and_run 7
-#! assert_light_flashing l_ball_save orange .5
-#! advance_time_and_run 5
-#! assert_light_color l_ball_save off
-#! hit_switch s_plunger
-#! advance_time_and_run 1
-#! assert_player_variable 3 ball
+<div class="highlight"><pre><span></span><code><span class="nt">playfields</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">playfield</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">default_source_device</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bd_plunger</span>
+<span class="nt">lights</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">l_ball_save</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_plunger</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="nt">coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">c_eject</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="nt">ball_devices</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">bd_plunger</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">eject_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_eject</span>
+<span class="w">    </span><span class="nt">ball_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_plunger</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">home, trough, drain</span>
+<span class="w">    </span><span class="nt">eject_timeouts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<span class="c1">##! mode: my_mode</span>
+<span class="c1"># in your mode</span>
+<span class="nt">mode</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">start_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ball_started</span>
+<span class="nt">ball_saves</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">ball_save_ball_save</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">active_time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10s</span>
+<span class="w">    </span><span class="nt">hurry_up_time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3s</span>
+<span class="w">    </span><span class="nt">timer_start_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">balldevice_bd_plunger_ejecting_ball</span>
+<span class="w">    </span><span class="nt">auto_launch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">balls_to_save</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="nt">show_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">ball_save_ball_save_ball_save_timer_start</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">flash_color</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ball_save</span>
+<span class="w">      </span><span class="nt">speed</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="w">      </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">lights</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_ball_save</span>
+<span class="w">        </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">orange</span>
+<span class="w">  </span><span class="nt">ball_save_ball_save_ball_save_hurry_up</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">flash_color</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ball_save</span>
+<span class="w">      </span><span class="nt">speed</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span>
+<span class="w">      </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">lights</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_ball_save</span>
+<span class="w">        </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">orange</span>
+<span class="w">  </span><span class="nt">ball_save_ball_save_ball_save_disabled</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">ball_save</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stop</span>
+<span class="c1">##! test</span>
+<span class="c1">#! hit_switch s_plunger</span>
+<span class="c1">#! advance_time_and_run 1</span>
+<span class="c1">#! mock_event ball_save_ball_save_ball_save_saving_ball</span>
+<span class="c1">#! hit_and_release_switch s_start</span>
+<span class="c1">#! advance_time_and_run 2</span>
+<span class="c1">#! assert_event_not_called ball_save_ball_save_ball_save_saving_ball</span>
+<span class="c1">#! hit_switch s_plunger</span>
+<span class="c1">#! advance_time_and_run 1</span>
+<span class="c1">#! assert_player_variable 1 ball</span>
+<span class="c1">#! assert_event_called ball_save_ball_save_ball_save_saving_ball</span>
+<span class="c1">#! advance_time_and_run 5</span>
+<span class="c1">#! hit_switch s_plunger</span>
+<span class="c1">#! advance_time_and_run 1</span>
+<span class="c1">#! assert_player_variable 2 ball</span>
+<span class="c1">#! assert_light_flashing l_ball_save orange</span>
+<span class="c1">#! advance_time_and_run 7</span>
+<span class="c1">#! assert_light_flashing l_ball_save orange .5</span>
+<span class="c1">#! advance_time_and_run 5</span>
+<span class="c1">#! assert_light_color l_ball_save off</span>
+<span class="c1">#! hit_switch s_plunger</span>
+<span class="c1">#! advance_time_and_run 1</span>
+<span class="c1">#! assert_player_variable 3 ball</span>
 </code></pre></div>
 <p>The mode will start on <code>ball_started</code>. It will enable a
 <a href="../../config/ball_saves/">ball save</a> on mode
@@ -33849,32 +33849,32 @@ details). Unfortunately, normal game modes will stop on ball end and you
 will never see the <code>ball_ended</code> event in a game mode. This approach will
 not delay the ball end and the next ball might eject in the meantime.
 Use it for very short sounds or light flashes:</p>
-<div class="highlight"><pre><span></span><code>##! mode: my_mode
-# in your mode
-mode:
-  start_events: ball_ending
-  stop_events: end_show_done
-  game_mode: false
-show_player:
-  mode_my_mode_started:
-    short_stop_show:
-      loops: 0
-      events_when_completed: end_show_done
-shows:
-  short_stop_show:
-    - duration: 2s
-#!       events: test_stop
-      # add your show here
-##! test
-#! mock_event test_stop
-#! start_game
-#! advance_time_and_run 1
-#! drain_all_balls
-#! advance_time_and_run .1
-#! assert_event_called test_stop
-#! assert_mode_running my_mode
-#! advance_time_and_run 1
-#! assert_mode_not_running my_mode
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: my_mode</span>
+<span class="c1"># in your mode</span>
+<span class="nt">mode</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">start_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ball_ending</span>
+<span class="w">  </span><span class="nt">stop_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">end_show_done</span>
+<span class="w">  </span><span class="nt">game_mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="nt">show_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">mode_my_mode_started</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">short_stop_show</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">loops</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">      </span><span class="nt">events_when_completed</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">end_show_done</span>
+<span class="nt">shows</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">short_stop_show</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2s</span>
+<span class="c1">#!       events: test_stop</span>
+<span class="w">      </span><span class="c1"># add your show here</span>
+<span class="c1">##! test</span>
+<span class="c1">#! mock_event test_stop</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! advance_time_and_run 1</span>
+<span class="c1">#! drain_all_balls</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_event_called test_stop</span>
+<span class="c1">#! assert_mode_running my_mode</span>
+<span class="c1">#! advance_time_and_run 1</span>
+<span class="c1">#! assert_mode_not_running my_mode</span>
 </code></pre></div>
 <h2 id="delaying-ball-start-and-end">Delaying ball start and end</h2>
 <p>To delay start and end of a ball use the following mode. It uses a
@@ -33882,67 +33882,67 @@ shows:
 <code>ball_starting</code> and <code>ball_ending</code> for the duration of a show. This can
 be used to show longer sequences and delaying the game flow in the
 meantime:</p>
-<div class="highlight"><pre><span></span><code>##! mode: my_mode
-# in your mode
-mode:
-  start_events: ball_will_start     # in normal mode use ball_started instead
-  priority: 200
-queue_relay_player:
-  ball_starting:
-    post: start_ball_starting_show
-    wait_for: mode_ball_starting_show_ended
-  ball_ending:
-    post: start_ball_ending_show
-    wait_for: mode_ball_ending_show_ended
-show_player:
-  flipper_cancel:
-    ball_starting_show: stop
-    ball_ending_show: stop
-  start_ball_starting_show:
-    ball_starting_show:
-      loops: 0
-      events_when_stopped: mode_ball_starting_show_ended
-  start_ball_ending_show:
-    ball_ending_show:
-      loops: 0
-      events_when_stopped: mode_ball_ending_show_ended
-shows:
-  ball_starting_show:
-    - duration: 5s
-#!       events: test_start
-  ball_ending_show:
-    - duration: 5s
-#!       events: test_stop
-##! test
-#! mock_event test_start
-#! mock_event mode_ball_starting_show_ended
-#! mock_event test_stop
-#! mock_event mode_ball_ending_show_ended
-#! start_game
-#! advance_time_and_run 1
-#! assert_event_called test_start
-#! assert_event_not_called mode_ball_starting_show_ended
-#! advance_time_and_run 5
-#! assert_event_called mode_ball_starting_show_ended
-#! drain_all_balls
-#! # still on ball 1
-#! mock_event test_start
-#! mock_event mode_ball_starting_show_ended
-#! advance_time_and_run 1
-#! assert_player_variable 1 ball
-#! assert_event_called test_stop
-#! assert_event_not_called mode_ball_ending_show_ended
-#! advance_time_and_run 5
-#! assert_event_called mode_ball_ending_show_ended
-#! # on ball 2
-#! mock_event test_stop
-#! mock_event mode_ball_ending_show_ended
-#! assert_player_variable 2 ball
-#! assert_event_called test_start
-#! assert_event_not_called mode_ball_starting_show_ended
-#! post flipper_cancel
-#! advance_time_and_run 1
-#! assert_event_called mode_ball_starting_show_ended
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: my_mode</span>
+<span class="c1"># in your mode</span>
+<span class="nt">mode</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">start_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ball_will_start</span><span class="w">     </span><span class="c1"># in normal mode use ball_started instead</span>
+<span class="w">  </span><span class="nt">priority</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">200</span>
+<span class="nt">queue_relay_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">ball_starting</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">post</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start_ball_starting_show</span>
+<span class="w">    </span><span class="nt">wait_for</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mode_ball_starting_show_ended</span>
+<span class="w">  </span><span class="nt">ball_ending</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">post</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start_ball_ending_show</span>
+<span class="w">    </span><span class="nt">wait_for</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mode_ball_ending_show_ended</span>
+<span class="nt">show_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">flipper_cancel</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">ball_starting_show</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stop</span>
+<span class="w">    </span><span class="nt">ball_ending_show</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stop</span>
+<span class="w">  </span><span class="nt">start_ball_starting_show</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">ball_starting_show</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">loops</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">      </span><span class="nt">events_when_stopped</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mode_ball_starting_show_ended</span>
+<span class="w">  </span><span class="nt">start_ball_ending_show</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">ball_ending_show</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">loops</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">      </span><span class="nt">events_when_stopped</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mode_ball_ending_show_ended</span>
+<span class="nt">shows</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">ball_starting_show</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5s</span>
+<span class="c1">#!       events: test_start</span>
+<span class="w">  </span><span class="nt">ball_ending_show</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5s</span>
+<span class="c1">#!       events: test_stop</span>
+<span class="c1">##! test</span>
+<span class="c1">#! mock_event test_start</span>
+<span class="c1">#! mock_event mode_ball_starting_show_ended</span>
+<span class="c1">#! mock_event test_stop</span>
+<span class="c1">#! mock_event mode_ball_ending_show_ended</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! advance_time_and_run 1</span>
+<span class="c1">#! assert_event_called test_start</span>
+<span class="c1">#! assert_event_not_called mode_ball_starting_show_ended</span>
+<span class="c1">#! advance_time_and_run 5</span>
+<span class="c1">#! assert_event_called mode_ball_starting_show_ended</span>
+<span class="c1">#! drain_all_balls</span>
+<span class="c1">#! # still on ball 1</span>
+<span class="c1">#! mock_event test_start</span>
+<span class="c1">#! mock_event mode_ball_starting_show_ended</span>
+<span class="c1">#! advance_time_and_run 1</span>
+<span class="c1">#! assert_player_variable 1 ball</span>
+<span class="c1">#! assert_event_called test_stop</span>
+<span class="c1">#! assert_event_not_called mode_ball_ending_show_ended</span>
+<span class="c1">#! advance_time_and_run 5</span>
+<span class="c1">#! assert_event_called mode_ball_ending_show_ended</span>
+<span class="c1">#! # on ball 2</span>
+<span class="c1">#! mock_event test_stop</span>
+<span class="c1">#! mock_event mode_ball_ending_show_ended</span>
+<span class="c1">#! assert_player_variable 2 ball</span>
+<span class="c1">#! assert_event_called test_start</span>
+<span class="c1">#! assert_event_not_called mode_ball_starting_show_ended</span>
+<span class="c1">#! post flipper_cancel</span>
+<span class="c1">#! advance_time_and_run 1</span>
+<span class="c1">#! assert_event_called mode_ball_starting_show_ended</span>
 </code></pre></div>
 <p>Both shows can be canceled using both flippers which will post the
 <code>flipper_cancel</code> event. Remove that

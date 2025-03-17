@@ -33697,30 +33697,30 @@ showing slides. We will need to define and configure five displays for
 this layout: one that covers the entire window area, and four smaller
 ones that will each be used for one of the four smaller quadrant
 displays.</p>
-<div class="highlight"><pre><span></span><code>#config_version=5
-window:
-  width: 1280
-  height: 720
-  resizable: false
-  fullscreen: false
-  borderless: true
-  exit_on_escape: true
-displays:
-  window:
-    width: 1280
-    height: 720
-  upper_left:
-    width: 580
-    height: 260
-  upper_right:
-    width: 580
-    height: 260
-  lower_left:
-    width: 580
-    height: 260
-  lower_right:
-    width: 580
-    height: 260
+<div class="highlight"><pre><span></span><code><span class="c1">#config_version=5</span>
+<span class="nt">window</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1280</span>
+<span class="w">  </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">720</span>
+<span class="w">  </span><span class="nt">resizable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">  </span><span class="nt">fullscreen</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">  </span><span class="nt">borderless</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">exit_on_escape</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="nt">displays</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">window</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1280</span>
+<span class="w">    </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">720</span>
+<span class="w">  </span><span class="nt">upper_left</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">580</span>
+<span class="w">    </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">260</span>
+<span class="w">  </span><span class="nt">upper_right</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">580</span>
+<span class="w">    </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">260</span>
+<span class="w">  </span><span class="nt">lower_left</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">580</span>
+<span class="w">    </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">260</span>
+<span class="w">  </span><span class="nt">lower_right</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">580</span>
+<span class="w">    </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">260</span>
 </code></pre></div>
 <h2 id="2-create-the-layout-slide">2. Create the layout slide</h2>
 <p>The next step is to decide on the details of the layout. The following
@@ -33739,65 +33739,65 @@ we want to display in each quadrant.</p>
 to fit in the widget boundaries, it is recommended you use the same size
 display widget as the source display for the best visual results.</p>
 </div>
-<div class="highlight"><pre><span></span><code>#! displays:
-#!   window:
-#!     width: 1280
-#!     height: 720
-#!   upper_left:
-#!     width: 580
-#!     height: 260
-#!   upper_right:
-#!     width: 580
-#!     height: 260
-#!   lower_left:
-#!     width: 580
-#!     height: 260
-#!   lower_right:
-#!     width: 580
-#!     height: 260
-slides:
-  layout_4_mini:
-    background_color: red
-    widgets:
-      - type: display
-        width: 580
-        height: 260
-        x: 40
-        y: 420
-        anchor_x: left
-        anchor_y: bottom
-        source_display: upper_left
-      - type: display
-        width: 580
-        height: 260
-        x: 660
-        y: 420
-        anchor_x: left
-        anchor_y: bottom
-        source_display: upper_right
-      - type: display
-        width: 580
-        height: 260
-        x: 40
-        y: 120
-        anchor_x: left
-        anchor_y: bottom
-        source_display: lower_left
-      - type: display
-        width: 580
-        height: 260
-        x: 660
-        y: 120
-        anchor_x: left
-        anchor_y: bottom
-        source_display: lower_right
-      - type: text
-        text: Split Screen Layout Example
-        y: 60
-slide_player:
-  mc_ready:
-    layout_4_mini:
-      target: window
+<div class="highlight"><pre><span></span><code><span class="c1">#! displays:</span>
+<span class="c1">#!   window:</span>
+<span class="c1">#!     width: 1280</span>
+<span class="c1">#!     height: 720</span>
+<span class="c1">#!   upper_left:</span>
+<span class="c1">#!     width: 580</span>
+<span class="c1">#!     height: 260</span>
+<span class="c1">#!   upper_right:</span>
+<span class="c1">#!     width: 580</span>
+<span class="c1">#!     height: 260</span>
+<span class="c1">#!   lower_left:</span>
+<span class="c1">#!     width: 580</span>
+<span class="c1">#!     height: 260</span>
+<span class="c1">#!   lower_right:</span>
+<span class="c1">#!     width: 580</span>
+<span class="c1">#!     height: 260</span>
+<span class="nt">slides</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">layout_4_mini</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">background_color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
+<span class="w">    </span><span class="nt">widgets</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">display</span>
+<span class="w">        </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">580</span>
+<span class="w">        </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">260</span>
+<span class="w">        </span><span class="nt">x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">40</span>
+<span class="w">        </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">420</span>
+<span class="w">        </span><span class="nt">anchor_x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">left</span>
+<span class="w">        </span><span class="nt">anchor_y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bottom</span>
+<span class="w">        </span><span class="nt">source_display</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">upper_left</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">display</span>
+<span class="w">        </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">580</span>
+<span class="w">        </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">260</span>
+<span class="w">        </span><span class="nt">x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">660</span>
+<span class="w">        </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">420</span>
+<span class="w">        </span><span class="nt">anchor_x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">left</span>
+<span class="w">        </span><span class="nt">anchor_y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bottom</span>
+<span class="w">        </span><span class="nt">source_display</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">upper_right</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">display</span>
+<span class="w">        </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">580</span>
+<span class="w">        </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">260</span>
+<span class="w">        </span><span class="nt">x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">40</span>
+<span class="w">        </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">120</span>
+<span class="w">        </span><span class="nt">anchor_x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">left</span>
+<span class="w">        </span><span class="nt">anchor_y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bottom</span>
+<span class="w">        </span><span class="nt">source_display</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lower_left</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">display</span>
+<span class="w">        </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">580</span>
+<span class="w">        </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">260</span>
+<span class="w">        </span><span class="nt">x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">660</span>
+<span class="w">        </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">120</span>
+<span class="w">        </span><span class="nt">anchor_x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">left</span>
+<span class="w">        </span><span class="nt">anchor_y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bottom</span>
+<span class="w">        </span><span class="nt">source_display</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lower_right</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Split Screen Layout Example</span>
+<span class="w">        </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">60</span>
+<span class="nt">slide_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">mc_ready</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">layout_4_mini</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">window</span>
 </code></pre></div>
 <p>The above config will display the <code>layout_4_mini</code> slide we just created
 as soon as the media controller is ready. Here is the result of the
@@ -33810,109 +33810,109 @@ creating slides and setting their target value to the name of the
 desired display when showing them. Here is our example from the previous
 steps that has now been extended to show a simple slide in each of the
 four quadrants:</p>
-<div class="highlight"><pre><span></span><code>#config_version=5
-window:
-  width: 1280
-  height: 720
-  resizable: false
-  fullscreen: false
-  borderless: true
-  exit_on_escape: true
-displays:
-  window:
-    width: 1280
-    height: 720
-  upper_left:
-    width: 580
-    height: 260
-  upper_right:
-    width: 580
-    height: 260
-  lower_left:
-    width: 580
-    height: 260
-  lower_right:
-    width: 580
-    height: 260
-slides:
-  layout_4_mini:
-    background_color: red
-    widgets:
-      - type: display
-        width: 580
-        height: 260
-        x: 40
-        y: 420
-        anchor_x: left
-        anchor_y: bottom
-        source_display: upper_left
-      - type: display
-        width: 580
-        height: 260
-        x: 660
-        y: 420
-        anchor_x: left
-        anchor_y: bottom
-        source_display: upper_right
-      - type: display
-        width: 580
-        height: 260
-        x: 40
-        y: 120
-        anchor_x: left
-        anchor_y: bottom
-        source_display: lower_left
-      - type: display
-        width: 580
-        height: 260
-        x: 660
-        y: 120
-        anchor_x: left
-        anchor_y: bottom
-        source_display: lower_right
-      - type: text
-        text: Split Screen Layout Example
-        y: 60
-  slide_1:
-    background_color: green
-    widgets:
-      - type: text
-        text: upper left
-  slide_2:
-    background_color: yellow
-    widgets:
-      - type: text
-        text: upper right
-      - type: ellipse
-        color: navy
-        height: 150
-        width: 350
-  slide_3:
-    widgets:
-      - type: text
-        text: lower left
-      - type: bezier
-        points: 0, 0, 100, 250, 250, 50, 400, 250
-        color: lime
-        thickness: 5
-  slide_4:
-    background_color: magenta
-    widgets:
-      - type: text
-        text: lower right
-        font_size: 40
-slide_player:
-  mc_ready:
-    layout_4_mini:
-      target: window
-    slide_1:
-      target: upper_left
-    slide_2:
-      target: upper_right
-    slide_3:
-      target: lower_left
-    slide_4:
-      target: lower_right
+<div class="highlight"><pre><span></span><code><span class="c1">#config_version=5</span>
+<span class="nt">window</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1280</span>
+<span class="w">  </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">720</span>
+<span class="w">  </span><span class="nt">resizable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">  </span><span class="nt">fullscreen</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">  </span><span class="nt">borderless</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">exit_on_escape</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="nt">displays</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">window</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1280</span>
+<span class="w">    </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">720</span>
+<span class="w">  </span><span class="nt">upper_left</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">580</span>
+<span class="w">    </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">260</span>
+<span class="w">  </span><span class="nt">upper_right</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">580</span>
+<span class="w">    </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">260</span>
+<span class="w">  </span><span class="nt">lower_left</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">580</span>
+<span class="w">    </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">260</span>
+<span class="w">  </span><span class="nt">lower_right</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">580</span>
+<span class="w">    </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">260</span>
+<span class="nt">slides</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">layout_4_mini</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">background_color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
+<span class="w">    </span><span class="nt">widgets</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">display</span>
+<span class="w">        </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">580</span>
+<span class="w">        </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">260</span>
+<span class="w">        </span><span class="nt">x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">40</span>
+<span class="w">        </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">420</span>
+<span class="w">        </span><span class="nt">anchor_x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">left</span>
+<span class="w">        </span><span class="nt">anchor_y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bottom</span>
+<span class="w">        </span><span class="nt">source_display</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">upper_left</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">display</span>
+<span class="w">        </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">580</span>
+<span class="w">        </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">260</span>
+<span class="w">        </span><span class="nt">x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">660</span>
+<span class="w">        </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">420</span>
+<span class="w">        </span><span class="nt">anchor_x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">left</span>
+<span class="w">        </span><span class="nt">anchor_y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bottom</span>
+<span class="w">        </span><span class="nt">source_display</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">upper_right</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">display</span>
+<span class="w">        </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">580</span>
+<span class="w">        </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">260</span>
+<span class="w">        </span><span class="nt">x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">40</span>
+<span class="w">        </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">120</span>
+<span class="w">        </span><span class="nt">anchor_x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">left</span>
+<span class="w">        </span><span class="nt">anchor_y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bottom</span>
+<span class="w">        </span><span class="nt">source_display</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lower_left</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">display</span>
+<span class="w">        </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">580</span>
+<span class="w">        </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">260</span>
+<span class="w">        </span><span class="nt">x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">660</span>
+<span class="w">        </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">120</span>
+<span class="w">        </span><span class="nt">anchor_x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">left</span>
+<span class="w">        </span><span class="nt">anchor_y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bottom</span>
+<span class="w">        </span><span class="nt">source_display</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lower_right</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Split Screen Layout Example</span>
+<span class="w">        </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">60</span>
+<span class="w">  </span><span class="nt">slide_1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">background_color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">green</span>
+<span class="w">    </span><span class="nt">widgets</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">upper left</span>
+<span class="w">  </span><span class="nt">slide_2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">background_color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yellow</span>
+<span class="w">    </span><span class="nt">widgets</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">upper right</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ellipse</span>
+<span class="w">        </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">navy</span>
+<span class="w">        </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">150</span>
+<span class="w">        </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">350</span>
+<span class="w">  </span><span class="nt">slide_3</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">widgets</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lower left</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bezier</span>
+<span class="w">        </span><span class="nt">points</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0, 0, 100, 250, 250, 50, 400, 250</span>
+<span class="w">        </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lime</span>
+<span class="w">        </span><span class="nt">thickness</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+<span class="w">  </span><span class="nt">slide_4</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">background_color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">magenta</span>
+<span class="w">    </span><span class="nt">widgets</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lower right</span>
+<span class="w">        </span><span class="nt">font_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">40</span>
+<span class="nt">slide_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">mc_ready</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">layout_4_mini</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">window</span>
+<span class="w">    </span><span class="nt">slide_1</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">upper_left</span>
+<span class="w">    </span><span class="nt">slide_2</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">upper_right</span>
+<span class="w">    </span><span class="nt">slide_3</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lower_left</span>
+<span class="w">    </span><span class="nt">slide_4</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lower_right</span>
 </code></pre></div>
 <p>The above config results in the following output:</p>
 <p><img alt="image" src="../../images/split_screen_example_2.png" /></p>

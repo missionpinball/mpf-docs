@@ -33581,14 +33581,14 @@ icons & this code generated via https://realfavicongenerator.net
 <li><a href="../../../config/shot_groups/">shot_groups:</a></li>
 </ul>
 <p>Shot profiles define how shots will behave when hit. This is an example:</p>
-<div class="highlight"><pre><span></span><code>##! mode: mode1
-shot_profiles:
-  my_default_profile:
-    states:
-      - name: unlit
-        show: &quot;off&quot;
-      - name: lit
-        show: &quot;on&quot;
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: mode1</span>
+<span class="nt">shot_profiles</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_default_profile</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">states</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unlit</span>
+<span class="w">        </span><span class="nt">show</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;off&quot;</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lit</span>
+<span class="w">        </span><span class="nt">show</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;on&quot;</span>
 </code></pre></div>
 <p>Normally, a shot will advance its profile (unless <code>advance_on_hit</code> is
 set to <code>False</code>) and will stay at its last step (unless <code>loop</code> is set to

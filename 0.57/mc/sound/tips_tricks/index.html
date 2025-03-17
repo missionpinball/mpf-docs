@@ -33878,17 +33878,17 @@ is finished playing.</p>
 <p>The basic concept is to add an event to the video that is triggered when
 the video is played and one when the video is stopped. Those events are
 then added to the <code>track_player</code> section of your config file:</p>
-<div class="highlight"><pre><span></span><code>track_player:
-  my_video_is_playing:
-    music:
-      action: pause
-      fade: 1 sec
-  my_video_has_stopped:
-    music:
-      action: play
-      fade: 1 sec
-##! test
-#! advance_time_and_run .1
+<div class="highlight"><pre><span></span><code><span class="nt">track_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_video_is_playing</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">music</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pause</span>
+<span class="w">      </span><span class="nt">fade</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1 sec</span>
+<span class="w">  </span><span class="nt">my_video_has_stopped</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">music</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">play</span>
+<span class="w">      </span><span class="nt">fade</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1 sec</span>
+<span class="c1">##! test</span>
+<span class="c1">#! advance_time_and_run .1</span>
 </code></pre></div>
 <p>That's all there is to it. Now whenever the <code>my_video_is_playing</code> MPF
 event is posted, the music track will be paused. It will be resumed when
@@ -33907,47 +33907,47 @@ setting that prevents accidental double hits within the configured time
 period. Instead of using the target hit event to trigger the sound, the
 target hit event will trigger the counter which in turn will post a hit
 event that can be used to trigger the sound. Here is an example:</p>
-<div class="highlight"><pre><span></span><code>coils:
-  reset_drop_targets:
-    number: 1
+<div class="highlight"><pre><span></span><code><span class="nt">coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">reset_drop_targets</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
 
-switches:
-  sw_drop_target_1:
-    number: 1
-  sw_drop_target_2:
-    number: 2
-  sw_drop_target_3:
-    number: 3
+<span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">sw_drop_target_1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">sw_drop_target_2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="w">  </span><span class="nt">sw_drop_target_3</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
 
-drop_targets:
-  target_1:
-    switch: sw_drop_target_1
-    reset_coil: reset_drop_targets
-  target_2:
-    switch: sw_drop_target_2
-    reset_coil: reset_drop_targets
-  target_3:
-    switch: sw_drop_target_3
-    reset_coil: reset_drop_targets
+<span class="nt">drop_targets</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">target_1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sw_drop_target_1</span>
+<span class="w">    </span><span class="nt">reset_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">reset_drop_targets</span>
+<span class="w">  </span><span class="nt">target_2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sw_drop_target_2</span>
+<span class="w">    </span><span class="nt">reset_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">reset_drop_targets</span>
+<span class="w">  </span><span class="nt">target_3</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sw_drop_target_3</span>
+<span class="w">    </span><span class="nt">reset_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">reset_drop_targets</span>
 
-counters:
-  drop_target_counter:
-    count_events: drop_target_target_1_hit, drop_target_target_2_hit, drop_target_target_2_hit
-    multiple_hit_window: 500ms
-    events_when_hit: drop_target_counter_hit
+<span class="nt">counters</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">drop_target_counter</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">count_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">drop_target_target_1_hit, drop_target_target_2_hit, drop_target_target_2_hit</span>
+<span class="w">    </span><span class="nt">multiple_hit_window</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">500ms</span>
+<span class="w">    </span><span class="nt">events_when_hit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">drop_target_counter_hit</span>
 
-sounds:
-  drop_target_sound:
-    file: blip1.ogg
-    volume: 0.75
+<span class="nt">sounds</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">drop_target_sound</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">blip1.ogg</span>
+<span class="w">    </span><span class="nt">volume</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.75</span>
 
-sound_player:
-  drop_target_counter_hit:
-    drop_target_sound:
-      action: play
-##! asset: sounds/blip1.ogg=sounds/sound.ogg
-##! test
-#! advance_time_and_run .1
+<span class="nt">sound_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">drop_target_counter_hit</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">drop_target_sound</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">play</span>
+<span class="c1">##! asset: sounds/blip1.ogg=sounds/sound.ogg</span>
+<span class="c1">##! test</span>
+<span class="c1">#! advance_time_and_run .1</span>
 </code></pre></div>
 <p>Alternatively, you could also define a separate track which allows only
 one concurrent sound at a time. See <a href="../tracks/">Tracks</a> for details.</p>

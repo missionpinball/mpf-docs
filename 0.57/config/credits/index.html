@@ -34147,41 +34147,41 @@ mode.</p>
 credits mode, so be sure to read that for the details. This page just
 contains the settings which control how the credits mode behaves. Here's
 an example config:</p>
-<div class="highlight"><pre><span></span><code>credits:
-  max_credits: 12
-  free_play: false
-  price_tier_template: &quot;{{credits}} CREDITS ${{price}}&quot;
-  service_credits_switch: s_esc
-  switches:
-    - switch: s_left_coin
-      type: dollars
-      value: .25
-    - switch: s_right_coin
-      type: dollars
-      value: 1
-  pricing_tiers:
-    - price: .50
-      credits: 1
-    - price: 2
-      credits: 5
-  events:
-    - event: special
-      type: special
-      credits: 1
-    - event: replay
-      type: replay
-      credits: 1
-    - event: high_score_credit
-      type: high_score
-      credits: 1
-    - event: match
-      type: match
-      credits: 1
-  fractional_credit_expiration_time: 15m
-  credit_expiration_time: 2h
-  persist_credits_while_off_time: 1h
-  free_play_string: FREE PLAY
-  credits_string: CREDITS
+<div class="highlight"><pre><span></span><code><span class="nt">credits</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">max_credits</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">12</span>
+<span class="w">  </span><span class="nt">free_play</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">  </span><span class="nt">price_tier_template</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{credits}}</span><span class="nv"> </span><span class="s">CREDITS</span><span class="nv"> </span><span class="s">${{price}}&quot;</span>
+<span class="w">  </span><span class="nt">service_credits_switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_esc</span>
+<span class="w">  </span><span class="nt">switches</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_left_coin</span>
+<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dollars</span>
+<span class="w">      </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.25</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_right_coin</span>
+<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dollars</span>
+<span class="w">      </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">pricing_tiers</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">price</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.50</span>
+<span class="w">      </span><span class="nt">credits</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">price</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="w">      </span><span class="nt">credits</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+<span class="w">  </span><span class="nt">events</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">special</span>
+<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">special</span>
+<span class="w">      </span><span class="nt">credits</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">replay</span>
+<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">replay</span>
+<span class="w">      </span><span class="nt">credits</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">high_score_credit</span>
+<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">high_score</span>
+<span class="w">      </span><span class="nt">credits</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">match</span>
+<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">match</span>
+<span class="w">      </span><span class="nt">credits</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">fractional_credit_expiration_time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">15m</span>
+<span class="w">  </span><span class="nt">credit_expiration_time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2h</span>
+<span class="w">  </span><span class="nt">persist_credits_while_off_time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1h</span>
+<span class="w">  </span><span class="nt">free_play_string</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">FREE PLAY</span>
+<span class="w">  </span><span class="nt">credits_string</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CREDITS</span>
 </code></pre></div>
 <h2 id="optional-settings">Optional settings</h2>
 <p>The following sections are optional in the <code>credits:</code> section of your
@@ -34303,13 +34303,13 @@ credits. You can have as many <em>pricing_tiers</em> as you want. The first one
 dictates how much a regular game costs and is required. If you don't
 want any price breaks, then just add the first one.</p>
 <p>Here's an example:</p>
-<div class="highlight"><pre><span></span><code>credits:
-   # ...
-  pricing_tiers:
-    - price: .50
-      credits: 1
-    - price: 2
-      credits: 5
+<div class="highlight"><pre><span></span><code><span class="nt">credits</span><span class="p">:</span>
+<span class="w">   </span><span class="c1"># ...</span>
+<span class="w">  </span><span class="nt">pricing_tiers</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">price</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.50</span>
+<span class="w">      </span><span class="nt">credits</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">price</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="w">      </span><span class="nt">credits</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
 </code></pre></div>
 <h3 id="price">price:</h3>
 <p>Price for number of <code>credits</code>.</p>
@@ -34330,21 +34330,21 @@ Default: <code>.50</code></p>
 <p>A list of one or more events with settings which add credits based on
 MPF events. Like the pricing_tiers section, start each entry here with a
 minus sign and a space.</p>
-<div class="highlight"><pre><span></span><code>credits:
-   # ...
-  events:
-    - event: special
-      type: special
-      credits: 1
-    - event: replay
-      type: replay
-      credits: 1
-    - event: high_score_credit
-      type: high_score
-      credits: 1
-    - event: match
-      type: match
-      credits: 1
+<div class="highlight"><pre><span></span><code><span class="nt">credits</span><span class="p">:</span>
+<span class="w">   </span><span class="c1"># ...</span>
+<span class="w">  </span><span class="nt">events</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">special</span>
+<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">special</span>
+<span class="w">      </span><span class="nt">credits</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">replay</span>
+<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">replay</span>
+<span class="w">      </span><span class="nt">credits</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">high_score_credit</span>
+<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">high_score</span>
+<span class="w">      </span><span class="nt">credits</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">match</span>
+<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">match</span>
+<span class="w">      </span><span class="nt">credits</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
 </code></pre></div>
 <h3 id="event">event:</h3>
 <p>The event that will trigger a credit action.</p>

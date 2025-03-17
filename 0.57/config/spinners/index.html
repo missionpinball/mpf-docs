@@ -33939,22 +33939,22 @@ to <a href="../../examples/">config file examples</a> for more examples of real 
 </table>
 <p>Spinner devices provide accruals for switches that are hit in rapid
 succession, and post events based on timeouts after switch hits.</p>
-<div class="highlight"><pre><span></span><code>#! switches:
-#!   s_orbit_spinner:
-#!     number:
-#!   s_top_loop_left:
-#!     number:
-#!   s_top_loop_right:
-#!     number:
-spinners:
-  basic_spinner:
-    switch: s_orbit_spinner
-    active_ms: 500
-  dual_spinner:
-    switches: s_top_loop_left, s_top_loop_right
-    labels: left, right
-    active_ms: 1200
-    idle_ms: 2400
+<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
+<span class="c1">#!   s_orbit_spinner:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   s_top_loop_left:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   s_top_loop_right:</span>
+<span class="c1">#!     number:</span>
+<span class="nt">spinners</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">basic_spinner</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_orbit_spinner</span>
+<span class="w">    </span><span class="nt">active_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">500</span>
+<span class="w">  </span><span class="nt">dual_spinner</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_top_loop_left, s_top_loop_right</span>
+<span class="w">    </span><span class="nt">labels</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">left, right</span>
+<span class="w">    </span><span class="nt">active_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1200</span>
+<span class="w">    </span><span class="nt">idle_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2400</span>
 </code></pre></div>
 <p>A spinner becomes "active" when a <code>switch:</code> or <code>switches:</code> is hit, and
 remains active as long as switch hits continue. The time specified by

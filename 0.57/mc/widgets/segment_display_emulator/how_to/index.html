@@ -33730,13 +33730,13 @@ only available if you're using MPF-MC for your media controller.</p>
 <h2 id="1-add-your-main-display-to-your-mpf-config">1. Add your main display to your MPF config</h2>
 <p>Add the segment display to your list of displays in your machine-wide
 config file:</p>
-<div class="highlight"><pre><span></span><code>displays:
-  window:
-    width: 600
-    height: 200
-##! test
-#! post show_slide_event
-#! advance_time_and_run .1
+<div class="highlight"><pre><span></span><code><span class="nt">displays</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">window</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">600</span>
+<span class="w">    </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">200</span>
+<span class="c1">##! test</span>
+<span class="c1">#! post show_slide_event</span>
+<span class="c1">#! advance_time_and_run .1</span>
 </code></pre></div>
 <p>The example above contains a single display named "window" and has a
 size of 600x200. This will be the display that shows up on the computer
@@ -33748,13 +33748,13 @@ now.</p>
 <p>You can make the width and height anything you want. In this case we're
 just configuring it to be 600x200 with a window title of "Mission
 Pinball Framework".</p>
-<div class="highlight"><pre><span></span><code>window:
-  width: 600
-  height: 200
-  title: Mission Pinball Framework
-##! test
-#! post show_slide_event
-#! advance_time_and_run .1
+<div class="highlight"><pre><span></span><code><span class="nt">window</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">600</span>
+<span class="w">  </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">200</span>
+<span class="w">  </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Mission Pinball Framework</span>
+<span class="c1">##! test</span>
+<span class="c1">#! post show_slide_event</span>
+<span class="c1">#! advance_time_and_run .1</span>
 </code></pre></div>
 <h2 id="3-configure-a-window-slide-to-show-the-on-screen-segment-display">3. Configure a window slide to show the on screen segment display</h2>
 <p>Now we have a working on-screen window, but if you run <code>mpf both</code> now,
@@ -33768,11 +33768,11 @@ have one already), and then create an entry for the slide that we want
 to show. In this case, we've decided to name that slide
 "window_slide_1". (Of course you can call this slide whatever you
 want.)</p>
-<div class="highlight"><pre><span></span><code>slides:
-  window_slide_1:
-##! test
-#! post show_slide_event
-#! advance_time_and_run .1
+<div class="highlight"><pre><span></span><code><span class="nt">slides</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">window_slide_1</span><span class="p">:</span>
+<span class="c1">##! test</span>
+<span class="c1">#! post show_slide_event</span>
+<span class="c1">#! advance_time_and_run .1</span>
 </code></pre></div>
 <p>Next we have to add some widgets to that slide. (Refer to the
 <a href="../../">documentation on widgets</a> if you're not familiar with widgets yet.)</p>
@@ -33780,38 +33780,38 @@ want.)</p>
 <a href="../">segment display emulator widget</a> with a
 <a href="../../display/effects/">glow effect</a> which is a widget which renders a emulation of a segment
 display:</p>
-<div class="highlight"><pre><span></span><code>#! displays:
-#!   window:
-#!     width: 600
-#!     height: 200
-slides:
-  window_slide_1:
-    widgets:
-      - type: segment_display_emulator
-        name: display1
-        character_count: 7
-        character_slant_angle: 0
-        character_spacing: 20
-        segment_width: 0.11
-        segment_interval: 0.04
-        segment_off_color: 4b4c4a30
-        segment_on_color: fe961bff
-        side_bevel_enabled: true
-        dot_enabled: true
-        comma_enabled: true
-        text: HELLO
-        width: 600
-        height: 150
-        y: 100
+<div class="highlight"><pre><span></span><code><span class="c1">#! displays:</span>
+<span class="c1">#!   window:</span>
+<span class="c1">#!     width: 600</span>
+<span class="c1">#!     height: 200</span>
+<span class="nt">slides</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">window_slide_1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">widgets</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">segment_display_emulator</span>
+<span class="w">        </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">display1</span>
+<span class="w">        </span><span class="nt">character_count</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">7</span>
+<span class="w">        </span><span class="nt">character_slant_angle</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">        </span><span class="nt">character_spacing</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span>
+<span class="w">        </span><span class="nt">segment_width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.11</span>
+<span class="w">        </span><span class="nt">segment_interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.04</span>
+<span class="w">        </span><span class="nt">segment_off_color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4b4c4a30</span>
+<span class="w">        </span><span class="nt">segment_on_color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fe961bff</span>
+<span class="w">        </span><span class="nt">side_bevel_enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">        </span><span class="nt">dot_enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">        </span><span class="nt">comma_enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HELLO</span>
+<span class="w">        </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">600</span>
+<span class="w">        </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">150</span>
+<span class="w">        </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
 
-#! slide_player:
-#!   show_slide_event:
-#!     window_slide_1:
-#!       target: window
-##! test
-#! post show_slide_event
-#! advance_time_and_run .1
-#! assert_slide_on_top window_slide_1 window
+<span class="c1">#! slide_player:</span>
+<span class="c1">#!   show_slide_event:</span>
+<span class="c1">#!     window_slide_1:</span>
+<span class="c1">#!       target: window</span>
+<span class="c1">##! test</span>
+<span class="c1">#! post show_slide_event</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_slide_on_top window_slide_1 window</span>
 </code></pre></div>
 <p>As you can see there are a lot of configuration options to modify the
 rendering of the segment display segments/characters. This leads to a
@@ -33823,36 +33823,36 @@ connect to.</p>
 <p>Now we have a nice slide with the virtual segment display on it, but if
 you run MPF, you still won't see it because we didn't tell MPF to show
 that slide in the window. So that's what we're doing here:</p>
-<div class="highlight"><pre><span></span><code>#! displays:
-#!   window:
-#!     width: 600
-#!     height: 200
-#! slides:
-#!   window_slide_1:
-#!     widgets:
-#!       - type: segment_display_emulator
-#!         name: display1
-#!         character_count: 7
-#!         character_slant_angle: 0
-#!         character_spacing: 20
-#!         segment_width: 0.11
-#!         segment_interval: 0.04
-#!         segment_off_color: 4b4c4a30
-#!         segment_on_color: fe961bff
-#!         side_bevel_enabled: true
-#!         dot_enabled: true
-#!         comma_enabled: true
-#!         text: HELLO
-#!         width: 600
-#!         height: 150
-#!         y: 100
-slide_player:
-  init_done:
-    window_slide_1:
-      target: window
-##! test
-#! advance_time_and_run .1
-#! assert_slide_on_top window_slide_1 window
+<div class="highlight"><pre><span></span><code><span class="c1">#! displays:</span>
+<span class="c1">#!   window:</span>
+<span class="c1">#!     width: 600</span>
+<span class="c1">#!     height: 200</span>
+<span class="c1">#! slides:</span>
+<span class="c1">#!   window_slide_1:</span>
+<span class="c1">#!     widgets:</span>
+<span class="c1">#!       - type: segment_display_emulator</span>
+<span class="c1">#!         name: display1</span>
+<span class="c1">#!         character_count: 7</span>
+<span class="c1">#!         character_slant_angle: 0</span>
+<span class="c1">#!         character_spacing: 20</span>
+<span class="c1">#!         segment_width: 0.11</span>
+<span class="c1">#!         segment_interval: 0.04</span>
+<span class="c1">#!         segment_off_color: 4b4c4a30</span>
+<span class="c1">#!         segment_on_color: fe961bff</span>
+<span class="c1">#!         side_bevel_enabled: true</span>
+<span class="c1">#!         dot_enabled: true</span>
+<span class="c1">#!         comma_enabled: true</span>
+<span class="c1">#!         text: HELLO</span>
+<span class="c1">#!         width: 600</span>
+<span class="c1">#!         height: 150</span>
+<span class="c1">#!         y: 100</span>
+<span class="nt">slide_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">init_done</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">window_slide_1</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">window</span>
+<span class="c1">##! test</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_slide_on_top window_slide_1 window</span>
 </code></pre></div>
 <p>If you don't have a slide_player: entry in your machine-wide config, go
 ahead and add it now. Then create an entry for the
@@ -33878,9 +33878,9 @@ configuration changes).</p>
 machine wide config and add an entry for each segment display emulator
 widget (in this example we created a single widget so we will only need
 one entry).</p>
-<div class="highlight"><pre><span></span><code>segment_displays:
-  display1:
-    number: 1
+<div class="highlight"><pre><span></span><code><span class="nt">segment_displays</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">display1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
 </code></pre></div>
 <p>A couple of things to note in the above configuration. <code>display1</code> is the
 name we are assigning to the segment display. This parameter value must
@@ -33894,8 +33894,8 @@ configure.</p>
 <p>Now we need to let MPF know to send changes to the segment displays to
 the virtual segment display emulator in MPF-MC. This is accomplished
 using the <a href="../../../../config/virtual_segment_display_connector/">virtual_segment_display_connector:</a> plugin.</p>
-<div class="highlight"><pre><span></span><code>virtual_segment_display_connector:
-  segment_displays: display1
+<div class="highlight"><pre><span></span><code><span class="nt">virtual_segment_display_connector</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">segment_displays</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">display1</span>
 </code></pre></div>
 <p>The <code>segment_displays</code> parameter contains a list of all the segment
 display names you want to use in the connector to communicate with the
@@ -33906,17 +33906,17 @@ section, it is time to configure the mechanism to update the text in the
 display. To do this, we use the
 <a href="../../../../config_players/segment_display_player/">Segment Display player</a>
 (see also <a href="../../../../config/segment_display_player/">segment_display_player:</a>).</p>
-<div class="highlight"><pre><span></span><code>segment_display_player:
-  update_segment_display_hello:
-    display1:
-      text: &quot;HELLO&quot;
-  update_segment_display_red:
-    display1:
-      action: set_color
-      color: &quot;FF0000&quot;
-  update_segment_display_score:
-    display1:
-      text: &quot;{players[0].score:d}&quot;
+<div class="highlight"><pre><span></span><code><span class="nt">segment_display_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">update_segment_display_hello</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">display1</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;HELLO&quot;</span>
+<span class="w">  </span><span class="nt">update_segment_display_red</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">display1</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">set_color</span>
+<span class="w">      </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;FF0000&quot;</span>
+<span class="w">  </span><span class="nt">update_segment_display_score</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">display1</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{players[0].score:d}&quot;</span>
 </code></pre></div>
 <p>The segment display player establishes segment display updates that are
 triggered by events. In the above example, the

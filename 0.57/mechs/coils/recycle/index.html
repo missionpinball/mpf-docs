@@ -33589,13 +33589,13 @@ would be enabled for at most 33% of the time.</p>
 <p>How this recycle is implemented differs between platforms. MPF exposes a
 very basic interface to enable or disable <code>recycle</code> per coil. Usually,
 you want to keep it enabled. This is an example:</p>
-<div class="highlight"><pre><span></span><code>coils:
-  c_coil_with_recycle:
-    number:
-    default_recycle: true
-  c_coil_without_recycle:
-    number:
-    default_recycle: false
+<div class="highlight"><pre><span></span><code><span class="nt">coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">c_coil_with_recycle</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">default_recycle</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">c_coil_without_recycle</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">default_recycle</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 </code></pre></div>
 <p>Some platforms allow you to fine tune the recycle time.</p>
 <ul>

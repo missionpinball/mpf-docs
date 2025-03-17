@@ -34099,23 +34099,23 @@ and a mapping of events that will cause the servos to move to certain
 positions.</p>
 <p>Here's an example <code>servos:</code> section, with two servos defined called
 <em>servo1</em> and <em>servo2</em>:</p>
-<div class="highlight"><pre><span></span><code>servos:
-  servo1:
-    servo_min: 0.1
-    servo_max: 0.9
-    positions:
-      0.0: servo1_down
-      0.8: servo1_up
-    reset_position: 0.5
-    reset_events: reset_servo1
-    number: 1
-  servo2:
-    positions:
-      0.2: servo2_left
-      1.0: servo2_home
-    reset_position: 1.0
-    reset_events: reset_servo2
-    number: 2
+<div class="highlight"><pre><span></span><code><span class="nt">servos</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">servo1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">servo_min</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.1</span>
+<span class="w">    </span><span class="nt">servo_max</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.9</span>
+<span class="w">    </span><span class="nt">positions</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">0.0</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">servo1_down</span>
+<span class="w">      </span><span class="nt">0.8</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">servo1_up</span>
+<span class="w">    </span><span class="nt">reset_position</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.5</span>
+<span class="w">    </span><span class="nt">reset_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">reset_servo1</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">servo2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">positions</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">0.2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">servo2_left</span>
+<span class="w">      </span><span class="nt">1.0</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">servo2_home</span>
+<span class="w">    </span><span class="nt">reset_position</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0</span>
+<span class="w">    </span><span class="nt">reset_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">reset_servo2</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
 </code></pre></div>
 <p>Then for each servo in your <code>servos:</code> section, the following settings
 apply:</p>
@@ -34182,13 +34182,13 @@ submit your change. It's easy! <span class="twemoji"><svg xmlns="http://www.w3.o
 converted to floating point) : <code>string</code></p>
 <p>This is a sub-section mapping of servo positions to MPF event names. For
 example:</p>
-<div class="highlight"><pre><span></span><code>#! servos:
-#!   servo1:
-#!     number: 1
-    positions:
-      0.1: servo1_down
-      0.9: servo1_up
-      0.45: servo1_mid
+<div class="highlight"><pre><span></span><code><span class="c1">#! servos:</span>
+<span class="c1">#!   servo1:</span>
+<span class="c1">#!     number: 1</span>
+<span class="w">    </span><span class="nt">positions</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">0.1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">servo1_down</span>
+<span class="w">      </span><span class="nt">0.9</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">servo1_up</span>
+<span class="w">      </span><span class="nt">0.45</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">servo1_mid</span>
 </code></pre></div>
 <p>In MPF, servo ranges of motion are represented as numbers between 0.0
 and 1.0. So 0.0 puts the servo at the extreme end of its range on one
@@ -34217,10 +34217,10 @@ to move to its reset position (discussed below).</p>
 <p>Note that by default, <em>ball_starting</em> is a reset event, so if you don't
 want the servo to reset on the start of each ball, you can override that
 like this:</p>
-<div class="highlight"><pre><span></span><code>#! servos:
-#!   servo1:
-#!     number: 1
-    reset_events: machine_reset_phase_3, ball_will_end, service_mode_entered
+<div class="highlight"><pre><span></span><code><span class="c1">#! servos:</span>
+<span class="c1">#!   servo1:</span>
+<span class="c1">#!     number: 1</span>
+<span class="w">    </span><span class="nt">reset_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">machine_reset_phase_3, ball_will_end, service_mode_entered</span>
 </code></pre></div>
 <h3 id="reset_position">reset_position:</h3>
 <p>Single value, type: <code>number</code> (will be converted to floating point).

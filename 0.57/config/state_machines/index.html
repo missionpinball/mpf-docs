@@ -33935,22 +33935,22 @@ your config:</p>
 <p>List all of your states here, with their applicable settings. Go to
 <a href="../state_machine_states/">state_machine_states:</a> to see a full list of all settings under <code>states:</code>. For
 example:</p>
-<div class="highlight"><pre><span></span><code>##! mode: my_mode
-state_machines:
-  my_state:
-    states:
-      start:
-        label: Start state
-      step1:
-        label:
-        show_when_active:
-          show: on
-          show_tokens: None
-        events_when_started: step1_start
-        events_when_stopped: step1_stop
-      step2:
-        label: Step 2
-    transitions:
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: my_mode</span>
+<span class="nt">state_machines</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_state</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">states</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">start</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Start state</span>
+<span class="w">      </span><span class="nt">step1</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">label</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">show_when_active</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">show</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">on</span>
+<span class="w">          </span><span class="nt">show_tokens</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">None</span>
+<span class="w">        </span><span class="nt">events_when_started</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">step1_start</span>
+<span class="w">        </span><span class="nt">events_when_stopped</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">step1_stop</span>
+<span class="w">      </span><span class="nt">step2</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Step 2</span>
+<span class="w">    </span><span class="nt">transitions</span><span class="p">:</span>
 </code></pre></div>
 <p>The first state must be <code>start:</code> or MPF will throw errors when trying to
 initialize this value (you can change this using <code>starting_state</code>
@@ -33961,35 +33961,35 @@ setting). All other states can be any string as defined by the user.</p>
 <p>These move from any state to another state, including backward or back
 to the first step, when a given event is posted.</p>
 <p>List all your transitions here (we start with the same steps as above):</p>
-<div class="highlight"><pre><span></span><code>##! mode: my_mode
-state_machines:
-  my_state:
-    states:
-      start:
-        label: Start state
-      step1:
-        label:
-        show_when_active:
-          show: on
-          show_tokens: None
-        events_when_started: step1_start
-        events_when_stopped: step1_stop
-      step2:
-        label: Step2
-    transitions:
-      - source: start
-        target: step1
-        events: state_machine_proceed
-      - source: step1
-        target: step2
-        events: state_machine_proceed2
-        events_when_transitioning: going_to_step2
-      - source: step2
-        target: start
-        events: state_machine_proceed3
-      - source: step1, step2
-        target: start
-        events: state_machine_reset
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: my_mode</span>
+<span class="nt">state_machines</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_state</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">states</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">start</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Start state</span>
+<span class="w">      </span><span class="nt">step1</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">label</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">show_when_active</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">show</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">on</span>
+<span class="w">          </span><span class="nt">show_tokens</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">None</span>
+<span class="w">        </span><span class="nt">events_when_started</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">step1_start</span>
+<span class="w">        </span><span class="nt">events_when_stopped</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">step1_stop</span>
+<span class="w">      </span><span class="nt">step2</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Step2</span>
+<span class="w">    </span><span class="nt">transitions</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">source</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start</span>
+<span class="w">        </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">step1</span>
+<span class="w">        </span><span class="nt">events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">state_machine_proceed</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">source</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">step1</span>
+<span class="w">        </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">step2</span>
+<span class="w">        </span><span class="nt">events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">state_machine_proceed2</span>
+<span class="w">        </span><span class="nt">events_when_transitioning</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">going_to_step2</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">source</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">step2</span>
+<span class="w">        </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start</span>
+<span class="w">        </span><span class="nt">events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">state_machine_proceed3</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">source</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">step1, step2</span>
+<span class="w">        </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start</span>
+<span class="w">        </span><span class="nt">events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">state_machine_reset</span>
 </code></pre></div>
 <h2 id="optional-settings">Optional settings</h2>
 <p>The following sections are optional in the <code>state_machines:</code> section of

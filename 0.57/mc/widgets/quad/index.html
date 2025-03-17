@@ -33681,16 +33681,16 @@ icons & this code generated via https://realfavicongenerator.net
 <h1 id="quad-widget">Quad Widget</h1>
 <p>The quad widget is used to draw solid polygons on a slide.</p>
 <p>Here's an example:</p>
-<div class="highlight"><pre><span></span><code>#config_version=5
-slide_player:
-  mc_ready:
-    bezier_example:
-      - type: quad
-        points: 210, 110, 210, 150, 500, 200, 590, 190
-        color: pink
-      - type: quad
-        points: 50, 550, 400, 400, 400, 100, 200, 200
-        color: lime
+<div class="highlight"><pre><span></span><code><span class="c1">#config_version=5</span>
+<span class="nt">slide_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">mc_ready</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">bezier_example</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">quad</span>
+<span class="w">        </span><span class="nt">points</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">210, 110, 210, 150, 500, 200, 590, 190</span>
+<span class="w">        </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pink</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">quad</span>
+<span class="w">        </span><span class="nt">points</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">50, 550, 400, 400, 400, 100, 200, 200</span>
+<span class="w">        </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lime</span>
 </code></pre></div>
 <p>Which results in the following:</p>
 <p><img alt="image" src="../../images/quad.png" /></p>

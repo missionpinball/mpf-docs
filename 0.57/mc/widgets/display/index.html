@@ -33634,39 +33634,39 @@ display widget (this help topic) which enables the graphical display of
 the previously mentioned type of display within its boundaries (it is
 the actual visual output of the logical display).</p>
 <p>Here's an example:</p>
-<div class="highlight"><pre><span></span><code>#config_version=5
-displays:
-  window:
-    height: 600
-    width: 800
-  my_frame:
-    width: 400
-    height: 300
-    default: true
+<div class="highlight"><pre><span></span><code><span class="c1">#config_version=5</span>
+<span class="nt">displays</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">window</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">600</span>
+<span class="w">    </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">800</span>
+<span class="w">  </span><span class="nt">my_frame</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">400</span>
+<span class="w">    </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">300</span>
+<span class="w">    </span><span class="nt">default</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 
-slides:
-  base_slide:
-    widgets:
-      - type: display
-        source_display: my_frame
-        width: 400
-        height: 300
-        x: 300
-        y: 200
-      - type: text
-        text: this is the base slide
-        x: 600
-        y: 400
-  frame_slide:
-    widgets:
-      - type: text
-        text: this is a slide in the frame
-    background_color: red
-slide_player:
-  mc_ready.1:
-    base_slide:
-      target: window
-  mc_ready.2: frame_slide
+<span class="nt">slides</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">base_slide</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">widgets</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">display</span>
+<span class="w">        </span><span class="nt">source_display</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my_frame</span>
+<span class="w">        </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">400</span>
+<span class="w">        </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">300</span>
+<span class="w">        </span><span class="nt">x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">300</span>
+<span class="w">        </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">200</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">this is the base slide</span>
+<span class="w">        </span><span class="nt">x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">600</span>
+<span class="w">        </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">400</span>
+<span class="w">  </span><span class="nt">frame_slide</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">widgets</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">this is a slide in the frame</span>
+<span class="w">    </span><span class="nt">background_color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
+<span class="nt">slide_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">mc_ready.1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">base_slide</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">window</span>
+<span class="w">  </span><span class="nt">mc_ready.2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">frame_slide</span>
 </code></pre></div>
 <p>And the result:</p>
 <p><img alt="image" src="../../images/slide_frame.png" /></p>
@@ -33707,28 +33707,28 @@ old school "DMD look" or "color DMD look" to your display as well as
 other special effects. For more information on effects, please review
 the <a href="effects/">effects</a> documentation.</p>
 <p>An example of a display widget with a dmd effect:</p>
-<div class="highlight"><pre><span></span><code>#config_version=5
-#! displays:
-#!   window:
-#!     height: 200
-#!     width: 600
-#!   dmd:
-#!     width: 400
-#!     height: 300
-#!     default: true
-slides:
-  base_slide:
-    - type: display
-      source_display: dmd
-      width: 640
-      height: 160
-      effects:
-        - type: dmd
-          dot_color: ff5500
-#! slide_player:
-#!   mc_ready:
-#!     base_slide:
-#!       target: window
+<div class="highlight"><pre><span></span><code><span class="c1">#config_version=5</span>
+<span class="c1">#! displays:</span>
+<span class="c1">#!   window:</span>
+<span class="c1">#!     height: 200</span>
+<span class="c1">#!     width: 600</span>
+<span class="c1">#!   dmd:</span>
+<span class="c1">#!     width: 400</span>
+<span class="c1">#!     height: 300</span>
+<span class="c1">#!     default: true</span>
+<span class="nt">slides</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">base_slide</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">display</span>
+<span class="w">      </span><span class="nt">source_display</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dmd</span>
+<span class="w">      </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">640</span>
+<span class="w">      </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">160</span>
+<span class="w">      </span><span class="nt">effects</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dmd</span>
+<span class="w">          </span><span class="nt">dot_color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ff5500</span>
+<span class="c1">#! slide_player:</span>
+<span class="c1">#!   mc_ready:</span>
+<span class="c1">#!     base_slide:</span>
+<span class="c1">#!       target: window</span>
 </code></pre></div>
 <hr />
 <div class="admonition question">

@@ -33801,18 +33801,18 @@ optional fade out time). (This player is part of the MPF media
 controller and only available if you're using MPF-MC for your media
 controller.)</p>
 <p>This is an example:</p>
-<div class="highlight"><pre><span></span><code>track_player:
-  pause_music_track:
-    music:
-      action: pause
-      fade: 1 sec
-  resume_music_track:
-    music:
-      action: play
-  stop_sounds_on_all_tracks:
-    __all__:
-      action: stop_all_sounds
-      fade: 0.5 sec
+<div class="highlight"><pre><span></span><code><span class="nt">track_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">pause_music_track</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">music</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pause</span>
+<span class="w">      </span><span class="nt">fade</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1 sec</span>
+<span class="w">  </span><span class="nt">resume_music_track</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">music</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">play</span>
+<span class="w">  </span><span class="nt">stop_sounds_on_all_tracks</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">__all__</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stop_all_sounds</span>
+<span class="w">      </span><span class="nt">fade</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.5 sec</span>
 </code></pre></div>
 <p>See the <a href="../../config_players/">config player</a> for more information on config players.</p>
 <h2 id="express-configuration">Express configuration</h2>

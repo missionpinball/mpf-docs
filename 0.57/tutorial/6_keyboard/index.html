@@ -33746,11 +33746,11 @@ add entries for each keyboard key and what type of action in MPF you
 want to map them to. (Switches, in this case.)</p>
 <p>Here's an example where we map the left flipper button to the <code>Z</code> key
 and the right flipper button to the <code>?</code> key:</p>
-<div class="highlight"><pre><span></span><code>keyboard:
-  z:
-    switch: s_left_flipper
-  &#39;?&#39;:
-    switch: s_right_flipper
+<div class="highlight"><pre><span></span><code><span class="nt">keyboard</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">z</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_left_flipper</span>
+<span class="w">  </span><span class="s">&#39;?&#39;</span><span class="p p-Indicator">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_right_flipper</span>
 </code></pre></div>
 <p>Note that the question mark is in quotes since it's a non-standard
 character, and if you don't put it in quotes, it will confuse the YAML

@@ -34007,14 +34007,14 @@ to <a href="../../examples/">config file examples</a> for more examples of real 
 settings for various <em>shot profiles</em> that you can then apply to your
 shots.</p>
 <p>Here's an example:</p>
-<div class="highlight"><pre><span></span><code>##! mode: mode1
-shot_profiles:
-  my_default_profile:
-    states:
-      - name: unlit
-        show: &quot;off&quot;
-      - name: lit
-        show: &quot;on&quot;
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: mode1</span>
+<span class="nt">shot_profiles</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_default_profile</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">states</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unlit</span>
+<span class="w">        </span><span class="nt">show</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;off&quot;</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lit</span>
+<span class="w">        </span><span class="nt">show</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;on&quot;</span>
 </code></pre></div>
 <h2 id="name">(name):</h2>
 <p>This is the name of the shot profile, which is how you'll refer to it
@@ -34089,21 +34089,21 @@ player variable.</p>
 <p>This setting lets you specify a custom rotation pattern that's used
 when an event from this profile's rotation_events: section is posted.
 You enter it as a list of Ls and Rs, for example:</p>
-<div class="highlight"><pre><span></span><code>##! mode: mode1
-shot_profiles:
-  my_default_profile:
-    states:
-      - name: unlit
-        show: &quot;off&quot;
-      - name: red
-        show: led_color
-        show_tokens:
-          color: red
-      - name: blue
-        show: &quot;flash&quot;
-        show_tokens:
-          color: blue
-    rotation_pattern: L, L, L, L, R, R, R, R
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: mode1</span>
+<span class="nt">shot_profiles</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_default_profile</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">states</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unlit</span>
+<span class="w">        </span><span class="nt">show</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;off&quot;</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
+<span class="w">        </span><span class="nt">show</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led_color</span>
+<span class="w">        </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">blue</span>
+<span class="w">        </span><span class="nt">show</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;flash&quot;</span>
+<span class="w">        </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">blue</span>
+<span class="w">    </span><span class="nt">rotation_pattern</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">L, L, L, L, R, R, R, R</span>
 </code></pre></div>
 <p>In the above example, the first four times a rotation_event is posted,
 this shot group will rotate to the left, then the next four to the

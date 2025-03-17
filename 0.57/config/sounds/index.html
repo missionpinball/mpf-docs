@@ -34145,45 +34145,45 @@ only available if you're using MPF-MC for your media controller.)</p>
 <p>MPF-MC currently supports 16-bit Wave (.wav), Ogg Vorbis (.ogg), and
 FLAC (.flac) files.</p>
 <p>Here's an example:</p>
-<div class="highlight"><pre><span></span><code>##! asset: sounds/extra_ball_12753.wav=../mc/sound/sounds/sound.ogg
-##! asset: sounds/slingshot_01.ogg=../mc/sound/sounds/sound.ogg
-#! sound_system:
-#!   buffer: 1024
-#!   channels: 1
-#!   enabled: true
-#!   frequency: 44100
-#!   tracks:
-#!     music:
-#!       type: standard
-#!       simultaneous_sounds: 1
-#!       volume: 0.5
-#!     voice:
-#!       type: standard
-#!       simultaneous_sounds: 1
-#!       volume: 0.7
-#!     sfx:
-#!       type: standard
-#!       simultaneous_sounds: 8
-#!       volume: 0.4
-sounds:
-  extra_ball:
-    file: extra_ball_12753.wav
-    events_when_stopped: extra_ball_callout_finished
-    streaming: false
-    bus: voice
-    volume: 0.5
-    priority: 50
-    max_queue_time: None
-    ducking:
-      target: music
-      delay: 0
-      attack: 0.3 sec
-      attenuation: -18db
-      release_point: 2.0 sec
-      release: 1.0 sec
-  slingshot_01:
-    volume: 0.5
-    max_queue_time: 0
+<div class="highlight"><pre><span></span><code><span class="c1">##! asset: sounds/extra_ball_12753.wav=../mc/sound/sounds/sound.ogg</span>
+<span class="c1">##! asset: sounds/slingshot_01.ogg=../mc/sound/sounds/sound.ogg</span>
+<span class="c1">#! sound_system:</span>
+<span class="c1">#!   buffer: 1024</span>
+<span class="c1">#!   channels: 1</span>
+<span class="c1">#!   enabled: true</span>
+<span class="c1">#!   frequency: 44100</span>
+<span class="c1">#!   tracks:</span>
+<span class="c1">#!     music:</span>
+<span class="c1">#!       type: standard</span>
+<span class="c1">#!       simultaneous_sounds: 1</span>
+<span class="c1">#!       volume: 0.5</span>
+<span class="c1">#!     voice:</span>
+<span class="c1">#!       type: standard</span>
+<span class="c1">#!       simultaneous_sounds: 1</span>
+<span class="c1">#!       volume: 0.7</span>
+<span class="c1">#!     sfx:</span>
+<span class="c1">#!       type: standard</span>
+<span class="c1">#!       simultaneous_sounds: 8</span>
+<span class="c1">#!       volume: 0.4</span>
+<span class="nt">sounds</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">extra_ball</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">extra_ball_12753.wav</span>
+<span class="w">    </span><span class="nt">events_when_stopped</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">extra_ball_callout_finished</span>
+<span class="w">    </span><span class="nt">streaming</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">    </span><span class="nt">bus</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">voice</span>
+<span class="w">    </span><span class="nt">volume</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.5</span>
+<span class="w">    </span><span class="nt">priority</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">50</span>
+<span class="w">    </span><span class="nt">max_queue_time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">None</span>
+<span class="w">    </span><span class="nt">ducking</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">music</span>
+<span class="w">      </span><span class="nt">delay</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">      </span><span class="nt">attack</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.3 sec</span>
+<span class="w">      </span><span class="nt">attenuation</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-18db</span>
+<span class="w">      </span><span class="nt">release_point</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2.0 sec</span>
+<span class="w">      </span><span class="nt">release</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0 sec</span>
+<span class="w">  </span><span class="nt">slingshot_01</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">volume</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.5</span>
+<span class="w">    </span><span class="nt">max_queue_time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
 </code></pre></div>
 <h2 id="optional-settings">Optional settings</h2>
 <p>The following sections are optional in the <code>sounds:</code> section of your
@@ -34326,14 +34326,14 @@ event a short time before a sound finishes playback or establish various
 checkpoints in a sound that could be used to restart a sound at that
 point on the user's next turn (using mode code).</p>
 <p>Here's a simple example utilizing markers:</p>
-<div class="highlight"><pre><span></span><code>sounds:
-  long_sound_1:
-    volume: 0.8
-    markers:
-      - time: 2.534 sec
-        events: send_this_event, also_this_event
-      - time: 6.712 sec
-        events: almost_finished_playing
+<div class="highlight"><pre><span></span><code><span class="nt">sounds</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">long_sound_1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">volume</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.8</span>
+<span class="w">    </span><span class="nt">markers</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2.534 sec</span>
+<span class="w">        </span><span class="nt">events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">send_this_event, also_this_event</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">6.712 sec</span>
+<span class="w">        </span><span class="nt">events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">almost_finished_playing</span>
 </code></pre></div>
 <h3 id="max_queue_time">max_queue_time:</h3>
 <p>Single value, type: <code>time string (secs)</code>

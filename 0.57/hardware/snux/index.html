@@ -34287,24 +34287,24 @@ in your config file.</p>
 hardware section of your machine-wide config. You configure the main
 platform as <em>p_roc</em>, but then for <em>driverboards</em> you configure it as
 <em>snux</em>, like this:</p>
-<div class="highlight"><pre><span></span><code>hardware:
-  platform: virtual
-  driverboards: wpc
-  coils: snux
-  switches: snux
+<div class="highlight"><pre><span></span><code><span class="nt">hardware</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">virtual</span>
+<span class="w">  </span><span class="nt">driverboards</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wpc</span>
+<span class="w">  </span><span class="nt">coils</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">snux</span>
+<span class="w">  </span><span class="nt">switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">snux</span>
 </code></pre></div>
 <h3 id="2-configure-snux-options">2. Configure snux options</h3>
 <p>The MPF machine-wide config file contains a few options for the Snux
 driverboard. These options are set in the default <em>mpfconfig.yaml</em> file
 which means you don't have to add them to your own config file, but
 we're including them here just for completeness:</p>
-<div class="highlight"><pre><span></span><code>coils:
-  c_diag_led_driver:
-    number: c24
-    default_hold_power: 1.0
+<div class="highlight"><pre><span></span><code><span class="nt">coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">c_diag_led_driver</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c24</span>
+<span class="w">    </span><span class="nt">default_hold_power</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0</span>
 
-snux:
-  diag_led_driver: c_diag_led_driver
+<span class="nt">snux</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">diag_led_driver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_diag_led_driver</span>
 </code></pre></div>
 <p>The Snux board maps driver <code>c_diag_led_driver</code> which is driver 24 to the
 "diag" LED on the board. When you power on your machine, the diag LED
@@ -34322,9 +34322,9 @@ that MPF might control. Of course at this point, that's only possible
 via the Snux board, but they're technically separate settings since the
 architecture allows for future System 11 boards that may exist at some
 point. Here's the system11 configuration section from Pin*Bot:</p>
-<div class="highlight"><pre><span></span><code>system11:
-  ac_relay_delay_ms: 75
-  ac_relay_driver_number: c14
+<div class="highlight"><pre><span></span><code><span class="nt">system11</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">ac_relay_delay_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">75</span>
+<span class="w">  </span><span class="nt">ac_relay_driver_number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c14</span>
 </code></pre></div>
 <p>The <em>ac_relay_delay_ms</em> is the number of milliseconds MPF waits before
 and after flipping the A/C select relay to allow for it to fully switch
@@ -34351,12 +34351,12 @@ in the two System 11 machines we tested. (C14 in <em>Pin</em>Bot* and C12 in
 <em>Pin</em>Bot* manual it's called the "Solenoid Select Relay."</p>
 <h3 id="4-enable-flippers">4. Enable flippers</h3>
 <p>The Snux board uses driver 23 to enable the flippers:</p>
-<div class="highlight"><pre><span></span><code>digital_outputs:
-  flipper_enable_relay:
-    number: c23
-    type: driver
-    enable_events: ball_started
-    disable_events: ball_will_end
+<div class="highlight"><pre><span></span><code><span class="nt">digital_outputs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">flipper_enable_relay</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c23</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">driver</span>
+<span class="w">    </span><span class="nt">enable_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ball_started</span>
+<span class="w">    </span><span class="nt">disable_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ball_will_end</span>
 </code></pre></div>
 <p>You can change the events when the flipper should enable and disable. By
 default we will enable the flippers on ball start and disable them on
@@ -34392,36 +34392,36 @@ since the Snux driver board emulates a WPC driver board.) Also for
 switched solenoids which use the A/C relay, you also need to add an
 "A" or a "C" to the end of the driver number. Here's a snippet
 (incomplete) from the <em>Pin</em>Bot* machine-wide config file:</p>
-<div class="highlight"><pre><span></span><code>coils:
-  outhole:
-    number: c01a
-  knocker:
-    number: c01c
-  trough:
-    number: c02a
-  visor_motor:
-    number: c13
-    allow_enable: true
-  upper_pf_and_topper_1:
-    number: c02c
-  left_insert_bottom:
-    number: c03c
-  right_insert_bottom:
-    number: c04c
-  lower_pf_and_topper_2:
-    number: c05c
-  energy:
-    number: c06c
-  left_playfield:
-    number: c07c
-  sun:
-    number: c08c
-  robot_face_insert_bottom:
-    number: c09
-  topper_3:
-    number: c15
-  topper_4:
-    number: c16
+<div class="highlight"><pre><span></span><code><span class="nt">coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">outhole</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c01a</span>
+<span class="w">  </span><span class="nt">knocker</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c01c</span>
+<span class="w">  </span><span class="nt">trough</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c02a</span>
+<span class="w">  </span><span class="nt">visor_motor</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c13</span>
+<span class="w">    </span><span class="nt">allow_enable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">upper_pf_and_topper_1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c02c</span>
+<span class="w">  </span><span class="nt">left_insert_bottom</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c03c</span>
+<span class="w">  </span><span class="nt">right_insert_bottom</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c04c</span>
+<span class="w">  </span><span class="nt">lower_pf_and_topper_2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c05c</span>
+<span class="w">  </span><span class="nt">energy</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c06c</span>
+<span class="w">  </span><span class="nt">left_playfield</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c07c</span>
+<span class="w">  </span><span class="nt">sun</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c08c</span>
+<span class="w">  </span><span class="nt">robot_face_insert_bottom</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c09</span>
+<span class="w">  </span><span class="nt">topper_3</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c15</span>
+<span class="w">  </span><span class="nt">topper_4</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c16</span>
 </code></pre></div>
 <p>Again, don't forgot the "a" or the "c" at the end of the switched
 solenoids, since that's how MPF knows it needs to use the A/C relay
@@ -34441,27 +34441,27 @@ lamps in column 2 are 21-28, etc. System 11 numbers would be 1-8 for
 column 1, 9-16 for column 2, etc. Basically since System 11 machines
 have an 8x8 lamp matrix, there should be no numbers 9 or 0 anywhere in
 your lamp numbers. Here's a snippet of the configuration from Pin*Bot:</p>
-<div class="highlight"><pre><span></span><code>lights:
-  game_over_backbox:
-    number: L11
-  match_backbox:
-    number: L12
-  bip_backbox:
-    number: L13
-  mouth1_backbox:
-    number: L14
-  mouth2_backbox:
-    number: L15
-  mouth3_backbox:
-    number: L16
-  mouth4_backbox:
-    number: L17
-  mouth5_backbox:
-    number: L18
-  bonus_2x:
-    number: L21
-  bonus_3x:
-    number: L22
+<div class="highlight"><pre><span></span><code><span class="nt">lights</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">game_over_backbox</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">L11</span>
+<span class="w">  </span><span class="nt">match_backbox</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">L12</span>
+<span class="w">  </span><span class="nt">bip_backbox</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">L13</span>
+<span class="w">  </span><span class="nt">mouth1_backbox</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">L14</span>
+<span class="w">  </span><span class="nt">mouth2_backbox</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">L15</span>
+<span class="w">  </span><span class="nt">mouth3_backbox</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">L16</span>
+<span class="w">  </span><span class="nt">mouth4_backbox</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">L17</span>
+<span class="w">  </span><span class="nt">mouth5_backbox</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">L18</span>
+<span class="w">  </span><span class="nt">bonus_2x</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">L21</span>
+<span class="w">  </span><span class="nt">bonus_3x</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">L22</span>
 </code></pre></div>
 <p>Again, don't forget that they should all start with "L", and they're
 based on the positions in the matrix, not on the numbers from the
@@ -34473,23 +34473,23 @@ number is based on the column/row, not the switch number in the manual.
 So even though the manual says that the switch in column 5, row 6 is
 number 38, you actually enter "L56". Here's another snippet from
 <em>Pin</em>Bot*:</p>
-<div class="highlight"><pre><span></span><code>switches:
-  left_outlane:
-    number: S24
-    label: Left Outlane
-    tags: playfield_active
-  left_inlane:
-    number: S25
-    label: Left Inlane
-    tags: playfield_active
-  right_inlane:
-    number: S26
-    label: Right Inlane
-    tags: playfield_active
-  right_outlane:
-    number: S27
-    label: Right Outlane
-    tags: playfield_active
+<div class="highlight"><pre><span></span><code><span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">left_outlane</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">S24</span>
+<span class="w">    </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Left Outlane</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">playfield_active</span>
+<span class="w">  </span><span class="nt">left_inlane</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">S25</span>
+<span class="w">    </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Left Inlane</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">playfield_active</span>
+<span class="w">  </span><span class="nt">right_inlane</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">S26</span>
+<span class="w">    </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Right Inlane</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">playfield_active</span>
+<span class="w">  </span><span class="nt">right_outlane</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">S27</span>
+<span class="w">    </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Right Outlane</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">playfield_active</span>
 </code></pre></div>
 <p>You might have to do some detective work to figure out where the
 switches are and how they work. For example, remember that switches from
@@ -34517,36 +34517,36 @@ We have a separate How To guide which details how to setup a System 11
 1980s-style trough, link below (since many games do this, even ones that
 aren't System 11), so you can read that for more details. The result
 though will look something like this:</p>
-<div class="highlight"><pre><span></span><code>#! switches:
-#!   outhole:
-#!     number: 1
-#!   trough1:
-#!     number: 2
-#!   trough2:
-#!     number: 3
-#!   plunger_lane:
-#!     number: 4
-#! coils:
-#!   outhole:
-#!     number: 1
-#!   trough:
-#!     number: 2
-ball_devices:
-  outhole:
-    ball_switches: outhole
-    eject_coil: outhole
-    confirm_eject_type: target
-    eject_targets: trough
-    tags: drain
-  trough:
-    ball_switches: trough1, trough2
-    eject_coil: trough
-    eject_targets: plunger_lane
-    tags: home, trough
-  plunger_lane:
-    ball_switches: plunger_lane
-    mechanical_eject: true
-    eject_timeouts: 3s
+<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
+<span class="c1">#!   outhole:</span>
+<span class="c1">#!     number: 1</span>
+<span class="c1">#!   trough1:</span>
+<span class="c1">#!     number: 2</span>
+<span class="c1">#!   trough2:</span>
+<span class="c1">#!     number: 3</span>
+<span class="c1">#!   plunger_lane:</span>
+<span class="c1">#!     number: 4</span>
+<span class="c1">#! coils:</span>
+<span class="c1">#!   outhole:</span>
+<span class="c1">#!     number: 1</span>
+<span class="c1">#!   trough:</span>
+<span class="c1">#!     number: 2</span>
+<span class="nt">ball_devices</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">outhole</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">ball_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">outhole</span>
+<span class="w">    </span><span class="nt">eject_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">outhole</span>
+<span class="w">    </span><span class="nt">confirm_eject_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">target</span>
+<span class="w">    </span><span class="nt">eject_targets</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">trough</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">drain</span>
+<span class="w">  </span><span class="nt">trough</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">ball_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">trough1, trough2</span>
+<span class="w">    </span><span class="nt">eject_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">trough</span>
+<span class="w">    </span><span class="nt">eject_targets</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">plunger_lane</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">home, trough</span>
+<span class="w">  </span><span class="nt">plunger_lane</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">ball_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">plunger_lane</span>
+<span class="w">    </span><span class="nt">mechanical_eject</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">eject_timeouts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3s</span>
 </code></pre></div>
 <p>The key is that you're setting up a "chain" of devices (from
 <em>outhole</em> to <em>trough</em> to <em>plunger lane</em>), and you're breaking up the
@@ -34563,43 +34563,43 @@ the forum if you find anything that's weird or that doesn't work as
 expected.</p>
 <p><a href="https://pinside.com/pinball/community/pinsiders/snux">Snux on Pinside</a>.</p>
 <p>This is an example code block with the main Sys11 elements in.</p>
-<div class="highlight"><pre><span></span><code>hardware:
-  platform: virtual
-  driverboards: wpc
-  coils: snux
-  switches: snux
+<div class="highlight"><pre><span></span><code><span class="nt">hardware</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">virtual</span>
+<span class="w">  </span><span class="nt">driverboards</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wpc</span>
+<span class="w">  </span><span class="nt">coils</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">snux</span>
+<span class="w">  </span><span class="nt">switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">snux</span>
 
-system11:
-  ac_relay_delay_ms: 75
-  ac_relay_driver: c_ac_relay
+<span class="nt">system11</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">ac_relay_delay_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">75</span>
+<span class="w">  </span><span class="nt">ac_relay_driver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_ac_relay</span>
 
-snux:
-  diag_led_driver: c_diag_led_driver
+<span class="nt">snux</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">diag_led_driver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_diag_led_driver</span>
 
-digital_outputs:
-  flipper_enable_relay:
-    number: c23
-    type: driver
-    enable_events: ball_started
-    disable_events: ball_will_end
+<span class="nt">digital_outputs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">flipper_enable_relay</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c23</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">driver</span>
+<span class="w">    </span><span class="nt">enable_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ball_started</span>
+<span class="w">    </span><span class="nt">disable_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ball_will_end</span>
 
-coils:
-  c_diag_led_driver:
-    number: c24
-    default_hold_power: 1.0
-  c_ac_relay:
-    number: c25
-    default_hold_power: 1.0
-  c_side_a1:
-    number: c11a
-  c_side_a2:
-    number: c12a
-    default_hold_power: 0.5
-  c_side_c1:
-    number: c11c
-  c_side_c2:
-    number: c12c
-    default_hold_power: 0.5
+<span class="nt">coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">c_diag_led_driver</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c24</span>
+<span class="w">    </span><span class="nt">default_hold_power</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0</span>
+<span class="w">  </span><span class="nt">c_ac_relay</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c25</span>
+<span class="w">    </span><span class="nt">default_hold_power</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0</span>
+<span class="w">  </span><span class="nt">c_side_a1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c11a</span>
+<span class="w">  </span><span class="nt">c_side_a2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c12a</span>
+<span class="w">    </span><span class="nt">default_hold_power</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.5</span>
+<span class="w">  </span><span class="nt">c_side_c1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c11c</span>
+<span class="w">  </span><span class="nt">c_side_c2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c12c</span>
+<span class="w">    </span><span class="nt">default_hold_power</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.5</span>
 </code></pre></div>
 <h2 id="what-if-it-did-not-work">What if it did not work?</h2>
 <p>Have a look at our <a href="../troubleshooting_hardware/">hardware troubleshooting guide</a>.</p>

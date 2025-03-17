@@ -33685,14 +33685,14 @@ later. You can test slides and widgets interactively using
 <p>Generically-speaking, there are two formats you can use for
 widget_player entries: "express" and "full" configs. Express configs
 will look like this:</p>
-<div class="highlight"><pre><span></span><code>#! widgets:
-#!   widget1: []
-#!   widget2: []
-#!   widget3: []
-widget_player:
-  event1: widget1
-  event2: widget2
-  event3: widget3
+<div class="highlight"><pre><span></span><code><span class="c1">#! widgets:</span>
+<span class="c1">#!   widget1: []</span>
+<span class="c1">#!   widget2: []</span>
+<span class="c1">#!   widget3: []</span>
+<span class="nt">widget_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">event1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">widget1</span>
+<span class="w">  </span><span class="nt">event2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">widget2</span>
+<span class="w">  </span><span class="nt">event3</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">widget3</span>
 </code></pre></div>
 <p>Full configs will look like this:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">widget_player</span><span class="p">:</span>
@@ -33717,12 +33717,12 @@ below).</p>
 is posted, but it will also override the default settings and add widget
 to the slide called <em>slide_2</em>, even if that's not the current slide
 that's showing.</p>
-<div class="highlight"><pre><span></span><code>#! widgets:
-#!   widget_1: []
-widget_player:
-  some_event:
-    widget_1:
-      slide: slide_2
+<div class="highlight"><pre><span></span><code><span class="c1">#! widgets:</span>
+<span class="c1">#!   widget_1: []</span>
+<span class="nt">widget_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">some_event</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">widget_1</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">slide</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">slide_2</span>
 </code></pre></div>
 <h2 id="usage-in-config-files">Usage in config files</h2>
 <p>In config files, the widget player is used via the <code>widget_player:</code>

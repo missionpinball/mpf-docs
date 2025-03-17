@@ -33896,16 +33896,16 @@ WPC</a> page.</p>
 <p>In order to use MPF in a WPC machine, you need to configure the
 <code>driverboards:</code> section of your hardware platform.</p>
 <p>If you're using a FAST WPC controller, it will look like this:</p>
-<div class="highlight"><pre><span></span><code>hardware:
-  platform: fast
-fast:
-  driverboards: wpc
+<div class="highlight"><pre><span></span><code><span class="nt">hardware</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fast</span>
+<span class="nt">fast</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">driverboards</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wpc</span>
 </code></pre></div>
 <p>And if you're using a P-ROC:</p>
-<div class="highlight"><pre><span></span><code>hardware:
-  platform: p_roc
-p_roc:
-  driverboards: wpc
+<div class="highlight"><pre><span></span><code><span class="nt">hardware</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">p_roc</span>
+<span class="nt">p_roc</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">driverboards</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wpc</span>
 </code></pre></div>
 <p>Note that with the P-ROC, it is <em>very important</em> that you specify
 <code>driverboards: wpc</code> in your config if you're using a WPC machine. The
@@ -33924,11 +33924,11 @@ of switch:</p>
 <h3 id="matrix-switches">Matrix switches</h3>
 <p>Matrix switches start with the letter <code>S</code>, followed by the switch
 number. For example:</p>
-<div class="highlight"><pre><span></span><code>switches:
-  s_left_slingshot:
-    number: s41
-  s_right_jet:
-    number: S45
+<div class="highlight"><pre><span></span><code><span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_left_slingshot</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s41</span>
+<span class="w">  </span><span class="nt">s_right_jet</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">S45</span>
 </code></pre></div>
 <p>Note that the "S" is not case-sensitive.</p>
 <p>Switch numbers in WPC machines correspond to the column and row, so
@@ -33949,11 +33949,11 @@ if the numbers are wrong.</p>
 <h3 id="direct-switches">Direct switches</h3>
 <p>Direct switches (which are typically the coin and front door switches)
 are entered with the <code>SD</code> prefix, then the number, like this:</p>
-<div class="highlight"><pre><span></span><code>switches:
-  s_left_coin:
-    number: sd1
-  s_enter:
-    number: SD8
+<div class="highlight"><pre><span></span><code><span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_left_coin</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sd1</span>
+<span class="w">  </span><span class="nt">s_enter</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SD8</span>
 </code></pre></div>
 <p>Again, case doesn't matter.</p>
 <h3 id="fliptronics-switches">Fliptronics switches</h3>
@@ -33973,17 +33973,17 @@ flipper while flipping the upper one).</p>
 and if they don't have four flippers, it's possible that the extra
 Fliptronics switches are used for other things.</p>
 <p>You would use Fliptronics switches in your config like this:</p>
-<div class="highlight"><pre><span></span><code>switches:
-  s_flipper_lower_right_eos:
-    number: sf1
-  s_flipper_lower_right:
-    number: sf2
-    tags: player, right_flipper
-  s_flipper_lower_left_eos:
-    number: sf3
-  s_flipper_lower_left:
-    number: sf4
-    tags: player, left_flipper
+<div class="highlight"><pre><span></span><code><span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_flipper_lower_right_eos</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sf1</span>
+<span class="w">  </span><span class="nt">s_flipper_lower_right</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sf2</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">player, right_flipper</span>
+<span class="w">  </span><span class="nt">s_flipper_lower_left_eos</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sf3</span>
+<span class="w">  </span><span class="nt">s_flipper_lower_left</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sf4</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">player, left_flipper</span>
 </code></pre></div>
 <h2 id="4-configuring-coils-drivers">4. Configuring coils &amp; drivers</h2>
 <p>The drivers section of your WPC machine's operators manual will list
@@ -33995,16 +33995,16 @@ Flashers go in the <code>flashers:</code> section (discussed below).</p>
 <p>To configure the regular coils (from the "Solenoid / Flasher" table in
 your machine's operator's manual, enter the letter <code>C</code> followed by the
 solenoid number, like this:</p>
-<div class="highlight"><pre><span></span><code>coils:
-  c_trough_eject:
-    number: c01
-    default_pulse_ms: 25
-  c_bottom_popper:
-    number: c02
-    default_pulse_ms: 25
-  c_plunger_lane:
-    number: c03
-    default_pulse_ms: 25
+<div class="highlight"><pre><span></span><code><span class="nt">coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">c_trough_eject</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c01</span>
+<span class="w">    </span><span class="nt">default_pulse_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">25</span>
+<span class="w">  </span><span class="nt">c_bottom_popper</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c02</span>
+<span class="w">    </span><span class="nt">default_pulse_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">25</span>
+<span class="w">  </span><span class="nt">c_plunger_lane</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c03</span>
+<span class="w">    </span><span class="nt">default_pulse_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">25</span>
 </code></pre></div>
 <h3 id="fliptronics-coils">Fliptronics coils</h3>
 <p>You'll also see a section in the solenoid table in your ooperator's
@@ -34029,70 +34029,70 @@ to, like this:</p>
 connect Fliptronics coils up to other random things (typically magnets
 and diverters).</p>
 <p>An example in your config might be:</p>
-<div class="highlight"><pre><span></span><code>coils:
-  c_flipper_left_main:
-    number: fllm
-    default_pulse_ms: 30
-  c_flipper_left_hold:
-    number: fllh
-    allow_enable: true
-  c_flipper_right_main:
-    number: flrm
-    default_pulse_ms: 30
-  c_flipper_right_hold:
-    number: flrh
-    allow_enable: true
-  c_vanish_magnet:
-    number: c35
-    allow_enable: true
-  c_loop_post_diverter:
-    number: c36
-    allow_enable: true
+<div class="highlight"><pre><span></span><code><span class="nt">coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">c_flipper_left_main</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fllm</span>
+<span class="w">    </span><span class="nt">default_pulse_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+<span class="w">  </span><span class="nt">c_flipper_left_hold</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fllh</span>
+<span class="w">    </span><span class="nt">allow_enable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">c_flipper_right_main</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flrm</span>
+<span class="w">    </span><span class="nt">default_pulse_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+<span class="w">  </span><span class="nt">c_flipper_right_hold</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flrh</span>
+<span class="w">    </span><span class="nt">allow_enable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">c_vanish_magnet</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c35</span>
+<span class="w">    </span><span class="nt">allow_enable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">c_loop_post_diverter</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c36</span>
+<span class="w">    </span><span class="nt">allow_enable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
 <h2 id="5-configuring-lights-lamps">5. Configuring lights (lamps)</h2>
 <p>Lights are configured with the letter <code>L</code> followed by the lamp number
 from the manual:</p>
-<div class="highlight"><pre><span></span><code>lights:
-  l_ball_save:
-    number: l11
-    subtype: matrix
-  l_fortress_multiball:
-    number: L12
-    subtype: matrix
-  l_museum_multiball:
-    number: L13
-    subtype: matrix
-  l_cryoprison_multiball:
-    number: l14
-    subtype: matrix
-  l_wasteland_multiball:
-    number: L15
-    subtype: matrix
-  l_shoot_again:
-    number: l16
-    subtype: matrix
+<div class="highlight"><pre><span></span><code><span class="nt">lights</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">l_ball_save</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l11</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">matrix</span>
+<span class="w">  </span><span class="nt">l_fortress_multiball</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">L12</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">matrix</span>
+<span class="w">  </span><span class="nt">l_museum_multiball</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">L13</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">matrix</span>
+<span class="w">  </span><span class="nt">l_cryoprison_multiball</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l14</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">matrix</span>
+<span class="w">  </span><span class="nt">l_wasteland_multiball</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">L15</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">matrix</span>
+<span class="w">  </span><span class="nt">l_shoot_again</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l16</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">matrix</span>
 </code></pre></div>
 <p>See <a href="../../config/lights/">lights:</a> and
 <a href="../../config/light_player/">light_player:</a> for details on how
 to use them.</p>
 <h2 id="5-configuring-gi-general-illumination">5. Configuring GI (general illumination)</h2>
 <p>GI strings are configured with <code>G</code> followed by the number, like this:</p>
-<div class="highlight"><pre><span></span><code>lights:
-  gi_back_panel:
-    number: g01
-    subtype: gi
-  gi_upper_right:
-    number: g02
-    subtype: gi
-  gi_upper_left:
-    number: g03
-    subtype: gi
-  gi_lower_right:
-    number: g04
-    subtype: gi
-  gi_lower_left:
-    number: g05
-    subtype: gi
+<div class="highlight"><pre><span></span><code><span class="nt">lights</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">gi_back_panel</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">g01</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gi</span>
+<span class="w">  </span><span class="nt">gi_upper_right</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">g02</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gi</span>
+<span class="w">  </span><span class="nt">gi_upper_left</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">g03</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gi</span>
+<span class="w">  </span><span class="nt">gi_lower_right</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">g04</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gi</span>
+<span class="w">  </span><span class="nt">gi_lower_left</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">g05</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gi</span>
 </code></pre></div>
 <p>See <a href="../../config/lights/">lights:</a> and
 <a href="../../config/light_player/">light_player:</a> for details on how
@@ -34101,17 +34101,17 @@ to use them.</p>
 <p>Since flashers in WPC machines are technically drivers (coils), they are
 also configured with the letter <code>C</code> followed by their number similar to
 <code>coils</code>.</p>
-<div class="highlight"><pre><span></span><code>coils:
-  f_claw:
-    number: c17
-  f_jets:
-    number: c21
-  f_side_ramp:
-    number: c22
-  f_left_ramp_upper:
-    number: c23
-  f_left_ramp_lower:
-    number: c24
+<div class="highlight"><pre><span></span><code><span class="nt">coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">f_claw</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c17</span>
+<span class="w">  </span><span class="nt">f_jets</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c21</span>
+<span class="w">  </span><span class="nt">f_side_ramp</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c22</span>
+<span class="w">  </span><span class="nt">f_left_ramp_upper</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c23</span>
+<span class="w">  </span><span class="nt">f_left_ramp_lower</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c24</span>
 </code></pre></div>
 <p>See <a href="../../config/flashers/">flashers:</a> for details on how
 to use flashers.</p>

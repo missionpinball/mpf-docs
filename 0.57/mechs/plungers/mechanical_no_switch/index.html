@@ -33765,17 +33765,17 @@ as <code>default_source_device</code> to your playfield to tell MPF that this ba
 device is used to add a new ball into play.</p>
 <p>To do that, add your trough device as <code>default_source_device</code> in the
 default <code>playfield</code>, like this:</p>
-<div class="highlight"><pre><span></span><code>#! switches:
-#!   s_trough:
-#!     number: 2-6
-#! ball_devices:
-#!   bd_trough:
-#!     ball_switches: s_trough
-#!     mechanical_eject: true
-playfields:
-  playfield:
-    default_source_device: bd_trough
-    tags: default
+<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
+<span class="c1">#!   s_trough:</span>
+<span class="c1">#!     number: 2-6</span>
+<span class="c1">#! ball_devices:</span>
+<span class="c1">#!   bd_trough:</span>
+<span class="c1">#!     ball_switches: s_trough</span>
+<span class="c1">#!     mechanical_eject: true</span>
+<span class="nt">playfields</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">playfield</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">default_source_device</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bd_trough</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span>
 </code></pre></div>
 <p>Then when MPF needs to add a live ball into play, it will eject a ball
 from the trough and you're all set!</p>

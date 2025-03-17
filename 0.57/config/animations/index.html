@@ -33662,15 +33662,15 @@ mode-specific config, the list of animations is global, meaning that any
 animation is available in any mode, and you can't have two different
 animations with the same name.</p>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>animations:
-  fade_in:
-    property: opacity
-    value: 1
-    duration: 1s
-  fade_out:
-    property: opacity
-    value: 0
-    duration: 1s
+<div class="highlight"><pre><span></span><code><span class="nt">animations</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">fade_in</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">property</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">opacity</span>
+<span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<span class="w">  </span><span class="nt">fade_out</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">property</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">opacity</span>
+<span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
 </code></pre></div>
 <p>The above example defines animations named <code>fade_in</code> and <code>fade_out</code> that
 you can use, by name, in any widget or widget_player config where you

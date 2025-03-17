@@ -33716,21 +33716,21 @@ are shown below.</p>
 <h3 id="using-the-same-event-with-different-priorities">Using the Same Event With Different Priorities</h3>
 <p>This is an example using priorities of the events, which will affect the
 priority:</p>
-<div class="highlight"><pre><span></span><code>#! widgets:
-#!   widget_1: []
-widget_player:
-  some_event.1:
-    widget_1:
-      key: widget_1_1
-      slide: slide_2
-      widget_settings:
-         # &lt;list of settings below go here&gt;
-  some_event.2:
-    widget_1:
-      key: widget_1_2
-      slide: slide_2
-      widget_settings:
-         # &lt;list of settings below go here&gt;
+<div class="highlight"><pre><span></span><code><span class="c1">#! widgets:</span>
+<span class="c1">#!   widget_1: []</span>
+<span class="nt">widget_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">some_event.1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">widget_1</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">widget_1_1</span>
+<span class="w">      </span><span class="nt">slide</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">slide_2</span>
+<span class="w">      </span><span class="nt">widget_settings</span><span class="p">:</span>
+<span class="w">         </span><span class="c1"># &lt;list of settings below go here&gt;</span>
+<span class="w">  </span><span class="nt">some_event.2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">widget_1</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">widget_1_2</span>
+<span class="w">      </span><span class="nt">slide</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">slide_2</span>
+<span class="w">      </span><span class="nt">widget_settings</span><span class="p">:</span>
+<span class="w">         </span><span class="c1"># &lt;list of settings below go here&gt;</span>
 </code></pre></div>
 <p>It will add widget_1 to slide_2 two different times. In order to make
 this meaningful, you would want to add additional <code>widget settings:</code>,
@@ -33744,21 +33744,21 @@ unique events (example: event_1 and event_2) or by using conditional
 logic on the same event (example: event_1{param1} and event_1{param2}.</p>
 <p>This is an example using unique conditional formatting for the same
 event:</p>
-<div class="highlight"><pre><span></span><code>#! widgets:
-#!   widget_1: []
-widget_player:
-  some_event{parameter_1 &lt;10}:
-    widget_1:
-      key: widget_1_1
-      slide: slide_2
-      widget_settings:
-         # &lt;list of settings below go here&gt;
-  some_event{parameter_1 &lt; 50}:
-    widget_1:
-      key: widget_1_2
-      slide: slide_2
-      widget_settings:
-         # &lt;list of settings below go here&gt;
+<div class="highlight"><pre><span></span><code><span class="c1">#! widgets:</span>
+<span class="c1">#!   widget_1: []</span>
+<span class="nt">widget_player</span><span class="p">:</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">some_event{parameter_1 &lt;10}</span><span class="p p-Indicator">:</span>
+<span class="w">    </span><span class="nt">widget_1</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">widget_1_1</span>
+<span class="w">      </span><span class="nt">slide</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">slide_2</span>
+<span class="w">      </span><span class="nt">widget_settings</span><span class="p">:</span>
+<span class="w">         </span><span class="c1"># &lt;list of settings below go here&gt;</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">some_event{parameter_1 &lt; 50}</span><span class="p p-Indicator">:</span>
+<span class="w">    </span><span class="nt">widget_1</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">widget_1_2</span>
+<span class="w">      </span><span class="nt">slide</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">slide_2</span>
+<span class="w">      </span><span class="nt">widget_settings</span><span class="p">:</span>
+<span class="w">         </span><span class="c1"># &lt;list of settings below go here&gt;</span>
 </code></pre></div>
 <p>It will add widget_1 to slide_2 if the conditional criteria is met. If
 the criteria is met for both of the events, they will both be played at
@@ -33771,15 +33771,15 @@ the widget with the same settings twice, which would overlap each other.</p>
 need to refer to the key of that widget. This is done by the following
 code, which has calls upon the generic widget and the key when an event
 is posted.</p>
-<div class="highlight"><pre><span></span><code>#! widgets:
-#!   widget_1: []
-widget_player:
-  some_event:
-    widget_1:
-      key: widget_1_1
-      action: remove  #this could also be update
-      widget_settings:
-         # &lt;list of settings below go here&gt;
+<div class="highlight"><pre><span></span><code><span class="c1">#! widgets:</span>
+<span class="c1">#!   widget_1: []</span>
+<span class="nt">widget_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">some_event</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">widget_1</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">widget_1_1</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">remove</span><span class="w">  </span><span class="c1">#this could also be update</span>
+<span class="w">      </span><span class="nt">widget_settings</span><span class="p">:</span>
+<span class="w">         </span><span class="c1"># &lt;list of settings below go here&gt;</span>
 </code></pre></div>
 <p>The above block of code would listen for some_event to occur, and then
 remove the instance of widget_1 with the key widget_1_1. You can also

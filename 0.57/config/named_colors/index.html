@@ -33663,23 +33663,23 @@ named colors can be used.</p>
 values (which can also include a brightness percentage, like all hex
 color strings).</p>
 <p>This is an example:</p>
-<div class="highlight"><pre><span></span><code>named_colors:
-  custom_blue: [24, 65, 226]
-  troll_green: 4a9b22
-  troll_green_dark: 4a9b22%50
-lights:
-  troll_target:
-    number: 10
-    default_on_color: troll_green
-  l_jackpot:
-    number: 20
-light_player:
-  trolls_disabled:
-    troll_target: troll_green_dark
-  jackpot_lit:
-    l_jackpot:
-      color: custom_blue
-      fade: 10
+<div class="highlight"><pre><span></span><code><span class="nt">named_colors</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">custom_blue</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">24</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">65</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">226</span><span class="p p-Indicator">]</span>
+<span class="w">  </span><span class="nt">troll_green</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4a9b22</span>
+<span class="w">  </span><span class="nt">troll_green_dark</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4a9b22%50</span>
+<span class="nt">lights</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">troll_target</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="w">    </span><span class="nt">default_on_color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">troll_green</span>
+<span class="w">  </span><span class="nt">l_jackpot</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span>
+<span class="nt">light_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">trolls_disabled</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">troll_target</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">troll_green_dark</span>
+<span class="w">  </span><span class="nt">jackpot_lit</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">l_jackpot</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">custom_blue</span>
+<span class="w">      </span><span class="nt">fade</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
 </code></pre></div>
 <h2 id="related-how-to-guides">Related How To guides</h2>
 <div class="admonition success">

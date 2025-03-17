@@ -33760,43 +33760,43 @@ icons & this code generated via https://realfavicongenerator.net
 <li><a href="../../../config/shot_groups/">shot_groups:</a></li>
 </ul>
 <p>Example config for lane changing lights.</p>
-<div class="highlight"><pre><span></span><code>#! switches:
-#!   lane_l:
-#!     number:
-#!   lane_a:
-#!     number:
-#!   lane_n:
-#!     number:
-#!   lane_e:
-#!     number:
-#!   upper_standup:
-#!     number:
-##! mode: inlanes
-shots:
-  shot_l_outlane:
-    switch: lane_l
-    show_tokens:
-      light: lane_l
-  shot_l_inlane:
-    switch: lane_a
-    show_tokens:
-      light: lane_a
-  shot_r_inlane:
-    switch: lane_n
-    show_tokens:
-      light: lane_n
-  shot_r_outlane:
-    switch: lane_e
-    show_tokens:
-      light: lane_e
-shot_groups:
-  outlanes:
-    shots: shot_l_outlane, shot_l_inlane, shot_r_inlane, shot_r_outlane
-    rotate_left_events: s_flipper_left_active
-    rotate_right_events: s_flipper_right_active
-    reset_events: outlanes_profile_hit_lit_complete
-    enable_events: ball_started
-    disable_events: ball_ending
+<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
+<span class="c1">#!   lane_l:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   lane_a:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   lane_n:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   lane_e:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   upper_standup:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">##! mode: inlanes</span>
+<span class="nt">shots</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">shot_l_outlane</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lane_l</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">light</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lane_l</span>
+<span class="w">  </span><span class="nt">shot_l_inlane</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lane_a</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">light</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lane_a</span>
+<span class="w">  </span><span class="nt">shot_r_inlane</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lane_n</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">light</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lane_n</span>
+<span class="w">  </span><span class="nt">shot_r_outlane</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lane_e</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">light</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lane_e</span>
+<span class="nt">shot_groups</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">outlanes</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">shots</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">shot_l_outlane, shot_l_inlane, shot_r_inlane, shot_r_outlane</span>
+<span class="w">    </span><span class="nt">rotate_left_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_flipper_left_active</span>
+<span class="w">    </span><span class="nt">rotate_right_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_flipper_right_active</span>
+<span class="w">    </span><span class="nt">reset_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">outlanes_profile_hit_lit_complete</span>
+<span class="w">    </span><span class="nt">enable_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ball_started</span>
+<span class="w">    </span><span class="nt">disable_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ball_ending</span>
 </code></pre></div>
 <h2 id="monitorable-properties">Monitorable Properties</h2>
 <p>For

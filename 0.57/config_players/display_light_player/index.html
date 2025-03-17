@@ -33677,27 +33677,27 @@ machine.</p>
 </div>
 
 <p>To use this in a show you can use this:</p>
-<div class="highlight"><pre><span></span><code>##! show: test_show
-- display_lights:
-    your_source_display:     # use any display defined in your machine
-      lights: &quot;*&quot;            # map all lights. you can also use a tag
+<div class="highlight"><pre><span></span><code><span class="c1">##! show: test_show</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">display_lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">your_source_display</span><span class="p">:</span><span class="w">     </span><span class="c1"># use any display defined in your machine</span>
+<span class="w">      </span><span class="nt">lights</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;*&quot;</span><span class="w">            </span><span class="c1"># map all lights. you can also use a tag</span>
 </code></pre></div>
 <p>Or standalone:</p>
-<div class="highlight"><pre><span></span><code>display_light_player:
-  your_event:
-    your_source_display:
-      lights: &quot;*&quot;
+<div class="highlight"><pre><span></span><code><span class="nt">display_light_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">your_event</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">your_source_display</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">lights</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;*&quot;</span>
 </code></pre></div>
 <p>Then map your lights to a position on the display:</p>
-<div class="highlight"><pre><span></span><code>lights:
-  l_light1:
-    number: 1
-    x: 0.3595817467355206
-    y: 0.026751757949132805
-  l_light2:
-    number: 2
-    x: 0.34303657433971446
-    y: 0.02873336964906857
+<div class="highlight"><pre><span></span><code><span class="nt">lights</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">l_light1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.3595817467355206</span>
+<span class="w">    </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.026751757949132805</span>
+<span class="w">  </span><span class="nt">l_light2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="w">    </span><span class="nt">x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.34303657433971446</span>
+<span class="w">    </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.02873336964906857</span>
 </code></pre></div>
 <p>You can map those in the MPF monitor and then copy the locations using
 the script in <code>tools/monitor_to_config.py</code> or manually. You may need to

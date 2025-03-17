@@ -33679,59 +33679,59 @@ to <a href="../../examples/">config file examples</a> for more examples of real 
 <code>string</code> : string name of a <a href="../lights/">lights:</a> device.</p>
 <p>In this setting you provide a list of mapping for each segment. This is
 an example for a two 7-segment display:</p>
-<div class="highlight"><pre><span></span><code>#! hardware:
-#!   segment_displays: light_segment_displays
-#! light_segment_displays:
-#!   display_flash_frequency: 2  # overrides default frequency
-#! lights:
-#!   segment1_a:
-#!     number: 1
-#!   segment1_b:
-#!     number: 2
-#!   segment1_c:
-#!     number: 3
-#!   segment1_d:
-#!     number: 4
-#!   segment1_e:
-#!     number: 5
-#!   segment1_f:
-#!     number: 6
-#!   segment1_g:
-#!     number: 7
-#!   segment2_a:
-#!     number: 8
-#!   segment2_b:
-#!     number: 9
-#!   segment2_c:
-#!     number: 10
-#!   segment2_d:
-#!     number: 11
-#!   segment2_e:
-#!     number: 12
-#!   segment2_f:
-#!     number: 13
-#!   segment2_g:
-#!     number: 14
-segment_displays:
-  display1:
-    number: 1
-    platform_settings:
-      lights:
-        - a: segment1_a
-          b: segment1_b
-          c: segment1_c
-          d: segment1_d
-          e: segment1_e
-          f: segment1_f
-          g: segment1_g
-        - a: segment2_a
-          b: segment2_b
-          c: segment2_c
-          d: segment2_d
-          e: segment2_e
-          f: segment2_f
-          g: segment2_g
-      type: 7segment
+<div class="highlight"><pre><span></span><code><span class="c1">#! hardware:</span>
+<span class="c1">#!   segment_displays: light_segment_displays</span>
+<span class="c1">#! light_segment_displays:</span>
+<span class="c1">#!   display_flash_frequency: 2  # overrides default frequency</span>
+<span class="c1">#! lights:</span>
+<span class="c1">#!   segment1_a:</span>
+<span class="c1">#!     number: 1</span>
+<span class="c1">#!   segment1_b:</span>
+<span class="c1">#!     number: 2</span>
+<span class="c1">#!   segment1_c:</span>
+<span class="c1">#!     number: 3</span>
+<span class="c1">#!   segment1_d:</span>
+<span class="c1">#!     number: 4</span>
+<span class="c1">#!   segment1_e:</span>
+<span class="c1">#!     number: 5</span>
+<span class="c1">#!   segment1_f:</span>
+<span class="c1">#!     number: 6</span>
+<span class="c1">#!   segment1_g:</span>
+<span class="c1">#!     number: 7</span>
+<span class="c1">#!   segment2_a:</span>
+<span class="c1">#!     number: 8</span>
+<span class="c1">#!   segment2_b:</span>
+<span class="c1">#!     number: 9</span>
+<span class="c1">#!   segment2_c:</span>
+<span class="c1">#!     number: 10</span>
+<span class="c1">#!   segment2_d:</span>
+<span class="c1">#!     number: 11</span>
+<span class="c1">#!   segment2_e:</span>
+<span class="c1">#!     number: 12</span>
+<span class="c1">#!   segment2_f:</span>
+<span class="c1">#!     number: 13</span>
+<span class="c1">#!   segment2_g:</span>
+<span class="c1">#!     number: 14</span>
+<span class="nt">segment_displays</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">display1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">platform_settings</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">segment1_a</span>
+<span class="w">          </span><span class="nt">b</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">segment1_b</span>
+<span class="w">          </span><span class="nt">c</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">segment1_c</span>
+<span class="w">          </span><span class="nt">d</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">segment1_d</span>
+<span class="w">          </span><span class="nt">e</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">segment1_e</span>
+<span class="w">          </span><span class="nt">f</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">segment1_f</span>
+<span class="w">          </span><span class="nt">g</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">segment1_g</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">segment2_a</span>
+<span class="w">          </span><span class="nt">b</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">segment2_b</span>
+<span class="w">          </span><span class="nt">c</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">segment2_c</span>
+<span class="w">          </span><span class="nt">d</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">segment2_d</span>
+<span class="w">          </span><span class="nt">e</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">segment2_e</span>
+<span class="w">          </span><span class="nt">f</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">segment2_f</span>
+<span class="w">          </span><span class="nt">g</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">segment2_g</span>
+<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">7segment</span>
 </code></pre></div>
 <h2 id="type">type:</h2>
 <p>Single value, type: one of the following options: 7segment, bcd,

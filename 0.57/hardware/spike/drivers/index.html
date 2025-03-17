@@ -33710,13 +33710,13 @@ number for the driver into MPF, remove the middle "DR" letters so you
 just have the node number and address number (with a dash between them).
 For example, the driver for the left flipper coil with the address
 <code>8-DR-0</code> would be entered into the MPF config as <code>8-0</code>, etc.</p>
-<div class="highlight"><pre><span></span><code>coils:
-  c_shaker:
-    number: 1-10    # Node 1, coil 10
-    default_pulse_ms: 100
-    allow_enable: true
-  c_flipper:
-    number: 8-1    # Node 8, coil 1
+<div class="highlight"><pre><span></span><code><span class="nt">coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">c_shaker</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1-10</span><span class="w">    </span><span class="c1"># Node 1, coil 10</span>
+<span class="w">    </span><span class="nt">default_pulse_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="w">    </span><span class="nt">allow_enable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">c_flipper</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8-1</span><span class="w">    </span><span class="c1"># Node 8, coil 1</span>
 </code></pre></div>
 <h2 id="what-if-it-did-not-work">What if it did not work?</h2>
 <p>Have a look at our

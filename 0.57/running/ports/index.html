@@ -33602,15 +33602,15 @@ the "bcp" section which is what the MPF game engine reads to know what
 port the MC is listening on, and the "mpf-mc" section which is what
 the MC reads to know what port it should listen on.</p>
 <p>Valid port numbers are anything between 1024 and 65535.</p>
-<div class="highlight"><pre><span></span><code># config_version=5
+<div class="highlight"><pre><span></span><code><span class="c1"># config_version=5</span>
 
-bcp:
-  connections:
-    local_display:
-      port: 1234
+<span class="nt">bcp</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">connections</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">local_display</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1234</span>
 
-mpf-mc:
-  bcp_port: 1234
+<span class="nt">mpf-mc</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">bcp_port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1234</span>
 </code></pre></div>
 <hr />
 <div class="admonition question">

@@ -33637,64 +33637,64 @@ like.</p>
 for custom tilt logic or special modes.</p>
 <h2 id="minimal-config">Minimal config</h2>
 <p>The minimal example is to just load the default <code>tilt</code> mode:</p>
-<div class="highlight"><pre><span></span><code>modes:
-  - tilt
+<div class="highlight"><pre><span></span><code><span class="nt">modes</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tilt</span>
 </code></pre></div>
 <h2 id="change-defaults">Change defaults</h2>
 <p>If you want to customize the mode you can also create a tilt mode inside
 your mode folder (config would be in <code>modes/tilt/config/tilt.yaml</code>):</p>
-<div class="highlight"><pre><span></span><code># in your machine config
-modes:
-  - tilt
-##! mode: tilt
-# in your tilt mode
-tilt:    # the following are the defaults only copy those if you want to change them
-  multiple_hit_window: 300ms
-  settle_time: 5s
-  warnings_to_tilt: 3
+<div class="highlight"><pre><span></span><code><span class="c1"># in your machine config</span>
+<span class="nt">modes</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tilt</span>
+<span class="c1">##! mode: tilt</span>
+<span class="c1"># in your tilt mode</span>
+<span class="nt">tilt</span><span class="p">:</span><span class="w">    </span><span class="c1"># the following are the defaults only copy those if you want to change them</span>
+<span class="w">  </span><span class="nt">multiple_hit_window</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">300ms</span>
+<span class="w">  </span><span class="nt">settle_time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5s</span>
+<span class="w">  </span><span class="nt">warnings_to_tilt</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
 </code></pre></div>
 <h2 id="add-operator-settings-to-service-mode">Add operator settings to service mode</h2>
-<div class="highlight"><pre><span></span><code># in your machine config
-modes:
-  - tilt
-settings:
-  warnings_to_tilt:
-    label: Number of tilt warnings
-    values:
-      0: &quot;no warnings&quot;
-      1: &quot;1&quot;
-      2: &quot;2&quot;
-      3: &quot;3&quot;
-      5: &quot;5&quot;
-      10: &quot;10&quot;
-    default: 3
-    key_type: int
-    sort: 600
-  settle_time:
-    label: Time to wait on tilt to settle bob
-    values:
-      3000: &quot;3s&quot;
-      5000: &quot;5s&quot;
-      10000: &quot;10s&quot;
-    default: 5000
-    key_type: int
-    sort: 610
-  multiple_hit_window:
-    label: Tilt sensitivity
-    values:
-      150: &quot;sensitive&quot;
-      300: &quot;normal&quot;
-      500: &quot;insensitive&quot;
-      1000: &quot;very insensitive&quot;
-    default: 300
-    key_type: int
-    sort: 620
-##! mode: tilt
-# in your tilt mode
-tilt:
-  multiple_hit_window: settings.multiple_hit_window
-  settle_time: settings.settle_time
-  warnings_to_tilt: settings.warnings_to_tilt
+<div class="highlight"><pre><span></span><code><span class="c1"># in your machine config</span>
+<span class="nt">modes</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tilt</span>
+<span class="nt">settings</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">warnings_to_tilt</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Number of tilt warnings</span>
+<span class="w">    </span><span class="nt">values</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">0</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;no</span><span class="nv"> </span><span class="s">warnings&quot;</span>
+<span class="w">      </span><span class="nt">1</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1&quot;</span>
+<span class="w">      </span><span class="nt">2</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;2&quot;</span>
+<span class="w">      </span><span class="nt">3</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;3&quot;</span>
+<span class="w">      </span><span class="nt">5</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;5&quot;</span>
+<span class="w">      </span><span class="nt">10</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;10&quot;</span>
+<span class="w">    </span><span class="nt">default</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="w">    </span><span class="nt">key_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">int</span>
+<span class="w">    </span><span class="nt">sort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">600</span>
+<span class="w">  </span><span class="nt">settle_time</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Time to wait on tilt to settle bob</span>
+<span class="w">    </span><span class="nt">values</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">3000</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;3s&quot;</span>
+<span class="w">      </span><span class="nt">5000</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;5s&quot;</span>
+<span class="w">      </span><span class="nt">10000</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;10s&quot;</span>
+<span class="w">    </span><span class="nt">default</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5000</span>
+<span class="w">    </span><span class="nt">key_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">int</span>
+<span class="w">    </span><span class="nt">sort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">610</span>
+<span class="w">  </span><span class="nt">multiple_hit_window</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Tilt sensitivity</span>
+<span class="w">    </span><span class="nt">values</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">150</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;sensitive&quot;</span>
+<span class="w">      </span><span class="nt">300</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;normal&quot;</span>
+<span class="w">      </span><span class="nt">500</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;insensitive&quot;</span>
+<span class="w">      </span><span class="nt">1000</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;very</span><span class="nv"> </span><span class="s">insensitive&quot;</span>
+<span class="w">    </span><span class="nt">default</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">300</span>
+<span class="w">    </span><span class="nt">key_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">int</span>
+<span class="w">    </span><span class="nt">sort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">620</span>
+<span class="c1">##! mode: tilt</span>
+<span class="c1"># in your tilt mode</span>
+<span class="nt">tilt</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">multiple_hit_window</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">settings.multiple_hit_window</span>
+<span class="w">  </span><span class="nt">settle_time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">settings.settle_time</span>
+<span class="w">  </span><span class="nt">warnings_to_tilt</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">settings.warnings_to_tilt</span>
 </code></pre></div>
 <p>The tilt modes contains default slides but you can
 <a href="overwrite_tilt_slides/">change them</a>.</p>

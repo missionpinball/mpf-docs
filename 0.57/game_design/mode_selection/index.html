@@ -33826,73 +33826,73 @@ and once a player has made them a few times start the mode which belongs
 to the shot. This selection style is used in machines such as Stern
 Batman DK (2008) or Stern Star Wars (2017).</p>
 <p>This is an example:</p>
-<div class="highlight"><pre><span></span><code>##! mode: left_ramp
-# mode: left_ramp
-mode:
-  start_events: start_mode_left_ramp
-  stop_events: stop_mode_left_ramp
-event_player:
-  left_ramp_complete: stop_mode_left_ramp, enable_qualify
-##! mode: right_ramp
-# mode: right_ramp
-mode:
-  start_events: start_mode_right_ramp
-  stop_events: stop_mode_right_ramp
-event_player:
-  right_ramp_complete: stop_mode_right_ramp, enable_qualify
-##! mode: qualify
-# mode: qualify
-mode:
-  start_events: ball_started
-counters:
-  left_ramp_qualify_counter:
-    starting_count: 0
-    count_complete_value: 3
-    events_when_complete: disable_qualify, start_mode_left_ramp
-    enable_events: enable_qualify
-    disable_events: disable_qualify
-    start_enabled: true
-    persist_state: true
-    reset_on_complete: false
-    restart_events: reset_qualify_modes
-    count_events: left_ramp_hit
-  right_ramp_qualify_counter:
-    starting_count: 0
-    count_complete_value: 3
-    events_when_complete: disable_qualify, start_mode_right_ramp
-    enable_events: enable_qualify
-    disable_events: disable_qualify
-    start_enabled: true
-    persist_state: true
-    reset_on_complete: false
-    restart_events: reset_qualify_modes
-    count_events: right_ramp_hit
-##! test
-#! # start game hit both shots twice
-#! start_game
-#! post left_ramp_hit
-#! post left_ramp_hit
-#! post right_ramp_hit
-#! post right_ramp_hit
-#! # no game mode running yet
-#! assert_mode_not_running left_ramp
-#! assert_mode_not_running right_ramp
-#! # hit left ramp the third time. left ramp mode should start
-#! post left_ramp_hit
-#! assert_mode_running left_ramp
-#! assert_mode_not_running right_ramp
-#! # hitting the right ramp should not start the right ramp mode (since left ramp is runnin)
-#! post right_ramp_hit
-#! assert_mode_running left_ramp
-#! assert_mode_not_running right_ramp
-#! # assume that we completed left ramp mode
-#! post left_ramp_complete
-#! assert_mode_not_running left_ramp
-#! assert_mode_not_running right_ramp
-#! # hit the right ramp to start right ramp mode
-#! post right_ramp_hit
-#! assert_mode_not_running left_ramp
-#! assert_mode_running right_ramp
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: left_ramp</span>
+<span class="c1"># mode: left_ramp</span>
+<span class="nt">mode</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">start_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start_mode_left_ramp</span>
+<span class="w">  </span><span class="nt">stop_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stop_mode_left_ramp</span>
+<span class="nt">event_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">left_ramp_complete</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stop_mode_left_ramp, enable_qualify</span>
+<span class="c1">##! mode: right_ramp</span>
+<span class="c1"># mode: right_ramp</span>
+<span class="nt">mode</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">start_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start_mode_right_ramp</span>
+<span class="w">  </span><span class="nt">stop_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stop_mode_right_ramp</span>
+<span class="nt">event_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">right_ramp_complete</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stop_mode_right_ramp, enable_qualify</span>
+<span class="c1">##! mode: qualify</span>
+<span class="c1"># mode: qualify</span>
+<span class="nt">mode</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">start_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ball_started</span>
+<span class="nt">counters</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">left_ramp_qualify_counter</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">starting_count</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">count_complete_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="w">    </span><span class="nt">events_when_complete</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">disable_qualify, start_mode_left_ramp</span>
+<span class="w">    </span><span class="nt">enable_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">enable_qualify</span>
+<span class="w">    </span><span class="nt">disable_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">disable_qualify</span>
+<span class="w">    </span><span class="nt">start_enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">persist_state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">reset_on_complete</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">    </span><span class="nt">restart_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">reset_qualify_modes</span>
+<span class="w">    </span><span class="nt">count_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">left_ramp_hit</span>
+<span class="w">  </span><span class="nt">right_ramp_qualify_counter</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">starting_count</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">count_complete_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="w">    </span><span class="nt">events_when_complete</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">disable_qualify, start_mode_right_ramp</span>
+<span class="w">    </span><span class="nt">enable_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">enable_qualify</span>
+<span class="w">    </span><span class="nt">disable_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">disable_qualify</span>
+<span class="w">    </span><span class="nt">start_enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">persist_state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">reset_on_complete</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">    </span><span class="nt">restart_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">reset_qualify_modes</span>
+<span class="w">    </span><span class="nt">count_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">right_ramp_hit</span>
+<span class="c1">##! test</span>
+<span class="c1">#! # start game hit both shots twice</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! post left_ramp_hit</span>
+<span class="c1">#! post left_ramp_hit</span>
+<span class="c1">#! post right_ramp_hit</span>
+<span class="c1">#! post right_ramp_hit</span>
+<span class="c1">#! # no game mode running yet</span>
+<span class="c1">#! assert_mode_not_running left_ramp</span>
+<span class="c1">#! assert_mode_not_running right_ramp</span>
+<span class="c1">#! # hit left ramp the third time. left ramp mode should start</span>
+<span class="c1">#! post left_ramp_hit</span>
+<span class="c1">#! assert_mode_running left_ramp</span>
+<span class="c1">#! assert_mode_not_running right_ramp</span>
+<span class="c1">#! # hitting the right ramp should not start the right ramp mode (since left ramp is runnin)</span>
+<span class="c1">#! post right_ramp_hit</span>
+<span class="c1">#! assert_mode_running left_ramp</span>
+<span class="c1">#! assert_mode_not_running right_ramp</span>
+<span class="c1">#! # assume that we completed left ramp mode</span>
+<span class="c1">#! post left_ramp_complete</span>
+<span class="c1">#! assert_mode_not_running left_ramp</span>
+<span class="c1">#! assert_mode_not_running right_ramp</span>
+<span class="c1">#! # hit the right ramp to start right ramp mode</span>
+<span class="c1">#! post right_ramp_hit</span>
+<span class="c1">#! assert_mode_not_running left_ramp</span>
+<span class="c1">#! assert_mode_running right_ramp</span>
 </code></pre></div>
 <p>This very basic example should be sufficient for a lot of machines.
 Another option here is to add achievments and have those enable/disable
@@ -33908,28 +33908,28 @@ Starwars). You can also do that with
 <h3 id="using-a-carousel">Using a carousel</h3>
 <p>One way to achieve mode selection you use a carousel mode which looks
 like this:</p>
-<div class="highlight"><pre><span></span><code>##! mode: carousel
-#config_version=5
-mode:
-  start_events: start_selection_mode
-  stop_events: carousel_item_selected
-  code: mpf.modes.carousel.code.carousel.Carousel
-mode_settings:
-  selectable_items: character1, character2, character3
-  select_item_events: s_start_active
-  next_item_events: s_left_flipper_active
-  previous_item_events: s_right_flipper_active
-# TODO: add some slides. If you have a nice example please send it to us (or create a PR).
-variable_player:
-  carousel_character1_selected:
-    selected_character:
-      string: &quot;character1&quot;
-  carousel_character2_selected:
-    selected_character:
-      string: &quot;character2&quot;
-  carousel_character3_selected:
-    selected_character:
-      string: &quot;character3&quot;
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: carousel</span>
+<span class="c1">#config_version=5</span>
+<span class="nt">mode</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">start_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start_selection_mode</span>
+<span class="w">  </span><span class="nt">stop_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">carousel_item_selected</span>
+<span class="w">  </span><span class="nt">code</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mpf.modes.carousel.code.carousel.Carousel</span>
+<span class="nt">mode_settings</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">selectable_items</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">character1, character2, character3</span>
+<span class="w">  </span><span class="nt">select_item_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_start_active</span>
+<span class="w">  </span><span class="nt">next_item_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_left_flipper_active</span>
+<span class="w">  </span><span class="nt">previous_item_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_right_flipper_active</span>
+<span class="c1"># TODO: add some slides. If you have a nice example please send it to us (or create a PR).</span>
+<span class="nt">variable_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">carousel_character1_selected</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">selected_character</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">string</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;character1&quot;</span>
+<span class="w">  </span><span class="nt">carousel_character2_selected</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">selected_character</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">string</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;character2&quot;</span>
+<span class="w">  </span><span class="nt">carousel_character3_selected</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">selected_character</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">string</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;character3&quot;</span>
 </code></pre></div>
 <p>A carousel will not currently track which modes are already completed.
 Also this in this example the carousel will stop after a selection was
@@ -33940,119 +33940,119 @@ general awards which then might influence how fast your modes start. For
 instance this might be combined with the example above by influencing
 the <code>starting_count:</code> or <code>count_complete_value:</code>
 using conditional events:</p>
-<div class="highlight"><pre><span></span><code>##! mode: qualify
-counters:
-  left_ramp_qualify_counter:
-    starting_count: 2 if current_player.selected_character == &quot;character1&quot; else 0
-    count_complete_value: 3
-    count_events: left_ramp_hit
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: qualify</span>
+<span class="nt">counters</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">left_ramp_qualify_counter</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">starting_count</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2 if current_player.selected_character == &quot;character1&quot; else 0</span>
+<span class="w">    </span><span class="nt">count_complete_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="w">    </span><span class="nt">count_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">left_ramp_hit</span>
 </code></pre></div>
 <h3 id="using-achivement-groups">Using Achivement Groups</h3>
 <p>You can define multiple
 <a href="../../config/achievement_groups/">groups</a> of
 <a href="../../config/achievements/">achievements</a> and
 rotate them:</p>
-<div class="highlight"><pre><span></span><code>#! lights:
-#!   l_left_ramp:
-#!     number:
-#!   l_right_ramp:
-#!     number:
-##! mode: left_ramp
-# mode: left_ramp
-mode:
-  start_events: start_mode_left_ramp
-  stop_events: stop_mode_left_ramp
-event_player:
-  left_ramp_complete: stop_mode_left_ramp, enable_qualify
-##! mode: right_ramp
-# mode: right_ramp
-mode:
-  start_events: start_mode_right_ramp
-  stop_events: stop_mode_right_ramp
-event_player:
-  right_ramp_complete: stop_mode_right_ramp, enable_qualify
-##! mode: qualify
-# mode: qualify
-mode:
-  start_events: ball_started
-achievements:
-  left_ramp:
-#!     select_events: select_first
-    show_tokens:
-      leds: l_left_ramp
-    show_when_enabled: off
-    show_when_selected: flash
-    show_when_completed: on
-    complete_events: stop_mode_left_ramp
-    events_when_started: start_mode_left_ramp
-  right_ramp:
-    show_tokens:
-      leds: l_right_ramp
-    show_when_enabled: off
-    show_when_selected: flash
-    show_when_completed: off
-    complete_events: stop_mode_right_ramp
-    events_when_started: start_mode_right_ramp
-achievement_groups:
-  all_achievements:
-    achievements: left_ramp, right_ramp
-    auto_select: true
-    start_selected_events: hit_scoop
-    rotate_right_events: s_action_button_active
-    enable_events: enable_qualify, ball_started
-    debug: true
-#! ##! test
-#! start_game
-#! post select_first
-#! assert_mode_running qualify
-#! assert_mode_not_running left_ramp
-#! assert_mode_not_running right_ramp
-#! # select first mode
-#! post hit_scoop
-#! assert_mode_running qualify
-#! assert_mode_running left_ramp
-#! assert_mode_not_running right_ramp
-#! # end mode
-#! post left_ramp_complete
-#! assert_mode_running qualify
-#! assert_mode_not_running left_ramp
-#! assert_mode_not_running right_ramp
-#! # start the remaining one
-#! post hit_scoop
-#! assert_mode_running qualify
-#! assert_mode_running right_ramp
-#! assert_mode_not_running left_ramp
-#! stop_game
-#! # another try
-#! start_game
-#! post select_first
-#! assert_mode_running qualify
-#! assert_mode_not_running left_ramp
-#! assert_mode_not_running right_ramp
-#! # rotate
-#! post s_action_button_active
-#! advance_time_and_run 1
-#! # and start
-#! post hit_scoop
-#! assert_mode_running qualify
-#! assert_mode_not_running left_ramp
-#! assert_mode_running right_ramp
+<div class="highlight"><pre><span></span><code><span class="c1">#! lights:</span>
+<span class="c1">#!   l_left_ramp:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   l_right_ramp:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">##! mode: left_ramp</span>
+<span class="c1"># mode: left_ramp</span>
+<span class="nt">mode</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">start_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start_mode_left_ramp</span>
+<span class="w">  </span><span class="nt">stop_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stop_mode_left_ramp</span>
+<span class="nt">event_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">left_ramp_complete</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stop_mode_left_ramp, enable_qualify</span>
+<span class="c1">##! mode: right_ramp</span>
+<span class="c1"># mode: right_ramp</span>
+<span class="nt">mode</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">start_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start_mode_right_ramp</span>
+<span class="w">  </span><span class="nt">stop_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stop_mode_right_ramp</span>
+<span class="nt">event_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">right_ramp_complete</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stop_mode_right_ramp, enable_qualify</span>
+<span class="c1">##! mode: qualify</span>
+<span class="c1"># mode: qualify</span>
+<span class="nt">mode</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">start_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ball_started</span>
+<span class="nt">achievements</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">left_ramp</span><span class="p">:</span>
+<span class="c1">#!     select_events: select_first</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">leds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_left_ramp</span>
+<span class="w">    </span><span class="nt">show_when_enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">off</span>
+<span class="w">    </span><span class="nt">show_when_selected</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flash</span>
+<span class="w">    </span><span class="nt">show_when_completed</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">on</span>
+<span class="w">    </span><span class="nt">complete_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stop_mode_left_ramp</span>
+<span class="w">    </span><span class="nt">events_when_started</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start_mode_left_ramp</span>
+<span class="w">  </span><span class="nt">right_ramp</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">leds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_right_ramp</span>
+<span class="w">    </span><span class="nt">show_when_enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">off</span>
+<span class="w">    </span><span class="nt">show_when_selected</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flash</span>
+<span class="w">    </span><span class="nt">show_when_completed</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">off</span>
+<span class="w">    </span><span class="nt">complete_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stop_mode_right_ramp</span>
+<span class="w">    </span><span class="nt">events_when_started</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start_mode_right_ramp</span>
+<span class="nt">achievement_groups</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">all_achievements</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">achievements</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">left_ramp, right_ramp</span>
+<span class="w">    </span><span class="nt">auto_select</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">start_selected_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hit_scoop</span>
+<span class="w">    </span><span class="nt">rotate_right_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_action_button_active</span>
+<span class="w">    </span><span class="nt">enable_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">enable_qualify, ball_started</span>
+<span class="w">    </span><span class="nt">debug</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="c1">#! ##! test</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! post select_first</span>
+<span class="c1">#! assert_mode_running qualify</span>
+<span class="c1">#! assert_mode_not_running left_ramp</span>
+<span class="c1">#! assert_mode_not_running right_ramp</span>
+<span class="c1">#! # select first mode</span>
+<span class="c1">#! post hit_scoop</span>
+<span class="c1">#! assert_mode_running qualify</span>
+<span class="c1">#! assert_mode_running left_ramp</span>
+<span class="c1">#! assert_mode_not_running right_ramp</span>
+<span class="c1">#! # end mode</span>
+<span class="c1">#! post left_ramp_complete</span>
+<span class="c1">#! assert_mode_running qualify</span>
+<span class="c1">#! assert_mode_not_running left_ramp</span>
+<span class="c1">#! assert_mode_not_running right_ramp</span>
+<span class="c1">#! # start the remaining one</span>
+<span class="c1">#! post hit_scoop</span>
+<span class="c1">#! assert_mode_running qualify</span>
+<span class="c1">#! assert_mode_running right_ramp</span>
+<span class="c1">#! assert_mode_not_running left_ramp</span>
+<span class="c1">#! stop_game</span>
+<span class="c1">#! # another try</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! post select_first</span>
+<span class="c1">#! assert_mode_running qualify</span>
+<span class="c1">#! assert_mode_not_running left_ramp</span>
+<span class="c1">#! assert_mode_not_running right_ramp</span>
+<span class="c1">#! # rotate</span>
+<span class="c1">#! post s_action_button_active</span>
+<span class="c1">#! advance_time_and_run 1</span>
+<span class="c1">#! # and start</span>
+<span class="c1">#! post hit_scoop</span>
+<span class="c1">#! assert_mode_running qualify</span>
+<span class="c1">#! assert_mode_not_running left_ramp</span>
+<span class="c1">#! assert_mode_running right_ramp</span>
 </code></pre></div>
 <p>This is a very flexible way to achieve this.</p>
 <h2 id="select-a-mode-at-the-start-of-ball-1">Select a mode at the start of ball 1</h2>
 <p>Use this to delay the start of a player's first ball until they select
 a mode:</p>
-<div class="highlight"><pre><span></span><code>##! mode: start_selecton_on_ball_one
-#config_version=5
-mode:
-  start_events: ball_ended
-  stop_events: ball_started
-  priority: 100
-  game_mode: false   # this is needed to interfere with game start
-queue_relay_player:
-  player_turn_starting{player.ball==0}:
-    post: show_mode_selection       # use this event to enable selection
-    wait_for: selection_mode_ended  # make sure you post this event is posted when a selection was made
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: start_selecton_on_ball_one</span>
+<span class="c1">#config_version=5</span>
+<span class="nt">mode</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">start_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ball_ended</span>
+<span class="w">  </span><span class="nt">stop_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ball_started</span>
+<span class="w">  </span><span class="nt">priority</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="w">  </span><span class="nt">game_mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w">   </span><span class="c1"># this is needed to interfere with game start</span>
+<span class="nt">queue_relay_player</span><span class="p">:</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">player_turn_starting{player.ball==0}</span><span class="p p-Indicator">:</span>
+<span class="w">    </span><span class="nt">post</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">show_mode_selection</span><span class="w">       </span><span class="c1"># use this event to enable selection</span>
+<span class="w">    </span><span class="nt">wait_for</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">selection_mode_ended</span><span class="w">  </span><span class="c1"># make sure you post this event is posted when a selection was made</span>
 </code></pre></div>
 <p>You can replace <code>player_turn_starting{player.ball==0}</code> with just
 <code>player_turn_starting</code> to have the selection on every ball (but not on
@@ -34061,27 +34061,27 @@ extra balls). If you also want to trigger it on extra balls use
 <h3 id="using-the-start-button-to-select-modes">Using the start button to select modes</h3>
 <p>Normally, pressing the start button will cause MPF to add another
 player. To suppress this during mode selection you can do the following:</p>
-<div class="highlight"><pre><span></span><code># Add the following to the game section of your machine&#39;s config.yaml
-# This will disable the start button for adding players
-game:
-  add_player_switch_tag: add_player
-##! mode: attract
-# Add this to your attract.yaml
-event_player:
-  s_start_active: sw_add_player
-##! mode: game_running
-# Have something in your base mode to trigger another mode (e.g. the carousel above)
-# and in that mode have the following (to reenable the start button):
-event_player:
-  s_start_active: sw_add_player
-#! ##! test
-#! start_game
-#! assert_player_count 1
-#! hit_and_release_switch s_start
-#! assert_player_count 1
-#! start_mode game_running
-#! hit_and_release_switch s_start
-#! assert_player_count 2
+<div class="highlight"><pre><span></span><code><span class="c1"># Add the following to the game section of your machine&#39;s config.yaml</span>
+<span class="c1"># This will disable the start button for adding players</span>
+<span class="nt">game</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">add_player_switch_tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">add_player</span>
+<span class="c1">##! mode: attract</span>
+<span class="c1"># Add this to your attract.yaml</span>
+<span class="nt">event_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_start_active</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sw_add_player</span>
+<span class="c1">##! mode: game_running</span>
+<span class="c1"># Have something in your base mode to trigger another mode (e.g. the carousel above)</span>
+<span class="c1"># and in that mode have the following (to reenable the start button):</span>
+<span class="nt">event_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_start_active</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sw_add_player</span>
+<span class="c1">#! ##! test</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! assert_player_count 1</span>
+<span class="c1">#! hit_and_release_switch s_start</span>
+<span class="c1">#! assert_player_count 1</span>
+<span class="c1">#! start_mode game_running</span>
+<span class="c1">#! hit_and_release_switch s_start</span>
+<span class="c1">#! assert_player_count 2</span>
 </code></pre></div>
 <hr />
 <div class="admonition question">

@@ -33724,35 +33724,35 @@ remove different pieces one-by-one as the number of players increases.
 In this example, we have a large score for the current player, show the
 player's custom-variable "level" in the lower-left, and their current
 ball number in the lower-right</p>
-<div class="highlight"><pre><span></span><code>slides:
-  base_slide: []
-slide_player:
-  single_player_ball_started: base_slide
-widgets:
-  base_score_widget:
-    - type: text
-      text: (score)
-  base_level_widget:
-    - type: text
-      text: LVL (player|level)
-  base_ball_widget:
-    - type: text
-      text: BALL (ball)
-widget_player:
-  # First event, before additional players have a chance to enter
-  game_started:
-    base_score_widget:
-      slide: base_slide
-    base_level_widget:
-      slide: base_slide
-    base_ball_widget:
-      slide: base_slide
-##! test
-#! start_game
-#! advance_time_and_run .1
-#! assert_text_on_top_slide &quot;0&quot;
-#! assert_text_on_top_slide &quot;LVL 0&quot;
-#! assert_text_on_top_slide &quot;BALL 1&quot;
+<div class="highlight"><pre><span></span><code><span class="nt">slides</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">base_slide</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+<span class="nt">slide_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">single_player_ball_started</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">base_slide</span>
+<span class="nt">widgets</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">base_score_widget</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(score)</span>
+<span class="w">  </span><span class="nt">base_level_widget</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LVL (player|level)</span>
+<span class="w">  </span><span class="nt">base_ball_widget</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">BALL (ball)</span>
+<span class="nt">widget_player</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># First event, before additional players have a chance to enter</span>
+<span class="w">  </span><span class="nt">game_started</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">base_score_widget</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">slide</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">base_slide</span>
+<span class="w">    </span><span class="nt">base_level_widget</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">slide</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">base_slide</span>
+<span class="w">    </span><span class="nt">base_ball_widget</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">slide</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">base_slide</span>
+<span class="c1">##! test</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_text_on_top_slide &quot;0&quot;</span>
+<span class="c1">#! assert_text_on_top_slide &quot;LVL 0&quot;</span>
+<span class="c1">#! assert_text_on_top_slide &quot;BALL 1&quot;</span>
 </code></pre></div>
 <p>This is all we need to have a nice single-player slide that shows the
 score, the ball, and a custom game-specific player variable.</p>
@@ -33774,34 +33774,34 @@ has already started their turn.</p>
 interfere with other slide behavior (e.g. bonus slides and start/end of
 turn slides). We'll keep it clean and manually clear the score slide at
 the end of each ball.</p>
-<div class="highlight"><pre><span></span><code>slides:
-  base_slide:
-    - type: text
-      text: &quot;Single Player Game&quot;
-  multiplayer_slide:
-    - type: text
-      text: &quot;Multiplayer Player Game&quot;
-slide_player:
-  single_player_ball_started: base_slide
-  multi_player_ball_started: multiplayer_slide
-  # If a second player joins during player1&#39;s turn, swap base_slide for multiplayer_slide
-  multiplayer_game:
-    base_slide:
-      action: remove
-    multiplayer_slide:
-      action: play
-  ball_will_end:
-    base_slide:
-      action: remove
-    multiplayer_slide:
-      action: remove
-##! test
-#! start_game
-#! advance_time_and_run .1
-#! assert_text_on_top_slide &quot;Single Player Game&quot;
-#! add_player
-#! advance_time_and_run .1
-#! assert_text_on_top_slide &quot;Multiplayer Player Game&quot;
+<div class="highlight"><pre><span></span><code><span class="nt">slides</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">base_slide</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Single</span><span class="nv"> </span><span class="s">Player</span><span class="nv"> </span><span class="s">Game&quot;</span>
+<span class="w">  </span><span class="nt">multiplayer_slide</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Multiplayer</span><span class="nv"> </span><span class="s">Player</span><span class="nv"> </span><span class="s">Game&quot;</span>
+<span class="nt">slide_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">single_player_ball_started</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">base_slide</span>
+<span class="w">  </span><span class="nt">multi_player_ball_started</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">multiplayer_slide</span>
+<span class="w">  </span><span class="c1"># If a second player joins during player1&#39;s turn, swap base_slide for multiplayer_slide</span>
+<span class="w">  </span><span class="nt">multiplayer_game</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">base_slide</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">remove</span>
+<span class="w">    </span><span class="nt">multiplayer_slide</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">play</span>
+<span class="w">  </span><span class="nt">ball_will_end</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">base_slide</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">remove</span>
+<span class="w">    </span><span class="nt">multiplayer_slide</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">remove</span>
+<span class="c1">##! test</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_text_on_top_slide &quot;Single Player Game&quot;</span>
+<span class="c1">#! add_player</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_text_on_top_slide &quot;Multiplayer Player Game&quot;</span>
 </code></pre></div>
 <p>With only two players, we can keep the "level" and "ball" widgets in
 the bottom left and right corners. We want to add the player_1 and

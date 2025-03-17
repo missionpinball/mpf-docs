@@ -33696,9 +33696,9 @@ switch numbers 16 to 23. Wing position 3 contains switch numbers 24 to
 31. The switch is numbered using the position of the OPP card (starting
 at 0), then a '-', and finally the switch number on the card.</p>
 <p>Enter them as a combination of board-switch, like <code>0-12</code>.</p>
-<div class="highlight"><pre><span></span><code>switches:
-  some_switch:
-    number: 0-15
+<div class="highlight"><pre><span></span><code><span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">some_switch</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0-15</span>
 </code></pre></div>
 <p>The above example configures a switch input as the first OPP card, and
 the second wing board, last input. On the microprocessor card, the input
@@ -33733,22 +33733,22 @@ The config file is fully valid for the Cobra board connected to a Linux
 PC running mpf. If you have a Cobra board but run Windows or macOS you
 have to change the <code>ports</code>. If you run a completely different hardware
 you have to adapt the <code>hardware</code> section.</p>
-<div class="highlight"><pre><span></span><code>#config_version=5
+<div class="highlight"><pre><span></span><code><span class="c1">#config_version=5</span>
 
-   hardware:
-      platform: opp
-      driverboards: gen2
+<span class="w">   </span><span class="nt">hardware</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">opp</span>
+<span class="w">      </span><span class="nt">driverboards</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gen2</span>
 
-   opp:
-      ports: /dev/ttyACM0, /dev/ttyACM1 # change this if you are not using Linux
+<span class="w">   </span><span class="nt">opp</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">ports</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/dev/ttyACM0, /dev/ttyACM1</span><span class="w"> </span><span class="c1"># change this if you are not using Linux</span>
 
-   switches:
-      my_test_switch:
-         debug: true
-         number: 0-0-16 # change this if you have connected the switch to a different input
-         tags: switch_tag1, switch_tag2
-         events_when_activated: active_event1, active_event2
-         events_when_deactivated: inactive_event1
+<span class="w">   </span><span class="nt">switches</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">my_test_switch</span><span class="p">:</span>
+<span class="w">         </span><span class="nt">debug</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">         </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0-0-16</span><span class="w"> </span><span class="c1"># change this if you have connected the switch to a different input</span>
+<span class="w">         </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">switch_tag1, switch_tag2</span>
+<span class="w">         </span><span class="nt">events_when_activated</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">active_event1, active_event2</span>
+<span class="w">         </span><span class="nt">events_when_deactivated</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">inactive_event1</span>
 </code></pre></div>
 <p>The important part for this example is to understand the events which
 are being posted. First of all please obey that we have set

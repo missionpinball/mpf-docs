@@ -33695,19 +33695,19 @@ steps in either direction as required by the application.</p>
 <p>See <a href="../servos/">Servos</a> for more
 details.</p>
 <h2 id="example-config">Example config</h2>
-<div class="highlight"><pre><span></span><code>#config_version=5
-switches:
-  s_home:
-    number:
-steppers:
-  stepper1:
-    number: 1              # depends on your hardware
-    homing_mode: switch
-    homing_switch: s_home
-    named_positions:
-      10: move_to_position_1
-      20: move_to_position_2
-      50: move_to_position_3
+<div class="highlight"><pre><span></span><code><span class="c1">#config_version=5</span>
+<span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_home</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="nt">steppers</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">stepper1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w">              </span><span class="c1"># depends on your hardware</span>
+<span class="w">    </span><span class="nt">homing_mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">switch</span>
+<span class="w">    </span><span class="nt">homing_switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_home</span>
+<span class="w">    </span><span class="nt">named_positions</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">10</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">move_to_position_1</span>
+<span class="w">      </span><span class="nt">20</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">move_to_position_2</span>
+<span class="w">      </span><span class="nt">50</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">move_to_position_3</span>
 </code></pre></div>
 <p>When you post <code>move_to_position_1</code> the stepper will move to the position
 <code>10</code>. Similarly, it will move to <code>20</code> when you post <code>move_to_position_2</code>

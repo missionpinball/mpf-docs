@@ -33693,10 +33693,10 @@ number settings here. Instead use the numbers from the
 that contains a bunch of letters and numbers which specify the specific
 columns and row outputs that make up each lamp. It's probably easiest to
 look at an example.</p>
-<div class="highlight"><pre><span></span><code>lights:
-  some_light:
-    subtype: matrix
-    number: C-A2-B0-0:R-A2-B1-0
+<div class="highlight"><pre><span></span><code><span class="nt">lights</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">some_light</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">matrix</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">C-A2-B0-0:R-A2-B1-0</span>
 </code></pre></div>
 <p>Notice there are two parts to the number, separated by a colon.</p>
 <p>The first part is the column information:</p>
@@ -33728,12 +33728,12 @@ in your lamp matrices, and there are all sorts of LEDs like
 timing of how the columns are activated. You can do that in the <code>p_roc:</code>
 section of your machine-wide config.</p>
 <p>For P-ROC:</p>
-<div class="highlight"><pre><span></span><code>p_roc:
-  lamp_matrix_strobe_time: 100ms
+<div class="highlight"><pre><span></span><code><span class="nt">p_roc</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">lamp_matrix_strobe_time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100ms</span>
 </code></pre></div>
 <p>For P3-ROC:</p>
-<div class="highlight"><pre><span></span><code>p_roc:
-  lamp_matrix_strobe_time: 100ms
+<div class="highlight"><pre><span></span><code><span class="nt">p_roc</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">lamp_matrix_strobe_time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100ms</span>
 </code></pre></div>
 <p>100ms is the default setting (which is used if you don't add this
 entry), but you can play with this value to see how it affects your

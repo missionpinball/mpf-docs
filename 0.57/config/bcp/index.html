@@ -33744,20 +33744,20 @@ communicates with the standalone media controller.</p>
 <p>There's a default <code>bcp:</code> section in the default <code>mpfconfig.yaml</code>
 system-wide defaults section that should be fine to get started, and
 then you can override it if needed for a specific situation:</p>
-<div class="highlight"><pre><span></span><code>bcp:
-  connections:
-    local_display:
-      host: localhost
-      port: 5050
-      type: mpf.core.bcp.bcp_socket_client.BCPClientSocket
-      required: true
-      exit_on_close: true
-  servers:
-    url_style:
-      ip: 127.0.0.1
-      port: 5051
-      type: mpf.core.bcp.bcp_socket_client.BCPClientSocket
-  debug: false
+<div class="highlight"><pre><span></span><code><span class="nt">bcp</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">connections</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">local_display</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">localhost</span>
+<span class="w">      </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5050</span>
+<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mpf.core.bcp.bcp_socket_client.BCPClientSocket</span>
+<span class="w">      </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">      </span><span class="nt">exit_on_close</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">servers</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">url_style</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">ip</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">127.0.0.1</span>
+<span class="w">      </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5051</span>
+<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mpf.core.bcp.bcp_socket_client.BCPClientSocket</span>
+<span class="w">  </span><span class="nt">debug</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 </code></pre></div>
 <h2 id="optional-settings">Optional settings</h2>
 <p>The following sections are optional in the <code>bcp:</code> section of your

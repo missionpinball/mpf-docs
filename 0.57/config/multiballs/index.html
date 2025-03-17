@@ -34138,53 +34138,53 @@ be used in mode-specific config files.</p>
 <p>Here's an example which contains several different multiball configs.
 (In the real world, you'd probably only have one multiball for each
 mode.)</p>
-<div class="highlight"><pre><span></span><code>#! switches:
-#!   s_ball1:
-#!     number:
-#! coils:
-#!   c_eject:
-#!     number:
-#! ball_devices:
-#!   bd_lock:
-#!     eject_coil: c_eject
-#!     ball_switches: s_ball1
-multiballs:
-  add_a_ball:
-    ball_count: 1
-    ball_count_type: add
-    shoot_again: 30s
-    enable_events: mb4_enable
-    disable_events: mb4_disable
-    start_events: mb4_start
-    stop_events: mb4_stop
-  quick_2_ball:
-    ball_count: 2
-    ball_count_type: total
-    shoot_again: 20s
-    start_events: mb11_start
-    ball_locks: bd_lock
-  release_all_locked_balls:
-    ball_count: current_player.lock_mb6_locked_balls
-    ball_count_type: add
-    shoot_again: 20s
-    start_events: mb12_start
-    ball_locks: bd_lock
-  quick_add_2_ball:
-    ball_count: 2
-    ball_count_type: add
-    shoot_again: 0
-    start_events: mb6_start
-    ball_locks: bd_lock
-  full_ball_save:
-    ball_count: 2
-    shoot_again: 30s
-    hurry_up_time: 10s
-    grace_period: 5s
-    add_a_ball_events: add_ball
-    add_a_ball_shoot_again: 20s
-    add_a_ball_hurry_up_time: 5s
-    add_a_ball_grace_period: 10s
-    start_events: mb20_start
+<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
+<span class="c1">#!   s_ball1:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#! coils:</span>
+<span class="c1">#!   c_eject:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#! ball_devices:</span>
+<span class="c1">#!   bd_lock:</span>
+<span class="c1">#!     eject_coil: c_eject</span>
+<span class="c1">#!     ball_switches: s_ball1</span>
+<span class="nt">multiballs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">add_a_ball</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">ball_count</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">ball_count_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">add</span>
+<span class="w">    </span><span class="nt">shoot_again</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30s</span>
+<span class="w">    </span><span class="nt">enable_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mb4_enable</span>
+<span class="w">    </span><span class="nt">disable_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mb4_disable</span>
+<span class="w">    </span><span class="nt">start_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mb4_start</span>
+<span class="w">    </span><span class="nt">stop_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mb4_stop</span>
+<span class="w">  </span><span class="nt">quick_2_ball</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">ball_count</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="w">    </span><span class="nt">ball_count_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">total</span>
+<span class="w">    </span><span class="nt">shoot_again</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20s</span>
+<span class="w">    </span><span class="nt">start_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mb11_start</span>
+<span class="w">    </span><span class="nt">ball_locks</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bd_lock</span>
+<span class="w">  </span><span class="nt">release_all_locked_balls</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">ball_count</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">current_player.lock_mb6_locked_balls</span>
+<span class="w">    </span><span class="nt">ball_count_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">add</span>
+<span class="w">    </span><span class="nt">shoot_again</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20s</span>
+<span class="w">    </span><span class="nt">start_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mb12_start</span>
+<span class="w">    </span><span class="nt">ball_locks</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bd_lock</span>
+<span class="w">  </span><span class="nt">quick_add_2_ball</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">ball_count</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="w">    </span><span class="nt">ball_count_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">add</span>
+<span class="w">    </span><span class="nt">shoot_again</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">start_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mb6_start</span>
+<span class="w">    </span><span class="nt">ball_locks</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bd_lock</span>
+<span class="w">  </span><span class="nt">full_ball_save</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">ball_count</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="w">    </span><span class="nt">shoot_again</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30s</span>
+<span class="w">    </span><span class="nt">hurry_up_time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10s</span>
+<span class="w">    </span><span class="nt">grace_period</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5s</span>
+<span class="w">    </span><span class="nt">add_a_ball_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">add_ball</span>
+<span class="w">    </span><span class="nt">add_a_ball_shoot_again</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20s</span>
+<span class="w">    </span><span class="nt">add_a_ball_hurry_up_time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5s</span>
+<span class="w">    </span><span class="nt">add_a_ball_grace_period</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10s</span>
+<span class="w">    </span><span class="nt">start_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mb20_start</span>
 </code></pre></div>
 <h2 id="required-settings">Required settings</h2>
 <p>The following sections are required in the <code>multiballs:</code> section of your

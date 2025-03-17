@@ -34079,12 +34079,12 @@ steps. For the Accrual to complete, you need Step 1 <em>AND</em> Step 2 <em>AND<
 Step 3. But since you can enter more than one event for each step, you
 could think of those like <em>OR</em>s. So you have Step 1 (event1 <em>OR</em> event2)
 <em>AND</em> Step 2 (event3) <em>AND</em> Step 3 (event4 <em>OR</em> event5), like this:</p>
-<div class="highlight"><pre><span></span><code>accruals:
-  my_accrual:
-    events:
-      - event1, event2
-      - event3
-      - event4, event5
+<div class="highlight"><pre><span></span><code><span class="nt">accruals</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_accrual</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">events</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">event1, event2</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">event3</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">event4, event5</span>
 </code></pre></div>
 <p>It might seem kind of confusing at first, but you can build this up
 bit-by-bit and figure them out as you go along.</p>
@@ -34093,21 +34093,21 @@ MPF's built-in events or a made-up event that another logic block posts
 when it completes. (This is how you chain multiple logic blocks together
 to form complex logic.)</p>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>accruals:
-  logic_block_1:
-    events:
-      - event1
-      - event2
-      - event3
-      - event4
-      - event5
-    events_when_complete: logic_block_1_done
-  logic_block_2:
-    events:
-      - event1, event2, event3
-      - event4
-      - event5
-    events_when_complete: logic_block_2_done
+<div class="highlight"><pre><span></span><code><span class="nt">accruals</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">logic_block_1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">events</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">event1</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">event2</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">event3</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">event4</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">event5</span>
+<span class="w">    </span><span class="nt">events_when_complete</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">logic_block_1_done</span>
+<span class="w">  </span><span class="nt">logic_block_2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">events</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">event1, event2, event3</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">event4</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">event5</span>
+<span class="w">    </span><span class="nt">events_when_complete</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">logic_block_2_done</span>
 </code></pre></div>
 <p>In the example above, there are two logic blocks. The first one just has
 five steps that need to complete (in any order since we're dealing with

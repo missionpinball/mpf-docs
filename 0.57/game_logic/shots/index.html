@@ -33659,18 +33659,18 @@ still running under the multiball mode.</p>
 <p>It's important to understand, however, that in order to achieve these different results using the same shot, that you will need to define your shots on a "per mode" basis. Meaning, in the example above, you would define the ramp shot once in your base mode, and then you would define the same shot again (with a name distinct from the shot name used in the base mode) in your multiball mode. This is also important when you begin to apply shot profiles to your shots, as you'll likely want distinct profile behavior per mode you design as well.</p>
 <h2 id="example">Example</h2>
 <p>This is an example of a shot in a mode:</p>
-<div class="highlight"><pre><span></span><code>#! switches:
-#!   lane_l:
-#!     number:
-#! lights:
-#!   lane_l:
-#!     number:
-##! mode: inlanes
-shots:
-  my_shot:
-    switch: lane_l
-    show_tokens:
-      light: lane_l
+<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
+<span class="c1">#!   lane_l:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#! lights:</span>
+<span class="c1">#!   lane_l:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">##! mode: inlanes</span>
+<span class="nt">shots</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_shot</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lane_l</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">light</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lane_l</span>
 </code></pre></div>
 <p>The shot will use the default profile which has the states <code>unlit</code> and
 <code>lit</code>. It will start <code>unlit</code> and go to <code>lit</code> after the first hit. The
@@ -33689,32 +33689,32 @@ the shot.</p>
 <p>:   String representation of the state of the shot. Might be 'lit',
     'unlit' or whatever is inside your shot_profile.</p>
 <p>This is an example:</p>
-<div class="highlight"><pre><span></span><code>#! switches:
-#!   lane_l:
-#!     number:
-#!   s_target:
-#!     number:
-#! lights:
-#!   lane_l:
-#!     number:
-##! mode: inlanes
-shots:
-  my_shot:
-    switch: lane_l
-    show_tokens:
-      light: lane_l
-event_player:
-  s_target_active{device.shots.my_shot.state_name==&#39;lit&#39;}: start_multiball
-##! test
-#! start_game
-#! start_mode inlanes
-#! mock_event start_multiball
-#! hit_and_release_switch s_target
-#! assert_event_not_called start_multiball
-#! hit_and_release_switch lane_l
-#! assert_event_not_called start_multiball
-#! hit_and_release_switch s_target
-#! assert_event_called start_multiball
+<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
+<span class="c1">#!   lane_l:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   s_target:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#! lights:</span>
+<span class="c1">#!   lane_l:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">##! mode: inlanes</span>
+<span class="nt">shots</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_shot</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lane_l</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">light</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lane_l</span>
+<span class="nt">event_player</span><span class="p">:</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">s_target_active{device.shots.my_shot.state_name==&#39;lit&#39;}</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start_multiball</span>
+<span class="c1">##! test</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! start_mode inlanes</span>
+<span class="c1">#! mock_event start_multiball</span>
+<span class="c1">#! hit_and_release_switch s_target</span>
+<span class="c1">#! assert_event_not_called start_multiball</span>
+<span class="c1">#! hit_and_release_switch lane_l</span>
+<span class="c1">#! assert_event_not_called start_multiball</span>
+<span class="c1">#! hit_and_release_switch s_target</span>
+<span class="c1">#! assert_event_called start_multiball</span>
 </code></pre></div>
 <p>In the example the event <code>start_multiball</code> will be posted when the
 switch <code>s_target</code> is hit and the shot is in state <code>lit</code>.</p>

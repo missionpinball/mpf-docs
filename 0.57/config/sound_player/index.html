@@ -34089,17 +34089,17 @@ a step.</p>
 <p>The <code>sound_player:</code> section of your config is where you specify actions
 to perform on sounds when MPF events are received.</p>
 <p>This is an example:</p>
-<div class="highlight"><pre><span></span><code>sound_player:
-  mode_attract_started:
-    song_01:
-      action: play
-      loops: -1
-  mode_attract_stopped:
-    song_01:
-      action: stop
-  slingshot_hit:
-    zap:
-      block: true  # &quot;blocks&quot; this event from being passed to sound player sections in lower-priority modes
+<div class="highlight"><pre><span></span><code><span class="nt">sound_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">mode_attract_started</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">song_01</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">play</span>
+<span class="w">      </span><span class="nt">loops</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-1</span>
+<span class="w">  </span><span class="nt">mode_attract_stopped</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">song_01</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stop</span>
+<span class="w">  </span><span class="nt">slingshot_hit</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">zap</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">block</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w">  </span><span class="c1"># &quot;blocks&quot; this event from being passed to sound player sections in lower-priority modes</span>
 </code></pre></div>
 <p>Additional information may be found in the
 <a href="../../config_players/sound_player/">sound_player</a> documentation.</p>
@@ -34173,16 +34173,16 @@ but then in a special mode (like super jets) you want that switch to
 play a different sound but you don't also want the base mode to play
 the sound configured there (we don't want two simultaneous sounds for
 the jet bumper, just one).</p>
-<div class="highlight"><pre><span></span><code>##! mode: mode1
-sound_player:
-  sw_jet_bumper_active:
-    super_jet_bumper_sound:
-      block: true
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: mode1</span>
+<span class="nt">sound_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">sw_jet_bumper_active</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">super_jet_bumper_sound</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">block</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
 <p>There is also a shorthand way (express config format):</p>
-<div class="highlight"><pre><span></span><code>##! mode: mode1
-sound_player:
-  sw_jet_bumper_active: super_jet_bumper_sound|block
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: mode1</span>
+<span class="nt">sound_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">sw_jet_bumper_active</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">super_jet_bumper_sound|block</span>
 </code></pre></div>
 <h3 id="bus">bus:</h3>
 <div class="admonition info">

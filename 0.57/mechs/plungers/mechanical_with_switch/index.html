@@ -33794,9 +33794,9 @@ coil fired option, then follow the <a href="../auto_manual/">/mechs/playfields/b
 <h2 id="1-add-the-switch">1. Add the switch</h2>
 <p>The first step is to add your plunger lane switches to the <code>switches:</code>
 section of your machine config file. Here's an example:</p>
-<div class="highlight"><pre><span></span><code>switches:
-  s_plunger_lane:
-    number: 2-6
+<div class="highlight"><pre><span></span><code><span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_plunger_lane</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2-6</span>
 </code></pre></div>
 <p>Note that we configured this switches as number <code>2-6</code>, but you should
 use the actual switch numbers for your control system that the switches
@@ -33812,13 +33812,13 @@ if it's just for a short time). So your plunger lane is a ball device.</p>
 entries for the ball switch.</p>
 <p>Here's an example. Note that in this case, we've left out the other
 ball devices (such as your trough and/or drain):</p>
-<div class="highlight"><pre><span></span><code>#! switches:
-#!   s_plunger_lane:
-#!     number: 2-6
-ball_devices:
-  bd_plunger:
-    ball_switches: s_plunger_lane
-    mechanical_eject: true
+<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
+<span class="c1">#!   s_plunger_lane:</span>
+<span class="c1">#!     number: 2-6</span>
+<span class="nt">ball_devices</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">bd_plunger</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">ball_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_plunger_lane</span>
+<span class="w">    </span><span class="nt">mechanical_eject</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
 <p>In the example above, we named the plunger device <em>bd_plunger</em>, but if
 course you can name it whatever you want. You might use
@@ -33837,13 +33837,13 @@ disappear from this device, and when that happens, and eject attempt has
 been made.</p>
 <p>To do that, add <code>mechanical_eject: true</code> to your plunger device, like
 this:</p>
-<div class="highlight"><pre><span></span><code>#! switches:
-#!   s_plunger_lane:
-#!     number: 2-6
-ball_devices:
-  bd_plunger:
-    ball_switches: s_plunger_lane
-    mechanical_eject: true
+<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
+<span class="c1">#!   s_plunger_lane:</span>
+<span class="c1">#!     number: 2-6</span>
+<span class="nt">ball_devices</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">bd_plunger</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">ball_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_plunger_lane</span>
+<span class="w">    </span><span class="nt">mechanical_eject</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
 <h2 id="4-configure-the-eject-confirmation-target-timeouts">4. Configure the eject confirmation, target &amp; timeouts</h2>
 <p>Next you need to configure some settings that will let your plunger know
@@ -33889,87 +33889,87 @@ probably around 3s.</p>
 <p>Here are some examples of these settings in action.</p>
 <p>First, for a typical coil-fired plunger lane / catapult that ejects the
 ball directly to the playfield: (This is probably 99% of all cases)</p>
-<div class="highlight"><pre><span></span><code>#! switches:
-#!   s_plunger_lane:
-#!     number: 2-6
-ball_devices:
-  bd_plunger:
-#!     ball_switches: s_plunger_lane
-#!     mechanical_eject: true
-    # ...
-    eject_timeouts: 3s
+<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
+<span class="c1">#!   s_plunger_lane:</span>
+<span class="c1">#!     number: 2-6</span>
+<span class="nt">ball_devices</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">bd_plunger</span><span class="p">:</span>
+<span class="c1">#!     ball_switches: s_plunger_lane</span>
+<span class="c1">#!     mechanical_eject: true</span>
+<span class="w">    </span><span class="c1"># ...</span>
+<span class="w">    </span><span class="nt">eject_timeouts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3s</span>
 </code></pre></div>
 <p>Next, for a coil-fired plunger that has a switch at the exit of the
 plunger lane that is only hit if the ball has made it out of the plunger
 and cannot be hit by a random ball on the playfield:</p>
-<div class="highlight"><pre><span></span><code>#! switches:
-#!   s_plunger_lane:
-#!     number: 2-6
-#!   s_plunger_lane_exit:
-#!     number: 2-7
-ball_devices:
-  bd_plunger:
-#!     ball_switches: s_plunger_lane
-#!     mechanical_eject: true
-    # ...
-    confirm_eject_type: switch
-    confirm_eject_switch: s_plunger_lane_exit
-    eject_timeouts: 3s
+<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
+<span class="c1">#!   s_plunger_lane:</span>
+<span class="c1">#!     number: 2-6</span>
+<span class="c1">#!   s_plunger_lane_exit:</span>
+<span class="c1">#!     number: 2-7</span>
+<span class="nt">ball_devices</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">bd_plunger</span><span class="p">:</span>
+<span class="c1">#!     ball_switches: s_plunger_lane</span>
+<span class="c1">#!     mechanical_eject: true</span>
+<span class="w">    </span><span class="c1"># ...</span>
+<span class="w">    </span><span class="nt">confirm_eject_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">switch</span>
+<span class="w">    </span><span class="nt">confirm_eject_switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_plunger_lane_exit</span>
+<span class="w">    </span><span class="nt">eject_timeouts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3s</span>
 </code></pre></div>
 <p>Next, if your plunger lane ejects into another ball device (a cannon, in
 this case):</p>
-<div class="highlight"><pre><span></span><code>#! switches:
-#!   s_plunger_lane:
-#!     number: 2-6
-#!   s_canon:
-#!     number: 3-1
-#! coils:
-#!   c_canon:
-#!     number: 2-2
-#!     default_pulse_ms: 20
-ball_devices:
-#!   bd_cannon:
-#!     ball_switches: s_canon
-#!     eject_coil: c_canon
-  bd_plunger:
-#!     ball_switches: s_plunger_lane
-#!     mechanical_eject: true
-    # ...
-    eject_targets: bd_cannon
-    eject_timeouts: 2s
+<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
+<span class="c1">#!   s_plunger_lane:</span>
+<span class="c1">#!     number: 2-6</span>
+<span class="c1">#!   s_canon:</span>
+<span class="c1">#!     number: 3-1</span>
+<span class="c1">#! coils:</span>
+<span class="c1">#!   c_canon:</span>
+<span class="c1">#!     number: 2-2</span>
+<span class="c1">#!     default_pulse_ms: 20</span>
+<span class="nt">ball_devices</span><span class="p">:</span>
+<span class="c1">#!   bd_cannon:</span>
+<span class="c1">#!     ball_switches: s_canon</span>
+<span class="c1">#!     eject_coil: c_canon</span>
+<span class="w">  </span><span class="nt">bd_plunger</span><span class="p">:</span>
+<span class="c1">#!     ball_switches: s_plunger_lane</span>
+<span class="c1">#!     mechanical_eject: true</span>
+<span class="w">    </span><span class="c1"># ...</span>
+<span class="w">    </span><span class="nt">eject_targets</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bd_cannon</span>
+<span class="w">    </span><span class="nt">eject_timeouts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2s</span>
 </code></pre></div>
 <h2 id="5-set-your-troughdrain-device-eject_targets">5. Set your trough/drain device eject_targets</h2>
 <p>Once you have your plunger device set up, you need to go back to your
 trough or ball drain device and add the new plunger to your trough's
 <code>eject_targets:</code>, like this:</p>
-<div class="highlight"><pre><span></span><code>#! switches:
-#!   s_plunger_lane:
-#!     number: 2-6
-#!   s_trough1:
-#!     number: 3-1
-#!   s_trough2:
-#!     number: 3-2
-#!   s_trough3:
-#!     number: 3-3
-#!   s_trough4:
-#!     number: 3-4
-#!   s_trough_jam:
-#!     number: 3-5
-#! coils:
-#!   c_trough_eject:
-#!     number: 2-2
-#!     default_pulse_ms: 20
-ball_devices:
-  bd_trough:
-    ball_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough_jam
-    eject_coil: c_trough_eject
-    tags: trough, home, drain
-    jam_switch: s_trough_jam
-    eject_coil_jam_pulse: 15ms
-    eject_targets: bd_plunger
-#!   bd_plunger:
-#!     ball_switches: s_plunger_lane
-#!     mechanical_eject: true
+<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
+<span class="c1">#!   s_plunger_lane:</span>
+<span class="c1">#!     number: 2-6</span>
+<span class="c1">#!   s_trough1:</span>
+<span class="c1">#!     number: 3-1</span>
+<span class="c1">#!   s_trough2:</span>
+<span class="c1">#!     number: 3-2</span>
+<span class="c1">#!   s_trough3:</span>
+<span class="c1">#!     number: 3-3</span>
+<span class="c1">#!   s_trough4:</span>
+<span class="c1">#!     number: 3-4</span>
+<span class="c1">#!   s_trough_jam:</span>
+<span class="c1">#!     number: 3-5</span>
+<span class="c1">#! coils:</span>
+<span class="c1">#!   c_trough_eject:</span>
+<span class="c1">#!     number: 2-2</span>
+<span class="c1">#!     default_pulse_ms: 20</span>
+<span class="nt">ball_devices</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">bd_trough</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">ball_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_trough1, s_trough2, s_trough3, s_trough4, s_trough_jam</span>
+<span class="w">    </span><span class="nt">eject_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_trough_eject</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">trough, home, drain</span>
+<span class="w">    </span><span class="nt">jam_switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_trough_jam</span>
+<span class="w">    </span><span class="nt">eject_coil_jam_pulse</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">15ms</span>
+<span class="w">    </span><span class="nt">eject_targets</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bd_plunger</span>
+<span class="c1">#!   bd_plunger:</span>
+<span class="c1">#!     ball_switches: s_plunger_lane</span>
+<span class="c1">#!     mechanical_eject: true</span>
 </code></pre></div>
 <p>Of course you'd add the name that you gave your plunger device, which
 could be something like "bd_catapult" or whatever you called it.</p>
@@ -33981,17 +33981,17 @@ add this to the second device (the one that feeds the plunger).</p>
 device is used to add a new ball into play.</p>
 <p>To do that, add your new plunger ball device as <code>default_source_device</code>
 in the default <code>playfield</code>, like this:</p>
-<div class="highlight"><pre><span></span><code>#! switches:
-#!   s_plunger_lane:
-#!     number: 2-6
-#! ball_devices:
-#!   bd_plunger:
-#!     ball_switches: s_plunger_lane
-#!     mechanical_eject: true
-playfields:
-  playfield:
-    default_source_device: bd_plunger
-    tags: default
+<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
+<span class="c1">#!   s_plunger_lane:</span>
+<span class="c1">#!     number: 2-6</span>
+<span class="c1">#! ball_devices:</span>
+<span class="c1">#!   bd_plunger:</span>
+<span class="c1">#!     ball_switches: s_plunger_lane</span>
+<span class="c1">#!     mechanical_eject: true</span>
+<span class="nt">playfields</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">playfield</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">default_source_device</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bd_plunger</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span>
 </code></pre></div>
 <h2 id="7-tag-your-playfield-switches">7. Tag your playfield switches</h2>
 <p>Since the plunger lane ejects balls to the playfield, it's important
@@ -34005,41 +34005,41 @@ that ejects the ball directly to the playfield. Note that this config
 does not include the switches and coils for the trough.</p>
 <p>This config is what probably 99% of machines with coil-fired plungers
 will use:</p>
-<div class="highlight"><pre><span></span><code>switches:
-  s_plunger_lane:
-    number: 2-6
-  s_launch_button:
-    number: 1-5
-  s_trough1:
-    number: 3-1
-  s_trough2:
-    number: 3-2
-  s_trough3:
-    number: 3-3
-  s_trough4:
-    number: 3-4
-  s_trough_jam:
-    number: 3-5
-coils:
-  c_trough_eject:
-    number: 3-1
-    default_pulse_ms: 20
-ball_devices:
-  bd_trough:
-    ball_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough_jam
-    eject_coil: c_trough_eject
-    tags: trough, home, drain
-    jam_switch: s_trough_jam
-    eject_coil_jam_pulse: 15ms
-    eject_targets: bd_plunger
-  bd_plunger:
-    ball_switches: s_plunger_lane
-    mechanical_eject: true
-    eject_timeouts: 3s
-playfields:
-  playfield:
-    default_source_device: bd_plunger
-    tags: default
+<div class="highlight"><pre><span></span><code><span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_plunger_lane</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2-6</span>
+<span class="w">  </span><span class="nt">s_launch_button</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1-5</span>
+<span class="w">  </span><span class="nt">s_trough1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3-1</span>
+<span class="w">  </span><span class="nt">s_trough2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3-2</span>
+<span class="w">  </span><span class="nt">s_trough3</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3-3</span>
+<span class="w">  </span><span class="nt">s_trough4</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3-4</span>
+<span class="w">  </span><span class="nt">s_trough_jam</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3-5</span>
+<span class="nt">coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">c_trough_eject</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3-1</span>
+<span class="w">    </span><span class="nt">default_pulse_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span>
+<span class="nt">ball_devices</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">bd_trough</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">ball_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_trough1, s_trough2, s_trough3, s_trough4, s_trough_jam</span>
+<span class="w">    </span><span class="nt">eject_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_trough_eject</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">trough, home, drain</span>
+<span class="w">    </span><span class="nt">jam_switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_trough_jam</span>
+<span class="w">    </span><span class="nt">eject_coil_jam_pulse</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">15ms</span>
+<span class="w">    </span><span class="nt">eject_targets</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bd_plunger</span>
+<span class="w">  </span><span class="nt">bd_plunger</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">ball_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_plunger_lane</span>
+<span class="w">    </span><span class="nt">mechanical_eject</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">eject_timeouts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3s</span>
+<span class="nt">playfields</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">playfield</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">default_source_device</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bd_plunger</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span>
 </code></pre></div>
 <h2 id="what-if-it-doesnt-work">What if it doesn't work?</h2>
 <p>Have a look at our

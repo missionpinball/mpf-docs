@@ -33644,56 +33644,56 @@ over serial but you have to make sure that your serial is fast enough to
 provide sufficient throughput (at least 1.5Mbaud). This can be
 configured using <code>runtime_baud</code> (as described in
 <a href="../../../config/">Config file reference</a>):</p>
-<div class="highlight"><pre><span></span><code>hardware:
-  platform: spike
-spike:
-  port: /dev/ttyUSB0
-  baud: 115200
-  runtime_baud: 2000000       # play with this setting
-  nodes: 0, 1, 8, 9, 10, 11
+<div class="highlight"><pre><span></span><code><span class="nt">hardware</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">spike</span>
+<span class="nt">spike</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/dev/ttyUSB0</span>
+<span class="w">  </span><span class="nt">baud</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">115200</span>
+<span class="w">  </span><span class="nt">runtime_baud</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2000000</span><span class="w">       </span><span class="c1"># play with this setting</span>
+<span class="w">  </span><span class="nt">nodes</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0, 1, 8, 9, 10, 11</span>
 </code></pre></div>
 <p>Then configure your dmd like in this example:</p>
-<div class="highlight"><pre><span></span><code>displays:
-  window:  # on screen window
-    width: 600
-    height: 200
-  dmd:  # source display for the DMD
-    width: 128
-    height: 32
-    default: true
-dmds:
-  my_dmd:
-    platform: spike
-    fps: 30
-# some default slides (you don&#39;t need those but they are a nice start)
-slides:
-  window_slide_1:  # slide we&#39;ll show in the on-screen window
-    - type: display
-      width: 512
-      height: 128
-      effects:
-        - type: dmd
-  dmd_slide_1:  # slide we&#39;ll show on the physical DMD
-    - type: text
-      text: MPF
-      font_size: 30
-      color: red
-      x: 0
-      animations:
-        add_to_slide:
-          - property: x
-            value: 250
-            duration: 30
-            relative: true
-slide_player:
-  init_done:
-    window_slide_1:
-      target: window
-    dmd_slide_1:
-      target: dmd
-##! test
-#! assert_text_on_top_slide MPF dmd
-#! assert_text_on_top_slide MPF window
+<div class="highlight"><pre><span></span><code><span class="nt">displays</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">window</span><span class="p">:</span><span class="w">  </span><span class="c1"># on screen window</span>
+<span class="w">    </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">600</span>
+<span class="w">    </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">200</span>
+<span class="w">  </span><span class="nt">dmd</span><span class="p">:</span><span class="w">  </span><span class="c1"># source display for the DMD</span>
+<span class="w">    </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">128</span>
+<span class="w">    </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">32</span>
+<span class="w">    </span><span class="nt">default</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="nt">dmds</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_dmd</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">spike</span>
+<span class="w">    </span><span class="nt">fps</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+<span class="c1"># some default slides (you don&#39;t need those but they are a nice start)</span>
+<span class="nt">slides</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">window_slide_1</span><span class="p">:</span><span class="w">  </span><span class="c1"># slide we&#39;ll show in the on-screen window</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">display</span>
+<span class="w">      </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">512</span>
+<span class="w">      </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">128</span>
+<span class="w">      </span><span class="nt">effects</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dmd</span>
+<span class="w">  </span><span class="nt">dmd_slide_1</span><span class="p">:</span><span class="w">  </span><span class="c1"># slide we&#39;ll show on the physical DMD</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MPF</span>
+<span class="w">      </span><span class="nt">font_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+<span class="w">      </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
+<span class="w">      </span><span class="nt">x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">      </span><span class="nt">animations</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">add_to_slide</span><span class="p">:</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">property</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">x</span>
+<span class="w">            </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">250</span>
+<span class="w">            </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+<span class="w">            </span><span class="nt">relative</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="nt">slide_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">init_done</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">window_slide_1</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">window</span>
+<span class="w">    </span><span class="nt">dmd_slide_1</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dmd</span>
+<span class="c1">##! test</span>
+<span class="c1">#! assert_text_on_top_slide MPF dmd</span>
+<span class="c1">#! assert_text_on_top_slide MPF window</span>
 </code></pre></div>
 <p>Note that the <a href="../../../mc/displays/dmd/">Using a traditional (single color) physical DMD</a>
 guide has more details on the window and slide settings used in this

@@ -33686,13 +33686,13 @@ boards) to the controller.</p>
 <p>The <code>number:</code> setting for each simple LED is its board's Address ID
 number in the PKONE chain, then the dash, then the simple LED output
 number.</p>
-<div class="highlight"><pre><span></span><code>lights:
-  special_light:
-    number: 0-1    # Lightshow board with Address ID 0, simple LED 1
-    subtype: simple
-  some_other_light:
-    number: 2-10    # Lightshow board with Address ID 2, simple LED 10
-    subtype: simple
+<div class="highlight"><pre><span></span><code><span class="nt">lights</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">special_light</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0-1</span><span class="w">    </span><span class="c1"># Lightshow board with Address ID 0, simple LED 1</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">simple</span>
+<span class="w">  </span><span class="nt">some_other_light</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2-10</span><span class="w">    </span><span class="c1"># Lightshow board with Address ID 2, simple LED 10</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">simple</span>
 </code></pre></div>
 <p>Notes:</p>
 <ul>

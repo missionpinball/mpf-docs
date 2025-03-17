@@ -33761,9 +33761,9 @@ address your coil and it cannot continue without a number.</p>
 <h2 id="examples">Examples</h2>
 <h3 id="physical-coils">Physical Coils</h3>
 <p>This is how a coil should look:</p>
-<div class="highlight"><pre><span></span><code>coils:
-  your_coil:
-    number: 1
+<div class="highlight"><pre><span></span><code><span class="nt">coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">your_coil</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
 </code></pre></div>
 <p>The actual number depends on your hardware platform. See the
 <a href="../../hardware/numbers/">How to configure "number:" settings</a> guide for details.</p>
@@ -33772,10 +33772,10 @@ address your coil and it cannot continue without a number.</p>
 later. This is a problem for your physical hardware controller but you
 can tell MPF to use the <code>virtual</code> hardware platform for one particular
 coil:</p>
-<div class="highlight"><pre><span></span><code>coils:
-  your_virtual_coil:
-    number:
-    platform: virtual
+<div class="highlight"><pre><span></span><code><span class="nt">coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">your_virtual_coil</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">virtual</span>
 </code></pre></div>
 <p>In this case the number can be empty.</p>
 <h2 id="need-more-help-troubleshooting">Need more help troubleshooting?</h2>

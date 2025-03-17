@@ -33828,11 +33828,11 @@ scanning the file system to build up a list of asset files it finds.
 Then it looks at the config to see if there are any additional settings
 specified for each asset.</p>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>videos:
-  intro_video:
-    width: 100
-    height: 70
-    file: mpf_video_small.mpg
+<div class="highlight"><pre><span></span><code><span class="nt">videos</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">intro_video</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="w">    </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">70</span>
+<span class="w">    </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mpf_video_small.mpg</span>
 </code></pre></div>
 <p>So in the example above, if the asset manager found a file called
 <code>mpf_video_small.mpg</code> on disk, then it will also see the <code>intro_video</code>

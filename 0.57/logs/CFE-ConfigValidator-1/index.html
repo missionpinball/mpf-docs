@@ -33797,27 +33797,27 @@ Certain devices enforce the latter.</p>
 <h2 id="examples">Examples</h2>
 <p>For instance, a <a href="../../config/counters/">counter</a> can store its state in a player variable which is only
 possible in a game mode:</p>
-<div class="highlight"><pre><span></span><code>##! mode: my_game_mode
-mode:
-  start_events: ball_started
-  stop_events: ball_stopped
-  game_mode: true    # this is the default
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: my_game_mode</span>
+<span class="nt">mode</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">start_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ball_started</span>
+<span class="w">  </span><span class="nt">stop_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ball_stopped</span>
+<span class="w">  </span><span class="nt">game_mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w">    </span><span class="c1"># this is the default</span>
 
-counters:
-  counter_per_player:
-    count_events: count_up
-    persist_state: true
+<span class="nt">counters</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">counter_per_player</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">count_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">count_up</span>
+<span class="w">    </span><span class="nt">persist_state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
 <p>However, if you set <code>persist_state: False</code> in your counter it can also
 be used outside of a mode:</p>
-<div class="highlight"><pre><span></span><code>##! mode: attract
-mode:
-  game_mode: false
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: attract</span>
+<span class="nt">mode</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">game_mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 
-counters:
-  counter_outside_of_a_game:
-    count_events: count_up
-    persist_state: false
+<span class="nt">counters</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">counter_outside_of_a_game</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">count_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">count_up</span>
+<span class="w">    </span><span class="nt">persist_state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 </code></pre></div>
 <p>Those settings are described in the
 <a href="../../config/">config reference</a> of your

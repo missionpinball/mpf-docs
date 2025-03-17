@@ -33587,14 +33587,14 @@ reasons for this and MPF supports it. You can either use
 lights but it will be different from normal lights (and light shows).
 Alternatively, you can map the coils to a light (recommended). To map a
 coil as light you can use the following config:</p>
-<div class="highlight"><pre><span></span><code>coils:
-  your_light_coil:
-    number: 42                 # number depends on your platform
-    allow_enable: true        # this will allow 100% enable without pwm
-lights:
-  your_light_on_a_coil:
-    number: your_light_coil     # map this light to a driver
-    platform: drivers
+<div class="highlight"><pre><span></span><code><span class="nt">coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">your_light_coil</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">42</span><span class="w">                 </span><span class="c1"># number depends on your platform</span>
+<span class="w">    </span><span class="nt">allow_enable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w">        </span><span class="c1"># this will allow 100% enable without pwm</span>
+<span class="nt">lights</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">your_light_on_a_coil</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">your_light_coil</span><span class="w">     </span><span class="c1"># map this light to a driver</span>
+<span class="w">    </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">drivers</span>
 </code></pre></div>
 <p>This is sometimes done for <a href="../gis/">GIs</a> and <a href="../flashers/">Flashers</a>.</p>
 <hr />

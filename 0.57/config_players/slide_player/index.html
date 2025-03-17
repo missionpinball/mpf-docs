@@ -33721,14 +33721,14 @@ The documentation here is for reference later.</p>
 <p>Generically-speaking, there are two formats you can use for slide_player
 entries: "express" and "full" configs. Express configs will look
 like this:</p>
-<div class="highlight"><pre><span></span><code>#! slides:
-#!   slide1: []
-#!   slide2: []
-#!   slide3: []
-slide_player:
-  event1: slide1
-  event2: slide2
-  event3: slide3
+<div class="highlight"><pre><span></span><code><span class="c1">#! slides:</span>
+<span class="c1">#!   slide1: []</span>
+<span class="c1">#!   slide2: []</span>
+<span class="c1">#!   slide3: []</span>
+<span class="nt">slide_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">event1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">slide1</span>
+<span class="w">  </span><span class="nt">event2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">slide2</span>
+<span class="w">  </span><span class="nt">event3</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">slide3</span>
 </code></pre></div>
 <p>Full configs will look like this:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">slide_player</span><span class="p">:</span>
@@ -33751,18 +33751,18 @@ the settings detailed below).</p>
 is posted, but it will also override the default settings and show the
 slide on the display target called <em>display1</em> and at a priority that's
 200 higher than the base priority.</p>
-<div class="highlight"><pre><span></span><code>#! slides:
-#!   slide_1: []
-#! displays:
-#!   display1:
-#!     width: 1366
-#!     height: 768
-#!     default: true
-slide_player:
-  some_event:
-    slide_1:
-      target: display1
-      priority: 200
+<div class="highlight"><pre><span></span><code><span class="c1">#! slides:</span>
+<span class="c1">#!   slide_1: []</span>
+<span class="c1">#! displays:</span>
+<span class="c1">#!   display1:</span>
+<span class="c1">#!     width: 1366</span>
+<span class="c1">#!     height: 768</span>
+<span class="c1">#!     default: true</span>
+<span class="nt">slide_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">some_event</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">slide_1</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">display1</span>
+<span class="w">      </span><span class="nt">priority</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">200</span>
 </code></pre></div>
 <h2 id="showing-dynamically-created-slides">Showing dynamically-created slides</h2>
 <p>Both of the examples so far assumed that you were using the slide player
@@ -33777,55 +33777,55 @@ rectangle widget) which will be added to that slide.</p>
 defined called <em>slide_1</em> and you redefine it in your slide player like
 the example below, this new slide will become <em>slide_1</em> and the old one
 will be gone.</p>
-<div class="highlight"><pre><span></span><code>slide_player:
-  some_event:
-    slide_1:
-      widgets:
-        - type: text
-          text: I AM A TEXT WIDGET
-        - type: rectangle
-          width: 200
-          height: 100
-          color: red
+<div class="highlight"><pre><span></span><code><span class="nt">slide_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">some_event</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">slide_1</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">widgets</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">          </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">I AM A TEXT WIDGET</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rectangle</span>
+<span class="w">          </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">200</span>
+<span class="w">          </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="w">          </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
 </code></pre></div>
 <p>You can also mix-and-match defining a slide in the slide player as well
 as adjusting properties of how the slide is shown. Just add multiple
 settings, like this:</p>
-<div class="highlight"><pre><span></span><code>slide_player:
-  some_event:
-    slide_1:
-      widgets:
-        - type: text
-          text: I AM A TEXT WIDGET
-        - type: rectangle
-          width: 200
-          height: 100
-          color: red
-      transition: wipe
+<div class="highlight"><pre><span></span><code><span class="nt">slide_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">some_event</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">slide_1</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">widgets</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">          </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">I AM A TEXT WIDGET</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rectangle</span>
+<span class="w">          </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">200</span>
+<span class="w">          </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="w">          </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
+<span class="w">      </span><span class="nt">transition</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wipe</span>
 </code></pre></div>
 <p>Remember that these slide player settings can also be used in show steps
 (in a <code>slides:</code> section). Any of the examples above apply, you just
 don't include the event name, like this:</p>
-<div class="highlight"><pre><span></span><code>##! show: show1
-#show_version=5
-- time: 0
-  slides: slide1
-- time: +3
-  slides: slide2
-- time: +3
-  slides:
-    slide3:          # newly-defined slide here
-      widgets:
-      - type: text
-        text: I AM SLIDE 3 IN THIS SHOW
-        color: lime
-- time: +3
-  slides:
-    slide4:
-      transition:
-        type: move_out
-        duration: 1s
-        direction: up
+<div class="highlight"><pre><span></span><code><span class="c1">##! show: show1</span>
+<span class="c1">#show_version=5</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">  </span><span class="nt">slides</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">slide1</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">+3</span>
+<span class="w">  </span><span class="nt">slides</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">slide2</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">+3</span>
+<span class="w">  </span><span class="nt">slides</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">slide3</span><span class="p">:</span><span class="w">          </span><span class="c1"># newly-defined slide here</span>
+<span class="w">      </span><span class="nt">widgets</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">I AM SLIDE 3 IN THIS SHOW</span>
+<span class="w">        </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lime</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">+3</span>
+<span class="w">  </span><span class="nt">slides</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">slide4</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">transition</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">move_out</span>
+<span class="w">        </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<span class="w">        </span><span class="nt">direction</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">up</span>
 </code></pre></div>
 <p>Here's a list of all the valid settings for individual slides in the
 <code>slide_player:</code> section of your config file or the <code>slides:</code> section of

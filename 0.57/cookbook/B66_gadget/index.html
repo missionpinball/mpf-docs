@@ -33792,186 +33792,186 @@ generic and need to be changes for a real machine.)</p>
 mode to 'protect' earned, but unused gadgets from being reset in the
 rare cases when we may need to stop the mode that allows players to earn
 gadgets.</p>
-<div class="highlight"><pre><span></span><code>#config_version=5
+<div class="highlight"><pre><span></span><code><span class="c1">#config_version=5</span>
 
-modes:
-  - gadget
+<span class="nt">modes</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gadget</span>
 
-player_vars:
-  gadgets_available:
-    initial_value: 0
-  gadgets_earned:
-    initial_value: 0
+<span class="nt">player_vars</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">gadgets_available</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">initial_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">  </span><span class="nt">gadgets_earned</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">initial_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
 
-switches:
-  s_left_flipper:
-    number: 0
-    tags: left_flipper, playfield_active
-  s_right_flipper:
-    number: 71
-    tags: right_flipper
-  s_credit:
-    number: 6
-    tags: start
-  s_outhole:
-    number: 8
-    tags:
-  s_gadget_g1:
-    number: 17
-    tags: gadget_targets
-  s_gadget_a:
-    number: 18
-    tags: gadget_targets
-  s_gadget_d:
-    number: 19
-    tags: gadget_targets
-  s_gadget_g2:
-    number: 22
-    tags: gadget_targets
-  s_gadget_e:
-    number: 23
-    tags: gadget_targets
-  s_gadget_t:
-    number: 24
-    tags: gadget_targets
-  s_trough_6:
-    number: 33
-    tags:
-  s_trough_5:
-    number: 36
-    tags:
-  s_trough_4:
-    number: 37
-    tags:
-  s_trough_3:
-    number: 38
-    tags:
-  s_trough_2:
-    number: 39
-    tags:
-  s_trough_1:
-    number: 40
-    tags:
-  s_start_button:
-    number: 99
-    tags: start, playfield_active
+<span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_left_flipper</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">left_flipper, playfield_active</span>
+<span class="w">  </span><span class="nt">s_right_flipper</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">71</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">right_flipper</span>
+<span class="w">  </span><span class="nt">s_credit</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">6</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start</span>
+<span class="w">  </span><span class="nt">s_outhole</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_gadget_g1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">17</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gadget_targets</span>
+<span class="w">  </span><span class="nt">s_gadget_a</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">18</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gadget_targets</span>
+<span class="w">  </span><span class="nt">s_gadget_d</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">19</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gadget_targets</span>
+<span class="w">  </span><span class="nt">s_gadget_g2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">22</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gadget_targets</span>
+<span class="w">  </span><span class="nt">s_gadget_e</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">23</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gadget_targets</span>
+<span class="w">  </span><span class="nt">s_gadget_t</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">24</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gadget_targets</span>
+<span class="w">  </span><span class="nt">s_trough_6</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">33</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_trough_5</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">36</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_trough_4</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">37</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_trough_3</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">38</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_trough_2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">39</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_trough_1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">40</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_start_button</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">99</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start, playfield_active</span>
 
-keyboard:
-  s:
-    switch: s_start_button
+<span class="nt">keyboard</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_start_button</span>
 
-virtual_platform_start_active_switches: s_trough_1, s_trough_2, s_trough_3, s_trough_4, s_trough_5, s_trough_6
+<span class="nt">virtual_platform_start_active_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_trough_1, s_trough_2, s_trough_3, s_trough_4, s_trough_5, s_trough_6</span>
 
-coils:
-  c_flipper_left_main:
-    number: 0
-    default_pulse_ms: 20
-  c_flipper_left_hold:
-    number: 1
-    allow_enable: true
-  c_flipper_right_main:
-    number: 2
-    default_pulse_ms: 20
-  c_flipper_right_hold:
-    number: 3
-    allow_enable: true
-  c_trough_eject:
-    number: 4
-    allow_enable: true
-  c_ball_eject:
-    number: c12
-    label:
-    tags:
-    default_pulse_ms: 20
-  c_outhole:
-    number: c14
-    label:
-    tags:
-    default_pulse_ms: 20
+<span class="nt">coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">c_flipper_left_main</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">default_pulse_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span>
+<span class="w">  </span><span class="nt">c_flipper_left_hold</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">allow_enable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">c_flipper_right_main</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="w">    </span><span class="nt">default_pulse_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span>
+<span class="w">  </span><span class="nt">c_flipper_right_hold</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="w">    </span><span class="nt">allow_enable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">c_trough_eject</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span>
+<span class="w">    </span><span class="nt">allow_enable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">c_ball_eject</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c12</span>
+<span class="w">    </span><span class="nt">label</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">default_pulse_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span>
+<span class="w">  </span><span class="nt">c_outhole</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c14</span>
+<span class="w">    </span><span class="nt">label</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">default_pulse_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span>
 
-lights:
-  l_gadget_g1:
-    number: 5
-    tags: gadget_letter
-  l_gadget_a:
-    number: 6
-    tags: gadget_letter
-  l_gadget_d:
-    number: 7
-    tags: gadget_letter
-  l_gadget_g2:
-    number: 8
-    tags: gadget_letter
-  l_gadget_e:
-    number: 9
-    tags: gadget_letter
-  l_gadget_t:
-    number: 10
-    tags: gadget_letter
-  l_lockdown_bar:
-    number: 11
+<span class="nt">lights</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">l_gadget_g1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gadget_letter</span>
+<span class="w">  </span><span class="nt">l_gadget_a</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">6</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gadget_letter</span>
+<span class="w">  </span><span class="nt">l_gadget_d</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">7</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gadget_letter</span>
+<span class="w">  </span><span class="nt">l_gadget_g2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gadget_letter</span>
+<span class="w">  </span><span class="nt">l_gadget_e</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">9</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gadget_letter</span>
+<span class="w">  </span><span class="nt">l_gadget_t</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gadget_letter</span>
+<span class="w">  </span><span class="nt">l_lockdown_bar</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">11</span>
 
-ball_devices:
-  bd_drain:
-    ball_switches: s_outhole
-    eject_coil: c_outhole
-    eject_targets: bd_trough
-    tags: drain, outhole
-  bd_trough:
-    ball_switches: s_trough_1, s_trough_2, s_trough_3, s_trough_4, s_trough_5
-    eject_coil: c_ball_eject
-    tags: trough, home
+<span class="nt">ball_devices</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">bd_drain</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">ball_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_outhole</span>
+<span class="w">    </span><span class="nt">eject_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_outhole</span>
+<span class="w">    </span><span class="nt">eject_targets</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bd_trough</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">drain, outhole</span>
+<span class="w">  </span><span class="nt">bd_trough</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">ball_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_trough_1, s_trough_2, s_trough_3, s_trough_4, s_trough_5</span>
+<span class="w">    </span><span class="nt">eject_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_ball_eject</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">trough, home</span>
 
-playfields:
-  playfield:
-    default_source_device: bd_trough
-    tags: default
+<span class="nt">playfields</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">playfield</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">default_source_device</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bd_trough</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span>
 
-##! mode: gadget
-#! mode:
-#!   #this mode starts when the ball starts
-#!   start_events: ball_started
-#!
-#!   priority: 500
+<span class="c1">##! mode: gadget</span>
+<span class="c1">#! mode:</span>
+<span class="c1">#!   #this mode starts when the ball starts</span>
+<span class="c1">#!   start_events: ball_started</span>
+<span class="c1">#!</span>
+<span class="c1">#!   priority: 500</span>
 </code></pre></div>
 <h2 id="step-2-create-the-gadget-mode-config-file">Step 2. Create the Gadget Mode Config File</h2>
 <p>Next, we can start setting up our gadget mode; below you see the
 contents of <code>gadget.yaml</code></p>
-<div class="highlight"><pre><span></span><code>##! mode: gadget
-config:
-  - logic_blocks.yaml
-  - event_player.yaml
-  - show_player.yaml
-  - variable_player.yaml
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: gadget</span>
+<span class="nt">config</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">logic_blocks.yaml</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">event_player.yaml</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">show_player.yaml</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">variable_player.yaml</span>
 
-mode:
-  #this mode starts when the ball starts
-  start_events: ball_started
+<span class="nt">mode</span><span class="p">:</span>
+<span class="w">  </span><span class="c1">#this mode starts when the ball starts</span>
+<span class="w">  </span><span class="nt">start_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ball_started</span>
 
-  priority: 500
-##! config: modes/gadget/config/logic_blocks
-#! # empty file
-##! config: modes/gadget/config/event_player
-#! # empty file
-##! config: modes/gadget/config/show_player
-#! # empty file
-##! config: modes/gadget/config/variable_player
-#! # empty file
+<span class="w">  </span><span class="nt">priority</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">500</span>
+<span class="c1">##! config: modes/gadget/config/logic_blocks</span>
+<span class="c1">#! # empty file</span>
+<span class="c1">##! config: modes/gadget/config/event_player</span>
+<span class="c1">#! # empty file</span>
+<span class="c1">##! config: modes/gadget/config/show_player</span>
+<span class="c1">#! # empty file</span>
+<span class="c1">##! config: modes/gadget/config/variable_player</span>
+<span class="c1">#! # empty file</span>
 </code></pre></div>
 <p>Stepping through how we're using each setting:</p>
-<div class="highlight"><pre><span></span><code>##! mode: gadget
-config:
-  - logic_blocks.yaml
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: gadget</span>
+<span class="nt">config</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">logic_blocks.yaml</span>
 
-##! config: modes/gadget/config/logic_blocks
-#! # empty file
+<span class="c1">##! config: modes/gadget/config/logic_blocks</span>
+<span class="c1">#! # empty file</span>
 </code></pre></div>
 <p>The config section imports other config files; this is often easier to
 manage than on long config file.</p>
-<div class="highlight"><pre><span></span><code>##! mode: gadget
-#! mode:
-#!   start_events: ball_started
-  priority: 500
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: gadget</span>
+<span class="c1">#! mode:</span>
+<span class="c1">#!   start_events: ball_started</span>
+<span class="w">  </span><span class="nt">priority</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">500</span>
 </code></pre></div>
 <p>The Gadget mode in Batman '66 is nearly always running and rarely
 blocked, so we have assigned it a very high priority, but one that can
@@ -33981,106 +33981,106 @@ still be superceded if the need arises.</p>
 our mode-specific logic_blocks. In this case, we're using an
 <a href="../../game_logic/logic_blocks/accruals/">Accrual Logic Blocks</a> to
 track when all of the letters have been hit.</p>
-<div class="highlight"><pre><span></span><code>##! mode: gadget
-accruals:
-  gadget_accrual:
-    events:
-      - gadget_g1_complete # index [0]
-      - gadget_a_complete # index [1]
-      - gadget_d_complete # index [2]
-      - gadget_g2_complete # index [3]
-      - gadget_e_complete # index [4]
-      - gadget_t_complete # index [5]
-    reset_on_complete: true
-    disable_on_complete: false
-    reset_events: mode_gadget_started
-    events_when_complete: award_gadget, reset_gadget_lights
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: gadget</span>
+<span class="nt">accruals</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">gadget_accrual</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">events</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gadget_g1_complete</span><span class="w"> </span><span class="c1"># index [0]</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gadget_a_complete</span><span class="w"> </span><span class="c1"># index [1]</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gadget_d_complete</span><span class="w"> </span><span class="c1"># index [2]</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gadget_g2_complete</span><span class="w"> </span><span class="c1"># index [3]</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gadget_e_complete</span><span class="w"> </span><span class="c1"># index [4]</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gadget_t_complete</span><span class="w"> </span><span class="c1"># index [5]</span>
+<span class="w">    </span><span class="nt">reset_on_complete</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">disable_on_complete</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">    </span><span class="nt">reset_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mode_gadget_started</span>
+<span class="w">    </span><span class="nt">events_when_complete</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">award_gadget, reset_gadget_lights</span>
 </code></pre></div>
 <p>Stepping through once again:</p>
-<div class="highlight"><pre><span></span><code>##! mode: gadget
-accruals:
-  gadget_accrual:
-#!     events:
-#!       - gadget_g1_complete # index [0]
-#!       - gadget_a_complete # index [1]
-#!       - gadget_d_complete # index [2]
-#!       - gadget_g2_complete # index [3]
-#!       - gadget_e_complete # index [4]
-#!       - gadget_t_complete # index [5]
-#!     reset_on_complete: true
-#!     disable_on_complete: false
-#!     reset_events: mode_gadget_started
-#!     events_when_complete: award_gadget, reset_gadget_lights
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: gadget</span>
+<span class="nt">accruals</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">gadget_accrual</span><span class="p">:</span>
+<span class="c1">#!     events:</span>
+<span class="c1">#!       - gadget_g1_complete # index [0]</span>
+<span class="c1">#!       - gadget_a_complete # index [1]</span>
+<span class="c1">#!       - gadget_d_complete # index [2]</span>
+<span class="c1">#!       - gadget_g2_complete # index [3]</span>
+<span class="c1">#!       - gadget_e_complete # index [4]</span>
+<span class="c1">#!       - gadget_t_complete # index [5]</span>
+<span class="c1">#!     reset_on_complete: true</span>
+<span class="c1">#!     disable_on_complete: false</span>
+<span class="c1">#!     reset_events: mode_gadget_started</span>
+<span class="c1">#!     events_when_complete: award_gadget, reset_gadget_lights</span>
 </code></pre></div>
 <p>These two lines simply tell MPF that we have an accrual and we've named
 it "gadget_accrual".</p>
-<div class="highlight"><pre><span></span><code>##! mode: gadget
-#! accruals:
-#!   gadget_accrual:
-    events:
-      - gadget_g1_complete # index [0]
-      - gadget_a_complete # index [1]
-      - gadget_d_complete # index [2]
-      - gadget_g2_complete # index [3]
-      - gadget_e_complete # index [4]
-      - gadget_t_complete # index [5]
-#!     reset_on_complete: true
-#!     disable_on_complete: false
-#!     reset_events: mode_gadget_started
-#!     events_when_complete: award_gadget, reset_gadget_lights
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: gadget</span>
+<span class="c1">#! accruals:</span>
+<span class="c1">#!   gadget_accrual:</span>
+<span class="w">    </span><span class="nt">events</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gadget_g1_complete</span><span class="w"> </span><span class="c1"># index [0]</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gadget_a_complete</span><span class="w"> </span><span class="c1"># index [1]</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gadget_d_complete</span><span class="w"> </span><span class="c1"># index [2]</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gadget_g2_complete</span><span class="w"> </span><span class="c1"># index [3]</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gadget_e_complete</span><span class="w"> </span><span class="c1"># index [4]</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gadget_t_complete</span><span class="w"> </span><span class="c1"># index [5]</span>
+<span class="c1">#!     reset_on_complete: true</span>
+<span class="c1">#!     disable_on_complete: false</span>
+<span class="c1">#!     reset_events: mode_gadget_started</span>
+<span class="c1">#!     events_when_complete: award_gadget, reset_gadget_lights</span>
 </code></pre></div>
 <p>Next, we have a list of events for the accrual to track. Accruals behave
 like arrays, so I added a comment after each event to help me remember
 the index of each event. We'll need to reference these events and their
 index later.</p>
-<div class="highlight"><pre><span></span><code>##! mode: gadget
-#! accruals:
-#!   gadget_accrual:
-#!     events:
-#!       - gadget_g1_complete # index [0]
-#!       - gadget_a_complete # index [1]
-#!       - gadget_d_complete # index [2]
-#!       - gadget_g2_complete # index [3]
-#!       - gadget_e_complete # index [4]
-#!       - gadget_t_complete # index [5]
-    reset_on_complete: true
-#!     disable_on_complete: false
-#!     reset_events: mode_gadget_started
-#!     events_when_complete: award_gadget, reset_gadget_lights
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: gadget</span>
+<span class="c1">#! accruals:</span>
+<span class="c1">#!   gadget_accrual:</span>
+<span class="c1">#!     events:</span>
+<span class="c1">#!       - gadget_g1_complete # index [0]</span>
+<span class="c1">#!       - gadget_a_complete # index [1]</span>
+<span class="c1">#!       - gadget_d_complete # index [2]</span>
+<span class="c1">#!       - gadget_g2_complete # index [3]</span>
+<span class="c1">#!       - gadget_e_complete # index [4]</span>
+<span class="c1">#!       - gadget_t_complete # index [5]</span>
+<span class="w">    </span><span class="nt">reset_on_complete</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="c1">#!     disable_on_complete: false</span>
+<span class="c1">#!     reset_events: mode_gadget_started</span>
+<span class="c1">#!     events_when_complete: award_gadget, reset_gadget_lights</span>
 </code></pre></div>
 <p>Once the player has hit all of the letters, we want the accrual to reset
 so that they can earn more Gadgets.</p>
-<div class="highlight"><pre><span></span><code>##! mode: gadget
-#! accruals:
-#!   gadget_accrual:
-#!     events:
-#!       - gadget_g1_complete # index [0]
-#!       - gadget_a_complete # index [1]
-#!       - gadget_d_complete # index [2]
-#!       - gadget_g2_complete # index [3]
-#!       - gadget_e_complete # index [4]
-#!       - gadget_t_complete # index [5]
-#!     reset_on_complete: true
-    disable_on_complete: false
-#!     reset_events: mode_gadget_started
-#!     events_when_complete: award_gadget, reset_gadget_lights
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: gadget</span>
+<span class="c1">#! accruals:</span>
+<span class="c1">#!   gadget_accrual:</span>
+<span class="c1">#!     events:</span>
+<span class="c1">#!       - gadget_g1_complete # index [0]</span>
+<span class="c1">#!       - gadget_a_complete # index [1]</span>
+<span class="c1">#!       - gadget_d_complete # index [2]</span>
+<span class="c1">#!       - gadget_g2_complete # index [3]</span>
+<span class="c1">#!       - gadget_e_complete # index [4]</span>
+<span class="c1">#!       - gadget_t_complete # index [5]</span>
+<span class="c1">#!     reset_on_complete: true</span>
+<span class="w">    </span><span class="nt">disable_on_complete</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="c1">#!     reset_events: mode_gadget_started</span>
+<span class="c1">#!     events_when_complete: award_gadget, reset_gadget_lights</span>
 </code></pre></div>
 <p>We also have to tell MPF to leave our accrual enabled, even after it's
 completed.</p>
-<div class="highlight"><pre><span></span><code>##! mode: gadget
-#! accruals:
-#!   gadget_accrual:
-#!     events:
-#!       - gadget_g1_complete # index [0]
-#!       - gadget_a_complete # index [1]
-#!       - gadget_d_complete # index [2]
-#!       - gadget_g2_complete # index [3]
-#!       - gadget_e_complete # index [4]
-#!       - gadget_t_complete # index [5]
-#!     reset_on_complete: true
-#!     disable_on_complete: false
-#!     reset_events: mode_gadget_started
-    events_when_complete: award_gadget, reset_gadget_lights
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: gadget</span>
+<span class="c1">#! accruals:</span>
+<span class="c1">#!   gadget_accrual:</span>
+<span class="c1">#!     events:</span>
+<span class="c1">#!       - gadget_g1_complete # index [0]</span>
+<span class="c1">#!       - gadget_a_complete # index [1]</span>
+<span class="c1">#!       - gadget_d_complete # index [2]</span>
+<span class="c1">#!       - gadget_g2_complete # index [3]</span>
+<span class="c1">#!       - gadget_e_complete # index [4]</span>
+<span class="c1">#!       - gadget_t_complete # index [5]</span>
+<span class="c1">#!     reset_on_complete: true</span>
+<span class="c1">#!     disable_on_complete: false</span>
+<span class="c1">#!     reset_events: mode_gadget_started</span>
+<span class="w">    </span><span class="nt">events_when_complete</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">award_gadget, reset_gadget_lights</span>
 </code></pre></div>
 <p>When the accrual is complete, we want it to fire the two events in the
 list. We'll see what these events actually do a bit later.</p>
@@ -34090,72 +34090,72 @@ easier to complete. If the player hits a letter that is already
 complete, the game will award one of the neigbhoring targets if they are
 incomplete. To accomplish this, we'll use conditional events in our
 event player.</p>
-<div class="highlight"><pre><span></span><code>##! mode: gadget
-event_player:
-  #plus one gadget when accrual is complete
-  award_gadget:
-    - gadgets_earned
-    - gadgets_available
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: gadget</span>
+<span class="nt">event_player</span><span class="p">:</span>
+<span class="w">  </span><span class="c1">#plus one gadget when accrual is complete</span>
+<span class="w">  </span><span class="nt">award_gadget</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gadgets_earned</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gadgets_available</span>
 
-  s_gadget_g1_active:
-    #if the g is hit, and unlit
-    - gadget_g1_complete{device.accruals.gadget_accrual.value[0]==False}
-    #award a if we already have g1
-    - gadget_a_complete{device.accruals.gadget_accrual.value[0]==True}
-  s_gadget_a_active:
-    #if a is hit and unlit
-    - gadget_a_complete{device.accruals.gadget_accrual.value[1]==False}
-    #award g1 if we already have a
-    - gadget_g1_complete{device.accruals.gadget_accrual.value[0]==False and device.accruals.gadget_accrual.value[1]==True}
-    #award d if we already have a and g1
-    - gadget_d_complete{device.accruals.gadget_accrual.value[0]==True and device.accruals.gadget_accrual.value[1]==True and device.accruals.gadget_accrual.value[2]==False}
-  s_gadget_d_active:
-    - gadget_d_complete{device.accruals.gadget_accrual.value[2]==False}
-    - gadget_a_complete{device.accruals.gadget_accrual.value[1]==False and device.accruals.gadget_accrual.value[2]==True}
-    - gadget_g2_complete{device.accruals.gadget_accrual.value[1]==True and device.accruals.gadget_accrual.value[2] and device.accruals.gadget_accrual.value[3]==False}
-  s_gadget_g2_active:
-    - gadget_g2_complete{device.accruals.gadget_accrual.value[3]==False}
-    - gadget_d_complete{device.accruals.gadget_accrual.value[2]==False and device.accruals.gadget_accrual.value[3]==True}
-    - gadget_e_complete{device.accruals.gadget_accrual.value[2]==True and device.accruals.gadget_accrual.value[3]==True and device.accruals.gadget_accrual.value[4]==False}
-  s_gadget_e_active:
-    - gadget_e_complete{device.accruals.gadget_accrual.value[4]==False}
-    - gadget_g2_complete{device.accruals.gadget_accrual.value[3]==False and device.accruals.gadget_accrual.value[4]==True}
-    - gadget_t_complete{device.accruals.gadget_accrual.value[3]==True and device.accruals.gadget_accrual.value[4]==True and device.accruals.gadget_accrual.value[5]==False}
-  s_gadget_t_active:
-    - gadget_t_complete{device.accruals.gadget_accrual.value[5]==False}
-    - gadget_e_complete{device.accruals.gadget_accrual.value[4]==False and device.accruals.gadget_accrual.value[5]==True}
+<span class="w">  </span><span class="nt">s_gadget_g1_active</span><span class="p">:</span>
+<span class="w">    </span><span class="c1">#if the g is hit, and unlit</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gadget_g1_complete{device.accruals.gadget_accrual.value[0]==False}</span>
+<span class="w">    </span><span class="c1">#award a if we already have g1</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gadget_a_complete{device.accruals.gadget_accrual.value[0]==True}</span>
+<span class="w">  </span><span class="nt">s_gadget_a_active</span><span class="p">:</span>
+<span class="w">    </span><span class="c1">#if a is hit and unlit</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gadget_a_complete{device.accruals.gadget_accrual.value[1]==False}</span>
+<span class="w">    </span><span class="c1">#award g1 if we already have a</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gadget_g1_complete{device.accruals.gadget_accrual.value[0]==False and device.accruals.gadget_accrual.value[1]==True}</span>
+<span class="w">    </span><span class="c1">#award d if we already have a and g1</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gadget_d_complete{device.accruals.gadget_accrual.value[0]==True and device.accruals.gadget_accrual.value[1]==True and device.accruals.gadget_accrual.value[2]==False}</span>
+<span class="w">  </span><span class="nt">s_gadget_d_active</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gadget_d_complete{device.accruals.gadget_accrual.value[2]==False}</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gadget_a_complete{device.accruals.gadget_accrual.value[1]==False and device.accruals.gadget_accrual.value[2]==True}</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gadget_g2_complete{device.accruals.gadget_accrual.value[1]==True and device.accruals.gadget_accrual.value[2] and device.accruals.gadget_accrual.value[3]==False}</span>
+<span class="w">  </span><span class="nt">s_gadget_g2_active</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gadget_g2_complete{device.accruals.gadget_accrual.value[3]==False}</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gadget_d_complete{device.accruals.gadget_accrual.value[2]==False and device.accruals.gadget_accrual.value[3]==True}</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gadget_e_complete{device.accruals.gadget_accrual.value[2]==True and device.accruals.gadget_accrual.value[3]==True and device.accruals.gadget_accrual.value[4]==False}</span>
+<span class="w">  </span><span class="nt">s_gadget_e_active</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gadget_e_complete{device.accruals.gadget_accrual.value[4]==False}</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gadget_g2_complete{device.accruals.gadget_accrual.value[3]==False and device.accruals.gadget_accrual.value[4]==True}</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gadget_t_complete{device.accruals.gadget_accrual.value[3]==True and device.accruals.gadget_accrual.value[4]==True and device.accruals.gadget_accrual.value[5]==False}</span>
+<span class="w">  </span><span class="nt">s_gadget_t_active</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gadget_t_complete{device.accruals.gadget_accrual.value[5]==False}</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gadget_e_complete{device.accruals.gadget_accrual.value[4]==False and device.accruals.gadget_accrual.value[5]==True}</span>
 </code></pre></div>
 <p>There's a lot happening here, so let's get the easy stuff out of the
 way first:</p>
-<div class="highlight"><pre><span></span><code>##! mode: gadget
-#! event_player:
-  award_gadget:
-    - gadgets_earned
-    - gadgets_available
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: gadget</span>
+<span class="c1">#! event_player:</span>
+<span class="w">  </span><span class="nt">award_gadget</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gadgets_earned</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gadgets_available</span>
 </code></pre></div>
 <p>The "award_gadget" event - triggered by the accrual completion, simply
 adds one to both <code>player_vars</code> we configured in step one.</p>
-<div class="highlight"><pre><span></span><code>##! mode: gadget
-#! event_player:
-  s_gadget_a_active:
-    #if a is hit and unlit
-    - gadget_a_complete{device.accruals.gadget_accrual.value[1]==False}
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: gadget</span>
+<span class="c1">#! event_player:</span>
+<span class="w">  </span><span class="nt">s_gadget_a_active</span><span class="p">:</span>
+<span class="w">    </span><span class="c1">#if a is hit and unlit</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gadget_a_complete{device.accruals.gadget_accrual.value[1]==False}</span>
 </code></pre></div>
 <p>This is our first conditional event, which covers the case of "a"
 having not yet been hit. When the "a" switch is active, trigger the
 event "gadget_a_complete" if it hasn't been seen by the accrual. Note
 the <code>value[1]</code> which refers to the 2nd index of our accrual.</p>
-<div class="highlight"><pre><span></span><code>##! mode: gadget
-#! event_player:
-#!   s_gadget_a_active:
-    - gadget_g1_complete{device.accruals.gadget_accrual.value[0]==False and device.accruals.gadget_accrual.value[1]==True}
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: gadget</span>
+<span class="c1">#! event_player:</span>
+<span class="c1">#!   s_gadget_a_active:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gadget_g1_complete{device.accruals.gadget_accrual.value[0]==False and device.accruals.gadget_accrual.value[1]==True}</span>
 </code></pre></div>
 <p>Now, we trigger gadget_g1_complete if it hasn't been seen by the
 accrual AND "a" is already complete.</p>
-<div class="highlight"><pre><span></span><code>##! mode: gadget
-#! event_player:
-#!   s_gadget_a_active:
-    - gadget_d_complete{device.accruals.gadget_accrual.value[0]==True and device.accruals.gadget_accrual.value[1]==True and device.accruals.gadget_accrual.value[2]==False}
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: gadget</span>
+<span class="c1">#! event_player:</span>
+<span class="c1">#!   s_gadget_a_active:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gadget_d_complete{device.accruals.gadget_accrual.value[0]==True and device.accruals.gadget_accrual.value[1]==True and device.accruals.gadget_accrual.value[2]==False}</span>
 </code></pre></div>
 <p>The final case for "a" is if "g1" and "a" are complete, then
 trigger the event for "d" if it hasn't been triggered yet.</p>
@@ -34170,87 +34170,87 @@ they've been awarded a letter, or completed the "gadget_accrual".
 This show is "light_gadget_letter.yaml" and it's in the "shows"
 folder for the mode. It's pretty straightforward, but uses tokens and
 tags to be efficient.</p>
-<div class="highlight"><pre><span></span><code>##! show: light_gadget_letter
-- time: 0
-  lights:
-    (gadget_letter_made_led): (gadget_letter_made_color)
+<div class="highlight"><pre><span></span><code><span class="c1">##! show: light_gadget_letter</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">(gadget_letter_made_led)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(gadget_letter_made_color)</span>
 
-- time: +.05
-  lights:
-    (gadget_letter_made_led): off
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">+.05</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">(gadget_letter_made_led)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">off</span>
 
-- time: +.05
-  lights:
-    (gadget_letter_made_led): (gadget_letter_made_color)
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">+.05</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">(gadget_letter_made_led)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(gadget_letter_made_color)</span>
 
-- time: +.05
-  lights:
-    (gadget_letter_made_led): off
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">+.05</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">(gadget_letter_made_led)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">off</span>
 
-- time: +.05
-  lights:
-    (gadget_letter_made_led): (gadget_letter_made_color)
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">+.05</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">(gadget_letter_made_led)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(gadget_letter_made_color)</span>
 
-- time: +.05
-  lights:
-    (gadget_letter_made_led): off
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">+.05</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">(gadget_letter_made_led)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">off</span>
 
-- time: +.05
-  lights:
-    (gadget_letter_made_led): (gadget_letter_made_color)
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">+.05</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">(gadget_letter_made_led)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(gadget_letter_made_color)</span>
 
-- time: +.05
-  lights:
-    (gadget_letter_made_led): off
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">+.05</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">(gadget_letter_made_led)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">off</span>
 
-- time: +.05
-  lights:
-    (gadget_letter_made_led): (gadget_letter_made_color)
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">+.05</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">(gadget_letter_made_led)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(gadget_letter_made_color)</span>
 
-- time: +.05
-  lights:
-    (gadget_letter_made_led): off
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">+.05</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">(gadget_letter_made_led)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">off</span>
 
-- time: +.05
-  lights:
-    (gadget_letter_made_led): (gadget_letter_made_color)
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">+.05</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">(gadget_letter_made_led)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(gadget_letter_made_color)</span>
 
-- time: +.05
-  lights:
-    (gadget_letter_made_led): off
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">+.05</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">(gadget_letter_made_led)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">off</span>
 
-- time: +.05
-  lights:
-    (gadget_letter_made_led): (gadget_letter_made_color)
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">+.05</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">(gadget_letter_made_led)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(gadget_letter_made_color)</span>
 
-- time: +.05
-  lights:
-    (gadget_letter_made_led): off
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">+.05</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">(gadget_letter_made_led)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">off</span>
 
-- time: +.05
-  lights:
-    (gadget_letter_made_led): (gadget_letter_made_color)
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">+.05</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">(gadget_letter_made_led)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(gadget_letter_made_color)</span>
 
-- time: +.05
-  lights:
-    (gadget_letter_made_led): off
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">+.05</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">(gadget_letter_made_led)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">off</span>
 
-- time: +.05
-  lights:
-    (gadget_letter_made_led): (gadget_letter_final_color)
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">+.05</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">(gadget_letter_made_led)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(gadget_letter_final_color)</span>
 
-  duration: -1
+<span class="w">  </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-1</span>
 </code></pre></div>
 <p>This show isn't terribly complicated, but let's look at some of the
 features.</p>
-<div class="highlight"><pre><span></span><code>##! show: light_gadget_letter
-- time: 0
-  lights:
-    (gadget_letter_made_led): (gadget_letter_made_color)
+<div class="highlight"><pre><span></span><code><span class="c1">##! show: light_gadget_letter</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">(gadget_letter_made_led)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(gadget_letter_made_color)</span>
 
-- time: +.05
-  lights:
-    (gadget_letter_made_led): off
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">+.05</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">(gadget_letter_made_led)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">off</span>
 </code></pre></div>
 <p>When the show starts, it accepts a token from the <code>show_player</code> (we'll
 configure that next), that tells MPF what corresponding light(s) we're
@@ -34258,12 +34258,12 @@ going to flash, and what color to flash them.</p>
 <p>In a real Batman '66, we would simply flash the light because the
 inserts are yellow. However, since many custom games are using RGB LED,
 we'll allow for any color the builder prefers.</p>
-<div class="highlight"><pre><span></span><code>##! show: light_gadget_letter
-- time: +.05
-  lights:
-    (gadget_letter_made_led): (gadget_letter_final_color)
+<div class="highlight"><pre><span></span><code><span class="c1">##! show: light_gadget_letter</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">+.05</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">(gadget_letter_made_led)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(gadget_letter_final_color)</span>
 
-  duration: -1
+<span class="w">  </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-1</span>
 </code></pre></div>
 <p>The last step is special for two reasons. We're passing in a second
 color that will be 'held' at the end of the show indefinitely as
@@ -34276,52 +34276,52 @@ but it's not worth explaining here.</p>
 <h2 id="step-6-configure-the-show-player">Step 6. Configure the Show Player</h2>
 <p>Our show player is watching for events and triggering the appropriate
 shows.</p>
-<div class="highlight"><pre><span></span><code>show_player:
-  gadget_g1_complete:
-    light_gadget_letter:
-      priority: 10
-      key: gadget_g1_hit_show
-      show_tokens:
-        gadget_letter_made_led: l_gadget_g1
-        gadget_letter_made_color: yellow
-        gadget_letter_final_color: yellow
+<div class="highlight"><pre><span></span><code><span class="nt">show_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">gadget_g1_complete</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">light_gadget_letter</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">priority</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="w">      </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gadget_g1_hit_show</span>
+<span class="w">      </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">gadget_letter_made_led</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_gadget_g1</span>
+<span class="w">        </span><span class="nt">gadget_letter_made_color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yellow</span>
+<span class="w">        </span><span class="nt">gadget_letter_final_color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yellow</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>#! show_player:
-  gadget_g1_complete:
-    light_gadget_letter:
-#!       priority: 10
+<div class="highlight"><pre><span></span><code><span class="c1">#! show_player:</span>
+<span class="w">  </span><span class="nt">gadget_g1_complete</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">light_gadget_letter</span><span class="p">:</span>
+<span class="c1">#!       priority: 10</span>
 </code></pre></div>
 <p>When the "gadget_g1_complete" event is triggered, start the
 "light_gadget_letter" show starts.</p>
-<div class="highlight"><pre><span></span><code>#! show_player:
-#!   gadget_g1_complete:
-#!     light_gadget_letter:
-#!       priority: 10
-      key: gadget_g1_hit_show
+<div class="highlight"><pre><span></span><code><span class="c1">#! show_player:</span>
+<span class="c1">#!   gadget_g1_complete:</span>
+<span class="c1">#!     light_gadget_letter:</span>
+<span class="c1">#!       priority: 10</span>
+<span class="w">      </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gadget_g1_hit_show</span>
 </code></pre></div>
 <p>We'll add a key to the show so that we can keep re-using the same show
 for all the letters.</p>
-<div class="highlight"><pre><span></span><code>#! show_player:
-#!   gadget_g1_complete:
-#!     light_gadget_letter:
-#!       priority: 10
-#!       key: gadget_g1_hit_show
-#!       show_tokens:
-        gadget_letter_made_led: l_gadget_g1
-        gadget_letter_made_color: yellow
-        gadget_letter_final_color: yellow
+<div class="highlight"><pre><span></span><code><span class="c1">#! show_player:</span>
+<span class="c1">#!   gadget_g1_complete:</span>
+<span class="c1">#!     light_gadget_letter:</span>
+<span class="c1">#!       priority: 10</span>
+<span class="c1">#!       key: gadget_g1_hit_show</span>
+<span class="c1">#!       show_tokens:</span>
+<span class="w">        </span><span class="nt">gadget_letter_made_led</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_gadget_g1</span>
+<span class="w">        </span><span class="nt">gadget_letter_made_color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yellow</span>
+<span class="w">        </span><span class="nt">gadget_letter_final_color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yellow</span>
 </code></pre></div>
 <p>Finally, we pass show tokens to the show to tell it what light and what
 color we want for the on steps and the final step. This repeats for all
 of the individual letters.</p>
-<div class="highlight"><pre><span></span><code>show_player:
-  reset_gadget_lights:
-    light_gadget_letter:
-      priority: 10
-      show_tokens:
-        gadget_letter_made_led: gadget_letter
-        gadget_letter_made_color: yellow
-        gadget_letter_final_color: 000000
+<div class="highlight"><pre><span></span><code><span class="nt">show_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">reset_gadget_lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">light_gadget_letter</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">priority</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="w">      </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">gadget_letter_made_led</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gadget_letter</span>
+<span class="w">        </span><span class="nt">gadget_letter_made_color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yellow</span>
+<span class="w">        </span><span class="nt">gadget_letter_final_color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">000000</span>
 </code></pre></div>
 <p>"reset_gadget_lights" is fired by the accrual when it's complete. We
 make two small, but important changes. First "gadget_letter" is a

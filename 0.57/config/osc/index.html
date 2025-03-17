@@ -33785,17 +33785,17 @@ config. (If you don't include them, the default will be used).</p>
 events. Defaults to empty.</p>
 <p>You can list all events which you want to be forwarded to your OSC
 remote. This is an example:</p>
-<div class="highlight"><pre><span></span><code>hardware:
-  platform: osc
+<div class="highlight"><pre><span></span><code><span class="nt">hardware</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">osc</span>
 
-osc:
-  remote_ip: 127.0.0.1
-  remote_port: 8000
+<span class="nt">osc</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">remote_ip</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">127.0.0.1</span>
+<span class="w">  </span><span class="nt">remote_port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8000</span>
 
-  events_to_send:
-    - player_score
-    - some_non_osc_switch_active
-    - some_non_osc_switch_inactive
+<span class="w">  </span><span class="nt">events_to_send</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">player_score</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">some_non_osc_switch_active</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">some_non_osc_switch_inactive</span>
 </code></pre></div>
 <h3 id="listen_ip">listen_ip:</h3>
 <p>Single value, type: <code>string</code>. Default: <code>127.0.0.1</code></p>

@@ -33727,10 +33727,10 @@ that only apply when that mode is active, including:</p>
 <p>Again, anything that's specified in a mode's configuration file is
 only active while that mode is active. So if you have a mode called
 "multiball" with the following entry in that mode's config file:</p>
-<div class="highlight"><pre><span></span><code>##! mode: my_mode
-variable_player:
-  right_ramp_hit:
-    score: 50000
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: my_mode</span>
+<span class="nt">variable_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">right_ramp_hit</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">50000</span>
 </code></pre></div>
 <p>In that case the <em>right_ramp_hit</em> shot event will only award the points
 when that multiball mode is running. When it stops, that

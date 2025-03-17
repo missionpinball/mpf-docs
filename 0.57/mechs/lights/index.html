@@ -33627,110 +33627,110 @@ icons & this code generated via https://realfavicongenerator.net
 </ul>
 <p><img alt="image" src="../images/lights_vs_leds.jpg" /></p>
 <p>This is an example of for a light:</p>
-<div class="highlight"><pre><span></span><code>lights:
-  my_led:
-    number: 7   # the exact number format depends on your platform
+<div class="highlight"><pre><span></span><code><span class="nt">lights</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_led</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">7</span><span class="w">   </span><span class="c1"># the exact number format depends on your platform</span>
 </code></pre></div>
 <p>For WS2812 LEDs use <code>type grb</code> (WS2811 does not need this)
-<div class="highlight"><pre><span></span><code>lights:
-  my_ws2812_led:
-    number: 23  # the exact number format depends on your platform
-    type: grb
+<div class="highlight"><pre><span></span><code><span class="nt">lights</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_ws2812_led</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">23</span><span class="w">  </span><span class="c1"># the exact number format depends on your platform</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">grb</span>
 </code></pre></div></p>
 <p>You can also map individual color channels:
-<div class="highlight"><pre><span></span><code>lights:
-  rgb_led:
-    type: rgb
-    channels:
-      red:
-        number: 9-29     # the exact number format depends on your platform
-      green:
-        number: 9-30
-      blue:
-        number: 9-31
-      white:
-        number: 9-32
+<div class="highlight"><pre><span></span><code><span class="nt">lights</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">rgb_led</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rgb</span>
+<span class="w">    </span><span class="nt">channels</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">red</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">9-29</span><span class="w">     </span><span class="c1"># the exact number format depends on your platform</span>
+<span class="w">      </span><span class="nt">green</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">9-30</span>
+<span class="w">      </span><span class="nt">blue</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">9-31</span>
+<span class="w">      </span><span class="nt">white</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">9-32</span>
 </code></pre></div></p>
 <p>Starting with MPF 0.54 there is a new syntax to chain lights:
-<div class="highlight"><pre><span></span><code>lights:
-  led_0:
-    start_channel: 0-0    # the exact number format depends on your platform
-    subtype: led
-    type: rgb    # will use red: 0-0, green: 0-1, blue: 0-2
-  led_1:
-    previous: led_0
-    subtype: led
-    type: rgbw   # will use red: 0-3, green: 0-4, blue: 0-5, white: 0-6
-  led_2:
-    previous: led_1
-    subtype: led
-    type: rgbw   # will use red: 0-7, green: 0-8, blue: 0-9, white: 0-10
+<div class="highlight"><pre><span></span><code><span class="nt">lights</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">led_0</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">start_channel</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0-0</span><span class="w">    </span><span class="c1"># the exact number format depends on your platform</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rgb</span><span class="w">    </span><span class="c1"># will use red: 0-0, green: 0-1, blue: 0-2</span>
+<span class="w">  </span><span class="nt">led_1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">previous</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led_0</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rgbw</span><span class="w">   </span><span class="c1"># will use red: 0-3, green: 0-4, blue: 0-5, white: 0-6</span>
+<span class="w">  </span><span class="nt">led_2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">previous</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led_1</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rgbw</span><span class="w">   </span><span class="c1"># will use red: 0-7, green: 0-8, blue: 0-9, white: 0-10</span>
 </code></pre></div></p>
 <p>If your light is connected to a driver use this example:
-<div class="highlight"><pre><span></span><code>coils:
-  light_connected_to_a_driver:
-    number: 42          # number depends on your platform
-    allow_enable: true  # this will allow 100% enable without pwm
-lights:
-  light_on_a_driver:
-    number: light_connected_to_a_driver  # map this light to a driver
-    platform: drivers
+<div class="highlight"><pre><span></span><code><span class="nt">coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">light_connected_to_a_driver</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">42</span><span class="w">          </span><span class="c1"># number depends on your platform</span>
+<span class="w">    </span><span class="nt">allow_enable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w">  </span><span class="c1"># this will allow 100% enable without pwm</span>
+<span class="nt">lights</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">light_on_a_driver</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">light_connected_to_a_driver</span><span class="w">  </span><span class="c1"># map this light to a driver</span>
+<span class="w">    </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">drivers</span>
 </code></pre></div></p>
 <h2 id="fully-working-example-1-basics">Fully working Example 1 - Basics</h2>
 <p>Let’s bring above informaton together and learn by example. Though the following example is a fully working minimal set for the Cobra controller, it is as well helpful to understand the concpet more if you use a different set of hardware. For this example to work physically, the Cobra board needs to have 5V power supply and a Neopixel strip connected to NEO0. No need for a high voltage power supply like you need for coils. The example has been built for a WS2811 strip, but can be used as well for a WS2812 strips and others. This <code>config.yaml</code> is the only configuration file you need in your project. The config file is fully valid for the Cobra board connected to a Linux PC running MPF. If you have a Cobra board but run Windows or macOS you have to change the <code>ports</code>. If you run a completely different hardware you have to adapt the <code>hardware</code> section.</p>
-<div class="highlight"><pre><span></span><code>#config_version=5
+<div class="highlight"><pre><span></span><code><span class="c1">#config_version=5</span>
 
-hardware:               # change in case you don&#39;t use OPP
-   platform: opp
-   driverboards: gen2
+<span class="nt">hardware</span><span class="p">:</span><span class="w">               </span><span class="c1"># change in case you don&#39;t use OPP</span>
+<span class="w">   </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">opp</span>
+<span class="w">   </span><span class="nt">driverboards</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gen2</span>
 
-opp:
-   ports: /dev/ttyACM0, /dev/ttyACM1 # change if your Cobra board uses different ports
+<span class="nt">opp</span><span class="p">:</span>
+<span class="w">   </span><span class="nt">ports</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/dev/ttyACM0, /dev/ttyACM1</span><span class="w"> </span><span class="c1"># change if your Cobra board uses different ports</span>
 
-lights:
-   led_strip_0_led_1:
-      number: 0-0-1 # the exact number format depends on your platform
-      subtype: led
-      type: rgb
-      tags: group1
-   led_strip_0_led_2:
-      number: 0-0-2 # the exact number format depends on your platform
-      subtype: led
-      type: rgb
-      tags: group1
-   led_strip_0_led_3:
-      previous: led_strip_0_led_2
-      subtype: led
-      type: rgb
-      tags: group1
+<span class="nt">lights</span><span class="p">:</span>
+<span class="w">   </span><span class="nt">led_strip_0_led_1</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0-0-1</span><span class="w"> </span><span class="c1"># the exact number format depends on your platform</span>
+<span class="w">      </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led</span>
+<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rgb</span>
+<span class="w">      </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group1</span>
+<span class="w">   </span><span class="nt">led_strip_0_led_2</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0-0-2</span><span class="w"> </span><span class="c1"># the exact number format depends on your platform</span>
+<span class="w">      </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led</span>
+<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rgb</span>
+<span class="w">      </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group1</span>
+<span class="w">   </span><span class="nt">led_strip_0_led_3</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">previous</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led_strip_0_led_2</span>
+<span class="w">      </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led</span>
+<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rgb</span>
+<span class="w">      </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group1</span>
 
-light_player:
-   led_code:
-      led_strip_0_led_1: DFFF00
-   led_off:
-      led_strip_0_led_1: off
-      led_strip_0_led_2: off
-      led_strip_0_led_3: off
-   led_name:
-      led_strip_0_led_1: LightSalmon
-   group_light:
-      group1: green
-   led_fade:
-      led_strip_0_led_1:
-        color: slateblue
-        fade: 2000ms
+<span class="nt">light_player</span><span class="p">:</span>
+<span class="w">   </span><span class="nt">led_code</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">led_strip_0_led_1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DFFF00</span>
+<span class="w">   </span><span class="nt">led_off</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">led_strip_0_led_1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">off</span>
+<span class="w">      </span><span class="nt">led_strip_0_led_2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">off</span>
+<span class="w">      </span><span class="nt">led_strip_0_led_3</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">off</span>
+<span class="w">   </span><span class="nt">led_name</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">led_strip_0_led_1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LightSalmon</span>
+<span class="w">   </span><span class="nt">group_light</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">group1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">green</span>
+<span class="w">   </span><span class="nt">led_fade</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">led_strip_0_led_1</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">slateblue</span>
+<span class="w">        </span><span class="nt">fade</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2000ms</span>
 
-keyboard:
-   1:
-     event: led_off
-   2:
-     event: led_code
-   3:
-     event: led_name
-   4:
-     event: group_light
-   5:
-     event: led_fade
+<span class="nt">keyboard</span><span class="p">:</span>
+<span class="w">   </span><span class="nt">1</span><span class="p">:</span>
+<span class="w">     </span><span class="nt">event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led_off</span>
+<span class="w">   </span><span class="nt">2</span><span class="p">:</span>
+<span class="w">     </span><span class="nt">event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led_code</span>
+<span class="w">   </span><span class="nt">3</span><span class="p">:</span>
+<span class="w">     </span><span class="nt">event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led_name</span>
+<span class="w">   </span><span class="nt">4</span><span class="p">:</span>
+<span class="w">     </span><span class="nt">event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group_light</span>
+<span class="w">   </span><span class="nt">5</span><span class="p">:</span>
+<span class="w">     </span><span class="nt">event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led_fade</span>
 </code></pre></div>
 <p>When you run this configuration, you can use the keys 1 - 5 to set certain lights. Each key submits one event. That event is being used in the <code>light_player</code> section. Each event in the <code>light_player</code> section is assigned to an LED (or group of LEDs), these LEDs are defined in the <code>lights</code> section of the config file. In the <code>light_player</code> section each LED is assigned to a color. For the colors you can use:</p>
 <ul>
@@ -33784,39 +33784,39 @@ true. This example will show a fully working example using the parameter
 paramater is that you are able to define a full serial LED light strip
 with a few lines of config. See as well the corresponding config file
 section <a href="../../config/light_stripes/">light_stripes:</a></p>
-<p><div class="highlight"><pre><span></span><code>#config_version=5
+<p><div class="highlight"><pre><span></span><code><span class="c1">#config_version=5</span>
 
-hardware:
- platform: opp
- driverboards: gen2
+<span class="nt">hardware</span><span class="p">:</span>
+<span class="w"> </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">opp</span>
+<span class="w"> </span><span class="nt">driverboards</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gen2</span>
 
-opp:
- ports: /dev/ttyACM0, /dev/ttyACM1
+<span class="nt">opp</span><span class="p">:</span>
+<span class="w"> </span><span class="nt">ports</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/dev/ttyACM0, /dev/ttyACM1</span>
 
-light_stripes: #yes there is a spelling mistake, make the same mistake
- led_strip_0:
-    number_start: 0
-    count: 50
-    number_template: 0-0-{}
-    light_template:
-       type: rgb
-       tags: strip0
+<span class="nt">light_stripes</span><span class="p">:</span><span class="w"> </span><span class="c1">#yes there is a spelling mistake, make the same mistake</span>
+<span class="w"> </span><span class="nt">led_strip_0</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number_start</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">count</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">50</span>
+<span class="w">    </span><span class="nt">number_template</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0-0-{}</span>
+<span class="w">    </span><span class="nt">light_template</span><span class="p">:</span>
+<span class="w">       </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rgb</span>
+<span class="w">       </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">strip0</span>
 
-light_player:
- full_strip_on:
-    strip0: DFFF00
- led_off:
-    led_strip_0: off
- single_led_green:
-    led_strip_0_light_5: green #led_strip_0 is the name of the strip
+<span class="nt">light_player</span><span class="p">:</span>
+<span class="w"> </span><span class="nt">full_strip_on</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">strip0</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DFFF00</span>
+<span class="w"> </span><span class="nt">led_off</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">led_strip_0</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">off</span>
+<span class="w"> </span><span class="nt">single_led_green</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">led_strip_0_light_5</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">green</span><span class="w"> </span><span class="c1">#led_strip_0 is the name of the strip</span>
 
-keyboard:
- 1:
-    event: led_off
- 2:
-    event: full_strip_on
- 3:
-    event: single_led_green
+<span class="nt">keyboard</span><span class="p">:</span>
+<span class="w"> </span><span class="nt">1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led_off</span>
+<span class="w"> </span><span class="nt">2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">full_strip_on</span>
+<span class="w"> </span><span class="nt">3</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">single_led_green</span>
 </code></pre></div>
 Pay attention to the event <code>single_led_green</code> to understand how to address a single light in your light strip.</p>
 <h2 id="monitorable-properties">Monitorable Properties</h2>

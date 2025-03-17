@@ -33783,16 +33783,16 @@ section of a step.</p>
 <p>The <code>hardware_sound_player:</code> section of your config is where you can
 control external sound modules (e.g. in LISY).</p>
 <p>This is an example:</p>
-<div class="highlight"><pre><span></span><code>hardware_sound_systems:
-  default:
-    label: Default external sound system
-hardware_sound_player:
-  event_posted_elsewhere1:
-    2:
-      action: play
-  ball_started:
-    3: play
-  test_stop: stop
+<div class="highlight"><pre><span></span><code><span class="nt">hardware_sound_systems</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">default</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Default external sound system</span>
+<span class="nt">hardware_sound_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">event_posted_elsewhere1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">2</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">play</span>
+<span class="w">  </span><span class="nt">ball_started</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">3</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">play</span>
+<span class="w">  </span><span class="nt">test_stop</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stop</span>
 </code></pre></div>
 <h2 id="optional-settings">Optional settings</h2>
 <p>The following sections are optional in the <code>hardware_sound_player:</code>

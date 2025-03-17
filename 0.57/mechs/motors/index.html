@@ -33679,27 +33679,27 @@ icons & this code generated via https://realfavicongenerator.net
 <h2 id="config">Config</h2>
 <p>In this example we configure a motorized drop target bank which can move
 up and down with two position switches.</p>
-<div class="highlight"><pre><span></span><code>switches:
-  s_position_up:
-    number:
-  s_position_down:
-    number:
+<div class="highlight"><pre><span></span><code><span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_position_up</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_position_down</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
 
-digital_outputs:
-  c_motor_run:
-    number:
-    type: driver
+<span class="nt">digital_outputs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">c_motor_run</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">driver</span>
 
-motors:
-  motorized_drop_target_bank:
-    motor_left_output: c_motor_run
-    position_switches: !!omap
-      - up: s_position_up
-      - down: s_position_down
-    reset_position: down
-    go_to_position:
-      go_up: up
-      go_down: down
+<span class="nt">motors</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">motorized_drop_target_bank</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">motor_left_output</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_motor_run</span>
+<span class="w">    </span><span class="nt">position_switches</span><span class="p">:</span><span class="w"> </span><span class="kt">!!omap</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">up</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_position_up</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">down</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_position_down</span>
+<span class="w">    </span><span class="nt">reset_position</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">down</span>
+<span class="w">    </span><span class="nt">go_to_position</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">go_up</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">up</span>
+<span class="w">      </span><span class="nt">go_down</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">down</span>
 </code></pre></div>
 <p>The motor can run continuously and drives a camshaft which moves the
 bank up and down. MPF will figure the position using two position
@@ -33709,31 +33709,31 @@ which maps to a driver. On reset the bank moves down and can afterwards
 be commanded using the events <code>go_up</code> and
 <code>go_down</code>.</p>
 <p>The following is an example to drive the slimer in Stern Ghostbusters:</p>
-<div class="highlight"><pre><span></span><code>switches:
-  s_slimer_home:
-    number: 8-1
-  s_slimer_away:
-    number: 8-2
+<div class="highlight"><pre><span></span><code><span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_slimer_home</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8-1</span>
+<span class="w">  </span><span class="nt">s_slimer_away</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8-2</span>
 
-digital_outputs:
-  c_slimer_motor_forward:
-    number: 8-3
-    type: light
-  c_slimer_motor_backward:
-    number: 8-4
-    type: light
+<span class="nt">digital_outputs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">c_slimer_motor_forward</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8-3</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">light</span>
+<span class="w">  </span><span class="nt">c_slimer_motor_backward</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8-4</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">light</span>
 
-motors:
-  ghostbusters_slimer:
-    motor_left_output: c_slimer_motor_forward
-    motor_right_output: c_slimer_motor_backward
-    position_switches: !!omap
-      - home: s_slimer_home
-      - away: s_slimer_away
-    reset_position: home
-    go_to_position:
-      slimer_home: home
-      slimer_away: away
+<span class="nt">motors</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">ghostbusters_slimer</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">motor_left_output</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_slimer_motor_forward</span>
+<span class="w">    </span><span class="nt">motor_right_output</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_slimer_motor_backward</span>
+<span class="w">    </span><span class="nt">position_switches</span><span class="p">:</span><span class="w"> </span><span class="kt">!!omap</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">home</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_slimer_home</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">away</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_slimer_away</span>
+<span class="w">    </span><span class="nt">reset_position</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">home</span>
+<span class="w">    </span><span class="nt">go_to_position</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">slimer_home</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">home</span>
+<span class="w">      </span><span class="nt">slimer_away</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">away</span>
 </code></pre></div>
 <p>The slimer motor can move in two directions using two digital_outputs
 <code>c_slimer_motor_forward</code> and

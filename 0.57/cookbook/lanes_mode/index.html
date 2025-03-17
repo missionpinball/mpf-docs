@@ -33760,84 +33760,84 @@ B, and so on.</p>
 we've given the lights and switches the same names (which is ok since
 they're different types of devices), so our <code>shots:</code> section looks like
 this:</p>
-<div class="highlight"><pre><span></span><code>#! switches:
-#!   indy_i:
-#!     number: 1
-#!   indy_n:
-#!     number: 2
-#!   indy_d:
-#!     number: 3
-#!   indy_y:
-#!     number: 4
-#! lights:
-#!   indy_i:
-#!     number: 1
-#!   indy_n:
-#!     number: 2
-#!   indy_d:
-#!     number: 3
-#!   indy_y:
-#!     number: 4
-##! mode: base
-shots:
-  indy_i:
-    switch: indy_i
-    show_tokens:
-      light: indy_i
-  indy_n:
-    switch: indy_n
-    show_tokens:
-      light: indy_n
-  indy_d:
-    switch: indy_d
-    show_tokens:
-      light: indy_d
-  indy_y:
-    switch: indy_y
-    show_tokens:
-      light: indy_y
+<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
+<span class="c1">#!   indy_i:</span>
+<span class="c1">#!     number: 1</span>
+<span class="c1">#!   indy_n:</span>
+<span class="c1">#!     number: 2</span>
+<span class="c1">#!   indy_d:</span>
+<span class="c1">#!     number: 3</span>
+<span class="c1">#!   indy_y:</span>
+<span class="c1">#!     number: 4</span>
+<span class="c1">#! lights:</span>
+<span class="c1">#!   indy_i:</span>
+<span class="c1">#!     number: 1</span>
+<span class="c1">#!   indy_n:</span>
+<span class="c1">#!     number: 2</span>
+<span class="c1">#!   indy_d:</span>
+<span class="c1">#!     number: 3</span>
+<span class="c1">#!   indy_y:</span>
+<span class="c1">#!     number: 4</span>
+<span class="c1">##! mode: base</span>
+<span class="nt">shots</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">indy_i</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">indy_i</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">light</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">indy_i</span>
+<span class="w">  </span><span class="nt">indy_n</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">indy_n</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">light</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">indy_n</span>
+<span class="w">  </span><span class="nt">indy_d</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">indy_d</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">light</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">indy_d</span>
+<span class="w">  </span><span class="nt">indy_y</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">indy_y</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">light</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">indy_y</span>
 </code></pre></div>
 <p>Next, configure a <code>shot group</code>, which is where you can group individual
 shots together so you can interact with as a single group, like this:</p>
-<div class="highlight"><pre><span></span><code>#! switches:
-#!   indy_i:
-#!     number: 1
-#!   indy_n:
-#!     number: 2
-#!   indy_d:
-#!     number: 3
-#!   indy_y:
-#!     number: 4
-#! lights:
-#!   indy_i:
-#!     number: 1
-#!   indy_n:
-#!     number: 2
-#!   indy_d:
-#!     number: 3
-#!   indy_y:
-#!     number: 4
-##! mode: base
-#! shots:
-#!   indy_i:
-#!     switch: indy_i
-#!     show_tokens:
-#!       light: indy_i
-#!   indy_n:
-#!     switch: indy_n
-#!     show_tokens:
-#!       light: indy_n
-#!   indy_d:
-#!     switch: indy_d
-#!     show_tokens:
-#!       light: indy_d
-#!   indy_y:
-#!     switch: indy_y
-#!     show_tokens:
-#!       light: indy_y
-shot_groups:
-  indy_lanes:
-    shots: indy_i, indy_n, indy_d, indy_y
+<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
+<span class="c1">#!   indy_i:</span>
+<span class="c1">#!     number: 1</span>
+<span class="c1">#!   indy_n:</span>
+<span class="c1">#!     number: 2</span>
+<span class="c1">#!   indy_d:</span>
+<span class="c1">#!     number: 3</span>
+<span class="c1">#!   indy_y:</span>
+<span class="c1">#!     number: 4</span>
+<span class="c1">#! lights:</span>
+<span class="c1">#!   indy_i:</span>
+<span class="c1">#!     number: 1</span>
+<span class="c1">#!   indy_n:</span>
+<span class="c1">#!     number: 2</span>
+<span class="c1">#!   indy_d:</span>
+<span class="c1">#!     number: 3</span>
+<span class="c1">#!   indy_y:</span>
+<span class="c1">#!     number: 4</span>
+<span class="c1">##! mode: base</span>
+<span class="c1">#! shots:</span>
+<span class="c1">#!   indy_i:</span>
+<span class="c1">#!     switch: indy_i</span>
+<span class="c1">#!     show_tokens:</span>
+<span class="c1">#!       light: indy_i</span>
+<span class="c1">#!   indy_n:</span>
+<span class="c1">#!     switch: indy_n</span>
+<span class="c1">#!     show_tokens:</span>
+<span class="c1">#!       light: indy_n</span>
+<span class="c1">#!   indy_d:</span>
+<span class="c1">#!     switch: indy_d</span>
+<span class="c1">#!     show_tokens:</span>
+<span class="c1">#!       light: indy_d</span>
+<span class="c1">#!   indy_y:</span>
+<span class="c1">#!     switch: indy_y</span>
+<span class="c1">#!     show_tokens:</span>
+<span class="c1">#!       light: indy_y</span>
+<span class="nt">shot_groups</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">indy_lanes</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">shots</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">indy_i, indy_n, indy_d, indy_y</span>
 </code></pre></div>
 <p>Note that the order of your shots is important since that's how MPF
 knows the order of them in order to do shot rotation (more on that
@@ -33869,47 +33869,47 @@ configure it in a mode config, then they're only active as long as that
 mode's active. In this tutorial we're going to configure them in the
 base mode as well but you could put that group in any other mode and
 load/unload it as you need it.</p>
-<div class="highlight"><pre><span></span><code>#! switches:
-#!   indy_i:
-#!     number: 1
-#!   indy_n:
-#!     number: 2
-#!   indy_d:
-#!     number: 3
-#!   indy_y:
-#!     number: 4
-#! lights:
-#!   indy_i:
-#!     number: 1
-#!   indy_n:
-#!     number: 2
-#!   indy_d:
-#!     number: 3
-#!   indy_y:
-#!     number: 4
-##! mode: base
-#! shots:
-#!   indy_i:
-#!     switch: indy_i
-#!     show_tokens:
-#!       light: indy_i
-#!   indy_n:
-#!     switch: indy_n
-#!     show_tokens:
-#!       light: indy_n
-#!   indy_d:
-#!     switch: indy_d
-#!     show_tokens:
-#!       light: indy_d
-#!   indy_y:
-#!     switch: indy_y
-#!     show_tokens:
-#!       light: indy_y
-shot_groups:
-  indy_lanes:
-    shots: indy_i, indy_n, indy_d, indy_y
-    rotate_left_events: left_flipper_active
-    rotate_right_events: right_flipper_active
+<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
+<span class="c1">#!   indy_i:</span>
+<span class="c1">#!     number: 1</span>
+<span class="c1">#!   indy_n:</span>
+<span class="c1">#!     number: 2</span>
+<span class="c1">#!   indy_d:</span>
+<span class="c1">#!     number: 3</span>
+<span class="c1">#!   indy_y:</span>
+<span class="c1">#!     number: 4</span>
+<span class="c1">#! lights:</span>
+<span class="c1">#!   indy_i:</span>
+<span class="c1">#!     number: 1</span>
+<span class="c1">#!   indy_n:</span>
+<span class="c1">#!     number: 2</span>
+<span class="c1">#!   indy_d:</span>
+<span class="c1">#!     number: 3</span>
+<span class="c1">#!   indy_y:</span>
+<span class="c1">#!     number: 4</span>
+<span class="c1">##! mode: base</span>
+<span class="c1">#! shots:</span>
+<span class="c1">#!   indy_i:</span>
+<span class="c1">#!     switch: indy_i</span>
+<span class="c1">#!     show_tokens:</span>
+<span class="c1">#!       light: indy_i</span>
+<span class="c1">#!   indy_n:</span>
+<span class="c1">#!     switch: indy_n</span>
+<span class="c1">#!     show_tokens:</span>
+<span class="c1">#!       light: indy_n</span>
+<span class="c1">#!   indy_d:</span>
+<span class="c1">#!     switch: indy_d</span>
+<span class="c1">#!     show_tokens:</span>
+<span class="c1">#!       light: indy_d</span>
+<span class="c1">#!   indy_y:</span>
+<span class="c1">#!     switch: indy_y</span>
+<span class="c1">#!     show_tokens:</span>
+<span class="c1">#!       light: indy_y</span>
+<span class="nt">shot_groups</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">indy_lanes</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">shots</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">indy_i, indy_n, indy_d, indy_y</span>
+<span class="w">    </span><span class="nt">rotate_left_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">left_flipper_active</span>
+<span class="w">    </span><span class="nt">rotate_right_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">right_flipper_active</span>
 </code></pre></div>
 <p>You can specify whatever event name(s) you want for your rotation
 events. By default, MPF will post
@@ -33921,46 +33921,46 @@ flipper buttons from the machine-wide switches: section are named
 rotate lane shots to the right, regardless of which flipper button is
 pressed. In that case you'd only have an entry for rotate_right_events,
 but you'd add both the left and right flipper events, like this:</p>
-<div class="highlight"><pre><span></span><code>#! switches:
-#!   indy_i:
-#!     number: 1
-#!   indy_n:
-#!     number: 2
-#!   indy_d:
-#!     number: 3
-#!   indy_y:
-#!     number: 4
-#! lights:
-#!   indy_i:
-#!     number: 1
-#!   indy_n:
-#!     number: 2
-#!   indy_d:
-#!     number: 3
-#!   indy_y:
-#!     number: 4
-##! mode: base
-#! shots:
-#!   indy_i:
-#!     switch: indy_i
-#!     show_tokens:
-#!       light: indy_i
-#!   indy_n:
-#!     switch: indy_n
-#!     show_tokens:
-#!       light: indy_n
-#!   indy_d:
-#!     switch: indy_d
-#!     show_tokens:
-#!       light: indy_d
-#!   indy_y:
-#!     switch: indy_y
-#!     show_tokens:
-#!       light: indy_y
-shot_groups:
-  indy_lanes:
-    shots: indy_i, indy_n, indy_d, indy_y
-    rotate_right_events: left_flipper_active, right_flipper_active
+<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
+<span class="c1">#!   indy_i:</span>
+<span class="c1">#!     number: 1</span>
+<span class="c1">#!   indy_n:</span>
+<span class="c1">#!     number: 2</span>
+<span class="c1">#!   indy_d:</span>
+<span class="c1">#!     number: 3</span>
+<span class="c1">#!   indy_y:</span>
+<span class="c1">#!     number: 4</span>
+<span class="c1">#! lights:</span>
+<span class="c1">#!   indy_i:</span>
+<span class="c1">#!     number: 1</span>
+<span class="c1">#!   indy_n:</span>
+<span class="c1">#!     number: 2</span>
+<span class="c1">#!   indy_d:</span>
+<span class="c1">#!     number: 3</span>
+<span class="c1">#!   indy_y:</span>
+<span class="c1">#!     number: 4</span>
+<span class="c1">##! mode: base</span>
+<span class="c1">#! shots:</span>
+<span class="c1">#!   indy_i:</span>
+<span class="c1">#!     switch: indy_i</span>
+<span class="c1">#!     show_tokens:</span>
+<span class="c1">#!       light: indy_i</span>
+<span class="c1">#!   indy_n:</span>
+<span class="c1">#!     switch: indy_n</span>
+<span class="c1">#!     show_tokens:</span>
+<span class="c1">#!       light: indy_n</span>
+<span class="c1">#!   indy_d:</span>
+<span class="c1">#!     switch: indy_d</span>
+<span class="c1">#!     show_tokens:</span>
+<span class="c1">#!       light: indy_d</span>
+<span class="c1">#!   indy_y:</span>
+<span class="c1">#!     switch: indy_y</span>
+<span class="c1">#!     show_tokens:</span>
+<span class="c1">#!       light: indy_y</span>
+<span class="nt">shot_groups</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">indy_lanes</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">shots</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">indy_i, indy_n, indy_d, indy_y</span>
+<span class="w">    </span><span class="nt">rotate_right_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">left_flipper_active, right_flipper_active</span>
 </code></pre></div>
 <p>Of course you can use whatever event(s) you want to rotate the shots.
 Many System 11 machines had lit shots in the inlanes and outlanes that
@@ -33979,62 +33979,62 @@ this step. The way we'll do that is to add an entry for
 shots to reset. To do that, go back into your <code>base.yaml</code>
 file and add another setting to your <em>indy_lanes</em> shot group for
 <code>reset_events:</code>, like this:</p>
-<div class="highlight"><pre><span></span><code>#! switches:
-#!   indy_i:
-#!     number: 1
-#!   indy_n:
-#!     number: 2
-#!   indy_d:
-#!     number: 3
-#!   indy_y:
-#!     number: 4
-#! lights:
-#!   indy_i:
-#!     number: 1
-#!   indy_n:
-#!     number: 2
-#!   indy_d:
-#!     number: 3
-#!   indy_y:
-#!     number: 4
-##! mode: base
-#! mode:
-#!   start_events: ball_started
-#! shots:
-#!   indy_i:
-#!     switch: indy_i
-#!     show_tokens:
-#!       light: indy_i
-#!   indy_n:
-#!     switch: indy_n
-#!     show_tokens:
-#!       light: indy_n
-#!   indy_d:
-#!     switch: indy_d
-#!     show_tokens:
-#!       light: indy_d
-#!   indy_y:
-#!     switch: indy_y
-#!     show_tokens:
-#!       light: indy_y
-shot_groups:
-  indy_lanes:
-    shots: indy_i, indy_n, indy_d, indy_y
-    rotate_left_events: left_flipper_active
-    rotate_right_events: right_flipper_active
-    reset_events:
-      indy_lanes_lit_complete: 1s
-##! test
-#! start_game
-#! assert_str_condition unlit device.shot_groups.indy_lanes.common_state
-#! hit_and_release_switch indy_i
-#! hit_and_release_switch indy_n
-#! hit_and_release_switch indy_d
-#! hit_and_release_switch indy_y
-#! advance_time_and_run .1
-#! assert_str_condition lit device.shot_groups.indy_lanes.common_state
-#! advance_time_and_run 1
-#! assert_str_condition unlit device.shot_groups.indy_lanes.common_state
+<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
+<span class="c1">#!   indy_i:</span>
+<span class="c1">#!     number: 1</span>
+<span class="c1">#!   indy_n:</span>
+<span class="c1">#!     number: 2</span>
+<span class="c1">#!   indy_d:</span>
+<span class="c1">#!     number: 3</span>
+<span class="c1">#!   indy_y:</span>
+<span class="c1">#!     number: 4</span>
+<span class="c1">#! lights:</span>
+<span class="c1">#!   indy_i:</span>
+<span class="c1">#!     number: 1</span>
+<span class="c1">#!   indy_n:</span>
+<span class="c1">#!     number: 2</span>
+<span class="c1">#!   indy_d:</span>
+<span class="c1">#!     number: 3</span>
+<span class="c1">#!   indy_y:</span>
+<span class="c1">#!     number: 4</span>
+<span class="c1">##! mode: base</span>
+<span class="c1">#! mode:</span>
+<span class="c1">#!   start_events: ball_started</span>
+<span class="c1">#! shots:</span>
+<span class="c1">#!   indy_i:</span>
+<span class="c1">#!     switch: indy_i</span>
+<span class="c1">#!     show_tokens:</span>
+<span class="c1">#!       light: indy_i</span>
+<span class="c1">#!   indy_n:</span>
+<span class="c1">#!     switch: indy_n</span>
+<span class="c1">#!     show_tokens:</span>
+<span class="c1">#!       light: indy_n</span>
+<span class="c1">#!   indy_d:</span>
+<span class="c1">#!     switch: indy_d</span>
+<span class="c1">#!     show_tokens:</span>
+<span class="c1">#!       light: indy_d</span>
+<span class="c1">#!   indy_y:</span>
+<span class="c1">#!     switch: indy_y</span>
+<span class="c1">#!     show_tokens:</span>
+<span class="c1">#!       light: indy_y</span>
+<span class="nt">shot_groups</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">indy_lanes</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">shots</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">indy_i, indy_n, indy_d, indy_y</span>
+<span class="w">    </span><span class="nt">rotate_left_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">left_flipper_active</span>
+<span class="w">    </span><span class="nt">rotate_right_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">right_flipper_active</span>
+<span class="w">    </span><span class="nt">reset_events</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">indy_lanes_lit_complete</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<span class="c1">##! test</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! assert_str_condition unlit device.shot_groups.indy_lanes.common_state</span>
+<span class="c1">#! hit_and_release_switch indy_i</span>
+<span class="c1">#! hit_and_release_switch indy_n</span>
+<span class="c1">#! hit_and_release_switch indy_d</span>
+<span class="c1">#! hit_and_release_switch indy_y</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_str_condition lit device.shot_groups.indy_lanes.common_state</span>
+<span class="c1">#! advance_time_and_run 1</span>
+<span class="c1">#! assert_str_condition unlit device.shot_groups.indy_lanes.common_state</span>
 </code></pre></div>
 <p>There are a few things going on here. First, notice that the name of our
 event is <code>indy_lanes_default_lit_complete</code>. That seems like a mouthful,
@@ -34070,70 +34070,70 @@ points when they complete all the shots in the group. To do that, add a
 scoring section to your base.yaml mode configuration. (Or you can add it
 to your machine-wide config if you want to keep all your scoring entries
 in one place.) It should look like this:</p>
-<div class="highlight"><pre><span></span><code>#! switches:
-#!   indy_i:
-#!     number: 1
-#!   indy_n:
-#!     number: 2
-#!   indy_d:
-#!     number: 3
-#!   indy_y:
-#!     number: 4
-#! lights:
-#!   indy_i:
-#!     number: 1
-#!   indy_n:
-#!     number: 2
-#!   indy_d:
-#!     number: 3
-#!   indy_y:
-#!     number: 4
-##! mode: base
-#! mode:
-#!   start_events: ball_started
-#! shots:
-#!   indy_i:
-#!     switch: indy_i
-#!     show_tokens:
-#!       light: indy_i
-#!   indy_n:
-#!     switch: indy_n
-#!     show_tokens:
-#!       light: indy_n
-#!   indy_d:
-#!     switch: indy_d
-#!     show_tokens:
-#!       light: indy_d
-#!   indy_y:
-#!     switch: indy_y
-#!     show_tokens:
-#!       light: indy_y
-#! shot_groups:
-#!   indy_lanes:
-#!     shots: indy_i, indy_n, indy_d, indy_y
-#!     rotate_left_events: left_flipper_active
-#!     rotate_right_events: right_flipper_active
-#!     reset_events:
-#!       indy_lanes_lit_complete: 1s
-variable_player:
-  indy_lanes_unlit_hit:
-    score: 5000
-  indy_lanes_lit_hit:
-    score: 100
-  indy_lanes_lit_complete:
-    score: 10000
-##! test
-#! start_game
-#! assert_str_condition unlit device.shot_groups.indy_lanes.common_state
-#! hit_and_release_switch indy_i
-#! hit_and_release_switch indy_n
-#! hit_and_release_switch indy_d
-#! hit_and_release_switch indy_y
-#! advance_time_and_run .1
-#! assert_str_condition lit device.shot_groups.indy_lanes.common_state
-#! advance_time_and_run 1
-#! assert_str_condition unlit device.shot_groups.indy_lanes.common_state
-#! assert_player_variable 30000 score
+<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
+<span class="c1">#!   indy_i:</span>
+<span class="c1">#!     number: 1</span>
+<span class="c1">#!   indy_n:</span>
+<span class="c1">#!     number: 2</span>
+<span class="c1">#!   indy_d:</span>
+<span class="c1">#!     number: 3</span>
+<span class="c1">#!   indy_y:</span>
+<span class="c1">#!     number: 4</span>
+<span class="c1">#! lights:</span>
+<span class="c1">#!   indy_i:</span>
+<span class="c1">#!     number: 1</span>
+<span class="c1">#!   indy_n:</span>
+<span class="c1">#!     number: 2</span>
+<span class="c1">#!   indy_d:</span>
+<span class="c1">#!     number: 3</span>
+<span class="c1">#!   indy_y:</span>
+<span class="c1">#!     number: 4</span>
+<span class="c1">##! mode: base</span>
+<span class="c1">#! mode:</span>
+<span class="c1">#!   start_events: ball_started</span>
+<span class="c1">#! shots:</span>
+<span class="c1">#!   indy_i:</span>
+<span class="c1">#!     switch: indy_i</span>
+<span class="c1">#!     show_tokens:</span>
+<span class="c1">#!       light: indy_i</span>
+<span class="c1">#!   indy_n:</span>
+<span class="c1">#!     switch: indy_n</span>
+<span class="c1">#!     show_tokens:</span>
+<span class="c1">#!       light: indy_n</span>
+<span class="c1">#!   indy_d:</span>
+<span class="c1">#!     switch: indy_d</span>
+<span class="c1">#!     show_tokens:</span>
+<span class="c1">#!       light: indy_d</span>
+<span class="c1">#!   indy_y:</span>
+<span class="c1">#!     switch: indy_y</span>
+<span class="c1">#!     show_tokens:</span>
+<span class="c1">#!       light: indy_y</span>
+<span class="c1">#! shot_groups:</span>
+<span class="c1">#!   indy_lanes:</span>
+<span class="c1">#!     shots: indy_i, indy_n, indy_d, indy_y</span>
+<span class="c1">#!     rotate_left_events: left_flipper_active</span>
+<span class="c1">#!     rotate_right_events: right_flipper_active</span>
+<span class="c1">#!     reset_events:</span>
+<span class="c1">#!       indy_lanes_lit_complete: 1s</span>
+<span class="nt">variable_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">indy_lanes_unlit_hit</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5000</span>
+<span class="w">  </span><span class="nt">indy_lanes_lit_hit</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="w">  </span><span class="nt">indy_lanes_lit_complete</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10000</span>
+<span class="c1">##! test</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! assert_str_condition unlit device.shot_groups.indy_lanes.common_state</span>
+<span class="c1">#! hit_and_release_switch indy_i</span>
+<span class="c1">#! hit_and_release_switch indy_n</span>
+<span class="c1">#! hit_and_release_switch indy_d</span>
+<span class="c1">#! hit_and_release_switch indy_y</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_str_condition lit device.shot_groups.indy_lanes.common_state</span>
+<span class="c1">#! advance_time_and_run 1</span>
+<span class="c1">#! assert_str_condition unlit device.shot_groups.indy_lanes.common_state</span>
+<span class="c1">#! assert_player_variable 30000 score</span>
 </code></pre></div>
 <p>Again, these event names might seem crazy, but they're all very logical
 if you break them down. The shot group will post events any time one of
@@ -34161,108 +34161,108 @@ Boring! So let's create a light show that flashes the lane lights when
 you complete the lanes. To do this, let's first create a light show
 (details in Steps A and B <code>here</code>) called
 `indy_lanes_complete.yaml`:</p>
-<div class="highlight"><pre><span></span><code>##! show: indy_lanes_complete
-- duration: 1
-  lights:
-    indy_i: ff
-    indy_n: 00
-    indy_d: ff
-    indy_y: 00
-- duration: 1
-  lights:
-    indy_i: 00
-    indy_n: ff
-    indy_d: 00
-    indy_y: ff
+<div class="highlight"><pre><span></span><code><span class="c1">##! show: indy_lanes_complete</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">indy_i</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ff</span>
+<span class="w">    </span><span class="nt">indy_n</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">00</span>
+<span class="w">    </span><span class="nt">indy_d</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ff</span>
+<span class="w">    </span><span class="nt">indy_y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">00</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">indy_i</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">00</span>
+<span class="w">    </span><span class="nt">indy_n</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ff</span>
+<span class="w">    </span><span class="nt">indy_d</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">00</span>
+<span class="w">    </span><span class="nt">indy_y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ff</span>
 </code></pre></div>
 <p>Obviously you can make this show do whatever you want; I opted for a
 simple one that sort of alternates the lights. Then to run the light
 show, go back to your <code>base.yaml</code> mode config and add a
 <code>light_player:</code> entry which plays this show when the lanes
 are complete, like this:</p>
-<div class="highlight"><pre><span></span><code>#! switches:
-#!   indy_i:
-#!     number: 1
-#!   indy_n:
-#!     number: 2
-#!   indy_d:
-#!     number: 3
-#!   indy_y:
-#!     number: 4
-#! lights:
-#!   indy_i:
-#!     number: 1
-#!   indy_n:
-#!     number: 2
-#!   indy_d:
-#!     number: 3
-#!   indy_y:
-#!     number: 4
-##! show: indy_lanes_complete
-#! - duration: 1
-#!   lights:
-#!     indy_i: ff
-#!     indy_n: 00
-#!     indy_d: ff
-#!     indy_y: 00
-#! - duration: 1
-#!   lights:
-#!     indy_i: 00
-#!     indy_n: ff
-#!     indy_d: 00
-#!     indy_y: ff
-##! mode: base
-#! mode:
-#!   start_events: ball_started
-#! shots:
-#!   indy_i:
-#!     switch: indy_i
-#!     show_tokens:
-#!       light: indy_i
-#!   indy_n:
-#!     switch: indy_n
-#!     show_tokens:
-#!       light: indy_n
-#!   indy_d:
-#!     switch: indy_d
-#!     show_tokens:
-#!       light: indy_d
-#!   indy_y:
-#!     switch: indy_y
-#!     show_tokens:
-#!       light: indy_y
-#! shot_groups:
-#!   indy_lanes:
-#!     shots: indy_i, indy_n, indy_d, indy_y
-#!     rotate_left_events: left_flipper_active
-#!     rotate_right_events: right_flipper_active
-#!     reset_events:
-#!       indy_lanes_lit_complete: 1s
-#! variable_player:
-#!   indy_lanes_unlit_hit:
-#!     score: 5000
-#!   indy_lanes_lit_hit:
-#!     score: 100
-#!   indy_lanes_lit_complete:
-#!     score: 10000
-show_player:
-  indy_lanes_default_lit_complete:
-    indy_lanes_complete:
-      speed: 20
-      loops: 10
-      priority: 1
-##! test
-#! start_game
-#! assert_str_condition unlit device.shot_groups.indy_lanes.common_state
-#! hit_and_release_switch indy_i
-#! hit_and_release_switch indy_n
-#! hit_and_release_switch indy_d
-#! hit_and_release_switch indy_y
-#! advance_time_and_run .1
-#! assert_str_condition lit device.shot_groups.indy_lanes.common_state
-#! advance_time_and_run 1
-#! assert_str_condition unlit device.shot_groups.indy_lanes.common_state
-#! assert_player_variable 30000 score
+<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
+<span class="c1">#!   indy_i:</span>
+<span class="c1">#!     number: 1</span>
+<span class="c1">#!   indy_n:</span>
+<span class="c1">#!     number: 2</span>
+<span class="c1">#!   indy_d:</span>
+<span class="c1">#!     number: 3</span>
+<span class="c1">#!   indy_y:</span>
+<span class="c1">#!     number: 4</span>
+<span class="c1">#! lights:</span>
+<span class="c1">#!   indy_i:</span>
+<span class="c1">#!     number: 1</span>
+<span class="c1">#!   indy_n:</span>
+<span class="c1">#!     number: 2</span>
+<span class="c1">#!   indy_d:</span>
+<span class="c1">#!     number: 3</span>
+<span class="c1">#!   indy_y:</span>
+<span class="c1">#!     number: 4</span>
+<span class="c1">##! show: indy_lanes_complete</span>
+<span class="c1">#! - duration: 1</span>
+<span class="c1">#!   lights:</span>
+<span class="c1">#!     indy_i: ff</span>
+<span class="c1">#!     indy_n: 00</span>
+<span class="c1">#!     indy_d: ff</span>
+<span class="c1">#!     indy_y: 00</span>
+<span class="c1">#! - duration: 1</span>
+<span class="c1">#!   lights:</span>
+<span class="c1">#!     indy_i: 00</span>
+<span class="c1">#!     indy_n: ff</span>
+<span class="c1">#!     indy_d: 00</span>
+<span class="c1">#!     indy_y: ff</span>
+<span class="c1">##! mode: base</span>
+<span class="c1">#! mode:</span>
+<span class="c1">#!   start_events: ball_started</span>
+<span class="c1">#! shots:</span>
+<span class="c1">#!   indy_i:</span>
+<span class="c1">#!     switch: indy_i</span>
+<span class="c1">#!     show_tokens:</span>
+<span class="c1">#!       light: indy_i</span>
+<span class="c1">#!   indy_n:</span>
+<span class="c1">#!     switch: indy_n</span>
+<span class="c1">#!     show_tokens:</span>
+<span class="c1">#!       light: indy_n</span>
+<span class="c1">#!   indy_d:</span>
+<span class="c1">#!     switch: indy_d</span>
+<span class="c1">#!     show_tokens:</span>
+<span class="c1">#!       light: indy_d</span>
+<span class="c1">#!   indy_y:</span>
+<span class="c1">#!     switch: indy_y</span>
+<span class="c1">#!     show_tokens:</span>
+<span class="c1">#!       light: indy_y</span>
+<span class="c1">#! shot_groups:</span>
+<span class="c1">#!   indy_lanes:</span>
+<span class="c1">#!     shots: indy_i, indy_n, indy_d, indy_y</span>
+<span class="c1">#!     rotate_left_events: left_flipper_active</span>
+<span class="c1">#!     rotate_right_events: right_flipper_active</span>
+<span class="c1">#!     reset_events:</span>
+<span class="c1">#!       indy_lanes_lit_complete: 1s</span>
+<span class="c1">#! variable_player:</span>
+<span class="c1">#!   indy_lanes_unlit_hit:</span>
+<span class="c1">#!     score: 5000</span>
+<span class="c1">#!   indy_lanes_lit_hit:</span>
+<span class="c1">#!     score: 100</span>
+<span class="c1">#!   indy_lanes_lit_complete:</span>
+<span class="c1">#!     score: 10000</span>
+<span class="nt">show_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">indy_lanes_default_lit_complete</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">indy_lanes_complete</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">speed</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span>
+<span class="w">      </span><span class="nt">loops</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="w">      </span><span class="nt">priority</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="c1">##! test</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! assert_str_condition unlit device.shot_groups.indy_lanes.common_state</span>
+<span class="c1">#! hit_and_release_switch indy_i</span>
+<span class="c1">#! hit_and_release_switch indy_n</span>
+<span class="c1">#! hit_and_release_switch indy_d</span>
+<span class="c1">#! hit_and_release_switch indy_y</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_str_condition lit device.shot_groups.indy_lanes.common_state</span>
+<span class="c1">#! advance_time_and_run 1</span>
+<span class="c1">#! assert_str_condition unlit device.shot_groups.indy_lanes.common_state</span>
+<span class="c1">#! assert_player_variable 30000 score</span>
 </code></pre></div>
 <p>If you've worked with shows before, these settings should be pretty
 straightforward. Running this show at 20x the speed means that it runs
@@ -34295,89 +34295,89 @@ you could not have a <code>priority</code> entry in the light_player entry so
 lighting the lane shows up while the show plays around it. Really there
 are lots of options you can play with.</p>
 <p>This is a full example:</p>
-<div class="highlight"><pre><span></span><code># switches and lights in your machine config
-switches:
-  indy_i:
-    number: 1
-  indy_n:
-    number: 2
-  indy_d:
-    number: 3
-  indy_y:
-    number: 4
-lights:
-  indy_i:
-    number: 1
-  indy_n:
-    number: 2
-  indy_d:
-    number: 3
-  indy_y:
-    number: 4
-##! show: indy_lanes_complete
-# the show on complete
-- duration: 1
-  lights:
-    indy_i: ff
-    indy_n: 00
-    indy_d: ff
-    indy_y: 00
-- duration: 1
-  lights:
-    indy_i: 00
-    indy_n: ff
-    indy_d: 00
-    indy_y: ff
-##! mode: base
-# your base mode
-mode:
-  start_events: ball_started
-shots:
-  indy_i:
-    switch: indy_i
-    show_tokens:
-      light: indy_i
-  indy_n:
-    switch: indy_n
-    show_tokens:
-      light: indy_n
-  indy_d:
-    switch: indy_d
-    show_tokens:
-      light: indy_d
-  indy_y:
-    switch: indy_y
-    show_tokens:
-      light: indy_y
-shot_groups:
-  indy_lanes:
-    shots: indy_i, indy_n, indy_d, indy_y
-    rotate_left_events: left_flipper_active
-    rotate_right_events: right_flipper_active
-    reset_events: indy_lanes_lit_complete
-variable_player:
-  indy_lanes_unlit_hit:
-    score: 5000
-  indy_lanes_lit_hit:
-    score: 100
-  indy_lanes_lit_complete:
-    score: 10000
-show_player:
-  indy_lanes_default_lit_complete:
-    indy_lanes_complete:
-      speed: 20
-      loops: 10
-      priority: 1
-##! test
-#! start_game
-#! assert_str_condition unlit device.shot_groups.indy_lanes.common_state
-#! hit_and_release_switch indy_i
-#! hit_and_release_switch indy_n
-#! hit_and_release_switch indy_d
-#! hit_and_release_switch indy_y
-#! advance_time_and_run .1
-#! assert_str_condition unlit device.shot_groups.indy_lanes.common_state
-#! assert_player_variable 30000 score
+<div class="highlight"><pre><span></span><code><span class="c1"># switches and lights in your machine config</span>
+<span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">indy_i</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">indy_n</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="w">  </span><span class="nt">indy_d</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="w">  </span><span class="nt">indy_y</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span>
+<span class="nt">lights</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">indy_i</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">indy_n</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="w">  </span><span class="nt">indy_d</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="w">  </span><span class="nt">indy_y</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span>
+<span class="c1">##! show: indy_lanes_complete</span>
+<span class="c1"># the show on complete</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">indy_i</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ff</span>
+<span class="w">    </span><span class="nt">indy_n</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">00</span>
+<span class="w">    </span><span class="nt">indy_d</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ff</span>
+<span class="w">    </span><span class="nt">indy_y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">00</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">indy_i</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">00</span>
+<span class="w">    </span><span class="nt">indy_n</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ff</span>
+<span class="w">    </span><span class="nt">indy_d</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">00</span>
+<span class="w">    </span><span class="nt">indy_y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ff</span>
+<span class="c1">##! mode: base</span>
+<span class="c1"># your base mode</span>
+<span class="nt">mode</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">start_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ball_started</span>
+<span class="nt">shots</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">indy_i</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">indy_i</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">light</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">indy_i</span>
+<span class="w">  </span><span class="nt">indy_n</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">indy_n</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">light</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">indy_n</span>
+<span class="w">  </span><span class="nt">indy_d</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">indy_d</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">light</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">indy_d</span>
+<span class="w">  </span><span class="nt">indy_y</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">indy_y</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">light</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">indy_y</span>
+<span class="nt">shot_groups</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">indy_lanes</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">shots</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">indy_i, indy_n, indy_d, indy_y</span>
+<span class="w">    </span><span class="nt">rotate_left_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">left_flipper_active</span>
+<span class="w">    </span><span class="nt">rotate_right_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">right_flipper_active</span>
+<span class="w">    </span><span class="nt">reset_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">indy_lanes_lit_complete</span>
+<span class="nt">variable_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">indy_lanes_unlit_hit</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5000</span>
+<span class="w">  </span><span class="nt">indy_lanes_lit_hit</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="w">  </span><span class="nt">indy_lanes_lit_complete</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10000</span>
+<span class="nt">show_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">indy_lanes_default_lit_complete</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">indy_lanes_complete</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">speed</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span>
+<span class="w">      </span><span class="nt">loops</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="w">      </span><span class="nt">priority</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="c1">##! test</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! assert_str_condition unlit device.shot_groups.indy_lanes.common_state</span>
+<span class="c1">#! hit_and_release_switch indy_i</span>
+<span class="c1">#! hit_and_release_switch indy_n</span>
+<span class="c1">#! hit_and_release_switch indy_d</span>
+<span class="c1">#! hit_and_release_switch indy_y</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_str_condition unlit device.shot_groups.indy_lanes.common_state</span>
+<span class="c1">#! assert_player_variable 30000 score</span>
 </code></pre></div>
 <hr />
 <div class="admonition question">

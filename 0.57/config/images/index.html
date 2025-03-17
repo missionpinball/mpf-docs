@@ -33774,12 +33774,12 @@ scanning the file system to build up a list of asset files it finds.
 Then it looks at the config to see if there are any additional settings
 specified for each asset.</p>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>images:
-  insert_coin:
-    load: preload
-  hello_face:
-    file: hello_face_300.jpg
-    load: None
+<div class="highlight"><pre><span></span><code><span class="nt">images</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">insert_coin</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">load</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">preload</span>
+<span class="w">  </span><span class="nt">hello_face</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hello_face_300.jpg</span>
+<span class="w">    </span><span class="nt">load</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">None</span>
 </code></pre></div>
 <p>So in the example above, if the asset manager found a file called
 <code>insert_coin.jpg</code> on disk, then it will also see the <code>insert_coin</code> entry

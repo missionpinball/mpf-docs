@@ -33707,11 +33707,11 @@ icons & this code generated via https://realfavicongenerator.net
 being developed. Documentation will be added as the feature becomes more
 mature.</p>
 <p>LEDs work similar to matrix lights (chain 0, board 1, LED 1):</p>
-<div class="highlight"><pre><span></span><code>lights:
-  some_led:
-    number: 0-1-1
-    subtype: led
-    type: rgb
+<div class="highlight"><pre><span></span><code><span class="nt">lights</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">some_led</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0-1-1</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rgb</span>
 </code></pre></div>
 <p>Note, counting starts always with 0, so LED 1 in aboves example is the
 2nd LED of the strip.</p>
@@ -33764,19 +33764,19 @@ traditionally RGB (or GRB) LEDs with exactly three channels. However,
 this is not true for RGBW or similar LEDs which do not work with this
 style of numbering. Luckily, you can chain them instead and have MPF
 calculate the internal channels for you:</p>
-<div class="highlight"><pre><span></span><code>lights:
-  led_0:
-    start_channel: 0-0-0
-    subtype: led
-    type: rgb    # will use red: 0-0-0, green: 0-0-1, blue: 0-0-2
-  led_1:
-    previous: led_0
-    subtype: led
-    type: rgbw   # will use red: 0-0-3, green: 0-0-4, blue: 0-0-5, white: 0-0-6
-  led_2:
-    previous: led_1
-    subtype: led
-    type: rgbw   # will use red: 0-0-7, green: 0-0-8, blue: 0-0-9, white: 0-0-10
+<div class="highlight"><pre><span></span><code><span class="nt">lights</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">led_0</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">start_channel</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0-0-0</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rgb</span><span class="w">    </span><span class="c1"># will use red: 0-0-0, green: 0-0-1, blue: 0-0-2</span>
+<span class="w">  </span><span class="nt">led_1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">previous</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led_0</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rgbw</span><span class="w">   </span><span class="c1"># will use red: 0-0-3, green: 0-0-4, blue: 0-0-5, white: 0-0-6</span>
+<span class="w">  </span><span class="nt">led_2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">previous</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led_1</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rgbw</span><span class="w">   </span><span class="c1"># will use red: 0-0-7, green: 0-0-8, blue: 0-0-9, white: 0-0-10</span>
 </code></pre></div>
 <p>See <a href="../../../mechs/lights/ws2812/">WS2811 and WS2812 LEDs in Pinball</a> for details.</p>
 <h2 id="what-if-it-did-not-work">What if it did not work?</h2>

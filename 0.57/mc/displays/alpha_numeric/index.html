@@ -33666,28 +33666,28 @@ your hardware).</p>
 <h2 id="2-implement-virtual-segment-displays">2. Implement virtual segment displays</h2>
 <p>If you don't have or want phyiscal segment displays you can also
 emulate them using the following slides:</p>
-<div class="highlight"><pre><span></span><code>slides:
-  segment_displays:
-    widgets:
-      - type: text
-        text: (player1|score)
-        number_grouping: true
-        min_digits: 2
-        font_name: ten_segment
-        color: blue
-        x: 620
-        y: 724
-        font_size: 240
-        anchor_x: right
-        anchor_y: bottom
-        z: 2
-# show slide on game start
-slide_player:
-  game_started: segment_displays
-##! test
-#! start_game
-#! advance_time_and_run .1
-#! assert_slide_on_top segment_displays
+<div class="highlight"><pre><span></span><code><span class="nt">slides</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">segment_displays</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">widgets</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(player1|score)</span>
+<span class="w">        </span><span class="nt">number_grouping</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">        </span><span class="nt">min_digits</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="w">        </span><span class="nt">font_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ten_segment</span>
+<span class="w">        </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">blue</span>
+<span class="w">        </span><span class="nt">x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">620</span>
+<span class="w">        </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">724</span>
+<span class="w">        </span><span class="nt">font_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">240</span>
+<span class="w">        </span><span class="nt">anchor_x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">right</span>
+<span class="w">        </span><span class="nt">anchor_y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bottom</span>
+<span class="w">        </span><span class="nt">z</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="c1"># show slide on game start</span>
+<span class="nt">slide_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">game_started</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">segment_displays</span>
+<span class="c1">##! test</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_slide_on_top segment_displays</span>
 </code></pre></div>
 <hr />
 <div class="admonition question">

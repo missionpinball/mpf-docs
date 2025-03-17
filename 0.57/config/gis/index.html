@@ -33581,22 +33581,22 @@ combined into a single <code>lights</code> configuration. See
 <p>You would configure GIs as normal lights with <code>subtype: gi</code> (see your
 platform documentation for details about <code>subtype</code>).</p>
 <p>Here's an example from <em>Judge Dredd</em>:</p>
-<div class="highlight"><pre><span></span><code>lights:
-  gi01:    # lower backglass
-    number: G01
-    subtype: gi
-  gi02:    # mid backglass and rear playfield
-    number: G02
-    subtype: gi
-  gi03:    # upper left backglass and slings, variable
-    number: G03
-    subtype: gi
-  gi04:    # upper right backglass and Deadworld globe, variable
-    number: G04
-    subtype: gi
-  gi05:    # coin slot lights &amp; side cabinet fire buttons
-    number: G05
-    subtype: gi
+<div class="highlight"><pre><span></span><code><span class="nt">lights</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">gi01</span><span class="p">:</span><span class="w">    </span><span class="c1"># lower backglass</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">G01</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gi</span>
+<span class="w">  </span><span class="nt">gi02</span><span class="p">:</span><span class="w">    </span><span class="c1"># mid backglass and rear playfield</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">G02</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gi</span>
+<span class="w">  </span><span class="nt">gi03</span><span class="p">:</span><span class="w">    </span><span class="c1"># upper left backglass and slings, variable</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">G03</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gi</span>
+<span class="w">  </span><span class="nt">gi04</span><span class="p">:</span><span class="w">    </span><span class="c1"># upper right backglass and Deadworld globe, variable</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">G04</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gi</span>
+<span class="w">  </span><span class="nt">gi05</span><span class="p">:</span><span class="w">    </span><span class="c1"># coin slot lights &amp; side cabinet fire buttons</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">G05</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gi</span>
 </code></pre></div>
 <p>See <a href="../lights/">lights:</a> for details about the
 <code>lights</code> section.</p>

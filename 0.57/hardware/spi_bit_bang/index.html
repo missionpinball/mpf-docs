@@ -33650,48 +33650,48 @@ systems than Spike. Primarily, this allows you to use the
 platform which natively reads switches via SPI use those means since
 they are much more efficient.</p>
 <p>This is an example:</p>
-<div class="highlight"><pre><span></span><code>hardware:
-  platform: your_platform, spi_bit_bang      # add your platform first here
-spi_bit_bang:
-  miso_pin: s_miso
-  cs_pin: o_cs
-  clock_pin: o_clock
-  bit_time: 50ms
-  inputs: 8
-digital_outputs:
-  o_cs:
-    number: 1
-    type: driver
-  o_clock:
-    number: 2
-    type: driver
-switches:
-  s_trough_0:
-    number: 0
-    platform: spi_bit_bang
-  s_trough_1:
-    number: 1
-    platform: spi_bit_bang
-  s_trough_2:
-    number: 2
-    platform: spi_bit_bang
-  s_trough_3:
-    number: 3
-    platform: spi_bit_bang
-  s_trough_4:
-    number: 4
-    platform: spi_bit_bang
-  s_trough_5:
-    number: 5
-    platform: spi_bit_bang
-  s_trough_6:
-    number: 6
-    platform: spi_bit_bang
-  s_trough_7:
-    number: 7
-    platform: spi_bit_bang
-  s_miso:
-    number: 10
+<div class="highlight"><pre><span></span><code><span class="nt">hardware</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">your_platform, spi_bit_bang</span><span class="w">      </span><span class="c1"># add your platform first here</span>
+<span class="nt">spi_bit_bang</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">miso_pin</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_miso</span>
+<span class="w">  </span><span class="nt">cs_pin</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">o_cs</span>
+<span class="w">  </span><span class="nt">clock_pin</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">o_clock</span>
+<span class="w">  </span><span class="nt">bit_time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">50ms</span>
+<span class="w">  </span><span class="nt">inputs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8</span>
+<span class="nt">digital_outputs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">o_cs</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">driver</span>
+<span class="w">  </span><span class="nt">o_clock</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">driver</span>
+<span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_trough_0</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">spi_bit_bang</span>
+<span class="w">  </span><span class="nt">s_trough_1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">spi_bit_bang</span>
+<span class="w">  </span><span class="nt">s_trough_2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="w">    </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">spi_bit_bang</span>
+<span class="w">  </span><span class="nt">s_trough_3</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="w">    </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">spi_bit_bang</span>
+<span class="w">  </span><span class="nt">s_trough_4</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span>
+<span class="w">    </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">spi_bit_bang</span>
+<span class="w">  </span><span class="nt">s_trough_5</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+<span class="w">    </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">spi_bit_bang</span>
+<span class="w">  </span><span class="nt">s_trough_6</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">6</span>
+<span class="w">    </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">spi_bit_bang</span>
+<span class="w">  </span><span class="nt">s_trough_7</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">7</span>
+<span class="w">    </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">spi_bit_bang</span>
+<span class="w">  </span><span class="nt">s_miso</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
 </code></pre></div>
 <p>The refresh rate of your platform will be <code>bit_time / (inputs + 2)</code>. For
 instance 8 inputs with 50ms <code>bit_time</code> will result in 2Hz update rate

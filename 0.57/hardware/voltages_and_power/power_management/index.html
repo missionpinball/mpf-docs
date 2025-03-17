@@ -33593,34 +33593,34 @@ coils at once none of them will move.</p>
 <p>By default MPF assumes that you have only one single power supply unit
 for all your coils. If this is not true you can configure multiple PSUs
 and assign them to coils:</p>
-<div class="highlight"><pre><span></span><code>psus:
-  default:  # this is configured by default
-    voltage: 48
-  psu_12v:
-    voltage: 12
+<div class="highlight"><pre><span></span><code><span class="nt">psus</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">default</span><span class="p">:</span><span class="w">  </span><span class="c1"># this is configured by default</span>
+<span class="w">    </span><span class="nt">voltage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">48</span>
+<span class="w">  </span><span class="nt">psu_12v</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">voltage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">12</span>
 
-coils:
-  c_score_reel_1k_p1:
-    psu: psu_12v
-    number:
-  c_score_reel_100_p1:
-    psu: psu_12v
-    number:
-  c_score_reel_10_p1:
-    psu: psu_12v
-    number:
-  c_score_reel_1_p1:
-    psu: psu_12v
-    number:
+<span class="nt">coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">c_score_reel_1k_p1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">psu</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">psu_12v</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">c_score_reel_100_p1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">psu</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">psu_12v</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">c_score_reel_10_p1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">psu</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">psu_12v</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">c_score_reel_1_p1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">psu</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">psu_12v</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
 </code></pre></div>
 <p>This way MPF will sequentialize those coils independently from your
 coils on the other PSU.</p>
 <p>To give your PSU some breathing room MPF will apply some spacing between
 two pulses. This can be configured using <code>release_wait_ms</code>:</p>
-<div class="highlight"><pre><span></span><code>psus:
-  default:
-    voltage: 48
-    release_wait_ms: 50    # defaults to 10ms
+<div class="highlight"><pre><span></span><code><span class="nt">psus</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">default</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">voltage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">48</span>
+<span class="w">    </span><span class="nt">release_wait_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">50</span><span class="w">    </span><span class="c1"># defaults to 10ms</span>
 </code></pre></div>
 <hr />
 <div class="admonition question">

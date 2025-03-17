@@ -33784,8 +33784,8 @@ are connected to the P3-Roc board.</p>
 <code>hardware:</code> section of your machine config to tell it to override the
 default platform for your I2C devices and to instead use the <code>smbus2</code>
 platform, like this:</p>
-<div class="highlight"><pre><span></span><code>hardware:
-  i2c: smbus2
+<div class="highlight"><pre><span></span><code><span class="nt">hardware</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">i2c</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">smbus2</span>
 </code></pre></div>
 <p>See the <a href="../platform/">Mixing-and-Matching hardware platforms</a> guide for
 more information about setting device-specific default platforms versus

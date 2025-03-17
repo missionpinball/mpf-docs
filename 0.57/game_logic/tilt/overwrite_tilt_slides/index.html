@@ -33576,47 +33576,47 @@ icons & this code generated via https://realfavicongenerator.net
 <h1 id="overwriting-tilt-slides">Overwriting Tilt Slides</h1>
 <p>The <a href="../../../">tilt mode</a> comes with very
 basic slides. You can overwrite them using the following config:</p>
-<div class="highlight"><pre><span></span><code>#! switches:
-#!   s_tilt:
-#!     number:
-#!     tags: tilt_warning
-##! mode: tilt
-# in your modes/config/tilt.yaml
-slides:
-  _overwrite: true   # this is important to overwrite the existing slides
-  tilt_warning_1:
-    widgets:
-      - type: text
-        text: &quot;STOP IT&quot;
-    expire: 1s
-  tilt_warning_2:
-    widgets:
-      - type: text
-        text: WARNING
-        y: top-2
-        anchor_y: top
-      - type: text
-        text: &quot;SERIOUSLY STOP IT&quot;
-        y: top-18
-        anchor_y: top
-        expire: 1s
-    expire: 2s
-  tilt:
-    - type: text
-      text: TILT
-##! test
-#! start_game
-#! post slam_tilt
-#! advance_time_and_run .1
-#! assert_mode_running tilt
-#! hit_and_release_switch s_tilt
-#! advance_time_and_run .1
-#! assert_text_on_top_slide &quot;STOP IT&quot;
-#! advance_time_and_run 2
-#! assert_text_not_on_top_slide &quot;STOP IT&quot;
-#! hit_and_release_switch s_tilt
-#! advance_time_and_run .1
-#! assert_text_on_top_slide &quot;SERIOUSLY STOP IT&quot;
+<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
+<span class="c1">#!   s_tilt:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!     tags: tilt_warning</span>
+<span class="c1">##! mode: tilt</span>
+<span class="c1"># in your modes/config/tilt.yaml</span>
+<span class="nt">slides</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">_overwrite</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w">   </span><span class="c1"># this is important to overwrite the existing slides</span>
+<span class="w">  </span><span class="nt">tilt_warning_1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">widgets</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;STOP</span><span class="nv"> </span><span class="s">IT&quot;</span>
+<span class="w">    </span><span class="nt">expire</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<span class="w">  </span><span class="nt">tilt_warning_2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">widgets</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">WARNING</span>
+<span class="w">        </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">top-2</span>
+<span class="w">        </span><span class="nt">anchor_y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">top</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;SERIOUSLY</span><span class="nv"> </span><span class="s">STOP</span><span class="nv"> </span><span class="s">IT&quot;</span>
+<span class="w">        </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">top-18</span>
+<span class="w">        </span><span class="nt">anchor_y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">top</span>
+<span class="w">        </span><span class="nt">expire</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<span class="w">    </span><span class="nt">expire</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2s</span>
+<span class="w">  </span><span class="nt">tilt</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TILT</span>
+<span class="c1">##! test</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! post slam_tilt</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_mode_running tilt</span>
+<span class="c1">#! hit_and_release_switch s_tilt</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_text_on_top_slide &quot;STOP IT&quot;</span>
+<span class="c1">#! advance_time_and_run 2</span>
+<span class="c1">#! assert_text_not_on_top_slide &quot;STOP IT&quot;</span>
+<span class="c1">#! hit_and_release_switch s_tilt</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_text_on_top_slide &quot;SERIOUSLY STOP IT&quot;</span>
 </code></pre></div>
 <p>By setting the <code>_overwrite: true</code> you will overwrite the complete
 <code>slides:</code> section of the built-in tilt mode. The slides above are the

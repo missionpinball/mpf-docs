@@ -33583,55 +33583,55 @@ that those shots post <code>timerx_start</code>. The mode succeeds when all thre
 shots are active at the same time. Every shot starts a timer and checks
 if the other two are running.</p>
 <p>This is a basic example:</p>
-<div class="highlight"><pre><span></span><code>##! mode: my_mode
-mode:
-  start_events: start_my_mode
-  stop_events: my_mode_succeeded
-timers:
-  t1:
-    start_value: 3
-    end_value: 0
-    direction: down
-    control_events:
-      - action: restart
-        event: timer1_start
-  t2:
-    start_value: 3
-    end_value: 0
-    direction: down
-    control_events:
-      - action: restart
-        event: timer2_start
-  t3:
-    start_value: 3
-    end_value: 0
-    direction: down
-    control_events:
-      - action: restart
-        event: timer3_start
-event_player:
-  timer_t1_started{device.timers.t2.running and device.timers.t3.running}: my_mode_succeeded
-  timer_t2_started{device.timers.t1.running and device.timers.t3.running}: my_mode_succeeded
-  timer_t3_started{device.timers.t1.running and device.timers.t2.running}: my_mode_succeeded
-##! test
-#! start_game
-#! mock_event my_mode_succeeded
-#! post start_my_mode
-#! post timer1_start
-#! assert_mode_running my_mode
-#! assert_bool_condition True device.timers.t1.running
-#! advance_time_and_run 4
-#! assert_bool_condition False device.timers.t1.running
-#! post timer2_start
-#! post timer3_start
-#! advance_time_and_run 1
-#! assert_mode_running my_mode
-#! assert_bool_condition False device.timers.t1.running
-#! assert_bool_condition True device.timers.t2.running
-#! assert_bool_condition True device.timers.t3.running
-#! post timer1_start
-#! assert_mode_not_running my_mode
-#! assert_event_called my_mode_succeeded
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: my_mode</span>
+<span class="nt">mode</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">start_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start_my_mode</span>
+<span class="w">  </span><span class="nt">stop_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my_mode_succeeded</span>
+<span class="nt">timers</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">t1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">start_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="w">    </span><span class="nt">end_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">direction</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">down</span>
+<span class="w">    </span><span class="nt">control_events</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">restart</span>
+<span class="w">        </span><span class="nt">event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">timer1_start</span>
+<span class="w">  </span><span class="nt">t2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">start_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="w">    </span><span class="nt">end_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">direction</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">down</span>
+<span class="w">    </span><span class="nt">control_events</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">restart</span>
+<span class="w">        </span><span class="nt">event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">timer2_start</span>
+<span class="w">  </span><span class="nt">t3</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">start_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="w">    </span><span class="nt">end_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">direction</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">down</span>
+<span class="w">    </span><span class="nt">control_events</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">restart</span>
+<span class="w">        </span><span class="nt">event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">timer3_start</span>
+<span class="nt">event_player</span><span class="p">:</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">timer_t1_started{device.timers.t2.running and device.timers.t3.running}</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my_mode_succeeded</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">timer_t2_started{device.timers.t1.running and device.timers.t3.running}</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my_mode_succeeded</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">timer_t3_started{device.timers.t1.running and device.timers.t2.running}</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my_mode_succeeded</span>
+<span class="c1">##! test</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! mock_event my_mode_succeeded</span>
+<span class="c1">#! post start_my_mode</span>
+<span class="c1">#! post timer1_start</span>
+<span class="c1">#! assert_mode_running my_mode</span>
+<span class="c1">#! assert_bool_condition True device.timers.t1.running</span>
+<span class="c1">#! advance_time_and_run 4</span>
+<span class="c1">#! assert_bool_condition False device.timers.t1.running</span>
+<span class="c1">#! post timer2_start</span>
+<span class="c1">#! post timer3_start</span>
+<span class="c1">#! advance_time_and_run 1</span>
+<span class="c1">#! assert_mode_running my_mode</span>
+<span class="c1">#! assert_bool_condition False device.timers.t1.running</span>
+<span class="c1">#! assert_bool_condition True device.timers.t2.running</span>
+<span class="c1">#! assert_bool_condition True device.timers.t3.running</span>
+<span class="c1">#! post timer1_start</span>
+<span class="c1">#! assert_mode_not_running my_mode</span>
+<span class="c1">#! assert_event_called my_mode_succeeded</span>
 </code></pre></div>
 <hr />
 <div class="admonition question">

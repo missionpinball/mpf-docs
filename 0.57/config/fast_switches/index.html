@@ -33724,12 +33724,12 @@ to <a href="../../examples/">config file examples</a> for more examples of real 
 <p>The <code>fast_switches:</code> section of your config is where you configure
 platform specific details about switches when using
 <a href="../../hardware/fast/">fast hardware</a>.</p>
-<div class="highlight"><pre><span></span><code>switches:
-  some_switch:
-    number:
-    platform_settings:
-      debounce_close: 2ms
-      debounce_open: 4ms
+<div class="highlight"><pre><span></span><code><span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">some_switch</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">platform_settings</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">debounce_close</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2ms</span>
+<span class="w">      </span><span class="nt">debounce_open</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4ms</span>
 </code></pre></div>
 <p>Please make sure to read <a href="../../mechs/switches/debounce/">Debouncing in Pinball Machines</a> before changing those times.</p>
 <h2 id="optional-settings">Optional settings</h2>

@@ -33770,16 +33770,16 @@ MPF.</p>
                point</p>
 <hr />
 <p><strong>Examples:</strong></p>
-<div class="highlight"><pre><span></span><code>player_vars:
-  current_mode:
-    initial_value: Trees Attack
-    value_type: str
-  bumper_hits:
-    initial_value: 0
-    value_type: int
-  super_bonus_multipler:
-    initial_value: 1.25
-    value_type: float
+<div class="highlight"><pre><span></span><code><span class="nt">player_vars</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">current_mode</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">initial_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Trees Attack</span>
+<span class="w">    </span><span class="nt">value_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">str</span>
+<span class="w">  </span><span class="nt">bumper_hits</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">initial_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">value_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">int</span>
+<span class="w">  </span><span class="nt">super_bonus_multipler</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">initial_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.25</span>
+<span class="w">    </span><span class="nt">value_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">float</span>
 </code></pre></div>
 <p>Player varaibles are essentially global in MPF, meaning that you can
 define them in config files and they are available to use in any
@@ -33794,22 +33794,22 @@ programming languages. The primary method of changing a variable is by
 configuring the change you would like to make. In the current version of
 MPF, this is primarily done in the <code>variable_player:</code> section of your
 mode.</p>
-<div class="highlight"><pre><span></span><code>##! mode: my_mode
-variable_player:
-  # add 1 to bumper_hits
-  bumper_1_active:
-    bumper_hits: 1
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: my_mode</span>
+<span class="nt">variable_player</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># add 1 to bumper_hits</span>
+<span class="w">  </span><span class="nt">bumper_1_active</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">bumper_hits</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
 </code></pre></div>
 <p>The example below shows a player variable of type string being updated.
 A mode carousel (mode selection by the player) was used by the player to
 select a mode ladder (a set of modes played in a sequence similar to
 scenes in GhostBusters). The apostrophes are not required but allowed.</p>
-<div class="highlight"><pre><span></span><code>##! mode: my_mode
-variable_player:
-  carousel_left_scoop_scene_selected:
-    current_ladder:
-      action: set
-      string: &#39;Scene 1&#39;
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: my_mode</span>
+<span class="nt">variable_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">carousel_left_scoop_scene_selected</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">current_ladder</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">set</span>
+<span class="w">      </span><span class="nt">string</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Scene</span><span class="nv"> </span><span class="s">1&#39;</span>
 </code></pre></div>
 <p>The example below shows a player variable being updated after a
 conditional event. In this case, the base mode has received an event
@@ -33817,10 +33817,10 @@ indicated that a mode has been complete. The conditional event checks to
 see which mode ladder was in play and increments the custom player
 variable ladder_scene_1 to indicate the progress towards completing the
 mode.</p>
-<div class="highlight"><pre><span></span><code>##! mode: my_mode
-variable_player:
-  mode_is_complete{current_player.current_ladder==&quot;Scene 1&quot;}:
-    ladder_scene_1: 1
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: my_mode</span>
+<span class="nt">variable_player</span><span class="p">:</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">mode_is_complete{current_player.current_ladder==&quot;Scene 1&quot;}</span><span class="p p-Indicator">:</span>
+<span class="w">    </span><span class="nt">ladder_scene_1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
 </code></pre></div>
 <h3 id="displaying-custom-variables">Displaying Custom Variables</h3>
 <p>Displaying your custom player variables on a slide can be confusing in
@@ -33828,28 +33828,28 @@ the current version of MPF. The example below shows a text widget that
 is displaying 3 variables on the main scoring screen of the base mode.
 The first two variables are of type "str" and the last variable is of
 type "int".</p>
-<div class="highlight"><pre><span></span><code>player_vars:
-  current_ladder:
-    initial_value: &quot;Initial Ladder&quot;
-    value_type: str
-  current_mode:
-    initial_value: &quot;No Mode&quot;
-    value_type: str
-  ladder_scene_1:
-    initial_value: 1
-    value_type: int
+<div class="highlight"><pre><span></span><code><span class="nt">player_vars</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">current_ladder</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">initial_value</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Initial</span><span class="nv"> </span><span class="s">Ladder&quot;</span>
+<span class="w">    </span><span class="nt">value_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">str</span>
+<span class="w">  </span><span class="nt">current_mode</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">initial_value</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;No</span><span class="nv"> </span><span class="s">Mode&quot;</span>
+<span class="w">    </span><span class="nt">value_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">str</span>
+<span class="w">  </span><span class="nt">ladder_scene_1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">initial_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">value_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">int</span>
 
-##! mode: base
-slide_player:
-  mode_base_started:
-    widgets:
-      - type: text
-        text: (current_ladder) &gt; (current_mode) &gt; (ladder_scene_1)
-##! test
-#! start_game
-#! start_mode base
-#! advance_time_and_run .1
-#! assert_text_on_top_slide &quot;Initial Ladder &gt; No Mode &gt; 1&quot;
+<span class="c1">##! mode: base</span>
+<span class="nt">slide_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">mode_base_started</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">widgets</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(current_ladder) &gt; (current_mode) &gt; (ladder_scene_1)</span>
+<span class="c1">##! test</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! start_mode base</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_text_on_top_slide &quot;Initial Ladder &gt; No Mode &gt; 1&quot;</span>
 </code></pre></div>
 <p>Related How To guides:</p>
 <ul>

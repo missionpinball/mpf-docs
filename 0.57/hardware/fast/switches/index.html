@@ -33734,11 +33734,11 @@ boards. Then the IO boards are connected together in a loop.</p>
 the chain, then the dash, then the switch input number. Note that the
 position number starts with zero, so the first IO board in the chain is
 0, the second is 1, etc.</p>
-<div class="highlight"><pre><span></span><code>switches:
-  my_switch:
-    number: 0-0    # first board, switch 0
-  some_other_switch:
-    number: 2-24    # third board, switch 24
+<div class="highlight"><pre><span></span><code><span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_switch</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0-0</span><span class="w">    </span><span class="c1"># first board, switch 0</span>
+<span class="w">  </span><span class="nt">some_other_switch</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2-24</span><span class="w">    </span><span class="c1"># third board, switch 24</span>
 </code></pre></div>
 <p>Notes:</p>
 <ul>
@@ -33771,11 +33771,11 @@ times, and the "quick" debounce profile is <code>2ms</code> for both debounce
 open and closed times.</p>
 <p>You can change any of these in the <code>fast:</code> section of your machine-wide
 config, like this:</p>
-<div class="highlight"><pre><span></span><code>fast:
-  default_quick_debounce_open: 2ms
-  default_quick_debounce_close: 2ms
-  default_normal_debounce_open: 4ms
-  default_normal_debounce_close: 4ms
+<div class="highlight"><pre><span></span><code><span class="nt">fast</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">default_quick_debounce_open</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2ms</span>
+<span class="w">  </span><span class="nt">default_quick_debounce_close</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2ms</span>
+<span class="w">  </span><span class="nt">default_normal_debounce_open</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4ms</span>
+<span class="w">  </span><span class="nt">default_normal_debounce_close</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4ms</span>
 </code></pre></div>
 <p>(Note that other settings from the <code>fast:</code> section of your config have
 not been included here for clarity.)</p>
@@ -33784,14 +33784,14 @@ not been included here for clarity.)</p>
 open and debounce closed settings on a per-switch basis. To do that,
 just add a <code>debounce_open:</code> and/or <code>debounce_close:</code> setting to an
 individual switch, like this:</p>
-<div class="highlight"><pre><span></span><code>switches:
-  my_switch:
-    number: 1-0
-    platform_settings:
-      debounce_open: 5ms
-      debounce_close: 20ms
-  some_other_switch:
-    number: 3-24
+<div class="highlight"><pre><span></span><code><span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_switch</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1-0</span>
+<span class="w">    </span><span class="nt">platform_settings</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">debounce_open</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5ms</span>
+<span class="w">      </span><span class="nt">debounce_close</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20ms</span>
+<span class="w">  </span><span class="nt">some_other_switch</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3-24</span>
 </code></pre></div>
 <p>Valid values are 1 to 255 ms.</p>
 <h2 id="what-if-it-did-not-work">What if it did not work?</h2>

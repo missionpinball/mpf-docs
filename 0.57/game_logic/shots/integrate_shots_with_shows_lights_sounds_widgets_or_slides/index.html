@@ -33665,200 +33665,200 @@ we define an widget name to display for each shot. To color the light
 and display the widget we define a show and integrate it to our shots
 using a shot_profile. Eventually, we add a show_player to play
 animations and sounds when a shot is hit.</p>
-<div class="highlight"><pre><span></span><code># this is in your machine-wide config
-# first we define some switches + lights
-switches:
-  s_outlane_left:
-    number: 0
-  s_inlane_left:
-    number: 1
-  s_inlane_right:
-    number: 6
-  s_outlane_right:
-    number: 7
-lights:
-  l_outlane_left:
-    number: 0
-  l_inlane_left:
-    number: 1
-  l_inlane_right:
-    number: 6
-  l_outlane_right:
-    number: 7
-  gi_left_sling:
-    number: 8
-  gi_right_sling:
-    number: 9
-##! mode: my_mode
-# put this into a mode
-# shots each pass their led and widget to the show define in their shot_profile
-shots:
-  shot_outlane_left:
-    switches: s_outlane_left
-    profile: lane_profile
-    show_tokens:
-      leds: l_outlane_left
-      widget: outlane_left
-  shot_inlane_left:
-    switches: s_inlane_left
-    profile: lane_profile
-    show_tokens:
-      leds: l_inlane_left
-      widget: inlane_left
-  shot_inlane_right:
-    switches: s_inlane_right
-    profile: lane_profile
-    show_tokens:
-      leds: l_inlane_right
-      widget: inlane_right
-  shot_outlane_right:
-    switches: s_outlane_right
-    profile: lane_profile
-    show_tokens:
-      leds: l_outlane_right
-      widget: outlane_right
-# integrate shots with their show
-shot_profiles:
-  lane_profile:
-    states:
-      - name: unlit
-        show: &quot;off&quot;           # a default show to turn of the led. change if you want to do something on unlit shots
-      - name: lit
-        show: &quot;shot_lit&quot;      # our show to indicate an lit shot
-          # you can add more states here
-# to rotate shots and reset them when they are all lit
-shot_groups:
-  sg_lanes:
-    shots: shot_outlane_left, shot_inlane_left, shot_inlane_right, shot_outlane_right
-    rotate_left_events: s_flipper_left_active
-    rotate_right_events: s_flipper_right_active
-    reset_events:
-      sg_lanes_lit_complete: 1s
-# define a few widgets which show on screen. you can also use images or videos here
-widgets:
-  outlane_right:
-    - type: text
-      text: Outlane right lit
-  outlane_left:
-    - type: text
-      text: Outlane left lit
-  inlane_right:
-    - type: text
-      text: Inlane right lit
-  inlane_left:
-    - type: text
-      text: Inlane left lit
-shows:
-  shot_lit:    # define our show to indicate the state
-    - duration: -1      # this show step will run permanently
-      widgets:    # show the corresponding widget
-        (widget):
-          action: add
-      lights:     # turn the light purple
-        (leds): purple
-  shot_hit:    # define our show to communicate success to the player
-    - duration: 1s      # this show step lasts 1s
-        # add sounds here or videos
-        # add scoring here
-      shows:      # run another (built-in) show to flash the light
-        flash_color:
-          show_tokens:
-            color: red
-            leds: (leds)
-          speed: 4
-  group_complete:    # define our show to communicate success on completing all shots
-    - duration: 1s
-        # add scoring, sounds and video
-      shows:
-        flash_color:
-          priority: 10     # higher priority as the shots
-          show_tokens:
-            color: green
-            leds: l_outlane_left, l_inlane_left, l_inlane_right, l_outlane_right, gi_left_sling, gi_right_sling
-          speed: 4
-# on success flash the sling shot gi on the side of the lane hit and play a sound/video
-show_player:
-   # play a show once a each shot is lit
-  shot_outlane_left_hit{state==&quot;unlit&quot;}:
-    shot_hit:
-      key: left
-      show_tokens:
-        leds: gi_left_sling
-      loops: 0
-  shot_inlane_left_hit{state==&quot;unlit&quot;}:
-    shot_hit:
-      key: left
-      show_tokens:
-        leds: gi_left_sling
-      loops: 0
-  shot_outlane_right_hit{state==&quot;unlit&quot;}:
-    shot_hit:
-      key: right
-      show_tokens:
-        leds: gi_right_sling
-      loops: 0
-  shot_inlane_right_hit{state==&quot;unlit&quot;}:
-    shot_hit:
-      key: right
-      show_tokens:
-        leds: gi_right_sling
-      loops: 0
-   # play a show when the group completes
-  sg_lanes_complete{state==&quot;lit&quot;}:
-    group_complete:
-      loops: 0
-##! test
-#! start_game
-#! start_mode my_mode
-#! assert_light_color l_outlane_left off
-#! assert_light_color l_inlane_left off
-#! assert_light_color l_inlane_right off
-#! assert_light_color l_outlane_right off
-#! hit_and_release_switch s_outlane_left
-#! advance_time_and_run .1
-#! assert_light_flashing gi_left_sling red
-#! assert_light_color gi_right_sling off
-#! assert_light_color l_outlane_left purple
-#! assert_light_color l_inlane_left off
-#! assert_light_color l_inlane_right off
-#! assert_light_color l_outlane_right off
-#! assert_text_on_top_slide &quot;Outlane left lit&quot;
-#! advance_time_and_run 2
-#! assert_light_color gi_left_sling off
-#! hit_and_release_switch s_outlane_right
-#! hit_and_release_switch s_inlane_left
-#! advance_time_and_run .1
-#! assert_light_flashing gi_left_sling red .4
-#! assert_light_flashing gi_right_sling red .4
-#! assert_light_color l_outlane_left purple
-#! assert_light_color l_inlane_left purple
-#! assert_light_color l_inlane_right off
-#! assert_light_color l_outlane_right purple
-#! assert_text_on_top_slide &quot;Outlane left lit&quot;
-#! assert_text_on_top_slide &quot;Inlane left lit&quot;
-#! assert_text_on_top_slide &quot;Outlane right lit&quot;
-#! post s_flipper_left_active
-#! advance_time_and_run .1
-#! assert_light_color l_outlane_left purple
-#! assert_light_color l_inlane_left off
-#! assert_light_color l_inlane_right purple
-#! assert_light_color l_outlane_right purple
-#! assert_text_on_top_slide &quot;Outlane left lit&quot;
-#! assert_text_on_top_slide &quot;Inlane right lit&quot;
-#! assert_text_on_top_slide &quot;Outlane right lit&quot;
-#! hit_and_release_switch s_inlane_left
-#! advance_time_and_run .1
-#! assert_light_flashing l_outlane_left green .4
-#! assert_light_flashing l_inlane_left green .4
-#! advance_time_and_run 1
-#! assert_light_color l_outlane_left off
-#! assert_light_color l_inlane_left off
-#! assert_light_color l_inlane_right off
-#! assert_light_color l_outlane_right off
-#! assert_text_not_on_top_slide &quot;Outlane left lit&quot;
-#! assert_text_not_on_top_slide &quot;Inlane right lit&quot;
-#! assert_text_not_on_top_slide &quot;Inlane left lit&quot;
-#! assert_text_not_on_top_slide &quot;Outlane right lit&quot;
+<div class="highlight"><pre><span></span><code><span class="c1"># this is in your machine-wide config</span>
+<span class="c1"># first we define some switches + lights</span>
+<span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_outlane_left</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">  </span><span class="nt">s_inlane_left</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">s_inlane_right</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">6</span>
+<span class="w">  </span><span class="nt">s_outlane_right</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">7</span>
+<span class="nt">lights</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">l_outlane_left</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">  </span><span class="nt">l_inlane_left</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">l_inlane_right</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">6</span>
+<span class="w">  </span><span class="nt">l_outlane_right</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">7</span>
+<span class="w">  </span><span class="nt">gi_left_sling</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8</span>
+<span class="w">  </span><span class="nt">gi_right_sling</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">9</span>
+<span class="c1">##! mode: my_mode</span>
+<span class="c1"># put this into a mode</span>
+<span class="c1"># shots each pass their led and widget to the show define in their shot_profile</span>
+<span class="nt">shots</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">shot_outlane_left</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_outlane_left</span>
+<span class="w">    </span><span class="nt">profile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lane_profile</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">leds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_outlane_left</span>
+<span class="w">      </span><span class="nt">widget</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">outlane_left</span>
+<span class="w">  </span><span class="nt">shot_inlane_left</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_inlane_left</span>
+<span class="w">    </span><span class="nt">profile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lane_profile</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">leds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_inlane_left</span>
+<span class="w">      </span><span class="nt">widget</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">inlane_left</span>
+<span class="w">  </span><span class="nt">shot_inlane_right</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_inlane_right</span>
+<span class="w">    </span><span class="nt">profile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lane_profile</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">leds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_inlane_right</span>
+<span class="w">      </span><span class="nt">widget</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">inlane_right</span>
+<span class="w">  </span><span class="nt">shot_outlane_right</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_outlane_right</span>
+<span class="w">    </span><span class="nt">profile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lane_profile</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">leds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_outlane_right</span>
+<span class="w">      </span><span class="nt">widget</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">outlane_right</span>
+<span class="c1"># integrate shots with their show</span>
+<span class="nt">shot_profiles</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">lane_profile</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">states</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unlit</span>
+<span class="w">        </span><span class="nt">show</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;off&quot;</span><span class="w">           </span><span class="c1"># a default show to turn of the led. change if you want to do something on unlit shots</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lit</span>
+<span class="w">        </span><span class="nt">show</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;shot_lit&quot;</span><span class="w">      </span><span class="c1"># our show to indicate an lit shot</span>
+<span class="w">          </span><span class="c1"># you can add more states here</span>
+<span class="c1"># to rotate shots and reset them when they are all lit</span>
+<span class="nt">shot_groups</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">sg_lanes</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">shots</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">shot_outlane_left, shot_inlane_left, shot_inlane_right, shot_outlane_right</span>
+<span class="w">    </span><span class="nt">rotate_left_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_flipper_left_active</span>
+<span class="w">    </span><span class="nt">rotate_right_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_flipper_right_active</span>
+<span class="w">    </span><span class="nt">reset_events</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">sg_lanes_lit_complete</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<span class="c1"># define a few widgets which show on screen. you can also use images or videos here</span>
+<span class="nt">widgets</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">outlane_right</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Outlane right lit</span>
+<span class="w">  </span><span class="nt">outlane_left</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Outlane left lit</span>
+<span class="w">  </span><span class="nt">inlane_right</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Inlane right lit</span>
+<span class="w">  </span><span class="nt">inlane_left</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Inlane left lit</span>
+<span class="nt">shows</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">shot_lit</span><span class="p">:</span><span class="w">    </span><span class="c1"># define our show to indicate the state</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-1</span><span class="w">      </span><span class="c1"># this show step will run permanently</span>
+<span class="w">      </span><span class="nt">widgets</span><span class="p">:</span><span class="w">    </span><span class="c1"># show the corresponding widget</span>
+<span class="w">        </span><span class="nt">(widget)</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">add</span>
+<span class="w">      </span><span class="nt">lights</span><span class="p">:</span><span class="w">     </span><span class="c1"># turn the light purple</span>
+<span class="w">        </span><span class="nt">(leds)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">purple</span>
+<span class="w">  </span><span class="nt">shot_hit</span><span class="p">:</span><span class="w">    </span><span class="c1"># define our show to communicate success to the player</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span><span class="w">      </span><span class="c1"># this show step lasts 1s</span>
+<span class="w">        </span><span class="c1"># add sounds here or videos</span>
+<span class="w">        </span><span class="c1"># add scoring here</span>
+<span class="w">      </span><span class="nt">shows</span><span class="p">:</span><span class="w">      </span><span class="c1"># run another (built-in) show to flash the light</span>
+<span class="w">        </span><span class="nt">flash_color</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
+<span class="w">            </span><span class="nt">leds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(leds)</span>
+<span class="w">          </span><span class="nt">speed</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span>
+<span class="w">  </span><span class="nt">group_complete</span><span class="p">:</span><span class="w">    </span><span class="c1"># define our show to communicate success on completing all shots</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<span class="w">        </span><span class="l l-Scalar l-Scalar-Plain"># add scoring, sounds and video</span>
+<span class="w">      </span><span class="nt">shows</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">flash_color</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">priority</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span><span class="w">     </span><span class="c1"># higher priority as the shots</span>
+<span class="w">          </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">green</span>
+<span class="w">            </span><span class="nt">leds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_outlane_left, l_inlane_left, l_inlane_right, l_outlane_right, gi_left_sling, gi_right_sling</span>
+<span class="w">          </span><span class="nt">speed</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span>
+<span class="c1"># on success flash the sling shot gi on the side of the lane hit and play a sound/video</span>
+<span class="nt">show_player</span><span class="p">:</span>
+<span class="w">   </span><span class="c1"># play a show once a each shot is lit</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">shot_outlane_left_hit{state==&quot;unlit&quot;}</span><span class="p p-Indicator">:</span>
+<span class="w">    </span><span class="nt">shot_hit</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">left</span>
+<span class="w">      </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">leds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gi_left_sling</span>
+<span class="w">      </span><span class="nt">loops</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">shot_inlane_left_hit{state==&quot;unlit&quot;}</span><span class="p p-Indicator">:</span>
+<span class="w">    </span><span class="nt">shot_hit</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">left</span>
+<span class="w">      </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">leds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gi_left_sling</span>
+<span class="w">      </span><span class="nt">loops</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">shot_outlane_right_hit{state==&quot;unlit&quot;}</span><span class="p p-Indicator">:</span>
+<span class="w">    </span><span class="nt">shot_hit</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">right</span>
+<span class="w">      </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">leds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gi_right_sling</span>
+<span class="w">      </span><span class="nt">loops</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">shot_inlane_right_hit{state==&quot;unlit&quot;}</span><span class="p p-Indicator">:</span>
+<span class="w">    </span><span class="nt">shot_hit</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">right</span>
+<span class="w">      </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">leds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gi_right_sling</span>
+<span class="w">      </span><span class="nt">loops</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">   </span><span class="c1"># play a show when the group completes</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">sg_lanes_complete{state==&quot;lit&quot;}</span><span class="p p-Indicator">:</span>
+<span class="w">    </span><span class="nt">group_complete</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">loops</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="c1">##! test</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! start_mode my_mode</span>
+<span class="c1">#! assert_light_color l_outlane_left off</span>
+<span class="c1">#! assert_light_color l_inlane_left off</span>
+<span class="c1">#! assert_light_color l_inlane_right off</span>
+<span class="c1">#! assert_light_color l_outlane_right off</span>
+<span class="c1">#! hit_and_release_switch s_outlane_left</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_light_flashing gi_left_sling red</span>
+<span class="c1">#! assert_light_color gi_right_sling off</span>
+<span class="c1">#! assert_light_color l_outlane_left purple</span>
+<span class="c1">#! assert_light_color l_inlane_left off</span>
+<span class="c1">#! assert_light_color l_inlane_right off</span>
+<span class="c1">#! assert_light_color l_outlane_right off</span>
+<span class="c1">#! assert_text_on_top_slide &quot;Outlane left lit&quot;</span>
+<span class="c1">#! advance_time_and_run 2</span>
+<span class="c1">#! assert_light_color gi_left_sling off</span>
+<span class="c1">#! hit_and_release_switch s_outlane_right</span>
+<span class="c1">#! hit_and_release_switch s_inlane_left</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_light_flashing gi_left_sling red .4</span>
+<span class="c1">#! assert_light_flashing gi_right_sling red .4</span>
+<span class="c1">#! assert_light_color l_outlane_left purple</span>
+<span class="c1">#! assert_light_color l_inlane_left purple</span>
+<span class="c1">#! assert_light_color l_inlane_right off</span>
+<span class="c1">#! assert_light_color l_outlane_right purple</span>
+<span class="c1">#! assert_text_on_top_slide &quot;Outlane left lit&quot;</span>
+<span class="c1">#! assert_text_on_top_slide &quot;Inlane left lit&quot;</span>
+<span class="c1">#! assert_text_on_top_slide &quot;Outlane right lit&quot;</span>
+<span class="c1">#! post s_flipper_left_active</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_light_color l_outlane_left purple</span>
+<span class="c1">#! assert_light_color l_inlane_left off</span>
+<span class="c1">#! assert_light_color l_inlane_right purple</span>
+<span class="c1">#! assert_light_color l_outlane_right purple</span>
+<span class="c1">#! assert_text_on_top_slide &quot;Outlane left lit&quot;</span>
+<span class="c1">#! assert_text_on_top_slide &quot;Inlane right lit&quot;</span>
+<span class="c1">#! assert_text_on_top_slide &quot;Outlane right lit&quot;</span>
+<span class="c1">#! hit_and_release_switch s_inlane_left</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_light_flashing l_outlane_left green .4</span>
+<span class="c1">#! assert_light_flashing l_inlane_left green .4</span>
+<span class="c1">#! advance_time_and_run 1</span>
+<span class="c1">#! assert_light_color l_outlane_left off</span>
+<span class="c1">#! assert_light_color l_inlane_left off</span>
+<span class="c1">#! assert_light_color l_inlane_right off</span>
+<span class="c1">#! assert_light_color l_outlane_right off</span>
+<span class="c1">#! assert_text_not_on_top_slide &quot;Outlane left lit&quot;</span>
+<span class="c1">#! assert_text_not_on_top_slide &quot;Inlane right lit&quot;</span>
+<span class="c1">#! assert_text_not_on_top_slide &quot;Inlane left lit&quot;</span>
+<span class="c1">#! assert_text_not_on_top_slide &quot;Outlane right lit&quot;</span>
 </code></pre></div>
 <hr />
 <div class="admonition question">

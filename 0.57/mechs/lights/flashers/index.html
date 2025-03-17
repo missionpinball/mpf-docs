@@ -33719,25 +33719,25 @@ quickly in most machines.</p>
 <p>Starting with MPF 0.50 flashers and lights have been unified. Depending
 on your platform flashers might be <a href="../../../config/lights/">lights:</a> or <a href="../../../config/coils/">coils:</a>. In most
 cases they are configured as <a href="../../../config/coils/">coil</a>:</p>
-<div class="highlight"><pre><span></span><code>coils:
-  flasher_coil_4:
-    number: 4
-    allow_enable: true
+<div class="highlight"><pre><span></span><code><span class="nt">coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">flasher_coil_4</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span>
+<span class="w">    </span><span class="nt">allow_enable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
 <p>Then add them as <a href="../../../config/lights/">light</a>:</p>
-<div class="highlight"><pre><span></span><code>#! coils:
-#!   flasher_coil_4:
-#!     number: 4
-#!     allow_enable: true
-lights:
-  flasher_4:
-    number: flasher_coil_4
-    platform: drivers
+<div class="highlight"><pre><span></span><code><span class="c1">#! coils:</span>
+<span class="c1">#!   flasher_coil_4:</span>
+<span class="c1">#!     number: 4</span>
+<span class="c1">#!     allow_enable: true</span>
+<span class="nt">lights</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">flasher_4</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flasher_coil_4</span>
+<span class="w">    </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">drivers</span>
 </code></pre></div>
 <p>Now you can use them in <a href="../../../config/flasher_player/">flasher_player:</a> (or also in <a href="../../../config/light_player/">light_player:</a> if you want to enable the flasher permanently).</p>
-<div class="highlight"><pre><span></span><code>flasher_player:
-  flash:
-    flasher_01: 100ms
+<div class="highlight"><pre><span></span><code><span class="nt">flasher_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">flash</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">flasher_01</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100ms</span>
 </code></pre></div>
 <h2 id="monitorable-properties">Monitorable Properties</h2>
 <p>For

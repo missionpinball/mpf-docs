@@ -33661,25 +33661,25 @@ of the entry. If provided, the <em>player_score_entry</em> value will be
 multiplied by the <em>score</em>. This makes it very easy to award, for
 example, 200 points for every time the player captured a castle (tracked
 by the player variable "castles_captured").</p>
-<div class="highlight"><pre><span></span><code>##! mode: bonus
-#config_version=5
-mode_settings:
-  bonus_entries:
-    - event: bonus_castles
-      score: 200
-      player_score_entry: castles_captured
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: bonus</span>
+<span class="c1">#config_version=5</span>
+<span class="nt">mode_settings</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">bonus_entries</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bonus_castles</span>
+<span class="w">      </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">200</span>
+<span class="w">      </span><span class="nt">player_score_entry</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">castles_captured</span>
 </code></pre></div>
 <p>For advanced score calculation, the <em>score</em> value can utilize all of
 MPF's
 <a href="../../config/instructions/dynamic_values/">dynamic and placeholder variables</a>.</p>
-<div class="highlight"><pre><span></span><code>##! mode: bonus
-#config_version=5
-mode_settings:
-  bonus_entries:
-    - event: bonus_minerals
-      score: (current_player.platinum + current_player.iridium) / 100
-    - event: bonus_dropbanks
-      score: device.counters.dropbank_completions.value * 20
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: bonus</span>
+<span class="c1">#config_version=5</span>
+<span class="nt">mode_settings</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">bonus_entries</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bonus_minerals</span>
+<span class="w">      </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(current_player.platinum + current_player.iridium) / 100</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bonus_dropbanks</span>
+<span class="w">      </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">device.counters.dropbank_completions.value * 20</span>
 </code></pre></div>
 <p>The calculated score is included in the posted event for displaying on a
 slide, and the score is automatically added to the current player's
@@ -33693,17 +33693,17 @@ specified by the <code>display_delay_ms</code> setting.</p>
 <p>After all awards in the entries list have been posted, a final
 <em>bonus_total</em> event will post with the total amount awarded as bonus.
 This event can be used to show a final slide.</p>
-<div class="highlight"><pre><span></span><code>#config_version=5
-#! slides:
-#!   bonus_start_slide: []
-#!   bonus_minerals_slide: []
-#!   bonus_dropbanks_slide: []
-#!   bonus_total_slide: []
-slide_player:
-  mode_bonus_started: bonus_start_slide
-  bonus_minerals: bonus_minerals_slide
-  bonus_dropbanks: bonus_dropbanks_slide
-  bonus_total: bonus_total_slide
+<div class="highlight"><pre><span></span><code><span class="c1">#config_version=5</span>
+<span class="c1">#! slides:</span>
+<span class="c1">#!   bonus_start_slide: []</span>
+<span class="c1">#!   bonus_minerals_slide: []</span>
+<span class="c1">#!   bonus_dropbanks_slide: []</span>
+<span class="c1">#!   bonus_total_slide: []</span>
+<span class="nt">slide_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">mode_bonus_started</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bonus_start_slide</span>
+<span class="w">  </span><span class="nt">bonus_minerals</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bonus_minerals_slide</span>
+<span class="w">  </span><span class="nt">bonus_dropbanks</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bonus_dropbanks_slide</span>
+<span class="w">  </span><span class="nt">bonus_total</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bonus_total_slide</span>
 </code></pre></div>
 <h2 id="bonus-multipliers">Bonus Multipliers</h2>
 <p>If the player has a variable called <em>bonus_multiplier</em> with a value

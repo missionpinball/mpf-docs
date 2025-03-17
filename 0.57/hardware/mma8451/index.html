@@ -33641,14 +33641,14 @@ on
 <a href="https://learn.adafruit.com/adafruit-mma8451-accelerometer-breakout/overview">adafruit</a>
 (and elsewhere).</p>
 <p>Configure using:</p>
-<div class="highlight"><pre><span></span><code>hardware:
-  accelerometers: mma8451
-accelerometers:
-  my_accelerometer:
-    level_x: 0
-    level_y: 0
-    level_z: 1
-    number: 1-29
+<div class="highlight"><pre><span></span><code><span class="nt">hardware</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">accelerometers</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mma8451</span>
+<span class="nt">accelerometers</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_accelerometer</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">level_x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">level_y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">level_z</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1-29</span>
 </code></pre></div>
 <p>This will configure an MMA8451 on I2C bus 1 with address 0x1D (29
 decimal which is the default for this device). The exact numbering

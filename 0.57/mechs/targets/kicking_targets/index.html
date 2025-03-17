@@ -33585,17 +33585,17 @@ switch in a pinball machine. This device is used for kicking targets
 with a coil for kicking. Used rarely, these targets look like stationary
 targets, but when hit they kick the back in the opposite direction much
 like a <a href="../../slingshots/">slingshot</a> or <a href="../../pop_bumpers/">bumper</a>.</p>
-<div class="highlight"><pre><span></span><code>switches:
-  s_kicking_target:
-    number: 1
-coils:
-  c_kicking_target:
-    number: 1
-    default_pulse_ms: 10ms
-kickbacks:
-  kicking_target:
-    coil: c_kicking_target
-    switch: s_kicking_target
+<div class="highlight"><pre><span></span><code><span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_kicking_target</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="nt">coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">c_kicking_target</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">default_pulse_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10ms</span>
+<span class="nt">kickbacks</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">kicking_target</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_kicking_target</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_kicking_target</span>
 </code></pre></div>
 <hr />
 <div class="admonition question">

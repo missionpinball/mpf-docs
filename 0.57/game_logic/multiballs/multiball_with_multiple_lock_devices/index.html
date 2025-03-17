@@ -33601,127 +33601,127 @@ will reset and disable all locks using the
 event. After all the balls from the multiball drained all lock modes and
 the multiball mode will stop using the
 <a href="../../../events/multiball_multiball_ended/">multiball_(name)_ended</a> event.</p>
-<div class="highlight"><pre><span></span><code>coils:
-  eject_coil1:
-    number:
-  eject_coil2:
-    number:
-  eject_coil3:
-    number:
-switches:
-  s_lock1:
-    number:
-  s_lock2:
-    number:
-  s_lock3:
-    number:
-  s_target1:
-    number:
-ball_devices:
-  bd_lock1:
-    eject_coil: eject_coil1
-    ball_switches: s_lock1
-    eject_timeouts: 2s
-  bd_lock2:
-    eject_coil: eject_coil2
-    ball_switches: s_lock2
-    eject_timeouts: 2s
-  bd_lock3:
-    eject_coil: eject_coil3
-    ball_switches: s_lock3
-    eject_timeouts: 2s
-# mode lock1
-##! mode: lock1
-mode:
-  restart_on_next_ball: true
-  stop_events: multiball_my_multiball_started
-multiball_locks:
-  lock1:
-    lock_devices: bd_lock1
-    balls_to_lock: 1
-    disable_events: mode_multiball_started
-    reset_count_for_current_player_events: multiball_my_multiball_started
-# mode lock2
-##! mode: lock2
-mode:
-  restart_on_next_ball: true
-  start_events: multiball_lock_lock1_full
-  stop_events: multiball_my_multiball_started
-multiball_locks:
-  lock2:
-    lock_devices: bd_lock2
-    balls_to_lock: 1
-    disable_events: mode_multiball_started
-    reset_count_for_current_player_events: multiball_my_multiball_started
-# mode lock3
-##! mode: lock3
-mode:
-  restart_on_next_ball: true
-  start_events: multiball_lock_lock2_full
-  stop_events: multiball_my_multiball_started
-multiball_locks:
-  lock3:
-    lock_devices: bd_lock3
-    balls_to_lock: 1
-    disable_events: mode_multiball_started
-    reset_count_for_current_player_events: multiball_my_multiball_started
-# mode multiball
-##! mode: multiball
-mode:
-  start_events: multiball_lock_lock3_full
-  stop_events: multiball_my_multiball_ended
-multiballs:
-  my_multiball:
-    ball_count: 4
-    ball_count_type: total
-    shoot_again: 2s
-    start_events: s_target1_active
-    ball_locks: bd_lock1, bd_lock2, bd_lock3
-##! test
-#! start_game 5
-#! # there is one ball on playfield by default
-#! assert_balls_on_playfield 1
-#! assert_balls_in_play 1
-#! assert_int_condition 0 device.multiball_locks.lock1.locked_balls
-#! hit_switch s_lock1
-#! advance_time_and_run 3
-#! # it should not be locked
-#! assert_balls_on_playfield 1
-#! assert_balls_in_play 1
-#! assert_int_condition 0 device.multiball_locks.lock1.locked_balls
-#! start_mode lock1
-#! hit_switch s_lock1
-#! advance_time_and_run 3
-#! # it should not be locked
-#! assert_balls_on_playfield 1
-#! assert_balls_in_play 1
-#! assert_int_condition 1 device.multiball_locks.lock1.locked_balls
-#! hit_switch s_lock2
-#! advance_time_and_run 2
-#! hit_switch s_lock3
-#! advance_time_and_run 3
-#! assert_balls_on_playfield 1
-#! assert_balls_in_play 1
-#! assert_int_condition 1 device.multiball_locks.lock1.locked_balls
-#! assert_int_condition 1 device.multiball_locks.lock2.locked_balls
-#! assert_int_condition 1 device.multiball_locks.lock3.locked_balls
-#! hit_switch s_target1
-#! advance_time_and_run 3
-#! assert_balls_on_playfield 4
-#! assert_balls_in_play 4
-#! assert_int_condition 0 device.multiball_locks.lock1.locked_balls
-#! assert_int_condition 0 device.multiball_locks.lock2.locked_balls
-#! assert_int_condition 0 device.multiball_locks.lock3.locked_balls
-#! advance_time_and_run 3
-#! drain_one_ball
-#! drain_one_ball
-#! drain_one_ball
-#! assert_balls_on_playfield 1
-#! assert_balls_in_play 1
-#! assert_mode_not_running lock1
-#! assert_mode_not_running lock2
-#! assert_mode_not_running lock3
-#! assert_mode_not_running multiball
+<div class="highlight"><pre><span></span><code><span class="nt">coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">eject_coil1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">eject_coil2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">eject_coil3</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_lock1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_lock2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_lock3</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_target1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="nt">ball_devices</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">bd_lock1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">eject_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">eject_coil1</span>
+<span class="w">    </span><span class="nt">ball_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_lock1</span>
+<span class="w">    </span><span class="nt">eject_timeouts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2s</span>
+<span class="w">  </span><span class="nt">bd_lock2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">eject_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">eject_coil2</span>
+<span class="w">    </span><span class="nt">ball_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_lock2</span>
+<span class="w">    </span><span class="nt">eject_timeouts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2s</span>
+<span class="w">  </span><span class="nt">bd_lock3</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">eject_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">eject_coil3</span>
+<span class="w">    </span><span class="nt">ball_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_lock3</span>
+<span class="w">    </span><span class="nt">eject_timeouts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2s</span>
+<span class="c1"># mode lock1</span>
+<span class="c1">##! mode: lock1</span>
+<span class="nt">mode</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">restart_on_next_ball</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">stop_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">multiball_my_multiball_started</span>
+<span class="nt">multiball_locks</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">lock1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">lock_devices</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bd_lock1</span>
+<span class="w">    </span><span class="nt">balls_to_lock</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">disable_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mode_multiball_started</span>
+<span class="w">    </span><span class="nt">reset_count_for_current_player_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">multiball_my_multiball_started</span>
+<span class="c1"># mode lock2</span>
+<span class="c1">##! mode: lock2</span>
+<span class="nt">mode</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">restart_on_next_ball</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">start_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">multiball_lock_lock1_full</span>
+<span class="w">  </span><span class="nt">stop_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">multiball_my_multiball_started</span>
+<span class="nt">multiball_locks</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">lock2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">lock_devices</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bd_lock2</span>
+<span class="w">    </span><span class="nt">balls_to_lock</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">disable_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mode_multiball_started</span>
+<span class="w">    </span><span class="nt">reset_count_for_current_player_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">multiball_my_multiball_started</span>
+<span class="c1"># mode lock3</span>
+<span class="c1">##! mode: lock3</span>
+<span class="nt">mode</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">restart_on_next_ball</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">start_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">multiball_lock_lock2_full</span>
+<span class="w">  </span><span class="nt">stop_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">multiball_my_multiball_started</span>
+<span class="nt">multiball_locks</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">lock3</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">lock_devices</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bd_lock3</span>
+<span class="w">    </span><span class="nt">balls_to_lock</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">disable_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mode_multiball_started</span>
+<span class="w">    </span><span class="nt">reset_count_for_current_player_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">multiball_my_multiball_started</span>
+<span class="c1"># mode multiball</span>
+<span class="c1">##! mode: multiball</span>
+<span class="nt">mode</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">start_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">multiball_lock_lock3_full</span>
+<span class="w">  </span><span class="nt">stop_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">multiball_my_multiball_ended</span>
+<span class="nt">multiballs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_multiball</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">ball_count</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span>
+<span class="w">    </span><span class="nt">ball_count_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">total</span>
+<span class="w">    </span><span class="nt">shoot_again</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2s</span>
+<span class="w">    </span><span class="nt">start_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_target1_active</span>
+<span class="w">    </span><span class="nt">ball_locks</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bd_lock1, bd_lock2, bd_lock3</span>
+<span class="c1">##! test</span>
+<span class="c1">#! start_game 5</span>
+<span class="c1">#! # there is one ball on playfield by default</span>
+<span class="c1">#! assert_balls_on_playfield 1</span>
+<span class="c1">#! assert_balls_in_play 1</span>
+<span class="c1">#! assert_int_condition 0 device.multiball_locks.lock1.locked_balls</span>
+<span class="c1">#! hit_switch s_lock1</span>
+<span class="c1">#! advance_time_and_run 3</span>
+<span class="c1">#! # it should not be locked</span>
+<span class="c1">#! assert_balls_on_playfield 1</span>
+<span class="c1">#! assert_balls_in_play 1</span>
+<span class="c1">#! assert_int_condition 0 device.multiball_locks.lock1.locked_balls</span>
+<span class="c1">#! start_mode lock1</span>
+<span class="c1">#! hit_switch s_lock1</span>
+<span class="c1">#! advance_time_and_run 3</span>
+<span class="c1">#! # it should not be locked</span>
+<span class="c1">#! assert_balls_on_playfield 1</span>
+<span class="c1">#! assert_balls_in_play 1</span>
+<span class="c1">#! assert_int_condition 1 device.multiball_locks.lock1.locked_balls</span>
+<span class="c1">#! hit_switch s_lock2</span>
+<span class="c1">#! advance_time_and_run 2</span>
+<span class="c1">#! hit_switch s_lock3</span>
+<span class="c1">#! advance_time_and_run 3</span>
+<span class="c1">#! assert_balls_on_playfield 1</span>
+<span class="c1">#! assert_balls_in_play 1</span>
+<span class="c1">#! assert_int_condition 1 device.multiball_locks.lock1.locked_balls</span>
+<span class="c1">#! assert_int_condition 1 device.multiball_locks.lock2.locked_balls</span>
+<span class="c1">#! assert_int_condition 1 device.multiball_locks.lock3.locked_balls</span>
+<span class="c1">#! hit_switch s_target1</span>
+<span class="c1">#! advance_time_and_run 3</span>
+<span class="c1">#! assert_balls_on_playfield 4</span>
+<span class="c1">#! assert_balls_in_play 4</span>
+<span class="c1">#! assert_int_condition 0 device.multiball_locks.lock1.locked_balls</span>
+<span class="c1">#! assert_int_condition 0 device.multiball_locks.lock2.locked_balls</span>
+<span class="c1">#! assert_int_condition 0 device.multiball_locks.lock3.locked_balls</span>
+<span class="c1">#! advance_time_and_run 3</span>
+<span class="c1">#! drain_one_ball</span>
+<span class="c1">#! drain_one_ball</span>
+<span class="c1">#! drain_one_ball</span>
+<span class="c1">#! assert_balls_on_playfield 1</span>
+<span class="c1">#! assert_balls_in_play 1</span>
+<span class="c1">#! assert_mode_not_running lock1</span>
+<span class="c1">#! assert_mode_not_running lock2</span>
+<span class="c1">#! assert_mode_not_running lock3</span>
+<span class="c1">#! assert_mode_not_running multiball</span>
 </code></pre></div>
 <p>Video about ball locks and multiballs:</p>
 <div class="video-wrapper">

@@ -34044,17 +34044,17 @@ to <a href="../../examples/">config file examples</a> for more examples of real 
 <a href="../../mechs/autofire_coils/">autofire coil</a> that kicks the ball back into play, typically located in an
 outlane.</p>
 <p>This is an example:</p>
-<div class="highlight"><pre><span></span><code>switches:
-  s_kickback:
-    number: 1
-coils:
-  c_kickback:
-    number: 1
-    default_pulse_ms: 20ms
-kickbacks:
-  left_kickback:
-    coil: c_kickback
-    switch: s_kickback
+<div class="highlight"><pre><span></span><code><span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_kickback</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="nt">coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">c_kickback</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">default_pulse_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20ms</span>
+<span class="nt">kickbacks</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">left_kickback</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_kickback</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_kickback</span>
 </code></pre></div>
 <p>Since kickbacks are a type of autofire coil, they have the same settings
 as <a href="../autofire_coils/">autofire_coils:</a>. See that
@@ -34092,19 +34092,19 @@ Defaults to empty.</p>
 <p>You can overwrite <code>recycle</code>, <code>pulse_ms</code>, <code>pulse_power</code> or <code>hold_power</code>
 of the coil for this device.</p>
 <p>This is an example:</p>
-<div class="highlight"><pre><span></span><code>switches:
-  s_kickback:
-    number: 1
-coils:
-  c_kickback:
-    number: 1
-    default_pulse_ms: 10ms
-kickbacks:
-  left_kickback:
-    coil: c_kickback
-    switch: s_kickback
-    coil_overwrite:
-      pulse_ms: 20ms
+<div class="highlight"><pre><span></span><code><span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_kickback</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="nt">coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">c_kickback</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">default_pulse_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10ms</span>
+<span class="nt">kickbacks</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">left_kickback</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_kickback</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_kickback</span>
+<span class="w">    </span><span class="nt">coil_overwrite</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">pulse_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20ms</span>
 </code></pre></div>
 <p>In this example we increase <code>pulse_ms</code> of the kickback.</p>
 <h3 id="coil_pulse_delay">coil_pulse_delay:</h3>

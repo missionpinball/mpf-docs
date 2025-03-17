@@ -33949,45 +33949,45 @@ Cobra board connected to a Linux PC running MPF. If you have a Cobra
 board but run Windows or macOS you have to change the <code>ports</code>. If you
 run a completely different hardware you have to adapt the <code>hardware</code>
 section.</p>
-<div class="highlight"><pre><span></span><code>#config_version=5
+<div class="highlight"><pre><span></span><code><span class="c1">#config_version=5</span>
 
-hardware:
-   platform: opp
-   driverboards: gen2
+<span class="nt">hardware</span><span class="p">:</span>
+<span class="w">   </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">opp</span>
+<span class="w">   </span><span class="nt">driverboards</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gen2</span>
 
-opp:
-   ports: /dev/ttyACM0, /dev/ttyACM1
+<span class="nt">opp</span><span class="p">:</span>
+<span class="w">   </span><span class="nt">ports</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/dev/ttyACM0, /dev/ttyACM1</span>
 
-playfields:
-playfield:    #playfield must exist for autofire coils
-   tags: default
-   default_source_device: bd_plunger   #value must be set, default &quot;none&quot; not allowed when having autofire coils
+<span class="nt">playfields</span><span class="p">:</span>
+<span class="nt">playfield</span><span class="p">:</span><span class="w">    </span><span class="c1">#playfield must exist for autofire coils</span>
+<span class="w">   </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span>
+<span class="w">   </span><span class="nt">default_source_device</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bd_plunger</span><span class="w">   </span><span class="c1">#value must be set, default &quot;none&quot; not allowed when having autofire coils</span>
 
-ball_devices:
-bd_plunger:
-   ball_capacity: 1
-   mechanical_eject: true
+<span class="nt">ball_devices</span><span class="p">:</span>
+<span class="nt">bd_plunger</span><span class="p">:</span>
+<span class="w">   </span><span class="nt">ball_capacity</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">   </span><span class="nt">mechanical_eject</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 
-coils:
-c_my_coil:
-   number: 0-0-11
+<span class="nt">coils</span><span class="p">:</span>
+<span class="nt">c_my_coil</span><span class="p">:</span>
+<span class="w">   </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0-0-11</span>
 
-switches:
-s_my_switch:
-   number: 0-0-16
+<span class="nt">switches</span><span class="p">:</span>
+<span class="nt">s_my_switch</span><span class="p">:</span>
+<span class="w">   </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0-0-16</span>
 
-autofire_coils:
-my_autofire_1:
-   coil: c_my_coil
-   switch: s_my_switch
-   enable_events: simulate_start
-   disable_events: simulate_stop
+<span class="nt">autofire_coils</span><span class="p">:</span>
+<span class="nt">my_autofire_1</span><span class="p">:</span>
+<span class="w">   </span><span class="nt">coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_my_coil</span>
+<span class="w">   </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_my_switch</span>
+<span class="w">   </span><span class="nt">enable_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">simulate_start</span>
+<span class="w">   </span><span class="nt">disable_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">simulate_stop</span>
 
-keyboard:
-1:
-   event: simulate_start
-2:
-   event: simulate_stop
+<span class="nt">keyboard</span><span class="p">:</span>
+<span class="nt">1</span><span class="p">:</span>
+<span class="w">   </span><span class="nt">event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">simulate_start</span>
+<span class="nt">2</span><span class="p">:</span>
+<span class="w">   </span><span class="nt">event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">simulate_stop</span>
 </code></pre></div>
 <p>Now run <code>mpf both</code> to start above example. The Cobra board has a little
 LED next the coil output which will light up yellow when the coil is

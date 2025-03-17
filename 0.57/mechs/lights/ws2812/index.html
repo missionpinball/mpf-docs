@@ -33802,42 +33802,42 @@ you.</p>
 <h2 id="config">Config</h2>
 <p>MPF tries to make this right for you and your can configure those LEDs
 as follows:</p>
-<div class="highlight"><pre><span></span><code>lights:
-  my_ws2811:
-    number: 0         # first LED in chain (with three channels) - exact number format depends on your platform
-    type: rgb
-  my_ws2812:
-    number: 1         # second LED in chain (with three channels)
-    type: grb
+<div class="highlight"><pre><span></span><code><span class="nt">lights</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_ws2811</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span><span class="w">         </span><span class="c1"># first LED in chain (with three channels) - exact number format depends on your platform</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rgb</span>
+<span class="w">  </span><span class="nt">my_ws2812</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w">         </span><span class="c1"># second LED in chain (with three channels)</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">grb</span>
 </code></pre></div>
 <p>There are also RGBW LEDs which are compatible which usually use RGBW as
 order. They can be used like this:</p>
-<div class="highlight"><pre><span></span><code>lights:
-  my_rgbw_serial_led:
-    channels:
-      red:
-        - number: 3-0
-      green:
-        - number: 3-1
-      blue:
-        - number: 3-2
-      white:
-        - number: 4-0
+<div class="highlight"><pre><span></span><code><span class="nt">lights</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_rgbw_serial_led</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">channels</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">red</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3-0</span>
+<span class="w">      </span><span class="nt">green</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3-1</span>
+<span class="w">      </span><span class="nt">blue</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3-2</span>
+<span class="w">      </span><span class="nt">white</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4-0</span>
 </code></pre></div>
 <p>Starting with MPF 0.54 there is a new syntax to chain LEDs:</p>
-<div class="highlight"><pre><span></span><code>lights:
-  led_0:
-    start_channel: 0-0    # the exact number format depends on your platform
-    subtype: led
-    type: rgb    # will use red: 0-0, green: 0-1, blue: 0-2
-  led_1:
-    previous: led_0
-    subtype: led
-    type: rgbw   # will use red: 0-3, green: 0-4, blue: 0-5, white: 0-6
-  led_2:
-    previous: led_1
-    subtype: led
-    type: rgbw   # will use red: 0-7, green: 0-8, blue: 0-9, white: 0-10
+<div class="highlight"><pre><span></span><code><span class="nt">lights</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">led_0</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">start_channel</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0-0</span><span class="w">    </span><span class="c1"># the exact number format depends on your platform</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rgb</span><span class="w">    </span><span class="c1"># will use red: 0-0, green: 0-1, blue: 0-2</span>
+<span class="w">  </span><span class="nt">led_1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">previous</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led_0</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rgbw</span><span class="w">   </span><span class="c1"># will use red: 0-3, green: 0-4, blue: 0-5, white: 0-6</span>
+<span class="w">  </span><span class="nt">led_2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">previous</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led_1</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rgbw</span><span class="w">   </span><span class="c1"># will use red: 0-7, green: 0-8, blue: 0-9, white: 0-10</span>
 </code></pre></div>
 <h2 id="hardware">Hardware</h2>
 <p>Each pixel connects to the next pixel with three wires: VDD, signal,

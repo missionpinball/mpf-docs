@@ -33919,12 +33919,12 @@ continuous amount of time.</p>
 <p>Here's an example. This example is actually built-in to MPF via the MPF
 default config file, so if you want to use these flipper cradle events,
 you don't have to enter them yourself as they're already there.</p>
-<div class="highlight"><pre><span></span><code>timed_switches:
-  flipper_cradle:
-    switch_tags: left_flipper, right_flipper
-    time: 3s
-    events_when_active: flipper_cradle
-    events_when_released: flipper_cradle_release
+<div class="highlight"><pre><span></span><code><span class="nt">timed_switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">flipper_cradle</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch_tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">left_flipper, right_flipper</span>
+<span class="w">    </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3s</span>
+<span class="w">    </span><span class="nt">events_when_active</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flipper_cradle</span>
+<span class="w">    </span><span class="nt">events_when_released</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flipper_cradle_release</span>
 </code></pre></div>
 <p>Like other devices in MPF, the format is:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">timed_switches</span><span class="p">:</span>

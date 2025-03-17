@@ -33590,51 +33590,51 @@ them as candidate for a shots in MPF. They are usually
 <li>Spooky Pinball: SP-SW-001 or SP-SW-002</li>
 </ul>
 <p>This is an example config:</p>
-<div class="highlight"><pre><span></span><code># this is in your machine-wide config
-switches:
-  s_outlane_left:
-    number: 0
-  s_inlane_left:
-    number: 1
-  s_inlane_right:
-    number: 6
-  s_outlane_right:
-    number: 7
-lights:
-  l_outlane_left:
-    number: 0
-  l_inlane_left:
-    number: 1
-  l_inlane_right:
-    number: 6
-  l_outlane_right:
-    number: 7
-##! mode: my_mode
-# put this into a mode
-shots:
-  shot_outlane_left:
-    switches: s_outlane_left
-    show_tokens:
-      leds: l_outlane_left
-  shot_inlane_left:
-    switches: s_inlane_left
-    show_tokens:
-      leds: l_inlane_left
-  shot_inlane_right:
-    switches: s_inlane_right
-    show_tokens:
-      leds: l_inlane_right
-  shot_outlane_right:
-    switches: s_outlane_right
-    show_tokens:
-      leds: l_outlane_right
-shot_groups:
-  sg_lanes:
-    shots: shot_outlane_left, shot_inlane_left, shot_inlane_right, shot_outlane_right
-    rotate_left_events: s_flipper_left_active
-    rotate_right_events: s_flipper_right_active
-    reset_events:
-      sg_lanes_lit_complete: 1s
+<div class="highlight"><pre><span></span><code><span class="c1"># this is in your machine-wide config</span>
+<span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_outlane_left</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">  </span><span class="nt">s_inlane_left</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">s_inlane_right</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">6</span>
+<span class="w">  </span><span class="nt">s_outlane_right</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">7</span>
+<span class="nt">lights</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">l_outlane_left</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">  </span><span class="nt">l_inlane_left</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">l_inlane_right</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">6</span>
+<span class="w">  </span><span class="nt">l_outlane_right</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">7</span>
+<span class="c1">##! mode: my_mode</span>
+<span class="c1"># put this into a mode</span>
+<span class="nt">shots</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">shot_outlane_left</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_outlane_left</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">leds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_outlane_left</span>
+<span class="w">  </span><span class="nt">shot_inlane_left</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_inlane_left</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">leds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_inlane_left</span>
+<span class="w">  </span><span class="nt">shot_inlane_right</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_inlane_right</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">leds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_inlane_right</span>
+<span class="w">  </span><span class="nt">shot_outlane_right</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_outlane_right</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">leds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_outlane_right</span>
+<span class="nt">shot_groups</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">sg_lanes</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">shots</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">shot_outlane_left, shot_inlane_left, shot_inlane_right, shot_outlane_right</span>
+<span class="w">    </span><span class="nt">rotate_left_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_flipper_left_active</span>
+<span class="w">    </span><span class="nt">rotate_right_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_flipper_right_active</span>
+<span class="w">    </span><span class="nt">reset_events</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">sg_lanes_lit_complete</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
 </code></pre></div>
 <p>We configure four lane rollover switches (and their corresponding
 lights). Then inside a mode we define one shot for each group and a

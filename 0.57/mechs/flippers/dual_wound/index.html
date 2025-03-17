@@ -33779,13 +33779,13 @@ coils are hold, which are the main coil and how to connect them.</p>
 <p>First, make sure you have entries in your machine config for your
 flipper buttons.</p>
 <p>Here's an example <code>config.yaml</code> with two switches added:</p>
-<div class="highlight"><pre><span></span><code>switches:
-  s_left_flipper:
-    number: 1
-    tags: left_flipper
-  s_right_flipper:
-    number: 2
-    tags: right_flipper
+<div class="highlight"><pre><span></span><code><span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_left_flipper</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">left_flipper</span>
+<span class="w">  </span><span class="nt">s_right_flipper</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">right_flipper</span>
 </code></pre></div>
 <p>You can pick whatever names you want for your switches. We chose
 <code>s_left_flipper</code> and <code>s_right_flipper</code>.</p>
@@ -33806,17 +33806,17 @@ things you want the player to be able to skip.</p>
 config. These will be added to a section called <code>coils:</code>. Since we're
 using dual-wound coils, there will actually be two coil entries for each
 coil---one for the power (main) winding, and one for the hold winding.</p>
-<div class="highlight"><pre><span></span><code>coils:
-  c_flipper_left_main:
-    number: 0
-  c_flipper_left_hold:
-    number: 1
-    allow_enable: true
-  c_flipper_right_main:
-    number: 2
-  c_flipper_right_hold:
-    number: 3
-    allow_enable: true
+<div class="highlight"><pre><span></span><code><span class="nt">coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">c_flipper_left_main</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">  </span><span class="nt">c_flipper_left_hold</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">allow_enable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">c_flipper_right_main</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="w">  </span><span class="nt">c_flipper_right_hold</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="w">    </span><span class="nt">allow_enable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
 <p>Again, the <code>number:</code> entries in your config will vary depending on your
 actual hardware, and again, you can pick whatever names you want for
@@ -33842,33 +33842,33 @@ your machine config, and then specifying the switch and coils for each
 flipper that you defined in Steps 1 and 2.</p>
 <p>Here's what you would create based on the switches and coils we've
 defined so far:</p>
-<div class="highlight"><pre><span></span><code>#! switches:
-#!   s_left_flipper:
-#!     number: 1
-#!     tags: left_flipper
-#!   s_right_flipper:
-#!     number: 2
-#!     tags: right_flipper
-#! coils:
-#!   c_flipper_left_main:
-#!     number: 0
-#!   c_flipper_left_hold:
-#!     number: 1
-#!     allow_enable: true
-#!   c_flipper_right_main:
-#!     number: 2
-#!   c_flipper_right_hold:
-#!     number: 3
-#!     allow_enable: true
-flippers:
-  left_flipper:
-    main_coil: c_flipper_left_main
-    hold_coil: c_flipper_left_hold
-    activation_switch: s_left_flipper
-  right_flipper:
-    main_coil: c_flipper_right_main
-    hold_coil: c_flipper_right_hold
-    activation_switch: s_right_flipper
+<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
+<span class="c1">#!   s_left_flipper:</span>
+<span class="c1">#!     number: 1</span>
+<span class="c1">#!     tags: left_flipper</span>
+<span class="c1">#!   s_right_flipper:</span>
+<span class="c1">#!     number: 2</span>
+<span class="c1">#!     tags: right_flipper</span>
+<span class="c1">#! coils:</span>
+<span class="c1">#!   c_flipper_left_main:</span>
+<span class="c1">#!     number: 0</span>
+<span class="c1">#!   c_flipper_left_hold:</span>
+<span class="c1">#!     number: 1</span>
+<span class="c1">#!     allow_enable: true</span>
+<span class="c1">#!   c_flipper_right_main:</span>
+<span class="c1">#!     number: 2</span>
+<span class="c1">#!   c_flipper_right_hold:</span>
+<span class="c1">#!     number: 3</span>
+<span class="c1">#!     allow_enable: true</span>
+<span class="nt">flippers</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">left_flipper</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">main_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_flipper_left_main</span>
+<span class="w">    </span><span class="nt">hold_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_flipper_left_hold</span>
+<span class="w">    </span><span class="nt">activation_switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_left_flipper</span>
+<span class="w">  </span><span class="nt">right_flipper</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">main_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_flipper_right_main</span>
+<span class="w">    </span><span class="nt">hold_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_flipper_right_hold</span>
+<span class="w">    </span><span class="nt">activation_switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_right_flipper</span>
 </code></pre></div>
 <h2 id="4-enabling-your-flippers">4. Enabling your flippers</h2>
 <p>By default, MPF only enables flippers when a game is in progress. So if
@@ -33882,35 +33882,35 @@ following entry to each of your flippers in your config file:</p>
 </code></pre>
 <p>So now the <code>flippers:</code> section of your config file should look like
 this:</p>
-<div class="highlight"><pre><span></span><code>#! switches:
-#!   s_left_flipper:
-#!     number: 1
-#!     tags: left_flipper
-#!   s_right_flipper:
-#!     number: 2
-#!     tags: right_flipper
-#! coils:
-#!   c_flipper_left_main:
-#!     number: 0
-#!   c_flipper_left_hold:
-#!     number: 1
-#!     allow_enable: true
-#!   c_flipper_right_main:
-#!     number: 2
-#!   c_flipper_right_hold:
-#!     number: 3
-#!     allow_enable: true
-flippers:
-  left_flipper:
-    main_coil: c_flipper_left_main
-    hold_coil: c_flipper_left_hold
-    activation_switch: s_left_flipper
-    enable_events: machine_reset_phase_3
-  right_flipper:
-    main_coil: c_flipper_right_main
-    hold_coil: c_flipper_right_hold
-    activation_switch: s_right_flipper
-    enable_events: machine_reset_phase_3
+<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
+<span class="c1">#!   s_left_flipper:</span>
+<span class="c1">#!     number: 1</span>
+<span class="c1">#!     tags: left_flipper</span>
+<span class="c1">#!   s_right_flipper:</span>
+<span class="c1">#!     number: 2</span>
+<span class="c1">#!     tags: right_flipper</span>
+<span class="c1">#! coils:</span>
+<span class="c1">#!   c_flipper_left_main:</span>
+<span class="c1">#!     number: 0</span>
+<span class="c1">#!   c_flipper_left_hold:</span>
+<span class="c1">#!     number: 1</span>
+<span class="c1">#!     allow_enable: true</span>
+<span class="c1">#!   c_flipper_right_main:</span>
+<span class="c1">#!     number: 2</span>
+<span class="c1">#!   c_flipper_right_hold:</span>
+<span class="c1">#!     number: 3</span>
+<span class="c1">#!     allow_enable: true</span>
+<span class="nt">flippers</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">left_flipper</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">main_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_flipper_left_main</span>
+<span class="w">    </span><span class="nt">hold_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_flipper_left_hold</span>
+<span class="w">    </span><span class="nt">activation_switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_left_flipper</span>
+<span class="w">    </span><span class="nt">enable_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">machine_reset_phase_3</span>
+<span class="w">  </span><span class="nt">right_flipper</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">main_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_flipper_right_main</span>
+<span class="w">    </span><span class="nt">hold_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_flipper_right_hold</span>
+<span class="w">    </span><span class="nt">activation_switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_right_flipper</span>
+<span class="w">    </span><span class="nt">enable_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">machine_reset_phase_3</span>
 </code></pre></div>
 <h2 id="5-configure-your-control-system-hardware">5. Configure your control system hardware</h2>
 <p>At this point your flipper configuration is technically complete, though

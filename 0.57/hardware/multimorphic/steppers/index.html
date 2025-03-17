@@ -33646,26 +33646,26 @@ DRV8825 on amazon, ebay, aliexpress or similar platforms.</p>
 <p>To enable steppers you need to configure your PD-LED board in your
 <code>p_roc</code> section. Assuming your PD-LED has the ID 4 you can use the
 following config to enable and define two steppers:</p>
-<div class="highlight"><pre><span></span><code>p_roc:
-  pd_led_boards:
-    4:
-      use_stepper_0: true
-      use_stepper_1: true
-      # stepper_speed: 13524    # uncomment to tune the speed
-switches:
-  s_stepper_4_0_home:
-    number: A4-B0-0
-  s_stepper_4_1_home:
-    number: A4-B0-1
-steppers:
-  stepper_4_0:
-    number: 4-0
-    homing_mode: switch
-    homing_switch: s_stepper_4_0_home
-  stepper_4_1:
-    number: 4-1
-    homing_mode: switch
-    homing_switch: s_stepper_4_1_home
+<div class="highlight"><pre><span></span><code><span class="nt">p_roc</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">pd_led_boards</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">4</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">use_stepper_0</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">      </span><span class="nt">use_stepper_1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">      </span><span class="c1"># stepper_speed: 13524    # uncomment to tune the speed</span>
+<span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_stepper_4_0_home</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A4-B0-0</span>
+<span class="w">  </span><span class="nt">s_stepper_4_1_home</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A4-B0-1</span>
+<span class="nt">steppers</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">stepper_4_0</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4-0</span>
+<span class="w">    </span><span class="nt">homing_mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">switch</span>
+<span class="w">    </span><span class="nt">homing_switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_stepper_4_0_home</span>
+<span class="w">  </span><span class="nt">stepper_4_1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4-1</span>
+<span class="w">    </span><span class="nt">homing_mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">switch</span>
+<span class="w">    </span><span class="nt">homing_switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_stepper_4_1_home</span>
 </code></pre></div>
 <p>The number of your stepper has to be <code>id_of_your_ped_led-number</code>. In
 this case <code>4-0</code> and <code>4-1</code> for the first and second stepper on PD-LED 4.

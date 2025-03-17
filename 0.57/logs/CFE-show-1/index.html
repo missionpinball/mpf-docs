@@ -33828,28 +33828,28 @@ your global config folder.</p>
 <h2 id="examples">Examples</h2>
 <h3 id="file-shows">File Shows</h3>
 <p>This is how a file show should look:</p>
-<div class="highlight"><pre><span></span><code>##! show: flash_red
-#show_version=5
-- duration: 1
-  lights:
-    led1: red
-- duration: 1
-  lights:
-    led1: off
+<div class="highlight"><pre><span></span><code><span class="c1">##! show: flash_red</span>
+<span class="c1">#show_version=5</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">led1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">led1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">off</span>
 </code></pre></div>
 <p>Please note that there can be only one show per dedicated show file as
 MPF uses the filename as show name. See
 <a href="../../shows/file_shows/">Creating standalone show files</a> for details.</p>
 <h3 id="config-shows">Config Shows</h3>
 <p>This is how a show inside your config should look:</p>
-<div class="highlight"><pre><span></span><code>shows:
-  flash_red:
-    - duration: 1
-      lights:
-        led1: red
-    - duration: 1
-      lights:
-        led1: off
+<div class="highlight"><pre><span></span><code><span class="nt">shows</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">flash_red</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">      </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">led1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">      </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">led1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">off</span>
 </code></pre></div>
 <p>See <a href="../../shows/config_shows/">/shows/index</a> for details.</p>
 <h2 id="common-pitfalls">Common Pitfalls</h2>

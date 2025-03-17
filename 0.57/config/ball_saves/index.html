@@ -34029,16 +34029,16 @@ to <a href="../../examples/">config file examples</a> for more examples of real 
 </table>
 <p>The <code>ball_saves:</code> section of your config is where you create <a href="#">ball save
 devices</a>. Here's an example:</p>
-<div class="highlight"><pre><span></span><code>ball_saves:
-  default:
-    active_time: 10s
-    hurry_up_time: 2s
-    grace_period: 2s
-    enable_events: mode_base_started
-    timer_start_events: balldevice_plunger_lane_ball_eject_success
-    auto_launch: true
-    balls_to_save: 1
-    debug: true
+<div class="highlight"><pre><span></span><code><span class="nt">ball_saves</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">default</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">active_time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10s</span>
+<span class="w">    </span><span class="nt">hurry_up_time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2s</span>
+<span class="w">    </span><span class="nt">grace_period</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2s</span>
+<span class="w">    </span><span class="nt">enable_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mode_base_started</span>
+<span class="w">    </span><span class="nt">timer_start_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">balldevice_plunger_lane_ball_eject_success</span>
+<span class="w">    </span><span class="nt">auto_launch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">balls_to_save</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">debug</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
 <h2 id="optional-settings">Optional settings</h2>
 <p>The following sections are optional in the <code>ball_saves:</code> section of your

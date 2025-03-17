@@ -33655,13 +33655,13 @@ mode.</p>
 <p>Ball end modes delay the ball ending process. If you want your own mode
 to delay the ball ending process you can start the with the following
 config:</p>
-<div class="highlight"><pre><span></span><code>##! mode: custom_bonus
-#config_version=5
-mode:
-  start_events: ball_ending     # start on ball ending process
-  use_wait_queue: true          # delay ball ending
-  priority: 500                 # determines the order of ball end modes
-  stop_events: stop_my_mode     # post this event to stop the mode and continue the ball ending process
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: custom_bonus</span>
+<span class="c1">#config_version=5</span>
+<span class="nt">mode</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">start_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ball_ending</span><span class="w">     </span><span class="c1"># start on ball ending process</span>
+<span class="w">  </span><span class="nt">use_wait_queue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w">          </span><span class="c1"># delay ball ending</span>
+<span class="w">  </span><span class="nt">priority</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">500</span><span class="w">                 </span><span class="c1"># determines the order of ball end modes</span>
+<span class="w">  </span><span class="nt">stop_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stop_my_mode</span><span class="w">     </span><span class="c1"># post this event to stop the mode and continue the ball ending process</span>
 </code></pre></div>
 <p>Ball ending will be delayed until your mode stops so make sure that your
 mode ends eventually or the game will be stuck. In the example above

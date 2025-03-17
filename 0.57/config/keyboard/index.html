@@ -33880,12 +33880,12 @@ events in the media controller process, rather than in the MPF process.</p>
 <p>This section contains subsections which are a list of parameters that
 are posted along with the <em>event</em> or <em>mc_event</em> specified above. Using
 the following configuration file snippet as an example:</p>
-<div class="highlight"><pre><span></span><code>keyboard:
-  4:
-    event: advance_reel_test
-    params:
-      reel_name: score_1p_10
-      direction: 1
+<div class="highlight"><pre><span></span><code><span class="nt">keyboard</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">4</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">advance_reel_test</span>
+<span class="w">    </span><span class="nt">params</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">reel_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">score_1p_10</span>
+<span class="w">      </span><span class="nt">direction</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
 </code></pre></div>
 <p>This keyboard entry will post the event <em>advance_reel_test</em> when the <em>4</em>
 key is pressed, and it will pass the parameters <em>reel_name=score_1p_10</em>
@@ -33904,12 +33904,12 @@ switches in ball devices, since you don't want to have to hold down the
 keys on your keyboard forever whenever a ball is locked in a device.
 Default is <em>False</em>. You might want to create multiple entries for the
 same switch for different key combinations. For example:</p>
-<div class="highlight"><pre><span></span><code>#! keyboard:
-  1:
-    switch: trough1
-  shift+1:
-    switch: trough1
-    toggle: true
+<div class="highlight"><pre><span></span><code><span class="c1">#! keyboard:</span>
+<span class="w">  </span><span class="nt">1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">trough1</span>
+<span class="w">  </span><span class="nt">shift+1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">trough1</span>
+<span class="w">    </span><span class="nt">toggle</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
 <p>In the above code, you can momentarily "tap" the <em>trough1</em> switch by
 hitting the <em>1</em> key, but if you want to lock that switch on, then you

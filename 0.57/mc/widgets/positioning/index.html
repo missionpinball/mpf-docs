@@ -34010,73 +34010,73 @@ that you'll use over and over.)</p>
 <p>So now you've seen all the options for positioning and placement of
 widgets. But how do you actually use them? Simple. Everything discussed
 here are just regular widget settings. So you can use them in slides:</p>
-<div class="highlight"><pre><span></span><code>slides:
-  slide1:
-    widgets:
-      - type: text
-        text: MY WIDGET
-        x: left+10%
-        y: top-10%
-        adjust_bottom: 2
-#! slide_player:
-#!   show_slide: slide1
-##! test
-#! post show_slide
-#! advance_time_and_run .1
-#! assert_text_on_top_slide &quot;MY WIDGET&quot;
+<div class="highlight"><pre><span></span><code><span class="nt">slides</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">slide1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">widgets</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MY WIDGET</span>
+<span class="w">        </span><span class="nt">x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">left+10%</span>
+<span class="w">        </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">top-10%</span>
+<span class="w">        </span><span class="nt">adjust_bottom</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="c1">#! slide_player:</span>
+<span class="c1">#!   show_slide: slide1</span>
+<span class="c1">##! test</span>
+<span class="c1">#! post show_slide</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_text_on_top_slide &quot;MY WIDGET&quot;</span>
 </code></pre></div>
 <p>You can use them in <a href="../reusable_widgets/">named widgets</a>:</p>
-<div class="highlight"><pre><span></span><code>widgets:
-  my_cool_widget:
-    - type: text
-      text: MY WIDGET
-      x: left+10%
-      y: top-10%
-      adjust_bottom: 2
-#! widget_player:
-#!   show_widget: my_cool_widget
-##! test
-#! post show_widget
-#! advance_time_and_run .1
-#! assert_text_on_top_slide &quot;MY WIDGET&quot;
+<div class="highlight"><pre><span></span><code><span class="nt">widgets</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_cool_widget</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MY WIDGET</span>
+<span class="w">      </span><span class="nt">x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">left+10%</span>
+<span class="w">      </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">top-10%</span>
+<span class="w">      </span><span class="nt">adjust_bottom</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="c1">#! widget_player:</span>
+<span class="c1">#!   show_widget: my_cool_widget</span>
+<span class="c1">##! test</span>
+<span class="c1">#! post show_widget</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_text_on_top_slide &quot;MY WIDGET&quot;</span>
 </code></pre></div>
 <p>You can use them in the widget player:</p>
-<div class="highlight"><pre><span></span><code>widgets:
-  my_widget:
-    - type: text
-      text: &quot;MY WIDGET&quot;
-widget_player:
-  some_event:
-    my_widget:
-      widget_settings:
-        x: left+10%
-        y: top-10%
-        adjust_bottom: 2
-##! test
-#! post some_event
-#! advance_time_and_run .1
-#! assert_text_on_top_slide &quot;MY WIDGET&quot;
+<div class="highlight"><pre><span></span><code><span class="nt">widgets</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_widget</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;MY</span><span class="nv"> </span><span class="s">WIDGET&quot;</span>
+<span class="nt">widget_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">some_event</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">my_widget</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">widget_settings</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">left+10%</span>
+<span class="w">        </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">top-10%</span>
+<span class="w">        </span><span class="nt">adjust_bottom</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="c1">##! test</span>
+<span class="c1">#! post some_event</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_text_on_top_slide &quot;MY WIDGET&quot;</span>
 </code></pre></div>
 <p>And you can use them in shows:</p>
-<div class="highlight"><pre><span></span><code># in your machine config
-widgets:
-  my_widget:
-    - type: text
-      text: &quot;MY WIDGET&quot;
-#! show_player:
-#!   start_show: test_show
-##! show: test_show
-# in your show
-- duration: 1
-  widgets:
-    my_widget:
-      widget_settings:
-        x: right-15.4%
-        y: top
-##! test
-#! post start_show
-#! advance_time_and_run .1
-#! assert_text_on_top_slide &quot;MY WIDGET&quot;
+<div class="highlight"><pre><span></span><code><span class="c1"># in your machine config</span>
+<span class="nt">widgets</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_widget</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;MY</span><span class="nv"> </span><span class="s">WIDGET&quot;</span>
+<span class="c1">#! show_player:</span>
+<span class="c1">#!   start_show: test_show</span>
+<span class="c1">##! show: test_show</span>
+<span class="c1"># in your show</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">widgets</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">my_widget</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">widget_settings</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">right-15.4%</span>
+<span class="w">        </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">top</span>
+<span class="c1">##! test</span>
+<span class="c1">#! post start_show</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_text_on_top_slide &quot;MY WIDGET&quot;</span>
 </code></pre></div>
 <hr />
 <div class="admonition question">

@@ -33836,13 +33836,13 @@ base mode if you want them to be active all the time during a game.</p>
 </div>
 <p>Let's start by creating our first shot in the base mode's config file
 (base.yaml).</p>
-<div class="highlight"><pre><span></span><code>#! switches:
-#!   s_right_inlane:
-#!     number: 1
-##! mode: base
-shots:
-  my_first_shot:
-    switch: s_right_inlane  # pick a switch that&#39;s valid in your machine
+<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
+<span class="c1">#!   s_right_inlane:</span>
+<span class="c1">#!     number: 1</span>
+<span class="c1">##! mode: base</span>
+<span class="nt">shots</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_first_shot</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_right_inlane</span><span class="w">  </span><span class="c1"># pick a switch that&#39;s valid in your machine</span>
 </code></pre></div>
 <p>Depending on your machine, you might not actually have a switch called
 "s_right_inlane", so feel free to pick a different switch name. For
@@ -33853,15 +33853,15 @@ change the name of the shot to something more meaningful later.</p>
 <p>Next, find the <code>variable_player:</code> section that you added in Step 15, and
 change the first entry from <code>s_right_inlane_active:</code> to
 <code>my_first_shot_hit</code>, like this:</p>
-<div class="highlight"><pre><span></span><code>##! mode: base
-variable_player:
-  my_first_shot_hit:  # this was s_right_inlane_active
-    score: 100
-  s_flipper_lower_left_active:
-    score: 1000
-    potato: 1
-  s_flipper_lower_right_active:
-    potato: -2
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: base</span>
+<span class="nt">variable_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_first_shot_hit</span><span class="p">:</span><span class="w">  </span><span class="c1"># this was s_right_inlane_active</span>
+<span class="w">    </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="w">  </span><span class="nt">s_flipper_lower_left_active</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="w">    </span><span class="nt">potato</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">s_flipper_lower_right_active</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">potato</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-2</span>
 </code></pre></div>
 <p>Do you understand what this is doing?</p>
 <p>Remember that the variable_player section will add (or remove) value
@@ -33925,26 +33925,26 @@ on when the shot is lit.</p>
 <p>To do this, go back to the mode config where you defined the shot
 (base.yaml) and change the <code>shots:</code> section.</p>
 <p>If you have LEDs in your machine, change it to this:</p>
-<div class="highlight"><pre><span></span><code>#! switches:
-#!   s_right_inlane:
-#!     number: 1
-##! mode: base
-shots:
-  my_first_shot:
-    switch: s_right_inlane
-    show_tokens:
-      led: led_1 # pick an LED that&#39;s valid in your machine
+<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
+<span class="c1">#!   s_right_inlane:</span>
+<span class="c1">#!     number: 1</span>
+<span class="c1">##! mode: base</span>
+<span class="nt">shots</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_first_shot</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_right_inlane</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">led</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led_1</span><span class="w"> </span><span class="c1"># pick an LED that&#39;s valid in your machine</span>
 </code></pre></div>
 <p>If you have a lamp matrix, change it to this:</p>
-<div class="highlight"><pre><span></span><code>#! switches:
-#!   s_right_inlane:
-#!     number: 1
-##! mode: base
-shots:
-  my_first_shot:
-    switch: s_right_inlane
-    show_tokens:
-      light: l_light_quick_freeze # pick a light that&#39;s valid in your machine
+<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
+<span class="c1">#!   s_right_inlane:</span>
+<span class="c1">#!     number: 1</span>
+<span class="c1">##! mode: base</span>
+<span class="nt">shots</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_first_shot</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_right_inlane</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">light</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_light_quick_freeze</span><span class="w"> </span><span class="c1"># pick a light that&#39;s valid in your machine</span>
 </code></pre></div>
 <p>In either case, be sure to pick an LED or light name that is a valid
 light in your machine.</p>
@@ -33966,17 +33966,17 @@ and "unlit" steps.</p>
 <p>To do this, we'll add a section to the mode's config file (base.yaml)
 called <code>shot_profiles:</code>. Create that section now, and define a shot
 profile called "my_first_profile" with the following settings:</p>
-<div class="highlight"><pre><span></span><code>##! mode: base
-shot_profiles:
-  my_first_profile:
-    states:
-      - name: unlit  # step 1
-        show: off
-      - name: flashing  # step 2
-        show: flash
-      - name: lit  # step 3
-        show: on
-    loop: true
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: base</span>
+<span class="nt">shot_profiles</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_first_profile</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">states</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unlit</span><span class="w">  </span><span class="c1"># step 1</span>
+<span class="w">        </span><span class="nt">show</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">off</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flashing</span><span class="w">  </span><span class="c1"># step 2</span>
+<span class="w">        </span><span class="nt">show</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flash</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lit</span><span class="w">  </span><span class="c1"># step 3</span>
+<span class="w">        </span><span class="nt">show</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">on</span>
+<span class="w">    </span><span class="nt">loop</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
 <p>Take a look at this shot profile to see what's happening.</p>
 <p>First, notice that in the <code>my_first_profile:</code> section, there's a
@@ -34012,26 +34012,26 @@ just means that profile is available to be used, much like how creating
 a show is separate from playing the show.</p>
 <p>So next we need to tell our shot that it should use the new profile we
 just created by adding a <code>profile:</code> setting.</p>
-<div class="highlight"><pre><span></span><code>#! switches:
-#!   s_right_inlane:
-#!     number: 1
-##! mode: base
-#! shot_profiles:
-#!   my_first_profile:
-#!     states:
-#!       - name: unlit  # step 1
-#!         show: off
-#!       - name: flashing  # step 2
-#!         show: flash
-#!       - name: lit  # step 3
-#!         show: on
-#!     loop: true
-shots:
-  my_first_shot:
-    switch: s_right_inlane
-    show_tokens:
-      led: l_led1 # or use light: here, depending on your machine
-    profile: my_first_profile
+<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
+<span class="c1">#!   s_right_inlane:</span>
+<span class="c1">#!     number: 1</span>
+<span class="c1">##! mode: base</span>
+<span class="c1">#! shot_profiles:</span>
+<span class="c1">#!   my_first_profile:</span>
+<span class="c1">#!     states:</span>
+<span class="c1">#!       - name: unlit  # step 1</span>
+<span class="c1">#!         show: off</span>
+<span class="c1">#!       - name: flashing  # step 2</span>
+<span class="c1">#!         show: flash</span>
+<span class="c1">#!       - name: lit  # step 3</span>
+<span class="c1">#!         show: on</span>
+<span class="c1">#!     loop: true</span>
+<span class="nt">shots</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_first_shot</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_right_inlane</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">led</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_led1</span><span class="w"> </span><span class="c1"># or use light: here, depending on your machine</span>
+<span class="w">    </span><span class="nt">profile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my_first_profile</span>
 </code></pre></div>
 <p>Save your config and re-run MPF. Once you start a game, the light or LED
 from your shot should be off. Hit the switch for the shot, and the light
@@ -34085,31 +34085,31 @@ shot's state is different.</p>
 <p>Now let's look at how we can give the player a different number of
 points when they hit that shot depending on what state the shot's in.</p>
 <p>Here's the existing variable_player section from the base mode config:</p>
-<div class="highlight"><pre><span></span><code>##! mode: base
-variable_player:
-  my_first_shot_hit:
-    score: 100
-  s_flipper_lower_left_active:
-    score: 1000
-    potato: 1
-  s_flipper_lower_right_active:
-    potato: -2
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: base</span>
+<span class="nt">variable_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_first_shot_hit</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="w">  </span><span class="nt">s_flipper_lower_left_active</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="w">    </span><span class="nt">potato</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">s_flipper_lower_right_active</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">potato</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-2</span>
 </code></pre></div>
 <p>Again, the player gets 100 points each time that shot is made regardless
 of what state it's in since the scoring event is the generic shot hit
 event which does not include details of what state the shot is in.</p>
 <p>Now let's change the variable_player section to this:</p>
-<div class="highlight"><pre><span></span><code>##! mode: base
-variable_player:
-  my_first_shot_my_first_profile_unlit_hit:
-    score: 100
-  my_first_shot_my_first_profile_flashing_hit:
-    score: 1000
-  s_flipper_lower_left_active:
-    score: 1000
-    potato: 1
-  s_flipper_lower_right_active:
-    potato: -2
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: base</span>
+<span class="nt">variable_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_first_shot_my_first_profile_unlit_hit</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="w">  </span><span class="nt">my_first_shot_my_first_profile_flashing_hit</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="w">  </span><span class="nt">s_flipper_lower_left_active</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="w">    </span><span class="nt">potato</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">s_flipper_lower_right_active</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">potato</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-2</span>
 </code></pre></div>
 <p>We changed the name of the event for the first variable_player entry
 from "my_first_shot_hit" to
@@ -34140,35 +34140,35 @@ the <code>config</code> folder into that folder, and then create the <code>mode2
 mode configuration file for that mode.</p>
 <p>Open up the <code>mode2.yaml</code> file and add the following lines. (We'll
 explain them step-by-step next.)</p>
-<div class="highlight"><pre><span></span><code>##! mode: mode2
-#config_version=5
-# mode2 config file
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: mode2</span>
+<span class="c1">#config_version=5</span>
+<span class="c1"># mode2 config file</span>
 
-mode:
-  start_events: mode2_start
-  stop_events: mode2_stop
-  priority: 200
+<span class="nt">mode</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">start_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mode2_start</span>
+<span class="w">  </span><span class="nt">stop_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mode2_stop</span>
+<span class="w">  </span><span class="nt">priority</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">200</span>
 
-widgets:
-  mode2_start_banner:
-    type: text
-    text: MODE 2 STARTED
-    font_size: 50
-    color: lime
-    y: 80%
-    expire: 1s
+<span class="nt">widgets</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">mode2_start_banner</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MODE 2 STARTED</span>
+<span class="w">    </span><span class="nt">font_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">50</span>
+<span class="w">    </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lime</span>
+<span class="w">    </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">80%</span>
+<span class="w">    </span><span class="nt">expire</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
 
-widget_player:
-  mode_mode2_started: mode2_start_banner
+<span class="nt">widget_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">mode_mode2_started</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mode2_start_banner</span>
 
-variable_player:
-  my_first_shot_hit:
-    score: 1
-##! test
-#! start_game
-#! start_mode mode2
-#! advance_time_and_run .1
-#! assert_text_on_top_slide &quot;MODE 2 STARTED&quot;
+<span class="nt">variable_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_first_shot_hit</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="c1">##! test</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! start_mode mode2</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_text_on_top_slide &quot;MODE 2 STARTED&quot;</span>
 </code></pre></div>
 <p>Remember that you also have to go back into your machine-wide config
 file to add the new <code>- mode2</code> entry to your <code>modes:</code> section. While
@@ -34209,10 +34209,10 @@ press <code>Q</code>, you the score increases +1 (in addition to the [+100, +100
 <p>So what's happening here?</p>
 <p>First, notice that in the <code>mode2.yaml</code> file, we configured the following
 variable_player entry:</p>
-<div class="highlight"><pre><span></span><code>##! mode: mode2
-variable_player:
-  my_first_shot_hit:
-    score: 1
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: mode2</span>
+<span class="nt">variable_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_first_shot_hit</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
 </code></pre></div>
 <p>Notice that that variable_player entry is just based on
 "my_first_shot" being hit. It does not contain any of the profile or
@@ -34244,32 +34244,32 @@ mode.</p>
 <li>Add the <code>shots:</code> section from below</li>
 <li>Add the <code>shot_profiles:</code> section from below</li>
 </ol>
-<div class="highlight"><pre><span></span><code>#! switches:
-#!   s_right_inlane:
-#!     number: 1
-##! mode: mode2
-# snippet from mode2.yaml
-variable_player:
-  my_first_shot_mode2_flashing_hit:
-    score: 10000
-  my_first_shot_mode2_lit_hit:
-    score: 100
+<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
+<span class="c1">#!   s_right_inlane:</span>
+<span class="c1">#!     number: 1</span>
+<span class="c1">##! mode: mode2</span>
+<span class="c1"># snippet from mode2.yaml</span>
+<span class="nt">variable_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_first_shot_mode2_flashing_hit</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10000</span>
+<span class="w">  </span><span class="nt">my_first_shot_mode2_lit_hit</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
 
-shots:
-  my_first_shot_mode2:
-    switch: s_right_inlane
-    profile: mode2
+<span class="nt">shots</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_first_shot_mode2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_right_inlane</span>
+<span class="w">    </span><span class="nt">profile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mode2</span>
 
-shot_profiles:
-  mode2:
-    states:
-      - name: flashing
-        show: flash
-        speed: 5
-      - name: lit
-        show: on
-    loop: false
-    block: true
+<span class="nt">shot_profiles</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">mode2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">states</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flashing</span>
+<span class="w">        </span><span class="nt">show</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flash</span>
+<span class="w">        </span><span class="nt">speed</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lit</span>
+<span class="w">        </span><span class="nt">show</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">on</span>
+<span class="w">    </span><span class="nt">loop</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">    </span><span class="nt">block</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
 <p>Save your files and run your game again, pressing the following keys:</p>
 <ul>
@@ -34290,20 +34290,20 @@ shot_profiles:
 what's going on.</p>
 <p>First, notice that we added a <code>shots:</code> section and then added
 "my_first_shot" to it, like this:</p>
-<div class="highlight"><pre><span></span><code>##! mode: mode2
-#! shot_profiles:
-#!   mode2:
-#!     states:
-#!       - name: flashing
-#!         show: flash
-#!         speed: 5
-#!       - name: lit
-#!         show: on
-#!     loop: false
-#!     block: true
-shots:
-  my_first_shot:
-    profile: mode2
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: mode2</span>
+<span class="c1">#! shot_profiles:</span>
+<span class="c1">#!   mode2:</span>
+<span class="c1">#!     states:</span>
+<span class="c1">#!       - name: flashing</span>
+<span class="c1">#!         show: flash</span>
+<span class="c1">#!         speed: 5</span>
+<span class="c1">#!       - name: lit</span>
+<span class="c1">#!         show: on</span>
+<span class="c1">#!     loop: false</span>
+<span class="c1">#!     block: true</span>
+<span class="nt">shots</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_first_shot</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">profile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mode2</span>
 </code></pre></div>
 <p>However, unlike the "my_first_shot" entry in the base mode config, in
 the mode2 config we did NOT redefine the <code>switch:</code> or <code>show_tokens:</code>
@@ -34315,17 +34315,17 @@ mode2 is active, we want to apply a different shot profile to the shot.
 (Remember that settings from mode configuration files are only active
 when that mode is active.)</p>
 <p>Next, take a look at the <code>shot_profiles:</code> section:</p>
-<div class="highlight"><pre><span></span><code>##! mode: mode2
-shot_profiles:
-  mode2:
-    states:
-      - name: flashing
-        show: flash
-        speed: 5
-      - name: lit
-        show: on
-    loop: false
-    block: true
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: mode2</span>
+<span class="nt">shot_profiles</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">mode2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">states</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flashing</span>
+<span class="w">        </span><span class="nt">show</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flash</span>
+<span class="w">        </span><span class="nt">speed</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lit</span>
+<span class="w">        </span><span class="nt">show</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">on</span>
+<span class="w">    </span><span class="nt">loop</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">    </span><span class="nt">block</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
 <p>In this case, we defined a profile called <code>mode2</code> which has two states:
 "flashing" and "lit". (These state names could be whatever you want,

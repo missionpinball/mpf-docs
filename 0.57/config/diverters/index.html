@@ -34138,97 +34138,97 @@ to <a href="../../examples/">config file examples</a> for more examples of real 
 <p>You create and configure your diverters in the <em>diverters:</em> section of
 your machine configuration file. Here's an example from <em>Star Trek: The
 Next Generation</em>:</p>
-<div class="highlight"><pre><span></span><code>#! switches:
-#!   s_ball1:
-#!     number:
-#!   s_ball2:
-#!     number:
-#!   s_ball3:
-#!     number:
-#!   s_ball4:
-#!     number:
-#!   s_ball5:
-#!     number:
-#!   s_under_ueft_hole:
-#!     number:
-#!   s_under_borg_hole:
-#!     number:
-#!   s_under_top_hole:
-#!     number:
-#!   s_under_left_hole:
-#!     number:
-#!   s_enter_left_ramp:
-#!     number:
-#! coils:
-#!   c_eject1:
-#!     number:
-#!   c_eject2:
-#!     number:
-#!   c_eject3:
-#!     number:
-#!   c_eject4:
-#!     number:
-#!   c_eject5:
-#!     number:
-#!   c_top_divertor:
-#!     number:
-#!   c_under_divertor_top:
-#!     number:
-#!   c_under_divertor_bottom:
-#!     number:
-#!   c_top_drop_down:
-#!     number:
-#!   c_top_drop_up:
-#!     number:
-#! ball_devices:
-#!   bd_borg_ship:
-#!     eject_coil: c_eject1
-#!     ball_switches: s_ball1
-#!   bd_catapult:
-#!     eject_coil: c_eject2
-#!     ball_switches: s_ball2
-#!   bd_left_vuk:
-#!     eject_coil: c_eject3
-#!     ball_switches: s_ball3
-#!   bd_left_cannon_vuk:
-#!     eject_coil: c_eject4
-#!     ball_switches: s_ball4
-#!   bd_right_cannon_vuk:
-#!     eject_coil: c_eject5
-#!     ball_switches: s_ball5
-diverters:
-  top_diverter:
-    activation_coil: c_top_divertor      # WMS uses the -tor spelling
-    type: hold
-    activation_time: 3s
-    activation_switches: s_enter_left_ramp
-    enable_events: ball_started
-    disable_events: ball_ended, borg_lock_Lit
-    targets_when_active: playfield
-    targets_when_inactive: bd_borg_ship
-  subway_top_diverter:
-    activation_coil: c_under_divertor_top
-    type: hold
-    activation_time: 3s
-    activation_switches: s_under_top_hole, s_under_left_hole, s_under_borg_hole
-    targets_when_active: bd_left_cannon_vuk
-    targets_when_inactive: bd_left_vuk
-    feeder_devices: bd_catapult
-  subway_bottom_diverter:
-    activation_coil: c_under_divertor_bottom
-    type: hold
-    activation_time: 3s
-    activation_switches: s_under_top_hole, s_under_ueft_hole, s_under_borg_hole
-    targets_when_active: bd_left_cannon_vuk
-    targets_when_inactive: bd_left_vuk
-    feeder_devices: bd_catapult
-  drop_target:
-    activation_coil: c_top_drop_down
-    deactivation_coil: c_top_drop_up
-    type: pulse
-    targets_when_active: bd_left_cannon_vuk, bd_right_cannon_vuk, bd_left_vuk
-    targets_when_inactive: playfield
-    feeder_devices: bd_catapult
+<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
+<span class="c1">#!   s_ball1:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   s_ball2:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   s_ball3:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   s_ball4:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   s_ball5:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   s_under_ueft_hole:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   s_under_borg_hole:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   s_under_top_hole:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   s_under_left_hole:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   s_enter_left_ramp:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#! coils:</span>
+<span class="c1">#!   c_eject1:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   c_eject2:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   c_eject3:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   c_eject4:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   c_eject5:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   c_top_divertor:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   c_under_divertor_top:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   c_under_divertor_bottom:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   c_top_drop_down:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   c_top_drop_up:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#! ball_devices:</span>
+<span class="c1">#!   bd_borg_ship:</span>
+<span class="c1">#!     eject_coil: c_eject1</span>
+<span class="c1">#!     ball_switches: s_ball1</span>
+<span class="c1">#!   bd_catapult:</span>
+<span class="c1">#!     eject_coil: c_eject2</span>
+<span class="c1">#!     ball_switches: s_ball2</span>
+<span class="c1">#!   bd_left_vuk:</span>
+<span class="c1">#!     eject_coil: c_eject3</span>
+<span class="c1">#!     ball_switches: s_ball3</span>
+<span class="c1">#!   bd_left_cannon_vuk:</span>
+<span class="c1">#!     eject_coil: c_eject4</span>
+<span class="c1">#!     ball_switches: s_ball4</span>
+<span class="c1">#!   bd_right_cannon_vuk:</span>
+<span class="c1">#!     eject_coil: c_eject5</span>
+<span class="c1">#!     ball_switches: s_ball5</span>
+<span class="nt">diverters</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">top_diverter</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">activation_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_top_divertor</span><span class="w">      </span><span class="c1"># WMS uses the -tor spelling</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hold</span>
+<span class="w">    </span><span class="nt">activation_time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3s</span>
+<span class="w">    </span><span class="nt">activation_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_enter_left_ramp</span>
+<span class="w">    </span><span class="nt">enable_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ball_started</span>
+<span class="w">    </span><span class="nt">disable_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ball_ended, borg_lock_Lit</span>
+<span class="w">    </span><span class="nt">targets_when_active</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">playfield</span>
+<span class="w">    </span><span class="nt">targets_when_inactive</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bd_borg_ship</span>
+<span class="w">  </span><span class="nt">subway_top_diverter</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">activation_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_under_divertor_top</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hold</span>
+<span class="w">    </span><span class="nt">activation_time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3s</span>
+<span class="w">    </span><span class="nt">activation_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_under_top_hole, s_under_left_hole, s_under_borg_hole</span>
+<span class="w">    </span><span class="nt">targets_when_active</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bd_left_cannon_vuk</span>
+<span class="w">    </span><span class="nt">targets_when_inactive</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bd_left_vuk</span>
+<span class="w">    </span><span class="nt">feeder_devices</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bd_catapult</span>
+<span class="w">  </span><span class="nt">subway_bottom_diverter</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">activation_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_under_divertor_bottom</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hold</span>
+<span class="w">    </span><span class="nt">activation_time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3s</span>
+<span class="w">    </span><span class="nt">activation_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_under_top_hole, s_under_ueft_hole, s_under_borg_hole</span>
+<span class="w">    </span><span class="nt">targets_when_active</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bd_left_cannon_vuk</span>
+<span class="w">    </span><span class="nt">targets_when_inactive</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bd_left_vuk</span>
+<span class="w">    </span><span class="nt">feeder_devices</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bd_catapult</span>
+<span class="w">  </span><span class="nt">drop_target</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">activation_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_top_drop_down</span>
+<span class="w">    </span><span class="nt">deactivation_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_top_drop_up</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pulse</span>
+<span class="w">    </span><span class="nt">targets_when_active</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bd_left_cannon_vuk, bd_right_cannon_vuk, bd_left_vuk</span>
+<span class="w">    </span><span class="nt">targets_when_inactive</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">playfield</span>
+<span class="w">    </span><span class="nt">feeder_devices</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bd_catapult</span>
 </code></pre></div>
 <h2 id="optional-settings">Optional settings</h2>
 <p>The following sections are optional in the <code>diverters:</code> section of your

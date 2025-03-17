@@ -33660,17 +33660,17 @@ where you define all switches which should start as active when running
 your machine with the virtual or smart_virtual platform (e.g. when
 running <code>mpf -X</code>).</p>
 <p>This is an example:</p>
-<div class="highlight"><pre><span></span><code>switches:
-  s_ball_switch1:
-    number:
-  s_ball_switch2:
-    number:
-  s_ball_switch3:
-    number:
-# Start with two (virtual) balls
-virtual_platform_start_active_switches:
-  - s_ball_switch1
-  - s_ball_switch2
+<div class="highlight"><pre><span></span><code><span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_ball_switch1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_ball_switch2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_ball_switch3</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="c1"># Start with two (virtual) balls</span>
+<span class="nt">virtual_platform_start_active_switches</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_ball_switch1</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_ball_switch2</span>
 </code></pre></div>
 <h2 id="related-how-to-guides">Related How To guides</h2>
 <ul>

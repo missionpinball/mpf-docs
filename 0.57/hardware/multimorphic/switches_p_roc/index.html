@@ -33779,24 +33779,24 @@ Direct switches are numbered 0-31. (See the P-ROC documentation for the
 connector mappings.)</p>
 <p>Direct switches are configured in your machine config file by starting
 the number with "SD", like this:</p>
-<div class="highlight"><pre><span></span><code>switches:
-  my_switch:
-    number: SD0
-  my_other_switch:
-    number: SD1
-  another_switch:
-    number: SD12
+<div class="highlight"><pre><span></span><code><span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_switch</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SD0</span>
+<span class="w">  </span><span class="nt">my_other_switch</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SD1</span>
+<span class="w">  </span><span class="nt">another_switch</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SD12</span>
 </code></pre></div>
 <h3 id="matrix-switches">Matrix Switches</h3>
 <p>If you're using a switch matrix, then the switch numbers are entered
 using the column number, then a slash, then the row number.</p>
-<div class="highlight"><pre><span></span><code>switches:
-  my_switch:
-    number: 0/0    # column 0, row 0
-  my_other_switch:
-    number: 0/1    # column 0, row 1
-  another_switch:
-    number: 3/4    # column 3, row 4
+<div class="highlight"><pre><span></span><code><span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_switch</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0/0</span><span class="w">    </span><span class="c1"># column 0, row 0</span>
+<span class="w">  </span><span class="nt">my_other_switch</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0/1</span><span class="w">    </span><span class="c1"># column 0, row 1</span>
+<span class="w">  </span><span class="nt">another_switch</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3/4</span><span class="w">    </span><span class="c1"># column 3, row 4</span>
 </code></pre></div>
 <h2 id="mixing-and-matching-direct-and-matrix-switches">Mixing and matching direct and matrix switches</h2>
 <p>You can mix-and-match direct and matrix switches. However you should be
@@ -33852,17 +33852,17 @@ basis with a switch's <code>debounce:</code> setting.</p>
 <p>Valid options are <code>normal</code>, <code>quick</code>, and <code>auto</code>.</p>
 <p>To disable debouncing for a switch, add <code>debounce: quick</code> to the switch
 config, like this:</p>
-<div class="highlight"><pre><span></span><code>switches:
-  my_switch:
-    number: 0/0
-    debounce: quick
+<div class="highlight"><pre><span></span><code><span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_switch</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0/0</span>
+<span class="w">    </span><span class="nt">debounce</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">quick</span>
 </code></pre></div>
 <p>To force debouncing to always be used (which is also the default on the
 P-ROC, so not really needed), configure it like this:</p>
-<div class="highlight"><pre><span></span><code>switches:
-  my_switch:
-    number: 0/0
-    debounce: normal
+<div class="highlight"><pre><span></span><code><span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_switch</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0/0</span>
+<span class="w">    </span><span class="nt">debounce</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">normal</span>
 </code></pre></div>
 <h2 id="what-if-it-did-not-work">What if it did not work?</h2>
 <p>Have a look at our

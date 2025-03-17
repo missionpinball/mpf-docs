@@ -33965,135 +33965,135 @@ it all together.</p>
 in terms of what we need to make this recipe work, but if you have a
 real Addams Family then you'll probably have a lot more than this in
 your machine config file.)</p>
-<div class="highlight"><pre><span></span><code>#config_version=5
-modes:
-  - mansion_awards
-  - chair_lit
-  - chair_lit_3s
-switches:
-  start:
-    number: S13
-    tags: start
-  drain:
-    number:
-  trough1:
-    number: S15
-  trough2:
-    number: S16
-  trough3:
-    number: S17
-  plunger_lane:
-    number: S27
-  swamp_kickout:
-    number: S74
-  electric_chair:
-    number: S43
-  left_ramp:
-    number: S66
-  center_ramp:
-    number: S65
-  right_inlane:
-    number: S25
-  upper_left_jet:
-    number: S31
-    tags: jet
-  upper_right_jet:
-    number: S32
-    tags: jet
-  center_left_jet:
-    number: S33
-    tags: jet
-  center_right_jet:
-    number: S34
-    tags: jet
-  lower_jet:
-    number: S35
-    tags: jet
-virtual_platform_start_active_switches: trough1, trough2, trough3
-coils:
-  drain:
-    number: &quot;05&quot;
-  trough:
-    number: &quot;04&quot;
-  swamp_kickout:
-    number: &quot;08&quot;
-  electric_chair:
-    number: &quot;01&quot;
-lights:
-  9_mil:
-    number: L66
-    subtype: matrix
-  6_mil:
-    number: L54
-    subtype: matrix
-  3_mil:
-    number: L68
-    subtype: matrix
-  thing:
-    number: L51
-    subtype: matrix
-  quick_multiball:
-    number: L55
-    subtype: matrix
-  graveyard_at_max:
-    number: L67
-    subtype: matrix
-  raise_the_dead:
-    number: L52
-    subtype: matrix
-  festers_tunnel_hunt:
-    number: L56
-    subtype: matrix
-  lite_extra_ball:
-    number: L53
-    subtype: matrix
-  seance:
-    number: L57
-    subtype: matrix
-  hit_cousin_it:
-    number: L58
-    subtype: matrix
-  mamushka:
-    number: L45
-    subtype: matrix
-  mansion_question:
-    number: L65
-    subtype: matrix
-  electric_chair_yellow:
-    number: L64
-    subtype: matrix
-ball_devices:
-  drain:
-    ball_switches: drain
-    eject_coil: drain
-    eject_targets: trough
-    tags: drain
-  trough:
-    ball_switches: trough1, trough2, trough3
-    eject_coil: trough
-    eject_targets: plunger_lane
-    tags: trough, home
-  plunger_lane:
-    ball_switches: plunger_lane
-    mechanical_eject: true
-    eject_timeouts: 3s
-    tags: home
-  electric_chair:
-    ball_switches: electric_chair
-    eject_coil: electric_chair
-  swamp_kickout:
-    ball_switches: swamp_kickout
-    eject_coil: swamp_kickout
-playfields:
-  playfield:
-    default_source_device: plunger_lane
-    tags: default
-##! mode: mansion_awards
-# mode will be defined below
-##! mode: chair_lit
-# mode will be defined below
-##! mode: chair_lit_3s
-# mode will be defined below
+<div class="highlight"><pre><span></span><code><span class="c1">#config_version=5</span>
+<span class="nt">modes</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mansion_awards</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">chair_lit</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">chair_lit_3s</span>
+<span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">start</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">S13</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start</span>
+<span class="w">  </span><span class="nt">drain</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">trough1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">S15</span>
+<span class="w">  </span><span class="nt">trough2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">S16</span>
+<span class="w">  </span><span class="nt">trough3</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">S17</span>
+<span class="w">  </span><span class="nt">plunger_lane</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">S27</span>
+<span class="w">  </span><span class="nt">swamp_kickout</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">S74</span>
+<span class="w">  </span><span class="nt">electric_chair</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">S43</span>
+<span class="w">  </span><span class="nt">left_ramp</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">S66</span>
+<span class="w">  </span><span class="nt">center_ramp</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">S65</span>
+<span class="w">  </span><span class="nt">right_inlane</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">S25</span>
+<span class="w">  </span><span class="nt">upper_left_jet</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">S31</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">jet</span>
+<span class="w">  </span><span class="nt">upper_right_jet</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">S32</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">jet</span>
+<span class="w">  </span><span class="nt">center_left_jet</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">S33</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">jet</span>
+<span class="w">  </span><span class="nt">center_right_jet</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">S34</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">jet</span>
+<span class="w">  </span><span class="nt">lower_jet</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">S35</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">jet</span>
+<span class="nt">virtual_platform_start_active_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">trough1, trough2, trough3</span>
+<span class="nt">coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">drain</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;05&quot;</span>
+<span class="w">  </span><span class="nt">trough</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;04&quot;</span>
+<span class="w">  </span><span class="nt">swamp_kickout</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;08&quot;</span>
+<span class="w">  </span><span class="nt">electric_chair</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;01&quot;</span>
+<span class="nt">lights</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">9_mil</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">L66</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">matrix</span>
+<span class="w">  </span><span class="nt">6_mil</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">L54</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">matrix</span>
+<span class="w">  </span><span class="nt">3_mil</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">L68</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">matrix</span>
+<span class="w">  </span><span class="nt">thing</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">L51</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">matrix</span>
+<span class="w">  </span><span class="nt">quick_multiball</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">L55</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">matrix</span>
+<span class="w">  </span><span class="nt">graveyard_at_max</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">L67</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">matrix</span>
+<span class="w">  </span><span class="nt">raise_the_dead</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">L52</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">matrix</span>
+<span class="w">  </span><span class="nt">festers_tunnel_hunt</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">L56</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">matrix</span>
+<span class="w">  </span><span class="nt">lite_extra_ball</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">L53</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">matrix</span>
+<span class="w">  </span><span class="nt">seance</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">L57</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">matrix</span>
+<span class="w">  </span><span class="nt">hit_cousin_it</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">L58</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">matrix</span>
+<span class="w">  </span><span class="nt">mamushka</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">L45</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">matrix</span>
+<span class="w">  </span><span class="nt">mansion_question</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">L65</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">matrix</span>
+<span class="w">  </span><span class="nt">electric_chair_yellow</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">L64</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">matrix</span>
+<span class="nt">ball_devices</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">drain</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">ball_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">drain</span>
+<span class="w">    </span><span class="nt">eject_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">drain</span>
+<span class="w">    </span><span class="nt">eject_targets</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">trough</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">drain</span>
+<span class="w">  </span><span class="nt">trough</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">ball_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">trough1, trough2, trough3</span>
+<span class="w">    </span><span class="nt">eject_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">trough</span>
+<span class="w">    </span><span class="nt">eject_targets</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">plunger_lane</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">trough, home</span>
+<span class="w">  </span><span class="nt">plunger_lane</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">ball_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">plunger_lane</span>
+<span class="w">    </span><span class="nt">mechanical_eject</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">eject_timeouts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3s</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">home</span>
+<span class="w">  </span><span class="nt">electric_chair</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">ball_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">electric_chair</span>
+<span class="w">    </span><span class="nt">eject_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">electric_chair</span>
+<span class="w">  </span><span class="nt">swamp_kickout</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">ball_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">swamp_kickout</span>
+<span class="w">    </span><span class="nt">eject_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">swamp_kickout</span>
+<span class="nt">playfields</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">playfield</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">default_source_device</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">plunger_lane</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span>
+<span class="c1">##! mode: mansion_awards</span>
+<span class="c1"># mode will be defined below</span>
+<span class="c1">##! mode: chair_lit</span>
+<span class="c1"># mode will be defined below</span>
+<span class="c1">##! mode: chair_lit_3s</span>
+<span class="c1"># mode will be defined below</span>
 </code></pre></div>
 <h2 id="step-2-add-the-achievements">Step 2. Add the achievements</h2>
 <p>Each mansion award will be an achievement. We decided to create a
@@ -34107,17 +34107,17 @@ event which means this mode will automatically stop when the ball ends.</p>
 mansion achievements.</p>
 <p>You'll notice that most of them are almost identical. For example,
 here's the entry for Thing Multiball:</p>
-<div class="highlight"><pre><span></span><code>##! mode: mansion_awards
-achievements:
-  thing_multiball:
-    show_tokens:
-      lights: thing
-    show_when_selected: flash
-    show_when_completed: on
-    events_when_started: award_thing_multiball    # starts thing_multiball mode
-    enable_events: initialize_mansion, reset_mansion
-    complete_events: award_thing_multiball
-    reset_events: reset_mansion
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: mansion_awards</span>
+<span class="nt">achievements</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">thing_multiball</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">lights</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">thing</span>
+<span class="w">    </span><span class="nt">show_when_selected</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flash</span>
+<span class="w">    </span><span class="nt">show_when_completed</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">on</span>
+<span class="w">    </span><span class="nt">events_when_started</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">award_thing_multiball</span><span class="w">    </span><span class="c1"># starts thing_multiball mode</span>
+<span class="w">    </span><span class="nt">enable_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">initialize_mansion, reset_mansion</span>
+<span class="w">    </span><span class="nt">complete_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">award_thing_multiball</span>
+<span class="w">    </span><span class="nt">reset_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">reset_mansion</span>
 </code></pre></div>
 <p>Stepping through how we're using each setting:</p>
 <p><code>show_tokens:</code></p>
@@ -34161,59 +34161,59 @@ achievements:
 <p>Next we need to create an achievement group called "mansion_awards"
 which will group the 12 mansion achievements together. That will look
 like this:</p>
-<div class="highlight"><pre><span></span><code>##! mode: mansion_awards
-#! achievements:
-#!   9_mil:
-#!     show_tokens:
-#!   6_mil:
-#!     show_tokens:
-#!   3_mil:
-#!     show_tokens:
-#!   thing_multiball:
-#!     show_tokens:
-#!   quick_multiball:
-#!     show_tokens:
-#!   graveyard_at_max:
-#!     show_tokens:
-#!   raise_the_dead:
-#!     show_tokens:
-#!   festers_tunnel_hunt:
-#!     show_tokens:
-#!   lite_extra_ball:
-#!     show_tokens:
-#!   seance:
-#!     show_tokens:
-#!   hit_cousin_it:
-#!     show_tokens:
-#!   mamushka:
-#!     show_tokens:
-achievement_groups:
-  mansion_awards:
-    achievements:
-      - 9_mil
-      - 6_mil
-      - 3_mil
-      - thing_multiball
-      - quick_multiball
-      - graveyard_at_max
-      - raise_the_dead
-      - festers_tunnel_hunt
-      - lite_extra_ball
-      - seance
-      - hit_cousin_it
-      - mamushka
-    show_tokens:
-      lights: electric_chair_yellow
-    auto_select: true
-    events_when_all_completed: select_tour_mansion
-    enable_while_no_achievement_started: false
-    show_when_enabled: on
-    select_random_achievement_events: sw_jet
-    allow_selection_change_while_disabled: true
-    disable_while_achievement_started: false
-    start_selected_events: balldevice_electric_chair_ball_enter, balldevice_swamp_kickout_ball_enter, award_mansion_from_bear
-    enable_events: light_chair
-    disable_events: unlight_chair
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: mansion_awards</span>
+<span class="c1">#! achievements:</span>
+<span class="c1">#!   9_mil:</span>
+<span class="c1">#!     show_tokens:</span>
+<span class="c1">#!   6_mil:</span>
+<span class="c1">#!     show_tokens:</span>
+<span class="c1">#!   3_mil:</span>
+<span class="c1">#!     show_tokens:</span>
+<span class="c1">#!   thing_multiball:</span>
+<span class="c1">#!     show_tokens:</span>
+<span class="c1">#!   quick_multiball:</span>
+<span class="c1">#!     show_tokens:</span>
+<span class="c1">#!   graveyard_at_max:</span>
+<span class="c1">#!     show_tokens:</span>
+<span class="c1">#!   raise_the_dead:</span>
+<span class="c1">#!     show_tokens:</span>
+<span class="c1">#!   festers_tunnel_hunt:</span>
+<span class="c1">#!     show_tokens:</span>
+<span class="c1">#!   lite_extra_ball:</span>
+<span class="c1">#!     show_tokens:</span>
+<span class="c1">#!   seance:</span>
+<span class="c1">#!     show_tokens:</span>
+<span class="c1">#!   hit_cousin_it:</span>
+<span class="c1">#!     show_tokens:</span>
+<span class="c1">#!   mamushka:</span>
+<span class="c1">#!     show_tokens:</span>
+<span class="nt">achievement_groups</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">mansion_awards</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">achievements</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">9_mil</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">6_mil</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3_mil</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">thing_multiball</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">quick_multiball</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">graveyard_at_max</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">raise_the_dead</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">festers_tunnel_hunt</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lite_extra_ball</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">seance</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hit_cousin_it</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mamushka</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">lights</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">electric_chair_yellow</span>
+<span class="w">    </span><span class="nt">auto_select</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">events_when_all_completed</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">select_tour_mansion</span>
+<span class="w">    </span><span class="nt">enable_while_no_achievement_started</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">    </span><span class="nt">show_when_enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">on</span>
+<span class="w">    </span><span class="nt">select_random_achievement_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sw_jet</span>
+<span class="w">    </span><span class="nt">allow_selection_change_while_disabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">disable_while_achievement_started</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">    </span><span class="nt">start_selected_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">balldevice_electric_chair_ball_enter, balldevice_swamp_kickout_ball_enter, award_mansion_from_bear</span>
+<span class="w">    </span><span class="nt">enable_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">light_chair</span>
+<span class="w">    </span><span class="nt">disable_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unlight_chair</span>
 </code></pre></div>
 <p>Let's look at each of these settings:</p>
 <p><code>achievements:</code></p>
@@ -34305,20 +34305,20 @@ to use modes. (We really like
 </ul>
 <h3 id="the-chair_lit_3s-mode">The chair_lit_3s mode</h3>
 <p>Let's look at the config for the "chair_lit_3s" mode:</p>
-<div class="highlight"><pre><span></span><code>##! mode: chair_lit_3s
-#config_version=5
-mode:
-  priority: 101
-  start_events: right_inlane_active
-  stop_events: unlight_chair balldevice_electric_chair_ball_enter, balldevice_swamp_kickout_ball_enter, cancel_chair_timer
-event_player:
-  mode_chair_lit_3s_stopping: unlight_chair
-  mode_chair_lit_3s_started: light_chair
-  timer_unlight_chair_complete: unlight_chair
-timers:
-  unlight_chair:
-    end_value: 3
-    start_running: true
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: chair_lit_3s</span>
+<span class="c1">#config_version=5</span>
+<span class="nt">mode</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">priority</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">101</span>
+<span class="w">  </span><span class="nt">start_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">right_inlane_active</span>
+<span class="w">  </span><span class="nt">stop_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unlight_chair balldevice_electric_chair_ball_enter, balldevice_swamp_kickout_ball_enter, cancel_chair_timer</span>
+<span class="nt">event_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">mode_chair_lit_3s_stopping</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unlight_chair</span>
+<span class="w">  </span><span class="nt">mode_chair_lit_3s_started</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">light_chair</span>
+<span class="w">  </span><span class="nt">timer_unlight_chair_complete</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unlight_chair</span>
+<span class="nt">timers</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">unlight_chair</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">end_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="w">    </span><span class="nt">start_running</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
 <p>Notice that this mode started when the <em>right_inlane_active</em> switch is
 hit, which means it starts when the right inlane is hit. Pretty simple.</p>
@@ -34362,22 +34362,22 @@ seconds, this mode will stay active until the chair or swamp is hit.
 (Well, or until the ball ends, as by default, all modes end when the
 ball ends automatically.)</p>
 <p>Here's the config for this mode:</p>
-<div class="highlight"><pre><span></span><code>##! mode: chair_lit
-#config_version=5
-mode:
-  priority: 102
-  start_events: center_ramp_active, mode_mansion_awards_started
-  stop_events: balldevice_electric_chair_ball_enter, balldevice_swamp_kickout_ball_enter
-event_player:
-  mode_chair_lit_stopping: unlight_chair
-  mode_chair_lit_started: light_chair, cancel_chair_timer
-  mode_chair_lit_3s_started: cancel_chair_timer
-counters:
-  initialize_mansion:
-    count_events: mode_chair_lit_started
-    events_when_complete: initialize_mansion
-    count_complete_value: 1
-    persist_state: true
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: chair_lit</span>
+<span class="c1">#config_version=5</span>
+<span class="nt">mode</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">priority</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">102</span>
+<span class="w">  </span><span class="nt">start_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">center_ramp_active, mode_mansion_awards_started</span>
+<span class="w">  </span><span class="nt">stop_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">balldevice_electric_chair_ball_enter, balldevice_swamp_kickout_ball_enter</span>
+<span class="nt">event_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">mode_chair_lit_stopping</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unlight_chair</span>
+<span class="w">  </span><span class="nt">mode_chair_lit_started</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">light_chair, cancel_chair_timer</span>
+<span class="w">  </span><span class="nt">mode_chair_lit_3s_started</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cancel_chair_timer</span>
+<span class="nt">counters</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">initialize_mansion</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">count_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mode_chair_lit_started</span>
+<span class="w">    </span><span class="nt">events_when_complete</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">initialize_mansion</span>
+<span class="w">    </span><span class="nt">count_complete_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">persist_state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
 <p>The <code>start_events:</code> are pretty straightforward. We start the mode when
 the center ramp is hit, and also on <em>ball_starting</em> since the Addams
@@ -34412,24 +34412,24 @@ then every random choice after that has to be from all 12 (well, of the
 ones that have not yet been awarded out of all 12.</p>
 <p>We'll tackle this in two parts.</p>
 <p>First, take a look at the Hit Cousin It and Mamuska achievements:</p>
-<div class="highlight"><pre><span></span><code>##! mode: mansion_awards
-achievements:
-  hit_cousin_it:
-    show_tokens:
-      lights: hit_cousin_it
-    show_when_selected: flash
-    show_when_completed: on
-    events_when_started: award_hit_cousin_it  # starts hit_cousin_it mode
-    complete_events: award_hit_cousin_it
-    reset_events: reset_mansion
-  mamushka:
-    show_tokens:
-      lights: mamushka
-    show_when_selected: flash
-    show_when_completed: on
-    events_when_started: award_mamushka   # starts mamushka mode
-    complete_events: award_mamushka
-    reset_events: reset_mansion
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: mansion_awards</span>
+<span class="nt">achievements</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">hit_cousin_it</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">lights</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hit_cousin_it</span>
+<span class="w">    </span><span class="nt">show_when_selected</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flash</span>
+<span class="w">    </span><span class="nt">show_when_completed</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">on</span>
+<span class="w">    </span><span class="nt">events_when_started</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">award_hit_cousin_it</span><span class="w">  </span><span class="c1"># starts hit_cousin_it mode</span>
+<span class="w">    </span><span class="nt">complete_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">award_hit_cousin_it</span>
+<span class="w">    </span><span class="nt">reset_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">reset_mansion</span>
+<span class="w">  </span><span class="nt">mamushka</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">lights</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mamushka</span>
+<span class="w">    </span><span class="nt">show_when_selected</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flash</span>
+<span class="w">    </span><span class="nt">show_when_completed</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">on</span>
+<span class="w">    </span><span class="nt">events_when_started</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">award_mamushka</span><span class="w">   </span><span class="c1"># starts mamushka mode</span>
+<span class="w">    </span><span class="nt">complete_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">award_mamushka</span>
+<span class="w">    </span><span class="nt">reset_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">reset_mansion</span>
 </code></pre></div>
 <p>Notice that they're slightly different than the other 10 mansion awards
 in that they do NOT have enable events.</p>
@@ -34450,14 +34450,14 @@ select show, etc.). This means that the initial selection will always be
 one of those two.</p>
 <p>However, once the initial selection is made, we need a way to enable the
 remaining 10 mansion awards. For this we'll use a counter logic block:</p>
-<div class="highlight"><pre><span></span><code>##! mode: chair_lit
-# This is in the chair_lit mode config, NOT machine-wide config
-counters:
-  initialize_mansion:
-    count_events: mode_chair_lit_started
-    events_when_complete: initialize_mansion
-    count_complete_value: 1
-    persist_state: true
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: chair_lit</span>
+<span class="c1"># This is in the chair_lit mode config, NOT machine-wide config</span>
+<span class="nt">counters</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">initialize_mansion</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">count_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mode_chair_lit_started</span>
+<span class="w">    </span><span class="nt">events_when_complete</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">initialize_mansion</span>
+<span class="w">    </span><span class="nt">count_complete_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">persist_state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
 <p>This is a simple counter that "counts" the <em>mode_chair_lit_started</em>
 event (which is posted by this mode once it's fully started and done
@@ -34512,26 +34512,26 @@ submit your change. It's easy! <span class="twemoji"><svg xmlns="http://www.w3.o
 </ul>
 <p>This is pretty simple. Just add the events posted when one achievement
 is started to the complete events for the other. Here are the examples:</p>
-<div class="highlight"><pre><span></span><code>##! mode: mansion_awards
-achievements:
-  6_mil:
-    show_tokens:
-      lights: 6_mil
-    show_when_selected: flash
-    show_when_completed: on
-    events_when_started: award_6_mil    # instant points award &amp; plays shows, also spots 3 mil
-    enable_events: initialize_mansion, reset_mansion
-    complete_events: award_6_mil, award_3_mil
-    reset_events: reset_mansion
-  3_mil:
-    show_tokens:
-      lights: 3_mil
-    show_when_selected: flash
-    show_when_completed: on
-    events_when_started: award_3_mil    # instant points award &amp; plays shows, also spots 6 mil
-    enable_events: initialize_mansion, reset_mansion
-    complete_events: award_3_mil, award_6_mil
-    reset_events: reset_mansion
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: mansion_awards</span>
+<span class="nt">achievements</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">6_mil</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">lights</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">6_mil</span>
+<span class="w">    </span><span class="nt">show_when_selected</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flash</span>
+<span class="w">    </span><span class="nt">show_when_completed</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">on</span>
+<span class="w">    </span><span class="nt">events_when_started</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">award_6_mil</span><span class="w">    </span><span class="c1"># instant points award &amp; plays shows, also spots 3 mil</span>
+<span class="w">    </span><span class="nt">enable_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">initialize_mansion, reset_mansion</span>
+<span class="w">    </span><span class="nt">complete_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">award_6_mil, award_3_mil</span>
+<span class="w">    </span><span class="nt">reset_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">reset_mansion</span>
+<span class="w">  </span><span class="nt">3_mil</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">lights</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3_mil</span>
+<span class="w">    </span><span class="nt">show_when_selected</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flash</span>
+<span class="w">    </span><span class="nt">show_when_completed</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">on</span>
+<span class="w">    </span><span class="nt">events_when_started</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">award_3_mil</span><span class="w">    </span><span class="c1"># instant points award &amp; plays shows, also spots 6 mil</span>
+<span class="w">    </span><span class="nt">enable_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">initialize_mansion, reset_mansion</span>
+<span class="w">    </span><span class="nt">complete_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">award_3_mil, award_6_mil</span>
+<span class="w">    </span><span class="nt">reset_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">reset_mansion</span>
 </code></pre></div>
 <p>Notice that the 6_mil's <code>complete_events:</code> includes <em>award_3_mil</em> and
 vice-versa.</p>

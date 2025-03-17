@@ -33709,47 +33709,47 @@ icons & this code generated via https://realfavicongenerator.net
 display, like this:</p>
 <p><img alt="image" src="../../images/dot_look_full_screen.png" /></p>
 <p>The final sections of the machine config to make this happen are here:</p>
-<div class="highlight"><pre><span></span><code>displays:
-  window:
-    width: 800
-    height: 600
-  dmd:
-    width: 120
-    height: 90
-    default: true
-slides:
-  window_slide:
-    - type: display
-      effects:
-        - type: color_dmd
-          dot_size: .5
-      width: 800
-      height: 600
-  dmd_slide:
-    - type: text
-      text: DOTS!
-    - type: rectangle
-      width: 120
-      height: 30
-      color: orange
-      y: 0
-      anchor_y: bottom
-    - type: rectangle
-      width: 120
-      height: 30
-      color: red
-      y: top
-      anchor_y: top
-slide_player:
-  init_done:
-    window_slide:
-      target: window
-    dmd_slide:
-      target: dmd
-##! test
-#! advance_time_and_run .1
-#! assert_slide_on_top window_slide window
-#! assert_slide_on_top dmd_slide dmd
+<div class="highlight"><pre><span></span><code><span class="nt">displays</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">window</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">800</span>
+<span class="w">    </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">600</span>
+<span class="w">  </span><span class="nt">dmd</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">120</span>
+<span class="w">    </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">90</span>
+<span class="w">    </span><span class="nt">default</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="nt">slides</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">window_slide</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">display</span>
+<span class="w">      </span><span class="nt">effects</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">color_dmd</span>
+<span class="w">          </span><span class="nt">dot_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.5</span>
+<span class="w">      </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">800</span>
+<span class="w">      </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">600</span>
+<span class="w">  </span><span class="nt">dmd_slide</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DOTS!</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rectangle</span>
+<span class="w">      </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">120</span>
+<span class="w">      </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+<span class="w">      </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">orange</span>
+<span class="w">      </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">      </span><span class="nt">anchor_y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bottom</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rectangle</span>
+<span class="w">      </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">120</span>
+<span class="w">      </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+<span class="w">      </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
+<span class="w">      </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">top</span>
+<span class="w">      </span><span class="nt">anchor_y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">top</span>
+<span class="nt">slide_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">init_done</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">window_slide</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">window</span>
+<span class="w">    </span><span class="nt">dmd_slide</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dmd</span>
+<span class="c1">##! test</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_slide_on_top window_slide window</span>
+<span class="c1">#! assert_slide_on_top dmd_slide dmd</span>
 </code></pre></div>
 <p>Let's step through this step-by-step.</p>
 <h2 id="1-create-your-displays">1. Create your displays</h2>
@@ -33761,16 +33761,16 @@ displays. The first is the "window", which is the display that
 represents your on-screen window. This should be set to the size of the
 screen window at the native resolution of the monitor or LCD where it's
 being shown.</p>
-<div class="highlight"><pre><span></span><code>displays:
-  window:
-    width: 800
-    height: 600
-  dmd:
-    width: 120
-    height: 90
-    default: true
-##! test
-#! advance_time_and_run .1
+<div class="highlight"><pre><span></span><code><span class="nt">displays</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">window</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">800</span>
+<span class="w">    </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">600</span>
+<span class="w">  </span><span class="nt">dmd</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">120</span>
+<span class="w">    </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">90</span>
+<span class="w">    </span><span class="nt">default</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="c1">##! test</span>
+<span class="c1">#! advance_time_and_run .1</span>
 </code></pre></div>
 <p>In the example above, this is 800x600, but on your actual machine, it
 will probably be something like 1024x768, 1280x1024, 1600x1200, etc.</p>
@@ -33800,16 +33800,16 @@ slide_player, etc.) to show up in the DMD display.</p>
 slide that will be shown in the window. In this case, the slide will
 only have a single widget, and that widget will be the Color DMD widget
 which will be used render the virtual DMD into the window.</p>
-<div class="highlight"><pre><span></span><code>slides:
-  window_slide:
-    - type: display
-      effects:
-        - type: color_dmd
-          dot_size: .5
-      width: 800
-      height: 600
-##! test
-#! advance_time_and_run .001
+<div class="highlight"><pre><span></span><code><span class="nt">slides</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">window_slide</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">display</span>
+<span class="w">      </span><span class="nt">effects</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">color_dmd</span>
+<span class="w">          </span><span class="nt">dot_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.5</span>
+<span class="w">      </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">800</span>
+<span class="w">      </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">600</span>
+<span class="c1">##! test</span>
+<span class="c1">#! advance_time_and_run .001</span>
 </code></pre></div>
 <p>We decided to name this slide "window_slide", though you can name it
 whatever you want.</p>
@@ -33826,24 +33826,24 @@ we're setting up here as an example "first slide". In your actual
 game, this slide will be ever changing and will reflect what's
 happening in your machine.</p>
 <p>We're calling our first slide "dmd_slide":</p>
-<div class="highlight"><pre><span></span><code>slides:
-  dmd_slide:
-    - type: text
-      text: DOTS!
-    - type: rectangle
-      width: 120
-      height: 30
-      color: orange
-      y: 0
-      anchor_y: bottom
-    - type: rectangle
-      width: 120
-      height: 30
-      color: red
-      y: top
-      anchor_y: top
-##! test
-#! advance_time_and_run .1
+<div class="highlight"><pre><span></span><code><span class="nt">slides</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">dmd_slide</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DOTS!</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rectangle</span>
+<span class="w">      </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">120</span>
+<span class="w">      </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+<span class="w">      </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">orange</span>
+<span class="w">      </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">      </span><span class="nt">anchor_y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bottom</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rectangle</span>
+<span class="w">      </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">120</span>
+<span class="w">      </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+<span class="w">      </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
+<span class="w">      </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">top</span>
+<span class="w">      </span><span class="nt">anchor_y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">top</span>
+<span class="c1">##! test</span>
+<span class="c1">#! advance_time_and_run .1</span>
 </code></pre></div>
 <p>There's nothing special about this slide. We just added a text widget
 and two colored rectangles.</p>
@@ -33853,47 +33853,47 @@ slides we just created to be shown. In this example, we're using the
 <a href="../../../events/init_done/">init_done event</a>
 since that's the event that's posted by the media controller once
 it's been initialized and ready to go.</p>
-<div class="highlight"><pre><span></span><code>#! displays:
-#!   window:
-#!     width: 800
-#!     height: 600
-#!   dmd:
-#!     width: 120
-#!     height: 90
-#!     default: true
-#! slides:
-#!   window_slide:
-#!     - type: display
-#!       effects:
-#!         - type: color_dmd
-#!           dot_size: .5
-#!       width: 800
-#!       height: 600
-#!   dmd_slide:
-#!     - type: text
-#!       text: DOTS!
-#!     - type: rectangle
-#!       width: 120
-#!       height: 30
-#!       color: orange
-#!       y: 0
-#!       anchor_y: bottom
-#!     - type: rectangle
-#!       width: 120
-#!       height: 30
-#!       color: red
-#!       y: top
-#!       anchor_y: top
-slide_player:
-  init_done:
-    window_slide:
-      target: window
-    dmd_slide:
-      target: dmd
-##! test
-#! advance_time_and_run .1
-#! assert_slide_on_top window_slide window
-#! assert_slide_on_top dmd_slide dmd
+<div class="highlight"><pre><span></span><code><span class="c1">#! displays:</span>
+<span class="c1">#!   window:</span>
+<span class="c1">#!     width: 800</span>
+<span class="c1">#!     height: 600</span>
+<span class="c1">#!   dmd:</span>
+<span class="c1">#!     width: 120</span>
+<span class="c1">#!     height: 90</span>
+<span class="c1">#!     default: true</span>
+<span class="c1">#! slides:</span>
+<span class="c1">#!   window_slide:</span>
+<span class="c1">#!     - type: display</span>
+<span class="c1">#!       effects:</span>
+<span class="c1">#!         - type: color_dmd</span>
+<span class="c1">#!           dot_size: .5</span>
+<span class="c1">#!       width: 800</span>
+<span class="c1">#!       height: 600</span>
+<span class="c1">#!   dmd_slide:</span>
+<span class="c1">#!     - type: text</span>
+<span class="c1">#!       text: DOTS!</span>
+<span class="c1">#!     - type: rectangle</span>
+<span class="c1">#!       width: 120</span>
+<span class="c1">#!       height: 30</span>
+<span class="c1">#!       color: orange</span>
+<span class="c1">#!       y: 0</span>
+<span class="c1">#!       anchor_y: bottom</span>
+<span class="c1">#!     - type: rectangle</span>
+<span class="c1">#!       width: 120</span>
+<span class="c1">#!       height: 30</span>
+<span class="c1">#!       color: red</span>
+<span class="c1">#!       y: top</span>
+<span class="c1">#!       anchor_y: top</span>
+<span class="nt">slide_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">init_done</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">window_slide</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">window</span>
+<span class="w">    </span><span class="nt">dmd_slide</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dmd</span>
+<span class="c1">##! test</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_slide_on_top window_slide window</span>
+<span class="c1">#! assert_slide_on_top dmd_slide dmd</span>
 </code></pre></div>
 <p>Since the DMD display is configured to be the default, when you use the
 slide_player in the rest of your game, you won't have to specify

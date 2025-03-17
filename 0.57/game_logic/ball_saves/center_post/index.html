@@ -33587,65 +33587,65 @@ between the flippers and prevents the ball from draining.</p>
 but then we would have to reimplement ball search and service mode
 logic. The diverter will already implement all that for us.</p>
 <p>This is an example:</p>
-<div class="highlight"><pre><span></span><code># in your machine config
-coils:
-  c_ball_save_post_up:
-    number: 1-10  # yours might be different
-    default_pulse_ms: 15
-  c_ball_save_post_down:
-    number: 1-15  # yours might be different
-    default_pulse_ms: 15
-lights:
-  ball_saver:
-    number:
-diverters:
-  ball_save_post:
-    activation_coil: c_ball_save_post_up
-    deactivation_coil: c_ball_save_post_down
-    activate_events: ball_save_post_up
-    deactivate_events: ball_save_post_down
-    enable_events: ball_started
-    type: pulse
-##! mode: base
-# in base mode
-event_player:
-  ball_save_default_timer_start:
-    - ball_save_post_up
-  ball_save_default_disabled:
-    - ball_save_post_down
-ball_saves:
-  default:
-    active_time: 10s
-    grace_period: 2s
-    hurry_up_time: 5s
-    enable_events: mode_base_started
-    timer_start_events: balldevice_bd_plunger_ball_eject_success
-    disable_events: ball_will_end
-    auto_launch: true
-    balls_to_save: 1
-    early_ball_save_events: s_right_outlane_active, s_left_outlane_active
-show_player:
-  ball_save_default_timer_start:
-    ball_save_show:
-      action: play
-      speed: 5
-  ball_save_default_hurry_up:
-    ball_save_show:
-      action: play
-      speed: 10
-  ball_save_default_disabled:
-    ball_save_show:
-      action: stop
-shows:
-  ball_save_show:
-    - time: 0
-      lights:
-        ball_saver:
-          color: black
-    - time: &#39;+1&#39;
-      lights:
-        ball_saver:
-          color: red
+<div class="highlight"><pre><span></span><code><span class="c1"># in your machine config</span>
+<span class="nt">coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">c_ball_save_post_up</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1-10</span><span class="w">  </span><span class="c1"># yours might be different</span>
+<span class="w">    </span><span class="nt">default_pulse_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">15</span>
+<span class="w">  </span><span class="nt">c_ball_save_post_down</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1-15</span><span class="w">  </span><span class="c1"># yours might be different</span>
+<span class="w">    </span><span class="nt">default_pulse_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">15</span>
+<span class="nt">lights</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">ball_saver</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="nt">diverters</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">ball_save_post</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">activation_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_ball_save_post_up</span>
+<span class="w">    </span><span class="nt">deactivation_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_ball_save_post_down</span>
+<span class="w">    </span><span class="nt">activate_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ball_save_post_up</span>
+<span class="w">    </span><span class="nt">deactivate_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ball_save_post_down</span>
+<span class="w">    </span><span class="nt">enable_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ball_started</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pulse</span>
+<span class="c1">##! mode: base</span>
+<span class="c1"># in base mode</span>
+<span class="nt">event_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">ball_save_default_timer_start</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ball_save_post_up</span>
+<span class="w">  </span><span class="nt">ball_save_default_disabled</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ball_save_post_down</span>
+<span class="nt">ball_saves</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">default</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">active_time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10s</span>
+<span class="w">    </span><span class="nt">grace_period</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2s</span>
+<span class="w">    </span><span class="nt">hurry_up_time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5s</span>
+<span class="w">    </span><span class="nt">enable_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mode_base_started</span>
+<span class="w">    </span><span class="nt">timer_start_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">balldevice_bd_plunger_ball_eject_success</span>
+<span class="w">    </span><span class="nt">disable_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ball_will_end</span>
+<span class="w">    </span><span class="nt">auto_launch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">balls_to_save</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">early_ball_save_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_right_outlane_active, s_left_outlane_active</span>
+<span class="nt">show_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">ball_save_default_timer_start</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">ball_save_show</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">play</span>
+<span class="w">      </span><span class="nt">speed</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+<span class="w">  </span><span class="nt">ball_save_default_hurry_up</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">ball_save_show</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">play</span>
+<span class="w">      </span><span class="nt">speed</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="w">  </span><span class="nt">ball_save_default_disabled</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">ball_save_show</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stop</span>
+<span class="nt">shows</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">ball_save_show</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">      </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">ball_saver</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">black</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;+1&#39;</span>
+<span class="w">      </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">ball_saver</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
 </code></pre></div>
 <hr />
 <div class="admonition question">

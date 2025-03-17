@@ -33751,85 +33751,85 @@ prefer to add the shows used by a mode inside that mode's <code>/shows</code>
 folder since it keeps everything from one mode together.</p>
 <p>Here's a complete sample <code>attract_display_loop.yaml</code> file you can use
 as a starting point:</p>
-<div class="highlight"><pre><span></span><code>#show_version=5
-##! show: attract_display_loop
+<div class="highlight"><pre><span></span><code><span class="c1">#show_version=5</span>
+<span class="c1">##! show: attract_display_loop</span>
 
-- duration: 3s
-  slides:
-    awesome_slide:
-      widgets:
-      - type: text
-        text: YOU ARE AWESOME
-        font_size: 50
-      transition:
-        type: push
-        duration: 1s
-        direction: left
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3s</span>
+<span class="w">  </span><span class="nt">slides</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">awesome_slide</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">widgets</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">YOU ARE AWESOME</span>
+<span class="w">        </span><span class="nt">font_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">50</span>
+<span class="w">      </span><span class="nt">transition</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">push</span>
+<span class="w">        </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<span class="w">        </span><span class="nt">direction</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">left</span>
 
-- duration: 3s
-  slides:
-    press_start:
-      widgets:
-      - type: Text
-        text: PRESS START
-        animations:
-          pre_show_slide:
-          - property: opacity
-            value: 0
-            duration: .5s
-          - property: opacity
-            value: 1
-            duration: .5s
-            repeat: false
-      - type: Text
-        text: FREE PLAY
-        color: green
-        y: 10
-        anchor_y: bottom
-      transition:
-        type: move_in
-        duration: 1s
-        direction: right
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3s</span>
+<span class="w">  </span><span class="nt">slides</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">press_start</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">widgets</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Text</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PRESS START</span>
+<span class="w">        </span><span class="nt">animations</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">pre_show_slide</span><span class="p">:</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">property</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">opacity</span>
+<span class="w">            </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">            </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.5s</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">property</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">opacity</span>
+<span class="w">            </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">            </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.5s</span>
+<span class="w">            </span><span class="nt">repeat</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Text</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">FREE PLAY</span>
+<span class="w">        </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">green</span>
+<span class="w">        </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="w">        </span><span class="nt">anchor_y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bottom</span>
+<span class="w">      </span><span class="nt">transition</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">move_in</span>
+<span class="w">        </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<span class="w">        </span><span class="nt">direction</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">right</span>
 
-- duration: 3
-  slides:
-    mission_pinball:
-      widgets:
-      - type: Text
-        text: MISSION PINBALL
-        color: red
-      transition:
-        type: move_in
-        duration: 1s
-        direction: top
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="w">  </span><span class="nt">slides</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">mission_pinball</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">widgets</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Text</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MISSION PINBALL</span>
+<span class="w">        </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
+<span class="w">      </span><span class="nt">transition</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">move_in</span>
+<span class="w">        </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<span class="w">        </span><span class="nt">direction</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">top</span>
 
-- duration: 3
-  slides:
-    last_game_score_slide:
-      widgets:
-      - type: text
-        text: LAST GAME
-        font_size: 50
-        y: 60%
-      - type: text
-        text: (machine|player1_score)
-        number_grouping: true
-        min_digits: 2
-        font_size: 50
-        y: 40%
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="w">  </span><span class="nt">slides</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">last_game_score_slide</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">widgets</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LAST GAME</span>
+<span class="w">        </span><span class="nt">font_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">50</span>
+<span class="w">        </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">60%</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(machine|player1_score)</span>
+<span class="w">        </span><span class="nt">number_grouping</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">        </span><span class="nt">min_digits</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="w">        </span><span class="nt">font_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">50</span>
+<span class="w">        </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">40%</span>
 
-##! mode: attract
-#! show_player:
-#!   mode_attract_started: attract_display_loop
-##! test
-#! assert_text_on_top_slide &quot;YOU ARE AWESOME&quot;
-#! advance_time_and_run 3
-#! assert_text_on_top_slide &quot;PRESS START&quot;
-#! assert_text_on_top_slide &quot;FREE PLAY&quot;
-#! advance_time_and_run 3
-#! assert_text_on_top_slide &quot;MISSION PINBALL&quot;
-#! advance_time_and_run 3
-#! assert_text_on_top_slide &quot;LAST GAME&quot;
+<span class="c1">##! mode: attract</span>
+<span class="c1">#! show_player:</span>
+<span class="c1">#!   mode_attract_started: attract_display_loop</span>
+<span class="c1">##! test</span>
+<span class="c1">#! assert_text_on_top_slide &quot;YOU ARE AWESOME&quot;</span>
+<span class="c1">#! advance_time_and_run 3</span>
+<span class="c1">#! assert_text_on_top_slide &quot;PRESS START&quot;</span>
+<span class="c1">#! assert_text_on_top_slide &quot;FREE PLAY&quot;</span>
+<span class="c1">#! advance_time_and_run 3</span>
+<span class="c1">#! assert_text_on_top_slide &quot;MISSION PINBALL&quot;</span>
+<span class="c1">#! advance_time_and_run 3</span>
+<span class="c1">#! assert_text_on_top_slide &quot;LAST GAME&quot;</span>
 </code></pre></div>
 <p>First, notice the first line is <code>#show_version=5</code>. This is similar to
 the config_version in config files, except since this is a show file,
@@ -33880,18 +33880,18 @@ this case we want this show to play whenever the attract mode is
 running. To do this, go back to the config file for the attract mode (
 <code>&lt;your_machine&gt;/modes/attract/config/attract.yaml</code>) and add the
 following:</p>
-<div class="highlight"><pre><span></span><code>#config_version=5
-##! show: attract_display_loop
-#! - duration: .1
-#!   events: ok_super
-##! mode: attract
+<div class="highlight"><pre><span></span><code><span class="c1">#config_version=5</span>
+<span class="c1">##! show: attract_display_loop</span>
+<span class="c1">#! - duration: .1</span>
+<span class="c1">#!   events: ok_super</span>
+<span class="c1">##! mode: attract</span>
 
-show_player:
-  mode_attract_started: attract_display_loop
-##! test
-#! mock_event ok_super
-#! advance_time_and_run .1
-#! assert_event_called ok_super
+<span class="nt">show_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">mode_attract_started</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">attract_display_loop</span>
+<span class="c1">##! test</span>
+<span class="c1">#! mock_event ok_super</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_event_called ok_super</span>
 </code></pre></div>
 <p>Note that we don't need a <code>mode:</code> section here because those settings
 are already configured in the default attract mode settings folder
@@ -33912,44 +33912,44 @@ the machine-wide config <code>&lt;your_machine&gt;/config/config.yaml</code> and
 the attract_started slide from the <code>slides:</code> section, and the
 <code>mode_attract_started</code> entry from your <code>slide_player:</code> section.</p>
 <p>OLD machine-wide config (partial):</p>
-<div class="highlight"><pre><span></span><code># old
-slides:
-  welcome_slide:
-    widgets:
-      - type: text
-        text: PINBALL!
-        font_size: 50
-        color: red
-      - type: rectangle
-        width: 240
-        height: 60
-  attract_started:
-    widgets:
-      - text: ATTRACT MODE
-        type: text
+<div class="highlight"><pre><span></span><code><span class="c1"># old</span>
+<span class="nt">slides</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">welcome_slide</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">widgets</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PINBALL!</span>
+<span class="w">        </span><span class="nt">font_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">50</span>
+<span class="w">        </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rectangle</span>
+<span class="w">        </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">240</span>
+<span class="w">        </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">60</span>
+<span class="w">  </span><span class="nt">attract_started</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">widgets</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ATTRACT MODE</span>
+<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
 
-slide_player:
-  init_done: welcome_slide
-  mode_attract_started: attract_started
-##! test
-#! assert_slide_on_top attract_started
+<span class="nt">slide_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">init_done</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">welcome_slide</span>
+<span class="w">  </span><span class="nt">mode_attract_started</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">attract_started</span>
+<span class="c1">##! test</span>
+<span class="c1">#! assert_slide_on_top attract_started</span>
 </code></pre></div>
 <p>NEW machine-wide config:</p>
-<div class="highlight"><pre><span></span><code>slides:
-  welcome_slide:
-    widgets:
-      - type: text
-        text: PINBALL!
-        font_size: 50
-        color: red
-      - type: rectangle
-        width: 240
-        height: 60
+<div class="highlight"><pre><span></span><code><span class="nt">slides</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">welcome_slide</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">widgets</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PINBALL!</span>
+<span class="w">        </span><span class="nt">font_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">50</span>
+<span class="w">        </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rectangle</span>
+<span class="w">        </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">240</span>
+<span class="w">        </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">60</span>
 
-slide_player:
-  init_done: welcome_slide
-##! test
-#! assert_slide_on_top welcome_slide
+<span class="nt">slide_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">init_done</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">welcome_slide</span>
+<span class="c1">##! test</span>
+<span class="c1">#! assert_slide_on_top welcome_slide</span>
 </code></pre></div>
 <p>The reason we remove this is because it's not necessary now that we
 have our new attract mode display show running.</p>

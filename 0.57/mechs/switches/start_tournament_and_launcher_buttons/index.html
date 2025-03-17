@@ -33675,14 +33675,14 @@ rated at 6.3V which works fine at either 5V or in a lamp matrix at 12V
 (the latter commonly used).</p>
 <h2 id="config">Config</h2>
 <p>To configure your start button you can use this config:</p>
-<div class="highlight"><pre><span></span><code>lights:
-  l_start_button:
-    number: 3           # number depends on your platform
-    subtype: matrix     # depends on your platform
-switches:
-  s_start:
-    number: 23          # number depends on your platform
-    tags: start
+<div class="highlight"><pre><span></span><code><span class="nt">lights</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">l_start_button</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span><span class="w">           </span><span class="c1"># number depends on your platform</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">matrix</span><span class="w">     </span><span class="c1"># depends on your platform</span>
+<span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_start</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">23</span><span class="w">          </span><span class="c1"># number depends on your platform</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start</span>
 </code></pre></div>
 <p>The tag <code>start</code> will hook the button into your game. See
 <a href="../../../tutorial/9_start_button/">Tutorial step 9. Add the start button</a> for details.

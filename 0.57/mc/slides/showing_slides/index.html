@@ -33685,33 +33685,33 @@ only play when that mode is active.)</p>
 that you basically say, "play THIS slide when THAT event happens".</p>
 <p>For example, if you want to play a slide named "good_job" when the
 event "left_lane_hit" is posted, you would set your config like this:</p>
-<div class="highlight"><pre><span></span><code>#! slides:
-#!   good_job:
-#!     - type: text
-#!       text: &quot;GOOD JOB&quot;
-slide_player:
-  left_lane_hit: good_job
-##! test
-#! post left_lane_hit
-#! advance_time_and_run .1
-#! assert_text_on_top_slide &quot;GOOD JOB&quot;
+<div class="highlight"><pre><span></span><code><span class="c1">#! slides:</span>
+<span class="c1">#!   good_job:</span>
+<span class="c1">#!     - type: text</span>
+<span class="c1">#!       text: &quot;GOOD JOB&quot;</span>
+<span class="nt">slide_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">left_lane_hit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">good_job</span>
+<span class="c1">##! test</span>
+<span class="c1">#! post left_lane_hit</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_text_on_top_slide &quot;GOOD JOB&quot;</span>
 </code></pre></div>
 <p>You can have as many event/slide combinations as you want, like this:</p>
-<div class="highlight"><pre><span></span><code>#! slides:
-#!   good_job:
-#!     - type: text
-#!       text: &quot;GOOD JOB&quot;
-#!   ramp_champ:
-#!     - type: text
-#!       text: &quot;RAMP CHAMP&quot;
-slide_player:
-  left_lane_hit: good_job
-  right_lane_hit: good_job
-  left_ramp_hit: ramp_champ
-##! test
-#! post left_lane_hit
-#! advance_time_and_run .1
-#! assert_text_on_top_slide &quot;GOOD JOB&quot;
+<div class="highlight"><pre><span></span><code><span class="c1">#! slides:</span>
+<span class="c1">#!   good_job:</span>
+<span class="c1">#!     - type: text</span>
+<span class="c1">#!       text: &quot;GOOD JOB&quot;</span>
+<span class="c1">#!   ramp_champ:</span>
+<span class="c1">#!     - type: text</span>
+<span class="c1">#!       text: &quot;RAMP CHAMP&quot;</span>
+<span class="nt">slide_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">left_lane_hit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">good_job</span>
+<span class="w">  </span><span class="nt">right_lane_hit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">good_job</span>
+<span class="w">  </span><span class="nt">left_ramp_hit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ramp_champ</span>
+<span class="c1">##! test</span>
+<span class="c1">#! post left_lane_hit</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_text_on_top_slide &quot;GOOD JOB&quot;</span>
 </code></pre></div>
 <p>The above examples are what we call the "express" config option since
 each event specifies a slide name, but no other options. (It just uses
@@ -33719,53 +33719,53 @@ the default options for showing each slide. But instead of putting the
 slide name after the event name, you can also create a sub-entry with
 the slide name, then <em>another</em> sub-entry with additional options, like
 this:</p>
-<div class="highlight"><pre><span></span><code>#! displays:
-#!   dmd:
-#!     width: 128
-#!     height: 32
-#! slides:
-#!   ramp_hit_slide:
-#!     - type: text
-#!       text: Ramp has been hit
-slide_player:
-  right_ramp_hit:
-    ramp_hit_slide:
-      expire: 2s
-      target: dmd
-##! test
-#! post right_ramp_hit
-#! advance_time_and_run .1
-#! assert_text_on_top_slide &quot;Ramp has been hit&quot; dmd
+<div class="highlight"><pre><span></span><code><span class="c1">#! displays:</span>
+<span class="c1">#!   dmd:</span>
+<span class="c1">#!     width: 128</span>
+<span class="c1">#!     height: 32</span>
+<span class="c1">#! slides:</span>
+<span class="c1">#!   ramp_hit_slide:</span>
+<span class="c1">#!     - type: text</span>
+<span class="c1">#!       text: Ramp has been hit</span>
+<span class="nt">slide_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">right_ramp_hit</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">ramp_hit_slide</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">expire</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2s</span>
+<span class="w">      </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dmd</span>
+<span class="c1">##! test</span>
+<span class="c1">#! post right_ramp_hit</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_text_on_top_slide &quot;Ramp has been hit&quot; dmd</span>
 </code></pre></div>
 <p>You can mix-and-match all of these in a single config, like this:</p>
-<div class="highlight"><pre><span></span><code>#! displays:
-#!   dmd:
-#!     width: 128
-#!     height: 32
-#! slides:
-#!   ramp_hit_slide:
-#!     - type: text
-#!       text: Ramp has been hit
-#!   good_job:
-#!     - type: text
-#!       text: &quot;GOOD JOB&quot;
-#!   ramp_champ:
-#!     - type: text
-#!       text: &quot;RAMP CHAMP&quot;
-slide_player:
-  left_lane_hit: good_job
-  right_lane_hit: good_job
-  left_ramp_hit: ramp_champ
-  right_ramp_hit:
-    ramp_hit_slide:
-      expire: 2s
-      target: dmd
-##! test
-#! post right_ramp_hit
-#! advance_time_and_run .1
-#! assert_text_on_top_slide &quot;Ramp has been hit&quot; dmd
-#! advance_time_and_run 3
-#! assert_text_not_on_top_slide &quot;Ramp has been hit&quot; dmd
+<div class="highlight"><pre><span></span><code><span class="c1">#! displays:</span>
+<span class="c1">#!   dmd:</span>
+<span class="c1">#!     width: 128</span>
+<span class="c1">#!     height: 32</span>
+<span class="c1">#! slides:</span>
+<span class="c1">#!   ramp_hit_slide:</span>
+<span class="c1">#!     - type: text</span>
+<span class="c1">#!       text: Ramp has been hit</span>
+<span class="c1">#!   good_job:</span>
+<span class="c1">#!     - type: text</span>
+<span class="c1">#!       text: &quot;GOOD JOB&quot;</span>
+<span class="c1">#!   ramp_champ:</span>
+<span class="c1">#!     - type: text</span>
+<span class="c1">#!       text: &quot;RAMP CHAMP&quot;</span>
+<span class="nt">slide_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">left_lane_hit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">good_job</span>
+<span class="w">  </span><span class="nt">right_lane_hit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">good_job</span>
+<span class="w">  </span><span class="nt">left_ramp_hit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ramp_champ</span>
+<span class="w">  </span><span class="nt">right_ramp_hit</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">ramp_hit_slide</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">expire</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2s</span>
+<span class="w">      </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dmd</span>
+<span class="c1">##! test</span>
+<span class="c1">#! post right_ramp_hit</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_text_on_top_slide &quot;Ramp has been hit&quot; dmd</span>
+<span class="c1">#! advance_time_and_run 3</span>
+<span class="c1">#! assert_text_not_on_top_slide &quot;Ramp has been hit&quot; dmd</span>
 </code></pre></div>
 <p>In the example above, when the event "left_ramp_hit" happens, the
 slide "ramp_champ" is shown. When the event "right_ramp_hit"
@@ -33786,40 +33786,40 @@ the slide player in a show, you add a <a href="../../../config/slides/">creating
 <p>For example, if you want a slide called "happy_face" to play in a step
 in a show, you can do it like this (this is a snippet of a single step
 in a show):</p>
-<div class="highlight"><pre><span></span><code>#! slides:
-#!   happy_face:
-#!     - type: text
-#!       text: &quot;Happy Face&quot;
-#! show_player:
-#!   play_show: my_show
-##! show: my_show
-- duration: 3s
-  slides: happy_face
-##! test
-#! post play_show
-#! advance_time_and_run .1
-#! assert_text_on_top_slide &quot;Happy Face&quot;
+<div class="highlight"><pre><span></span><code><span class="c1">#! slides:</span>
+<span class="c1">#!   happy_face:</span>
+<span class="c1">#!     - type: text</span>
+<span class="c1">#!       text: &quot;Happy Face&quot;</span>
+<span class="c1">#! show_player:</span>
+<span class="c1">#!   play_show: my_show</span>
+<span class="c1">##! show: my_show</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3s</span>
+<span class="w">  </span><span class="nt">slides</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">happy_face</span>
+<span class="c1">##! test</span>
+<span class="c1">#! post play_show</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_text_on_top_slide &quot;Happy Face&quot;</span>
 </code></pre></div>
 <p>Again, you can use the sub-entry format to specify additional options:</p>
-<div class="highlight"><pre><span></span><code>#! displays:
-#!   playfield_screen:
-#!     width: 200
-#!     height: 300
-#! slides:
-#!   happy_face:
-#!     - type: text
-#!       text: &quot;Happy Face&quot;
-#! show_player:
-#!   play_show: my_show
-##! show: my_show
-- duration: 3s
-  slides:
-    happy_face:
-      target: playfield_screen
-##! test
-#! post play_show
-#! advance_time_and_run .1
-#! assert_text_on_top_slide &quot;Happy Face&quot;
+<div class="highlight"><pre><span></span><code><span class="c1">#! displays:</span>
+<span class="c1">#!   playfield_screen:</span>
+<span class="c1">#!     width: 200</span>
+<span class="c1">#!     height: 300</span>
+<span class="c1">#! slides:</span>
+<span class="c1">#!   happy_face:</span>
+<span class="c1">#!     - type: text</span>
+<span class="c1">#!       text: &quot;Happy Face&quot;</span>
+<span class="c1">#! show_player:</span>
+<span class="c1">#!   play_show: my_show</span>
+<span class="c1">##! show: my_show</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3s</span>
+<span class="w">  </span><span class="nt">slides</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">happy_face</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">playfield_screen</span>
+<span class="c1">##! test</span>
+<span class="c1">#! post play_show</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_text_on_top_slide &quot;Happy Face&quot;</span>
 </code></pre></div>
 <h2 id="creating-new-slides-in-the-slide_player">Creating new slides in the slide_player</h2>
 <p>Both of the options we've show so far (using the

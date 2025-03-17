@@ -33729,20 +33729,20 @@ more powerful coils.</p>
 
 <h2 id="config">Config</h2>
 <p>This is an example for a single-wound coil:</p>
-<div class="highlight"><pre><span></span><code>coils:
-  c_your_coil:
-    number: 00   # depends on your platform and hardware
-    default_pulse_ms: 20
+<div class="highlight"><pre><span></span><code><span class="nt">coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">c_your_coil</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">00</span><span class="w">   </span><span class="c1"># depends on your platform and hardware</span>
+<span class="w">    </span><span class="nt">default_pulse_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span>
 </code></pre></div>
 <p>This is an example for dual-wound coils which are configured separately:</p>
-<div class="highlight"><pre><span></span><code>coils:
-  c_your_coil_main:
-    number: 00   # depends on your platform and hardware
-    default_pulse_ms: 20
-  c_your_coil_hold:
-    number: 01   # depends on your platform and hardware
-    default_pulse_ms: 10
-    default_hold_power: .2
+<div class="highlight"><pre><span></span><code><span class="nt">coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">c_your_coil_main</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">00</span><span class="w">   </span><span class="c1"># depends on your platform and hardware</span>
+<span class="w">    </span><span class="nt">default_pulse_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span>
+<span class="w">  </span><span class="nt">c_your_coil_hold</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">01</span><span class="w">   </span><span class="c1"># depends on your platform and hardware</span>
+<span class="w">    </span><span class="nt">default_pulse_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="w">    </span><span class="nt">default_hold_power</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.2</span>
 </code></pre></div>
 <p>See <a href="dual_wound_coils/">Dual-wound Coils</a> for more details.</p>
 <h2 id="related-how-to-guides">Related How To guides</h2>

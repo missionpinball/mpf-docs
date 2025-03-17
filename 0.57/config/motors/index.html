@@ -33981,25 +33981,25 @@ position switches.</p>
 <p>This is an example for a motorized drop target bank which is mounted to
 a camshaft. When the motor is running it constantly moves up and down.
 Two position switches are used to detect the current position.</p>
-<div class="highlight"><pre><span></span><code>switches:
-  s_motorized_drop_target_bank_position_up:
-    number:
-  s_motorized_drop_target_bank_position_down:
-    number:
-digital_outputs:
-  c_motorized_drop_target_bank_run:
-    number:
-    type: driver
-motors:
-  motorized_drop_target_bank:
-    motor_left_output: c_motorized_drop_target_bank_run
-    position_switches: !!omap
-      - up: s_motorized_drop_target_bank_position_up
-      - down: s_motorized_drop_target_bank_position_down
-    reset_position: down
-    go_to_position:
-      move_bank_up: up
-      move_bank_down: down
+<div class="highlight"><pre><span></span><code><span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_motorized_drop_target_bank_position_up</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_motorized_drop_target_bank_position_down</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="nt">digital_outputs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">c_motorized_drop_target_bank_run</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">driver</span>
+<span class="nt">motors</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">motorized_drop_target_bank</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">motor_left_output</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_motorized_drop_target_bank_run</span>
+<span class="w">    </span><span class="nt">position_switches</span><span class="p">:</span><span class="w"> </span><span class="kt">!!omap</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">up</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_motorized_drop_target_bank_position_up</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">down</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_motorized_drop_target_bank_position_down</span>
+<span class="w">    </span><span class="nt">reset_position</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">down</span>
+<span class="w">    </span><span class="nt">go_to_position</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">move_bank_up</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">up</span>
+<span class="w">      </span><span class="nt">move_bank_down</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">down</span>
 </code></pre></div>
 <h2 id="device-which-can-move-in-two-directions">Device which can move in two directions</h2>
 <p>The slimer in Stern Ghostbusters is an example for a motor which can
@@ -34007,72 +34007,72 @@ move in two directions. Both digital outputs are connected to light
 outputs. Again two position switches are used to detect the current
 position. In this setup the first and last switches are also considered
 as limit switches and the motor will stop once it hit one of them.</p>
-<div class="highlight"><pre><span></span><code>switches:
-  s_slimer_home:
-    number: 8-1
-  s_slimer_away:
-    number: 8-2
-digital_outputs:
-  c_slimer_motor_forward:
-    number: 8-3
-    type: light
-  c_slimer_motor_backward:
-    number: 8-4
-    type: light
-motors:
-  ghostbusters_slimer:
-    motor_left_output: c_slimer_motor_forward
-    motor_right_output: c_slimer_motor_backward
-    position_switches: !!omap
-      - home: s_slimer_home
-      - away: s_slimer_away
-    reset_position: home
-    go_to_position:
-      slimer_home: home
-      slimer_away: away
+<div class="highlight"><pre><span></span><code><span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_slimer_home</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8-1</span>
+<span class="w">  </span><span class="nt">s_slimer_away</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8-2</span>
+<span class="nt">digital_outputs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">c_slimer_motor_forward</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8-3</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">light</span>
+<span class="w">  </span><span class="nt">c_slimer_motor_backward</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8-4</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">light</span>
+<span class="nt">motors</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">ghostbusters_slimer</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">motor_left_output</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_slimer_motor_forward</span>
+<span class="w">    </span><span class="nt">motor_right_output</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_slimer_motor_backward</span>
+<span class="w">    </span><span class="nt">position_switches</span><span class="p">:</span><span class="w"> </span><span class="kt">!!omap</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">home</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_slimer_home</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">away</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_slimer_away</span>
+<span class="w">    </span><span class="nt">reset_position</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">home</span>
+<span class="w">    </span><span class="nt">go_to_position</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">slimer_home</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">home</span>
+<span class="w">      </span><span class="nt">slimer_away</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">away</span>
 </code></pre></div>
 <p>Another example of such a device would be the claw in Stern Batman DK
 (or also Stern Batman 66). It has more position switches but the
 mechanics are similar:</p>
-<div class="highlight"><pre><span></span><code>switches:
-  s_claw_home:
-    number:
-  s_claw_position1:
-    number:
-  s_claw_position2:
-    number:
-  s_claw_position3:
-    number:
-  s_claw_position4:
-    number:
-  s_claw_position5:
-    number:
-digital_outputs:
-  c_claw_forward:
-    number:
-    type: driver
-  c_claw_backward:
-    number:
-    type: driver
-motors:
-  batman_claw:
-    motor_left_output: c_claw_forward
-    motor_right_output: c_claw_backward
-    position_switches: !!omap
-      - home: s_claw_home
-      - pos1: s_claw_position1
-      - pos2: s_claw_position2
-      - pos3: s_claw_position3
-      - pos4: s_claw_position4
-      - pos5: s_claw_position5
-    reset_position: home
-    go_to_position:
-      stop_claw: home
-      go_pos1: pos1
-      go_pos2: pos2
-      go_pos3: pos3
-      go_pos4: pos4
-      go_pos5: pos5
+<div class="highlight"><pre><span></span><code><span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_claw_home</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_claw_position1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_claw_position2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_claw_position3</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_claw_position4</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_claw_position5</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="nt">digital_outputs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">c_claw_forward</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">driver</span>
+<span class="w">  </span><span class="nt">c_claw_backward</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">driver</span>
+<span class="nt">motors</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">batman_claw</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">motor_left_output</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_claw_forward</span>
+<span class="w">    </span><span class="nt">motor_right_output</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_claw_backward</span>
+<span class="w">    </span><span class="nt">position_switches</span><span class="p">:</span><span class="w"> </span><span class="kt">!!omap</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">home</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_claw_home</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pos1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_claw_position1</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pos2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_claw_position2</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pos3</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_claw_position3</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pos4</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_claw_position4</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pos5</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_claw_position5</span>
+<span class="w">    </span><span class="nt">reset_position</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">home</span>
+<span class="w">    </span><span class="nt">go_to_position</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">stop_claw</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">home</span>
+<span class="w">      </span><span class="nt">go_pos1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pos1</span>
+<span class="w">      </span><span class="nt">go_pos2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pos2</span>
+<span class="w">      </span><span class="nt">go_pos3</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pos3</span>
+<span class="w">      </span><span class="nt">go_pos4</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pos4</span>
+<span class="w">      </span><span class="nt">go_pos5</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pos5</span>
 </code></pre></div>
 <h2 id="required-settings">Required settings</h2>
 <p>The following sections are required in the <code>motors:</code> section of your

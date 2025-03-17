@@ -33675,22 +33675,22 @@ icons & this code generated via https://realfavicongenerator.net
 </ul>
 <p>A sequence of switches which need to be hit in order with a timeout.</p>
 <p>This is an example:</p>
-<div class="highlight"><pre><span></span><code>switches:
-  s_ramp_entry:
-    number: 1
-  s_ramp_success:
-    number: 2
-sequence_shots:
-  ramp:
-    switch_sequence: s_ramp_entry, s_ramp_success
-    sequence_timeout: 3s
-##! test
-#! mock_event ramp_hit
-#! hit_and_release_switch s_ramp_entry
-#! assert_event_not_called ramp_hit
-#! hit_and_release_switch s_ramp_success
-#! advance_time_and_run 1
-#! assert_event_called ramp_hit
+<div class="highlight"><pre><span></span><code><span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_ramp_entry</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">s_ramp_success</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="nt">sequence_shots</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">ramp</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch_sequence</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_ramp_entry, s_ramp_success</span>
+<span class="w">    </span><span class="nt">sequence_timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3s</span>
+<span class="c1">##! test</span>
+<span class="c1">#! mock_event ramp_hit</span>
+<span class="c1">#! hit_and_release_switch s_ramp_entry</span>
+<span class="c1">#! assert_event_not_called ramp_hit</span>
+<span class="c1">#! hit_and_release_switch s_ramp_success</span>
+<span class="c1">#! advance_time_and_run 1</span>
+<span class="c1">#! assert_event_called ramp_hit</span>
 </code></pre></div>
 <p>When both switches are hit in sequence <code>ramp_hit</code>
 (<a href="../../../events/sequence_shot_hit/">(sequence_shot_name)_hit</a>) will be
@@ -33702,36 +33702,36 @@ use them in a shot group, you need to create a
 <a href="../../../config/shots/">shot</a> which is triggerd
 on the <a href="../../../events/sequence_shot_hit/">(sequence_shot_name)_hit</a> event of the sequence shot.</p>
 <p>This is an example:</p>
-<div class="highlight"><pre><span></span><code>switches:
-  s_ramp_entry:
-    number: 1
-  s_ramp_success:
-    number: 2
-sequence_shots:
-  ramp:
-    switch_sequence: s_ramp_entry, s_ramp_success
-    sequence_timeout: 3s
-##! mode: test_mode
-# In your mode
-shots:
-  shot_ramp:
-    hit_events: ramp_hit
-shot_groups:
-  your_group:
-    shots: shot_ramp
-##! test
-#! start_game
-#! start_mode test_mode
-#! mock_event ramp_hit
-#! mock_event shot_ramp_hit
-#! mock_event your_group_complete
-#! hit_and_release_switch s_ramp_entry
-#! assert_event_not_called ramp_hit
-#! hit_and_release_switch s_ramp_success
-#! advance_time_and_run 1
-#! assert_event_called ramp_hit
-#! assert_event_called shot_ramp_hit
-#! assert_event_called your_group_complete
+<div class="highlight"><pre><span></span><code><span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_ramp_entry</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">s_ramp_success</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="nt">sequence_shots</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">ramp</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch_sequence</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_ramp_entry, s_ramp_success</span>
+<span class="w">    </span><span class="nt">sequence_timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3s</span>
+<span class="c1">##! mode: test_mode</span>
+<span class="c1"># In your mode</span>
+<span class="nt">shots</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">shot_ramp</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">hit_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ramp_hit</span>
+<span class="nt">shot_groups</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">your_group</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">shots</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">shot_ramp</span>
+<span class="c1">##! test</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! start_mode test_mode</span>
+<span class="c1">#! mock_event ramp_hit</span>
+<span class="c1">#! mock_event shot_ramp_hit</span>
+<span class="c1">#! mock_event your_group_complete</span>
+<span class="c1">#! hit_and_release_switch s_ramp_entry</span>
+<span class="c1">#! assert_event_not_called ramp_hit</span>
+<span class="c1">#! hit_and_release_switch s_ramp_success</span>
+<span class="c1">#! advance_time_and_run 1</span>
+<span class="c1">#! assert_event_called ramp_hit</span>
+<span class="c1">#! assert_event_called shot_ramp_hit</span>
+<span class="c1">#! assert_event_called your_group_complete</span>
 </code></pre></div>
 <h2 id="related-how-to-guides">Related How To guides</h2>
 <ul>

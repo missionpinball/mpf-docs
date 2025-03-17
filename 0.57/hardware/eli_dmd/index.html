@@ -33666,17 +33666,17 @@ Connect your panels and you are good to go.</p>
 <a href="../smartmatrix/">How to configure a "SmartMatrix" RGB LED DMD</a> (go there
 for details). Can copy the following example (and replace <code>com12</code> with
 your com port):</p>
-<div class="highlight"><pre><span></span><code>hardware:
-  rgb_dmd: smartmatrix
-smartmatrix:
-  smartmatrix_1:
-    port: com12
-    baud: 3000000
-    old_cookie: false
-rgb_dmds:
-  smartmatrix_1:
-    platform: smartmatrix
-    source_display: dmd
+<div class="highlight"><pre><span></span><code><span class="nt">hardware</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">rgb_dmd</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">smartmatrix</span>
+<span class="nt">smartmatrix</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">smartmatrix_1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">com12</span>
+<span class="w">    </span><span class="nt">baud</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3000000</span>
+<span class="w">    </span><span class="nt">old_cookie</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="nt">rgb_dmds</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">smartmatrix_1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">smartmatrix</span>
+<span class="w">    </span><span class="nt">source_display</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dmd</span>
 </code></pre></div>
 <h2 id="what-if-it-did-not-work">What if it did not work?</h2>
 <p>Have a look at our <a href="../troubleshooting_hardware/">hardware troubleshooting guide</a>.</p>

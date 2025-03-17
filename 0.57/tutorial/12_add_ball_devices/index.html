@@ -33667,83 +33667,83 @@ balls already stuck in devices, MPF will automatically eject the balls
 when it boots because these additional devices do not have "home"
 listed as one of their tags.) Here's the <code>ball_devices:</code> section from a
 <em>Demolition Man</em> config file:</p>
-<div class="highlight"><pre><span></span><code>#! switches:
-#!   s_trough1:
-#!     number: 1
-#!   s_trough2:
-#!     number: 2
-#!   s_trough3:
-#!     number: 3
-#!   s_trough4:
-#!     number: 4
-#!   s_trough5:
-#!     number: 5
-#!   s_trough6:
-#!     number: 6
-#!   s_trough_jam:
-#!     number: 7
-#!   s_plunger_lane:
-#!     number: 8
-#!   s_eject:
-#!     number: 9
-#!   s_bottom_popper:
-#!     number: 10
-#!   s_top_popper:
-#!     number: 11
-#!   s_elevator_hold:
-#!     number: 12
-#! coils:
-#!   c_trough_eject:
-#!     number: 0
-#!   c_plunger_eject:
-#!     number: 1
-#!   c_retina_eject:
-#!     number: 2
-#!   c_bottom_popper:
-#!     number: 3
-#!   c_top_popper:
-#!     number: 4
-ball_devices:
-  bd_trough:
-    tags: trough, home, drain
-    ball_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough_jam
-    eject_coil: c_trough_eject
-    entrance_count_delay: 300ms
-    jam_switch: s_trough_jam
-    eject_targets: bd_plunger
-    debug: true
+<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
+<span class="c1">#!   s_trough1:</span>
+<span class="c1">#!     number: 1</span>
+<span class="c1">#!   s_trough2:</span>
+<span class="c1">#!     number: 2</span>
+<span class="c1">#!   s_trough3:</span>
+<span class="c1">#!     number: 3</span>
+<span class="c1">#!   s_trough4:</span>
+<span class="c1">#!     number: 4</span>
+<span class="c1">#!   s_trough5:</span>
+<span class="c1">#!     number: 5</span>
+<span class="c1">#!   s_trough6:</span>
+<span class="c1">#!     number: 6</span>
+<span class="c1">#!   s_trough_jam:</span>
+<span class="c1">#!     number: 7</span>
+<span class="c1">#!   s_plunger_lane:</span>
+<span class="c1">#!     number: 8</span>
+<span class="c1">#!   s_eject:</span>
+<span class="c1">#!     number: 9</span>
+<span class="c1">#!   s_bottom_popper:</span>
+<span class="c1">#!     number: 10</span>
+<span class="c1">#!   s_top_popper:</span>
+<span class="c1">#!     number: 11</span>
+<span class="c1">#!   s_elevator_hold:</span>
+<span class="c1">#!     number: 12</span>
+<span class="c1">#! coils:</span>
+<span class="c1">#!   c_trough_eject:</span>
+<span class="c1">#!     number: 0</span>
+<span class="c1">#!   c_plunger_eject:</span>
+<span class="c1">#!     number: 1</span>
+<span class="c1">#!   c_retina_eject:</span>
+<span class="c1">#!     number: 2</span>
+<span class="c1">#!   c_bottom_popper:</span>
+<span class="c1">#!     number: 3</span>
+<span class="c1">#!   c_top_popper:</span>
+<span class="c1">#!     number: 4</span>
+<span class="nt">ball_devices</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">bd_trough</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">trough, home, drain</span>
+<span class="w">    </span><span class="nt">ball_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough_jam</span>
+<span class="w">    </span><span class="nt">eject_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_trough_eject</span>
+<span class="w">    </span><span class="nt">entrance_count_delay</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">300ms</span>
+<span class="w">    </span><span class="nt">jam_switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_trough_jam</span>
+<span class="w">    </span><span class="nt">eject_targets</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bd_plunger</span>
+<span class="w">    </span><span class="nt">debug</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 
-  bd_plunger:
-    ball_switches: s_plunger_lane
-    entrance_count_delay: 300ms
-    eject_timeouts: 3s
-    eject_coil: c_plunger_eject
-    player_controlled_eject_event: sw_launch
+<span class="w">  </span><span class="nt">bd_plunger</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">ball_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_plunger_lane</span>
+<span class="w">    </span><span class="nt">entrance_count_delay</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">300ms</span>
+<span class="w">    </span><span class="nt">eject_timeouts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3s</span>
+<span class="w">    </span><span class="nt">eject_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_plunger_eject</span>
+<span class="w">    </span><span class="nt">player_controlled_eject_event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sw_launch</span>
 
-  bd_retina_hole:
-    ball_switches: s_eject
-    eject_coil: c_retina_eject
-    eject_timeouts: 1s
+<span class="w">  </span><span class="nt">bd_retina_hole</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">ball_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_eject</span>
+<span class="w">    </span><span class="nt">eject_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_retina_eject</span>
+<span class="w">    </span><span class="nt">eject_timeouts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
 
-  bd_lower_vuk:
-    ball_switches: s_bottom_popper
-    eject_coil: c_bottom_popper
-    eject_timeouts: 2s
+<span class="w">  </span><span class="nt">bd_lower_vuk</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">ball_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_bottom_popper</span>
+<span class="w">    </span><span class="nt">eject_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_bottom_popper</span>
+<span class="w">    </span><span class="nt">eject_timeouts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2s</span>
 
-  bd_upper_vuk:
-    ball_switches: s_top_popper
-    eject_coil: c_top_popper
-    eject_timeouts: 2s
+<span class="w">  </span><span class="nt">bd_upper_vuk</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">ball_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_top_popper</span>
+<span class="w">    </span><span class="nt">eject_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_top_popper</span>
+<span class="w">    </span><span class="nt">eject_timeouts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2s</span>
 
-  bd_elevator:
-    ball_switches: s_elevator_hold
-    mechanical_eject: true
-    eject_timeouts: 500ms
+<span class="w">  </span><span class="nt">bd_elevator</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">ball_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_elevator_hold</span>
+<span class="w">    </span><span class="nt">mechanical_eject</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">eject_timeouts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">500ms</span>
 
-playfields:
-  playfield:
-    tags: default
-    default_source_device: bd_plunger
+<span class="nt">playfields</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">playfield</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span>
+<span class="w">    </span><span class="nt">default_source_device</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bd_plunger</span>
 </code></pre></div>
 <p>Remember that if you need to adjust the eject coil pulse time, you do
 that in the coil's property in the <code>coils:</code> section of your config

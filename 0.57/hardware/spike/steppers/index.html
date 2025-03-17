@@ -33645,21 +33645,21 @@ board). We guess that they are hardware-wise similar to the
 <a href="../../stepstick/">StepStick</a>
 (but that does not matter if you are using an existing machine).</p>
 <p>To configure a stepper in Spike you can use the following example:</p>
-<div class="highlight"><pre><span></span><code>switches:
-  s_stepper_home:
-    number: 11-4
-steppers:
-  stepper0:
-    number: 10-0
-    homing_mode: switch
-    homing_switch: s_stepper_home
-    platform_settings:
-      speed: 20
-      light_number: 10-10
-    named_positions:
-      100: test_1
-      200: test_2
-      500: test_3
+<div class="highlight"><pre><span></span><code><span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_stepper_home</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">11-4</span>
+<span class="nt">steppers</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">stepper0</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10-0</span>
+<span class="w">    </span><span class="nt">homing_mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">switch</span>
+<span class="w">    </span><span class="nt">homing_switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_stepper_home</span>
+<span class="w">    </span><span class="nt">platform_settings</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">speed</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span>
+<span class="w">      </span><span class="nt">light_number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10-10</span>
+<span class="w">    </span><span class="nt">named_positions</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">100</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">test_1</span>
+<span class="w">      </span><span class="nt">200</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">test_2</span>
+<span class="w">      </span><span class="nt">500</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">test_3</span>
 </code></pre></div>
 <p>This will configure Stepper <code>0</code> on node <code>10</code>. You can choose a number
 from <code>0</code> to <code>3</code>. Which ones does not matter but you can only use every

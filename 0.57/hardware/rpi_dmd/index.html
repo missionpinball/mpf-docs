@@ -33726,60 +33726,60 @@ following command:</p>
 </code></pre></div>
 <h2 id="3-configure-your-dmd">3. Configure your DMD</h2>
 <p>This is an example config:</p>
-<div class="highlight"><pre><span></span><code>hardware:
-  platform: rpi_dmd
-rpi_dmd:
-  cols: 32
-  rows: 32
-  gpio_slowdown: 2
-  pwm_lsb_nanoseconds: 300
-window:
-  width: 600
-  height: 200
-  title: Mission Pinball Framework
-displays:
-  window:   # on screen window
-    width: 600
-    height: 200
-  dmd:   # source display for the DMD
-    width: 32
-    height: 32
-    default: true
-    round_anchor_x: left
-rgb_dmds:
-  rpi_dmd:
-    source_display: dmd
-slides:
-  window_slide_1:   # slide we&#39;ll show in the on-screen window
-    - type: display   # this widget shows the DMD content in this slide too
-      effects:
-        - type: color_dmd
-      width: 512
-      height: 128
-    - type: text
-      text: MISSION PINBALL FRAMEWORK
-      anchor_y: top
-      y: top-3
-      font_size: 30
-      color: white
-    - type: rectangle
-      width: 514
-      height: 130
-      color: 444444
-  dmd_slide_1:   # slide we&#39;ll show on the physical DMD
-    - type: text
-      text: IT WORKS!
-      font_size: 30
-      color: red
-slide_player:
-  init_done:
-    window_slide_1:
-      target: window
-    dmd_slide_1:
-      target: dmd
-##! test
-#! assert_text_on_top_slide &quot;IT WORKS!&quot; dmd
-#! assert_text_on_top_slide &quot;MISSION PINBALL FRAMEWORK&quot; window
+<div class="highlight"><pre><span></span><code><span class="nt">hardware</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rpi_dmd</span>
+<span class="nt">rpi_dmd</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">cols</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">32</span>
+<span class="w">  </span><span class="nt">rows</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">32</span>
+<span class="w">  </span><span class="nt">gpio_slowdown</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="w">  </span><span class="nt">pwm_lsb_nanoseconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">300</span>
+<span class="nt">window</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">600</span>
+<span class="w">  </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">200</span>
+<span class="w">  </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Mission Pinball Framework</span>
+<span class="nt">displays</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">window</span><span class="p">:</span><span class="w">   </span><span class="c1"># on screen window</span>
+<span class="w">    </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">600</span>
+<span class="w">    </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">200</span>
+<span class="w">  </span><span class="nt">dmd</span><span class="p">:</span><span class="w">   </span><span class="c1"># source display for the DMD</span>
+<span class="w">    </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">32</span>
+<span class="w">    </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">32</span>
+<span class="w">    </span><span class="nt">default</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">round_anchor_x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">left</span>
+<span class="nt">rgb_dmds</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">rpi_dmd</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">source_display</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dmd</span>
+<span class="nt">slides</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">window_slide_1</span><span class="p">:</span><span class="w">   </span><span class="c1"># slide we&#39;ll show in the on-screen window</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">display</span><span class="w">   </span><span class="c1"># this widget shows the DMD content in this slide too</span>
+<span class="w">      </span><span class="nt">effects</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">color_dmd</span>
+<span class="w">      </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">512</span>
+<span class="w">      </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">128</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MISSION PINBALL FRAMEWORK</span>
+<span class="w">      </span><span class="nt">anchor_y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">top</span>
+<span class="w">      </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">top-3</span>
+<span class="w">      </span><span class="nt">font_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+<span class="w">      </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">white</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rectangle</span>
+<span class="w">      </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">514</span>
+<span class="w">      </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">130</span>
+<span class="w">      </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">444444</span>
+<span class="w">  </span><span class="nt">dmd_slide_1</span><span class="p">:</span><span class="w">   </span><span class="c1"># slide we&#39;ll show on the physical DMD</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IT WORKS!</span>
+<span class="w">      </span><span class="nt">font_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+<span class="w">      </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
+<span class="nt">slide_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">init_done</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">window_slide_1</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">window</span>
+<span class="w">    </span><span class="nt">dmd_slide_1</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dmd</span>
+<span class="c1">##! test</span>
+<span class="c1">#! assert_text_on_top_slide &quot;IT WORKS!&quot; dmd</span>
+<span class="c1">#! assert_text_on_top_slide &quot;MISSION PINBALL FRAMEWORK&quot; window</span>
 </code></pre></div>
 <p>The size of your dmd (32x32 pixel in the example) should match your
 physical matrix. Also make sure to configure the

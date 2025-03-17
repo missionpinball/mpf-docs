@@ -33881,25 +33881,25 @@ to <a href="../../examples/">config file examples</a> for more examples of real 
 devices which transfer balls between
 <a href="../../mechs/playfields/">playfields</a>.</p>
 <p>This is an example:</p>
-<div class="highlight"><pre><span></span><code>switches:
-  s_transfer:
-    number:
-playfield_transfers:
-  transfer1:
-    ball_switch: s_transfer
-    captures_from: playfield1
-    eject_target: playfield2
-  transfer2:
-    transfer_events: transfer_ball
-    captures_from: playfield1
-    eject_target: playfield2
-playfields:
-  playfield1:
-    label: Playfield 1
-    default_source_device: None
-  playfield2:
-    label: Playfield 2
-    default_source_device: None
+<div class="highlight"><pre><span></span><code><span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_transfer</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="nt">playfield_transfers</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">transfer1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">ball_switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_transfer</span>
+<span class="w">    </span><span class="nt">captures_from</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">playfield1</span>
+<span class="w">    </span><span class="nt">eject_target</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">playfield2</span>
+<span class="w">  </span><span class="nt">transfer2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">transfer_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">transfer_ball</span>
+<span class="w">    </span><span class="nt">captures_from</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">playfield1</span>
+<span class="w">    </span><span class="nt">eject_target</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">playfield2</span>
+<span class="nt">playfields</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">playfield1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Playfield 1</span>
+<span class="w">    </span><span class="nt">default_source_device</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">None</span>
+<span class="w">  </span><span class="nt">playfield2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Playfield 2</span>
+<span class="w">    </span><span class="nt">default_source_device</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">None</span>
 </code></pre></div>
 <h2 id="required-settings">Required settings</h2>
 <p>The following sections are required in the <code>playfield_transfers:</code>

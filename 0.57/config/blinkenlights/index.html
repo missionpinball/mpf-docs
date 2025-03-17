@@ -33872,34 +33872,34 @@ each mode that uses a blinkenlight can specify a color that the
 blinkenlight should flash for that mode. The blinkenlight will then
 flash each of its colors in a cycle according to a given schedule.</p>
 <p>Here's an example section:</p>
-<div class="highlight"><pre><span></span><code>#! lights:
-#!   l_left_ramp_arrow:
-#!     channels:
-#!       red:
-#!         number: 1
-#!       green:
-#!         number: 2
-#!       blue:
-#!         number: 3
-#!   l_right_ramp_arrow:
-#!     channels:
-#!       red:
-#!         number: 4
-#!       green:
-#!         number: 5
-#!       blue:
-#!         number: 6
-blinkenlights:
-  blinkenlight_1:
-    color_duration: 1s
-    off_when_multiple: false
-    light: l_left_ramp_arrow
-    priority: 1000
-  blinkenlight_2:
-    cycle_duration: 1s
-    off_when_multiple: false
-    light: l_right_ramp_arrow
-    priority: 1000
+<div class="highlight"><pre><span></span><code><span class="c1">#! lights:</span>
+<span class="c1">#!   l_left_ramp_arrow:</span>
+<span class="c1">#!     channels:</span>
+<span class="c1">#!       red:</span>
+<span class="c1">#!         number: 1</span>
+<span class="c1">#!       green:</span>
+<span class="c1">#!         number: 2</span>
+<span class="c1">#!       blue:</span>
+<span class="c1">#!         number: 3</span>
+<span class="c1">#!   l_right_ramp_arrow:</span>
+<span class="c1">#!     channels:</span>
+<span class="c1">#!       red:</span>
+<span class="c1">#!         number: 4</span>
+<span class="c1">#!       green:</span>
+<span class="c1">#!         number: 5</span>
+<span class="c1">#!       blue:</span>
+<span class="c1">#!         number: 6</span>
+<span class="nt">blinkenlights</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">blinkenlight_1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">color_duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<span class="w">    </span><span class="nt">off_when_multiple</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">    </span><span class="nt">light</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_left_ramp_arrow</span>
+<span class="w">    </span><span class="nt">priority</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="w">  </span><span class="nt">blinkenlight_2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">cycle_duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<span class="w">    </span><span class="nt">off_when_multiple</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">    </span><span class="nt">light</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l_right_ramp_arrow</span>
+<span class="w">    </span><span class="nt">priority</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 </code></pre></div>
 <p>With the above configuration, two blinkenlights are configured:
 blinkenlight_1 and blinkenlight_2. You can then use a

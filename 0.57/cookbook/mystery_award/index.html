@@ -33730,29 +33730,29 @@ holding the ball.</p>
 runs with <a href="../../game_logic/ball_holds/">ball_holds</a>.</p>
 <p>Here is an example of how to use a scoop to hold a ball during a mystery
 award animation:</p>
-<div class="highlight"><pre><span></span><code>#! switches:
-#!   s_ball1:
-#!     number:
-#!   s_ball2:
-#!     number:
-#! coils:
-#!   c_eject:
-#!     number:
-#! ball_devices:
-#!   bd_low_scoop:
-#!     ball_switches: s_ball1, s_ball2
-#!     eject_coil: c_eject
-##! mode: mystery_mode
-event_player:
-  upper_lanes_complete: enable_mystery
+<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
+<span class="c1">#!   s_ball1:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   s_ball2:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#! coils:</span>
+<span class="c1">#!   c_eject:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#! ball_devices:</span>
+<span class="c1">#!   bd_low_scoop:</span>
+<span class="c1">#!     ball_switches: s_ball1, s_ball2</span>
+<span class="c1">#!     eject_coil: c_eject</span>
+<span class="c1">##! mode: mystery_mode</span>
+<span class="nt">event_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">upper_lanes_complete</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">enable_mystery</span>
 
-ball_holds:
-  mystery_scoop:
-    balls_to_hold: 1
-    hold_devices: bd_low_scoop
-    enable_events: enable_mystery
-    disable_events: end_mystery, multiball_active
-    release_one_events: end_mystery
+<span class="nt">ball_holds</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">mystery_scoop</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">balls_to_hold</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">hold_devices</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bd_low_scoop</span>
+<span class="w">    </span><span class="nt">enable_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">enable_mystery</span>
+<span class="w">    </span><span class="nt">disable_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">end_mystery, multiball_active</span>
+<span class="w">    </span><span class="nt">release_one_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">end_mystery</span>
 </code></pre></div>
 <p>In the above example, the scoop will only hold the ball when it is
 enabled with the enable_mystery event. For example, the player needs to
@@ -33768,15 +33768,15 @@ a ball.</p>
 <a href="../../config_players/random_event_player/">random_event_player</a> to control which awards are chosen.</p>
 <p>In the below example, there are four possible awards and the game will
 make sure each one is provided to avoid doubling-up.</p>
-<div class="highlight"><pre><span></span><code>##! mode: mystery_mode
-random_event_player:
-  ball_hold_mystery_scoop_held_ball:
-    events:
-      mystery_award_1_event: 30 #numbers show probability of event
-      mystery_award_2_event: 20
-      mystery_award_3_event: 20
-      mystery_award_4_event: 30
-    force_all: true
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: mystery_mode</span>
+<span class="nt">random_event_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">ball_hold_mystery_scoop_held_ball</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">events</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">mystery_award_1_event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span><span class="w"> </span><span class="c1">#numbers show probability of event</span>
+<span class="w">      </span><span class="nt">mystery_award_2_event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span>
+<span class="w">      </span><span class="nt">mystery_award_3_event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span>
+<span class="w">      </span><span class="nt">mystery_award_4_event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+<span class="w">    </span><span class="nt">force_all</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
 <p>A random award will only be selected after a ball has been held in the
 scoop.</p>
@@ -33784,108 +33784,108 @@ scoop.</p>
 <p>You can use anything to display an award such as a slide or video. In
 the below example, a video is used for each award and the scoop will
 eject the ball after the video has completed.</p>
-<div class="highlight"><pre><span></span><code>##! mode: mystery_mode
-event_player:
-  slide_award_1_slide_removed: end_mystery
-  slide_award_2_slide_removed: end_mystery
-  slide_award_3_slide_removed: end_mystery
-  slide_award_4_slide_removed: end_mystery
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: mystery_mode</span>
+<span class="nt">event_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">slide_award_1_slide_removed</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">end_mystery</span>
+<span class="w">  </span><span class="nt">slide_award_2_slide_removed</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">end_mystery</span>
+<span class="w">  </span><span class="nt">slide_award_3_slide_removed</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">end_mystery</span>
+<span class="w">  </span><span class="nt">slide_award_4_slide_removed</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">end_mystery</span>
 
-slide_player:
-  mystery_award_1_event:
-    award_1_slide:
-      expire: 5s
-  mystery_award_2_event:
-    award_2_slide:
-      expire: 5s
-  mystery_award_3_event:
-    award_3_slide:
-      expire: 5s
-  mystery_award_4_event:
-    award_4_slide:
-      expire: 5s
+<span class="nt">slide_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">mystery_award_1_event</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">award_1_slide</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">expire</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5s</span>
+<span class="w">  </span><span class="nt">mystery_award_2_event</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">award_2_slide</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">expire</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5s</span>
+<span class="w">  </span><span class="nt">mystery_award_3_event</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">award_3_slide</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">expire</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5s</span>
+<span class="w">  </span><span class="nt">mystery_award_4_event</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">award_4_slide</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">expire</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5s</span>
 
-slides:
-  award_1_slide:
-    - type: video
-      video: award_1
-  award_2_slide:
-    - type: video
-      video: award_2
-  award_3_slide:
-    - type: video
-      video: award_3
-  award_4_slide:
-    - type: video
-      video: award_4
+<span class="nt">slides</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">award_1_slide</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">video</span>
+<span class="w">      </span><span class="nt">video</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">award_1</span>
+<span class="w">  </span><span class="nt">award_2_slide</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">video</span>
+<span class="w">      </span><span class="nt">video</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">award_2</span>
+<span class="w">  </span><span class="nt">award_3_slide</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">video</span>
+<span class="w">      </span><span class="nt">video</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">award_3</span>
+<span class="w">  </span><span class="nt">award_4_slide</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">video</span>
+<span class="w">      </span><span class="nt">video</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">award_4</span>
 </code></pre></div>
 <h2 id="full-mystery-award-example">Full Mystery Award Example</h2>
 <p>Here is the full example you can use in a mode as a template to start
 working on your own mystery award.</p>
-<div class="highlight"><pre><span></span><code>#! switches:
-#!   s_ball1:
-#!     number:
-#!   s_ball2:
-#!     number:
-#! coils:
-#!   c_eject:
-#!     number:
-#! ball_devices:
-#!   bd_low_scoop:
-#!     ball_switches: s_ball1, s_ball2
-#!     eject_coil: c_eject
-##! mode: mystery_mode
-event_player:
-  upper_lanes_complete: enable_mystery
-  slide_award_1_slide_removed: end_mystery
-  slide_award_2_slide_removed: end_mystery
-  slide_award_3_slide_removed: end_mystery
-  slide_award_4_slide_removed: end_mystery
+<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
+<span class="c1">#!   s_ball1:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   s_ball2:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#! coils:</span>
+<span class="c1">#!   c_eject:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#! ball_devices:</span>
+<span class="c1">#!   bd_low_scoop:</span>
+<span class="c1">#!     ball_switches: s_ball1, s_ball2</span>
+<span class="c1">#!     eject_coil: c_eject</span>
+<span class="c1">##! mode: mystery_mode</span>
+<span class="nt">event_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">upper_lanes_complete</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">enable_mystery</span>
+<span class="w">  </span><span class="nt">slide_award_1_slide_removed</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">end_mystery</span>
+<span class="w">  </span><span class="nt">slide_award_2_slide_removed</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">end_mystery</span>
+<span class="w">  </span><span class="nt">slide_award_3_slide_removed</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">end_mystery</span>
+<span class="w">  </span><span class="nt">slide_award_4_slide_removed</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">end_mystery</span>
 
-ball_holds:
-  mystery_scoop:
-    balls_to_hold: 1
-    hold_devices: bd_low_scoop
-    enable_events: enable_mystery
-    disable_events: end_mystery, multiball_active
-    release_one_events: end_mystery
+<span class="nt">ball_holds</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">mystery_scoop</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">balls_to_hold</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">hold_devices</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bd_low_scoop</span>
+<span class="w">    </span><span class="nt">enable_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">enable_mystery</span>
+<span class="w">    </span><span class="nt">disable_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">end_mystery, multiball_active</span>
+<span class="w">    </span><span class="nt">release_one_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">end_mystery</span>
 
-random_event_player:
-  ball_hold_mystery_scoop_held_ball:
-    events:
-      mystery_award_1_event: 30 #numbers show probability of event
-      mystery_award_2_event: 20
-      mystery_award_3_event: 20
-      mystery_award_4_event: 30
-    force_all: true
+<span class="nt">random_event_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">ball_hold_mystery_scoop_held_ball</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">events</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">mystery_award_1_event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span><span class="w"> </span><span class="c1">#numbers show probability of event</span>
+<span class="w">      </span><span class="nt">mystery_award_2_event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span>
+<span class="w">      </span><span class="nt">mystery_award_3_event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span>
+<span class="w">      </span><span class="nt">mystery_award_4_event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+<span class="w">    </span><span class="nt">force_all</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 
-slide_player:
-  mystery_award_1_event:
-    award_1_slide:
-      expire: 5s
-  mystery_award_2_event:
-    award_2_slide:
-      expire: 5s
-  mystery_award_3_event:
-    award_3_slide:
-      expire: 5s
-  mystery_award_4_event:
-    award_4_slide:
-      expire: 5s
+<span class="nt">slide_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">mystery_award_1_event</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">award_1_slide</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">expire</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5s</span>
+<span class="w">  </span><span class="nt">mystery_award_2_event</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">award_2_slide</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">expire</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5s</span>
+<span class="w">  </span><span class="nt">mystery_award_3_event</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">award_3_slide</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">expire</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5s</span>
+<span class="w">  </span><span class="nt">mystery_award_4_event</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">award_4_slide</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">expire</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5s</span>
 
-slides:
-  award_1_slide:
-    - type: video
-      video: award_1
-  award_2_slide:
-    - type: video
-      video: award_2
-  award_3_slide:
-    - type: video
-      video: award_3
-  award_4_slide:
-    - type: video
-      video: award_4
+<span class="nt">slides</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">award_1_slide</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">video</span>
+<span class="w">      </span><span class="nt">video</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">award_1</span>
+<span class="w">  </span><span class="nt">award_2_slide</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">video</span>
+<span class="w">      </span><span class="nt">video</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">award_2</span>
+<span class="w">  </span><span class="nt">award_3_slide</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">video</span>
+<span class="w">      </span><span class="nt">video</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">award_3</span>
+<span class="w">  </span><span class="nt">award_4_slide</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">video</span>
+<span class="w">      </span><span class="nt">video</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">award_4</span>
 </code></pre></div>
 <h2 id="more-examples">More examples</h2>
 <p>See <a href="../../game_design/">How to design a game in MPF using Modes</a> and

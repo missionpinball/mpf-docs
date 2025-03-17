@@ -33747,29 +33747,29 @@ debug events. For instance, it can be very useful to be able to start
 modes using the keyboards when you are testing them if it is nontrivial
 to start them.</p>
 <p>Here's an example of it in action:</p>
-<div class="highlight"><pre><span></span><code>keyboard:
-  z:
-    switch: left_flipper
-  slash:
-    switch: right_flipper
-  s:
-    switch: start
-  1:
-    switch: trough1
-    toggle: true
-  2:
-    switch: trough2
-    toggle: true
-  shift+p:
-    switch: lock_post
-    invert: true
-  q:
-    event: machine_reset
-  ctrl+shift+4:
-    event: advance_reel_test
-    params:
-      reel_name: score_1p_10
-      direction: 1
+<div class="highlight"><pre><span></span><code><span class="nt">keyboard</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">z</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">left_flipper</span>
+<span class="w">  </span><span class="nt">slash</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">right_flipper</span>
+<span class="w">  </span><span class="nt">s</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start</span>
+<span class="w">  </span><span class="nt">1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">trough1</span>
+<span class="w">    </span><span class="nt">toggle</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">trough2</span>
+<span class="w">    </span><span class="nt">toggle</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">shift+p</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lock_post</span>
+<span class="w">    </span><span class="nt">invert</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">q</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">machine_reset</span>
+<span class="w">  </span><span class="nt">ctrl+shift+4</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">advance_reel_test</span>
+<span class="w">    </span><span class="nt">params</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">reel_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">score_1p_10</span>
+<span class="w">      </span><span class="nt">direction</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
 </code></pre></div>
 <p>You can also read more about the <code>keyboard:</code> section in the
 <a href="../../../tutorial/6_keyboard/">Tutorial step 6: Add keyboard control</a> documentation.</p>
@@ -33809,13 +33809,13 @@ a shift modifier.</p>
 keys on your keyboard, you can also specify key combinations along with
 the key entries. These are called "modifier keys," and MPF supports
 them in combination with regular keys, like this:</p>
-<div class="highlight"><pre><span></span><code>#! keyboard:
-  t:
-    switch: foo
-  shift-t:
-    switch: tilt
-  shift+ctrl+t:
-    switch: slam_tilt
+<div class="highlight"><pre><span></span><code><span class="c1">#! keyboard:</span>
+<span class="w">  </span><span class="nt">t</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo</span>
+<span class="w">  </span><span class="nt">shift-t</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tilt</span>
+<span class="w">  </span><span class="nt">shift+ctrl+t</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">slam_tilt</span>
 </code></pre></div>
 <p>Starting in MPF 0.33, you an add <code>debug: true</code> in the <code>keyboard:</code>
 section to get a printout on the console of the current key and/or

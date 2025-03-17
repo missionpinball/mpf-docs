@@ -33856,17 +33856,17 @@ regular widgets work in MPF.</p>
 <p>You probably know that you can have a <code>slides:</code> section of your config
 (either machine-wide or mode-specific configs), and when you define a
 slide, you can specify what widgets are on that slide, like this:</p>
-<div class="highlight"><pre><span></span><code>slides:
-  my_slide:
-    widgets:
-      - type: text
-        text: HELLO!
-      - type: text
-        x: 0
-        font_size: 5
-        text: YAY PINBALL
-      - type: image
-        image: background1
+<div class="highlight"><pre><span></span><code><span class="nt">slides</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_slide</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">widgets</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HELLO!</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">        </span><span class="nt">x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">        </span><span class="nt">font_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">YAY PINBALL</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">image</span>
+<span class="w">        </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">background1</span>
 </code></pre></div>
 <p>In the example above, the slide called <em>my_slide</em> has three
 widgets--two text widgets and a background image. (Remember that the
@@ -33884,10 +33884,10 @@ on any slide (whichever slide happens to be showing at that time).</p>
 do that in the <code>widgets:</code> section of your config. (This can be either a
 machine-wide or a mode config file.)</p>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>widgets:
-  laughing_jackal:
-    - type: image
-      image: jackal
+<div class="highlight"><pre><span></span><code><span class="nt">widgets</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">laughing_jackal</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">image</span>
+<span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">jackal</span>
 </code></pre></div>
 <p>Now you have a widget defined called <em>laughing_jackal</em> that you can add
 to any slide. (Note that this example is simple, but any widget type
@@ -33913,12 +33913,12 @@ slide, etc.)</p>
 <h3 id="express-config">"Express" config</h3>
 <p>If you just want to add your widget to whichever slide is current on the
 default display, you can use the "express" config, like this:</p>
-<div class="highlight"><pre><span></span><code>#! widgets:
-#!   laughing_jackal: []
-#!   another_widget: []
-widget_player:
-  some_event: laughing_jackal
-  some_other_event: another_widget
+<div class="highlight"><pre><span></span><code><span class="c1">#! widgets:</span>
+<span class="c1">#!   laughing_jackal: []</span>
+<span class="c1">#!   another_widget: []</span>
+<span class="nt">widget_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">some_event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">laughing_jackal</span>
+<span class="w">  </span><span class="nt">some_other_event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">another_widget</span>
 </code></pre></div>
 <p>With the config above, when the event <em>some_event</em> is posted, the widget
 called <em>laughing_jackal</em> will be added to the current slide on the
@@ -33935,36 +33935,36 @@ image.)</p>
 <p>If you want to build a slide and include a reusable widget, you can
 reference the widget's name in your slide config by declaring <code>widget:</code>
 instead of <code>type:</code>.</p>
-<div class="highlight"><pre><span></span><code>widgets:
-  jackpot_value_widget:
-    - type: text
-      text: (jackpot_total)
-      style: medium
-slides:
-  hero_hurryup:
-    - type: text
-      text: &quot;Hurry Up!&quot;
-    - type: text
-      text: &quot;Jackpot:&quot;
-    - widget: jackpot_value_widget
+<div class="highlight"><pre><span></span><code><span class="nt">widgets</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">jackpot_value_widget</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(jackpot_total)</span>
+<span class="w">      </span><span class="nt">style</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">medium</span>
+<span class="nt">slides</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">hero_hurryup</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Hurry</span><span class="nv"> </span><span class="s">Up!&quot;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Jackpot:&quot;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">widget</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">jackpot_value_widget</span>
 
-slide_player:
-  show_hero_slide: hero_hurryup
-##! test
-#! post show_hero_slide
-#! advance_time_and_run .1
-#! assert_text_on_top_slide &quot;Hurry Up!&quot;
+<span class="nt">slide_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">show_hero_slide</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hero_hurryup</span>
+<span class="c1">##! test</span>
+<span class="c1">#! post show_hero_slide</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_text_on_top_slide &quot;Hurry Up!&quot;</span>
 </code></pre></div>
 <h3 id="adding-a-widget-to-a-specific-slide-by-event">Adding a widget to a specific slide (by event)</h3>
 <p>If you want to add your widget to a particular slide (versus whatever
 slide happens to be showing at the moment), you can do so by specifying
 that slide name in the <code>widget_player:</code>. For example:</p>
-<div class="highlight"><pre><span></span><code>#! widgets:
-#!   laughing_jackal: []
-widget_player:
-  some_event:               # event that will trigger this widget to show
-    laughing_jackal:        # widget you want to show
-      slide: my_slide
+<div class="highlight"><pre><span></span><code><span class="c1">#! widgets:</span>
+<span class="c1">#!   laughing_jackal: []</span>
+<span class="nt">widget_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">some_event</span><span class="p">:</span><span class="w">               </span><span class="c1"># event that will trigger this widget to show</span>
+<span class="w">    </span><span class="nt">laughing_jackal</span><span class="p">:</span><span class="w">        </span><span class="c1"># widget you want to show</span>
+<span class="w">      </span><span class="nt">slide</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my_slide</span>
 </code></pre></div>
 <p>In the example above, when the event <em>some_event</em> is posted, the widget
 <em>laughing_jackal</em> will be added to the slide called <em>my_slide</em>. If
@@ -33974,30 +33974,30 @@ be added, and it will be there the next time that slide is shown.</p>
 <p>Remember you can add as many events and widgets as you want to the
 <code>widget_player:</code> section of your config, and you can even mix-and-match
 formats, like this:</p>
-<div class="highlight"><pre><span></span><code>#! widgets:
-#!   laughing_jackal: []
-#!   another_widget: []
-widget_player:
-  some_event:
-    laughing_jackal:
-      slide: my_slide
-  some_other_event: another_widget
+<div class="highlight"><pre><span></span><code><span class="c1">#! widgets:</span>
+<span class="c1">#!   laughing_jackal: []</span>
+<span class="c1">#!   another_widget: []</span>
+<span class="nt">widget_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">some_event</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">laughing_jackal</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">slide</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my_slide</span>
+<span class="w">  </span><span class="nt">some_other_event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">another_widget</span>
 </code></pre></div>
 <h3 id="adding-a-widget-to-a-specific-display-target">Adding a widget to a specific display target</h3>
 <p>Rather than specifying a particular slide to add your widget to, you can
 target a display, and the widget will be added "on top" of whatever
 slide is currently being shown:</p>
-<div class="highlight"><pre><span></span><code>#! widgets:
-#!   laughing_jackal: []
-#! displays:
-#!   display1:
-#!     width: 1366
-#!     height: 768
-#!     default: true
-widget_player:
-  some_event:
-    laughing_jackal:
-      target: display1
+<div class="highlight"><pre><span></span><code><span class="c1">#! widgets:</span>
+<span class="c1">#!   laughing_jackal: []</span>
+<span class="c1">#! displays:</span>
+<span class="c1">#!   display1:</span>
+<span class="c1">#!     width: 1366</span>
+<span class="c1">#!     height: 768</span>
+<span class="c1">#!     default: true</span>
+<span class="nt">widget_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">some_event</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">laughing_jackal</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">display1</span>
 </code></pre></div>
 <p>Remember in MPF, display targets are the names of a display (dmd,
 window, etc.).</p>
@@ -34012,13 +34012,13 @@ show step.</p>
 <p>For example, if you use a widget for the tilt warning like in the
 previous example, you'd probably want that widget to be removed after a
 few seconds, which you could do like this:</p>
-<div class="highlight"><pre><span></span><code>#! widgets:
-#!   tilt_warning: []
-widget_player:
-  tilt_warning:              # event
-    tilt_warning:            # widget name
-      widget_settings:       # additional settings to be added / updated
-        expire: 2s
+<div class="highlight"><pre><span></span><code><span class="c1">#! widgets:</span>
+<span class="c1">#!   tilt_warning: []</span>
+<span class="nt">widget_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">tilt_warning</span><span class="p">:</span><span class="w">              </span><span class="c1"># event</span>
+<span class="w">    </span><span class="nt">tilt_warning</span><span class="p">:</span><span class="w">            </span><span class="c1"># widget name</span>
+<span class="w">      </span><span class="nt">widget_settings</span><span class="p">:</span><span class="w">       </span><span class="c1"># additional settings to be added / updated</span>
+<span class="w">        </span><span class="nt">expire</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2s</span>
 </code></pre></div>
 <p>(Technically speaking, if you were going to show a tilt warning widget,
 you'd probably also want to play a sound and maybe flash all the lights
@@ -34035,13 +34035,13 @@ animations, widget_styles, z (layer), etc.)</p>
 <p>You can also use the widget player to remove named widgets from a slide
 that had been previous added. To do this, just add an <code>action: remove</code>
 setting to the widget player, like this:</p>
-<div class="highlight"><pre><span></span><code>#! widgets:
-#!   laughing_jackal: []
-widget_player:
-  show_jackal: laughing_jackal
-  hide_jackal:
-    laughing_jackal:
-      action: remove
+<div class="highlight"><pre><span></span><code><span class="c1">#! widgets:</span>
+<span class="c1">#!   laughing_jackal: []</span>
+<span class="nt">widget_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">show_jackal</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">laughing_jackal</span>
+<span class="w">  </span><span class="nt">hide_jackal</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">laughing_jackal</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">remove</span>
 </code></pre></div>
 <p>The config above will add the <em>laughing_jackal</em> to the current slide on
 the default display when the event <em>show_jackal</em> is posted, and then it
@@ -34051,20 +34051,20 @@ will remove it when the event <em>hide_jackal</em> is posted.</p>
 widget. But you can actually define multiple widgets in a named widget
 (essentially meaning that your named widget is really a named group of
 widgets. For example:</p>
-<div class="highlight"><pre><span></span><code>widgets:
-  widget3:
-    - type: text
-      text: HI
-      color: ff0000
-      font_size: 100
-    - type: text
-      text: THERE
-      color: 00ff66
-      font_size: 100
-    - type: text
-      text: EVERYONE!
-      color: ff00ff
-      font_size: 100
+<div class="highlight"><pre><span></span><code><span class="nt">widgets</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">widget3</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HI</span>
+<span class="w">      </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ff0000</span>
+<span class="w">      </span><span class="nt">font_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">THERE</span>
+<span class="w">      </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">00ff66</span>
+<span class="w">      </span><span class="nt">font_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EVERYONE!</span>
+<span class="w">      </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ff00ff</span>
+<span class="w">      </span><span class="nt">font_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
 </code></pre></div>
 <p>You play, show, or hide this "widget" in the same way as every other
 example in this guide, except in this case, playing <em>widget3</em> will
@@ -34089,23 +34089,23 @@ MPF. The important takeaways are:</p>
 <p>You can also add multiple named widgets from a single event. This is
 nice if you want to add widgets to multiple displays or slides at the
 same time. For example:</p>
-<div class="highlight"><pre><span></span><code>#! widgets:
-#!   widget1: []
-#!   widget2: []
-#! displays:
-#!   lcd:
-#!     width: 1366
-#!     height: 768
-#!     default: true
-#!   dmd:
-#!     width: 640
-#!     height: 480
-widget_player:
-  some_event:
-    widget1:
-      target: dmd
-    widget2:
-      target: lcd
+<div class="highlight"><pre><span></span><code><span class="c1">#! widgets:</span>
+<span class="c1">#!   widget1: []</span>
+<span class="c1">#!   widget2: []</span>
+<span class="c1">#! displays:</span>
+<span class="c1">#!   lcd:</span>
+<span class="c1">#!     width: 1366</span>
+<span class="c1">#!     height: 768</span>
+<span class="c1">#!     default: true</span>
+<span class="c1">#!   dmd:</span>
+<span class="c1">#!     width: 640</span>
+<span class="c1">#!     height: 480</span>
+<span class="nt">widget_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">some_event</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">widget1</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dmd</span>
+<span class="w">    </span><span class="nt">widget2</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lcd</span>
 </code></pre></div>
 <p>Note that if you do this, the structure of YAML requires that you have
 at least one setting under each widget name, so you can just add a
@@ -34120,64 +34120,64 @@ with the standard
 <a href="../text/text_dynamic/">dynamic text</a> formatting.</p>
 <p>For example, using the player variable "hero_class" to pick a text
 image (but could be an image widget as well):</p>
-<div class="highlight"><pre><span></span><code>widgets:
-  hero_portrait_rogue:
-    - type: text
-      text: &quot;Portrait Rogue&quot;
-  hero_portrait_bard:
-    - type: text
-      text: &quot;Portrait Bard&quot;
-  hero_portrait_mage:
-    - type: text
-      text: &quot;Portrait Mage&quot;
-slides:
-  hero_slide:
-    - type: text
-      text: (player|name)
-    - type: text
-      text: Level (player|level)
-    - widget: hero_portrait_(current_player.hero_class)
-slide_player:
-  show_hero_slide: hero_slide
+<div class="highlight"><pre><span></span><code><span class="nt">widgets</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">hero_portrait_rogue</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Portrait</span><span class="nv"> </span><span class="s">Rogue&quot;</span>
+<span class="w">  </span><span class="nt">hero_portrait_bard</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Portrait</span><span class="nv"> </span><span class="s">Bard&quot;</span>
+<span class="w">  </span><span class="nt">hero_portrait_mage</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Portrait</span><span class="nv"> </span><span class="s">Mage&quot;</span>
+<span class="nt">slides</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">hero_slide</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(player|name)</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Level (player|level)</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">widget</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hero_portrait_(current_player.hero_class)</span>
+<span class="nt">slide_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">show_hero_slide</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hero_slide</span>
 
-##! mode: base
-variable_player:
-  set_var_rogue:
-    hero_class:
-      action: set
-      string: &quot;rogue&quot;
-##! test
-#! start_game
-#! start_mode base
-#! post set_var_rogue
-#! advance_time_and_run .1
-#! post show_hero_slide
-#! advance_time_and_run .1
-#! assert_text_on_top_slide &quot;Portrait Rogue&quot;
+<span class="c1">##! mode: base</span>
+<span class="nt">variable_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">set_var_rogue</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">hero_class</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">set</span>
+<span class="w">      </span><span class="nt">string</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;rogue&quot;</span>
+<span class="c1">##! test</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! start_mode base</span>
+<span class="c1">#! post set_var_rogue</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! post show_hero_slide</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_text_on_top_slide &quot;Portrait Rogue&quot;</span>
 </code></pre></div>
 <p>You can also use the parameters of an event to determine the widget to
 include. In the following example from a game with different multiballs,
 the event <code>mball_lock_lit</code> might post with either "angel"
 or "demon" as the <code>mball_name</code> parameter.</p>
-<div class="highlight"><pre><span></span><code>slide_player:
-  mball_lock_lit: mball_lock_slide
-slides:
-  mball_lock_slide:
-    widgets:
-      - type: text
-        text: Lock is Lit
-      - widget: lock_lit_(mball_name)
-widgets:
-  lock_lit_angel:
-    - type: text
-      text: Angels Anarchy
-    - type: image
-      image: bg_locklit_angels
-  lock_lit_demon:
-    - type: text
-      text: Demons Derby
-    - type: image
-      image: bg_locklit_demons
+<div class="highlight"><pre><span></span><code><span class="nt">slide_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">mball_lock_lit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mball_lock_slide</span>
+<span class="nt">slides</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">mball_lock_slide</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">widgets</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Lock is Lit</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">widget</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lock_lit_(mball_name)</span>
+<span class="nt">widgets</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">lock_lit_angel</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Angels Anarchy</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">image</span>
+<span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bg_locklit_angels</span>
+<span class="w">  </span><span class="nt">lock_lit_demon</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Demons Derby</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">image</span>
+<span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bg_locklit_demons</span>
 </code></pre></div>
 <hr />
 <div class="admonition question">

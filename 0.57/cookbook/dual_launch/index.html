@@ -33583,75 +33583,75 @@ playfield, and it won't take a list. This means at the start of each
 player round, the game can only kick up a ball in the default device.</p>
 <p>Here's what the hardware configuration for two plungers (and troughs)
 would look like:</p>
-<div class="highlight"><pre><span></span><code>##! no_fake_game
-#config_version=5
-switches:
-  # Cabinet Buttons
-  s_start_button:
-    number:
-    tags: start
-  s_left_launch_button:
-    number:
-  s_right_launch_button:
-    number:
-  # Plunger Trough
-  s_left_plunger_lane:
-    number:
-  s_right_plunger_lane:
-    number:
-  s_left_trough1:
-    number:
-  s_left_trough2:
-    number:
-  s_right_trough1:
-    number:
-  s_right_trough2:
-    number:
+<div class="highlight"><pre><span></span><code><span class="c1">##! no_fake_game</span>
+<span class="c1">#config_version=5</span>
+<span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># Cabinet Buttons</span>
+<span class="w">  </span><span class="nt">s_start_button</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start</span>
+<span class="w">  </span><span class="nt">s_left_launch_button</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_right_launch_button</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># Plunger Trough</span>
+<span class="w">  </span><span class="nt">s_left_plunger_lane</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_right_plunger_lane</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_left_trough1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_left_trough2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_right_trough1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_right_trough2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
 
-coils:
-  c_left_plunger:
-    number:
-    default_pulse_ms: 20
-  c_left_trough_eject:
-    number:
-    default_pulse_ms: 20
-  c_right_plunger:
-    number:
-    default_pulse_ms: 20
-  c_right_trough_eject:
-    number:
-    default_pulse_ms: 20
+<span class="nt">coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">c_left_plunger</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">default_pulse_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span>
+<span class="w">  </span><span class="nt">c_left_trough_eject</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">default_pulse_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span>
+<span class="w">  </span><span class="nt">c_right_plunger</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">default_pulse_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span>
+<span class="w">  </span><span class="nt">c_right_trough_eject</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">default_pulse_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span>
 
-ball_devices:
-  bd_left_trough:
-    ball_switches: s_left_trough1, s_left_trough2
-    eject_coil: c_left_trough_eject
-    tags: trough, home, drain
-    eject_targets: bd_left_plunger
-  bd_left_plunger:
-    ball_switches: s_left_plunger_lane
-    eject_coil: c_left_plunger
-    player_controlled_eject_event: s_left_launch_button_active
-    eject_timeouts: 1s
-  bd_right_trough:
-    ball_switches: s_right_trough1, s_right_trough2
-    eject_coil: c_right_trough_eject
-    tags: trough, home, drain
-    eject_targets: bd_right_plunger
-  bd_right_plunger:
-    ball_switches: s_right_plunger_lane
-    eject_coil: c_right_plunger
-    player_controlled_eject_event: s_right_launch_button_active
-    eject_timeouts: 1s
+<span class="nt">ball_devices</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">bd_left_trough</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">ball_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_left_trough1, s_left_trough2</span>
+<span class="w">    </span><span class="nt">eject_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_left_trough_eject</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">trough, home, drain</span>
+<span class="w">    </span><span class="nt">eject_targets</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bd_left_plunger</span>
+<span class="w">  </span><span class="nt">bd_left_plunger</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">ball_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_left_plunger_lane</span>
+<span class="w">    </span><span class="nt">eject_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_left_plunger</span>
+<span class="w">    </span><span class="nt">player_controlled_eject_event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_left_launch_button_active</span>
+<span class="w">    </span><span class="nt">eject_timeouts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<span class="w">  </span><span class="nt">bd_right_trough</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">ball_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_right_trough1, s_right_trough2</span>
+<span class="w">    </span><span class="nt">eject_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_right_trough_eject</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">trough, home, drain</span>
+<span class="w">    </span><span class="nt">eject_targets</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bd_right_plunger</span>
+<span class="w">  </span><span class="nt">bd_right_plunger</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">ball_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_right_plunger_lane</span>
+<span class="w">    </span><span class="nt">eject_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_right_plunger</span>
+<span class="w">    </span><span class="nt">player_controlled_eject_event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_right_launch_button_active</span>
+<span class="w">    </span><span class="nt">eject_timeouts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
 
-playfields:
-  playfield:
-    default_source_device: bd_left_plunger
-    tags: default
+<span class="nt">playfields</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">playfield</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">default_source_device</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bd_left_plunger</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span>
 
-virtual_platform_start_active_switches: s_left_trough1, s_left_trough2, s_right_trough1, s_right_trough2
-##! test
-#! start_game
+<span class="nt">virtual_platform_start_active_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_left_trough1, s_left_trough2, s_right_trough1, s_right_trough2</span>
+<span class="c1">##! test</span>
+<span class="c1">#! start_game</span>
 </code></pre></div>
 <p>It is the game mode that handles the ball start procedure and assumes a
 single launch device. Now MPF's game mode does a lot more than that, so
@@ -33663,17 +33663,17 @@ library you'll see a directory called mpf/modes/game. This is just like
 the modes directory in your own game definitions. Let's look at the
 config file first
 (<a href="https://github.com/missionpinball/mpf/blob/dev/mpf/modes/game/config/game.yaml">mpf/modes/game/config/game.yaml</a>):</p>
-<div class="highlight"><pre><span></span><code>##! mode: game
-#config_version=5
-mode:
-  start_events: game_start
-  stop_events: game_ended, service_mode_entered
-  priority: 20
-  code: mpf.modes.game.code.game.Game
-  game_mode: false  # this is the game so it is started outside of a game
-  stop_on_ball_end: false
-##! test
-#! start_game
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: game</span>
+<span class="c1">#config_version=5</span>
+<span class="nt">mode</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">start_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">game_start</span>
+<span class="w">  </span><span class="nt">stop_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">game_ended, service_mode_entered</span>
+<span class="w">  </span><span class="nt">priority</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span>
+<span class="w">  </span><span class="nt">code</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mpf.modes.game.code.game.Game</span>
+<span class="w">  </span><span class="nt">game_mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w">  </span><span class="c1"># this is the game so it is started outside of a game</span>
+<span class="w">  </span><span class="nt">stop_on_ball_end</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="c1">##! test</span>
+<span class="c1">#! start_game</span>
 </code></pre></div>
 <p>This is pretty straight-forward. First the standard mode settings, and
 then it points to the source for a Python module that defines a class
@@ -33765,186 +33765,186 @@ ball for each plunger. Again, a weird thing to do, but a simple example
 of customizing the game mode when you run up against a default that
 doesn't work for your design.</p>
 <p>Here is a complete example:</p>
-<div class="highlight"><pre><span></span><code>##! no_fake_game
-#config_version=5
-switches:
-  # Cabinet Buttons
-  s_start_button:
-    number:
-    tags: start
-  s_left_launch_button:
-    number:
-  s_right_launch_button:
-    number:
-  # Plunger Trough
-  s_left_plunger_lane:
-    number:
-  s_right_plunger_lane:
-    number:
-  s_left_trough1:
-    number:
-  s_left_trough2:
-    number:
-  s_right_trough1:
-    number:
-  s_right_trough2:
-    number:
+<div class="highlight"><pre><span></span><code><span class="c1">##! no_fake_game</span>
+<span class="c1">#config_version=5</span>
+<span class="nt">switches</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># Cabinet Buttons</span>
+<span class="w">  </span><span class="nt">s_start_button</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start</span>
+<span class="w">  </span><span class="nt">s_left_launch_button</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_right_launch_button</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># Plunger Trough</span>
+<span class="w">  </span><span class="nt">s_left_plunger_lane</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_right_plunger_lane</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_left_trough1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_left_trough2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_right_trough1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_right_trough2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
 
-coils:
-  c_left_plunger:
-    number:
-    default_pulse_ms: 20
-  c_left_trough_eject:
-    number:
-    default_pulse_ms: 20
-  c_right_plunger:
-    number:
-    default_pulse_ms: 20
-  c_right_trough_eject:
-    number:
-    default_pulse_ms: 20
+<span class="nt">coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">c_left_plunger</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">default_pulse_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span>
+<span class="w">  </span><span class="nt">c_left_trough_eject</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">default_pulse_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span>
+<span class="w">  </span><span class="nt">c_right_plunger</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">default_pulse_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span>
+<span class="w">  </span><span class="nt">c_right_trough_eject</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">default_pulse_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span>
 
-ball_devices:
-  bd_left_trough:
-    ball_switches: s_left_trough1, s_left_trough2
-    eject_coil: c_left_trough_eject
-    tags: trough, home, drain
-    eject_targets: bd_left_plunger
-  bd_left_plunger:
-    ball_switches: s_left_plunger_lane
-    eject_coil: c_left_plunger
-    eject_timeouts: 1s
-  bd_right_trough:
-    ball_switches: s_right_trough1, s_right_trough2
-    eject_coil: c_right_trough_eject
-    tags: trough, home, drain
-    eject_targets: bd_right_plunger
-  bd_right_plunger:
-    ball_switches: s_right_plunger_lane
-    eject_coil: c_right_plunger
-    eject_timeouts: 1s
+<span class="nt">ball_devices</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">bd_left_trough</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">ball_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_left_trough1, s_left_trough2</span>
+<span class="w">    </span><span class="nt">eject_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_left_trough_eject</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">trough, home, drain</span>
+<span class="w">    </span><span class="nt">eject_targets</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bd_left_plunger</span>
+<span class="w">  </span><span class="nt">bd_left_plunger</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">ball_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_left_plunger_lane</span>
+<span class="w">    </span><span class="nt">eject_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_left_plunger</span>
+<span class="w">    </span><span class="nt">eject_timeouts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<span class="w">  </span><span class="nt">bd_right_trough</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">ball_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_right_trough1, s_right_trough2</span>
+<span class="w">    </span><span class="nt">eject_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_right_trough_eject</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">trough, home, drain</span>
+<span class="w">    </span><span class="nt">eject_targets</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bd_right_plunger</span>
+<span class="w">  </span><span class="nt">bd_right_plunger</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">ball_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_right_plunger_lane</span>
+<span class="w">    </span><span class="nt">eject_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_right_plunger</span>
+<span class="w">    </span><span class="nt">eject_timeouts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
 
-playfields:
-  playfield:
-    default_source_device: bd_left_plunger
-    tags: default
+<span class="nt">playfields</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">playfield</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">default_source_device</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bd_left_plunger</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span>
 
-virtual_platform_start_active_switches: s_left_trough1, s_left_trough2, s_right_trough1, s_right_trough2
+<span class="nt">virtual_platform_start_active_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_left_trough1, s_left_trough2, s_right_trough1, s_right_trough2</span>
 
-##! mode: game
-#config_version=5
-mode:
-  start_events: game_start
-  stop_events: game_ended, service_mode_entered
-  priority: 20
-  code: modes.game.code.game.MyGameName
-  game_mode: false  # this is the game so it is started outside of a game
-  stop_on_ball_end: false
+<span class="c1">##! mode: game</span>
+<span class="c1">#config_version=5</span>
+<span class="nt">mode</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">start_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">game_start</span>
+<span class="w">  </span><span class="nt">stop_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">game_ended, service_mode_entered</span>
+<span class="w">  </span><span class="nt">priority</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span>
+<span class="w">  </span><span class="nt">code</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">modes.game.code.game.MyGameName</span>
+<span class="w">  </span><span class="nt">game_mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w">  </span><span class="c1"># this is the game so it is started outside of a game</span>
+<span class="w">  </span><span class="nt">stop_on_ball_end</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 
-##! code: modes/game/code/game.py
-from mpf.modes.game.code.game import Game
-from mpf.core.utility_functions import Util
+<span class="c1">##! code: modes/game/code/game.py</span>
+<span class="l l-Scalar l-Scalar-Plain">from mpf.modes.game.code.game import Game</span>
+<span class="l l-Scalar l-Scalar-Plain">from mpf.core.utility_functions import Util</span>
 
-class MyGameName(Game):
-  def __init__(self, *arg, **kwargs):
-     super().__init__(*arg, **kwargs)
-     self.log.debug(&quot;MyGameName init&quot;)
+<span class="nt">class MyGameName(Game)</span><span class="p">:</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">def __init__(self, *arg, **kwargs)</span><span class="p p-Indicator">:</span>
+<span class="w">     </span><span class="l l-Scalar l-Scalar-Plain">super().__init__(*arg, **kwargs)</span>
+<span class="w">     </span><span class="l l-Scalar l-Scalar-Plain">self.log.debug(&quot;MyGameName init&quot;)</span>
 
-  async def _start_ball(self, is_extra_ball=False):
-     &quot;&quot;&quot;Perform ball start procedure.
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">async def _start_ball(self, is_extra_ball=False)</span><span class="p p-Indicator">:</span>
+<span class="w">     </span><span class="s">&quot;&quot;&quot;Perform</span><span class="nv"> </span><span class="s">ball</span><span class="nv"> </span><span class="s">start</span><span class="nv"> </span><span class="s">procedure.</span>
 
-     Note this method is called for each ball that starts, even if it&#39;s
-     after a Shoot Again scenario for the same player.
+<span class="w">     </span><span class="s">Note</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">method</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">called</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">each</span><span class="nv"> </span><span class="s">ball</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">starts,</span><span class="nv"> </span><span class="s">even</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">it&#39;s</span>
+<span class="w">     </span><span class="s">after</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">Shoot</span><span class="nv"> </span><span class="s">Again</span><span class="nv"> </span><span class="s">scenario</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">same</span><span class="nv"> </span><span class="s">player.</span>
 
-     Posts a queue event called *ball_starting*, giving other modules the
-     opportunity to do things before the ball actually starts. Once that
-     event is clear, this method calls :meth:`ball_started`.
-     &quot;&quot;&quot;
-     event_args = {
-         &quot;player&quot;: self.player.number,
-         &quot;ball&quot;: self.player.ball,
-         &quot;balls_remaining&quot;: self.balls_per_game - self.player.ball,
-         &quot;is_extra_ball&quot;: is_extra_ball}
+<span class="w">     </span><span class="s">Posts</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">queue</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">called</span><span class="nv"> </span><span class="s">*ball_starting*,</span><span class="nv"> </span><span class="s">giving</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">modules</span><span class="nv"> </span><span class="s">the</span>
+<span class="w">     </span><span class="s">opportunity</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">do</span><span class="nv"> </span><span class="s">things</span><span class="nv"> </span><span class="s">before</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">ball</span><span class="nv"> </span><span class="s">actually</span><span class="nv"> </span><span class="s">starts.</span><span class="nv"> </span><span class="s">Once</span><span class="nv"> </span><span class="s">that</span>
+<span class="w">     </span><span class="s">event</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">clear,</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">method</span><span class="nv"> </span><span class="s">calls</span><span class="nv"> </span><span class="s">:meth:`ball_started`.</span>
+<span class="w">     </span><span class="s">&quot;&quot;&quot;</span>
+<span class="w">     </span><span class="l l-Scalar l-Scalar-Plain">event_args = {</span>
+<span class="w">         </span><span class="l l-Scalar l-Scalar-Plain">&quot;player&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">self.player.number,</span>
+<span class="w">         </span><span class="l l-Scalar l-Scalar-Plain">&quot;ball&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">self.player.ball,</span>
+<span class="w">         </span><span class="l l-Scalar l-Scalar-Plain">&quot;balls_remaining&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">self.balls_per_game - self.player.ball,</span>
+<span class="w">         </span><span class="l l-Scalar l-Scalar-Plain">&quot;is_extra_ball&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">is_extra_ball}</span>
 
-     self.debug_log(&quot;***************************************************&quot;)
-     self.debug_log(&quot;****************** BALL STARTING ******************&quot;)
-     self.debug_log(&quot;**                                               **&quot;)
-     self.debug_log(&quot;**    Player: {}    Ball: {}   Score: {}&quot;.format(self.player.number,
-                                                                      self.player.ball,
-                                                                      self.player.score
-                                                                      ).ljust(49) + &#39;**&#39;)
-     self.debug_log(&quot;**                                               **&quot;)
-     self.debug_log(&quot;***************************************************&quot;)
-     self.debug_log(&quot;***************************************************&quot;)
+<span class="w">     </span><span class="l l-Scalar l-Scalar-Plain">self.debug_log(&quot;***************************************************&quot;)</span>
+<span class="w">     </span><span class="l l-Scalar l-Scalar-Plain">self.debug_log(&quot;****************** BALL STARTING ******************&quot;)</span>
+<span class="w">     </span><span class="l l-Scalar l-Scalar-Plain">self.debug_log(&quot;**                                               **&quot;)</span>
+<span class="w">     </span><span class="l l-Scalar l-Scalar-Plain">self.debug_log(&quot;**    Player</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="p p-Indicator">{}</span><span class="w">    </span><span class="nt">Ball</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span><span class="w">   </span><span class="nt">Score</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span><span class="s">&quot;.format(self.player.number,</span>
+<span class="w">                                                                      </span><span class="s">self.player.ball,</span>
+<span class="w">                                                                      </span><span class="s">self.player.score</span>
+<span class="w">                                                                      </span><span class="s">).ljust(49)</span><span class="nv"> </span><span class="s">+</span><span class="nv"> </span><span class="s">&#39;**&#39;)</span>
+<span class="w">     </span><span class="s">self.debug_log(&quot;</span><span class="err">**</span><span class="w">                                               </span><span class="err">**</span><span class="s">&quot;)</span>
+<span class="w">     </span><span class="s">self.debug_log(&quot;</span><span class="err">***************************************************</span><span class="s">&quot;)</span>
+<span class="w">     </span><span class="s">self.debug_log(&quot;</span><span class="err">***************************************************</span><span class="s">&quot;)</span>
 
-     await self.machine.events.post_async(&#39;ball_will_start&#39;, **event_args)
-     &#39;&#39;&#39;event: ball_will_start
-     desc: The ball is about to start. This event is posted just before
-     :doc:`ball_starting`.
-     args:
-     ball: The ball number
-     balls_remaining: The number of balls left in the game (not including this one)
-     is_extra_ball: True if this ball is an extra ball (default False)
-     player: The player number&#39;&#39;&#39;
+<span class="w">     </span><span class="s">await</span><span class="nv"> </span><span class="s">self.machine.events.post_async(&#39;ball_will_start&#39;,</span><span class="nv"> </span><span class="s">**event_args)</span>
+<span class="w">     </span><span class="s">&#39;&#39;&#39;event:</span><span class="nv"> </span><span class="s">ball_will_start</span>
+<span class="w">     </span><span class="s">desc:</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">ball</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">start.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">posted</span><span class="nv"> </span><span class="s">just</span><span class="nv"> </span><span class="s">before</span>
+<span class="w">     </span><span class="s">:doc:`ball_starting`.</span>
+<span class="w">     </span><span class="s">args:</span>
+<span class="w">     </span><span class="s">ball:</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">ball</span><span class="nv"> </span><span class="s">number</span>
+<span class="w">     </span><span class="s">balls_remaining:</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">balls</span><span class="nv"> </span><span class="s">left</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">game</span><span class="nv"> </span><span class="s">(not</span><span class="nv"> </span><span class="s">including</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">one)</span>
+<span class="w">     </span><span class="s">is_extra_ball:</span><span class="nv"> </span><span class="s">True</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">ball</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">extra</span><span class="nv"> </span><span class="s">ball</span><span class="nv"> </span><span class="s">(default</span><span class="nv"> </span><span class="s">False)</span>
+<span class="w">     </span><span class="s">player:</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">player</span><span class="nv"> </span><span class="s">number&#39;&#39;&#39;</span>
 
-     await self.machine.events.post_queue_async(&#39;ball_starting&#39;, **event_args)
-     &#39;&#39;&#39;event: ball_starting
-     desc: A ball is starting. This is a queue event, so the ball won&#39;t
-     actually start until the queue is cleared.
-     args:
-     ball: The ball number
-     balls_remaining: The number of balls left in the game (not including this one)
-     is_extra_ball: True if this ball is an extra ball (default False)
-     player: The player number&#39;&#39;&#39;
+<span class="w">     </span><span class="s">await</span><span class="nv"> </span><span class="s">self.machine.events.post_queue_async(&#39;ball_starting&#39;,</span><span class="nv"> </span><span class="s">**event_args)</span>
+<span class="w">     </span><span class="s">&#39;&#39;&#39;event:</span><span class="nv"> </span><span class="s">ball_starting</span>
+<span class="w">     </span><span class="s">desc:</span><span class="nv"> </span><span class="s">A</span><span class="nv"> </span><span class="s">ball</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">starting.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">queue</span><span class="nv"> </span><span class="s">event,</span><span class="nv"> </span><span class="s">so</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">ball</span><span class="nv"> </span><span class="s">won&#39;t</span>
+<span class="w">     </span><span class="s">actually</span><span class="nv"> </span><span class="s">start</span><span class="nv"> </span><span class="s">until</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">queue</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">cleared.</span>
+<span class="w">     </span><span class="s">args:</span>
+<span class="w">     </span><span class="s">ball:</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">ball</span><span class="nv"> </span><span class="s">number</span>
+<span class="w">     </span><span class="s">balls_remaining:</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">balls</span><span class="nv"> </span><span class="s">left</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">game</span><span class="nv"> </span><span class="s">(not</span><span class="nv"> </span><span class="s">including</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">one)</span>
+<span class="w">     </span><span class="s">is_extra_ball:</span><span class="nv"> </span><span class="s">True</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">ball</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">extra</span><span class="nv"> </span><span class="s">ball</span><span class="nv"> </span><span class="s">(default</span><span class="nv"> </span><span class="s">False)</span>
+<span class="w">     </span><span class="s">player:</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">player</span><span class="nv"> </span><span class="s">number&#39;&#39;&#39;</span>
 
-     # register handlers to watch for ball drain and live ball removed
-     self.add_mode_event_handler(&#39;ball_drain&#39;, self.ball_drained)
+<span class="w">     </span><span class="s">#</span><span class="nv"> </span><span class="s">register</span><span class="nv"> </span><span class="s">handlers</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">watch</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">ball</span><span class="nv"> </span><span class="s">drain</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">live</span><span class="nv"> </span><span class="s">ball</span><span class="nv"> </span><span class="s">removed</span>
+<span class="w">     </span><span class="s">self.add_mode_event_handler(&#39;ball_drain&#39;,</span><span class="nv"> </span><span class="s">self.ball_drained)</span>
 
-     self.balls_in_play = 1
+<span class="w">     </span><span class="s">self.balls_in_play</span><span class="nv"> </span><span class="s">=</span><span class="nv"> </span><span class="s">1</span>
 
-     self.debug_log(&quot;ball_started for Ball %s&quot;, self.player.ball)
+<span class="w">     </span><span class="s">self.debug_log(&quot;</span><span class="l l-Scalar l-Scalar-Plain">ball_started for Ball %s&quot;, self.player.ball)</span>
 
-     await self.machine.events.post_async(&#39;ball_started&#39;, **event_args)
-     &#39;&#39;&#39;event: ball_started
-     desc: A new ball has started.
-     args:
-     ball: The ball number
-     balls_remaining: The number of balls left in the game (not including this one)
-     is_extra_ball: True if this ball is an extra ball (default False)
-     player: The player number&#39;&#39;&#39;
+<span class="w">     </span><span class="l l-Scalar l-Scalar-Plain">await self.machine.events.post_async(&#39;ball_started&#39;, **event_args)</span>
+<span class="w">     </span><span class="s">&#39;</span><span class="se">&#39;&#39;</span><span class="s">event:</span><span class="nv"> </span><span class="s">ball_started</span>
+<span class="w">     </span><span class="s">desc:</span><span class="nv"> </span><span class="s">A</span><span class="nv"> </span><span class="s">new</span><span class="nv"> </span><span class="s">ball</span><span class="nv"> </span><span class="s">has</span><span class="nv"> </span><span class="s">started.</span>
+<span class="w">     </span><span class="s">args:</span>
+<span class="w">     </span><span class="s">ball:</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">ball</span><span class="nv"> </span><span class="s">number</span>
+<span class="w">     </span><span class="s">balls_remaining:</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">balls</span><span class="nv"> </span><span class="s">left</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">game</span><span class="nv"> </span><span class="s">(not</span><span class="nv"> </span><span class="s">including</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">one)</span>
+<span class="w">     </span><span class="s">is_extra_ball:</span><span class="nv"> </span><span class="s">True</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">ball</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">extra</span><span class="nv"> </span><span class="s">ball</span><span class="nv"> </span><span class="s">(default</span><span class="nv"> </span><span class="s">False)</span>
+<span class="w">     </span><span class="s">player:</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">player</span><span class="nv"> </span><span class="s">number</span><span class="se">&#39;&#39;</span><span class="s">&#39;</span>
 
-     if self.num_players == 1:
-         await self.machine.events.post_async(&#39;single_player_ball_started&#39;)
-         &#39;&#39;&#39;event: single_player_ball_started
-         desc: A new ball has started, and this is a single player game.&#39;&#39;&#39;
-     else:
-         await self.machine.events.post_async(&#39;multi_player_ball_started&#39;)
-         &#39;&#39;&#39;event: multi_player_ball_started
-         desc: A new ball has started, and this is a multiplayer game.&#39;&#39;&#39;
-         await self.machine.events.post_async(
-             &#39;player_{}_ball_started&#39;.format(self.player.number))
-         &#39;&#39;&#39;event player_(number)_ball_started
-         desc: A new ball has started, and this is a multiplayer game.
-         The player number is the (number) in the event that&#39;s posted.&#39;&#39;&#39;
+<span class="w">     </span><span class="nt">if self.num_players == 1</span><span class="p">:</span>
+<span class="w">         </span><span class="l l-Scalar l-Scalar-Plain">await self.machine.events.post_async(&#39;single_player_ball_started&#39;)</span>
+<span class="w">         </span><span class="l l-Scalar l-Scalar-Plain">&#39;&#39;&#39;event</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">single_player_ball_started</span>
+<span class="w">         </span><span class="nt">desc</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A new ball has started, and this is a single player game.&#39;&#39;&#39;</span>
+<span class="w">     </span><span class="nt">else</span><span class="p">:</span>
+<span class="w">         </span><span class="l l-Scalar l-Scalar-Plain">await self.machine.events.post_async(&#39;multi_player_ball_started&#39;)</span>
+<span class="w">         </span><span class="l l-Scalar l-Scalar-Plain">&#39;&#39;&#39;event</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">multi_player_ball_started</span>
+<span class="w">         </span><span class="nt">desc</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A new ball has started, and this is a multiplayer game.&#39;&#39;&#39;</span>
+<span class="w">         </span><span class="l l-Scalar l-Scalar-Plain">await self.machine.events.post_async(</span>
+<span class="w">             </span><span class="l l-Scalar l-Scalar-Plain">&#39;player_{}_ball_started&#39;.format(self.player.number))</span>
+<span class="w">         </span><span class="s">&#39;</span><span class="se">&#39;&#39;</span><span class="s">event</span><span class="nv"> </span><span class="s">player_(number)_ball_started</span>
+<span class="w">         </span><span class="s">desc:</span><span class="nv"> </span><span class="s">A</span><span class="nv"> </span><span class="s">new</span><span class="nv"> </span><span class="s">ball</span><span class="nv"> </span><span class="s">has</span><span class="nv"> </span><span class="s">started,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">multiplayer</span><span class="nv"> </span><span class="s">game.</span>
+<span class="w">         </span><span class="s">The</span><span class="nv"> </span><span class="s">player</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">(number)</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">that&#39;</span><span class="l l-Scalar l-Scalar-Plain">s posted.&#39;&#39;&#39;</span>
 
-     if not hasattr(self.machine, &quot;playfield&quot;) or not self.machine.playfield:
-         raise AssertionError(&quot;The game did not define default playfield. Did you add tags: default to one of your &quot;
-                              &quot;playfield?&quot;)
+<span class="w">     </span><span class="l l-Scalar l-Scalar-Plain">if not hasattr(self.machine, &quot;playfield&quot;) or not self.machine.playfield</span><span class="p p-Indicator">:</span>
+<span class="w">         </span><span class="l l-Scalar l-Scalar-Plain">raise AssertionError(&quot;The game did not define default playfield. Did you add tags</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default to one of your &quot;</span>
+<span class="w">                              </span><span class="l l-Scalar l-Scalar-Plain">&quot;playfield?&quot;)</span>
 
-     left_switch_pressed_future = self.machine.switch_controller.wait_for_switch(self.machine.switches[&quot;s_left_launch_button&quot;])
-     right_switch_pressed_future = self.machine.switch_controller.wait_for_switch(self.machine.switches[&quot;s_right_launch_button&quot;])
-     first_switch = await Util.race({left_switch_pressed_future: &quot;left&quot;, right_switch_pressed_future: &quot;right&quot;})
-     if first_switch == &quot;left&quot;:
-         self.machine.playfield.add_ball(source_device=self.machine.ball_devices[&#39;bd_left_plunger&#39;], player_controlled=True)
-     else:
-         self.machine.playfield.add_ball(source_device=self.machine.ball_devices[&#39;bd_right_plunger&#39;], player_controlled=True)
+<span class="w">     </span><span class="l l-Scalar l-Scalar-Plain">left_switch_pressed_future = self.machine.switch_controller.wait_for_switch(self.machine.switches[&quot;s_left_launch_button&quot;])</span>
+<span class="w">     </span><span class="l l-Scalar l-Scalar-Plain">right_switch_pressed_future = self.machine.switch_controller.wait_for_switch(self.machine.switches[&quot;s_right_launch_button&quot;])</span>
+<span class="w">     </span><span class="l l-Scalar l-Scalar-Plain">first_switch = await Util.race({left_switch_pressed_future</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&quot;left&quot;</span><span class="err">,</span><span class="w"> </span><span class="nt">right_switch_pressed_future</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;right&quot;</span><span class="err">}</span><span class="l l-Scalar l-Scalar-Plain">)</span>
+<span class="w">     </span><span class="l l-Scalar l-Scalar-Plain">if first_switch == &quot;left&quot;</span><span class="p p-Indicator">:</span>
+<span class="w">         </span><span class="l l-Scalar l-Scalar-Plain">self.machine.playfield.add_ball(source_device=self.machine.ball_devices[&#39;bd_left_plunger&#39;], player_controlled=True)</span>
+<span class="w">     </span><span class="nt">else</span><span class="p">:</span>
+<span class="w">         </span><span class="l l-Scalar l-Scalar-Plain">self.machine.playfield.add_ball(source_device=self.machine.ball_devices[&#39;bd_right_plunger&#39;], player_controlled=True)</span>
 
-##! test
-#! start_game
-#! assert_available_balls_on_playfield 0
-#! hit_and_release_switch s_left_launch_button
-#! hit_and_release_switch s_right_launch_button
-#! assert_available_balls_on_playfield 1
+<span class="c1">##! test</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! assert_available_balls_on_playfield 0</span>
+<span class="c1">#! hit_and_release_switch s_left_launch_button</span>
+<span class="c1">#! hit_and_release_switch s_right_launch_button</span>
+<span class="c1">#! assert_available_balls_on_playfield 1</span>
 </code></pre></div>
 <hr />
 <div class="admonition question">

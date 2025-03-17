@@ -33786,9 +33786,9 @@ coil output. Wing position 0 contains coil numbers 0 to 3. Wing position
 to 11. Wing position 3 contains coil numbers 12 to 15. The coil is
 numbered using the position of the OPP card (starting at 0), then a
 '-', and finally the coil number on the card.</p>
-<div class="highlight"><pre><span></span><code>coils:
-  some_coil:
-    number: 0-12
+<div class="highlight"><pre><span></span><code><span class="nt">coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">some_coil</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0-12</span>
 </code></pre></div>
 <p>The above example configures a coil output as the first OPP card, and
 the third wing board, first output. On the microprocessor card, the
@@ -33797,10 +33797,10 @@ output is marked as 3.4 (wing port 3, position 4).</p>
 <p>The OPP hardware also has the ability to specify the "pulse time".
 Pulse time is the coil's initial kick time. For example, consider the
 following configuration:</p>
-<div class="highlight"><pre><span></span><code>coils:
-  some_coil:
-    number: 0-12
-    default_pulse_ms: 30
+<div class="highlight"><pre><span></span><code><span class="nt">coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">some_coil</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0-12</span>
+<span class="w">    </span><span class="nt">default_pulse_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
 </code></pre></div>
 <p>When MPF sends this coil a pulse command, the coil will be fired for
 30ms.</p>
@@ -33811,11 +33811,11 @@ It can range from 0.0 to 1.0 and defines the time share the coil is on
 (0%-100%).</p>
 <p>The period is fixed at 16ms for OPP. To set the hold power to 25%, set
 default_hold_power to .25 and OPP will use 4ms/16ms = 25%.</p>
-<div class="highlight"><pre><span></span><code>coils:
-  some_coil:
-    number: 0-3
-    default_pulse_ms: 32
-    default_hold_power: 0.5
+<div class="highlight"><pre><span></span><code><span class="nt">coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">some_coil</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0-3</span>
+<span class="w">    </span><span class="nt">default_pulse_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">32</span>
+<span class="w">    </span><span class="nt">default_hold_power</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.5</span>
 </code></pre></div>
 <p>This will configure OPP card 0, solenoid wing 0, last solenoid to have
 an initial pulse of 32 ms, and then be held on at 50% power.</p>
@@ -33832,12 +33832,12 @@ especially useful when controlling lower voltage coils from a 48V
 source.</p>
 <p>It can range from 0.0 to 1.0 and defines the time share the coil is on
 (0%-100%). Any value under 0.03125 will be forced to output 3.125%.</p>
-<div class="highlight"><pre><span></span><code>coils:
-  some_coil:
-    number: 0-3
-    default_pulse_ms: 32
-    default_pulse_power: 0.8125
-    default_hold_power: 0.125
+<div class="highlight"><pre><span></span><code><span class="nt">coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">some_coil</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0-3</span>
+<span class="w">    </span><span class="nt">default_pulse_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">32</span>
+<span class="w">    </span><span class="nt">default_pulse_power</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.8125</span>
+<span class="w">    </span><span class="nt">default_hold_power</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.125</span>
 </code></pre></div>
 <p>This will configure OPP card 0, solenoid wing 0, last solenoid to have
 an initial pulse of 32 ms at 81.25% power, and then be held on at 12.5%
@@ -33849,13 +33849,13 @@ power.</p>
 the recycle time. The time will be <code>default_pulse_ms * recycle_factor</code>.
 For instance, if you set a pulse time of <code>10ms</code> and a recycle_factor of
 two the coil will cool down for at least <code>20ms</code>. This is an example:</p>
-<div class="highlight"><pre><span></span><code>coils:
-  some_coil:
-    number: 0-3
-    default_pulse_ms: 10
-    default_recycle: true
-    platform_settings:
-      recycle_factor: 2
+<div class="highlight"><pre><span></span><code><span class="nt">coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">some_coil</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0-3</span>
+<span class="w">    </span><span class="nt">default_pulse_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="w">    </span><span class="nt">default_recycle</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">platform_settings</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">recycle_factor</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
 </code></pre></div>
 <h3 id="what-if-it-did-not-work">What if it did not work?</h3>
 <p>Have a look at our

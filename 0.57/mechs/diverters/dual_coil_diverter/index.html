@@ -33644,55 +33644,55 @@ coil for enabling the diverter, and then the hold coil to hold it in the
 active position for as long as you need.</p>
 <h2 id="config">Config</h2>
 <p>First we need to define the coils in our hardware section:</p>
-<div class="highlight"><pre><span></span><code>coils:
-  c_diverter_upper_right_main:
-    number: 25
-    default_pulse_ms: 4
-    default_hold_power: 0.2
-  c_diverter_upper_right_hold:
-    number: 26
-    allow_enable: true
+<div class="highlight"><pre><span></span><code><span class="nt">coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">c_diverter_upper_right_main</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">25</span>
+<span class="w">    </span><span class="nt">default_pulse_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span>
+<span class="w">    </span><span class="nt">default_hold_power</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.2</span>
+<span class="w">  </span><span class="nt">c_diverter_upper_right_hold</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">26</span>
+<span class="w">    </span><span class="nt">allow_enable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
 <p>Next we'll define the dual wound coil for the diverter to use:</p>
-<div class="highlight"><pre><span></span><code>#! coils:
-#!   c_diverter_upper_right_main:
-#!     number: 25
-#!     default_pulse_ms: 4
-#!     default_hold_power: 0.2
-#!   c_diverter_upper_right_hold:
-#!     number: 26
-#!     allow_enable: true
-dual_wound_coils:
-  c_diverter_dualcoil:
-    hold_coil: c_diverter_upper_right_hold
-    main_coil: c_diverter_upper_right_main
+<div class="highlight"><pre><span></span><code><span class="c1">#! coils:</span>
+<span class="c1">#!   c_diverter_upper_right_main:</span>
+<span class="c1">#!     number: 25</span>
+<span class="c1">#!     default_pulse_ms: 4</span>
+<span class="c1">#!     default_hold_power: 0.2</span>
+<span class="c1">#!   c_diverter_upper_right_hold:</span>
+<span class="c1">#!     number: 26</span>
+<span class="c1">#!     allow_enable: true</span>
+<span class="nt">dual_wound_coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">c_diverter_dualcoil</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">hold_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_diverter_upper_right_hold</span>
+<span class="w">    </span><span class="nt">main_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_diverter_upper_right_main</span>
 </code></pre></div>
 <p>Then we define the Diverter itself:</p>
-<div class="highlight"><pre><span></span><code>#! coils:
-#!   c_diverter_upper_right_main:
-#!     number: 25
-#!     default_pulse_ms: 4
-#!     default_hold_power: 0.2
-#!   c_diverter_upper_right_hold:
-#!     number: 26
-#!     allow_enable: true
-#! switches:
-#!   s_r_rampexit:
-#!     number:
-#!   s_l_rampexit:
-#!     number:
-#! dual_wound_coils:
-#!   c_diverter_dualcoil:
-#!     hold_coil: c_diverter_upper_right_hold
-#!     main_coil: c_diverter_upper_right_main
-diverters:
-  ramp_diverter:
-    activation_coil: c_diverter_dualcoil
-    type: hold
-    activation_time: .5s
-    activation_switches: s_r_rampexit, s_l_rampexit
-    enable_events: ball_started
-    disable_events: ball_ended
+<div class="highlight"><pre><span></span><code><span class="c1">#! coils:</span>
+<span class="c1">#!   c_diverter_upper_right_main:</span>
+<span class="c1">#!     number: 25</span>
+<span class="c1">#!     default_pulse_ms: 4</span>
+<span class="c1">#!     default_hold_power: 0.2</span>
+<span class="c1">#!   c_diverter_upper_right_hold:</span>
+<span class="c1">#!     number: 26</span>
+<span class="c1">#!     allow_enable: true</span>
+<span class="c1">#! switches:</span>
+<span class="c1">#!   s_r_rampexit:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   s_l_rampexit:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#! dual_wound_coils:</span>
+<span class="c1">#!   c_diverter_dualcoil:</span>
+<span class="c1">#!     hold_coil: c_diverter_upper_right_hold</span>
+<span class="c1">#!     main_coil: c_diverter_upper_right_main</span>
+<span class="nt">diverters</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">ramp_diverter</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">activation_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_diverter_dualcoil</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hold</span>
+<span class="w">    </span><span class="nt">activation_time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.5s</span>
+<span class="w">    </span><span class="nt">activation_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_r_rampexit, s_l_rampexit</span>
+<span class="w">    </span><span class="nt">enable_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ball_started</span>
+<span class="w">    </span><span class="nt">disable_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ball_ended</span>
 </code></pre></div>
 <p>Related How To guides:</p>
 <ul>

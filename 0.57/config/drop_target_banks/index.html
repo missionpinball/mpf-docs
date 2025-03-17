@@ -33952,44 +33952,44 @@ to <a href="../../examples/">config file examples</a> for more examples of real 
 <p>Once you've configured your individual drop targets, you group them
 together into banks via the <code>drop_target_banks:</code> section of your config
 file. Here's an example from <em>Judge Dredd</em>:</p>
-<div class="highlight"><pre><span></span><code>#! switches:
-#!   drop_target_j:
-#!     number:
-#!   drop_target_u:
-#!     number:
-#!   drop_target_d:
-#!     number:
-#!   drop_target_g:
-#!     number:
-#!   drop_target_e:
-#!     number:
-#! coils:
-#!   reset_drop_targets:
-#!     number:
-#!   trip_drop_target_d:
-#!     number:
-#! drop_targets:
-#!   j:
-#!     switch: drop_target_j
-#!     reset_coil: reset_drop_targets
-#!   u:
-#!     switch: drop_target_u
-#!     reset_coil: reset_drop_targets
-#!   d:
-#!     switch: drop_target_d
-#!     reset_coil: reset_drop_targets
-#!     knockdown_coil: trip_drop_target_d
-#!   g:
-#!     switch: drop_target_g
-#!     reset_coil: reset_drop_targets
-#!   e:
-#!     switch: drop_target_e
-#!     reset_coil: reset_drop_targets
-drop_target_banks:
-  judge:
-    drop_targets: j, u, d, g, e
-    reset_coils: reset_drop_targets
-    reset_on_complete: 1s
+<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
+<span class="c1">#!   drop_target_j:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   drop_target_u:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   drop_target_d:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   drop_target_g:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   drop_target_e:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#! coils:</span>
+<span class="c1">#!   reset_drop_targets:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   trip_drop_target_d:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#! drop_targets:</span>
+<span class="c1">#!   j:</span>
+<span class="c1">#!     switch: drop_target_j</span>
+<span class="c1">#!     reset_coil: reset_drop_targets</span>
+<span class="c1">#!   u:</span>
+<span class="c1">#!     switch: drop_target_u</span>
+<span class="c1">#!     reset_coil: reset_drop_targets</span>
+<span class="c1">#!   d:</span>
+<span class="c1">#!     switch: drop_target_d</span>
+<span class="c1">#!     reset_coil: reset_drop_targets</span>
+<span class="c1">#!     knockdown_coil: trip_drop_target_d</span>
+<span class="c1">#!   g:</span>
+<span class="c1">#!     switch: drop_target_g</span>
+<span class="c1">#!     reset_coil: reset_drop_targets</span>
+<span class="c1">#!   e:</span>
+<span class="c1">#!     switch: drop_target_e</span>
+<span class="c1">#!     reset_coil: reset_drop_targets</span>
+<span class="nt">drop_target_banks</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">judge</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">drop_targets</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">j, u, d, g, e</span>
+<span class="w">    </span><span class="nt">reset_coils</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">reset_drop_targets</span>
+<span class="w">    </span><span class="nt">reset_on_complete</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
 </code></pre></div>
 <p>Notice there are no settings to control lights associated with drop
 targets, but many machines (like <em>Judge Dredd</em> used in the example) have

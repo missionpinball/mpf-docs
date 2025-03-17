@@ -34794,17 +34794,17 @@ an implementation based on the settings and configure it accordingly.</p>
 <ul>
 <li>mpf.devices.ball_device.event_ejector.EventEjector</li>
 </ul>
-<div class="highlight"><pre><span></span><code>#! switches:
-#!   s_ball_switch1:
-#!     number:
-#!   s_ball_switch2:
-#!     number:
-ball_devices:
-  device_with_eject_event:
-    ejector:
-      class: mpf.devices.ball_device.event_ejector.EventEjector
-      events_when_eject_try: my_ball_device_eject
-    ball_switches: s_ball_switch1, s_ball_switch2
+<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
+<span class="c1">#!   s_ball_switch1:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   s_ball_switch2:</span>
+<span class="c1">#!     number:</span>
+<span class="nt">ball_devices</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">device_with_eject_event</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">ejector</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mpf.devices.ball_device.event_ejector.EventEjector</span>
+<span class="w">      </span><span class="nt">events_when_eject_try</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my_ball_device_eject</span>
+<span class="w">    </span><span class="nt">ball_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_ball_switch1, s_ball_switch2</span>
 </code></pre></div>
 <h3 id="entrance_count_delay">entrance_count_delay:</h3>
 <p>Unknown type. See description below.</p>

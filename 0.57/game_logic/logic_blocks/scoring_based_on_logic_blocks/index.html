@@ -33673,171 +33673,171 @@ icons & this code generated via https://realfavicongenerator.net
 <h2 id="accruals">Accruals</h2>
 <p>This is a simple example with an accrual. Every event can increase the
 multiplier exactly once. Multiplier starts at 1 and goes up to 4.</p>
-<div class="highlight"><pre><span></span><code>##! mode: test
-mode:
-  start_events: ball_started
-accruals:
-  my_accrual:
-    events:
-      - event1_to_increase_multiplier
-      - event2_to_increase_multiplier
-      - event3_to_increase_multiplier
-    events_when_complete: go_bumper
-    reset_on_complete: false
-variable_player:
-  some_score_event:
-    score: 10000 * (device.accruals.my_accrual.value[0] + device.accruals.my_accrual.value[1] + device.accruals.my_accrual.value[2] + 1)
-##! test
-#! # no progress
-#! start_game
-#! assert_mode_running test
-#! post some_score_event
-#! assert_player_variable 10000 score
-#! stop_game
-#! # some progress
-#! start_game
-#! assert_mode_running test
-#! post event1_to_increase_multiplier
-#! post some_score_event
-#! assert_player_variable 20000 score
-#! stop_game
-#! # some progress
-#! start_game
-#! assert_mode_running test
-#! post event3_to_increase_multiplier
-#! post event3_to_increase_multiplier
-#! post some_score_event
-#! assert_player_variable 20000 score
-#! stop_game
-#! # more progress
-#! start_game
-#! assert_mode_running test
-#! post event3_to_increase_multiplier
-#! post event2_to_increase_multiplier
-#! post some_score_event
-#! assert_player_variable 30000 score
-#! stop_game
-#! # full progress
-#! start_game
-#! assert_mode_running test
-#! post event3_to_increase_multiplier
-#! post event2_to_increase_multiplier
-#! post event1_to_increase_multiplier
-#! post some_score_event
-#! assert_player_variable 40000 score
-#! stop_game
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: test</span>
+<span class="nt">mode</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">start_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ball_started</span>
+<span class="nt">accruals</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_accrual</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">events</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">event1_to_increase_multiplier</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">event2_to_increase_multiplier</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">event3_to_increase_multiplier</span>
+<span class="w">    </span><span class="nt">events_when_complete</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">go_bumper</span>
+<span class="w">    </span><span class="nt">reset_on_complete</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="nt">variable_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">some_score_event</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10000 * (device.accruals.my_accrual.value[0] + device.accruals.my_accrual.value[1] + device.accruals.my_accrual.value[2] + 1)</span>
+<span class="c1">##! test</span>
+<span class="c1">#! # no progress</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! assert_mode_running test</span>
+<span class="c1">#! post some_score_event</span>
+<span class="c1">#! assert_player_variable 10000 score</span>
+<span class="c1">#! stop_game</span>
+<span class="c1">#! # some progress</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! assert_mode_running test</span>
+<span class="c1">#! post event1_to_increase_multiplier</span>
+<span class="c1">#! post some_score_event</span>
+<span class="c1">#! assert_player_variable 20000 score</span>
+<span class="c1">#! stop_game</span>
+<span class="c1">#! # some progress</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! assert_mode_running test</span>
+<span class="c1">#! post event3_to_increase_multiplier</span>
+<span class="c1">#! post event3_to_increase_multiplier</span>
+<span class="c1">#! post some_score_event</span>
+<span class="c1">#! assert_player_variable 20000 score</span>
+<span class="c1">#! stop_game</span>
+<span class="c1">#! # more progress</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! assert_mode_running test</span>
+<span class="c1">#! post event3_to_increase_multiplier</span>
+<span class="c1">#! post event2_to_increase_multiplier</span>
+<span class="c1">#! post some_score_event</span>
+<span class="c1">#! assert_player_variable 30000 score</span>
+<span class="c1">#! stop_game</span>
+<span class="c1">#! # full progress</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! assert_mode_running test</span>
+<span class="c1">#! post event3_to_increase_multiplier</span>
+<span class="c1">#! post event2_to_increase_multiplier</span>
+<span class="c1">#! post event1_to_increase_multiplier</span>
+<span class="c1">#! post some_score_event</span>
+<span class="c1">#! assert_player_variable 40000 score</span>
+<span class="c1">#! stop_game</span>
 </code></pre></div>
 <h2 id="counters">Counters</h2>
 <p>Similarly, you can use a counter to increase a multiplier. Every event
 listed can increase the multiplier multiple times.</p>
-<div class="highlight"><pre><span></span><code>##! mode: test
-mode:
-  start_events: ball_started
-counters:
-  my_counter:
-    count_events:
-      - event1_to_increase_multiplier
-      - event2_to_increase_multiplier
-      - event3_to_increase_multiplier
-    events_when_complete: go_bumper
-    reset_on_complete: false
-variable_player:
-  some_score_event:
-    score: 10000 * (device.counters.my_counter.value + 1)
-##! test
-#! # no progress
-#! start_game
-#! assert_mode_running test
-#! post some_score_event
-#! assert_player_variable 10000 score
-#! stop_game
-#! # some progress
-#! start_game
-#! assert_mode_running test
-#! post event1_to_increase_multiplier
-#! post some_score_event
-#! assert_player_variable 20000 score
-#! stop_game
-#! # some progress
-#! start_game
-#! assert_mode_running test
-#! post event3_to_increase_multiplier
-#! post event3_to_increase_multiplier
-#! post some_score_event
-#! assert_player_variable 30000 score
-#! stop_game
-#! # more progress
-#! start_game
-#! assert_mode_running test
-#! post event3_to_increase_multiplier
-#! post event2_to_increase_multiplier
-#! post some_score_event
-#! assert_player_variable 30000 score
-#! stop_game
-#! # full progress
-#! start_game
-#! assert_mode_running test
-#! post event3_to_increase_multiplier
-#! post event2_to_increase_multiplier
-#! post event1_to_increase_multiplier
-#! post some_score_event
-#! assert_player_variable 40000 score
-#! stop_game
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: test</span>
+<span class="nt">mode</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">start_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ball_started</span>
+<span class="nt">counters</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_counter</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">count_events</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">event1_to_increase_multiplier</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">event2_to_increase_multiplier</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">event3_to_increase_multiplier</span>
+<span class="w">    </span><span class="nt">events_when_complete</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">go_bumper</span>
+<span class="w">    </span><span class="nt">reset_on_complete</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="nt">variable_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">some_score_event</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10000 * (device.counters.my_counter.value + 1)</span>
+<span class="c1">##! test</span>
+<span class="c1">#! # no progress</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! assert_mode_running test</span>
+<span class="c1">#! post some_score_event</span>
+<span class="c1">#! assert_player_variable 10000 score</span>
+<span class="c1">#! stop_game</span>
+<span class="c1">#! # some progress</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! assert_mode_running test</span>
+<span class="c1">#! post event1_to_increase_multiplier</span>
+<span class="c1">#! post some_score_event</span>
+<span class="c1">#! assert_player_variable 20000 score</span>
+<span class="c1">#! stop_game</span>
+<span class="c1">#! # some progress</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! assert_mode_running test</span>
+<span class="c1">#! post event3_to_increase_multiplier</span>
+<span class="c1">#! post event3_to_increase_multiplier</span>
+<span class="c1">#! post some_score_event</span>
+<span class="c1">#! assert_player_variable 30000 score</span>
+<span class="c1">#! stop_game</span>
+<span class="c1">#! # more progress</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! assert_mode_running test</span>
+<span class="c1">#! post event3_to_increase_multiplier</span>
+<span class="c1">#! post event2_to_increase_multiplier</span>
+<span class="c1">#! post some_score_event</span>
+<span class="c1">#! assert_player_variable 30000 score</span>
+<span class="c1">#! stop_game</span>
+<span class="c1">#! # full progress</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! assert_mode_running test</span>
+<span class="c1">#! post event3_to_increase_multiplier</span>
+<span class="c1">#! post event2_to_increase_multiplier</span>
+<span class="c1">#! post event1_to_increase_multiplier</span>
+<span class="c1">#! post some_score_event</span>
+<span class="c1">#! assert_player_variable 40000 score</span>
+<span class="c1">#! stop_game</span>
 </code></pre></div>
 <h2 id="sequences">Sequences</h2>
 <p>This also works with sequences.</p>
-<div class="highlight"><pre><span></span><code>##! mode: test
-mode:
-  start_events: ball_started
-sequences:
-  my_sequence:
-    events:
-      - event1_to_increase_multiplier
-      - event2_to_increase_multiplier
-      - event3_to_increase_multiplier
-    events_when_complete: go_bumper
-    reset_on_complete: false
-variable_player:
-  some_score_event:
-    score: 10000 * (device.sequences.my_sequence.value + 1)
-##! test
-#! # no progress
-#! start_game
-#! assert_mode_running test
-#! post some_score_event
-#! assert_player_variable 10000 score
-#! stop_game
-#! # some progress
-#! start_game
-#! assert_mode_running test
-#! post event1_to_increase_multiplier
-#! post some_score_event
-#! assert_player_variable 20000 score
-#! stop_game
-#! # wrong shot
-#! start_game
-#! assert_mode_running test
-#! post event3_to_increase_multiplier
-#! post some_score_event
-#! assert_player_variable 10000 score
-#! stop_game
-#! # more progress
-#! start_game
-#! assert_mode_running test
-#! post event1_to_increase_multiplier
-#! post event2_to_increase_multiplier
-#! post some_score_event
-#! assert_player_variable 30000 score
-#! stop_game
-#! # full progress
-#! start_game
-#! assert_mode_running test
-#! post event1_to_increase_multiplier
-#! post event2_to_increase_multiplier
-#! post event3_to_increase_multiplier
-#! post some_score_event
-#! assert_player_variable 40000 score
-#! stop_game
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: test</span>
+<span class="nt">mode</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">start_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ball_started</span>
+<span class="nt">sequences</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_sequence</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">events</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">event1_to_increase_multiplier</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">event2_to_increase_multiplier</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">event3_to_increase_multiplier</span>
+<span class="w">    </span><span class="nt">events_when_complete</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">go_bumper</span>
+<span class="w">    </span><span class="nt">reset_on_complete</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="nt">variable_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">some_score_event</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10000 * (device.sequences.my_sequence.value + 1)</span>
+<span class="c1">##! test</span>
+<span class="c1">#! # no progress</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! assert_mode_running test</span>
+<span class="c1">#! post some_score_event</span>
+<span class="c1">#! assert_player_variable 10000 score</span>
+<span class="c1">#! stop_game</span>
+<span class="c1">#! # some progress</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! assert_mode_running test</span>
+<span class="c1">#! post event1_to_increase_multiplier</span>
+<span class="c1">#! post some_score_event</span>
+<span class="c1">#! assert_player_variable 20000 score</span>
+<span class="c1">#! stop_game</span>
+<span class="c1">#! # wrong shot</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! assert_mode_running test</span>
+<span class="c1">#! post event3_to_increase_multiplier</span>
+<span class="c1">#! post some_score_event</span>
+<span class="c1">#! assert_player_variable 10000 score</span>
+<span class="c1">#! stop_game</span>
+<span class="c1">#! # more progress</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! assert_mode_running test</span>
+<span class="c1">#! post event1_to_increase_multiplier</span>
+<span class="c1">#! post event2_to_increase_multiplier</span>
+<span class="c1">#! post some_score_event</span>
+<span class="c1">#! assert_player_variable 30000 score</span>
+<span class="c1">#! stop_game</span>
+<span class="c1">#! # full progress</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! assert_mode_running test</span>
+<span class="c1">#! post event1_to_increase_multiplier</span>
+<span class="c1">#! post event2_to_increase_multiplier</span>
+<span class="c1">#! post event3_to_increase_multiplier</span>
+<span class="c1">#! post some_score_event</span>
+<span class="c1">#! assert_player_variable 40000 score</span>
+<span class="c1">#! stop_game</span>
 </code></pre></div>
 <p>Related How To guides:</p>
 <ul>

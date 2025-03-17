@@ -33729,33 +33729,33 @@ still driven in strings.</p>
 in your machine <a href="../../../config/lights/">lights:</a> section
 and then you can enable, disable, and dim the dimmable ones as you wish.</p>
 <p>This is an example for a <a href="../../../config/lights/">light</a> with <code>subtype: gi</code>:</p>
-<div class="highlight"><pre><span></span><code>lights:
-  gi_string_left:
-    number: 3    # number depends on your platform
-    subtype: gi
+<div class="highlight"><pre><span></span><code><span class="nt">lights</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">gi_string_left</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span><span class="w">    </span><span class="c1"># number depends on your platform</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gi</span>
 </code></pre></div>
 <p>In modern machines (such as Spike) your GIs might just be handled as
 lights. The details depend on your hardware platform and are outlined in
 the platform documentation.</p>
 <p>This is an example for a <a href="../../../config/lights/">light</a> in Spike:</p>
-<div class="highlight"><pre><span></span><code>lights:
-  gi_string_left:
-    number: 3    # number depends on your platform
-    subtype: led  # might be matrix in some platforms
+<div class="highlight"><pre><span></span><code><span class="nt">lights</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">gi_string_left</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span><span class="w">    </span><span class="c1"># number depends on your platform</span>
+<span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led</span><span class="w">  </span><span class="c1"># might be matrix in some platforms</span>
 </code></pre></div>
 <p>In some cases GIs are connected to normal drivers on your driver board
 (e.g. on a PD-16 on the P3-Roc). If that is the case you should
 configure them as <a href="../../../config/coils/">coils</a>.
 Then add them as <a href="../../../config/lights/">light</a>
 with <code>platform: drivers</code>:</p>
-<div class="highlight"><pre><span></span><code>coils:
-  gi_string_left:
-    number: A1-B1-3    # number depends on your platform
-    allow_enable: true  # this will allow 100% enable without pwm
-lights:
-  gi_string_left:
-    number: gi_string_left  # map this light to a driver
-    platform: drivers
+<div class="highlight"><pre><span></span><code><span class="nt">coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">gi_string_left</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A1-B1-3</span><span class="w">    </span><span class="c1"># number depends on your platform</span>
+<span class="w">    </span><span class="nt">allow_enable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w">  </span><span class="c1"># this will allow 100% enable without pwm</span>
+<span class="nt">lights</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">gi_string_left</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gi_string_left</span><span class="w">  </span><span class="c1"># map this light to a driver</span>
+<span class="w">    </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">drivers</span>
 </code></pre></div>
 <p>Alternatively, you could also use
 <a href="../../../config/coil_player/">coil_player</a> but

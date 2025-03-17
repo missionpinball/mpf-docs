@@ -33824,39 +33824,39 @@ we mitigate this in software in MPF. This introduces a few milliseconds
 of delay but it should be fast enough that the player does not notice
 it.</p>
 <p>This is how you can enable it in MPF:</p>
-<div class="highlight"><pre><span></span><code>#! switches:
-#!   s_flipper_single:
-#!     number: 1
-#!   s_flipper_single_eos:
-#!     number: 2
-#!   s_flipper_dual_wound:
-#!     number: 3
-#!   s_flipper_dual_wound_eos:
-#!     number: 4
-#! coils:
-#!   c_flipper_single_main:
-#!     number: 0
-#!   c_flipper_dual_wound_main:
-#!     number: 2
-#!   c_flipper_dual_wound_hold:
-#!     number: 3
-#!     allow_enable: true
-flippers:
-  single_wound_flipper:
-    main_coil: c_flipper_single_main
-    activation_switch: s_flipper_single
-    eos_switch: s_flipper_single_eos
-    use_eos: true
-    repulse_on_eos_open: true
-    eos_active_ms_before_repulse: 500
-  dual_wound_flipper:
-    main_coil: c_flipper_dual_wound_main
-    hold_coil: c_flipper_dual_wound_hold
-    activation_switch: s_flipper_dual_wound
-    eos_switch: s_flipper_dual_wound_eos
-    use_eos: true
-    repulse_on_eos_open: true
-    eos_active_ms_before_repulse: 500
+<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
+<span class="c1">#!   s_flipper_single:</span>
+<span class="c1">#!     number: 1</span>
+<span class="c1">#!   s_flipper_single_eos:</span>
+<span class="c1">#!     number: 2</span>
+<span class="c1">#!   s_flipper_dual_wound:</span>
+<span class="c1">#!     number: 3</span>
+<span class="c1">#!   s_flipper_dual_wound_eos:</span>
+<span class="c1">#!     number: 4</span>
+<span class="c1">#! coils:</span>
+<span class="c1">#!   c_flipper_single_main:</span>
+<span class="c1">#!     number: 0</span>
+<span class="c1">#!   c_flipper_dual_wound_main:</span>
+<span class="c1">#!     number: 2</span>
+<span class="c1">#!   c_flipper_dual_wound_hold:</span>
+<span class="c1">#!     number: 3</span>
+<span class="c1">#!     allow_enable: true</span>
+<span class="nt">flippers</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">single_wound_flipper</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">main_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_flipper_single_main</span>
+<span class="w">    </span><span class="nt">activation_switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_flipper_single</span>
+<span class="w">    </span><span class="nt">eos_switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_flipper_single_eos</span>
+<span class="w">    </span><span class="nt">use_eos</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">repulse_on_eos_open</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">eos_active_ms_before_repulse</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">500</span>
+<span class="w">  </span><span class="nt">dual_wound_flipper</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">main_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_flipper_dual_wound_main</span>
+<span class="w">    </span><span class="nt">hold_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_flipper_dual_wound_hold</span>
+<span class="w">    </span><span class="nt">activation_switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_flipper_dual_wound</span>
+<span class="w">    </span><span class="nt">eos_switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_flipper_dual_wound_eos</span>
+<span class="w">    </span><span class="nt">use_eos</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">repulse_on_eos_open</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">eos_active_ms_before_repulse</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">500</span>
 </code></pre></div>
 <p>To prevent repeated activations MPF will wait
 <code>eos_active_ms_before_repulse</code> ms before a repulse can happen. There are

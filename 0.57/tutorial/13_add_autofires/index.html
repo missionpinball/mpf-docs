@@ -33650,44 +33650,44 @@ here's the <code>autofire_coils:</code> configuration for <em>Demolition Man</em
 has two standard slingshots, and upper slingshot near the pop bumpers,
 and two pop bumpers (which we happen to refer to as "jets" in this
 config):</p>
-<div class="highlight"><pre><span></span><code>#! switches:
-#!   s_left_slingshot:
-#!     number: 1
-#!   s_right_slingshot:
-#!     number: 2
-#!   s_top_slingshot:
-#!     number: 3
-#!   s_left_jet:
-#!     number: 4
-#!   s_right_jet:
-#!     number: 5
-#! coils:
-#!   c_left_slingshot:
-#!     number: 0
-#!   c_right_slingshot:
-#!     number: 1
-#!   c_top_slingshot:
-#!     number: 2
-#!   c_left_jet_bumper:
-#!     number: 3
-#!   c_right_jet_bumper:
-#!     number: 4
-autofire_coils:
-  left_slingshot:
-    coil: c_left_slingshot
-    switch: s_left_slingshot
-  right_slingshot:
-    coil: c_right_slingshot
-    switch: s_right_slingshot
-  upper_slingshot:
-    coil: c_top_slingshot
-    switch: s_top_slingshot
-  left_jet:
-    coil: c_left_jet_bumper
-    switch: s_left_jet
-  right_jet:
-    coil: c_right_jet_bumper
-    switch: s_right_jet
+<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
+<span class="c1">#!   s_left_slingshot:</span>
+<span class="c1">#!     number: 1</span>
+<span class="c1">#!   s_right_slingshot:</span>
+<span class="c1">#!     number: 2</span>
+<span class="c1">#!   s_top_slingshot:</span>
+<span class="c1">#!     number: 3</span>
+<span class="c1">#!   s_left_jet:</span>
+<span class="c1">#!     number: 4</span>
+<span class="c1">#!   s_right_jet:</span>
+<span class="c1">#!     number: 5</span>
+<span class="c1">#! coils:</span>
+<span class="c1">#!   c_left_slingshot:</span>
+<span class="c1">#!     number: 0</span>
+<span class="c1">#!   c_right_slingshot:</span>
+<span class="c1">#!     number: 1</span>
+<span class="c1">#!   c_top_slingshot:</span>
+<span class="c1">#!     number: 2</span>
+<span class="c1">#!   c_left_jet_bumper:</span>
+<span class="c1">#!     number: 3</span>
+<span class="c1">#!   c_right_jet_bumper:</span>
+<span class="c1">#!     number: 4</span>
+<span class="nt">autofire_coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">left_slingshot</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_left_slingshot</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_left_slingshot</span>
+<span class="w">  </span><span class="nt">right_slingshot</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_right_slingshot</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_right_slingshot</span>
+<span class="w">  </span><span class="nt">upper_slingshot</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_top_slingshot</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_top_slingshot</span>
+<span class="w">  </span><span class="nt">left_jet</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_left_jet_bumper</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_left_jet</span>
+<span class="w">  </span><span class="nt">right_jet</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_right_jet_bumper</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_right_jet</span>
 </code></pre></div>
 <p>Autofire devices in MPF are somewhat intelligent. They will only be
 activated while a ball is in play during a game, which means they

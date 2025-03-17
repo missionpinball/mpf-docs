@@ -33893,62 +33893,62 @@ fade_back transition.</p>
 <h2 id="configuring-transitions">Configuring Transitions</h2>
 <p>Transitions are specified as an additional property of a <code>slide_player:</code>
 config or the <code>slides:</code> section of a show config. For example:</p>
-<div class="highlight"><pre><span></span><code>#! slides:
-#!   slide1:
-#!     - type: text
-#!       text: &quot;SLIDE 1&quot;
-slide_player:
-  left_ramp_hit:
-    slide1:
-      transition:
-        type: push
-        duration: 2s
-        direction: right
-##! test
-#! post left_ramp_hit
-#! advance_time_and_run .1
-#! assert_text_on_top_slide &quot;SLIDE 1&quot;
+<div class="highlight"><pre><span></span><code><span class="c1">#! slides:</span>
+<span class="c1">#!   slide1:</span>
+<span class="c1">#!     - type: text</span>
+<span class="c1">#!       text: &quot;SLIDE 1&quot;</span>
+<span class="nt">slide_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">left_ramp_hit</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">slide1</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">transition</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">push</span>
+<span class="w">        </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2s</span>
+<span class="w">        </span><span class="nt">direction</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">right</span>
+<span class="c1">##! test</span>
+<span class="c1">#! post left_ramp_hit</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_text_on_top_slide &quot;SLIDE 1&quot;</span>
 </code></pre></div>
 <p>Hopefully the above example is obvious by now. When the event
 "left_ramp_hit" happens, MPF will show the slide called "slide1:,
 using the push transition, with a transition time of 2 seconds, pushing
 the new slide in from the right.</p>
 <p>Transitions can be combined with other slide settings, like this:</p>
-<div class="highlight"><pre><span></span><code>#! slides:
-#!   slide1:
-#!     - type: text
-#!       text: &quot;SLIDE 1&quot;
-slide_player:
-  left_ramp_hit:
-    slide1:
-      transition:
-        type: push
-        duration: 2s
-        direction: right
-##! test
-#! post left_ramp_hit
-#! advance_time_and_run .1
-#! assert_text_on_top_slide &quot;SLIDE 1&quot;
+<div class="highlight"><pre><span></span><code><span class="c1">#! slides:</span>
+<span class="c1">#!   slide1:</span>
+<span class="c1">#!     - type: text</span>
+<span class="c1">#!       text: &quot;SLIDE 1&quot;</span>
+<span class="nt">slide_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">left_ramp_hit</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">slide1</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">transition</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">push</span>
+<span class="w">        </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2s</span>
+<span class="w">        </span><span class="nt">direction</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">right</span>
+<span class="c1">##! test</span>
+<span class="c1">#! post left_ramp_hit</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_text_on_top_slide &quot;SLIDE 1&quot;</span>
 </code></pre></div>
 <p>You can also configure <code>transition_out:</code> settings which are transitions
 that will be applied to a slide when it is removed, like this:</p>
-<div class="highlight"><pre><span></span><code>#! slides:
-#!   slide1:
-#!     - type: text
-#!       text: &quot;SLIDE 1&quot;
-slide_player:
-  left_ramp_hit:
-    slide1:
-      transition:
-        type: push
-        duration: 2s
-        direction: right
-      transition_out:
-        type: fade_back
-##! test
-#! post left_ramp_hit
-#! advance_time_and_run .1
-#! assert_text_on_top_slide &quot;SLIDE 1&quot;
+<div class="highlight"><pre><span></span><code><span class="c1">#! slides:</span>
+<span class="c1">#!   slide1:</span>
+<span class="c1">#!     - type: text</span>
+<span class="c1">#!       text: &quot;SLIDE 1&quot;</span>
+<span class="nt">slide_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">left_ramp_hit</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">slide1</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">transition</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">push</span>
+<span class="w">        </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2s</span>
+<span class="w">        </span><span class="nt">direction</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">right</span>
+<span class="w">      </span><span class="nt">transition_out</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fade_back</span>
+<span class="c1">##! test</span>
+<span class="c1">#! post left_ramp_hit</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_text_on_top_slide &quot;SLIDE 1&quot;</span>
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>

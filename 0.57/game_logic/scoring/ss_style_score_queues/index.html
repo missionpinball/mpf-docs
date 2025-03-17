@@ -33584,37 +33584,37 @@ while adding the player score and wait after each digit. You can use
 <a href="../../../config/score_queues/">score_queues:</a> and
 <a href="../../../config/score_queue_player/">score_queue_player:</a> to implement
 this in MPF.</p>
-<div class="highlight"><pre><span></span><code>coils:
-  c_chime_1000:
-    number:
-  c_chime_100:
-    number:
-  c_chime_10:
-    number:
-score_queues:
-  score:
-    chimes: c_chime_1000, c_chime_100, c_chime_10,  None
-##! mode: my_mode
-# in your mode
-score_queue_player:
-  score_2k:
-    score: 2000
-  score_200:
-    score: 200
-##! test
-#! start_game
-#! assert_player_variable 0 score
-#! start_mode my_mode
-#! post score_2k
-#! post score_200
-#! advance_time_and_run .1
-#! assert_player_variable 1000 score
-#! advance_time_and_run .2
-#! assert_player_variable 2000 score
-#! advance_time_and_run .2
-#! assert_player_variable 2100 score
-#! advance_time_and_run .2
-#! assert_player_variable 2200 score
+<div class="highlight"><pre><span></span><code><span class="nt">coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">c_chime_1000</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">c_chime_100</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">c_chime_10</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="nt">score_queues</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">score</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">chimes</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_chime_1000, c_chime_100, c_chime_10,  None</span>
+<span class="c1">##! mode: my_mode</span>
+<span class="c1"># in your mode</span>
+<span class="nt">score_queue_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">score_2k</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2000</span>
+<span class="w">  </span><span class="nt">score_200</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">200</span>
+<span class="c1">##! test</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! assert_player_variable 0 score</span>
+<span class="c1">#! start_mode my_mode</span>
+<span class="c1">#! post score_2k</span>
+<span class="c1">#! post score_200</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_player_variable 1000 score</span>
+<span class="c1">#! advance_time_and_run .2</span>
+<span class="c1">#! assert_player_variable 2000 score</span>
+<span class="c1">#! advance_time_and_run .2</span>
+<span class="c1">#! assert_player_variable 2100 score</span>
+<span class="c1">#! advance_time_and_run .2</span>
+<span class="c1">#! assert_player_variable 2200 score</span>
 </code></pre></div>
 <hr />
 <div class="admonition question">

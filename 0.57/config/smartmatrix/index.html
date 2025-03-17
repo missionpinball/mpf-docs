@@ -33808,20 +33808,20 @@ to <a href="../../examples/">config file examples</a> for more examples of real 
 <p>The <code>smartmatrix:</code> section of your config is where you configure RGB DMD
 devices.</p>
 <p>This is an example:</p>
-<div class="highlight"><pre><span></span><code>#config_version=5
-hardware:
-  rgb_dmd: smartmatrix
-smartmatrix:
-  my_smartmatrix:
-    port: com4
-    baud: 4000000
-displays:
-  dmd:
-    width: 128
-    height: 32
-rgb_dmds:
-  my_smartmatrix:
-    hardware_brightness: .5
+<div class="highlight"><pre><span></span><code><span class="c1">#config_version=5</span>
+<span class="nt">hardware</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">rgb_dmd</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">smartmatrix</span>
+<span class="nt">smartmatrix</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_smartmatrix</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">com4</span>
+<span class="w">    </span><span class="nt">baud</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4000000</span>
+<span class="nt">displays</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">dmd</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">128</span>
+<span class="w">    </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">32</span>
+<span class="nt">rgb_dmds</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_smartmatrix</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">hardware_brightness</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.5</span>
 </code></pre></div>
 <h2 id="required-settings">Required settings</h2>
 <p>The following sections are required in the <code>smartmatrix:</code> section of

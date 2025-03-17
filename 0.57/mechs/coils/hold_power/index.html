@@ -33689,11 +33689,11 @@ initial pulse time.</p>
 <p>The default_hold_power setting is a value from 0.0-1.0, with 0 being 0%
 power (off), and 1.0 being 100% power.</p>
 <p>Consider the following example:</p>
-<div class="highlight"><pre><span></span><code>coils:
-  some_coil:
-    number:
-    default_pulse_ms: 30
-    default_hold_power: 0.250
+<div class="highlight"><pre><span></span><code><span class="nt">coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">some_coil</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">default_pulse_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+<span class="w">    </span><span class="nt">default_hold_power</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.250</span>
 </code></pre></div>
 <p>In the example from a machine config file, the if the coil called
 <em>some_coil</em> is enabled (turned on) then that coil will receive full

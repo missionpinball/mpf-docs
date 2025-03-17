@@ -33687,59 +33687,59 @@ easily be started two times. This is mostly caused by OpenGL which is
 rarely used to render multiple windows. The simplest solution to this
 problem is to extend the MC window to span both (or more) screens. This
 can be achieved using the following config:</p>
-<div class="highlight"><pre><span></span><code>kivy_config:
-  kivy:
-    desktop: 1
-    exit_on_escape: true
-    pause_on_minimize: 0
-    log_dir:
-    window_icon:
-  graphics:
-    borderless: true
-    window_state: visible # visible, hidden, maximized, minimized
-    fbo: hardware # hardware, software, force-hardware
-    fullscreen: false
-    left: 0
-    top: 0
-    width: 3840   # width of display1 + display2
-    height: 1080  # common height (or the maximum of both)
-    maxfps: 30
-    multisamples: 2
-    position: custom # auto, custom
-    show_cursor: true
-    resizable: false
-    rotation: 0
-displays:
-  display1:
-    width: 1920
-    height: 1080
-  display2:
-    width: 1920
-    height: 1080
-  combined_display:
-    width: 3840
-    height: 1080
-slides:
-  base_slide:
-    - type: display
-      source_display: display1
-      width: 1920
-      height: 1080
-      x: left
-      anchor_x: left
-    - type: display
-      source_display: display2
-      width: 1920
-      height: 1080
-      x: right
-      anchor_x: right
-slide_player:
-  mc_ready:
-    base_slide:
-      target: combined_display
-##! test
-#! advance_time_and_run .1
-#! assert_slide_on_top base_slide combined_display
+<div class="highlight"><pre><span></span><code><span class="nt">kivy_config</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">kivy</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">desktop</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">exit_on_escape</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">pause_on_minimize</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">log_dir</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">window_icon</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">graphics</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">borderless</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">window_state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">visible</span><span class="w"> </span><span class="c1"># visible, hidden, maximized, minimized</span>
+<span class="w">    </span><span class="nt">fbo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hardware</span><span class="w"> </span><span class="c1"># hardware, software, force-hardware</span>
+<span class="w">    </span><span class="nt">fullscreen</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">    </span><span class="nt">left</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">top</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3840</span><span class="w">   </span><span class="c1"># width of display1 + display2</span>
+<span class="w">    </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1080</span><span class="w">  </span><span class="c1"># common height (or the maximum of both)</span>
+<span class="w">    </span><span class="nt">maxfps</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+<span class="w">    </span><span class="nt">multisamples</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="w">    </span><span class="nt">position</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">custom</span><span class="w"> </span><span class="c1"># auto, custom</span>
+<span class="w">    </span><span class="nt">show_cursor</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">resizable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">    </span><span class="nt">rotation</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="nt">displays</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">display1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1920</span>
+<span class="w">    </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1080</span>
+<span class="w">  </span><span class="nt">display2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1920</span>
+<span class="w">    </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1080</span>
+<span class="w">  </span><span class="nt">combined_display</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3840</span>
+<span class="w">    </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1080</span>
+<span class="nt">slides</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">base_slide</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">display</span>
+<span class="w">      </span><span class="nt">source_display</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">display1</span>
+<span class="w">      </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1920</span>
+<span class="w">      </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1080</span>
+<span class="w">      </span><span class="nt">x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">left</span>
+<span class="w">      </span><span class="nt">anchor_x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">left</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">display</span>
+<span class="w">      </span><span class="nt">source_display</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">display2</span>
+<span class="w">      </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1920</span>
+<span class="w">      </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1080</span>
+<span class="w">      </span><span class="nt">x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">right</span>
+<span class="w">      </span><span class="nt">anchor_x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">right</span>
+<span class="nt">slide_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">mc_ready</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">base_slide</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">combined_display</span>
+<span class="c1">##! test</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_slide_on_top base_slide combined_display</span>
 </code></pre></div>
 <p>Use <code>width</code> and <code>height</code> to set the size of the window. <code>left</code> and <code>top</code>
 are used to position the window.</p>

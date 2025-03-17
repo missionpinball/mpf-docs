@@ -33582,26 +33582,26 @@ pulse/flash them. Alternatively, you can configure them as
 <a href="../flasher_player/">flasher_player</a>
 to control them.</p>
 <p>Here is an example:</p>
-<div class="highlight"><pre><span></span><code># configure the flasher as coil
-coils:
-  flasher_01:
-    number: 4                    # this number depends on your hardware
-    default_pulse_ms: 40         # pulse duration to use if no specified elsewhere
-    max_hold_power: 1.0          # needed if you want to use flasher and light_player
-# you can flash the flasher using flasher player
-coil_player:
-  flash_coil:
-    flasher_01:
-      action: pulse              # will use the default 40ms pulse
-# create a light which is backed by a coil (optional if you want to use light_player and flasher_player)
-lights:
-  flasher_01:
-    number: flasher_01           # name of your coil
-    platform: drivers            # use a coil
-# use the light to flash the flasher
-flasher_player:
-  flash_flasher_01:
-    flasher_01: 100ms
+<div class="highlight"><pre><span></span><code><span class="c1"># configure the flasher as coil</span>
+<span class="nt">coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">flasher_01</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span><span class="w">                    </span><span class="c1"># this number depends on your hardware</span>
+<span class="w">    </span><span class="nt">default_pulse_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">40</span><span class="w">         </span><span class="c1"># pulse duration to use if no specified elsewhere</span>
+<span class="w">    </span><span class="nt">max_hold_power</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0</span><span class="w">          </span><span class="c1"># needed if you want to use flasher and light_player</span>
+<span class="c1"># you can flash the flasher using flasher player</span>
+<span class="nt">coil_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">flash_coil</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">flasher_01</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pulse</span><span class="w">              </span><span class="c1"># will use the default 40ms pulse</span>
+<span class="c1"># create a light which is backed by a coil (optional if you want to use light_player and flasher_player)</span>
+<span class="nt">lights</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">flasher_01</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flasher_01</span><span class="w">           </span><span class="c1"># name of your coil</span>
+<span class="w">    </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">drivers</span><span class="w">            </span><span class="c1"># use a coil</span>
+<span class="c1"># use the light to flash the flasher</span>
+<span class="nt">flasher_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">flash_flasher_01</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">flasher_01</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100ms</span>
 </code></pre></div>
 <hr />
 <div class="admonition question">

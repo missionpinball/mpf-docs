@@ -33705,24 +33705,24 @@ to <a href="../../examples/">config file examples</a> for more examples of real 
 </table>
 <p>The <code>score_queue_player:</code> section of your config is where you configure
 your SS style scoring. This is an example:</p>
-<div class="highlight"><pre><span></span><code>coils:
-  c_chime_1000:
-    number:
-  c_chime_100:
-    number:
-  c_chime_10:
-    number:
-score_queues:
-  score:
-    chimes: c_chime_1000, c_chime_100, c_chime_10,  None
-    debug: true
-##! mode: my_mode
-# in your mode
-score_queue_player:
-  score_2k:
-    score: 2000
-  score_200:
-    score: 200
+<div class="highlight"><pre><span></span><code><span class="nt">coils</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">c_chime_1000</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">c_chime_100</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">c_chime_10</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span>
+<span class="nt">score_queues</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">score</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">chimes</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_chime_1000, c_chime_100, c_chime_10,  None</span>
+<span class="w">    </span><span class="nt">debug</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="c1">##! mode: my_mode</span>
+<span class="c1"># in your mode</span>
+<span class="nt">score_queue_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">score_2k</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2000</span>
+<span class="w">  </span><span class="nt">score_200</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">200</span>
 </code></pre></div>
 <h2 id="optional-settings">Optional settings</h2>
 <p>The following sections are optional in the <code>score_queue_player:</code> section

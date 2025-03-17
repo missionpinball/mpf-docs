@@ -33593,223 +33593,223 @@ include:</p>
 <a href="high_scores_in_ems/">High Scores in EM Machines</a> for how to use the
 high score mode without entering initials.</p>
 <p>This is an example (for machines with display):</p>
-<div class="highlight"><pre><span></span><code>##! mode: my_mode
-#! variable_player:
-#!   score_100:
-#!     score: 2000000
-##! mode: high_score
-# modes/high_score/config/high_score.yaml
-mode:
-  priority: 500
-  start_events: game_ending, start_high_score
-  use_wait_queue: true
-high_score:
-  _overwrite: true
-  enter_initials_timeout: 60
-  award_slide_display_time: 4s
-  # define your high score categories and the awards
-  categories: !!omap
-    - score:
-        - GRAND CHAMPION
-        - HIGH SCORE 1
-        - HIGH SCORE 2
-        - HIGH SCORE 3
-        - HIGH SCORE 4
-        - HIGH SCORE 5
-        - HIGH SCORE 6
-        - HIGH SCORE 7
-        - HIGH SCORE 8
-    - loops:
-        - LOOP CHAMP
-  # set the defaults
-  defaults:
-    score:
-      - MPF: 1000000
-      - BRI: 900000
-      - JAN: 800000
-      - QUI: 700000
-      - MAR: 600000
-      - JOH: 500000
-      - ELI: 400000
-      - MIK: 300000
-      - ANT: 200000
-    loops:
-      - JAN: 42
-  vars:
-    loops:
-      - player: character
-# optional: change the slides (you can omit all the following)
-slide_player:
-  _overwrite: true
-  high_score_enter_initials: high_score_enter_initials
-  high_score_award_display: high_score_award_display
-slides:
-  _overwrite: true
-  high_score_enter_initials:
-    - type: text
-      style: big
-      font_size: 18
-      text: PLAYER (player_num)
-      color: ffff00
-      x: 105
-      y: 90
-    - type: text
-      style: big
-      font_size: 18
-      text: (award)
-      color: f0f0f0
-      x: 105
-      y: 70
-    - type: text_input
-      initial_char: A
-      dynamic_x: false
-      key: high_score
-      style: big
-      font_size: 18
-      max_chars: 3
-      x: 105
-      y: 20
-      shift_left_event: sw_lower_left_flipper
-      shift_right_event: sw_lower_right_flipper
-      select_event: sw_start
-      color: ff0000
-    - type: text
-      style: big
-      text: &#39;&lt;       &gt;&#39;
-      font_size: 18
-      x: 105
-      y: 20
-      color: ff0000
-    - type: text
-      text: &#39;&#39;
-      key: high_score
-      font_size: 18
-      style: big
-      x: 105
-      y: 50
-      color: ff00ff
-      animations:
-        show_slide:
-          - property: opacity
-            value: 1
-            duration: 0.3s
-            easing: in_out_quint
-          - property: opacity
-            value: 0
-            duration: 0.3s
-            repeat: true
-            easing: in_out_quint
-  high_score_award_display:
-    - type: text
-      text: (player_name)
-      font_size: 18
-      style: big
-      anchor_y: middle
-      anchor_x: middle
-      x: middle
-      y: middle
-      color: 00ff00
-      animations:
-        show_slide:
-          - property: opacity
-            value: 1
-            duration: 0.05s
-          - property: opacity
-            value: 0
-            duration: 0.05s
-            repeat: true
-    - type: text
-      text: (award)
-      font_size: 18
-      style: big
-      x: 105
-      y: 110
-      color: 0000ff
-    - type: text
-      text: (value)
-      style: big
-      x: 105
-      y: 30
-      color: 4040FF
-      font_size: 20
-      number_grouping: true
-      min_digits: 2
-loops_award_display:
-    - type: text
-      text: (player_name)
-      font_size: 18
-      style: big
-      anchor_y: middle
-      anchor_x: middle
-      x: middle
-      y: middle
-      color: 00ff00
-      animations:
-        show_slide:
-          - property: opacity
-            value: 1
-            duration: 0.05s
-          - property: opacity
-            value: 0
-            duration: 0.05s
-            repeat: true
-    - type: text
-      text: (award)
-      font_size: 18
-      style: big
-      x: 105
-      y: 110
-      color: 0000ff
-    - type: text
-      text: (value)
-      style: big
-      x: 105
-      y: 30
-      color: 4040FF
-      font_size: 20
-      number_grouping: true
-      min_digits: 2
-    - type: text
-      text: (player(player_num)|character)
-      style: big
-      x: 105
-      y: 10
-      color: 4040FF
-      font_size: 20
-##! test
-#! assert_machine_variable 1000000 score1_value
-#! assert_machine_variable MPF score1_name
-#! assert_machine_variable &quot;GRAND CHAMPION&quot; score1_label
-#! assert_machine_variable 200000 score9_value
-#! assert_machine_variable ANT score9_name
-#! assert_machine_variable &quot;HIGH SCORE 8&quot; score9_label
-#! start_game
-#! start_mode my_mode
-#! post score_100
-#! assert_player_variable 2000000 score
-#! drain_all_balls
-#! advance_time_and_run 1
-#! assert_player_variable 2 ball
-#! drain_all_balls
-#! advance_time_and_run 1
-#! assert_player_variable 3 ball
-#! mock_event high_score_enter_initials
-#! drain_all_balls
-#! advance_time_and_run 1
-#! assert_player_variable 3 ball
-#! assert_event_called high_score_enter_initials
-#! post text_input_high_score_complete text=JAB
-#! advance_time_and_run 10
-#! assert_mode_not_running game
-#! assert_machine_variable 2000000 score1_value
-#! assert_machine_variable JAB score1_name
-#! assert_machine_variable &quot;GRAND CHAMPION&quot; score1_label
-#! assert_machine_variable 1000000 score2_value
-#! assert_machine_variable MPF score2_name
-#! assert_machine_variable &quot;HIGH SCORE 1&quot; score2_label
-#! assert_machine_variable 300000 score9_value
-#! assert_machine_variable MIK score9_name
-#! assert_machine_variable &quot;HIGH SCORE 8&quot; score9_label
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: my_mode</span>
+<span class="c1">#! variable_player:</span>
+<span class="c1">#!   score_100:</span>
+<span class="c1">#!     score: 2000000</span>
+<span class="c1">##! mode: high_score</span>
+<span class="c1"># modes/high_score/config/high_score.yaml</span>
+<span class="nt">mode</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">priority</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">500</span>
+<span class="w">  </span><span class="nt">start_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">game_ending, start_high_score</span>
+<span class="w">  </span><span class="nt">use_wait_queue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="nt">high_score</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">_overwrite</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">enter_initials_timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">60</span>
+<span class="w">  </span><span class="nt">award_slide_display_time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4s</span>
+<span class="w">  </span><span class="c1"># define your high score categories and the awards</span>
+<span class="w">  </span><span class="nt">categories</span><span class="p">:</span><span class="w"> </span><span class="kt">!!omap</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">score</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">GRAND CHAMPION</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HIGH SCORE 1</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HIGH SCORE 2</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HIGH SCORE 3</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HIGH SCORE 4</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HIGH SCORE 5</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HIGH SCORE 6</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HIGH SCORE 7</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HIGH SCORE 8</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">loops</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LOOP CHAMP</span>
+<span class="w">  </span><span class="c1"># set the defaults</span>
+<span class="w">  </span><span class="nt">defaults</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">score</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">MPF</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000000</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">BRI</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">900000</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">JAN</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">800000</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">QUI</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">700000</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">MAR</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">600000</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">JOH</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">500000</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">ELI</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">400000</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">MIK</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">300000</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">ANT</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">200000</span>
+<span class="w">    </span><span class="nt">loops</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">JAN</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">42</span>
+<span class="w">  </span><span class="nt">vars</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">loops</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">player</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">character</span>
+<span class="c1"># optional: change the slides (you can omit all the following)</span>
+<span class="nt">slide_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">_overwrite</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">high_score_enter_initials</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">high_score_enter_initials</span>
+<span class="w">  </span><span class="nt">high_score_award_display</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">high_score_award_display</span>
+<span class="nt">slides</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">_overwrite</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">high_score_enter_initials</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">style</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">big</span>
+<span class="w">      </span><span class="nt">font_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">18</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PLAYER (player_num)</span>
+<span class="w">      </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ffff00</span>
+<span class="w">      </span><span class="nt">x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">105</span>
+<span class="w">      </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">90</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">style</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">big</span>
+<span class="w">      </span><span class="nt">font_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">18</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(award)</span>
+<span class="w">      </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">f0f0f0</span>
+<span class="w">      </span><span class="nt">x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">105</span>
+<span class="w">      </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">70</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text_input</span>
+<span class="w">      </span><span class="nt">initial_char</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A</span>
+<span class="w">      </span><span class="nt">dynamic_x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">      </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">high_score</span>
+<span class="w">      </span><span class="nt">style</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">big</span>
+<span class="w">      </span><span class="nt">font_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">18</span>
+<span class="w">      </span><span class="nt">max_chars</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="w">      </span><span class="nt">x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">105</span>
+<span class="w">      </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span>
+<span class="w">      </span><span class="nt">shift_left_event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sw_lower_left_flipper</span>
+<span class="w">      </span><span class="nt">shift_right_event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sw_lower_right_flipper</span>
+<span class="w">      </span><span class="nt">select_event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sw_start</span>
+<span class="w">      </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ff0000</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">style</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">big</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;&lt;</span><span class="nv">       </span><span class="s">&gt;&#39;</span>
+<span class="w">      </span><span class="nt">font_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">18</span>
+<span class="w">      </span><span class="nt">x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">105</span>
+<span class="w">      </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span>
+<span class="w">      </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ff0000</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;&#39;</span>
+<span class="w">      </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">high_score</span>
+<span class="w">      </span><span class="nt">font_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">18</span>
+<span class="w">      </span><span class="nt">style</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">big</span>
+<span class="w">      </span><span class="nt">x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">105</span>
+<span class="w">      </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">50</span>
+<span class="w">      </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ff00ff</span>
+<span class="w">      </span><span class="nt">animations</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">show_slide</span><span class="p">:</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">property</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">opacity</span>
+<span class="w">            </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">            </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.3s</span>
+<span class="w">            </span><span class="nt">easing</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">in_out_quint</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">property</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">opacity</span>
+<span class="w">            </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">            </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.3s</span>
+<span class="w">            </span><span class="nt">repeat</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">            </span><span class="nt">easing</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">in_out_quint</span>
+<span class="w">  </span><span class="nt">high_score_award_display</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(player_name)</span>
+<span class="w">      </span><span class="nt">font_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">18</span>
+<span class="w">      </span><span class="nt">style</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">big</span>
+<span class="w">      </span><span class="nt">anchor_y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">middle</span>
+<span class="w">      </span><span class="nt">anchor_x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">middle</span>
+<span class="w">      </span><span class="nt">x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">middle</span>
+<span class="w">      </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">middle</span>
+<span class="w">      </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">00ff00</span>
+<span class="w">      </span><span class="nt">animations</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">show_slide</span><span class="p">:</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">property</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">opacity</span>
+<span class="w">            </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">            </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.05s</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">property</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">opacity</span>
+<span class="w">            </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">            </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.05s</span>
+<span class="w">            </span><span class="nt">repeat</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(award)</span>
+<span class="w">      </span><span class="nt">font_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">18</span>
+<span class="w">      </span><span class="nt">style</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">big</span>
+<span class="w">      </span><span class="nt">x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">105</span>
+<span class="w">      </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">110</span>
+<span class="w">      </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0000ff</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(value)</span>
+<span class="w">      </span><span class="nt">style</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">big</span>
+<span class="w">      </span><span class="nt">x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">105</span>
+<span class="w">      </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+<span class="w">      </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4040FF</span>
+<span class="w">      </span><span class="nt">font_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span>
+<span class="w">      </span><span class="nt">number_grouping</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">      </span><span class="nt">min_digits</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="nt">loops_award_display</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(player_name)</span>
+<span class="w">      </span><span class="nt">font_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">18</span>
+<span class="w">      </span><span class="nt">style</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">big</span>
+<span class="w">      </span><span class="nt">anchor_y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">middle</span>
+<span class="w">      </span><span class="nt">anchor_x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">middle</span>
+<span class="w">      </span><span class="nt">x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">middle</span>
+<span class="w">      </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">middle</span>
+<span class="w">      </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">00ff00</span>
+<span class="w">      </span><span class="nt">animations</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">show_slide</span><span class="p">:</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">property</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">opacity</span>
+<span class="w">            </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">            </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.05s</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">property</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">opacity</span>
+<span class="w">            </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">            </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.05s</span>
+<span class="w">            </span><span class="nt">repeat</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(award)</span>
+<span class="w">      </span><span class="nt">font_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">18</span>
+<span class="w">      </span><span class="nt">style</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">big</span>
+<span class="w">      </span><span class="nt">x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">105</span>
+<span class="w">      </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">110</span>
+<span class="w">      </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0000ff</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(value)</span>
+<span class="w">      </span><span class="nt">style</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">big</span>
+<span class="w">      </span><span class="nt">x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">105</span>
+<span class="w">      </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+<span class="w">      </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4040FF</span>
+<span class="w">      </span><span class="nt">font_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span>
+<span class="w">      </span><span class="nt">number_grouping</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">      </span><span class="nt">min_digits</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(player(player_num)|character)</span>
+<span class="w">      </span><span class="nt">style</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">big</span>
+<span class="w">      </span><span class="nt">x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">105</span>
+<span class="w">      </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="w">      </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4040FF</span>
+<span class="w">      </span><span class="nt">font_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span>
+<span class="c1">##! test</span>
+<span class="c1">#! assert_machine_variable 1000000 score1_value</span>
+<span class="c1">#! assert_machine_variable MPF score1_name</span>
+<span class="c1">#! assert_machine_variable &quot;GRAND CHAMPION&quot; score1_label</span>
+<span class="c1">#! assert_machine_variable 200000 score9_value</span>
+<span class="c1">#! assert_machine_variable ANT score9_name</span>
+<span class="c1">#! assert_machine_variable &quot;HIGH SCORE 8&quot; score9_label</span>
+<span class="c1">#! start_game</span>
+<span class="c1">#! start_mode my_mode</span>
+<span class="c1">#! post score_100</span>
+<span class="c1">#! assert_player_variable 2000000 score</span>
+<span class="c1">#! drain_all_balls</span>
+<span class="c1">#! advance_time_and_run 1</span>
+<span class="c1">#! assert_player_variable 2 ball</span>
+<span class="c1">#! drain_all_balls</span>
+<span class="c1">#! advance_time_and_run 1</span>
+<span class="c1">#! assert_player_variable 3 ball</span>
+<span class="c1">#! mock_event high_score_enter_initials</span>
+<span class="c1">#! drain_all_balls</span>
+<span class="c1">#! advance_time_and_run 1</span>
+<span class="c1">#! assert_player_variable 3 ball</span>
+<span class="c1">#! assert_event_called high_score_enter_initials</span>
+<span class="c1">#! post text_input_high_score_complete text=JAB</span>
+<span class="c1">#! advance_time_and_run 10</span>
+<span class="c1">#! assert_mode_not_running game</span>
+<span class="c1">#! assert_machine_variable 2000000 score1_value</span>
+<span class="c1">#! assert_machine_variable JAB score1_name</span>
+<span class="c1">#! assert_machine_variable &quot;GRAND CHAMPION&quot; score1_label</span>
+<span class="c1">#! assert_machine_variable 1000000 score2_value</span>
+<span class="c1">#! assert_machine_variable MPF score2_name</span>
+<span class="c1">#! assert_machine_variable &quot;HIGH SCORE 1&quot; score2_label</span>
+<span class="c1">#! assert_machine_variable 300000 score9_value</span>
+<span class="c1">#! assert_machine_variable MIK score9_name</span>
+<span class="c1">#! assert_machine_variable &quot;HIGH SCORE 8&quot; score9_label</span>
 </code></pre></div>
 <p>High score mode will also create a few machine variables for you:</p>
 <ul>
@@ -33824,102 +33824,102 @@ Additionally, there will be <code>loop1_label</code>, <code>loop1_value</code> a
 <code>loop1_name</code>. You can use those in your attract slides to show previous
 high scores. This is an example of an attract mode which shows high
 scores:</p>
-<div class="highlight"><pre><span></span><code># in your machine wide config file
-widget_styles:
-  attract_mode_high_score_display_label:
-    font_size: 30
-    anchor_x: right
-    anchor_y: top
-    x: center-10
-    bold: true
-  attract_mode_high_score_display_name:
-    font_size: 30
-    anchor_x: right
-    anchor_y: top
-    x: center+70
-  attract_mode_high_score_display_score:
-    font_size: 30
-    anchor_x: left
-    anchor_y: top
-    x: center+90
-    number_grouping: true
-    min_digits: 1
-##! show: attract
-# in your attract mode show file
-- duration: 20s
-  slides:
-    show_high_scores:
-      widgets:
-      - type: Text
-        text: HIGH SCORES
-        font_size: 60
-        bold: true
-        anchor_x: center
-        anchor_y: center
-        x: center
-        y: top-100
-      - type: Text
-        text: (machine|score1_label)
-        style: attract_mode_high_score_display_label
-        y: top-200
-      - type: Text
-        text: (machine|score1_name)
-        style: attract_mode_high_score_display_name
-        y: top-200
-      - type: Text
-        text: (machine|score1_value)
-        style: attract_mode_high_score_display_score
-        y: top-200
-      - type: Text
-        text: (machine|score2_label)
-        style: attract_mode_high_score_display_label
-        y: top-240
-      - type: Text
-        text: (machine|score2_name)
-        style: attract_mode_high_score_display_name
-        y: top-240
-      - type: Text
-        text: (machine|score2_value)
-        style: attract_mode_high_score_display_score
-        y: top-240
-      - type: Text
-        text: (machine|score3_label)
-        style: attract_mode_high_score_display_label
-        y: top-280
-      - type: Text
-        text: (machine|score3_name)
-        style: attract_mode_high_score_display_name
-        y: top-280
-      - type: Text
-        text: (machine|score3_value)
-        style: attract_mode_high_score_display_score
-        y: top-280
-      - type: Text
-        text: LOOP CHAMPION
-        font_size: 60
-        bold: true
-        anchor_x: center
-        anchor_y: center
-        x: center
-        y: top-500
-      - type: Text
-        text: (machine|loops1_label)
-        style: attract_mode_high_score_display_label
-        y: top-600
-      - type: Text
-        text: (machine|loops1_name)
-        style: attract_mode_high_score_display_name
-        y: top-600
-      - type: Text
-        text: (machine|loops1_value)
-        style: attract_mode_high_score_display_score
-        y: top-600
-      - type: Text
-        text: (machine|loops1_player_character)
-        style: attract_mode_high_score_display_score
-        y: top-600
-##! test
-#! assert_mode_running attract
+<div class="highlight"><pre><span></span><code><span class="c1"># in your machine wide config file</span>
+<span class="nt">widget_styles</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">attract_mode_high_score_display_label</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">font_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+<span class="w">    </span><span class="nt">anchor_x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">right</span>
+<span class="w">    </span><span class="nt">anchor_y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">top</span>
+<span class="w">    </span><span class="nt">x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">center-10</span>
+<span class="w">    </span><span class="nt">bold</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">attract_mode_high_score_display_name</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">font_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+<span class="w">    </span><span class="nt">anchor_x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">right</span>
+<span class="w">    </span><span class="nt">anchor_y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">top</span>
+<span class="w">    </span><span class="nt">x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">center+70</span>
+<span class="w">  </span><span class="nt">attract_mode_high_score_display_score</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">font_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+<span class="w">    </span><span class="nt">anchor_x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">left</span>
+<span class="w">    </span><span class="nt">anchor_y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">top</span>
+<span class="w">    </span><span class="nt">x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">center+90</span>
+<span class="w">    </span><span class="nt">number_grouping</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">min_digits</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="c1">##! show: attract</span>
+<span class="c1"># in your attract mode show file</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20s</span>
+<span class="w">  </span><span class="nt">slides</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">show_high_scores</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">widgets</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Text</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HIGH SCORES</span>
+<span class="w">        </span><span class="nt">font_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">60</span>
+<span class="w">        </span><span class="nt">bold</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">        </span><span class="nt">anchor_x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">center</span>
+<span class="w">        </span><span class="nt">anchor_y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">center</span>
+<span class="w">        </span><span class="nt">x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">center</span>
+<span class="w">        </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">top-100</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Text</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(machine|score1_label)</span>
+<span class="w">        </span><span class="nt">style</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">attract_mode_high_score_display_label</span>
+<span class="w">        </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">top-200</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Text</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(machine|score1_name)</span>
+<span class="w">        </span><span class="nt">style</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">attract_mode_high_score_display_name</span>
+<span class="w">        </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">top-200</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Text</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(machine|score1_value)</span>
+<span class="w">        </span><span class="nt">style</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">attract_mode_high_score_display_score</span>
+<span class="w">        </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">top-200</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Text</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(machine|score2_label)</span>
+<span class="w">        </span><span class="nt">style</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">attract_mode_high_score_display_label</span>
+<span class="w">        </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">top-240</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Text</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(machine|score2_name)</span>
+<span class="w">        </span><span class="nt">style</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">attract_mode_high_score_display_name</span>
+<span class="w">        </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">top-240</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Text</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(machine|score2_value)</span>
+<span class="w">        </span><span class="nt">style</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">attract_mode_high_score_display_score</span>
+<span class="w">        </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">top-240</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Text</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(machine|score3_label)</span>
+<span class="w">        </span><span class="nt">style</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">attract_mode_high_score_display_label</span>
+<span class="w">        </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">top-280</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Text</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(machine|score3_name)</span>
+<span class="w">        </span><span class="nt">style</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">attract_mode_high_score_display_name</span>
+<span class="w">        </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">top-280</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Text</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(machine|score3_value)</span>
+<span class="w">        </span><span class="nt">style</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">attract_mode_high_score_display_score</span>
+<span class="w">        </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">top-280</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Text</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LOOP CHAMPION</span>
+<span class="w">        </span><span class="nt">font_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">60</span>
+<span class="w">        </span><span class="nt">bold</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">        </span><span class="nt">anchor_x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">center</span>
+<span class="w">        </span><span class="nt">anchor_y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">center</span>
+<span class="w">        </span><span class="nt">x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">center</span>
+<span class="w">        </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">top-500</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Text</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(machine|loops1_label)</span>
+<span class="w">        </span><span class="nt">style</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">attract_mode_high_score_display_label</span>
+<span class="w">        </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">top-600</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Text</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(machine|loops1_name)</span>
+<span class="w">        </span><span class="nt">style</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">attract_mode_high_score_display_name</span>
+<span class="w">        </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">top-600</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Text</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(machine|loops1_value)</span>
+<span class="w">        </span><span class="nt">style</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">attract_mode_high_score_display_score</span>
+<span class="w">        </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">top-600</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Text</span>
+<span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(machine|loops1_player_character)</span>
+<span class="w">        </span><span class="nt">style</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">attract_mode_high_score_display_score</span>
+<span class="w">        </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">top-600</span>
+<span class="c1">##! test</span>
+<span class="c1">#! assert_mode_running attract</span>
 </code></pre></div>
 <p>Related How To guides:</p>
 <ul>

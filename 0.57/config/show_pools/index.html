@@ -33755,20 +33755,20 @@ to <a href="../../examples/">config file examples</a> for more examples of real 
 of shows. When used one of the shows is selected from the pool based on
 a configurable pattern called <code>type</code>.</p>
 <p>This is an example:</p>
-<div class="highlight"><pre><span></span><code>#! shows:
-#!   show1:
-#!     - duration: 1
-#!   show2:
-#!     - duration: 1
-#!   show3:
-#!     - duration: 1
-show_pools:
-  group1:
-    shows:
-      - show1
-      - show2
-      - show3
-    type: random
+<div class="highlight"><pre><span></span><code><span class="c1">#! shows:</span>
+<span class="c1">#!   show1:</span>
+<span class="c1">#!     - duration: 1</span>
+<span class="c1">#!   show2:</span>
+<span class="c1">#!     - duration: 1</span>
+<span class="c1">#!   show3:</span>
+<span class="c1">#!     - duration: 1</span>
+<span class="nt">show_pools</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">group1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">shows</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">show1</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">show2</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">show3</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">random</span>
 </code></pre></div>
 <h2 id="required-settings">Required settings</h2>
 <p>The following sections are required in the <code>show_pools:</code> section of your

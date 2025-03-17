@@ -33689,14 +33689,14 @@ icons & this code generated via https://realfavicongenerator.net
 blocked ball ending ended) the game ending sequence will run. A few
 modes typically exist which delay game ending and are built-in to MPF.</p>
 <p>If you want to implement your own game end mode use this template:</p>
-<div class="highlight"><pre><span></span><code>##! mode: custom_high_score
-#config_version=5
-mode:
-  start_events: game_ending     # start on game ending process
-  use_wait_queue: true          # delay ball ending
-  game_mode: false              # the game is no longer running at this point
-  priority: 500                 # determines the order of game end modes
-  stop_events: stop_my_mode     # post this event to stop the mode and continue the game ending process
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: custom_high_score</span>
+<span class="c1">#config_version=5</span>
+<span class="nt">mode</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">start_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">game_ending</span><span class="w">     </span><span class="c1"># start on game ending process</span>
+<span class="w">  </span><span class="nt">use_wait_queue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w">          </span><span class="c1"># delay ball ending</span>
+<span class="w">  </span><span class="nt">game_mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w">              </span><span class="c1"># the game is no longer running at this point</span>
+<span class="w">  </span><span class="nt">priority</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">500</span><span class="w">                 </span><span class="c1"># determines the order of game end modes</span>
+<span class="w">  </span><span class="nt">stop_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stop_my_mode</span><span class="w">     </span><span class="c1"># post this event to stop the mode and continue the game ending process</span>
 </code></pre></div>
 <p>This example will block the game ending process until you post
 <code>stop_my_mode</code> in your config or stop the mode from code.</p>
@@ -33707,11 +33707,11 @@ achieve the same as above. In this example we start a mode after the
 last ball of every player (but you can also use <code>game_ending</code> as above).
 Put this into your base mode to start your custom mode on the end of
 ball three (or remove the condition to start if after every ball):</p>
-<div class="highlight"><pre><span></span><code>##! mode: base
-queue_relay_player:
-  ball_ending{current_player.ball==3}:
-    post: start_your_mode
-    wait_for: mode_your_mode_stopped
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: base</span>
+<span class="nt">queue_relay_player</span><span class="p">:</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">ball_ending{current_player.ball==3}</span><span class="p p-Indicator">:</span>
+<span class="w">    </span><span class="nt">post</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start_your_mode</span>
+<span class="w">    </span><span class="nt">wait_for</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mode_your_mode_stopped</span>
 </code></pre></div>
 <h2 id="ending-the-game-by-long-pressing-start">Ending the Game by Long-Pressing Start</h2>
 <p>See <a href="../../cookbook/long_presssing_start_to_end_game/">/game_logic/match_mode/index</a>.</p>

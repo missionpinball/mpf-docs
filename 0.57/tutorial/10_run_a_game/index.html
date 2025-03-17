@@ -33759,31 +33759,31 @@ progress. (Later in this tutorial we'll revisit this and explain
 what's actually going on. For now just make this change.) In your
 config file, add a <code>ball_started:</code> entry with the following information.
 Your complete <code>slide_player:</code> section should now look like this:</p>
-<div class="highlight"><pre><span></span><code>#! slides:
-#!   welcome_slide:
-#!     widgets:
-#!       - type: text
-#!         text: PINBALL!
-#!         font_size: 50
-#!         color: red
-#!       - type: rectangle
-#!         width: 240
-#!         height: 60
-#!   attract_started:
-#!     widgets:
-#!       - text: ATTRACT MODE
-#!         type: text
-slide_player:
-  init_done: welcome_slide
-  mode_attract_started: attract_started
-  ball_started:
-    widgets:
-      type: text
-      text: PLAYER (number) BALL (ball)
-##! test
-#! advance_time_and_run .1
-#! assert_slide_on_top attract_started
-#! assert_text_on_top_slide &quot;ATTRACT MODE&quot;
+<div class="highlight"><pre><span></span><code><span class="c1">#! slides:</span>
+<span class="c1">#!   welcome_slide:</span>
+<span class="c1">#!     widgets:</span>
+<span class="c1">#!       - type: text</span>
+<span class="c1">#!         text: PINBALL!</span>
+<span class="c1">#!         font_size: 50</span>
+<span class="c1">#!         color: red</span>
+<span class="c1">#!       - type: rectangle</span>
+<span class="c1">#!         width: 240</span>
+<span class="c1">#!         height: 60</span>
+<span class="c1">#!   attract_started:</span>
+<span class="c1">#!     widgets:</span>
+<span class="c1">#!       - text: ATTRACT MODE</span>
+<span class="c1">#!         type: text</span>
+<span class="nt">slide_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">init_done</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">welcome_slide</span>
+<span class="w">  </span><span class="nt">mode_attract_started</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">attract_started</span>
+<span class="w">  </span><span class="nt">ball_started</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">widgets</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PLAYER (number) BALL (ball)</span>
+<span class="c1">##! test</span>
+<span class="c1">#! advance_time_and_run .1</span>
+<span class="c1">#! assert_slide_on_top attract_started</span>
+<span class="c1">#! assert_text_on_top_slide &quot;ATTRACT MODE&quot;</span>
 </code></pre></div>
 <h2 id="2-add-initial-active-switches-and-bind-trough-switches-to-your-keyboard">2. Add initial active switches and bind trough switches to your keyboard</h2>
 <p>If you are not using physical hardware you need some way to control the
@@ -33792,37 +33792,37 @@ switches will be active (as if there was a ball sitting on them) when
 your virtual machine starts up. Additionally, we add keyboard bindings
 for ball switches to the numbers <code>1</code> to <code>5</code> and the plunger switch to
 <code>p</code>.</p>
-<div class="highlight"><pre><span></span><code>#! switches:
-#!   s_trough1:
-#!     number:
-#!   s_trough2:
-#!     number:
-#!   s_trough3:
-#!     number:
-virtual_platform_start_active_switches:
-  - s_trough1
-  - s_trough2
-  - s_trough3
+<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
+<span class="c1">#!   s_trough1:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   s_trough2:</span>
+<span class="c1">#!     number:</span>
+<span class="c1">#!   s_trough3:</span>
+<span class="c1">#!     number:</span>
+<span class="nt">virtual_platform_start_active_switches</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_trough1</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_trough2</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_trough3</span>
 
-keyboard:
-  1:
-    switch: s_trough1
-    toggle: true
-  2:
-    switch: s_trough2
-    toggle: true
-  3:
-    switch: s_trough3
-    toggle: true
-  4:
-    switch: s_trough4
-    toggle: true
-  5:
-    switch: s_trough5
-    toggle: true
-  p:
-    switch: s_plunger
-    toggle: true
+<span class="nt">keyboard</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_trough1</span>
+<span class="w">    </span><span class="nt">toggle</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_trough2</span>
+<span class="w">    </span><span class="nt">toggle</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">3</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_trough3</span>
+<span class="w">    </span><span class="nt">toggle</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">4</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_trough4</span>
+<span class="w">    </span><span class="nt">toggle</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">5</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_trough5</span>
+<span class="w">    </span><span class="nt">toggle</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">p</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_plunger</span>
+<span class="w">    </span><span class="nt">toggle</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
 <p>This way you can drain balls by activating trough switches.</p>
 <h2 id="3-change-your-flipper-config-so-they-dont-automatically-enable-on-machine-boot">3. Change your flipper config so they don't automatically enable on machine boot</h2>
@@ -33842,31 +33842,31 @@ enable again for Ball 2.</p>
 flipper sections of your config file. So now your <code>`flippers:</code>
 section should look like this: (It might not be 100% identical since you
 might have single-wound flipper coils and/or EOS switches.)</p>
-<div class="highlight"><pre><span></span><code>#! switches:
-#!   s_left_flipper:
-#!     number: 0
-#!   s_right_flipper:
-#!     number: 1
-#! coils:
-#!   c_flipper_left_main:
-#!     number: 0
-#!   c_flipper_left_hold:
-#!     number: 1
-#!     allow_enable: true
-#!   c_flipper_right_main:
-#!     number: 2
-#!   c_flipper_right_hold:
-#!     number: 3
-#!     allow_enable: true
-flippers:
-  left_flipper:
-    main_coil: c_flipper_left_main
-    hold_coil: c_flipper_left_hold
-    activation_switch: s_left_flipper
-  right_flipper:
-    main_coil: c_flipper_right_main
-    hold_coil: c_flipper_right_hold
-    activation_switch: s_right_flipper
+<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
+<span class="c1">#!   s_left_flipper:</span>
+<span class="c1">#!     number: 0</span>
+<span class="c1">#!   s_right_flipper:</span>
+<span class="c1">#!     number: 1</span>
+<span class="c1">#! coils:</span>
+<span class="c1">#!   c_flipper_left_main:</span>
+<span class="c1">#!     number: 0</span>
+<span class="c1">#!   c_flipper_left_hold:</span>
+<span class="c1">#!     number: 1</span>
+<span class="c1">#!     allow_enable: true</span>
+<span class="c1">#!   c_flipper_right_main:</span>
+<span class="c1">#!     number: 2</span>
+<span class="c1">#!   c_flipper_right_hold:</span>
+<span class="c1">#!     number: 3</span>
+<span class="c1">#!     allow_enable: true</span>
+<span class="nt">flippers</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">left_flipper</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">main_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_flipper_left_main</span>
+<span class="w">    </span><span class="nt">hold_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_flipper_left_hold</span>
+<span class="w">    </span><span class="nt">activation_switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_left_flipper</span>
+<span class="w">  </span><span class="nt">right_flipper</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">main_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_flipper_right_main</span>
+<span class="w">    </span><span class="nt">hold_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_flipper_right_hold</span>
+<span class="w">    </span><span class="nt">activation_switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_right_flipper</span>
 </code></pre></div>
 <h2 id="4-running-your-game-with-physical-hardware">4. Running your game with physical hardware</h2>
 <p>If you have a physical machine attached, go ahead and run your game

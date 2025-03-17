@@ -33760,14 +33760,14 @@ of <em>led1</em> to <em>red</em>, then one second later, it turns <em>led1</em> 
 Then after another second, the show is over. (Most likely you'd
 configure a show like this to <em>loop</em>, meaning this should could be used
 to flash <em>led1</em> on and off.)</p>
-<div class="highlight"><pre><span></span><code>##! show: my_show
-- time: 0
-  lights:
-    led1: red
-- time: +1
-  lights:
-    led1: off
-- time: +1
+<div class="highlight"><pre><span></span><code><span class="c1">##! show: my_show</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">led1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">+1</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">led1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">off</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">+1</span>
 </code></pre></div>
 <p>There are
 <a href="../../config_players/">lots of different actions you can configure in a show step</a> (LEDs, lights, sounds, coils, display slides, etc.), but for
@@ -33778,20 +33778,20 @@ now we'll just use this very simple show as an example.</p>
 a key/value pair that's separated with a dash, then a space. So you
 could say that the example show above has three steps:</p>
 <p>Step 1:</p>
-<div class="highlight"><pre><span></span><code>##! show: my_show
-- time: 0
-  lights:
-    led1: red
+<div class="highlight"><pre><span></span><code><span class="c1">##! show: my_show</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">led1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
 </code></pre></div>
 <p>Step 2:</p>
-<div class="highlight"><pre><span></span><code>##! show: my_show
-- time: +1
-  lights:
-    led1: off
+<div class="highlight"><pre><span></span><code><span class="c1">##! show: my_show</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">+1</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">led1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">off</span>
 </code></pre></div>
 <p>Step 3:</p>
-<div class="highlight"><pre><span></span><code>##! show: my_show
-- time: +1
+<div class="highlight"><pre><span></span><code><span class="c1">##! show: my_show</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">+1</span>
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -33841,8 +33841,8 @@ synchronizing show steps with sound or video.</p>
 <p>Sometimes it's more convenient to specify the timing of a step in a
 show relative to the step before it. To do that, enter the <em>time</em> value
 with a + in front of it, like this:</p>
-<div class="highlight"><pre><span></span><code>##! show: my_show
-- time: +1
+<div class="highlight"><pre><span></span><code><span class="c1">##! show: my_show</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">+1</span>
 </code></pre></div>
 <p>Relative step times are nice because you can adjust the timing of one
 step and then all the other relative steps after it are shifted back or
@@ -33850,17 +33850,17 @@ forwards automatically.</p>
 <p>You can mix-and-match incremental and absolute times in the same show,
 and you can also combine the plus sign for relative times with seconds
 or millisecond values. For example:</p>
-<div class="highlight"><pre><span></span><code>##! show: my_show
-- time: 0   # plays right away, at 0 seconds
-  # ...
-- time: +1  # plays 1 sec after the previous, 1 sec after show start
-  # ...
-- time: +1  # plays 1 sec after the previous, 2 secs after show start
-  # ...
-- time: 4   # plays 4 secs after show start, 2 secs after the previous
-  # ...
-- time: +1  # plays 1 sec after the previous, 5 secs after show start
-  #...
+<div class="highlight"><pre><span></span><code><span class="c1">##! show: my_show</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span><span class="w">   </span><span class="c1"># plays right away, at 0 seconds</span>
+<span class="w">  </span><span class="c1"># ...</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">+1</span><span class="w">  </span><span class="c1"># plays 1 sec after the previous, 1 sec after show start</span>
+<span class="w">  </span><span class="c1"># ...</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">+1</span><span class="w">  </span><span class="c1"># plays 1 sec after the previous, 2 secs after show start</span>
+<span class="w">  </span><span class="c1"># ...</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span><span class="w">   </span><span class="c1"># plays 4 secs after show start, 2 secs after the previous</span>
+<span class="w">  </span><span class="c1"># ...</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">+1</span><span class="w">  </span><span class="c1"># plays 1 sec after the previous, 5 secs after show start</span>
+<span class="w">  </span><span class="c1">#...</span>
 </code></pre></div>
 <p>Note that since shows use YAML formatting, you can use the hash sign
 (<code>#</code>) to add comments which MPF ignores.</p>
@@ -33870,22 +33870,22 @@ specify the "duration" of how long a step lasts (which is essentially
 specifying when a step ends). The difference is subtle, but each is
 useful in different situations.</p>
 <p>For example, the following to shows are identical:</p>
-<div class="highlight"><pre><span></span><code>##! show: my_show
-- time: 0
-  lights:
-    led1: red
-- time: +1
-  lights:
-    led1: off
-- time: +1
+<div class="highlight"><pre><span></span><code><span class="c1">##! show: my_show</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">led1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">+1</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">led1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">off</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">+1</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>##! show: my_show
-- duration: 1
-  lights:
-    led1: red
-- duration: 1
-  lights:
-    led1: off
+<div class="highlight"><pre><span></span><code><span class="c1">##! show: my_show</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">led1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">led1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">off</span>
 </code></pre></div>
 <p>You can also mix and match "time" and "duration" settings in the
 same show (and even in the same step). The only thing you can't do is
@@ -33901,17 +33901,17 @@ a step starts. So when does a step stop? When the next one starts. But
 what about your last step in the show? How long should it run for? If
 you just use time-based steps, you'd still want to specify a
 "duration" for the final step, like this:</p>
-<div class="highlight"><pre><span></span><code>##! show: my_show
-- time: 0
-  lights:
-    led1: red
-- time: +1
-  lights:
-    led1: green
-- time: +1
-  duration: 1
-  lights:
-    led1: blue
+<div class="highlight"><pre><span></span><code><span class="c1">##! show: my_show</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">led1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">+1</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">led1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">green</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">+1</span>
+<span class="w">  </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">led1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">blue</span>
 </code></pre></div>
 <h2 id="holding-the-final-step">"Holding" the final step</h2>
 <p>You can set a <code>duration: -1</code> for an "infinite" duration of a step.
@@ -33919,23 +33919,23 @@ you just use time-based steps, you'd still want to specify a
 you want to run and then hold something in their final state. For
 example, maybe you want a show that runs once (no loop) and flashes a
 light which then stays on. You could do that like this:</p>
-<div class="highlight"><pre><span></span><code>##! show: my_show
-- time: 0
-  lights:
-    led1: red
-- time: +250ms
-  lights:
-    led1: off
-- time: +250ms
-  lights:
-    led1: red
-- time: +250ms
-  lights:
-    led1: off
-- time: +250ms
-  lights:
-    led1: red
-  duration: -1
+<div class="highlight"><pre><span></span><code><span class="c1">##! show: my_show</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">led1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">+250ms</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">led1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">off</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">+250ms</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">led1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">+250ms</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">led1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">off</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">+250ms</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">led1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
+<span class="w">  </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-1</span>
 </code></pre></div>
 <p>In this example, the LED would stay on (red) until that show was
 manually stopped or until the mode was stopped (if the <code>show_player:</code>

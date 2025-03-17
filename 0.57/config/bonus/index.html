@@ -33905,17 +33905,17 @@ settings described here are specifically the settings that are used by
 MPF's built-in bonus mode, and so these settings are only valid in the
 bonus mode's mode configuration file.</p>
 <p>Here's an example from <em>Brooks 'n Dunn</em>:</p>
-<div class="highlight"><pre><span></span><code>##! mode: mode1
-mode_settings:
-  display_delay_ms: 4000
-  hurry_up_delay_ms: 500
-  hurry_up_event: flipper_cancel
-  bonus_entries:
-    - event: quarter_bonus
-      score: current_player.quarters * current_player.album_value
-    - event: wizard_bonus
-      score: 25000
-      player_score_entry: num_albums
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: mode1</span>
+<span class="nt">mode_settings</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">display_delay_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4000</span>
+<span class="w">  </span><span class="nt">hurry_up_delay_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">500</span>
+<span class="w">  </span><span class="nt">hurry_up_event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flipper_cancel</span>
+<span class="w">  </span><span class="nt">bonus_entries</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">quarter_bonus</span>
+<span class="w">      </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">current_player.quarters * current_player.album_value</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wizard_bonus</span>
+<span class="w">      </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">25000</span>
+<span class="w">      </span><span class="nt">player_score_entry</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">num_albums</span>
 </code></pre></div>
 <h2 id="settings">Settings</h2>
 <h3 id="display_delay_ms">display_delay_ms:</h3>
