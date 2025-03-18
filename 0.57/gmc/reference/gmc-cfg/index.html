@@ -15087,15 +15087,6 @@ icons & this code generated via https://realfavicongenerator.net
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#launching-the-mpf-game-with-gmc" class="md-nav__link">
-    <span class="md-ellipsis">
-      Launching the MPF game with GMC
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -15559,6 +15550,8 @@ icons & this code generated via https://realfavicongenerator.net
       
         
       
+        
+      
     
     
       
@@ -15735,6 +15728,28 @@ icons & this code generated via https://realfavicongenerator.net
   
   <span class="md-ellipsis">
     Display Filter Effects
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/launching-the-mpf-game-with-godot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Launching MPF Game with Godot
     
   </span>
   
@@ -33978,15 +33993,6 @@ icons & this code generated via https://realfavicongenerator.net
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#launching-the-mpf-game-with-gmc" class="md-nav__link">
-    <span class="md-ellipsis">
-      Launching the MPF game with GMC
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -34127,9 +34133,11 @@ icons & this code generated via https://realfavicongenerator.net
 <span class="w">    </span><span class="na">m</span><span class="o">=</span><span class="s">[&quot;event&quot;, &quot;start_mode_multiball&quot;]</span>
 </code></pre></div>
 <h2 id="mpf">[mpf]</h2>
-<p>The MPF section defines parameters for the GMC-spawned MPF process. The full command for the process will be assembled thus:</p>
+<p>If you have configured <a href="../../guides/launching-the-mpf-game-with-godot/">Godot to launch the MPF game</a> for you, this section contains the values you set in that menu.
+These options are assembled together into the following shell command and run when you play the Godot project:</p>
 <div class="highlight"><pre><span></span><code><span class="go">    &lt;executable_path&gt; &lt;executable_args&gt; &lt;machine_path&gt; &lt;mpf_args&gt;</span>
 </code></pre></div>
+<p>The Godot editor misbehaves if you edit the <code>gmc.cfg</code> values while also editing in this UI form, so take care to save changes and reload the editor if you notice odd behaviors. If the top line "Launch MPF with GMC" is enabled, the values here will be used to spawn an MPF game instance when you press the <strong>Play</strong> button to play your GMC project. </p>
 <h3 id="options">Options:</h3>
 <h4 id="spawn_mpf"><code>spawn_mpf</code></h4>
 <p>Single value, type <code>bool</code>. Default <code>false</code>.</p>
@@ -34153,10 +34161,6 @@ icons & this code generated via https://realfavicongenerator.net
 <h4 id="verbose"><code>verbose</code></h4>
 <p>Single value, type <code>bool</code>. Default <code>false</code>.</p>
 <p>If true, the MPF process will have verbose logging (i.e. <code>-vV</code> will be appended to the <code>mpf_args</code>).</p>
-<h3 id="launching-the-mpf-game-with-gmc">Launching the MPF game with GMC</h3>
-<p>The options from this [mpf] section can also be seen and changed in the Godot editor. Next to the "Scene" menu header, find the tab header for "MPF".</p>
-<p><img alt="image" src="../../images/launch_mpf_with_gmc.png" /></p>
-<p>The Godot editor misbehaves if you edit the <code>gmc.cfg</code> values while also editing in this UI form, so take care to save changes and reload the editor if you notice odd behaviors. If the top line "Launch MPF with GMC" is enabled, the values here will be used to spawn an MPF game instance when you press the <strong>Play</strong> button to play your GMC project. </p>
 <h2 id="sound_system">[sound_system]</h2>
 <p>The sound system section defines playback properties of the Audio Buses defined in your Godot project.</p>
 <div class="highlight"><pre><span></span><code><span class="w">    </span><span class="k">[sound_system]</span>
