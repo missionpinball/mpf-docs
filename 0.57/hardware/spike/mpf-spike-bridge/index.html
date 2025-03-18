@@ -33850,21 +33850,20 @@ afterwards do the following:</p>
 <li>Power up spike</li>
 <li>Press enter and you should get a command promt (if not, your serial
     connection is probably not working).</li>
-<li>Type the following:</li>
+<li>Type the following:
+    <div class="highlight"><pre><span></span><code>mount<span class="w"> </span>-o<span class="w"> </span>remount,rw<span class="w"> </span>/
+chmod<span class="w"> </span>+x<span class="w"> </span>/bin/bridge
+mount<span class="w"> </span>-o<span class="w"> </span>remount,ro<span class="w"> </span>/
+</code></pre></div></li>
 </ol>
-<p><div class="highlight"><pre><span></span><code>&lt;!-- --&gt;
-</code></pre></div>
-    mount -o remount,rw /
-    chmod +x /bin/bridge
-    mount -o remount,ro /</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>On OS X with fuse-ext2, overwriting files can fail without a message.
 When updating mpf-spike-bridge, you may want to remove the old bridge
 file before copying the new one.</p>
-<div class="highlight"><pre><span></span><code>rm &lt;sd_mount&gt;/bin/bridge cp &lt;your_path&gt;/mpf-spike-bridge/bridge
-    &lt;sd_mount&gt;/bin/bridge chmod 755 &lt;sd_mount&gt;/bin/bridge
+<div class="highlight"><pre><span></span><code>rm<span class="w"> </span>&lt;sd_mount&gt;/bin/bridge<span class="w"> </span>cp<span class="w"> </span>&lt;your_path&gt;/mpf-spike-bridge/bridge
+<span class="w">    </span>&lt;sd_mount&gt;/bin/bridge<span class="w"> </span>chmod<span class="w"> </span><span class="m">755</span><span class="w"> </span>&lt;sd_mount&gt;/bin/bridge
 </code></pre></div>
 </div>
 <h2 id="6-unmount-the-sd-card-put-it-back-in-your-spike-system">6. Unmount the SD card. Put it back in your spike system</h2>

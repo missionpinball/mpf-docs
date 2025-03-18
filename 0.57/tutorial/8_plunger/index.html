@@ -33793,7 +33793,7 @@ you can launch MPF and drop a ball into your trough and you should see
 some cool things in your log file. To do this, launch the MPF game
 engine with the <code>-v</code> command line options so it shows the verbose
 information in the log file, like this:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">C:\pinball\your_machine&gt;</span>mpf -vbt
+<div class="highlight"><pre><span></span><code>C:<span class="se">\p</span>inball<span class="se">\y</span>our_machine&gt;mpf<span class="w"> </span>-vbt
 </code></pre></div>
 <p>You don't have to launch the media controller this time since we're
 just looking at the console output of the MPF game engine, which is why
@@ -33848,10 +33848,9 @@ devices doesn't match how many balls you actually have, that could be:</p>
     your log should show that the switch is active (<em>State:1</em>), like
     this:</li>
 </ul>
-<p><div class="highlight"><pre><span></span><code>&lt;!-- --&gt;
+<div class="highlight"><pre><span></span><code>    2014-10-27 20:05:29,891 : SwitchController : &lt;&lt;&lt;&lt;&lt; switch: trough1, State:1 &gt;&gt;&gt;&gt;&gt;
 </code></pre></div>
-    2014-10-27 20:05:29,891 : SwitchController : &lt;&lt;&lt;&lt;&lt; switch: trough1, State:1 &gt;&gt;&gt;&gt;&gt;</p>
-<p>If you see State:1 immediately followed by another entry with State:0,
+<p>If you see <code>State:1</code> immediately followed by another entry with <code>State:0</code>,
 that means the ball isn't activating the switch even though it might be
 in the trough.</p>
 <p>If you get a YAML error, a "KeyError", or some other weird MPF error,
@@ -33864,7 +33863,8 @@ start with a number.</p>
 <p>Finally, make sure your YAML file is formatted properly, with spaces
 (not tabs) and that you have no space to the left of your colons and
 that you do have a space to the right of your colons. See our
-<a href="../../troubleshooting/debugging_yaml_parse_errors/">Debugging YAML Parse Errors</a> guide if you got YAML errors. At this point your trough is
+<a href="../../troubleshooting/debugging_yaml_parse_errors/">Debugging YAML Parse Errors</a>
+guide if you got YAML errors. At this point your trough is
 ready to go! Next we have to configure your plunger lane.</p>
 <hr />
 <div class="admonition question">

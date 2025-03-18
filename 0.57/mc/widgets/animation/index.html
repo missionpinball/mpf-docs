@@ -34047,10 +34047,10 @@ with a hyphen and a space).</p>
 <p>There are several settings you can specify in each step. (See the config
 file reference for animations for details)</p>
 <p>In this example, there are three settings for the first step:</p>
-<pre><code>- property: opacity
-  value: 1
-  duration: .5s
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">property</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">opacity</span>
+<span class="w">      </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">      </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.5s</span>
+</code></pre></div>
 <p>The <strong>property</strong> setting is the name of the widget's property that you
 want to animate. This can be almost any numerical property of the
 widget, including <code>x:</code>, <code>y:</code>, <code>opacity</code>, etc. (Different widget types
@@ -34065,23 +34065,21 @@ set to <code>True</code>, the new target value will set by adding the <code>valu
 parameter to the widget's current <code>property:</code> value when the animation
 starts. When <code>relative:</code> is set to <code>False</code>, the animation target uses
 the actual <code>value:</code> property value as its destination.</p>
-<p>The following example animates a widget 50 pixels in the <code>x</code> direction over one second from its current location,</p>
-<p>:   then -50 pixels in the <code>y</code> direction over another second followed by
-    a 45 degree rotation over 500 ms:</p>
-<p><div class="highlight"><pre><span></span><code>&lt;!-- --&gt;
+<p>The following example animates a widget 50 pixels in the <code>x</code> direction over one second from its current location,
+then -50 pixels in the <code>y</code> direction over another second followed by a 45 degree rotation over 500 ms:</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">property</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">x</span>
+<span class="w">      </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">50</span>
+<span class="w">      </span><span class="nt">relative</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span>
+<span class="w">      </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">property</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">y</span>
+<span class="w">      </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-50</span>
+<span class="w">      </span><span class="nt">relative</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span>
+<span class="w">      </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">property</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rotation</span>
+<span class="w">      </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">45</span>
+<span class="w">      </span><span class="nt">relative</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span>
+<span class="w">      </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">500ms</span>
 </code></pre></div>
-    - property: x
-      value: 50
-      relative: True
-      duration: 1s
-    - property: y
-      value: -50
-      relative: True
-      duration: 1s
-    - property: rotation
-      value: 45
-      relative: True
-      duration: 500ms</p>
 <h2 id="3-animation-trigger-events">3. Animation trigger events</h2>
 <p>The animation trigger event (which is the <code>show_slide:</code> entry in the
 example from the previous step is the name of the MPF event you want to
@@ -34203,10 +34201,10 @@ step by using a list in both the <code>property:</code> and <code>value:</code> 
 (there must be the same number of items in both lists). The following
 example moves a widget diagonally to the coordinate (10, 20) while
 rotating it 180 degrees over 5 seconds:</p>
-<pre><code>- property: x, y, rotation
-  value: 10, 20, 180
-  duration: 5s
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">property</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">x, y, rotation</span>
+<span class="w">      </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10, 20, 180</span>
+<span class="w">      </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5s</span>
+</code></pre></div>
 <h2 id="5-multi-step-animations-with-different-trigger-events">5. Multi-step animations with different trigger events</h2>
 <p>So far all of the animation examples have been triggered on the
 <code>show_slide</code> event (which means they start animating as soon as the
