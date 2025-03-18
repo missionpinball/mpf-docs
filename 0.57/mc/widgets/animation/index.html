@@ -34451,6 +34451,9 @@ repeat something a certain number of times. For example:</p>
 </code></pre></div>
 <p>In the example above, when the MPF event "flash_3x" is posted, it will
 cause widget1 to pulse three times.</p>
+<p>It is worth mentioning that if any of the animations in the chain has a
+<code>repeat: true</code> attribute, then the whole animation chain will be repeated.
+It is not possible to have only the last one repeating.</p>
 <h2 id="11-animating-a-progress-bar">11. Animating a progress bar</h2>
 <p>MPF can also animate progress bars or similar things. In this example,
 we animate a progress bar based on the player variable <code>progress</code> by
