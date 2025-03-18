@@ -34066,10 +34066,10 @@ rotate them:</p>
 <h2 id="select-a-mode-at-the-start-of-ball-1">Select a mode at the start of ball 1</h2>
 <p>Use this to delay the start of a player's first ball until they select
 a mode:</p>
-<div class="highlight"><pre><span></span><code><span class="c1">##! mode: start_selecton_on_ball_one</span>
+<div class="highlight"><pre><span></span><code><span class="c1">##! mode: start_selector_on_ball_one</span>
 <span class="c1">#config_version=5</span>
 <span class="nt">mode</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">start_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ball_ended</span>
+<span class="w">  </span><span class="nt">start_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">game_started</span>
 <span class="w">  </span><span class="nt">stop_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ball_started</span>
 <span class="w">  </span><span class="nt">priority</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
 <span class="w">  </span><span class="nt">game_mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w">   </span><span class="c1"># this is needed to interfere with game start</span>
