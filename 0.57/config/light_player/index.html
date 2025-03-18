@@ -33806,7 +33806,9 @@ a list of RGB values (e.g. <code>[50, 128, 206]</code>) cannot be used, these RG
 are only valid in the <a href="../named_colors/">named_colors:</a> section of your config file. MPF
 knows 140+ standard web color names, and you can define your own custom
 colors in the <a href="../named_colors/">named_colors:</a>
-section of your config. If you use brightness on an RGB light MPF will
+section of your config. The colors MPF knows can be easily checked by reading:
+<a href="https://github.com/missionpinball/mpf/blob/dev/mpf/core/rgb_color.py">https://github.com/missionpinball/mpf/blob/dev/mpf/core/rgb_color.py</a>
+If you use brightness on an RGB light MPF will
 use the brightness for every channel. For instance brigness <code>AA</code> will
 result in color <code>AAAAAA</code>.</p>
 <p>There is a special color <code>stop</code> which will remove the current light
