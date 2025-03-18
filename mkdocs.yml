@@ -673,6 +673,7 @@ nav:
       - Bonus Mode Slide: gmc/guides/bonus_mode.md
       - Spanning Multiple Monitors: gmc/guides/spanning-multiple-monitors.md
       - Display Filter Effects: gmc/guides/window-filters.md
+      - Launching MPF Game with Godot: gmc/guides/launching-the-mpf-game-with-godot.md
       - Advanced Custom Code: gmc/guides/advanced-custom-code.md
 
 - Tools:
