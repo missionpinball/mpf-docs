@@ -59,7 +59,7 @@ $ mpf service
 
 To start the interactive monitor tool (which requires a [separate install](../../tools/monitor/installation.md)) run:
 
-```shell
+``` shell
 $ mpf monitor
 ```
 
@@ -111,7 +111,7 @@ So `$ mpf` by itself is the same as `$ mpf game`.
 
 To use the machine_folder optional argument, you must include it after the command name, for example:
 
-```shell
+``` shell
 $ mpf game ./path/to/machine_folder -P
 ```
 

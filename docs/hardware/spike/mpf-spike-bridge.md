@@ -1,6 +1,5 @@
 ---
-title: How to modify a Stern SPIKE SD card & install the MPF SPIKE
-  bridge
+title: How to modify a Stern SPIKE SD card & install the MPF SPIKE bridge
 ---
 
 ## 1. Backup the existing SD card
@@ -118,13 +117,11 @@ source code).
     4.  Press enter and you should get a command promt (if not, your serial
         connection is probably not working).
     5.  Type the following:
-
-    ```{=html}
-    <!-- -->
-    ```
+        ``` shell
         mount -o remount,rw /
         chmod +x /bin/bridge
         mount -o remount,ro /
+        ```
 
 !!! note
 
@@ -132,7 +129,7 @@ source code).
     When updating mpf-spike-bridge, you may want to remove the old bridge
     file before copying the new one.
 
-    ```
+    ``` shell
     rm <sd_mount>/bin/bridge cp <your_path>/mpf-spike-bridge/bridge
         <sd_mount>/bin/bridge chmod 755 <sd_mount>/bin/bridge
     ```

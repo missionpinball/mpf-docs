@@ -40,7 +40,7 @@ your list of light names.
 
 To use the "on" show in a show_player, you might write something like:
 
-```yaml
+``` yaml
 show_player:
   my_triggering_event:
     on:
@@ -98,7 +98,7 @@ to control.
 
 ### Example
 
-```yaml
+``` yaml
 show_player:
   my_triggering_event:
     flash:
@@ -131,7 +131,7 @@ nothing rather than attempting to show an incompatible color.
 
 ### Example
 
-```yaml
+``` yaml
 show_player:
   my_triggering_event:
     led_color:
@@ -182,7 +182,7 @@ Like "led_color", this show must be configured with a custom color for its light
 
 ### Example
 
-```yaml
+``` yaml
 show_player:
   my_triggering_event:
     flash_color:

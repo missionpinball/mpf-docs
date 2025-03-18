@@ -74,9 +74,11 @@ file reference for animations for details)
 
 In this example, there are three settings for the first step:
 
+``` yaml
     - property: opacity
       value: 1
       duration: .5s
+```
 
 The **property** setting is the name of the widget's property that you
 want to animate. This can be almost any numerical property of the
@@ -96,13 +98,9 @@ starts. When `relative:` is set to `False`, the animation target uses
 the actual `value:` property value as its destination.
 
 The following example animates a widget 50 pixels in the `x` direction over one second from its current location,
+then -50 pixels in the `y` direction over another second followed by a 45 degree rotation over 500 ms:
 
-:   then -50 pixels in the `y` direction over another second followed by
-    a 45 degree rotation over 500 ms:
-
-```{=html}
-<!-- -->
-```
+``` yaml
     - property: x
       value: 50
       relative: True
@@ -115,6 +113,7 @@ The following example animates a widget 50 pixels in the `x` direction over one 
       value: 45
       relative: True
       duration: 500ms
+```
 
 ## 3. Animation trigger events
 
@@ -270,9 +269,11 @@ step by using a list in both the `property:` and `value:` parameters
 example moves a widget diagonally to the coordinate (10, 20) while
 rotating it 180 degrees over 5 seconds:
 
+``` yaml
     - property: x, y, rotation
       value: 10, 20, 180
       duration: 5s
+```
 
 ## 5. Multi-step animations with different trigger events
 

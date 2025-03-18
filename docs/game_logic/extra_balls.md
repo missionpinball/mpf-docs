@@ -64,16 +64,12 @@ extra_balls:
 ## Related Events
 
 * [extra_ball_award_disabled](../events/extra_ball_award_disabled.md)
-* [extra_ball_(name)_award_disabled](../events/extra_ball_extra_ball_award_disabled.md)
+* [extra_ball_(name)\_award_disabled](../events/extra_ball_extra_ball_award_disabled.md)
 * [extra_ball_(name)_lit](../events/extra_ball_extra_ball_lit.md)
 * [extra_ball_(name)_awarded](../events/extra_ball_extra_ball_awarded.md)
 * [extra_ball_awarded](../events/extra_ball_awarded.md)
-
-```{=html}
-<!-- -->
-```
 * [extra_ball_group_(name)_awarded](../events/extra_ball_group_extra_ball_group_awarded.md)
 * [extra_ball_group_(name)_lit](../events/extra_ball_group_extra_ball_group_lit.md)
 * [extra_ball_group_(name)_unlit](../events/extra_ball_group_extra_ball_group_unlit.md)
-* [extra_ball_group_(name)_award_disabled](../events/extra_ball_group_extra_ball_group_award_disabled.md)
-* [extra_ball_group_(name)_lit_awarded](../events/extra_ball_group_extra_ball_group_lit_awarded.md)
+* [extra_ball_group_(name)\_award_disabled](../events/extra_ball_group_extra_ball_group_award_disabled.md)
+* [extra_ball_group_(name)\_lit_awarded](../events/extra_ball_group_extra_ball_group_lit_awarded.md)

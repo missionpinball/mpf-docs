@@ -19,7 +19,7 @@ details.
 
 Example section:
 
-```yaml
+``` yaml
 #config_version=5
 high_score:
   _overwrite: True
