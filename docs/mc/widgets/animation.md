@@ -570,6 +570,10 @@ widgets:
 In the example above, when the MPF event "flash_3x" is posted, it will
 cause widget1 to pulse three times.
 
+It is worth mentioning that if any of the animations in the chain has a
+`repeat: true` attribute, then the whole animation chain will be repeated.
+It is not possible to have only the last one repeating.
+
 ## 11. Animating a progress bar
 
 MPF can also animate progress bars or similar things. In this example,
