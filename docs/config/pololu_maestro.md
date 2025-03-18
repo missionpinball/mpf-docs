@@ -18,7 +18,7 @@ serial port that a Pololu Maestro servo controller is connected to.
 When you attach a Pololu Maestro, two serial ports will appear. You want
 to specific the first (lower numbered) port here. For example:
 
-``` mpf-config
+``` yaml
 pololu_maestro:
   port: COM5
 ```

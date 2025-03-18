@@ -22,7 +22,7 @@ config section for each of the lanes, called `s_lane_left`,
 `s_lane_middle`, and `s_lane_right`. We'll also use corresponding
 lights `l_lane_left` etc. to indicate which lane is lit.
 
-``` mpf-config
+``` yaml
 #config_version=5
 modes:
   - skillshot_with_lane_change
@@ -56,7 +56,7 @@ shot_profiles:
 The first thing our mode needs is [shots:](../config/shots.md). Each lane will count as a shot, and for this example we'll
 have three lanes "left", "middle", and "right".
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_lane_left:
 #!     number: 1
@@ -107,7 +107,7 @@ don't want that here so we'll set `advance_on_hit: false`. Instead, we
 have explicit `advance_events` set on the shots so we can advance them
 for the lane change.
 
-``` mpf-config
+``` yaml
 ##! mode: skillshot_with_lane_change
 shot_profiles:
   skillshot_profile:
@@ -129,7 +129,7 @@ Shot groups are powerful because they control behavior of all the shots
 together. In this case, we'll use our shot group to rotate the lit
 shots.
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_lane_left:
 #!     number: 1
@@ -166,7 +166,7 @@ The starting state of the shot profile is "off", so we need to pick
 one shot at random and advance it to its "lit" state. We'll use the
 [random_event_player:](../config/random_event_player.md) for this.
 
-``` mpf-config
+``` yaml
 ##! mode: skillshot_with_lane_change
 random_event_player:
   mode_skillshot_started:
@@ -186,7 +186,7 @@ with the state name of the shot that was hit. By using the shot group
 events, we can check when *any* shot is hit, rather than having to check
 each shot in the group individually.
 
-``` mpf-config
+``` yaml
 ##! mode: skillshot_with_lane_change
 variable_player:
   skillshot_lit_hit:
@@ -207,7 +207,7 @@ will post before the *skillshot_lit_hit* event, so if we end the mode
 immediately then no score will be awarded. Instead, we add a 1 second
 delay after playfield activation before ending the mode.
 
-``` mpf-config
+``` yaml
 ##! mode: skillshot_with_lane_change
 event_player:
   skillshot_hit: stop_mode_skillshot

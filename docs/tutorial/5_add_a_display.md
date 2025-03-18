@@ -73,7 +73,7 @@ height and width, both defined in terms of the number of pixels. So for
 now, create a single display called "window" set to 800x600 pixels. To
 do this, add the following to your `config.yaml` file:
 
-``` mpf-mc-config
+``` yaml
 displays:
   window:
     width: 800
@@ -161,7 +161,7 @@ In MPF, all slides have names. You can define slides in the `slides:`
 section of the config. So let's create a slide called
 "welcome_slide", like this:
 
-``` mpf-mc-config
+``` yaml
 slides:
   welcome_slide:
 ##! test
@@ -171,7 +171,7 @@ slides:
 Now let's add a `widgets:` section under that slide, then under that,
 we'll start creating some widgets.
 
-``` mpf-mc-config
+``` yaml
 slides:
   welcome_slide:
     widgets:
@@ -184,7 +184,7 @@ common for slides to be made up of lots of widgets). For now let's add
 a text widget that reads "PINBALL!". Do this by adding the following
 to your config:
 
-``` mpf-mc-config
+``` yaml
 slides:
   welcome_slide:
     widgets:
@@ -235,7 +235,7 @@ slide_player watches for certain events to occur, and when they do, it
 
 To see this in action, add the following section to your machine config:
 
-``` mpf-mc-config
+``` yaml
 #! slides:
 #!   welcome_slide:
 #!     widgets:
@@ -281,7 +281,7 @@ config file. Since this is a text widget, we can look at the
 For example, let's change the font size and the color, by adding
 `font_size:` and `color:` lines:
 
-``` mpf-mc-config
+``` yaml
 slides:
   welcome_slide:
     widgets:
@@ -314,7 +314,7 @@ slide and that there are lots of different kinds of widgets. Let's add
 a second widget to your welcome slide. This one will be a rectangle
 which appears behind the word "PINBALL!".
 
-``` mpf-mc-config
+``` yaml
 slides:
   welcome_slide:
     widgets:
@@ -368,7 +368,7 @@ event.
 So in your `slides:` section, add another slide called
 `attract_started`, like this:
 
-``` mpf-mc-config
+``` yaml
 slides:
   welcome_slide:
     widgets:
@@ -415,7 +415,7 @@ these as triggers for your slides via the `slide_player:`.
 Anyway, add the `mode_attract_started` to your `slide_player:` like
 this:
 
-``` mpf-mc-config
+``` yaml
 #! slides:
 #!   welcome_slide:
 #!     widgets:

@@ -11,7 +11,7 @@ modes typically exist which delay game ending and are built-in to MPF.
 
 If you want to implement your own game end mode use this template:
 
-``` mpf-config
+``` yaml
 ##! mode: custom_high_score
 #config_version=5
 mode:
@@ -34,7 +34,7 @@ last ball of every player (but you can also use `game_ending` as above).
 Put this into your base mode to start your custom mode on the end of
 ball three (or remove the condition to start if after every ball):
 
-``` mpf-config
+``` yaml
 ##! mode: base
 queue_relay_player:
   ball_ending{current_player.ball==3}:

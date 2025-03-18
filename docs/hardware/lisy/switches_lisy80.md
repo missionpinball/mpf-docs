@@ -33,7 +33,7 @@ and Gottlieb decided not to document them ;-). Those are the following
 
 You can start with this config:
 
-``` mpf-config
+``` yaml
 switches:
   tilt:
     number: 57

@@ -15,7 +15,7 @@ projected.
 Here is an example of setting up a window and four displays in a config
 file.
 
-``` mpf-mc-config
+``` yaml
 window:
   width: 1080
   height: 1300
@@ -51,7 +51,7 @@ the "insert" display will be drawn on top of the "lower" display.
 This gives you a "picture-in-picutre" where the "insert" will appear
 to be projected on top of the "lower" display.
 
-``` mpf-mc-config
+``` yaml
 slides:
   layout:
     background_color: blue

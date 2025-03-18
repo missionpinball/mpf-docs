@@ -25,7 +25,7 @@ MPF events are received.
 
 Examples:
 
-``` mpf-config
+``` yaml
 sound_loop_player:
   play_basic_beat:
     loops:

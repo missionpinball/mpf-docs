@@ -19,7 +19,7 @@ To enable servos you need to configure your PD-LED board in your `p_roc`
 section. Assuming your PD-LED has the ID 4 you can use the following
 config to enable all servos and and define two of them:
 
-``` mpf-config
+``` yaml
 p_roc:
   pd_led_boards:
     4:

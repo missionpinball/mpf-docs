@@ -52,7 +52,7 @@ add this to the second device (the one that feeds the plunger).
 
 Tell the playfield to use the plunger for new balls:
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_plunger:
 #!     number: 10
@@ -89,7 +89,7 @@ some cool things in your log file. To do this, launch the MPF game
 engine with the `-v` command line options so it shows the verbose
 information in the log file, like this:
 
-``` doscon
+``` shell
 C:\pinball\your_machine>mpf -vbt
 ```
 
@@ -156,12 +156,11 @@ devices doesn't match how many balls you actually have, that could be:
     your log should show that the switch is active (*State:1*), like
     this:
 
-```{=html}
-<!-- -->
 ```
     2014-10-27 20:05:29,891 : SwitchController : <<<<< switch: trough1, State:1 >>>>>
+```
 
-If you see State:1 immediately followed by another entry with State:0,
+If you see `State:1` immediately followed by another entry with `State:0`,
 that means the ball isn't activating the switch even though it might be
 in the trough.
 
@@ -177,5 +176,6 @@ start with a number.
 Finally, make sure your YAML file is formatted properly, with spaces
 (not tabs) and that you have no space to the left of your colons and
 that you do have a space to the right of your colons. See our
-[Debugging YAML Parse Errors](../troubleshooting/debugging_yaml_parse_errors.md) guide if you got YAML errors. At this point your trough is
+[Debugging YAML Parse Errors](../troubleshooting/debugging_yaml_parse_errors.md)
+guide if you got YAML errors. At this point your trough is
 ready to go! Next we have to configure your plunger lane.

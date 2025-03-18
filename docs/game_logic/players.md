@@ -74,7 +74,7 @@ MPF.
 
 **Examples:**
 
-``` mpf-config
+``` yaml
 player_vars:
   current_mode:
     initial_value: Trees Attack
@@ -103,7 +103,7 @@ configuring the change you would like to make. In the current version of
 MPF, this is primarily done in the `variable_player:` section of your
 mode.
 
-``` mpf-config
+``` yaml
 ##! mode: my_mode
 variable_player:
   # add 1 to bumper_hits
@@ -116,7 +116,7 @@ A mode carousel (mode selection by the player) was used by the player to
 select a mode ladder (a set of modes played in a sequence similar to
 scenes in GhostBusters). The apostrophes are not required but allowed.
 
-``` mpf-config
+``` yaml
 ##! mode: my_mode
 variable_player:
   carousel_left_scoop_scene_selected:
@@ -132,7 +132,7 @@ see which mode ladder was in play and increments the custom player
 variable ladder_scene_1 to indicate the progress towards completing the
 mode.
 
-``` mpf-config
+``` yaml
 ##! mode: my_mode
 variable_player:
   mode_is_complete{current_player.current_ladder=="Scene 1"}:
@@ -147,7 +147,7 @@ is displaying 3 variables on the main scoring screen of the base mode.
 The first two variables are of type "str" and the last variable is of
 type "int".
 
-``` mpf-mc-config
+``` yaml
 player_vars:
   current_ladder:
     initial_value: "Initial Ladder"

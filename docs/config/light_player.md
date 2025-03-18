@@ -20,7 +20,7 @@ title: "light_player:"
 The `light_player:` section of your config is where you can control
 lights in config or shows. Example in config:
 
-``` mpf-config
+``` yaml
 light_player:
   some_event:
     led1:
@@ -31,7 +31,7 @@ light_player:
       fade: 2000ms
 ```
 
-``` mpf-config
+``` yaml
 shows:
   rainbow:
     - lights:
@@ -64,7 +64,9 @@ a list of RGB values (e.g. `[50, 128, 206]`) cannot be used, these RGB values
 are only valid in the [named_colors:](named_colors.md) section of your config file. MPF
 knows 140+ standard web color names, and you can define your own custom
 colors in the [named_colors:](named_colors.md)
-section of your config. If you use brightness on an RGB light MPF will
+section of your config. The colors MPF knows can be easily checked by reading:
+<https://github.com/missionpinball/mpf/blob/dev/mpf/core/rgb_color.py>
+If you use brightness on an RGB light MPF will
 use the brightness for every channel. For instance brigness `AA` will
 result in color `AAAAAA`.
 

@@ -15,7 +15,7 @@ First, add the switch for your start button to the `switches:` section
 of your config file. Again this should be easy by now. In this tutorial
 we'll just call this button `s_start` and add it like this:
 
-``` mpf-config
+``` yaml
 switches:
   s_start:
     number: 11
@@ -36,7 +36,7 @@ might not, etc.) So we use a "start" tag behind the scenes to make
 whatever switch you want act as the start button. So now your start
 switch in your `switches:` section should look like this:
 
-``` mpf-config
+``` yaml
 switches:
   s_start:
     number: 11
@@ -56,7 +56,7 @@ hardware. For your start button keyboard key, how about using the `S`
 key? To do so, add an entry like this to the `keyboard:` section of your
 config file:
 
-``` mpf-config
+``` yaml
 keyboard:
   s:
     switch: s_start
@@ -80,7 +80,7 @@ playfield switches with `playfield_active`, so we're just getting
 starting on this now. To do this, create a new entry in your `switches:`
 section for one of your playfield switches, for example:
 
-``` mpf-config
+``` yaml
 switches:
   s_right_inlane:
     number: 12
@@ -93,7 +93,7 @@ purpose tags for [switches](../config/switches.md).
 While you're at it, create a keyboard key mapping for this switch in
 the `keyboard:` section of your config, like this:
 
-``` mpf-config
+``` yaml
 keyboard:
   q:
     switch: s_right_inlane

@@ -46,7 +46,7 @@ Starting with MPF 0.50 flashers and lights have been unified. Depending
 on your platform flashers might be [lights:](../../config/lights.md) or [coils:](../../config/coils.md). In most
 cases they are configured as [coil](../../config/coils.md):
 
-``` mpf-config
+``` yaml
 coils:
   flasher_coil_4:
     number: 4
@@ -55,7 +55,7 @@ coils:
 
 Then add them as [light](../../config/lights.md):
 
-``` mpf-config
+``` yaml
 #! coils:
 #!   flasher_coil_4:
 #!     number: 4
@@ -68,7 +68,7 @@ lights:
 
 Now you can use them in [flasher_player:](../../config/flasher_player.md) (or also in [light_player:](../../config/light_player.md) if you want to enable the flasher permanently).
 
-``` mpf-config
+``` yaml
 flasher_player:
   flash:
     flasher_01: 100ms

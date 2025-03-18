@@ -104,7 +104,7 @@ Transitions are specified as an additional property of a
 `segment_display_player:` config or the `segment_displays:` section of a
 show config. For example:
 
-``` mpf-config
+``` yaml
 #! segment_displays:
 #!   display1:
 #!     number: 1

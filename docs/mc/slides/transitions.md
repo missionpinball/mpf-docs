@@ -136,7 +136,7 @@ Options for the rise_in transition:
 Transitions are specified as an additional property of a `slide_player:`
 config or the `slides:` section of a show config. For example:
 
-``` mpf-mc-config
+``` yaml
 #! slides:
 #!   slide1:
 #!     - type: text
@@ -161,7 +161,7 @@ the new slide in from the right.
 
 Transitions can be combined with other slide settings, like this:
 
-``` mpf-mc-config
+``` yaml
 #! slides:
 #!   slide1:
 #!     - type: text
@@ -182,7 +182,7 @@ slide_player:
 You can also configure `transition_out:` settings which are transitions
 that will be applied to a slide when it is removed, like this:
 
-``` mpf-mc-config
+``` yaml
 #! slides:
 #!   slide1:
 #!     - type: text

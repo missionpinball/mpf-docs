@@ -18,7 +18,7 @@ Controller. Note that we have a how to guide which includes
 [all the PKONE-specific settings](../hardware/pkone/index.md) throughout your entire config file, so be sure to read that
 if you have Penny K Pinball PKONE hardware.
 
-``` mpf-config
+``` yaml
 pkone:
   port: com3
 ```

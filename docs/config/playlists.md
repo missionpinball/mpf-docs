@@ -19,7 +19,7 @@ available if you're using MPF-MC for your media controller.)
 
 Here is an example:
 
-``` mpf-config
+``` yaml
 # ---------------------
 # SOUNDS::PLAYLIST
 # ---------------------

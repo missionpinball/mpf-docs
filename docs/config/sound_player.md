@@ -22,7 +22,7 @@ to perform on sounds when MPF events are received.
 
 This is an example:
 
-``` mpf-config
+``` yaml
 sound_player:
   mode_attract_started:
     song_01:
@@ -113,7 +113,7 @@ play a different sound but you don't also want the base mode to play
 the sound configured there (we don't want two simultaneous sounds for
 the jet bumper, just one).
 
-``` mpf-config
+``` yaml
 ##! mode: mode1
 sound_player:
   sw_jet_bumper_active:
@@ -123,7 +123,7 @@ sound_player:
 
 There is also a shorthand way (express config format):
 
-``` mpf-config
+``` yaml
 ##! mode: mode1
 sound_player:
   sw_jet_bumper_active: super_jet_bumper_sound|block

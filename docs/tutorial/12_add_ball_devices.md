@@ -40,7 +40,7 @@ when it boots because these additional devices do not have "home"
 listed as one of their tags.) Here's the `ball_devices:` section from a
 *Demolition Man* config file:
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_trough1:
 #!     number: 1

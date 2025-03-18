@@ -291,7 +291,7 @@ So now you've seen all the options for positioning and placement of
 widgets. But how do you actually use them? Simple. Everything discussed
 here are just regular widget settings. So you can use them in slides:
 
-``` mpf-mc-config
+``` yaml
 slides:
   slide1:
     widgets:
@@ -310,7 +310,7 @@ slides:
 
 You can use them in [named widgets](reusable_widgets.md):
 
-``` mpf-mc-config
+``` yaml
 widgets:
   my_cool_widget:
     - type: text
@@ -328,7 +328,7 @@ widgets:
 
 You can use them in the widget player:
 
-``` mpf-mc-config
+``` yaml
 widgets:
   my_widget:
     - type: text
@@ -348,7 +348,7 @@ widget_player:
 
 And you can use them in shows:
 
-``` mpf-mc-config
+``` yaml
 # in your machine config
 widgets:
   my_widget:

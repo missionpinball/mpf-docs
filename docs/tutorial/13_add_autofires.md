@@ -20,7 +20,7 @@ has two standard slingshots, and upper slingshot near the pop bumpers,
 and two pop bumpers (which we happen to refer to as "jets" in this
 config):
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_left_slingshot:
 #!     number: 1

@@ -32,7 +32,7 @@ Overview video about [servos](../mechs/servos/index.md):
 Connect the controller to the I2C port and add the following config
 section:
 
-``` mpf-config
+``` yaml
 hardware:
   servo_controllers: i2c_servo_controller
 ```
@@ -44,7 +44,7 @@ different for some chips.
 
 Add your servos to config:
 
-``` mpf-config
+``` yaml
 servos:
   servo1:
     number: 0  # first servo on controller
@@ -56,7 +56,7 @@ config file reference.
 
 You can also provide an I2C address per servo:
 
-``` mpf-config
+``` yaml
 servos:
   servo_on_controller_63_0:
     number: 63-0  # first servo on board with ID 0x3F / 63

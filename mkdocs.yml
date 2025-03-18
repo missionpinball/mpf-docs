@@ -673,6 +673,7 @@ nav:
       - Bonus Mode Slide: gmc/guides/bonus_mode.md
       - Spanning Multiple Monitors: gmc/guides/spanning-multiple-monitors.md
       - Display Filter Effects: gmc/guides/window-filters.md
+      - Launching MPF Game with Godot: gmc/guides/launching-the-mpf-game-with-godot.md
       - Advanced Custom Code: gmc/guides/advanced-custom-code.md
 
 - Tools:
@@ -1289,6 +1290,7 @@ nav:
     - Creating embedded shows in config files: shows/config_shows.md
     - Shows in shows: shows/shows_in_shows.md
     - Using "tokens" for run-time variable replacement in shows: shows/tokens.md
+    - MPF's default shows: shows/default_shows.md
     - Starting & stopping shows: shows/playing.md
     - Synchronizing multiple shows: shows/sync_ms.md
     - Playing Shows in a Show: shows/shows_in_shows.md

@@ -27,7 +27,7 @@ for the next, and so on. Once the last switch is activated, the shot is
 considered "hit" and the device posts `your_sequence_shot_hit` (if
 your shot is called `your_sequence_shot`).
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   top_right_opto:
 #!     number:
@@ -60,7 +60,7 @@ never hit a second time, then the second shot will not complete.
 
 Here is an example with events:
 
-``` mpf-config
+``` yaml
 sequence_shots:
   my_event_based_sequence_shot:
     event_sequence:
@@ -75,7 +75,7 @@ sequence_shots:
 
 And one with switches:
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   seq2_1:
 #!     number:

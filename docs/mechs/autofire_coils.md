@@ -226,7 +226,7 @@ board but run Windows or macOS you have to change the `ports`. If you
 run a completely different hardware you have to adapt the `hardware`
 section.
 
-``` mpf-config
+``` yaml
 #config_version=5
 
 hardware:

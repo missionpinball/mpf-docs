@@ -15,7 +15,7 @@ title: "game:"
 The `game:` section of the machine config holds settings related to the
 game play.
 
-``` mpf-config
+``` yaml
 game:
   balls_per_game: 3
   max_players: 4

@@ -23,7 +23,7 @@ holds the settings for that specific mode.)
 
 Let's take a look at an example `mode:` section from a multiball mode:
 
-``` mpf-config
+``` yaml
 ##! mode: mode1
 mode:
   start_events: ball_starting
@@ -218,7 +218,7 @@ AssertionError('Mode terra_2 is not supposed to run outside of game.',)
 To avoid this unexpected crash of MPF, add `game_ending` to the
 `stop_events:`
 
-``` mpf-config
+``` yaml
 ##! mode: mode1
 mode:
   start_events: mode_terra_2_start

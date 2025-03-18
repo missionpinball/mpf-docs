@@ -35,7 +35,7 @@ power (off), and 1.0 being 100% power.
 
 Consider the following example:
 
-``` mpf-config
+``` yaml
 coils:
   some_coil:
     number:

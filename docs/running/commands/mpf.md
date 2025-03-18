@@ -10,21 +10,21 @@ the default of `game` will be used.
 
 So the following pairs are equivalent:
 
-```shell
+``` shell
 $ mpf game -btx
 $ mpf -btx
 ```
 
 or
 
-```shell
+``` shell
 $ mpf game path/to/game_folder -P
 $ mpf path/to/game_folder -P
 ```
 
 or
 
-```shell
+``` shell
 $ mpf game -c my_config
 $ mpf -c my_config
 ```

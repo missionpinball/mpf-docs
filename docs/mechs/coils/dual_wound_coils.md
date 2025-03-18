@@ -91,7 +91,7 @@ the strength of coils.
 
 This is an example for dual-wound coils which are configured separately:
 
-``` mpf-config
+``` yaml
 coils:
   c_your_coil_main:
     number: 00   # depends on your platform and hardware

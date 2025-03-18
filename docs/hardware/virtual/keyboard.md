@@ -57,7 +57,7 @@ to start them.
 
 Here's an example of it in action:
 
-``` mpf-mc-config
+``` yaml
 keyboard:
   z:
     switch: left_flipper
@@ -130,7 +130,7 @@ keys on your keyboard, you can also specify key combinations along with
 the key entries. These are called "modifier keys," and MPF supports
 them in combination with regular keys, like this:
 
-``` mpf-mc-config
+``` yaml
 #! keyboard:
   t:
     switch: foo

@@ -72,7 +72,7 @@ light shows.
 
 This is an example:
 
-``` mpf-config
+``` yaml
 hardware:
   segment_displays: light_segment_displays
 
@@ -131,7 +131,7 @@ segment_displays:
 Here is another example for a monochrome serial 16-segment display using
 a WS2811 controller on OPP:
 
-``` mpf-config
+``` yaml
 hardware:
   segment_displays: light_segment_displays
 

@@ -41,7 +41,7 @@ just add the
 two slides, one called *my_slide_1* and the other called *my_slide_2*,
 and they each only have a single widget.
 
-``` mpf-mc-config
+``` yaml
 slides:
   my_slide_1:
     type: text
@@ -60,7 +60,7 @@ add multiple widgets to a slide, just enter them like you entered a
 single widget, but use a dash (and a space) to dictate where a new
 widget starts, like this:
 
-``` mpf-mc-config
+``` yaml
 slides:
   my_slide_1:
     - type: text
@@ -90,7 +90,7 @@ slide settings under the slide along with the widgets.
 Here's an example. Note that the slide with multiple widgets is using
 the dash in the widgets: section to separate the individual widgets.
 
-``` mpf-mc-config
+``` yaml
 slides:
   my_slide_1:
     background_color: red
@@ -127,7 +127,7 @@ like a rectangle, but it's not, like this: `[]`.
 
 You can use this format to create a blank slide with no options:
 
-``` mpf-mc-config
+``` yaml
 slides:
   my_blank_slide: []
 ```
@@ -135,7 +135,7 @@ slides:
 Or you can use it to create a blank slide with options, but no widgets,
 like this:
 
-``` mpf-mc-config
+``` yaml
 slides:
   my_blank_slide:
     background_color: red

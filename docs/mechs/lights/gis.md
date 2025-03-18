@@ -56,7 +56,7 @@ and then you can enable, disable, and dim the dimmable ones as you wish.
 
 This is an example for a [light](../../config/lights.md) with `subtype: gi`:
 
-``` mpf-config
+``` yaml
 lights:
   gi_string_left:
     number: 3    # number depends on your platform
@@ -69,7 +69,7 @@ the platform documentation.
 
 This is an example for a [light](../../config/lights.md) in Spike:
 
-``` mpf-config
+``` yaml
 lights:
   gi_string_left:
     number: 3    # number depends on your platform
@@ -82,7 +82,7 @@ configure them as [coils](../../config/coils.md).
 Then add them as [light](../../config/lights.md)
 with `platform: drivers`:
 
-``` mpf-config
+``` yaml
 coils:
   gi_string_left:
     number: A1-B1-3    # number depends on your platform

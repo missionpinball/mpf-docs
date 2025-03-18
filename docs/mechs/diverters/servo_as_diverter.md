@@ -15,7 +15,7 @@ events. Specifically, we are using
 [diverter_(name)_deactivating](../../events/diverter_diverter_deactivating.md)
 and [diverter_(name)_activating](../../events/diverter_diverter_activating.md). This is an example:
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_ball1:
 #!     number:

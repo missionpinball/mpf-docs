@@ -27,7 +27,7 @@ which is why we have to configure it similarly.
 
 Add/update the following sections in your machine config:
 
-``` mpf-config
+``` yaml
 hardware:
   platform: lisy
 lisy:

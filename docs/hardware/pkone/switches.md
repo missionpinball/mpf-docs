@@ -28,7 +28,7 @@ chain.
 The `number:` setting for each switch is its board's Address ID number
 in the PKONE chain, then the dash, then the switch input number (1-35).
 
-``` mpf-config
+``` yaml
 switches:
   my_switch:
     number: 0-0    # Extension board at address 0, switch 0

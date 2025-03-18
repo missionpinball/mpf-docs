@@ -68,7 +68,7 @@ mode to 'protect' earned, but unused gadgets from being reset in the
 rare cases when we may need to stop the mode that allows players to earn
 gadgets.
 
-``` mpf-config
+``` yaml
 #config_version=5
 
 modes:
@@ -217,7 +217,7 @@ playfields:
 Next, we can start setting up our gadget mode; below you see the
 contents of `gadget.yaml`
 
-``` mpf-config
+``` yaml
 ##! mode: gadget
 config:
   - logic_blocks.yaml
@@ -242,7 +242,7 @@ mode:
 
 Stepping through how we're using each setting:
 
-``` mpf-config
+``` yaml
 ##! mode: gadget
 config:
   - logic_blocks.yaml
@@ -254,7 +254,7 @@ config:
 The config section imports other config files; this is often easier to
 manage than on long config file.
 
-``` mpf-config
+``` yaml
 ##! mode: gadget
 #! mode:
 #!   start_events: ball_started
@@ -272,7 +272,7 @@ our mode-specific logic_blocks. In this case, we're using an
 [Accrual Logic Blocks](../game_logic/logic_blocks/accruals.md) to
 track when all of the letters have been hit.
 
-``` mpf-config
+``` yaml
 ##! mode: gadget
 accruals:
   gadget_accrual:
@@ -291,7 +291,7 @@ accruals:
 
 Stepping through once again:
 
-``` mpf-config
+``` yaml
 ##! mode: gadget
 accruals:
   gadget_accrual:
@@ -311,7 +311,7 @@ accruals:
 These two lines simply tell MPF that we have an accrual and we've named
 it "gadget_accrual".
 
-``` mpf-config
+``` yaml
 ##! mode: gadget
 #! accruals:
 #!   gadget_accrual:
@@ -333,7 +333,7 @@ like arrays, so I added a comment after each event to help me remember
 the index of each event. We'll need to reference these events and their
 index later.
 
-``` mpf-config
+``` yaml
 ##! mode: gadget
 #! accruals:
 #!   gadget_accrual:
@@ -353,7 +353,7 @@ index later.
 Once the player has hit all of the letters, we want the accrual to reset
 so that they can earn more Gadgets.
 
-``` mpf-config
+``` yaml
 ##! mode: gadget
 #! accruals:
 #!   gadget_accrual:
@@ -373,7 +373,7 @@ so that they can earn more Gadgets.
 We also have to tell MPF to leave our accrual enabled, even after it's
 completed.
 
-``` mpf-config
+``` yaml
 ##! mode: gadget
 #! accruals:
 #!   gadget_accrual:
@@ -401,7 +401,7 @@ complete, the game will award one of the neigbhoring targets if they are
 incomplete. To accomplish this, we'll use conditional events in our
 event player.
 
-``` mpf-config
+``` yaml
 ##! mode: gadget
 event_player:
   #plus one gadget when accrual is complete
@@ -441,7 +441,7 @@ event_player:
 There's a lot happening here, so let's get the easy stuff out of the
 way first:
 
-``` mpf-config
+``` yaml
 ##! mode: gadget
 #! event_player:
   award_gadget:
@@ -452,7 +452,7 @@ way first:
 The "award_gadget" event - triggered by the accrual completion, simply
 adds one to both `player_vars` we configured in step one.
 
-``` mpf-config
+``` yaml
 ##! mode: gadget
 #! event_player:
   s_gadget_a_active:
@@ -465,7 +465,7 @@ having not yet been hit. When the "a" switch is active, trigger the
 event "gadget_a_complete" if it hasn't been seen by the accrual. Note
 the `value[1]` which refers to the 2nd index of our accrual.
 
-``` mpf-config
+``` yaml
 ##! mode: gadget
 #! event_player:
 #!   s_gadget_a_active:
@@ -475,7 +475,7 @@ the `value[1]` which refers to the 2nd index of our accrual.
 Now, we trigger gadget_g1_complete if it hasn't been seen by the
 accrual AND "a" is already complete.
 
-``` mpf-config
+``` yaml
 ##! mode: gadget
 #! event_player:
 #!   s_gadget_a_active:
@@ -500,7 +500,7 @@ This show is "light_gadget_letter.yaml" and it's in the "shows"
 folder for the mode. It's pretty straightforward, but uses tokens and
 tags to be efficient.
 
-``` mpf-config
+``` yaml
 ##! show: light_gadget_letter
 - time: 0
   lights:
@@ -576,7 +576,7 @@ tags to be efficient.
 This show isn't terribly complicated, but let's look at some of the
 features.
 
-``` mpf-config
+``` yaml
 ##! show: light_gadget_letter
 - time: 0
   lights:
@@ -595,7 +595,7 @@ In a real Batman '66, we would simply flash the light because the
 inserts are yellow. However, since many custom games are using RGB LED,
 we'll allow for any color the builder prefers.
 
-``` mpf-config
+``` yaml
 ##! show: light_gadget_letter
 - time: +.05
   lights:
@@ -619,7 +619,7 @@ but it's not worth explaining here.
 Our show player is watching for events and triggering the appropriate
 shows.
 
-``` mpf-config
+``` yaml
 show_player:
   gadget_g1_complete:
     light_gadget_letter:
@@ -631,7 +631,7 @@ show_player:
         gadget_letter_final_color: yellow
 ```
 
-``` mpf-config
+``` yaml
 #! show_player:
   gadget_g1_complete:
     light_gadget_letter:
@@ -641,7 +641,7 @@ show_player:
 When the "gadget_g1_complete" event is triggered, start the
 "light_gadget_letter" show starts.
 
-``` mpf-config
+``` yaml
 #! show_player:
 #!   gadget_g1_complete:
 #!     light_gadget_letter:
@@ -652,7 +652,7 @@ When the "gadget_g1_complete" event is triggered, start the
 We'll add a key to the show so that we can keep re-using the same show
 for all the letters.
 
-``` mpf-config
+``` yaml
 #! show_player:
 #!   gadget_g1_complete:
 #!     light_gadget_letter:
@@ -668,7 +668,7 @@ Finally, we pass show tokens to the show to tell it what light and what
 color we want for the on steps and the final step. This repeats for all
 of the individual letters.
 
-``` mpf-config
+``` yaml
 show_player:
   reset_gadget_lights:
     light_gadget_letter:

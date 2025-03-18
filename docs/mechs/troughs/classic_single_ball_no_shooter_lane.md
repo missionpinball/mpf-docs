@@ -22,7 +22,7 @@ Here's an example from a Gottlieb Playball (1971 EM):
 The first step is to add the drain switch to the `switches:` section of
 your machine config file.
 
-``` mpf-config
+``` yaml
 switches:
   s_drain:
     number: 01
@@ -39,7 +39,7 @@ Next, create the entry in your `coils:` section for the drain eject
 coil. Again, the name doesn't matter. We'll call it *c_drain_eject*
 and enter it like this:
 
-``` mpf-config
+``` yaml
 coils:
   c_drain_eject:
     number: 03
@@ -85,7 +85,7 @@ ball device.
 
 Your drain device configuration should look now look like this:
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_drain:
 #!     number: 01
@@ -113,7 +113,7 @@ ball into play.
 To do that, add your trough device as `default_source_device` in the
 default `playfield`, like this:
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_drain:
 #!     number: 01
@@ -157,7 +157,7 @@ when you're running with one of the virtual hardware interfaces. To use
 it, simply add the section along with a list of the switches you want to
 start active. For example:
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_drain:
 #!     number: 01
@@ -166,7 +166,7 @@ virtual_platform_start_active_switches: s_drain
 
 ## Here's the complete config
 
-``` mpf-config
+``` yaml
 #config_version=5
 switches:
   s_drain:

@@ -12,7 +12,7 @@ that if you want to draw a curved line, you can use the
 
 Here's an example:
 
-``` mpf-mc-config
+``` yaml
 #config_version=5
 slide_player:
   mc_ready:

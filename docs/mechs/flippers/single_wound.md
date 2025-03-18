@@ -30,7 +30,7 @@ flipper buttons.
 
 Here's an example `config.yaml` with two switches added:
 
-``` mpf-config
+``` yaml
 switches:
   s_left_flipper:
     number: 1
@@ -62,7 +62,7 @@ things you want the player to be able to skip.
 Next you need to add entries for your flipper coils to your machine-wide
 config. These will be added to a section called `coils:`.
 
-``` mpf-config
+``` yaml
 coils:
   c_flipper_left:
     number: 0
@@ -113,7 +113,7 @@ flipper that you defined in Steps 1 and 2.
 Here's what you would create based on the switches and coils we've
 defined so far:
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_left_flipper:
 #!     number: 1
@@ -155,7 +155,7 @@ following entry to each of your flippers in your config file:
 So now the `flippers:` section of your config file should look like
 this:
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_left_flipper:
 #!     number: 1
@@ -211,7 +211,7 @@ and the [hold power](../coils/hold_power.md) for the coils you're using for your
 Here's the complete machine config file (or sections of the machine
 config file) we created in this How To guide:
 
-``` mpf-config
+``` yaml
 #config_version=5
 switches:
   s_left_flipper:

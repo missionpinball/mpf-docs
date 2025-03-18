@@ -218,7 +218,7 @@ our starting events for the mode itself, the values of the jet bumpers
 when Super Jets are active, and also a call to show a slide stating that
 Super Jets are active.
 
-``` mpf-config
+``` yaml
 ##! mode: super_jets
 mode:
   start_events: Super_Jets_Go, Super_Jets_Resume_Go

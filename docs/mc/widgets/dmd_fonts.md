@@ -13,7 +13,7 @@ Text and Text Input widgets.
 If you don't use one of these fonts on your DMD and just show some
 text, here's what the results look like:
 
-``` mpf-mc-config
+``` yaml
 slides:
   my_slide:
     - type: text
@@ -40,7 +40,7 @@ low-res DMD.)
 
 `big` is 10 pixels tall.
 
-``` mpf-mc-config
+``` yaml
 slides:
   my_slide:
     - type: text
@@ -61,7 +61,7 @@ slides:
 
 `medium` is 7 pixels tall.
 
-``` mpf-mc-config
+``` yaml
 slides:
   my_slide:
     - type: text
@@ -86,7 +86,7 @@ Notice that this font has a color set and we're using it with a Color
 DMD. All three of these fonts (like any font) can be used on a mono or
 color DMD.
 
-``` mpf-mc-config
+``` yaml
 slides:
   my_slide:
     - type: text

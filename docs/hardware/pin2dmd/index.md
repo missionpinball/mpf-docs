@@ -62,7 +62,7 @@ RGB DMDs that use the SmartMatrix platform.
 
 1.  Add `pin2dmd` to your hardware section:
 
-``` mpf-config
+``` yaml
 hardware:
   rgb_dmd: pin2dmd
 pin2dmd:
@@ -88,7 +88,7 @@ one physical DMD.)
 To do this, create a section in your machine-wide config called
 `rgb_dmds:`, and then pick a name for the DMD, like this:
 
-``` mpf-config
+``` yaml
 rgb_dmds:
   default:  # your DMD
     hardware_brightness: .5      # adjust the brightness of your display if it is too bright
@@ -113,7 +113,7 @@ the DMD knows what content to show. In MPF, you do this by mapping a
 physical DMD to an
 [MPF display](../../mc/displays/index.md).
 
-``` mpf-mc-config
+``` yaml
 displays:
   window:  # on screen window - useful for debugging without real hardware
     width: 600
@@ -154,7 +154,7 @@ Note that the [Using an RGB full-color LED DMD](../../mc/displays/rgb_dmd.md)
 guide has more details on the window and slide settings used in this
 machine config.
 
-``` mpf-mc-config
+``` yaml
 hardware:
   rgb_dmd: pin2dmd
 pin2dmd:

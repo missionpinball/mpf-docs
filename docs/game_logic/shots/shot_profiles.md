@@ -13,7 +13,7 @@ Related Config File Sections:
 
 Shot profiles define how shots will behave when hit. This is an example:
 
-``` mpf-config
+``` yaml
 ##! mode: mode1
 shot_profiles:
   my_default_profile:

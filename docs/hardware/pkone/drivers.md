@@ -32,7 +32,7 @@ The `number:` setting for each coil/driver is its board's Address ID
 number in the PKONE chain, then the dash, then the coil/driver output
 number (1-10).
 
-``` mpf-config
+``` yaml
 coils:
   my_coil:
     number: 0-1    # Extension board with Address ID 0, coil/driver 1
@@ -63,7 +63,7 @@ setting to a coil definition and then specifying the power value from
 
 For example, consider the following configuration:
 
-``` mpf-config
+``` yaml
 coils:
   some_coil:
     number: 1-3
@@ -75,7 +75,7 @@ When MPF sends this coil a pulse command, the coil will be fired for
 30ms at 50% power. You can even combine default_pulse_power and
 default_hold_power, like this:
 
-``` mpf-config
+``` yaml
 coils:
   some_coil:
     number: 1-3
@@ -104,7 +104,7 @@ time).
 With Penny K Pinball hardware, you can manually set a coil's recycle
 time by adding a `recycle_ms:` setting, like this:
 
-``` mpf-config
+``` yaml
 coils:
   slingshot_r:
     number: 1-4

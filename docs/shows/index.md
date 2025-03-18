@@ -42,6 +42,7 @@ Read on for more info on how shows work:
 * [Creating embedded shows in config files](config_shows.md)
 * [Shows in shows](shows_in_shows.md)
 * [Using "tokens" for run-time variable replacement in shows](tokens.md)
+* [MPF default shows](default_shows.md)
 * [Starting & stopping shows](playing.md)
 * [Synchronizing multiple shows](sync_ms.md)
 * [Playing Shows in a Show](shows_in_shows.md)

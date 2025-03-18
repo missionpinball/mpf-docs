@@ -15,7 +15,7 @@ title: "machine:"
 The `machine:` section of your config is where you configure defails
 about the number of balls in your machine.
 
-``` mpf-config
+``` yaml
 machine:
   balls_installed: 6
   min_balls: 3

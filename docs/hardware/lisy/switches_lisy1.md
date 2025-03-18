@@ -29,7 +29,7 @@ pinmame does it:
 
 You can start with this config:
 
-``` mpf-config
+``` yaml
 switches:
   slam:
     number: 76

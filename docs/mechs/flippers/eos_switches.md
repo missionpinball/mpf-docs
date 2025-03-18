@@ -163,7 +163,7 @@ it.
 
 This is how you can enable it in MPF:
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_flipper_single:
 #!     number: 1

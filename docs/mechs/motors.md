@@ -22,7 +22,7 @@ Related Config File Sections:
 In this example we configure a motorized drop target bank which can move
 up and down with two position switches.
 
-``` mpf-config
+``` yaml
 switches:
   s_position_up:
     number:
@@ -56,7 +56,7 @@ be commanded using the events `go_up` and
 
 The following is an example to drive the slimer in Stern Ghostbusters:
 
-``` mpf-config
+``` yaml
 switches:
   s_slimer_home:
     number: 8-1

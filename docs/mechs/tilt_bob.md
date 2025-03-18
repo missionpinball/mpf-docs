@@ -21,7 +21,7 @@ the built-in [tilt mode](../game_logic/tilt/index.md) in the list of your modes.
 
 This is an example:
 
-``` mpf-config
+``` yaml
 modes:
   - tilt
 switches:

@@ -25,7 +25,7 @@ to all audio tracks in the sound system.
 
 Example:
 
-``` mpf-config
+``` yaml
 track_player:
   pause_music_track:
     music:
@@ -46,7 +46,7 @@ In shows, the track player is used via the `tracks:` section of a step.
 
 Example:
 
-``` mpf-config
+``` yaml
 shows:
   my_show_with_sound:
     - time: 0

@@ -17,7 +17,7 @@ described in the
 [troubleshooting guide](../../troubleshooting/index.md) this is done by adding `debug: true` to your `pin2dmd`
 config section:
 
-``` mpf-config
+``` yaml
 pin2dmd:
   debug: true
 ```
@@ -30,7 +30,7 @@ recommend to disable/remove it after finishing debugging.
 Your display is not showing your slides? Check if your brightness is set
 high enough. You can adjust brightness in your `rgb_dmds` section:
 
-``` mpf-config
+``` yaml
 rgb_dmds:
   default:  # your DMD
     brightness: .8      # adjust the brightness of your display if it is too bright or dim

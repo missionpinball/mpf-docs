@@ -17,7 +17,7 @@ provide sufficient throughput (at least 1.5Mbaud). This can be
 configured using `runtime_baud` (as described in
 [Config file reference](../../config/index.md)):
 
-``` mpf-config
+``` yaml
 hardware:
   platform: spike
 spike:
@@ -29,7 +29,7 @@ spike:
 
 Then configure your dmd like in this example:
 
-``` mpf-mc-config
+``` yaml
 displays:
   window:  # on screen window
     width: 600

@@ -42,7 +42,7 @@ described in the
 [troubleshooting guide](../../troubleshooting/index.md) this is done by adding `debug: true` to your `opp` config
 section:
 
-``` mpf-config
+``` yaml
 pkone:
   debug: true
 ```

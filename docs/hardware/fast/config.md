@@ -25,7 +25,7 @@ and WPC controllers.
 To use MPF with a FAST, you need to configure your platform as `fast` in
 your machine-wide config file, like this:
 
-``` mpf-config
+``` yaml
 hardware:
   platform: fast
 

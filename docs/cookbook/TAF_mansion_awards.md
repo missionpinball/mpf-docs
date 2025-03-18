@@ -103,7 +103,7 @@ in terms of what we need to make this recipe work, but if you have a
 real Addams Family then you'll probably have a lot more than this in
 your machine config file.)
 
-``` mpf-config
+``` yaml
 #config_version=5
 modes:
   - mansion_awards
@@ -252,7 +252,7 @@ mansion achievements.
 You'll notice that most of them are almost identical. For example,
 here's the entry for Thing Multiball:
 
-``` mpf-config
+``` yaml
 ##! mode: mansion_awards
 achievements:
   thing_multiball:
@@ -325,7 +325,7 @@ Next we need to create an achievement group called "mansion_awards"
 which will group the 12 mansion achievements together. That will look
 like this:
 
-``` mpf-config
+``` yaml
 ##! mode: mansion_awards
 #! achievements:
 #!   9_mil:
@@ -499,7 +499,7 @@ The two modes we're going to create are:
 
 Let's look at the config for the "chair_lit_3s" mode:
 
-``` mpf-config
+``` yaml
 ##! mode: chair_lit_3s
 #config_version=5
 mode:
@@ -567,7 +567,7 @@ ball ends automatically.)
 
 Here's the config for this mode:
 
-``` mpf-config
+``` yaml
 ##! mode: chair_lit
 #config_version=5
 mode:
@@ -628,7 +628,7 @@ We'll tackle this in two parts.
 
 First, take a look at the Hit Cousin It and Mamuska achievements:
 
-``` mpf-config
+``` yaml
 ##! mode: mansion_awards
 achievements:
   hit_cousin_it:
@@ -672,7 +672,7 @@ one of those two.
 However, once the initial selection is made, we need a way to enable the
 remaining 10 mansion awards. For this we'll use a counter logic block:
 
-``` mpf-config
+``` yaml
 ##! mode: chair_lit
 # This is in the chair_lit mode config, NOT machine-wide config
 counters:
@@ -735,7 +735,7 @@ either start a mode or to play a show. Simple!
 This is pretty simple. Just add the events posted when one achievement
 is started to the complete events for the other. Here are the examples:
 
-``` mpf-config
+``` yaml
 ##! mode: mansion_awards
 achievements:
   6_mil:

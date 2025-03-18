@@ -28,7 +28,7 @@ events. Defaults to empty.
 You can list all events which you want to be forwarded to your OSC
 remote. This is an example:
 
-``` mpf-config
+``` yaml
 hardware:
   platform: osc
 

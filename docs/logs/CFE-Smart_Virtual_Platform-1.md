@@ -17,7 +17,7 @@ This error occurs when you use a switch in
 
 This is how it should look:
 
-``` mpf-config
+``` yaml
 switches:
   s_ball_switch1:
     number:
@@ -33,7 +33,7 @@ virtual_platform_start_active_switches:
 
 Alternatively, this could be a comma separated list:
 
-``` mpf-config
+``` yaml
 switches:
   s_ball_switch1:
     number:

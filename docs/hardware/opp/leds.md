@@ -15,7 +15,7 @@ mature.
 
 LEDs work similar to matrix lights (chain 0, board 1, LED 1):
 
-``` mpf-config
+``` yaml
 lights:
   some_led:
     number: 0-1-1
@@ -71,7 +71,7 @@ this is not true for RGBW or similar LEDs which do not work with this
 style of numbering. Luckily, you can chain them instead and have MPF
 calculate the internal channels for you:
 
-``` mpf-config
+``` yaml
 lights:
   led_0:
     start_channel: 0-0-0

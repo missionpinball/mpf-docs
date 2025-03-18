@@ -18,7 +18,7 @@ For example, you might have a `variable_player:` entry in your config
 which watches for an event called *target1_hit*, and when it sees it, it
 adds 1000 points to the player's score, like this:
 
-``` mpf-config
+``` yaml
 ##! mode: base
 variable_player:
   target1_hit:
@@ -112,7 +112,7 @@ In the various
 
 For example, in a config file:
 
-``` mpf-mc-config
+``` yaml
 #! slides:
 #!   my_slide:
 #!     - type: text
@@ -135,7 +135,7 @@ will be some word) which is where you can event event names that cause
 that action to happen. For example, you may have a drop target
 configured like this:
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_drop_target_1:
 #!     number: 1

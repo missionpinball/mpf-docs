@@ -24,7 +24,7 @@ information may be found in the
 
 Examples:
 
-``` mpf-config
+``` yaml
 playlist_player:
   play_attract_music:
     playlist:

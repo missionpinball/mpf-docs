@@ -51,7 +51,7 @@ up.) To give the player points when a switch is hit, add sub-entries to
 the `variable_player:` section of your config file, with some switch
 name followed by "_active", like this:
 
-``` mpf-config
+``` yaml
 ##! mode: base
 variable_player:
   s_right_inlane_active:
@@ -109,7 +109,7 @@ the `variable_player:` section--even player variables that you make up.
 
 For example, try changing your scoring section to this:
 
-``` mpf-config
+``` yaml
 # we will initially set the value to 0 when the machine starts up
 player_vars:
   potato:
@@ -152,7 +152,7 @@ when the base mode starts. (So we're going to be editing
 `<your_machine>/modes/config/base.yaml` again. Add the potato text
 entry, like this:
 
-``` mpf-mc-config
+``` yaml
 #! player_vars:
 #!   potato:
 #!     initial_value: 0

@@ -45,7 +45,7 @@ associated font descriptor file) from True Type Fonts:
 
 Here's an example:
 
-``` mpf-config
+``` yaml
 bitmap_fonts:
   F1fuv:
     file: F1fuv.png

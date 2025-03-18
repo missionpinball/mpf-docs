@@ -11,7 +11,7 @@ that's used to post random events from a list of events.
 
 This is an example:
 
-``` mpf-config
+``` yaml
 # in your global config:
 random_event_player:
   play_random_event_global:

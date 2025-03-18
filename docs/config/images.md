@@ -33,7 +33,7 @@ specified for each asset.
 
 For example:
 
-``` mpf-config
+``` yaml
 images:
   insert_coin:
     load: preload

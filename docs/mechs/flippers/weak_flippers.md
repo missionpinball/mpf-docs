@@ -11,7 +11,7 @@ implemented in two ways. Either by reducing `pulse_power` or by reducing
 
 This is an example:
 
-``` mpf-config
+``` yaml
 switches:
   s_left_flipper:
     number: 1

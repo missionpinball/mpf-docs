@@ -114,7 +114,7 @@ To configure MPF to use FadeCandy LEDs, you can add an entry to the
 default platform for your LEDs and to instead use the `fadecandy`
 platform, like this:
 
-``` mpf-config
+``` yaml
 hardware:
   platform: p_roc
   driverboards: pdb
@@ -145,7 +145,7 @@ The following diagram explains how the numbering works:
 
 Consider the following config:
 
-``` mpf-config
+``` yaml
 lights:
   l_led0:
     number: 0    # first LED on connector 0
@@ -199,7 +199,7 @@ fadecandy. The serial will be shown on the console of
 
 Then configure your lights as follows:
 
-``` mpf-config
+``` yaml
 lights:
   l_led0_0:
     number: 0-0    # first LED on connector 0
@@ -279,7 +279,7 @@ on the console of `fcserver` when connecting your fadecandy.
 
 Afterwards, configure your lights as follows:
 
-``` mpf-config
+``` yaml
 lights:
   l_led0_0:
     number: 0-0    # first LED on connector 0 on board 0
@@ -324,7 +324,7 @@ this is not true for RGBW or similar LEDs which do not work with this
 style of numbering. Luckily, you can chain them instead and have MPF
 calculate the internal channels for you:
 
-``` mpf-config
+``` yaml
 lights:
   led_0:
     start_channel: 0-0

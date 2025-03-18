@@ -18,7 +18,7 @@ address your coil and it cannot continue without a number.
 
 This is how a coil should look:
 
-``` mpf-config
+``` yaml
 coils:
   your_coil:
     number: 1
@@ -34,7 +34,7 @@ later. This is a problem for your physical hardware controller but you
 can tell MPF to use the `virtual` hardware platform for one particular
 coil:
 
-``` mpf-config
+``` yaml
 coils:
   your_virtual_coil:
     number:

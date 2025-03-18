@@ -18,7 +18,7 @@ if the other two are running.
 
 This is a basic example:
 
-``` mpf-config
+``` yaml
 ##! mode: my_mode
 mode:
   start_events: start_my_mode

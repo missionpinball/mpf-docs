@@ -23,7 +23,7 @@ details.
 
 This is an example config:
 
-``` mpf-config
+``` yaml
 #config_version=5
 hardware:
   platform: lisy

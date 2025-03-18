@@ -15,7 +15,7 @@ title: "score_queues:"
 The `score_queues:` section of your config is where you configure SS
 style scoring queues in MPF. This is an example:
 
-``` mpf-config
+``` yaml
 coils:
   c_chime_1000:
     number:

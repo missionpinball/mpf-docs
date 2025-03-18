@@ -74,7 +74,7 @@ This section contains subsections which are a list of parameters that
 are posted along with the *event* or *mc_event* specified above. Using
 the following configuration file snippet as an example:
 
-``` mpf-mc-config
+``` yaml
 keyboard:
   4:
     event: advance_reel_test
@@ -107,7 +107,7 @@ keys on your keyboard forever whenever a ball is locked in a device.
 Default is *False*. You might want to create multiple entries for the
 same switch for different key combinations. For example:
 
-``` mpf-mc-config
+``` yaml
 #! keyboard:
   1:
     switch: trough1

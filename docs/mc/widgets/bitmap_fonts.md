@@ -50,7 +50,7 @@ Some things to note:
 
 You can use the font in your config:
 
-``` mpf-mc-config
+``` yaml
 slides:
   slideBaseBackglass:
     widgets:

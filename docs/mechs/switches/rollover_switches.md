@@ -24,7 +24,7 @@ Typical part numbers:
 
 This is an example config:
 
-``` mpf-config
+``` yaml
 # this is in your machine-wide config
 switches:
   s_outlane_left:

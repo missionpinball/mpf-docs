@@ -22,7 +22,7 @@ pause, (etc.) shows.
 
 Here is an example:
 
-``` mpf-config
+``` yaml
 show_player:
   some_event: your_show_name
   some_other_event: another_show
@@ -92,7 +92,7 @@ event that starts the show is a
 For example, the mode stopping events are queue events. So take a look
 at the following config:
 
-``` mpf-config
+``` yaml
 show_player:
   mode_my_mode_stopping:
     show_1:
@@ -235,7 +235,7 @@ on a series of events instead of a show that auto plays.
 
 For example:
 
-``` mpf-config
+``` yaml
 show_player:
   some_event:
     show_1:
@@ -288,7 +288,7 @@ Read what show tokens are [here](../shows/tokens.md).
 
 For example:
 
-``` mpf-config
+``` yaml
 show_player:
   some_event:
     show1:

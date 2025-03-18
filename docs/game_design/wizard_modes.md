@@ -22,7 +22,7 @@ One common approach for wizard modes is to have a counter that tracks
 shots to qualify the mode. In this example, hitting three shots will
 enable and immediately start the wizard mode:
 
-``` mpf-config
+``` yaml
 ##! mode: wizard_qualify
 # mode: wizard_qualify
 mode:

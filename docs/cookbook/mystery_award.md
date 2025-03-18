@@ -24,7 +24,7 @@ runs with [ball_holds](../game_logic/ball_holds.md).
 Here is an example of how to use a scoop to hold a ball during a mystery
 award animation:
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_ball1:
 #!     number:
@@ -70,7 +70,7 @@ Once mystery has been lit and the ball enters the device, you can use
 In the below example, there are four possible awards and the game will
 make sure each one is provided to avoid doubling-up.
 
-``` mpf-config
+``` yaml
 ##! mode: mystery_mode
 random_event_player:
   ball_hold_mystery_scoop_held_ball:
@@ -91,7 +91,7 @@ You can use anything to display an award such as a slide or video. In
 the below example, a video is used for each award and the scoop will
 eject the ball after the video has completed.
 
-``` mpf-mc-config
+``` yaml
 ##! mode: mystery_mode
 event_player:
   slide_award_1_slide_removed: end_mystery
@@ -133,7 +133,7 @@ slides:
 Here is the full example you can use in a mode as a template to start
 working on your own mystery award.
 
-``` mpf-mc-config
+``` yaml
 #! switches:
 #!   s_ball1:
 #!     number:

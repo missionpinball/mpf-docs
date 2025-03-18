@@ -20,14 +20,14 @@ In your machine-wide config file, set the platform.
 
 For the P-ROC:
 
-``` mpf-config
+``` yaml
 hardware:
   platform: p_roc
 ```
 
 For the P3-ROC:
 
-``` mpf-config
+``` yaml
 hardware:
   platform: p3_roc
 ```
@@ -40,7 +40,7 @@ driver boards you're using. If you're using the P-ROC driver boards
 
 For the P-ROC:
 
-``` mpf-config
+``` yaml
 hardware:
   platform: p_roc
 
@@ -50,7 +50,7 @@ p_roc:
 
 For the P3-ROC:
 
-``` mpf-config
+``` yaml
 hardware:
   platform: p3_roc
 
@@ -71,7 +71,7 @@ your machine-wide config.
 
 For the P-ROC or P3-Roc:
 
-``` mpf-config
+``` yaml
 p_roc:
   use_watchdog: true
   watchdog_time: 1s

@@ -9,7 +9,7 @@ Modes usually start with a `mode:` section (see
 [mode](../mode.md)) which defines their
 priority and when they start or stop:
 
-``` mpf-config
+``` yaml
 ##! mode: mode1
 mode:
   start_events: ball_starting

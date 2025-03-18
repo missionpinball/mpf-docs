@@ -20,7 +20,7 @@ compensate for missed kickbacks.
 
 This is an example:
 
-``` mpf-config
+``` yaml
 switches:
   s_kickback:
     number: 5

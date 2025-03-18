@@ -37,7 +37,7 @@ the chain, then the dash, then the driver output number. Note that the
 position number starts with zero, so the first IO board in the chain is
 0, the second is 1, etc.
 
-``` mpf-config
+``` yaml
 coils:
   my_coil:
     number: 0-0    # first board, driver 0
@@ -78,7 +78,7 @@ setting to a coil definition and then specifying the power value from
 
 For example, consider the following configuration:
 
-``` mpf-config
+``` yaml
 coils:
   some_coil:
     number: 1-3
@@ -90,7 +90,7 @@ When MPF sends this coil a pulse command, the coil will be fired for
 30ms at 50% power. You can even combine default_pulse_power and
 default_hold_power, like this:
 
-``` mpf-config
+``` yaml
 coils:
   some_coil:
     number: 1-3
@@ -119,7 +119,7 @@ time).
 However, with FAST Pinball hardware, you can manually set a coil's
 recycle time by adding a `recycle_ms:` setting, like this:
 
-``` mpf-config
+``` yaml
 coils:
   slingshot_r:
     number: 1-4

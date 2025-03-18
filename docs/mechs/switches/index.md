@@ -65,7 +65,7 @@ bumpers.
 
 This is an example:
 
-``` mpf-config
+``` yaml
 switches:
   my_switch:
     number)

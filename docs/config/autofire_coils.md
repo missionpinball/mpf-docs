@@ -18,7 +18,7 @@ on a switch activation in a pinball machine.
 
 Here's an example:
 
-``` mpf-config
+``` yaml
 switches:
   s_left_sling:
     number: 1
@@ -109,7 +109,7 @@ of the coil for this device.
 
 This is an example:
 
-``` mpf-config
+``` yaml
 switches:
   s_left_sling:
     number: 1

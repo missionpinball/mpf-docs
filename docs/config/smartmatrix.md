@@ -17,7 +17,7 @@ devices.
 
 This is an example:
 
-``` mpf-mc-config
+``` yaml
 #config_version=5
 hardware:
   rgb_dmd: smartmatrix

@@ -15,7 +15,7 @@ title: "window:"
 The `window:` section of your config is where you configure the
 properties of the main on-screen window which is created by MPF-MC.
 
-``` mpf-config
+``` yaml
 window:
   width: 800
   height: 600

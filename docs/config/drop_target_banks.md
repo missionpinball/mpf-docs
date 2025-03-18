@@ -16,7 +16,7 @@ Once you've configured your individual drop targets, you group them
 together into banks via the `drop_target_banks:` section of your config
 file. Here's an example from *Judge Dredd*:
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   drop_target_j:
 #!     number:

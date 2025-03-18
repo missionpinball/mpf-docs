@@ -16,7 +16,7 @@ The `steppers:` section of your config is where you configure steppers.
 
 This is an example:
 
-``` mpf-config
+``` yaml
 # main config
 p_roc:
   use_separate_thread: true
@@ -140,7 +140,7 @@ converted to floating point) : `string`
 This is a sub-section mapping of stepper positions to MPF event names.
 For example:
 
-``` mpf-config
+``` yaml
 #! steppers:
 #!   my_stepper:
 #!     number: 1
@@ -195,7 +195,7 @@ converted to floating point) : `string`
 This is a sub-section mapping of relative stepper increments to MPF event names (as opposed to absolute rotational positions).
 For example:
 
-``` mpf-config
+``` yaml
 #! steppers:
 #!   my_stepper:
 #!     number: 1

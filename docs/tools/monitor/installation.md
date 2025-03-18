@@ -5,15 +5,11 @@ title: Installing MPF Monitor
 # Installing MPF Monitor
 
 
-The current stable version of MPF Monitor is `0.56` which matches the stable versions of MPF and MPF-MC.
+The current stable version of MPF Monitor is `0.57.1`.
 You can install it via `pip` (or `pip3`, or however you installed MPF).
 
 ``` doscon
-pip install mpf-monitor
+$ pip install mpf-monitor
 ```
 
-The dev branch of MPF Monitor has been updated for MPF 0.57. You can install it by adding the `--pre` flag:
-
-``` doscon
-pip install mpf-monitor --pre
-```
+Old versions of monitor can be found on [Github](https://github.com/missionpinball/mpf-monitor/tags) and [Pypi](https://pypi.org/project/mpf-monitor/#history).

@@ -16,7 +16,7 @@ The `counters:` section of your config is where you configure counter
 logic blocks. See also
 [counters](../game_logic/logic_blocks/counters.md). The structure of counter logic blocks is like this:
 
-``` mpf-config
+``` yaml
 ##! mode: mode1
 counters:
   the_name_of_this_counter:
@@ -37,7 +37,7 @@ using something like `(YOUR_COUNTER_count)` in a slide or widget you can
 use a
 [variable_player](../config_players/variable_player.md) to restore the old behavior:
 
-``` mpf-config
+``` yaml
 ##! mode: my_mode
 variable_player:
   logicblock_YOUR_COUNTER_updated:
@@ -86,7 +86,7 @@ value.
 For instance in the following example `add_five_event` will add `5` to
 the counter:
 
-``` mpf-config
+``` yaml
 counters:
   counter_with_control_events:
     count_events: count_up

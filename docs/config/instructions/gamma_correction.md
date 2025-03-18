@@ -54,7 +54,7 @@ The easiest way to show this slide on your physical DMD is to make a
 temporary addition to your machine config to add a slide player, like
 this:
 
-``` mpf-mc-config
+``` yaml
 slide_player:
   mode_attract_started:
     dmd_gamma_test:

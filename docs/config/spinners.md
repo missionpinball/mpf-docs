@@ -15,7 +15,7 @@ title: "spinners:"
 Spinner devices provide accruals for switches that are hit in rapid
 succession, and post events based on timeouts after switch hits.
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_orbit_spinner:
 #!     number:

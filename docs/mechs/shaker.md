@@ -32,7 +32,7 @@ the voltage your PWM should have a duty cycle between 10% and 30%.
 
 This is an example on how to use a shaker using coil_player:
 
-``` mpf-config
+``` yaml
 coils:
   c_shaker:
     number:
@@ -56,7 +56,7 @@ coil_player:
 
 Alternatively, you can use it inside a show:
 
-``` mpf-config
+``` yaml
 coils:
   c_shaker:
     number:

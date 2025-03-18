@@ -14,7 +14,7 @@ defined just like normal lower flipper.
 
 This is an example:
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_flipper_left:
 #!     number:

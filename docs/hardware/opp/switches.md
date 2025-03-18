@@ -24,7 +24,7 @@ at 0), then a '-', and finally the switch number on the card.
 
 Enter them as a combination of board-switch, like `0-12`.
 
-``` mpf-config
+``` yaml
 switches:
   some_switch:
     number: 0-15
@@ -68,7 +68,7 @@ PC running mpf. If you have a Cobra board but run Windows or macOS you
 have to change the `ports`. If you run a completely different hardware
 you have to adapt the `hardware` section.
 
-``` mpf-config
+``` yaml
 #config_version=5
 
    hardware:

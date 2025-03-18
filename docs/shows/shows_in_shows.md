@@ -11,7 +11,7 @@ Luckily, a show can use any [Config Players](../config_players/index.md) and the
 
 This is an example of an attract mode:
 
-``` mpf-config
+``` yaml
 ##! show: my_show
 - duration: 3s
   shows:

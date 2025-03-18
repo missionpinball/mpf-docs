@@ -17,7 +17,7 @@ hit in order you can use
 
 [TODO: Add a picture of an orbit](../about/help.md)
 
-``` mpf-config
+``` yaml
 switches:
   s_ramp_entry:
     number: 1
@@ -36,7 +36,7 @@ to indicate that the ball made it. You can use
 this example you would use the events `s_ramp_entry_active` and
 `ramp_hit` to play the sounds:
 
-``` mpf-config
+``` yaml
 sound_player:
   s_ramp_entry_active: indicate_ramp
   s_ramp_success: indicate_ramp_success

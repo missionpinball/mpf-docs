@@ -20,7 +20,7 @@ If you intend to use MPF with physical hardware, at a minimum you'll
 have a `platform:` and `driverboards:` section in your machine config,
 like this:
 
-``` mpf-config
+``` yaml
 hardware:
   platform: fast
   driverboards: fast

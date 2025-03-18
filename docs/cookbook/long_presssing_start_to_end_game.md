@@ -12,7 +12,7 @@ Related Config File Sections:
 The following snippet will end a running game by long-pressing the start
 button:
 
-``` mpf-config
+``` yaml
 timed_switches:
   game_cancel:
     switch_tags: start

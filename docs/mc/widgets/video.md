@@ -150,7 +150,7 @@ action will be applied to the video.
 
 Consider the example below:
 
-``` mpf-mc-config
+``` yaml
 slides:
   my_slide:
     - type: video

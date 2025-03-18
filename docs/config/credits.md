@@ -20,7 +20,7 @@ credits mode, so be sure to read that for the details. This page just
 contains the settings which control how the credits mode behaves. Here's
 an example config:
 
-``` mpf-config
+``` yaml
 credits:
   max_credits: 12
   free_play: false
@@ -227,7 +227,7 @@ want any price breaks, then just add the first one.
 
 Here's an example:
 
-``` mpf-config
+``` yaml
 credits:
    # ...
   pricing_tiers:
@@ -269,7 +269,7 @@ A list of one or more events with settings which add credits based on
 MPF events. Like the pricing_tiers section, start each entry here with a
 minus sign and a space.
 
-``` mpf-config
+``` yaml
 credits:
    # ...
   events:

@@ -21,7 +21,7 @@ flash each of its colors in a cycle according to a given schedule.
 
 Here's an example section:
 
-``` mpf-config
+``` yaml
 #! lights:
 #!   l_left_ramp_arrow:
 #!     channels:

@@ -25,7 +25,7 @@ used to hold balls from ball-to-ball or between players.
 
 Here's an example
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_ball1:
 #!     number:

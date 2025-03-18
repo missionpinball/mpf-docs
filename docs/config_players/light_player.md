@@ -18,7 +18,7 @@ section.
 The `light_player:` section of your config is where you can control
 lights in config or shows. Example in config:
 
-``` mpf-config
+``` yaml
 #! lights:
 #!   led1:
 #!     number:
@@ -38,7 +38,7 @@ light_player:
 
 In shows, the light player is used via the `lights:` section of a step.
 
-``` mpf-config
+``` yaml
 #! lights:
 #!   l_light:
 #!     number:
@@ -56,7 +56,7 @@ show_player:
 
 ### Setting multiple lights
 
-``` mpf-config
+``` yaml
 lights:
   l_target1:
     number:
@@ -100,7 +100,7 @@ are referenced directly.
 
 ### Setting lights via tags
 
-``` mpf-config
+``` yaml
 #! lights:
 #!   l_drop1:
 #!     number:
@@ -153,7 +153,7 @@ There are two syntax to express fades. Short syntax which is
 a dict with two entries for `color` and `fade`. Here is an example for
 the short syntax:
 
-``` mpf-config
+``` yaml
 #! lights:
 #!   l_rgb:
 #!     number:
@@ -191,7 +191,7 @@ show_player:
 
 And an example with extended syntax:
 
-``` mpf-config
+``` yaml
 #! lights:
 #!   l_rgb:
 #!     number:

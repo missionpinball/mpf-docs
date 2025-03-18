@@ -11,7 +11,7 @@ device (as in the example) or any normal shot.
 
 This is an example:
 
-``` mpf-config
+``` yaml
 switches:
   s_middle_ramp:
     number:

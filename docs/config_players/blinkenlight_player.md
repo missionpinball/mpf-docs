@@ -33,7 +33,7 @@ that's used add or remove colors from a blinkenlight.
 
 This is an example of a blinkenlight player:
 
-``` mpf-config
+``` yaml
 blinkenlight_player:
   some_event:
     my_blinkenlight: red
@@ -117,7 +117,7 @@ want them to show the same colors at the same time.
 
 Let's say you have a blinkenlight that is set up like this:
 
-``` mpf-config
+``` yaml
 #! lights:
 #!   l_left_ramp_arrow:
 #!     channels:
@@ -315,7 +315,7 @@ removed from the blinkenlight.
 
 Example blinkenlight player from a show:
 
-``` mpf-config
+``` yaml
 ##! show: test
 - time: 0
   blinkenlights:
@@ -346,7 +346,7 @@ color will be removed.
 This is better explained with an example. Consider this
 `blinkenlight_player`:
 
-``` mpf-config
+``` yaml
 blinkenlight_player:
   some_event:
     my_blinkenlight: red
@@ -374,7 +374,7 @@ keyless color. Instead of using the full config and specifying an
 or `remove` in the express config to do the same thing. The following is
 equivalent to the example above:
 
-``` mpf-config
+``` yaml
 blinkenlight_player:
   some_event:
     my_blinkenlight: red

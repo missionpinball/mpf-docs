@@ -15,7 +15,7 @@ only available if you're using MPF-MC for your media controller.
 Add the segment display to your list of displays in your machine-wide
 config file:
 
-``` mpf-mc-config
+``` yaml
 displays:
   window:
     width: 600
@@ -39,7 +39,7 @@ You can make the width and height anything you want. In this case we're
 just configuring it to be 600x200 with a window title of "Mission
 Pinball Framework".
 
-``` mpf-mc-config
+``` yaml
 window:
   width: 600
   height: 200
@@ -65,7 +65,7 @@ to show. In this case, we've decided to name that slide
 "window_slide_1". (Of course you can call this slide whatever you
 want.)
 
-``` mpf-mc-config
+``` yaml
 slides:
   window_slide_1:
 ##! test
@@ -81,7 +81,7 @@ The first widget will be a
 [glow effect](../display/effects.md) which is a widget which renders a emulation of a segment
 display:
 
-``` mpf-mc-config
+``` yaml
 #! displays:
 #!   window:
 #!     width: 600
@@ -129,7 +129,7 @@ Now we have a nice slide with the virtual segment display on it, but if
 you run MPF, you still won't see it because we didn't tell MPF to show
 that slide in the window. So that's what we're doing here:
 
-``` mpf-mc-config
+``` yaml
 #! displays:
 #!   window:
 #!     width: 600
@@ -192,7 +192,7 @@ machine wide config and add an entry for each segment display emulator
 widget (in this example we created a single widget so we will only need
 one entry).
 
-``` mpf-config
+``` yaml
 segment_displays:
   display1:
     number: 1
@@ -213,7 +213,7 @@ Now we need to let MPF know to send changes to the segment displays to
 the virtual segment display emulator in MPF-MC. This is accomplished
 using the [virtual_segment_display_connector:](../../../config/virtual_segment_display_connector.md) plugin.
 
-``` mpf-config
+``` yaml
 virtual_segment_display_connector:
   segment_displays: display1
 ```
@@ -230,7 +230,7 @@ display. To do this, we use the
 [Segment Display player](../../../config_players/segment_display_player.md)
 (see also [segment_display_player:](../../../config/segment_display_player.md)).
 
-``` mpf-config
+``` yaml
 segment_display_player:
   update_segment_display_hello:
     display1:

@@ -24,7 +24,7 @@ all the sounds of your game.
 You can configure the external LISY
 [hardware sound interface](../../config/hardware_sound_systems.md) like this:
 
-``` mpf-config
+``` yaml
 hardware_sound_systems:
   default:
     label: LISY
@@ -35,7 +35,7 @@ hardware_sound_systems:
 Any built-in sounds can be played using their number in the original
 game:
 
-``` mpf-config
+``` yaml
 #! hardware_sound_systems:
 #!   default:
 #!     label: LISY
@@ -61,7 +61,7 @@ is `/boot/mpfcfg/LISY1/xxx` and for LISY80 this is
 according to the appendix in the [LISY user
 manual](http://www.lisy80.com/english/documentation-lisy/)).
 
-``` mpf-config
+``` yaml
 #! hardware_sound_systems:
 #!   default:
 #!     label: LISY
@@ -80,7 +80,7 @@ hardware_sound_player:
 
 LISY can also do text-to-speech:
 
-``` mpf-config
+``` yaml
 #! hardware_sound_systems:
 #!   default:
 #!     label: LISY
@@ -98,7 +98,7 @@ hardware_sound_player:
 
 Similarly, you can change volume:
 
-``` mpf-config
+``` yaml
 #! hardware_sound_systems:
 #!   default:
 #!     label: LISY
@@ -122,7 +122,7 @@ hardware_sound_player:
 You can also use any of the actions above in a show instead of in a
 standalone [Hardware Sound player](../../config_players/hardware_sound_player.md):
 
-``` mpf-config
+``` yaml
 #! hardware_sound_systems:
 #!   default:
 #!     label: LISY

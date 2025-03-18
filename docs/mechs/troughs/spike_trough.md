@@ -39,7 +39,7 @@ If you got a Stern Spike trough but are not using
 can use our
 [SPI Bit Bang platform](../../hardware/spi_bit_bang.md) to read the switches of your trough:
 
-``` mpf-config
+``` yaml
 hardware:
   platform: your_platform, spi_bit_bang      # add your platform first here
 spi_bit_bang:

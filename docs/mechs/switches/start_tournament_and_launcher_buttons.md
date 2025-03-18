@@ -35,7 +35,7 @@ rated at 6.3V which works fine at either 5V or in a lamp matrix at 12V
 
 To configure your start button you can use this config:
 
-``` mpf-config
+``` yaml
 lights:
   l_start_button:
     number: 3           # number depends on your platform

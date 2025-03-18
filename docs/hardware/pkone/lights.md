@@ -27,7 +27,7 @@ The `number:` setting for each simple LED is its board's Address ID
 number in the PKONE chain, then the dash, then the simple LED output
 number.
 
-``` mpf-config
+``` yaml
 lights:
   special_light:
     number: 0-1    # Lightshow board with Address ID 0, simple LED 1

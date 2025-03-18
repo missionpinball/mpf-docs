@@ -33,7 +33,7 @@ that contains a bunch of letters and numbers which specify the specific
 columns and row outputs that make up each lamp. It's probably easiest to
 look at an example.
 
-``` mpf-config
+``` yaml
 lights:
   some_light:
     subtype: matrix
@@ -77,14 +77,14 @@ section of your machine-wide config.
 
 For P-ROC:
 
-``` mpf-config
+``` yaml
 p_roc:
   lamp_matrix_strobe_time: 100ms
 ```
 
 For P3-ROC:
 
-``` mpf-config
+``` yaml
 p_roc:
   lamp_matrix_strobe_time: 100ms
 ```

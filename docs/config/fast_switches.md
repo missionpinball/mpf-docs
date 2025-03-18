@@ -16,7 +16,7 @@ The `fast_switches:` section of your config is where you configure
 platform specific details about switches when using
 [fast hardware](../hardware/fast/index.md).
 
-``` mpf-config
+``` yaml
 switches:
   some_switch:
     number:

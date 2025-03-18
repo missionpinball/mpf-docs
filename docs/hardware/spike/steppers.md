@@ -19,7 +19,7 @@ board). We guess that they are hardware-wise similar to the
 
 To configure a stepper in Spike you can use the following example:
 
-``` mpf-config
+``` yaml
 switches:
   s_stepper_home:
     number: 11-4

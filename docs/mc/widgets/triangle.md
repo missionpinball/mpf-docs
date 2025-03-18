@@ -10,7 +10,7 @@ The triangle widget is used to draw triangles on a
 
 Here's an example:
 
-``` mpf-mc-config
+``` yaml
 #config_version=5
 slide_player:
   mc_ready:

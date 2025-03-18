@@ -24,7 +24,7 @@ and lights.
 The following example will move the servo six times when `my_toy_hit` is
 posted (three times to open and three times to close):
 
-``` mpf-config
+``` yaml
 servos:
   my_toy:
     positions:

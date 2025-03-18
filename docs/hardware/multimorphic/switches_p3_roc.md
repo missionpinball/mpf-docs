@@ -40,7 +40,7 @@ then the `bank number` (Bank A is 0, Bank B is 1), then the switch
 
 For example:
 
-``` mpf-config
+``` yaml
 switches:
   my_switch:
     number: A0-B0-0    # SW-16 board at address 0, Bank A, Switch 0
@@ -61,7 +61,7 @@ calcuation for you.
 
 For example:
 
-``` mpf-config
+``` yaml
 switches:
   my_switch:
     number: 0     # SW-16 board at address 0, Bank A, Switch 0
@@ -95,7 +95,7 @@ MPF.
 
 You can configure burst optos using the following syntax:
 
-``` mpf-config
+``` yaml
 switches:
   burst_opto_1_20:
     number: burst-1-20     # burst input with switch 1 and driver 20
@@ -130,7 +130,7 @@ PCBA-0003-0003).
 If you want to use burst switches as local inputs set DIP switch 2 to
 `on` on the P3-Roc. You can use those 64 inputs as direct inputs:
 
-``` mpf-config
+``` yaml
 switches:
   local_switch0:
     number: direct-0       # local input 0
@@ -174,7 +174,7 @@ Valid options are `normal`, `quick`, and `auto`.
 To disable debouncing for a switch, add `debounce: quick` to the switch
 config, like this:
 
-``` mpf-config
+``` yaml
 switches:
   my_switch:
     number: A0-B0-0
@@ -184,7 +184,7 @@ switches:
 To force debouncing to always be used (which is also the default on the
 P-ROC, so not really needed), configure it like this:
 
-``` mpf-config
+``` yaml
 switches:
   my_switch:
     number: A0-B0-0

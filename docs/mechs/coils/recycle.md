@@ -23,7 +23,7 @@ How this recycle is implemented differs between platforms. MPF exposes a
 very basic interface to enable or disable `recycle` per coil. Usually,
 you want to keep it enabled. This is an example:
 
-``` mpf-config
+``` yaml
 coils:
   c_coil_with_recycle:
     number:

@@ -36,14 +36,14 @@ When you create your machine code in MPF, you'll actually create a
 folder which will contain your config files. A super-simple snippet
 might look like this:
 
-``` mpf-config
+``` yaml
 game:
   balls_per_game: 3
 ```
 
 Want a 5-ball game instead? Simple! Just change it:
 
-``` mpf-config
+``` yaml
 game:
   balls_per_game: 5
 ```

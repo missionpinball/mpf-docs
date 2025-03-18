@@ -18,7 +18,7 @@ counter to a player variable and then use that variable in your slide.
 
 This is an example:
 
-``` mpf-mc-config
+``` yaml
 #config_version=5
 
 ##! mode: my_mode

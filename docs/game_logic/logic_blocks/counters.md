@@ -41,7 +41,7 @@ down.
 Here's an example of a counter you could use to track progress towards
 super jets:
 
-``` mpf-config
+``` yaml
 ##! mode: my_mode
 counters:
   super_jets:
@@ -56,7 +56,7 @@ counters:
 And here's the logic block we use for the
 [Addams Family mansion awards](../../cookbook/TAF_mansion_awards.md) to make sure the mansions is initialized only once per game:
 
-``` mpf-config
+``` yaml
 ##! mode: my_mode
 counters:
   initialize_mansion:
@@ -86,7 +86,7 @@ For
 
 This is an example:
 
-``` mpf-config
+``` yaml
 ##! mode: my_mode
 counters:
   test_counter:

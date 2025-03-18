@@ -26,7 +26,7 @@ By default MPF assumes that you have only one single power supply unit
 for all your coils. If this is not true you can configure multiple PSUs
 and assign them to coils:
 
-``` mpf-config
+``` yaml
 psus:
   default:  # this is configured by default
     voltage: 48
@@ -54,7 +54,7 @@ coils on the other PSU.
 To give your PSU some breathing room MPF will apply some spacing between
 two pulses. This can be configured using `release_wait_ms`:
 
-``` mpf-config
+``` yaml
 psus:
   default:
     voltage: 48

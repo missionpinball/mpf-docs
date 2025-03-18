@@ -16,7 +16,7 @@ platform documentation for details about `subtype`).
 
 Here's an example from *Judge Dredd*:
 
-``` mpf-config
+``` yaml
 lights:
   gi01:    # lower backglass
     number: G01

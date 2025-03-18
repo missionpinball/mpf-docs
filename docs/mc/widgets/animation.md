@@ -29,7 +29,7 @@ This How To guide will show you how to do all of that.
 MPF animations are properties of widgets. For example, here's a basic
 widget with no animations:
 
-``` mpf-mc-config
+``` yaml
 slides:
   slide_1:
     widgets:
@@ -42,7 +42,7 @@ To add animations to a widget, you simply add an `animations:` setting
 to that widget, and then under there you add specific animation steps
 and settings. For example:
 
-``` mpf-mc-config
+``` yaml
 slides:
   slide_1:
     widgets:
@@ -74,9 +74,11 @@ file reference for animations for details)
 
 In this example, there are three settings for the first step:
 
+``` yaml
     - property: opacity
       value: 1
       duration: .5s
+```
 
 The **property** setting is the name of the widget's property that you
 want to animate. This can be almost any numerical property of the
@@ -96,13 +98,9 @@ starts. When `relative:` is set to `False`, the animation target uses
 the actual `value:` property value as its destination.
 
 The following example animates a widget 50 pixels in the `x` direction over one second from its current location,
+then -50 pixels in the `y` direction over another second followed by a 45 degree rotation over 500 ms:
 
-:   then -50 pixels in the `y` direction over another second followed by
-    a 45 degree rotation over 500 ms:
-
-```{=html}
-<!-- -->
-```
+``` yaml
     - property: x
       value: 50
       relative: True
@@ -115,6 +113,7 @@ The following example animates a widget 50 pixels in the `x` direction over one 
       value: 45
       relative: True
       duration: 500ms
+```
 
 ## 3. Animation trigger events
 
@@ -220,7 +219,7 @@ you can animate multiple properties at once.
 For example, to make the text grow and shrink while also fading on and
 off:
 
-``` mpf-mc-config
+``` yaml
 slides:
   slide_1:
     widgets:
@@ -270,9 +269,11 @@ step by using a list in both the `property:` and `value:` parameters
 example moves a widget diagonally to the coordinate (10, 20) while
 rotating it 180 degrees over 5 seconds:
 
+``` yaml
     - property: x, y, rotation
       value: 10, 20, 180
       duration: 5s
+```
 
 ## 5. Multi-step animations with different trigger events
 
@@ -285,7 +286,7 @@ different animations to take place when different events occur. You can
 mix and match these as much as you want, including mixing the
 "special" animation trigger events with regular MPF events.
 
-``` mpf-mc-config
+``` yaml
 slides:
   slide1:
     widgets:
@@ -330,7 +331,7 @@ for each event.
 You can also use a property from your event. For instance, you can move
 a widget based on a player variable:
 
-``` mpf-mc-config
+``` yaml
 slides:
   slide1:
     widgets:
@@ -354,7 +355,7 @@ that animation to loop back to the beginning and keep repeating.
 Of course you can mix-and-match repeating animations with one time
 animations. For example:
 
-``` mpf-mc-config
+``` yaml
 slides:
   slide1:
     widgets:
@@ -401,7 +402,7 @@ degrees. Repeating the step fails to cause the widget to move because it
 is already at destination. To create continuously rotating widgets, a
 two step process is required:
 
-``` mpf-mc-config
+``` yaml
 slides:
   slide1:
     widgets:
@@ -443,7 +444,7 @@ shown in the following example. So you still have the step in the
 animation, it just isn't doing anything since the widget's property is
 already at the desired target value. For example:
 
-``` mpf-mc-config
+``` yaml
 slides:
   slide1:
     widgets:
@@ -483,7 +484,7 @@ Much like [named widgets](reusable_widgets.md), you can also create pre-defined 
 easily apply to any widget. You do this by adding those animations to
 the `animations:` section of your config, like this:
 
-``` mpf-mc-config
+``` yaml
 animations:
   fade_in:
     property: opacity
@@ -502,7 +503,7 @@ animations.
 For example, to configure a widget to fade in (assuming the widget was
 initially created with `opacity: 0`:
 
-``` mpf-mc-config
+``` yaml
 widgets:
   hello_widget:
     - type: text
@@ -515,7 +516,7 @@ Again remember this can be done anywhere you configure an animation. So
 if you later wanted to fade that text out when the event
 "timer_hurry_up_complete" is posted, you can do it like this:
 
-``` mpf-mc-config
+``` yaml
 widgets:
   hello_widget:
     - type: text
@@ -531,7 +532,7 @@ When working with named animations, you can chain together multiple
 named animations for a single event by specifying them as a list, like
 this:
 
-``` mpf-mc-config
+``` yaml
 widgets:
   hello_widget:
     - type: text
@@ -548,7 +549,7 @@ config.
 You can even use the same animation over and over in a sequence to
 repeat something a certain number of times. For example:
 
-``` mpf-mc-config
+``` yaml
 animations:
   pulse:
     - property: opacity
@@ -569,6 +570,10 @@ widgets:
 In the example above, when the MPF event "flash_3x" is posted, it will
 cause widget1 to pulse three times.
 
+It is worth mentioning that if any of the animations in the chain has a
+`repeat: true` attribute, then the whole animation chain will be repeated.
+It is not possible to have only the last one repeating.
+
 ## 11. Animating a progress bar
 
 MPF can also animate progress bars or similar things. In this example,
@@ -576,7 +581,7 @@ we animate a progress bar based on the player variable `progress` by
 hooking the width of the bar to the event `player_progress` which is
 posted when the value changes:
 
-``` mpf-mc-config
+``` yaml
 slides:
   green_slide:
     widgets:

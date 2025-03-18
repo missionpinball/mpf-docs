@@ -19,7 +19,7 @@ scores a multiplier which is the number of shots made times 100k points.
 Without dynamic values, your variable_player (scoring) section would be
 static, like this:
 
-``` mpf-config
+``` yaml
 ##! mode: mode1
 variable_player:
   shot_jackpot_hit:
@@ -31,7 +31,7 @@ holds the number of trolls hit that you want to multiply by 100,000 when
 the shot is made. You can use the "current_player" dynamic value in
 your variable_player config like this:
 
-``` mpf-config
+``` yaml
 ##! mode: mode1
 variable_player:
   shot_jackpot_hit:
@@ -42,7 +42,7 @@ You can access other values dynamically as well, such as a timer ticking
 away a hurry-up or a counter to track how many times a multiplier switch
 has been hit
 
-``` mpf-config
+``` yaml
 ##! mode: mode1
 variable_player:
   collect_hurryup:
@@ -55,7 +55,7 @@ warnings.
 
 So instead of this:
 
-``` mpf-config
+``` yaml
 ##! mode: tilt
 # in your tilt mode
 tilt:
@@ -64,7 +64,7 @@ tilt:
 
 You would have this instead:
 
-``` mpf-config
+``` yaml
 # in your machine config
 settings:
   warnings_to_tilt:
@@ -190,7 +190,7 @@ Common mode properties are:
 
 ## Using if/else logic with dynamic values
 
-``` mpf-config
+``` yaml
 ##! mode: mode1
 counters:
   my_counter:

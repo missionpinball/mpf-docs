@@ -44,7 +44,7 @@ since they can count balls and choose to keep or eject it.
 
 This is an example:
 
-``` mpf-config
+``` yaml
 switches:
   s_scoop:
     number: 2
@@ -65,7 +65,7 @@ this using a
 [queue_relay_player](../config/queue_relay_player.md) in your mode (you might want to use
 [conditional events](../events/overview/conditional.md) to only trigger it when certain condition match):
 
-``` mpf-config
+``` yaml
 switches:
   s_scoop:
     number: 2

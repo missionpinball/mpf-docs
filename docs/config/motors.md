@@ -30,7 +30,7 @@ This is an example for a motorized drop target bank which is mounted to
 a camshaft. When the motor is running it constantly moves up and down.
 Two position switches are used to detect the current position.
 
-``` mpf-config
+``` yaml
 switches:
   s_motorized_drop_target_bank_position_up:
     number:
@@ -60,7 +60,7 @@ outputs. Again two position switches are used to detect the current
 position. In this setup the first and last switches are also considered
 as limit switches and the motor will stop once it hit one of them.
 
-``` mpf-config
+``` yaml
 switches:
   s_slimer_home:
     number: 8-1
@@ -90,7 +90,7 @@ Another example of such a device would be the claw in Stern Batman DK
 (or also Stern Batman 66). It has more position switches but the
 mechanics are similar:
 
-``` mpf-config
+``` yaml
 switches:
   s_claw_home:
     number:

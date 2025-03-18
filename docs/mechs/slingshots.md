@@ -34,7 +34,7 @@ Part numbers:
 
 This is an example:
 
-``` mpf-config
+``` yaml
 switches:
   s_sling_left:
     number: 5

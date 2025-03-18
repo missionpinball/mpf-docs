@@ -25,7 +25,7 @@ bonus mode's mode configuration file.
 
 Here's an example from *Brooks 'n Dunn*:
 
-``` mpf-config
+``` yaml
 ##! mode: mode1
 mode_settings:
   display_delay_ms: 4000
