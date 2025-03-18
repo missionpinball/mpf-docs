@@ -310,10 +310,10 @@ Use this to delay the start of a player's first ball until they select
 a mode:
 
 ``` yaml
-##! mode: start_selecton_on_ball_one
+##! mode: start_selector_on_ball_one
 #config_version=5
 mode:
-  start_events: ball_ended
+  start_events: game_started
   stop_events: ball_started
   priority: 100
   game_mode: false   # this is needed to interfere with game start
