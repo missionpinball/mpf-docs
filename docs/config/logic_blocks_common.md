@@ -1,8 +1,8 @@
 ---
-title: Optional settings
+title: "logic_blocks_common:"
 ---
 
-# Optional settings
+# logic_blocks_common:
 
 
 The following sections are optional in the `logic_blocks_common:`
