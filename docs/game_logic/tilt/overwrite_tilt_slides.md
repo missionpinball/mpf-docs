@@ -4,6 +4,11 @@ title: Overwriting Tilt Slides
 
 # Overwriting Tilt Slides
 
+!!! note "This guide is intended for MPF versions before 0.80"
+
+    MPF 0.80 creates slides via Godot, not in the YAML game config files like MPF 0.57.
+    The updated guide for creating custom tilt slides and overwriting default tilt mode
+    slide behaviors lives [in the GMC guides section](../../gmc/guides/tilt_mode.md).
 
 The [tilt mode](../../index.md) comes with very
 basic slides. You can overwrite them using the following config:

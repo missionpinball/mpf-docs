@@ -80,17 +80,16 @@ Queues the slide for playback at the beginning of the slide queue. This slide wi
 
 Queues the slide for playback immediately. If an existing queued slide is playing, it will be removed immediately and this slide will play. The rest of the queued slides will follow after this slide is finished.
 
-#### `remove`
+#### `remove`:
 
-:   Removes the slide from the list of active slides. If this slide is
+    Removes the slide from the list of active slides. If this slide is
     the highest priority slide that's currently showing, then the
     next-highest priority slide will be shown in its place.
 
     If a `transition_out:` setting is used, then that transition will be
     used here.
 
-For example, to remove *slide1* when the event *remove_slide_1* is
-posted:
+For example, to remove *slide1* when the event *remove_slide_1* is posted:
 
 ``` yaml
 #! slides:
