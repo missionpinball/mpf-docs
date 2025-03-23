@@ -33866,9 +33866,9 @@ for the drain and a second for the trough.</p>
 section add it now.)</p>
 <p>Then in your <code>ball_devices:</code> section, create an entry called
 <code>bd_drain:</code>, like this:</p>
-<pre><code>ball_devices:
-    bd_drain:
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nt">ball_devices</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">bd_drain</span><span class="p">:</span>
+</code></pre></div>
 <p>This means that you're creating a ball device called <em>bd_drain</em>. We use
 the preface <em>bd_</em> to indicate that this is a ball device which makes it
 easier when we're referencing them later. Then under your <code>bd_drain:</code>
@@ -34070,6 +34070,9 @@ start active. For example:</p>
 <span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">02</span>
 <span class="w">  </span><span class="nt">s_plunger</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+
+<span class="nt">virtual_platform_start_active_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_trough_enter</span>
+
 <span class="nt">coils</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">c_drain_eject</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">03</span>
@@ -34077,6 +34080,7 @@ start active. For example:</p>
 <span class="w">  </span><span class="nt">c_trough_release</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">04</span>
 <span class="w">    </span><span class="nt">default_pulse_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span>
+
 <span class="nt">ball_devices</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">bd_drain</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">ball_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_drain</span>
@@ -34096,13 +34100,14 @@ start active. For example:</p>
 <span class="w">    </span><span class="nt">ball_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_plunger</span>
 <span class="w">    </span><span class="nt">mechanical_eject</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">    </span><span class="nt">eject_timeouts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5s</span>
+
 <span class="nt">playfields</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">playfield</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">default_source_device</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bd_plunger</span>
 <span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span>
+
 <span class="nt">machine</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">balls_installed</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span>
-<span class="nt">virtual_platform_start_active_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_trough_enter</span>
 </code></pre></div>
 <h2 id="what-if-it-doesnt-work">What if it doesn't work?</h2>
 <p>Have a look at our

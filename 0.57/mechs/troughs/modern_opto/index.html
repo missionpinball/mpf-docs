@@ -7763,6 +7763,15 @@ icons & this code generated via https://realfavicongenerator.net
 </li>
       
         <li class="md-nav__item">
+  <a href="#7-add-the-default-playfield" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Add the default playfield
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#heres-the-complete-config" class="md-nav__link">
     <span class="md-ellipsis">
       Here's the complete config
@@ -33927,6 +33936,15 @@ icons & this code generated via https://realfavicongenerator.net
 </li>
       
         <li class="md-nav__item">
+  <a href="#7-add-the-default-playfield" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Add the default playfield
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#heres-the-complete-config" class="md-nav__link">
     <span class="md-ellipsis">
       Here's the complete config
@@ -34003,10 +34021,8 @@ details if in doubt.</p>
 <h3 id="ballywilliams-trough-opto-boards">Bally/Williams Trough Opto Boards:</h3>
 <p>Part numbers:</p>
 <ul>
-<li>Transmitter: #A-18617-1 or 5768-14121-02 or #600-0035-00 or
-    #600-0005-00</li>
-<li>Receiver: #A-18618-1 or 5768-14122-02 or #600-0036-00 or
-    #600-0006-00</li>
+<li>Transmitter: #A-18617-1 or 5768-14121-02 or #600-0035-00 or #600-0005-00</li>
+<li>Receiver: #A-18618-1 or 5768-14122-02 or #600-0036-00 or #600-0006-00</li>
 <li>Transmitter/Receiver: #600-0054-00 or #600-0055-00</li>
 </ul>
 <p>Those boards need an additional current limiting resistor on the
@@ -34117,28 +34133,7 @@ so you'll add a configuration for it to the <code>ball_devices:</code> section o
 your machine config. (If you don't have that section add it now.)</p>
 <p>Then in your <code>ball_devices:</code> section, create an entry called
 <code>bd_trough:</code>, like this:</p>
-<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
-<span class="c1">#!   s_trough1:</span>
-<span class="c1">#!     number: 2</span>
-<span class="c1">#!   s_trough2:</span>
-<span class="c1">#!     number: 3</span>
-<span class="c1">#!   s_trough3:</span>
-<span class="c1">#!     number: 4</span>
-<span class="c1">#!   s_trough4:</span>
-<span class="c1">#!     number: 5</span>
-<span class="c1">#!   s_trough5:</span>
-<span class="c1">#!     number: 6</span>
-<span class="c1">#!   s_trough6:</span>
-<span class="c1">#!     number: 7</span>
-<span class="c1">#!   s_trough_jam:</span>
-<span class="c1">#!     number: 8</span>
-<span class="c1">#!   s_plunger:</span>
-<span class="c1">#!     number: 10</span>
-<span class="c1">#! coils:</span>
-<span class="c1">#!   c_trough_eject:</span>
-<span class="c1">#!     number: 4</span>
-<span class="c1">#!     default_pulse_ms: 20</span>
-<span class="nt">ball_devices</span><span class="p">:</span>
+<div class="highlight"><pre><span></span><code><span class="nt">ball_devices</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">bd_trough</span><span class="p">:</span>
 <span class="c1">#!     ball_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6, s_trough_jam</span>
 <span class="c1">#!     eject_coil: c_trough_eject</span>
@@ -34147,16 +34142,11 @@ your machine config. (If you don't have that section add it now.)</p>
 <span class="c1">#!     eject_coil_jam_pulse: 15ms</span>
 <span class="c1">#!     eject_targets: bd_plunger</span>
 <span class="c1">#!     eject_timeouts: 3s</span>
-<span class="c1">#!     # bd_plunger is a placeholder just so the trough&#39;s eject_targets are valid</span>
+<span class="c1">#!   # bd_plunger is a placeholder just so the trough&#39;s eject_targets are valid</span>
 <span class="c1">#!   bd_plunger:</span>
 <span class="c1">#!     ball_switches: s_plunger</span>
 <span class="c1">#!     mechanical_eject: true</span>
 <span class="c1">#!     eject_timeouts: 5s</span>
-<span class="c1">#! playfields:</span>
-<span class="c1">#!   playfield:</span>
-<span class="c1">#!     default_source_device: bd_plunger</span>
-<span class="c1">#!     tags: default</span>
-<span class="c1">#! virtual_platform_start_active_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6</span>
 </code></pre></div>
 <p>This means that you're creating a ball device called <em>bd_trough</em>. We
 use the preface <em>bd_</em> to indicate that this is a ball device which
@@ -34167,28 +34157,7 @@ trough ball device:</p>
 <p>Indented under <code>bd_trough:</code>, create an entry called <code>ball_switches:</code> and
 then add a comma-separated list of all the switches in your trough, like
 this:</p>
-<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
-<span class="c1">#!   s_trough1:</span>
-<span class="c1">#!     number: 2</span>
-<span class="c1">#!   s_trough2:</span>
-<span class="c1">#!     number: 3</span>
-<span class="c1">#!   s_trough3:</span>
-<span class="c1">#!     number: 4</span>
-<span class="c1">#!   s_trough4:</span>
-<span class="c1">#!     number: 5</span>
-<span class="c1">#!   s_trough5:</span>
-<span class="c1">#!     number: 6</span>
-<span class="c1">#!   s_trough6:</span>
-<span class="c1">#!     number: 7</span>
-<span class="c1">#!   s_trough_jam:</span>
-<span class="c1">#!     number: 8</span>
-<span class="c1">#!   s_plunger:</span>
-<span class="c1">#!     number: 10</span>
-<span class="c1">#! coils:</span>
-<span class="c1">#!   c_trough_eject:</span>
-<span class="c1">#!     number: 4</span>
-<span class="c1">#!     default_pulse_ms: 20</span>
-<span class="nt">ball_devices</span><span class="p">:</span>
+<div class="highlight"><pre><span></span><code><span class="nt">ball_devices</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">bd_trough</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">ball_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6, s_trough_jam</span>
 <span class="c1">#!     eject_coil: c_trough_eject</span>
@@ -34197,16 +34166,11 @@ this:</p>
 <span class="c1">#!     eject_coil_jam_pulse: 15ms</span>
 <span class="c1">#!     eject_targets: bd_plunger</span>
 <span class="c1">#!     eject_timeouts: 3s</span>
-<span class="c1">#!     # bd_plunger is a placeholder just so the trough&#39;s eject_targets are valid</span>
+<span class="c1">#!   # bd_plunger is a placeholder just so the trough&#39;s eject_targets are valid</span>
 <span class="c1">#!   bd_plunger:</span>
 <span class="c1">#!     ball_switches: s_plunger</span>
 <span class="c1">#!     mechanical_eject: true</span>
 <span class="c1">#!     eject_timeouts: 5s</span>
-<span class="c1">#! playfields:</span>
-<span class="c1">#!   playfield:</span>
-<span class="c1">#!     default_source_device: bd_plunger</span>
-<span class="c1">#!     tags: default</span>
-<span class="c1">#! virtual_platform_start_active_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6</span>
 </code></pre></div>
 <p>So this is eight spaces, followed by the word "ball_switches", then a
 colon, then a space, then the name of your first switch, comma, then
@@ -34227,28 +34191,7 @@ that moment.</p>
 coil that MPF should fire when it wants to eject a ball from the trough.
 This should be the name of the coil you added in Step 2,
 <em>c_trough_eject</em> in our case:</p>
-<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
-<span class="c1">#!   s_trough1:</span>
-<span class="c1">#!     number: 2</span>
-<span class="c1">#!   s_trough2:</span>
-<span class="c1">#!     number: 3</span>
-<span class="c1">#!   s_trough3:</span>
-<span class="c1">#!     number: 4</span>
-<span class="c1">#!   s_trough4:</span>
-<span class="c1">#!     number: 5</span>
-<span class="c1">#!   s_trough5:</span>
-<span class="c1">#!     number: 6</span>
-<span class="c1">#!   s_trough6:</span>
-<span class="c1">#!     number: 7</span>
-<span class="c1">#!   s_trough_jam:</span>
-<span class="c1">#!     number: 8</span>
-<span class="c1">#!   s_plunger:</span>
-<span class="c1">#!     number: 10</span>
-<span class="c1">#! coils:</span>
-<span class="c1">#!   c_trough_eject:</span>
-<span class="c1">#!     number: 4</span>
-<span class="c1">#!     default_pulse_ms: 20</span>
-<span class="nt">ball_devices</span><span class="p">:</span>
+<div class="highlight"><pre><span></span><code><span class="nt">ball_devices</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">bd_trough</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">ball_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6, s_trough_jam</span>
 <span class="w">    </span><span class="nt">eject_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_trough_eject</span>
@@ -34257,16 +34200,11 @@ This should be the name of the coil you added in Step 2,
 <span class="c1">#!     eject_coil_jam_pulse: 15ms</span>
 <span class="c1">#!     eject_targets: bd_plunger</span>
 <span class="c1">#!     eject_timeouts: 3s</span>
-<span class="c1">#!     # bd_plunger is a placeholder just so the trough&#39;s eject_targets are valid</span>
+<span class="c1">#!   # bd_plunger is a placeholder just so the trough&#39;s eject_targets are valid</span>
 <span class="c1">#!   bd_plunger:</span>
 <span class="c1">#!     ball_switches: s_plunger</span>
 <span class="c1">#!     mechanical_eject: true</span>
 <span class="c1">#!     eject_timeouts: 5s</span>
-<span class="c1">#! playfields:</span>
-<span class="c1">#!   playfield:</span>
-<span class="c1">#!     default_source_device: bd_plunger</span>
-<span class="c1">#!     tags: default</span>
-<span class="c1">#! virtual_platform_start_active_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6</span>
 </code></pre></div>
 <p>Note that MPF will simply pulse the eject coil at its default pulse time
 when it wants to eject a ball from the trough.</p>
@@ -34301,28 +34239,7 @@ to be home. So even though these all might seem similar, just know that
 for now you have to add <code>trough</code>, <code>home</code>, and <code>drain</code> tags to your
 trough. You can specify the tags in any order, and your <code>tags:</code> entry
 should look something like this:</p>
-<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
-<span class="c1">#!   s_trough1:</span>
-<span class="c1">#!     number: 2</span>
-<span class="c1">#!   s_trough2:</span>
-<span class="c1">#!     number: 3</span>
-<span class="c1">#!   s_trough3:</span>
-<span class="c1">#!     number: 4</span>
-<span class="c1">#!   s_trough4:</span>
-<span class="c1">#!     number: 5</span>
-<span class="c1">#!   s_trough5:</span>
-<span class="c1">#!     number: 6</span>
-<span class="c1">#!   s_trough6:</span>
-<span class="c1">#!     number: 7</span>
-<span class="c1">#!   s_trough_jam:</span>
-<span class="c1">#!     number: 8</span>
-<span class="c1">#!   s_plunger:</span>
-<span class="c1">#!     number: 10</span>
-<span class="c1">#! coils:</span>
-<span class="c1">#!   c_trough_eject:</span>
-<span class="c1">#!     number: 4</span>
-<span class="c1">#!     default_pulse_ms: 20</span>
-<span class="nt">ball_devices</span><span class="p">:</span>
+<div class="highlight"><pre><span></span><code><span class="nt">ball_devices</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">bd_trough</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">ball_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6, s_trough_jam</span>
 <span class="w">    </span><span class="nt">eject_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_trough_eject</span>
@@ -34331,42 +34248,16 @@ should look something like this:</p>
 <span class="c1">#!     eject_coil_jam_pulse: 15ms</span>
 <span class="c1">#!     eject_targets: bd_plunger</span>
 <span class="c1">#!     eject_timeouts: 3s</span>
-<span class="c1">#!     # bd_plunger is a placeholder just so the trough&#39;s eject_targets are valid</span>
+<span class="c1">#!   # bd_plunger is a placeholder just so the trough&#39;s eject_targets are valid</span>
 <span class="c1">#!   bd_plunger:</span>
 <span class="c1">#!     ball_switches: s_plunger</span>
 <span class="c1">#!     mechanical_eject: true</span>
 <span class="c1">#!     eject_timeouts: 5s</span>
-<span class="c1">#! playfields:</span>
-<span class="c1">#!   playfield:</span>
-<span class="c1">#!     default_source_device: bd_plunger</span>
-<span class="c1">#!     tags: default</span>
-<span class="c1">#! virtual_platform_start_active_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6</span>
 </code></pre></div>
 <h3 id="3d-add-configure-your-jam-switch">3d. Add &amp; configure your jam switch</h3>
 <p>If you have a jam switch, add a setting called <code>jam_switch:</code> and add it
 there, like this:</p>
-<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
-<span class="c1">#!   s_trough1:</span>
-<span class="c1">#!     number: 2</span>
-<span class="c1">#!   s_trough2:</span>
-<span class="c1">#!     number: 3</span>
-<span class="c1">#!   s_trough3:</span>
-<span class="c1">#!     number: 4</span>
-<span class="c1">#!   s_trough4:</span>
-<span class="c1">#!     number: 5</span>
-<span class="c1">#!   s_trough5:</span>
-<span class="c1">#!     number: 6</span>
-<span class="c1">#!   s_trough6:</span>
-<span class="c1">#!     number: 7</span>
-<span class="c1">#!   s_trough_jam:</span>
-<span class="c1">#!     number: 8</span>
-<span class="c1">#!   s_plunger:</span>
-<span class="c1">#!     number: 10</span>
-<span class="c1">#! coils:</span>
-<span class="c1">#!   c_trough_eject:</span>
-<span class="c1">#!     number: 4</span>
-<span class="c1">#!     default_pulse_ms: 20</span>
-<span class="nt">ball_devices</span><span class="p">:</span>
+<div class="highlight"><pre><span></span><code><span class="nt">ball_devices</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">bd_trough</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">ball_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6, s_trough_jam</span>
 <span class="w">    </span><span class="nt">eject_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_trough_eject</span>
@@ -34375,16 +34266,11 @@ there, like this:</p>
 <span class="c1">#!     eject_coil_jam_pulse: 15ms</span>
 <span class="c1">#!     eject_targets: bd_plunger</span>
 <span class="c1">#!     eject_timeouts: 3s</span>
-<span class="c1">#!     # bd_plunger is a placeholder just so the trough&#39;s eject_targets are valid</span>
+<span class="c1">#!   # bd_plunger is a placeholder just so the trough&#39;s eject_targets are valid</span>
 <span class="c1">#!   bd_plunger:</span>
 <span class="c1">#!     ball_switches: s_plunger</span>
 <span class="c1">#!     mechanical_eject: true</span>
 <span class="c1">#!     eject_timeouts: 5s</span>
-<span class="c1">#! playfields:</span>
-<span class="c1">#!   playfield:</span>
-<span class="c1">#!     default_source_device: bd_plunger</span>
-<span class="c1">#!     tags: default</span>
-<span class="c1">#! virtual_platform_start_active_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6</span>
 </code></pre></div>
 <p>You can also configure an eject pulse time (in ms) that will be used
 when the trough wants to eject a ball but the jam switch is active.
@@ -34393,28 +34279,7 @@ should be. In most cases it's actually <em>less</em> time than the regular
 eject pulse time, because in most cases, the regular pulse time will
 kick out two balls (the jammed ball and the one below it).</p>
 <p>So for our example, we'll set the jam pulse time to 15ms.</p>
-<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
-<span class="c1">#!   s_trough1:</span>
-<span class="c1">#!     number: 2</span>
-<span class="c1">#!   s_trough2:</span>
-<span class="c1">#!     number: 3</span>
-<span class="c1">#!   s_trough3:</span>
-<span class="c1">#!     number: 4</span>
-<span class="c1">#!   s_trough4:</span>
-<span class="c1">#!     number: 5</span>
-<span class="c1">#!   s_trough5:</span>
-<span class="c1">#!     number: 6</span>
-<span class="c1">#!   s_trough6:</span>
-<span class="c1">#!     number: 7</span>
-<span class="c1">#!   s_trough_jam:</span>
-<span class="c1">#!     number: 8</span>
-<span class="c1">#!   s_plunger:</span>
-<span class="c1">#!     number: 10</span>
-<span class="c1">#! coils:</span>
-<span class="c1">#!   c_trough_eject:</span>
-<span class="c1">#!     number: 4</span>
-<span class="c1">#!     default_pulse_ms: 20</span>
-<span class="nt">ball_devices</span><span class="p">:</span>
+<div class="highlight"><pre><span></span><code><span class="nt">ball_devices</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">bd_trough</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">ball_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6, s_trough_jam</span>
 <span class="w">    </span><span class="nt">eject_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_trough_eject</span>
@@ -34423,16 +34288,11 @@ kick out two balls (the jammed ball and the one below it).</p>
 <span class="w">    </span><span class="nt">eject_coil_jam_pulse</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">15ms</span>
 <span class="c1">#!     eject_targets: bd_plunger</span>
 <span class="c1">#!     eject_timeouts: 3s</span>
-<span class="c1">#!     # bd_plunger is a placeholder just so the trough&#39;s eject_targets are valid</span>
+<span class="c1">#!   # bd_plunger is a placeholder just so the trough&#39;s eject_targets are valid</span>
 <span class="c1">#!   bd_plunger:</span>
 <span class="c1">#!     ball_switches: s_plunger</span>
 <span class="c1">#!     mechanical_eject: true</span>
 <span class="c1">#!     eject_timeouts: 5s</span>
-<span class="c1">#! playfields:</span>
-<span class="c1">#!   playfield:</span>
-<span class="c1">#!     default_source_device: bd_plunger</span>
-<span class="c1">#!     tags: default</span>
-<span class="c1">#! virtual_platform_start_active_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6</span>
 </code></pre></div>
 <p>(Note that this setting is a time string, so you can include the "ms"
 in the setting value.)</p>
@@ -34498,35 +34358,7 @@ guide, we'll just create a placeholder plunger lane called
 <a href="../../plungers/">Plungers &amp; Ball Launch Devices</a> documentation for
 full details since there are lots of different types of plungers.</p>
 <p>You add an eject target via the <code>eject_targets:</code> section, like this:</p>
-<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
-<span class="c1">#!   s_trough1:</span>
-<span class="c1">#!     number: 2</span>
-<span class="c1">#!     type: NC</span>
-<span class="c1">#!   s_trough2:</span>
-<span class="c1">#!     number: 3</span>
-<span class="c1">#!     type: NC</span>
-<span class="c1">#!   s_trough3:</span>
-<span class="c1">#!     number: 4</span>
-<span class="c1">#!     type: NC</span>
-<span class="c1">#!   s_trough4:</span>
-<span class="c1">#!     number: 5</span>
-<span class="c1">#!     type: NC</span>
-<span class="c1">#!   s_trough5:</span>
-<span class="c1">#!     number: 6</span>
-<span class="c1">#!     type: NC</span>
-<span class="c1">#!   s_trough6:</span>
-<span class="c1">#!     number: 7</span>
-<span class="c1">#!     type: NC</span>
-<span class="c1">#!   s_trough_jam:</span>
-<span class="c1">#!     number: 8</span>
-<span class="c1">#!     type: NC</span>
-<span class="c1">#!   s_plunger:</span>
-<span class="c1">#!     number: 10</span>
-<span class="c1">#! coils:</span>
-<span class="c1">#!   c_trough_eject:</span>
-<span class="c1">#!     number: 4</span>
-<span class="c1">#!     default_pulse_ms: 20</span>
-<span class="nt">ball_devices</span><span class="p">:</span>
+<div class="highlight"><pre><span></span><code><span class="nt">ball_devices</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">bd_trough</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">ball_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6, s_trough_jam</span>
 <span class="w">    </span><span class="nt">eject_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_trough_eject</span>
@@ -34535,15 +34367,12 @@ full details since there are lots of different types of plungers.</p>
 <span class="w">    </span><span class="nt">eject_coil_jam_pulse</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">15ms</span>
 <span class="w">    </span><span class="nt">eject_targets</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bd_plunger</span>
 <span class="c1">#!     eject_timeouts: 3s</span>
+
+<span class="w">  </span><span class="c1"># bd_plunger is a placeholder just so the trough&#39;s eject_targets are valid</span>
 <span class="w">  </span><span class="nt">bd_plunger</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">ball_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_plunger</span>
 <span class="w">    </span><span class="nt">mechanical_eject</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="c1">#!     eject_timeouts: 5s</span>
-<span class="c1">#! playfields:</span>
-<span class="c1">#!   playfield:</span>
-<span class="c1">#!     default_source_device: bd_plunger</span>
-<span class="c1">#!     tags: default</span>
-<span class="c1">#! virtual_platform_start_active_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6</span>
 </code></pre></div>
 <p>Of course you should enter the name of your actual plunger lane / ball
 launcher device.</p>
@@ -34566,35 +34395,7 @@ set <code>eject_timeouts</code> to your shooter lane and your trough. You should
 measure how long the maximum time is until a ball cannot possibly return
 to your trough and plunger (with some safety margin). Usually this is
 about <code>2s - 4s</code> for a trough and <code>3s - 5s</code> for a plunger.</p>
-<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
-<span class="c1">#!   s_trough1:</span>
-<span class="c1">#!     number: 2</span>
-<span class="c1">#!     type: NC</span>
-<span class="c1">#!   s_trough2:</span>
-<span class="c1">#!     number: 3</span>
-<span class="c1">#!     type: NC</span>
-<span class="c1">#!   s_trough3:</span>
-<span class="c1">#!     number: 4</span>
-<span class="c1">#!     type: NC</span>
-<span class="c1">#!   s_trough4:</span>
-<span class="c1">#!     number: 5</span>
-<span class="c1">#!     type: NC</span>
-<span class="c1">#!   s_trough5:</span>
-<span class="c1">#!     number: 6</span>
-<span class="c1">#!     type: NC</span>
-<span class="c1">#!   s_trough6:</span>
-<span class="c1">#!     number: 7</span>
-<span class="c1">#!     type: NC</span>
-<span class="c1">#!   s_trough_jam:</span>
-<span class="c1">#!     number: 8</span>
-<span class="c1">#!     type: NC</span>
-<span class="c1">#!   s_plunger:</span>
-<span class="c1">#!     number: 10</span>
-<span class="c1">#! coils:</span>
-<span class="c1">#!   c_trough_eject:</span>
-<span class="c1">#!     number: 4</span>
-<span class="c1">#!     default_pulse_ms: 20</span>
-<span class="nt">ball_devices</span><span class="p">:</span>
+<div class="highlight"><pre><span></span><code><span class="nt">ball_devices</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">bd_trough</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">ball_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6, s_trough_jam</span>
 <span class="w">    </span><span class="nt">eject_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_trough_eject</span>
@@ -34607,11 +34408,16 @@ about <code>2s - 4s</code> for a trough and <code>3s - 5s</code> for a plunger.<
 <span class="w">    </span><span class="nt">ball_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_plunger</span>
 <span class="w">    </span><span class="nt">mechanical_eject</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">    </span><span class="nt">eject_timeouts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5s</span>
-<span class="c1">#! playfields:</span>
-<span class="c1">#!   playfield:</span>
-<span class="c1">#!     default_source_device: bd_plunger</span>
-<span class="c1">#!     tags: default</span>
-<span class="c1">#! virtual_platform_start_active_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6</span>
+</code></pre></div>
+<h2 id="7-add-the-default-playfield">7. Add the default playfield</h2>
+<p>The final preparation step you need to take is to add a default playfield.
+We can keep it simple in this case and just call it "playfield". We need to
+give the playfield a <code>default_source_device</code> of <code>bd_plunger</code> and a tag of <code>default</code>,
+and that's it!</p>
+<div class="highlight"><pre><span></span><code><span class="nt">playfields</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">playfield</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">default_source_device</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bd_plunger</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span>
 </code></pre></div>
 <h2 id="heres-the-complete-config">Here's the complete config</h2>
 <div class="highlight"><pre><span></span><code><span class="nt">switches</span><span class="p">:</span>
@@ -34638,10 +34444,14 @@ about <code>2s - 4s</code> for a trough and <code>3s - 5s</code> for a plunger.<
 <span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NC</span>
 <span class="w">  </span><span class="nt">s_plunger</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+
+<span class="nt">virtual_platform_start_active_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6</span>
+
 <span class="nt">coils</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">c_trough_eject</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span>
 <span class="w">    </span><span class="nt">default_pulse_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span>
+
 <span class="nt">ball_devices</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">bd_trough</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">ball_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6, s_trough_jam</span>
@@ -34655,11 +34465,11 @@ about <code>2s - 4s</code> for a trough and <code>3s - 5s</code> for a plunger.<
 <span class="w">    </span><span class="nt">ball_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_plunger</span>
 <span class="w">    </span><span class="nt">mechanical_eject</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">    </span><span class="nt">eject_timeouts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5s</span>
+
 <span class="nt">playfields</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">playfield</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">default_source_device</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bd_plunger</span>
 <span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span>
-<span class="nt">virtual_platform_start_active_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6</span>
 </code></pre></div>
 <h2 id="what-if-it-doesnt-work">What if it doesn't work?</h2>
 <p>Have a look at our

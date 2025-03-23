@@ -7793,6 +7793,15 @@ icons & this code generated via https://realfavicongenerator.net
 </li>
       
         <li class="md-nav__item">
+  <a href="#6-add-the-default-playfield" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Add the default playfield
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#heres-the-complete-config" class="md-nav__link">
     <span class="md-ellipsis">
       Here's the complete config
@@ -33723,6 +33732,15 @@ icons & this code generated via https://realfavicongenerator.net
 </li>
       
         <li class="md-nav__item">
+  <a href="#6-add-the-default-playfield" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Add the default playfield
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#heres-the-complete-config" class="md-nav__link">
     <span class="md-ellipsis">
       Here's the complete config
@@ -33815,9 +33833,9 @@ bit once we finish getting everything set up.</p>
 <a href="../../ball_devices/">ball device</a>.
 So in your <code>ball_devices:</code> section, create an entry called <code>bd_drain:</code>
 like this: (If you don't have that section add it now.)</p>
-<pre><code>ball_devices:
-    bd_drain:
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nt">ball_devices</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">bd_drain</span><span class="p">:</span>
+</code></pre></div>
 <p>This means that you're creating a ball device called <em>bd_drain</em>. We use
 the preface <em>bd_</em> to indicate that this is a ball device which makes it
 easier when we're referencing them later. Then under your <code>bd_drain:</code>
@@ -33843,16 +33861,7 @@ ball device.</p>
     take to return if the eject fails.</li>
 </ul>
 <p>Your drain device configuration should look now look like this:</p>
-<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
-<span class="c1">#!   s_drain:</span>
-<span class="c1">#!     number: 01</span>
-<span class="c1">#!   s_plunger:</span>
-<span class="c1">#!     number: 02</span>
-<span class="c1">#! coils:</span>
-<span class="c1">#!   c_drain_eject:</span>
-<span class="c1">#!     number: 03</span>
-<span class="c1">#!     default_pulse_ms: 20</span>
-<span class="nt">ball_devices</span><span class="p">:</span>
+<div class="highlight"><pre><span></span><code><span class="nt">ball_devices</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">bd_drain</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">ball_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_drain</span>
 <span class="w">    </span><span class="nt">eject_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_drain_eject</span>
@@ -33866,16 +33875,7 @@ ball device.</p>
 </code></pre></div>
 <h2 id="4-add-your-plunger-ball-device">4. Add your "plunger" ball device</h2>
 <p>We also add the plunger as ball_device <code>bd_plunger_lane</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
-<span class="c1">#!   s_drain:</span>
-<span class="c1">#!     number: 01</span>
-<span class="c1">#!   s_plunger:</span>
-<span class="c1">#!     number: 02</span>
-<span class="c1">#! coils:</span>
-<span class="c1">#!   c_drain_eject:</span>
-<span class="c1">#!     number: 03</span>
-<span class="c1">#!     default_pulse_ms: 20</span>
-<span class="nt">ball_devices</span><span class="p">:</span>
+<div class="highlight"><pre><span></span><code><span class="nt">ball_devices</span><span class="p">:</span>
 <span class="c1">#!   bd_drain:</span>
 <span class="c1">#!     ball_switches: s_drain</span>
 <span class="c1">#!     eject_coil: c_drain_eject</span>
@@ -33908,7 +33908,20 @@ start active. For example:</p>
 <div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
 <span class="c1">#!   s_drain:</span>
 <span class="c1">#!     number: 01</span>
+<span class="c1">#!   s_plunger:</span>
+<span class="c1">#!     number: 02</span>
+
 <span class="nt">virtual_platform_start_active_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_drain</span>
+</code></pre></div>
+<h2 id="6-add-the-default-playfield">6. Add the default playfield</h2>
+<p>The final preparation step you need to take is to add a default playfield.
+We can keep it simple in this case and just call it "playfield". We need to
+give the playfield a <code>default_source_device</code> of <code>bd_plunger</code> and a tag of <code>default</code>,
+and that's it!</p>
+<div class="highlight"><pre><span></span><code><span class="nt">playfields</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">playfield</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">default_source_device</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bd_plunger_lane</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span>
 </code></pre></div>
 <h2 id="heres-the-complete-config">Here's the complete config</h2>
 <div class="highlight"><pre><span></span><code><span class="c1">#config_version=5</span>
@@ -33917,10 +33930,14 @@ start active. For example:</p>
 <span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">01</span>
 <span class="w">  </span><span class="nt">s_plunger</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">02</span>
+
+<span class="nt">virtual_platform_start_active_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_drain</span>
+
 <span class="nt">coils</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">c_drain_eject</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">03</span>
 <span class="w">    </span><span class="nt">default_pulse_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span>
+
 <span class="nt">ball_devices</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">bd_drain</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">ball_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_drain</span>
@@ -33932,11 +33949,11 @@ start active. For example:</p>
 <span class="w">    </span><span class="nt">ball_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_plunger</span>
 <span class="w">    </span><span class="nt">mechanical_eject</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">    </span><span class="nt">eject_timeouts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5s</span>
+
 <span class="nt">playfields</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">playfield</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">default_source_device</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bd_plunger_lane</span>
 <span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span>
-<span class="nt">virtual_platform_start_active_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_drain</span>
 </code></pre></div>
 <h2 id="what-if-it-did-not-work">What if it did not work?</h2>
 <p>Have a look at our

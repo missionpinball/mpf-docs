@@ -7745,6 +7745,15 @@ icons & this code generated via https://realfavicongenerator.net
 </li>
       
         <li class="md-nav__item">
+  <a href="#6-add-the-default-playfield" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Add the default playfield
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#heres-the-complete-config" class="md-nav__link">
     <span class="md-ellipsis">
       Here's the complete config
@@ -33717,6 +33726,15 @@ icons & this code generated via https://realfavicongenerator.net
 </li>
       
         <li class="md-nav__item">
+  <a href="#6-add-the-default-playfield" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Add the default playfield
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#heres-the-complete-config" class="md-nav__link">
     <span class="md-ellipsis">
       Here's the complete config
@@ -33855,9 +33873,9 @@ for the drain and a second for the trough.</p>
 section add it now.)</p>
 <p>Then in your <code>ball_devices:</code> section, create an entry called
 <code>bd_drain:</code>, like this:</p>
-<pre><code>ball_devices:
-    bd_drain:
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nt">ball_devices</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">bd_drain</span><span class="p">:</span>
+</code></pre></div>
 <p>This means that you're creating a ball device called <em>bd_drain</em>. We use
 the preface <em>bd_</em> to indicate that this is a ball device which makes it
 easier when we're referencing them later. Then under your <code>bd_drain:</code>
@@ -33875,25 +33893,7 @@ ball device.</p>
     mean that a ball has drained from the playfield.</li>
 </ul>
 <p>Your drain device configuration should look now look like this:</p>
-<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
-<span class="c1">#!   s_drain:</span>
-<span class="c1">#!     number: 1</span>
-<span class="c1">#!   s_trough1:</span>
-<span class="c1">#!     number: 2</span>
-<span class="c1">#!   s_trough2:</span>
-<span class="c1">#!     number: 3</span>
-<span class="c1">#!   s_trough3:</span>
-<span class="c1">#!     number: 4</span>
-<span class="c1">#!   s_plunger:</span>
-<span class="c1">#!     number: 10</span>
-<span class="c1">#! coils:</span>
-<span class="c1">#!   c_drain_eject:</span>
-<span class="c1">#!     number: 3</span>
-<span class="c1">#!     default_pulse_ms: 20</span>
-<span class="c1">#!   c_trough_release:</span>
-<span class="c1">#!     number: 4</span>
-<span class="c1">#!     default_pulse_ms: 20</span>
-<span class="nt">ball_devices</span><span class="p">:</span>
+<div class="highlight"><pre><span></span><code><span class="nt">ball_devices</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">bd_drain</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">ball_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_drain</span>
 <span class="w">    </span><span class="nt">eject_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_drain_eject</span>
@@ -33931,25 +33931,7 @@ lane.</p>
     if the eject fails.</li>
 </ul>
 <p>Your trough device configuration should look now look like this:</p>
-<div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
-<span class="c1">#!   s_drain:</span>
-<span class="c1">#!     number: 1</span>
-<span class="c1">#!   s_trough1:</span>
-<span class="c1">#!     number: 2</span>
-<span class="c1">#!   s_trough2:</span>
-<span class="c1">#!     number: 3</span>
-<span class="c1">#!   s_trough3:</span>
-<span class="c1">#!     number: 4</span>
-<span class="c1">#!   s_plunger:</span>
-<span class="c1">#!     number: 10</span>
-<span class="c1">#! coils:</span>
-<span class="c1">#!   c_drain_eject:</span>
-<span class="c1">#!     number: 3</span>
-<span class="c1">#!     default_pulse_ms: 20</span>
-<span class="c1">#!   c_trough_release:</span>
-<span class="c1">#!     number: 4</span>
-<span class="c1">#!     default_pulse_ms: 20</span>
-<span class="nt">ball_devices</span><span class="p">:</span>
+<div class="highlight"><pre><span></span><code><span class="nt">ball_devices</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">bd_trough</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">ball_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_trough1, s_trough2, s_trough3</span>
 <span class="w">    </span><span class="nt">eject_coil</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c_trough_release</span>
@@ -33987,6 +33969,16 @@ start active. For example:</p>
 <span class="c1">#!     number: 4</span>
 <span class="nt">virtual_platform_start_active_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_trough1, s_trough2, s_trough3</span>
 </code></pre></div>
+<h2 id="6-add-the-default-playfield">6. Add the default playfield</h2>
+<p>The final preparation step you need to take is to add a default playfield.
+We can keep it simple in this case and just call it "playfield". We need to
+give the playfield a <code>default_source_device</code> of <code>bd_plunger_lane</code> and a tag of <code>default</code>,
+and that's it!</p>
+<div class="highlight"><pre><span></span><code><span class="nt">playfields</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">playfield</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">default_source_device</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bd_plunger_lane</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span>
+</code></pre></div>
 <h2 id="heres-the-complete-config">Here's the complete config</h2>
 <div class="highlight"><pre><span></span><code><span class="c1">#config_version=5</span>
 <span class="nt">switches</span><span class="p">:</span>
@@ -34000,6 +33992,9 @@ start active. For example:</p>
 <span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span>
 <span class="w">  </span><span class="nt">s_plunger</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+
+<span class="nt">virtual_platform_start_active_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_trough1, s_trough2, s_trough3</span>
+
 <span class="nt">coils</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">c_drain_eject</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
@@ -34007,6 +34002,7 @@ start active. For example:</p>
 <span class="w">  </span><span class="nt">c_trough_release</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span>
 <span class="w">    </span><span class="nt">default_pulse_ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span>
+
 <span class="nt">ball_devices</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">bd_drain</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">ball_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_drain</span>
@@ -34023,11 +34019,11 @@ start active. For example:</p>
 <span class="w">    </span><span class="nt">ball_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_plunger</span>
 <span class="w">    </span><span class="nt">mechanical_eject</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">    </span><span class="nt">eject_timeouts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5s</span>
+
 <span class="nt">playfields</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">playfield</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">default_source_device</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bd_plunger_lane</span>
 <span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span>
-<span class="nt">virtual_platform_start_active_switches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_trough1, s_trough2, s_trough3</span>
 </code></pre></div>
 <h2 id="what-if-it-doesnt-work">What if it doesn't work?</h2>
 <p>Have a look at our
