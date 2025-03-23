@@ -63,8 +63,10 @@ In MPF, anything that holds and releases a ball is a
 So in your `ball_devices:` section, create an entry called `bd_drain:`
 like this: (If you don't have that section add it now.)
 
+``` yaml
     ball_devices:
         bd_drain:
+```
 
 This means that you're creating a ball device called `bd_drain`. We use
 the preface `bd_` to indicate that this is a ball device which makes it
@@ -86,13 +88,6 @@ ball device.
 Your drain device configuration should look now look like this:
 
 ``` yaml
-#! switches:
-#!   s_drain:
-#!     number: 01
-#! coils:
-#!   c_drain_eject:
-#!     number: 03
-#!     default_pulse_ms: 20
 ball_devices:
   bd_drain:
     ball_switches: s_drain
@@ -171,20 +166,24 @@ virtual_platform_start_active_switches: s_drain
 switches:
   s_drain:
     number: 01
+
 coils:
   c_drain_eject:
     number: 03
     default_pulse_ms: 20
+
 ball_devices:
   bd_drain:
     ball_switches: s_drain
     eject_coil: c_drain_eject
     tags: drain, home, trough
     eject_timeouts: 3s
+
 playfields:
   playfield:
     default_source_device: bd_drain
     tags: default
+
 virtual_platform_start_active_switches: s_drain
 ```
 

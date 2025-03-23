@@ -1,6 +1,5 @@
 ---
-title: How to configure an older style trough with two coils and only
-  one ball switch
+title: How to configure an older style trough with two coils and only one ball switch
 ---
 
 Related Config File Sections:
@@ -118,8 +117,10 @@ section add it now.)
 Then in your `ball_devices:` section, create an entry called
 `bd_drain:`, like this:
 
+``` yaml
     ball_devices:
         bd_drain:
+```
 
 This means that you're creating a ball device called *bd_drain*. We use
 the preface *bd_* to indicate that this is a ball device which makes it
@@ -347,6 +348,9 @@ switches:
     number: 02
   s_plunger:
     number: 10
+
+virtual_platform_start_active_switches: s_trough_enter
+
 coils:
   c_drain_eject:
     number: 03
@@ -354,6 +358,7 @@ coils:
   c_trough_release:
     number: 04
     default_pulse_ms: 20
+
 ball_devices:
   bd_drain:
     ball_switches: s_drain
@@ -373,13 +378,14 @@ ball_devices:
     ball_switches: s_plunger
     mechanical_eject: true
     eject_timeouts: 5s
+
 playfields:
   playfield:
     default_source_device: bd_plunger
     tags: default
+
 machine:
   balls_installed: 4
-virtual_platform_start_active_switches: s_trough_enter
 ```
 
 ## What if it doesn't work?

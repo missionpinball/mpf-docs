@@ -7,10 +7,10 @@ title: Using the Stern Spike Trough
 
 Related Config File Sections:
 
-* [modern_opto](../../config/ball_devices.md)
-* [modern_opto](../../config/playfields.md)
-* [modern_opto](../../config/spi_bit_bang.md)
-* [modern_opto](../../config/digital_outputs.md)
+* [ball_devices:](../../config/ball_devices.md)
+* [playfields:](../../config/playfields.md)
+* [spi_bit_bang:](../../config/spi_bit_bang.md)
+* [digital_outputs:](../../config/digital_outputs.md)
 
 Unlike other troughs the Stern Spike trough contains an 74HCT165 chip
 and is interfaced via SPI. This is a problem if your platform is not

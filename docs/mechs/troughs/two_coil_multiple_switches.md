@@ -126,8 +126,10 @@ section add it now.)
 Then in your `ball_devices:` section, create an entry called
 `bd_drain:`, like this:
 
-    ball_devices:
-        bd_drain:
+``` yaml
+ball_devices:
+  bd_drain:
+```
 
 This means that you're creating a ball device called *bd_drain*. We use
 the preface *bd_* to indicate that this is a ball device which makes it
@@ -148,24 +150,6 @@ ball device.
 Your drain device configuration should look now look like this:
 
 ``` yaml
-#! switches:
-#!   s_drain:
-#!     number: 1
-#!   s_trough1:
-#!     number: 2
-#!   s_trough2:
-#!     number: 3
-#!   s_trough3:
-#!     number: 4
-#!   s_plunger:
-#!     number: 10
-#! coils:
-#!   c_drain_eject:
-#!     number: 3
-#!     default_pulse_ms: 20
-#!   c_trough_release:
-#!     number: 4
-#!     default_pulse_ms: 20
 ball_devices:
   bd_drain:
     ball_switches: s_drain
@@ -209,24 +193,6 @@ The configuration is pretty straightforward:
 Your trough device configuration should look now look like this:
 
 ``` yaml
-#! switches:
-#!   s_drain:
-#!     number: 1
-#!   s_trough1:
-#!     number: 2
-#!   s_trough2:
-#!     number: 3
-#!   s_trough3:
-#!     number: 4
-#!   s_plunger:
-#!     number: 10
-#! coils:
-#!   c_drain_eject:
-#!     number: 3
-#!     default_pulse_ms: 20
-#!   c_trough_release:
-#!     number: 4
-#!     default_pulse_ms: 20
 ball_devices:
   bd_trough:
     ball_switches: s_trough1, s_trough2, s_trough3
@@ -271,6 +237,21 @@ start active. For example:
 virtual_platform_start_active_switches: s_trough1, s_trough2, s_trough3
 ```
 
+## 6. Add the default playfield
+
+The final preparation step you need to take is to add a default playfield.
+We can keep it simple in this case and just call it "playfield". We need to
+give the playfield a `default_source_device` of `bd_plunger_lane` and a tag of `default`,
+and that's it!
+
+
+``` yaml
+playfields:
+  playfield:
+    default_source_device: bd_plunger_lane
+    tags: default
+```
+
 ## Here's the complete config
 
 ``` yaml
@@ -286,6 +267,9 @@ switches:
     number: 4
   s_plunger:
     number: 10
+
+virtual_platform_start_active_switches: s_trough1, s_trough2, s_trough3
+
 coils:
   c_drain_eject:
     number: 3
@@ -293,6 +277,7 @@ coils:
   c_trough_release:
     number: 4
     default_pulse_ms: 20
+
 ball_devices:
   bd_drain:
     ball_switches: s_drain
@@ -309,11 +294,11 @@ ball_devices:
     ball_switches: s_plunger
     mechanical_eject: true
     eject_timeouts: 5s
+
 playfields:
   playfield:
     default_source_device: bd_plunger_lane
     tags: default
-virtual_platform_start_active_switches: s_trough1, s_trough2, s_trough3
 ```
 
 ## What if it doesn't work?

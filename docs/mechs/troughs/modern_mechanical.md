@@ -114,27 +114,6 @@ Then in your `ball_devices:` section, create an entry called
 `bd_trough:`, like this:
 
 ``` yaml
-#! switches:
-#!   s_trough1:
-#!     number: 2
-#!   s_trough2:
-#!     number: 3
-#!   s_trough3:
-#!     number: 4
-#!   s_trough4:
-#!     number: 5
-#!   s_trough5:
-#!     number: 6
-#!   s_trough6:
-#!     number: 7
-#!   s_trough_jam:
-#!     number: 8
-#!   s_plunger:
-#!     number: 10
-#! coils:
-#!   c_trough_eject:
-#!     number: 4
-#!     default_pulse_ms: 20
 ball_devices:
   bd_trough:
 #!     ball_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6, s_trough_jam
@@ -144,16 +123,11 @@ ball_devices:
 #!     eject_coil_jam_pulse: 15ms
 #!     eject_targets: bd_plunger
 #!     eject_timeouts: 3s
-#!     # bd_plunger is a placeholder just so the trough's eject_targets are valid
+#!   # bd_plunger is a placeholder just so the trough's eject_targets are valid
 #!   bd_plunger:
 #!     ball_switches: s_plunger
 #!     mechanical_eject: true
 #!     eject_timeouts: 5s
-#! playfields:
-#!   playfield:
-#!     default_source_device: bd_plunger
-#!     tags: default
-#! virtual_platform_start_active_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6
 ```
 
 This means that you're creating a ball device called *bd_trough*. We
@@ -169,27 +143,6 @@ then add a comma-separated list of all the switches in your trough, like
 this:
 
 ``` yaml
-#! switches:
-#!   s_trough1:
-#!     number: 2
-#!   s_trough2:
-#!     number: 3
-#!   s_trough3:
-#!     number: 4
-#!   s_trough4:
-#!     number: 5
-#!   s_trough5:
-#!     number: 6
-#!   s_trough6:
-#!     number: 7
-#!   s_trough_jam:
-#!     number: 8
-#!   s_plunger:
-#!     number: 10
-#! coils:
-#!   c_trough_eject:
-#!     number: 4
-#!     default_pulse_ms: 20
 ball_devices:
   bd_trough:
     ball_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6, s_trough_jam
@@ -199,16 +152,11 @@ ball_devices:
 #!     eject_coil_jam_pulse: 15ms
 #!     eject_targets: bd_plunger
 #!     eject_timeouts: 3s
-#!     # bd_plunger is a placeholder just so the trough's eject_targets are valid
+#!   # bd_plunger is a placeholder just so the trough's eject_targets are valid
 #!   bd_plunger:
 #!     ball_switches: s_plunger
 #!     mechanical_eject: true
 #!     eject_timeouts: 5s
-#! playfields:
-#!   playfield:
-#!     default_source_device: bd_plunger
-#!     tags: default
-#! virtual_platform_start_active_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6
 ```
 
 So this is eight spaces, followed by the word "ball_switches", then a
@@ -237,27 +185,6 @@ This should be the name of the coil you added in Step 2,
 *c_trough_eject* in our case:
 
 ``` yaml
-#! switches:
-#!   s_trough1:
-#!     number: 2
-#!   s_trough2:
-#!     number: 3
-#!   s_trough3:
-#!     number: 4
-#!   s_trough4:
-#!     number: 5
-#!   s_trough5:
-#!     number: 6
-#!   s_trough6:
-#!     number: 7
-#!   s_trough_jam:
-#!     number: 8
-#!   s_plunger:
-#!     number: 10
-#! coils:
-#!   c_trough_eject:
-#!     number: 4
-#!     default_pulse_ms: 20
 ball_devices:
   bd_trough:
     ball_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6, s_trough_jam
@@ -267,16 +194,11 @@ ball_devices:
 #!     eject_coil_jam_pulse: 15ms
 #!     eject_targets: bd_plunger
 #!     eject_timeouts: 3s
-#!     # bd_plunger is a placeholder just so the trough's eject_targets are valid
+#!   # bd_plunger is a placeholder just so the trough's eject_targets are valid
 #!   bd_plunger:
 #!     ball_switches: s_plunger
 #!     mechanical_eject: true
 #!     eject_timeouts: 5s
-#! playfields:
-#!   playfield:
-#!     default_source_device: bd_plunger
-#!     tags: default
-#! virtual_platform_start_active_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6
 ```
 
 Note that MPF will simply pulse the eject coil at its default pulse time
@@ -320,27 +242,6 @@ trough. You can specify the tags in any order, and your `tags:` entry
 should look something like this:
 
 ``` yaml
-#! switches:
-#!   s_trough1:
-#!     number: 2
-#!   s_trough2:
-#!     number: 3
-#!   s_trough3:
-#!     number: 4
-#!   s_trough4:
-#!     number: 5
-#!   s_trough5:
-#!     number: 6
-#!   s_trough6:
-#!     number: 7
-#!   s_trough_jam:
-#!     number: 8
-#!   s_plunger:
-#!     number: 10
-#! coils:
-#!   c_trough_eject:
-#!     number: 4
-#!     default_pulse_ms: 20
 ball_devices:
   bd_trough:
     ball_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6, s_trough_jam
@@ -350,16 +251,11 @@ ball_devices:
 #!     eject_coil_jam_pulse: 15ms
 #!     eject_targets: bd_plunger
 #!     eject_timeouts: 3s
-#!     # bd_plunger is a placeholder just so the trough's eject_targets are valid
+#!   # bd_plunger is a placeholder just so the trough's eject_targets are valid
 #!   bd_plunger:
 #!     ball_switches: s_plunger
 #!     mechanical_eject: true
 #!     eject_timeouts: 5s
-#! playfields:
-#!   playfield:
-#!     default_source_device: bd_plunger
-#!     tags: default
-#! virtual_platform_start_active_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6
 ```
 
 ### 3d. Add & configure your jam switch
@@ -368,27 +264,6 @@ If you have a jam switch, add a setting called `jam_switch:` and add it
 there, like this:
 
 ``` yaml
-#! switches:
-#!   s_trough1:
-#!     number: 2
-#!   s_trough2:
-#!     number: 3
-#!   s_trough3:
-#!     number: 4
-#!   s_trough4:
-#!     number: 5
-#!   s_trough5:
-#!     number: 6
-#!   s_trough6:
-#!     number: 7
-#!   s_trough_jam:
-#!     number: 8
-#!   s_plunger:
-#!     number: 10
-#! coils:
-#!   c_trough_eject:
-#!     number: 4
-#!     default_pulse_ms: 20
 ball_devices:
   bd_trough:
     ball_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6, s_trough_jam
@@ -398,16 +273,11 @@ ball_devices:
 #!     eject_coil_jam_pulse: 15ms
 #!     eject_targets: bd_plunger
 #!     eject_timeouts: 3s
-#!     # bd_plunger is a placeholder just so the trough's eject_targets are valid
+#!   # bd_plunger is a placeholder just so the trough's eject_targets are valid
 #!   bd_plunger:
 #!     ball_switches: s_plunger
 #!     mechanical_eject: true
 #!     eject_timeouts: 5s
-#! playfields:
-#!   playfield:
-#!     default_source_device: bd_plunger
-#!     tags: default
-#! virtual_platform_start_active_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6
 ```
 
 You can also configure an eject pulse time (in ms) that will be used
@@ -420,27 +290,6 @@ kick out two balls (the jammed ball and the one below it).
 So for our example, we'll set the jam pulse time to 15ms.
 
 ``` yaml
-#! switches:
-#!   s_trough1:
-#!     number: 2
-#!   s_trough2:
-#!     number: 3
-#!   s_trough3:
-#!     number: 4
-#!   s_trough4:
-#!     number: 5
-#!   s_trough5:
-#!     number: 6
-#!   s_trough6:
-#!     number: 7
-#!   s_trough_jam:
-#!     number: 8
-#!   s_plunger:
-#!     number: 10
-#! coils:
-#!   c_trough_eject:
-#!     number: 4
-#!     default_pulse_ms: 20
 ball_devices:
   bd_trough:
     ball_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6, s_trough_jam
@@ -450,16 +299,11 @@ ball_devices:
     eject_coil_jam_pulse: 15ms
 #!     eject_targets: bd_plunger
 #!     eject_timeouts: 3s
-#!     # bd_plunger is a placeholder just so the trough's eject_targets are valid
+#!   # bd_plunger is a placeholder just so the trough's eject_targets are valid
 #!   bd_plunger:
 #!     ball_switches: s_plunger
 #!     mechanical_eject: true
 #!     eject_timeouts: 5s
-#! playfields:
-#!   playfield:
-#!     default_source_device: bd_plunger
-#!     tags: default
-#! virtual_platform_start_active_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6
 ```
 
 (Note that this setting is a time string, so you can include the "ms"
@@ -528,27 +372,6 @@ full details since there are lots of different types of plungers.
 You add an eject target via the `eject_targets:` section, like this:
 
 ``` yaml
-#! switches:
-#!   s_trough1:
-#!     number: 2
-#!   s_trough2:
-#!     number: 3
-#!   s_trough3:
-#!     number: 4
-#!   s_trough4:
-#!     number: 5
-#!   s_trough5:
-#!     number: 6
-#!   s_trough6:
-#!     number: 7
-#!   s_trough_jam:
-#!     number: 8
-#!   s_plunger:
-#!     number: 10
-#! coils:
-#!   c_trough_eject:
-#!     number: 4
-#!     default_pulse_ms: 20
 ball_devices:
   bd_trough:
     ball_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6, s_trough_jam
@@ -558,15 +381,12 @@ ball_devices:
     eject_coil_jam_pulse: 15ms
     eject_targets: bd_plunger
 #!     eject_timeouts: 3s
+
+  # bd_plunger is a placeholder just so the trough's eject_targets are valid
   bd_plunger:
     ball_switches: s_plunger
     mechanical_eject: true
 #!     eject_timeouts: 5s
-#! playfields:
-#!   playfield:
-#!     default_source_device: bd_plunger
-#!     tags: default
-#! virtual_platform_start_active_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6
 ```
 
 Of course you should enter the name of your actual plunger lane / ball
@@ -595,27 +415,6 @@ to your trough and plunger (with some safty margin). Usually this is
 about `2s - 4s` for a trough and `3s - 5s` for a plunger.
 
 ``` yaml
-#! switches:
-#!   s_trough1:
-#!     number: 2
-#!   s_trough2:
-#!     number: 3
-#!   s_trough3:
-#!     number: 4
-#!   s_trough4:
-#!     number: 5
-#!   s_trough5:
-#!     number: 6
-#!   s_trough6:
-#!     number: 7
-#!   s_trough_jam:
-#!     number: 8
-#!   s_plunger:
-#!     number: 10
-#! coils:
-#!   c_trough_eject:
-#!     number: 4
-#!     default_pulse_ms: 20
 ball_devices:
   bd_trough:
     ball_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6, s_trough_jam
@@ -629,11 +428,21 @@ ball_devices:
     ball_switches: s_plunger
     mechanical_eject: true
     eject_timeouts: 5s
-#! playfields:
-#!   playfield:
-#!     default_source_device: bd_plunger
-#!     tags: default
-#! virtual_platform_start_active_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6
+```
+
+## 7. Add the default playfield
+
+The final preparation step you need to take is to add a default playfield.
+We can keep it simple in this case and just call it "playfield". We need to
+give the playfield a `default_source_device` of `bd_plunger` and a tag of `default`,
+and that's it!
+
+
+``` yaml
+playfields:
+  playfield:
+    default_source_device: bd_plunger
+    tags: default
 ```
 
 ## Here's the complete config
@@ -656,10 +465,14 @@ switches:
     number: 8
   s_plunger:
     number: 10
+
+virtual_platform_start_active_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6
+
 coils:
   c_trough_eject:
     number: 4
     default_pulse_ms: 20
+
 ball_devices:
   bd_trough:
     ball_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6, s_trough_jam
@@ -673,11 +486,11 @@ ball_devices:
     ball_switches: s_plunger
     mechanical_eject: true
     eject_timeouts: 5s
+
 playfields:
   playfield:
     default_source_device: bd_plunger
     tags: default
-virtual_platform_start_active_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6
 ```
 
 ## What if it doesn't work?
