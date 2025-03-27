@@ -96,7 +96,7 @@ A second timer doesn't have any count values associated with it, rather
 it just "ticks" once a second. That tick event is used to rotate the
 lit skillshot.
 
-See [/game_logic/timers/index](timer_control_events.md) for more
+See [timer_control_events:](timer_control_events.md) for more
 details about all the actions available in a timer.
 
 ## Optional settings
@@ -118,7 +118,7 @@ List of one (or more) values, each is a type:
 
 Timer control events is where you specify what happens to this timer
 when other events are posted. See
-[/game_logic/timers/index](timer_control_events.md) for more details.
+[timer_control_events:](timer_control_events.md) for more details.
 
 ### direction:
 
@@ -172,7 +172,7 @@ Single value, type: `integer` or `template`
 The initial value of the timer. When a timer is restarted, this is the
 value it will always start from. If you ever need to change the value,
 you can use a jump control action to set it to whatever value you want.
-See [/game_logic/timers/index](timer_control_events.md) for more
+See [timer_control_events:](timer_control_events.md) for more
 details.
 
 Note that you can use a
