@@ -37,7 +37,7 @@ tell MPF that there's a ball in the plunger waiting to be plunged.
 
 However, this How To guide is for plunger lanes with no ball switch. (If
 your plunger lane has a ball switch, then follow the
-[/game_logic/ball_saves/index](mechanical_with_switch.md) guide instead.)
+[Mechanical (spring) plungers](mechanical_with_switch.md) guide instead.)
 
 In machines where the plunger lane does not have a ball switch, that
 means that MPF has no idea whether a ball is in the plunger lane.

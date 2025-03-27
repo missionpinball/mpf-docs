@@ -101,7 +101,7 @@ help you keep everything more organized.
 The [slide_player:](../../config/slide_player.md) section of a
 machine-wide or mode config is where you tell MPF to show (or "play")
 a specific slide when some event occurs. Full documentation for the
-slide_player is in the [/config/slide_player](showing_slides.md)
+slide_player is in the [How to Show a Slide on a Display](showing_slides.md)
 section of the documentation.
 
 You can define slides in the slide_player like this:

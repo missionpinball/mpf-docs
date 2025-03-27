@@ -23,7 +23,7 @@ automatically re-launched back into play.
 MPF also supports stacking of multiple multiballs at the same time.
 
 Balls can be locked for multiball with the related
-[/events/multiball_multiball_ended](multiball_locks.md) config section.
+[Multiball Locks](multiball_locks.md) config section.
 
 Video about ball locks and multiballs:
 

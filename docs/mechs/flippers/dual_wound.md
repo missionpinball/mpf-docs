@@ -35,7 +35,7 @@ take a look at the coil that your flipper uses. If it has three wires
 this guide is for you.
 
 If it has two wires (or two tabs), then read the
-[/mechs/coils/dual_vs_single_wound](single_wound.md) guide.
+[How to configure single-wound flippers](single_wound.md) guide.
 
 Read more about "dual wound" versus "single wound" coils in the
 [Dual-Wound versus Single-Wound coils](../coils/dual_vs_single_wound.md) guide.

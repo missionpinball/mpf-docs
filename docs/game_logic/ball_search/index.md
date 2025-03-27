@@ -17,7 +17,7 @@ Related Config File Sections:
     Ball search is off by default in MPF because it might hurt users not
     expecting it. In a prototype game it might trigger quite frequently and
     coils can seriously injure humans. To turn it on follow
-    [/events/flipper_cradle_release](configuring_ball_search.md).
+    [How to configure Ball Search](configuring_ball_search.md).
 
 MPF contains ball search functionality which is used to try to dislodge
 a stuck ball if MPF thinks there's a ball loose on the playfield but it

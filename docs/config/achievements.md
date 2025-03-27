@@ -85,7 +85,7 @@ achievements:
 More examples:
 
 * [Recipe: The Addams Family Mansion Awards](../cookbook/TAF_mansion_awards.md)
-* [/game_logic/achievements/index](../examples/index.md)
+* [Example MPF projects you can learn from](../examples/index.md)
 
 ## Shows
 
@@ -104,7 +104,7 @@ You can configure achievements to post certain events when they change
 state.
 
 Note that all achievements will by default post events in the form
-[achievement_(name)_[state_(state)](../events/achievement_achievement_state_state.md) when they change state. The events listed below as
+[achievement_(name)\_[state_(state)](../events/achievement_achievement_state_state.md) when they change state. The events listed below as
 `events_when_xxx`, if defined, will replace the default event.
 
 ## Control Events

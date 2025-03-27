@@ -51,7 +51,7 @@ Single value, type: [show_config:](show_config.md).
 
 A show which is played when the state machine is in this state. This is
 kind of an entry action as you could use `events_when_started` and a
-[/game_logic/logic_blocks/state_machines](show_player.md) to achieve the same. It is
+[show_player:](show_player.md) to achieve the same. It is
 meant as a helper because it is common to play one show per step.
 
 ## Related How To guides

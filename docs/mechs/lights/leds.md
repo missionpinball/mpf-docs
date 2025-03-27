@@ -45,8 +45,8 @@ Overview video about serial LEDs:
 
 ### Hardware
 
-There are two common types of serial LEDs: WS281x and LPD880x. (See
-[/tutorial/17_add_lights_leds](ws2812.md) for more details about
+There are two common types of serial LEDs: WS281x and LPD880x. (See:
+[WS2811 and WS2812 LEDs in Pinball](ws2812.md) for more details about
 WS2811/WS2812 in pinball.) Those LEDs are chained which means that the
 controller only connects to the first LED. The first LED will connect to
 the second. The second to the third and so on.

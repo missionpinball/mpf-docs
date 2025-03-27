@@ -106,15 +106,15 @@ For
 
 ## Related How To guides
 
-[/events/magnet_magnet_flinged_ball](stern_magnet_pcb.md)
+[How to use the Stern Magnet Processor Board](stern_magnet_pcb.md)
 
 ## Related Events
 
-* [magnet_(name)_grabbing_ball](../../events/magnet_magnet_grabbing_ball.md)
-* [magnet_(name)_grabbed_ball](../../events/magnet_magnet_grabbed_ball.md)
-* [magnet_(name)_releasing_ball](../../events/magnet_magnet_releasing_ball.md)
-* [magnet_(name)_released_ball](../../events/magnet_magnet_released_ball.md)
-* [magnet_(name)_flinging_ball](../../events/magnet_magnet_flinging_ball.md)
-* [magnet_(name)_flinged_ball](../../events/magnet_magnet_flinged_ball.md)
+* [magnet_(name)\_grabbing_ball](../../events/magnet_magnet_grabbing_ball.md)
+* [magnet_(name)\_grabbed_ball](../../events/magnet_magnet_grabbed_ball.md)
+* [magnet_(name)\_releasing_ball](../../events/magnet_magnet_releasing_ball.md)
+* [magnet_(name)\_released_ball](../../events/magnet_magnet_released_ball.md)
+* [magnet_(name)\_flinging_ball](../../events/magnet_magnet_flinging_ball.md)
+* [magnet_(name)\_flinged_ball](../../events/magnet_magnet_flinged_ball.md)
 
 * [How to use the Stern Magnet Processor Board](stern_magnet_pcb.md)

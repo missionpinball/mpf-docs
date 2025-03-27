@@ -108,5 +108,5 @@ devices such as [flippers:](../../config/flippers.md).
 
 ## Related How To guides
 
-* [/mechs/flippers/dual_wound](dual_vs_single_wound.md)
+* [Dual-Wound versus Single-Wound coils](dual_vs_single_wound.md)
 * [How to configure dual-wound flippers](../flippers/dual_wound.md)

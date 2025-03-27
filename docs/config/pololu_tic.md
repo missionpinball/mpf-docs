@@ -15,8 +15,7 @@ title: "pololu_tic:"
 The `pololu_tic:` section of your config is where you configure your
 [Pololu Tic Stepper Controller](../hardware/pololu_tic.md).
 
-See [/hardware/pololu_tic/index](tic_stepper_settings.md) for
-`platform_settings` in your steppers.
+See [tic_stepper_settings:](tic_stepper_settings.md) for `platform_settings` in your steppers.
 
 ## Optional settings
 

@@ -224,7 +224,7 @@ attempts.
 Unknown type. See description below.
 
 MPF might delay the eject by `eject_coil_max_wait_ms` to ensure
-consistent pulses. See [/mechs/ball_devices/index](psus.md) for details.
+consistent pulses. See [psus:](psus.md) for details.
 
 ### eject_coil_reorder_pulse:
 

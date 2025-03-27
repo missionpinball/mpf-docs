@@ -44,7 +44,7 @@ have to use channels.
 OPP numbers use the format: `serial_chain`-`card_num`-`index`
 
 `chain_serial` is only relevant if you got multiple chains connected via
-USB. See [/mechs/lights/ws2812](connecting.md) for details about
+USB. See [Connecting OPP to your computer](connecting.md) for details about
 chains. If you only got one chain you can omit this part and your format
 becomes `card_num`-`index`.
 

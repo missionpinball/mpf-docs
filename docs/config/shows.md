@@ -13,7 +13,7 @@ title: "shows:"
 |[mode](instructions/mode_config.md) config files|**YES** :white_check_mark:|
 
 The `shows:` section of your config is where you define shows in your
-config. See [/tutorial/16_attract_mode_show](../shows/config_shows.md) for
+config. See [Creating shows in config files](../shows/config_shows.md) for
 details. Furthermore, you can also
 [define shows in separate files](../shows/file_shows.md).
 

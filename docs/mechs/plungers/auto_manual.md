@@ -23,9 +23,9 @@ Here's an example of this:
 ![image](../images/auto_launcher_bottom.jpg)
 
 If you have a purely mechanical plunger with no autolaunch option,
-follow the [/mechs/playfields/ball_tracking](mechanical_with_switch.md) guide
+follow the [Mechanical (spring) plungers](mechanical_with_switch.md) guide
 instead. If you have a standard coil-fired plunger or launch device with
-no mechanical spring plunger, follow the [/mechs/playfields/ball_tracking](coil_fired.md) guide instead.
+no mechanical spring plunger, follow the [Coil-fired plungers / ball launchers](coil_fired.md) guide instead.
 
 !!! note
 

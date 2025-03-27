@@ -44,7 +44,7 @@ queue_relay_player:
 
 ## Ending the Game by Long-Pressing Start
 
-See [/game_logic/match_mode/index](../cookbook/long_presssing_start_to_end_game.md).
+See [Ending the Current Game by Long-pressing Start](../cookbook/long_presssing_start_to_end_game.md).
 
 ## High Score Mode
 

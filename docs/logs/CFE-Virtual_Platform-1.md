@@ -4,7 +4,7 @@ title: "CFE-Virtual_Platform-1: Switch used in virtual_platform_start_active_swi
 
 # CFE-Virtual_Platform-1: Switch used in virtual_platform_start_active_switches was not found in switches section
 
-See [/troubleshooting/index](CFE-Smart_Virtual_Platform-1.md) which
+See [CFE-Smart_Virtual_Platform-1](CFE-Smart_Virtual_Platform-1.md) which
 is exactly the same error.
 
 ## Need more help troubleshooting?

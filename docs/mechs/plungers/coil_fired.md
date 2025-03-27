@@ -26,7 +26,7 @@ attached to the arm to launch the ball into play:
 Note that if you have a coil-fired ball launcher that's combined with a
 spring plunger (giving the option for manual spring launches or
 machine-controlled auto launches, stop here and follow the
-[/mechs/playfields/ball_tracking](auto_manual.md) guide instead.
+[Combo (mechanical + coil-fired) plungers](auto_manual.md) guide instead.
 
 ## 1. Add the switches
 
