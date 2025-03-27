@@ -19,7 +19,7 @@ title: "segment_display_player:"
 
 The `segment_display_player:` section of your config is a
 [Config Players](../config_players/index.md) which controls
-[/hardware/segment_display_platforms](segment_displays.md). See
+[segment_displays:](segment_displays.md). See
 [Alpha-Numeric / Segment Displays](../mc/displays/alpha_numeric.md) for
 details.
 

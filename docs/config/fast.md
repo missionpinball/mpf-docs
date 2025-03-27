@@ -118,8 +118,7 @@ Log level for the console log for this platform.
 
 Single value, type: `boolean` (`true`/`false`). Default: `false`
 
-See the
-[/hardware/fast/index](documentation on the debug setting](config/instructions/debug) for details.
+See the [documentation on the debug setting](instructions/debug.md) for details.
 
 ### dmd_buffer:
 

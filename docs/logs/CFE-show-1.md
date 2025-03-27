@@ -49,7 +49,7 @@ shows:
         led1: off
 ```
 
-See [/shows/index](../shows/config_shows.md) for details.
+See [Creating shows in config files](../shows/config_shows.md) for details.
 
 ## Common Pitfalls
 

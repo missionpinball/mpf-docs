@@ -25,7 +25,7 @@ side view)
 ![image](../images/classic_single_ball.png)
 
 We assume that your machine has a shooter lane switch. If that is not
-the case see [/mechs/plungers/index](classic_single_ball_no_shooter_lane.md).
+the case see [Classic Single Ball - No shooter lane](classic_single_ball_no_shooter_lane.md).
 
 ## 1. Add the drain and plunger switch
 

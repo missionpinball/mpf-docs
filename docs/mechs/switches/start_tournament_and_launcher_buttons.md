@@ -53,5 +53,5 @@ You might want to integrate the button into your attract light show.
 Related How To guides:
 
 * [Tutorial step 9. Add the start button](../../tutorial/9_start_button.md)
-* [/mechs/lights/matrix_lights](mechanical_switches.md)
+* [Mechanical Switches](mechanical_switches.md)
 * [Matrix Lights (Bulbs)](../lights/matrix_lights.md)

@@ -1,6 +1,5 @@
 ---
-title: How to configure a classic single-ball trough without shooter
-  lane
+title: How to configure a classic single-ball trough without shooter lane
 ---
 
 Related Config File Sections:

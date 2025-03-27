@@ -15,7 +15,7 @@ title: "rgb_dmds:"
 The `rgb_dmds:` section of your machine config is where you configure
 the settings for physical RGB DMDs (dot matrix displays). You only need
 this section if you have a RGB DMD connected via USB. If you have a mono
-DMD, configure that in the [/displays/rgb_dmd](dmds.md) section.
+DMD, configure that in the [dmds:](dmds.md) section.
 
 If you want to show a virtual RGB DMD in an on-screen window, you
 configure that as a display widget with a dot filter. You don't need to
@@ -82,9 +82,7 @@ get behind.
 Single value, type: `number` (will be converted to floating point).
 Default: `2.2`
 
-Sets the gamma of the DMD. See
-[/displays/rgb_dmd](instructions/gamma_correction.md) for
-details.
+Sets the gamma of the DMD. See [Gamma correction in MPF](instructions/gamma_correction.md) for details.
 
 Note that the default setting of `2.2` will probably be ok, though if
 your RGB DMD does its own internal gamma correction, you'll want to set

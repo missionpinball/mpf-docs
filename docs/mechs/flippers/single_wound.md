@@ -14,7 +14,7 @@ wires (or two tabs to connect two wires), then it's a single-wound coil
 and this guide is for you.
 
 If it has three wires (or three tabs), then read the
-[/hardware/numbers](dual_wound.md) guide.
+[How to configure dual-wound flippers](dual_wound.md) guide.
 
 Read more about "dual wound" versus "single wound" coils in the
 [Dual-Wound versus Single-Wound coils](../coils/dual_vs_single_wound.md) guide.

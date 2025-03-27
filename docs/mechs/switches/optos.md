@@ -86,7 +86,7 @@ Common parts:
 
 Have a look at our [PCB section of
 hardware.missionpinball.org](https://hardware.missionpinball.org/pcbs.html)
-for DIY designs. Have a look at [/config/switches](breakout_boards.md) for details about breakout boards.
+for DIY designs. Have a look at [Breakout Boards](breakout_boards.md) for details about breakout boards.
 
 ### Current Limiting Resistor
 
@@ -109,7 +109,7 @@ Common parts:
 
 Have a look at our [PCB section of
 hardware.missionpinball.org](https://hardware.missionpinball.org/pcbs.html)
-for DIY designs. Have a look at [/config/switches](breakout_boards.md) for details about breakout boards.
+for DIY designs. Have a look at [Breakout Boards](breakout_boards.md) for details about breakout boards.
 
 ## Common Parts in Pinball Machines
 

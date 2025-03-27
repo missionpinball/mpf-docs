@@ -14,9 +14,9 @@ title: "custom_code:"
 
 The `custom_code:` section of your config is a list where you register
 your custom code classes. You can find an example here:
-[/examples/custom_code/index](../examples/index.md).
+[How to add machine-wide custom code](../code/introduction/machine_code.md).
 
 ## Related How To guides
 
-* [MPF developer
-    documentation](http://developer.missionpinball.org/en/dev/code/machine_code.html).
+* [Adding custom code to your game](../code/index.md).
+* [MPF developer documentation](http://developer.missionpinball.org/en/dev/code/machine_code.html).

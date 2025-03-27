@@ -204,7 +204,7 @@ Single value, type:
 Defaults to empty.
 
 Overwrites settings on the hold_coil. See
-[/mechs/flippers/index](coil_overwrites.md) for details.
+[coil_overwrites:](coil_overwrites.md) for details.
 
 ### include_in_ball_search:
 
@@ -231,7 +231,7 @@ Single value, type:
 Defaults to empty.
 
 Overwrites settings on the main_coil. See
-[/mechs/flippers/index](coil_overwrites.md) for details.
+[coil_overwrites:](coil_overwrites.md) for details.
 
 ### playfield:
 
@@ -304,7 +304,7 @@ One or more sub-entries. Each in the format of `string` : `string`
 
 One or more sub-entries, each in the format of `string` : `string`
 Overwrites settings on the activation_switch. See
-[/mechs/flippers/index](switch_overwrites.md) for details.
+[switch_overwrites:](switch_overwrites.md) for details.
 
 ### use_eos:
 

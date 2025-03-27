@@ -16,7 +16,7 @@ The `dmds:` section of your config is where you configure the settings
 for physical DMDs (dot matrix displays). You only need this section if
 you have a physical monochrome DMD connected to a 14-pin header on a
 hardware controller. If you have an RGB DMD, configure that in the
-[/displays/dmd](rgb_dmds.md) section.
+[rgb_dmds:](rgb_dmds.md) section.
 
 If you want to show a virtual DMD in an on-screen window, you configure
 that as a display widget with a dot filter. That does not involve this
@@ -79,8 +79,7 @@ Single value, type: `number` (will be converted to floating point).
 Default: `1.0`
 
 Sets the gamma of the DMD. See
-[/displays/dmd](instructions/gamma_correction.md) for
-details.
+[Gamma correction in MPF](instructions/gamma_correction.md) for details.
 
 Note that the default setting of `1.0` means that no gamma correction is
 used. Some physical DMDs do their own internal gamma correction, so this

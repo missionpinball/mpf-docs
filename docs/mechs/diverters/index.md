@@ -193,8 +193,8 @@ For
 
 ## Related How To guides
 
-* [/events/diverter_diverter_deactivating](dual_coil_diverter.md)
-* [/events/diverter_diverter_deactivating](up_down_ramps.md)
+* [Dual Coil Diverter](dual_coil_diverter.md)
+* [Up-Down Ramps](up_down_ramps.md)
 
 ## Related Events
 

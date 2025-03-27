@@ -19,10 +19,10 @@ which is activated by a ball waiting to be plunged, like this:
 ![image](../images/plunger_with_switch.jpg)
 
 If you have a mechanical spring plunger but you do NOT have a switch
-there, then follow the [/mechs/playfields/ball_tracking](mechanical_no_switch.md) guide instead.
+there, then follow the [Plunger lanes with no ball switch](mechanical_no_switch.md) guide instead.
 
 If you have a mechanical spring plunger that also has an "auto launch"
-coil fired option, then follow the [/mechs/playfields/ball_tracking](auto_manual.md) guide instead.
+coil fired option, then follow the [Combo (mechanical + coil-fired) plungers](auto_manual.md) guide instead.
 
 ## 1. Add the switch
 

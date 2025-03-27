@@ -83,7 +83,7 @@ other positions are typically covered by normal switches. Transmitter
 contains current limiting circuit and you can connect it directly to 5V.
 The receiver needs to be powered and also inverts the optos. There is
 typically no need to set `NC` on using those boards. You can follow the
-[/mechs/plungers/index](modern_mechanical.md) guide to configure
+[Modern Mechanical](modern_mechanical.md) guide to configure
 your trough.
 
 ### Spike Trough Opto Boards:

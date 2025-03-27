@@ -15,7 +15,7 @@ aren't covered by the built-in mode.
 
 Related How To guides:
 
-* [/events/bonus_subtotal](configuring_bonus.md)
+* [How to configure End of Ball Bonus](configuring_bonus.md)
 * [How to design a game in MPF using Modes](../../game_design/index.md)
 
 ## Overview of Bonus Mode

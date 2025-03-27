@@ -122,8 +122,7 @@ Single value, type: `time string (ms)`
 ([Instructions for entering time strings](instructions/time_strings.md)). Default: `100ms`
 
 Max time allowed to delay the pulse of the reset coil. This is used to
-prevent excess power usage. See [/mechs/targets/drop_targets/drop_target_bank](psus.md) for
-details.
+prevent excess power usage. See [psus:](psus.md) for details.
 
 ### reset_coils:
 
