@@ -156,8 +156,8 @@ devices doesn't match how many balls you actually have, that could be:
     your log should show that the switch is active (*State:1*), like
     this:
 
-```
-    2014-10-27 20:05:29,891 : SwitchController : <<<<< switch: trough1, State:1 >>>>>
+``` console
+2014-10-27 20:05:29,891 : SwitchController : <<<<< switch: trough1, State:1 >>>>>
 ```
 
 If you see `State:1` immediately followed by another entry with `State:0`,

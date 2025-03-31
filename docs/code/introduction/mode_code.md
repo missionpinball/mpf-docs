@@ -17,7 +17,7 @@ First, go into the mode folder where you want to create your custom code, and ad
 
 For example, if you wanted to create custom code for your base mode, it might look like this:
 
-```
+``` diagram
 <mpf-game-folder>
 ├── config
 └── modes
@@ -50,7 +50,7 @@ Once you create your custom mode code, you need to tell MPF that this mode uses 
 
 To do this, add a `code:` entry into the mode config file for the mode where you’re adding custom code. So in this case, that would be in the `/modes/base/config/base.yaml` file, like this:
 
-```
+``` yaml
 mode:
   start_events: ball_starting
   priority: 100
@@ -69,7 +69,7 @@ You can look at the Mode base class (the link from GitHub from earlier) to see w
 
 * **mode_init:** Called once when MPF is starting up
 
-* **mode_start:** Called every time the mode starts, just after the mode_<name>_started event is posted.
+* **mode_start:** Called every time the mode starts, just after the mode_(name)\_started event is posted.
 
 * **add_mode_event_handler:** This is the same as the main add_event_handler() method from the Event Manager, except since it’s mode-specific it will also automatically remove any event handlers that you registered when the mode stops. (If you want to register event handlers that are always watching for events even when the mode is not running, you can use the regular `self.machine.mode.add_handler()` method.
 

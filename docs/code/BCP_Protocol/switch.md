@@ -1,13 +1,13 @@
 # switch (BCP command)
 Indicates that the other side should process the changed state of a switch. When sent from the media controller to the pin controller, this is typically used to implement a virtual keyboard interface via the media controller (where the player can activate pinball machine switches via keyboard keys for testing). For example, for the media controller to tell the pin controller that the player just pushed the start button, the command would be:
 
-```
+``` console
 switch?name=start&state=1
 ```
 
 followed very quickly by
 
-```
+``` console
 switch?name=start&state=0
 ```
 
@@ -17,7 +17,8 @@ When sent from the pin controller to the media controller, this is used to send 
 Pin controller or media controller
 
 ## Parameters
-## name
+
+### name
 Type: `string`
 
 This is the name of the switch.

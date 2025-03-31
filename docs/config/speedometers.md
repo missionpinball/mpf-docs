@@ -9,7 +9,7 @@ title: "speedometers:"
 
 New in MPF 0.56.1.
 
-```
+``` yaml
 speedometers:
     __valid_in__: machine, mode
     __type__: device

@@ -85,10 +85,12 @@ To fix this:
     * ``` console
         usermod -aG sudo [your-user]
         ```
+
 4.  Exit the root user shell
     * ``` console
         exit
         ```
+
 5.  Verify your username was granted sudo access
     * ``` console
         sudo echo
@@ -164,6 +166,7 @@ virtual machine.
                ether 0a:00:27:00:00:00
                inet 192.168.56.1 netmask 0xffffff00 broadcast 192.168.56.255
         ```
+
 4.  In the *guest* OS (Debian), verify the VirtualBox virtual network
     adapter is connected
     * The following is for my installation. Your command and output may look different
@@ -227,6 +230,7 @@ pip3 install pip setuptools --upgrade
         cd mpf-debian-installer/
         chmod +x install && sudo ./install
         ```
+
 2.  Setup the mpf directory and clone examples
     * ``` console
         cd ~
@@ -234,6 +238,7 @@ pip3 install pip setuptools --upgrade
         cd mpf
         git clone https://github.com/missionpinball/mpf-examples
         ```
+
 3.  Run the Demo Man example. In the VBox Desktop, open terminal and execute:
     * ``` console
         cd ~/mpf/mpf-examples/demo_man
@@ -266,10 +271,12 @@ The full installation guide for setting up MPF-Monitor [can be found here](../..
     * ``` console
         sudo apt-get install python3-pyqt6
         ```
+
 2.  Install mpf-monitor:
     * ``` console
         pip install mpf-monitor
         ```
+
 3.  Start mpf (with mc) and mpf monitor (in separate terminal tabs):
     * ``` console
         mpf both -X
@@ -278,6 +285,7 @@ The full installation guide for setting up MPF-Monitor [can be found here](../..
     * ``` console
         mpf monitor
         ```
+
 4.  Adjust the size of switches and lights by adding the following to
     the first line of your `monitor.yaml` file:
     * ``` yaml

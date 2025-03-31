@@ -78,13 +78,13 @@ empty.
 If you want to use a sound that has spaces in its name, the name of the
 sound must be in quotes: :
 
-```
+``` yaml
 playlists:
     mode_music:
         sounds:
             * song_01
             * song_02
-            * "song 03" \# example of a sound with a space in its name using quotes
+            * "song 03" # example of a sound with a space in its name using quotes
             * song_04
 ```
 

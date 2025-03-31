@@ -32,8 +32,12 @@ Parameters:
 * **end_color** – The end color
 * **fraction** – The fraction between 0 and 1 that is used to set the blend point between the two colors.
 
-Returns: An RGBColor object that is a blend between the start and end
+Returns: An RGBColor object that is a blend between the start and end.
 
+
+`red`
+
+Return the red component of the RGB color representation.
 
 `blue`
 
@@ -54,7 +58,7 @@ Convert a HEX color representation to an RGB color representation.
 Parameters:
 
 * **hex_string** – The 3- or 6-char hexadecimal string representing the color value.
-* **default** – The default value to return if _hex is invalid.
+* **default** – The default value to return if \_hex is invalid.
 
 Returns: RGB representation of the input HEX value as a 3-item tuple
 with each item being an integer 0-255.

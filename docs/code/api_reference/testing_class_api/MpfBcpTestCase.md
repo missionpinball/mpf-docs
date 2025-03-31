@@ -474,9 +474,9 @@ Returns:	String name of the platform this test class will use.
 
 If you don’t include this method in your test class, the platform will be set to virtual. If you want to use the smart virtual platform, you would add the following to your test class:
 
-```
+``` python
 def get_platform(self):
-  return 'smart_virtual`
+  return 'smart_virtual'
 ```
 
 `get_use_bcp()
@@ -658,5 +658,3 @@ Tear down test.
 Return the verbosity setting of the currently running unittest program, or 0 if none is running.
 
 Returns: An integer value of the current verbosity setting.
-
-

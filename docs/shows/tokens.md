@@ -234,9 +234,10 @@ In the above explainations the token values, e.g. led_02 were objects you have d
 
 Let's assume the following event is posted
 
-```
+``` console
 INFO : EventManager : Event: ======'player_turn_started'====== Args={'player': <Player 1>, 'number': 1}
 ```
+
 The event `player_turn_started` has for example the argument `number` for the number of the player whose turn has started.
 
 ``` yaml
@@ -259,6 +260,7 @@ show_player:
       show_tokens:
         txt: (current_player.ball)
 ```
+
 In this example the ball number of the player is being used in your show once the player's turn has started. In case you want to access a variable of a specific player (which is not necessarily the current player) you can use `players[<player_number>].<variable>` where `player_number` is the player starting with 0, e.g. the second player needs the value 1 in this example.
 
 

@@ -27,7 +27,7 @@ Single value, type: [lights:](lights.md).
 Defaults to empty. Used to specify the light you have, though neoseg displays come in different
 colors each segment is considered a single color segment, use color white in any case.
 
-```
+``` yaml
 light_template:
       type: w
       subtype: led
