@@ -21,7 +21,7 @@ This method hits and releases a switch called s_start and then verifies that the
 
 You can call this method multiple times to add multiple players. For example, to start a game and then add 2 additional players (for 3 players total), you would use:
 
-```
+``` python
 self.start_game()
 self.add_player()
 self.add_player()
@@ -112,7 +112,7 @@ Counter(list(second)))
 
 Example:
 
-```
+``` python
 [0, 1, 1] and [1, 0, 1] compare equal.
 [0, 0, 1] and [0, 1] compare unequal.
 ```
@@ -140,7 +140,7 @@ Note that the event must be mocked via self.mock_event() first in order to use t
 
 For example:
 
-```
+``` python
 self.mock_event('my_event')
 self.assertEventNotCalled('my_event')  # This will pass
 
@@ -164,7 +164,7 @@ Parameters:
 
 For example:
 
-```
+``` python
 self.mock_event('jackpot')
 
 self.post_event('jackpot', count=1, first_time=True)
@@ -193,7 +193,7 @@ Assert a game is not running.
 
 Example:
 
-```
+``` python
 self.assertGameIsNotRunning()
 ```
 
@@ -203,7 +203,7 @@ Assert a game is running.
 
 Example:
 
-```
+``` python
 self.assertGameIsRunning()
 ```
 
@@ -289,12 +289,11 @@ This method must be used as a context manager, and will yield a recording object
 
 Example:
 
-```
+``` python
 with self.assertLogs('foo', level='INFO') as cm:
 logging.getLogger('foo').info('first message')
 logging.getLogger('foo.bar').error('second message')
-self.assertEqual(cm.output, ['INFO:foo:first message',
-'ERROR:foo.bar:second message'])
+self.assertEqual(cm.output, ['INFO:foo:first message', 'ERROR:foo.bar:second message'])
 ```
 
 `assertMachineVarEqual(value, machine_var)`
@@ -387,7 +386,7 @@ Fail unless an exception of class expected_exception is raised by the callable w
 
 If called with the callable and arguments omitted, will return a context object used like this:
 
-```
+``` python
 with self.assertRaises(SomeException):
 do_something()
 ```
@@ -396,7 +395,7 @@ An optional keyword argument ‘msg’ can be provided when assertRaises is used
 
 The context manager keeps a reference to the exception as the ‘exception’ attribute. This allows you to inspect the exception after the assertion:
 
-```
+``` python
 with self.assertRaises(SomeException) as cm:
 do_something()
 the_exception = cm.exception
@@ -468,7 +467,7 @@ Fail unless a warning of class warnClass is triggered by the callable when invok
 
 If called with the callable and arguments omitted, will return a context object used like this:
 
-```
+``` python
 with self.assertWarns(SomeWarning):
 do_something()
 ```
@@ -477,7 +476,7 @@ An optional keyword argument ‘msg’ can be provided when assertWarns is used 
 
 The context manager keeps a reference to the first matching warning as the ‘warning’ attribute; similarly, the ‘filename’ and ‘lineno’ attributes give you information about the line of Python code from which the warning was triggered. This allows you to inspect the warning after the assertion:
 
-```
+``` python
 with self.assertWarns(SomeWarning) as cm:
 do_something()
 the_warning = cm.warning
@@ -533,7 +532,7 @@ Returns:	A string name of the machine config file to use, complete with the .yam
 
 For example:
 
-```
+``` python
 def get_config_file(self):
 return 'my_config.yaml'
 ```
@@ -558,7 +557,7 @@ Returns:	A string name of the machine path to use
 
 For example:
 
-```
+``` python
 def get_machine_path(self):
 return 'tests/machine_files/my_test/'
 ```
@@ -642,7 +641,7 @@ Mocking an event will not “break” it. In other words, any other registered h
 
 For example:
 
-```
+``` python
 self.mock_event('my_event')
 self.assertEventNotCalled('my_event')  # This will be True
 self.post_event('my_event')
@@ -718,7 +717,7 @@ This is needed for tests where you don’t have any ball devices and other situa
 
 Example:
 
-```
+``` python
 self.set_num_balls_known(3)
 ```
 
@@ -740,7 +739,7 @@ This method checks to make sure a game is not running, then hits and releases th
 
 For example:
 
-```
+``` python
 self.start_game()
 ```
 
@@ -760,7 +759,7 @@ This method asserts that a game is running, then call’s the game mode’s end_
 
 Example:
 
-```
+``` python
 self.stop_game()
 ```
 

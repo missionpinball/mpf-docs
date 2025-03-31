@@ -51,7 +51,7 @@ These test methods will also load the machine config files (just like if the com
 
 Anyway, in our test method, we have the only actual line that does anything:
 
-```
+``` python
 self.assertModeRunning('attract')
 ```
 
@@ -82,7 +82,7 @@ That warning about the deprecation can be ignored (if you even have it.. you mig
 
 When you’re writing unit tests, you’ll end up dealing with failed tests a lot! So let’s purposefully change the test so it fails. In this case, change the line which asserts a mode called “attract” is running to look for a mode called “foo” instead, like this:
 
-```
+``` python
 self.assertModeRunning('foo')
 ```
 

@@ -33,7 +33,7 @@ For example, if you wanted to create custom code for your base mode, it might lo
 
 Next, open the new mode code Python file you just created and add the bare minimum, which would look like this:
 
-```
+``` python
 from mpf.core.mode import Mode
 
 class Base(Mode):
@@ -93,7 +93,7 @@ Also, modes have additional convenience attributes you can use within your mode 
 Here’s an example of some mode code in use. This example is just a bunch of random things, but again, since you’re writing code here, the sky’s the limit! Seriously you could do all your game logic in mode code and not use the MPF configs at all if you wanted to.
 
 
-```
+``` python
 from mpf.core.mode import Mode
 
 

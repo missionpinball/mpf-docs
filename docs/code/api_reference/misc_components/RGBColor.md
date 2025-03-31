@@ -80,19 +80,15 @@ If the name is not found, the default value is returned. :param name: A standard
 Generate a uniformly random RGB value.
 Returns:	A tuple of three integers with values between 0 and 255 inclusive
 
-`red
+`rgb`
 
-Return the red component of the RGB color representation.
-
-`rgb
-`
 Return an RGB representation of the color.
 
 `static rgb_to_hex(rgb: Tuple[int, int, int]) → str`
 
 Convert an RGB color representation to a HEX color representation.
 
-```
+``` python
 (r, g, b) :: r -> [0, 255]
 g -> [0, 255] b -> [0, 255]
 ```

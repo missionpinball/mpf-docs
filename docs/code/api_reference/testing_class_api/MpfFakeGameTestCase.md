@@ -23,7 +23,7 @@ This method hits and releases a switch called s_start and then verifies that the
 
 You can call this method multiple times to add multiple players. For example, to start a game and then add 2 additional players (for 3 players total), you would use:
 
-```
+``` python
 self.start_game()
 self.add_player()
 self.add_player()
@@ -70,7 +70,7 @@ Raises: Assertion error if there is no game in progress or if – the current ba
 
 The following code will check to make sure the game is on Ball 1:
 
-```
+``` python
 self.assertBallNumber(1)
 ```
 
@@ -107,10 +107,11 @@ self.assertEqual(Counter(list(first)),
 Counter(list(second)))
 
 Example:
-```
+``` python
 [0, 1, 1] and [1, 0, 1] compare equal.
 [0, 0, 1] and [0, 1] compare unequal.
 ```
+
 `assertDictContainsSubset(subset, dictionary, msg=None)`
 
 Checks whether dictionary is a superset of subset.
@@ -134,7 +135,7 @@ Note that the event must be mocked via self.mock_event() first in order to use t
 
 For example:
 
-```
+``` python
 self.mock_event('my_event')
 self.assertEventNotCalled('my_event')  # This will pass
 
@@ -158,7 +159,7 @@ Parameters:
 
 For example:
 
-```
+``` python
 self.mock_event('jackpot')
 
 self.post_event('jackpot', count=1, first_time=True)
@@ -187,7 +188,7 @@ Assert a game is not running.
 
 Example:
 
-```
+``` python
 self.assertGameIsNotRunning()
 ```
 
@@ -197,7 +198,7 @@ Assert a game is running.
 
 Example:
 
-```
+``` python
 self.assertGameIsRunning()
 ```
 
@@ -356,7 +357,7 @@ Parameters:
 
 For example, to assert that the to players are in the game:
 
-```
+``` python
 self.assertPlayerCount(2)
 ```
 
@@ -379,7 +380,7 @@ Fail unless an exception of class expected_exception is raised by the callable w
 
 If called with the callable and arguments omitted, will return a context object used like this:
 
-```
+``` python
 with self.assertRaises(SomeException):
 do_something()
 ```
@@ -388,7 +389,7 @@ An optional keyword argument ‘msg’ can be provided when assertRaises is used
 
 The context manager keeps a reference to the exception as the ‘exception’ attribute. This allows you to inspect the exception after the assertion:
 
-```
+``` python
 with self.assertRaises(SomeException) as cm:
 do_something()
 the_exception = cm.exception
@@ -460,7 +461,7 @@ Fail unless a warning of class warnClass is triggered by the callable when invok
 
 If called with the callable and arguments omitted, will return a context object used like this:
 
-```
+``` python
 with self.assertWarns(SomeWarning):
 do_something()
 ```
@@ -469,7 +470,7 @@ An optional keyword argument ‘msg’ can be provided when assertWarns is used 
 
 The context manager keeps a reference to the first matching warning as the ‘warning’ attribute; similarly, the ‘filename’ and ‘lineno’ attributes give you information about the line of Python code from which the warning was triggered. This allows you to inspect the warning after the assertion:
 
-```
+``` python
 with self.assertWarns(SomeWarning) as cm:
 do_something()
 the_warning = cm.warning
@@ -525,7 +526,7 @@ Returns:	A string name of the machine config file to use, complete with the .yam
 
 For example:
 
-```
+``` python
 def get_config_file(self):
 return 'my_config.yaml'
 ```
@@ -538,7 +539,7 @@ Returns: True or False
 
 The default is False. To load plugins in your test class, add the following:
 
-```
+``` python
 def get_enable_plugins(self):
 return True
 ```
@@ -552,7 +553,7 @@ Returns:	A string name of the machine path to use
 
 For example:
 
-```
+``` python
 def get_machine_path(self):
 return 'tests/machine_files/my_test/'
 ```
@@ -583,7 +584,7 @@ Returns: True or False
 
 The default is False. To use BCP in your test class, add the following:
 
-```
+``` python
 def get_use_bcp(self):
 return True
 ```
@@ -640,7 +641,7 @@ Mocking an event will not “break” it. In other words, any other registered h
 
 For example:
 
-```
+``` python
 self.mock_event('my_event')
 self.assertEventNotCalled('my_event')  # This will be True
 self.post_event('my_event')
@@ -675,7 +676,7 @@ Parameters:
 
 For example, to post an event called “jackpot” with the parameters count=1 and first_time=True, you would use:
 
-```
+``` python
 self.post_event('jackpot', count=1, first_time=True)
 ```
 
@@ -718,7 +719,7 @@ This is needed for tests where you don’t have any ball devices and other situa
 
 Example:
 
-```
+``` python
 self.set_num_balls_known(3)
 ```
 
@@ -754,7 +755,7 @@ This method asserts that a game is running, then call’s the game mode’s end_
 
 Example:
 
-```
+``` python
 self.stop_game()
 ```
 

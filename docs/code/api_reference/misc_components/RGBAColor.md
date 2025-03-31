@@ -88,7 +88,7 @@ Return an RGB representation of the color.
 
 Convert an RGB color representation to a HEX color representation.
 
-```
+``` python
 (r, g, b) :: r -> [0, 255]
 g -> [0, 255] b -> [0, 255]
 ```
