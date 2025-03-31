@@ -184,18 +184,49 @@ Single value, type: `time string (secs) or template`
 ([Instructions for entering time strings](instructions/time_strings.md) and
 [Instructions for entering templates](instructions/dynamic_values.md)). Default: `1s`
 
+#### Using time strings:
+
 A time value for how fast each tick is. The default is 1 second, but
 quite often "pinball time" is slower than real world time, and a
 countdown timer will actually tick a speed that's slower than 1 second
-per tick. (So in that case, you might set `tick_interval: 1.25s` or
-something like that. You can also set this really short if you want a
-hurry up, maybe every 100ms removed 77,000 worth of points or something.
+per tick. If you want a countdown to count down by one number every 1.25 seconds,
+you could set `tick_interval: 1.25s`. On the other hand, a hurryup might
+count down very quickly, and you could use a value of `100ms` to
+tick down ten times a second.
 
-Also note that you can use
-[dynamic values](instructions/dynamic_values.md) here if you want to do math or use settings to make this
-configurable.
+#### Using dynamic value templates:
 
-* [timer_control_events:](timer_control_events.md)
+Also note that you can use [dynamic values](instructions/dynamic_values.md)
+here if you want to do math or use settings to make this configurable.
+
+Even though the other option is to use a time string, when using a dynamic value
+you must resolve the value to a floating point value representing the number of seconds.
+So if you want to resolve to half a second, you MUST calculate to the float 0.5, NOT "500ms" or "0.5s".
+For example, when using a setting to control a timer speed, you might write:
+
+``` yaml
+#! settings.yaml
+settings:
+  my_timer_speed:
+    label: "My timer's speed"
+    values:
+      0.5: "Half a second"
+      1.0: "1 second (default)"
+      2.5: "2.5 seconds"
+    default: 1.0
+    key_type: float
+    sort: 123
+
+#! a timer definition in some mode .yaml
+timers:
+  my_timer:
+    end_value: 1
+    tick_interval: settings.my_timer_speed
+    start_running: true
+```
+
+See: [settings:](settings.md)
+
 
 ### console_log:
 
