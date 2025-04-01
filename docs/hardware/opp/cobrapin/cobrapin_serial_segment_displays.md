@@ -197,6 +197,7 @@ light_settings:
     NeoSeg_green:
       whitepoint: [.5, .5, .5]
 ```
+
 ## Complete Example Config for Show Definition
 
 Below you find a complete example config file to display scored points. It is not using all possible hardware options like the example above, but it includes the display of a show on the LED segments. To keep this example simple the `neoseg_displays` object is mapped 1:1 to a `segment_displays` object.
@@ -244,4 +245,5 @@ shows:
         text: (txt)
 
 ```
+
 To learn more about show tokens and how to use dynamic values take a look [here](../../../shows/tokens.md).

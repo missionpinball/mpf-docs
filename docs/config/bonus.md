@@ -112,7 +112,7 @@ one begins.
 Here's how an example might look based on the aliens, modes, and combos
 example just mentioned:
 
-```
+``` yaml
 bonus_entries:
   - event: alien_bonus
     score: 25000

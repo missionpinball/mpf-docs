@@ -55,22 +55,22 @@ For example, in the traditional python dictionary update() methods, if a diction
 
 Consider the following example:
 
-Original dictionary: config[‘foo’][‘bar’] = 1
+Original dictionary: `config['foo']['bar'] = 1`
 
-New dictionary we’re merging in: config[‘foo’][‘other_bar’] = 2
+New dictionary we’re merging in: `config['foo']['other_bar'] = 2`
 
 Default python dictionary update() method would have the updated dictionary as this:
 
-```
-{‘foo’: {‘other_bar’: 2}}
+``` python
+{'foo': {'other_bar': 2}}
 ```
 
 This happens because the original dictionary which had the single key bar was overwritten by a new dictionary which has a single key other_bar.)
 
 But really we want this:
 
-```
-{‘foo’: {‘bar’: 1, ‘other_bar’: 2}}
+``` python
+{'foo': {'bar': 1, 'other_bar': 2}}
 ```
 
 This code was based on this: https://www.xormedia.com/recursively-merge-dictionaries-in-python/

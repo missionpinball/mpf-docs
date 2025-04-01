@@ -34,6 +34,9 @@ Parameters:
 
 Returns: An RGBColor object that is a blend between the start and end
 
+`red`
+
+Return the red component of the RGB color representation.
 
 `blue`
 
@@ -54,7 +57,7 @@ Convert a HEX color representation to an RGB color representation.
 Parameters:
 
 * **hex_string** – The 3- or 6-char hexadecimal string representing the color value.
-* **default** – The default value to return if _hex is invalid.
+* **default** – The default value to return if \_hex is invalid.
 
 Returns: RGB representation of the input HEX value as a 3-item tuple
 with each item being an integer 0-255.
@@ -76,9 +79,6 @@ If the name is not found, the default value is returned. :param name: A standard
 Generate a uniformly random RGB value.
 Returns:	A tuple of three integers with values between 0 and 255 inclusive
 
-`red`
-
-Return the red component of the RGB color representation.
 
 `rgb`
 
@@ -88,7 +88,7 @@ Return an RGB representation of the color.
 
 Convert an RGB color representation to a HEX color representation.
 
-```
+``` python
 (r, g, b) :: r -> [0, 255]
 g -> [0, 255] b -> [0, 255]
 ```

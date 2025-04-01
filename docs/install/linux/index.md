@@ -111,6 +111,7 @@ Now you should be ready to use mpf, for a first test run
 ``` doscon
 mpf --version
 ```
+
 You should see a version number printed, as time of writing it is 0.56.2. Maybe you see some higher
 number. If you get a message that the command `mpf` is not being found or known you might have to add the location of the
 command to your `PATH` variable. Most likely (it depends on the shell type you use) you need to add to your `.profile` or `.bashrc` file an entry like
@@ -149,7 +150,7 @@ with Multimorphic P-ROC/P3-ROC boards with Python 3.8.
 
 Example Error:
 
-```
+``` console
 Failed to initialize MPF
 Traceback (most recent call last):
 File “/usr/local/lib/python3.8/dist-packages/mpf/platforms/p_roc_common.py”, line 31, in <module>
@@ -166,14 +167,14 @@ Try Changing `Edit install-proc:`
 
 From:
 
-```
+``` console
 cd pypinproc
 sudo python3 setup.py install
 ```
 
 To:
 
-```
+``` console
 cd pypinproc
 python3 setup.py install --user
 ```

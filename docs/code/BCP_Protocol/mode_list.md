@@ -11,7 +11,7 @@ Pin controller
 Type: JSON Array
 
 Example (Formatted for legibility; the parameter does not contain line-breaks):
-```
+``` json
 {
     "running_modes": [
         [

@@ -51,7 +51,7 @@ These test methods will also load the machine config files (just like if the com
 
 Anyway, in our test method, we have the only actual line that does anything:
 
-```
+``` python
 self.assertModeRunning('attract')
 ```
 
@@ -63,7 +63,7 @@ You can run your tests via the command prompt from your machine folder. (In othe
 
 The exact command to run is `python -m unittest`. This should produce output similar to the following:
 
-```
+``` console
 C:\pinball\your_machine>python -m unittest
 C:\Python34\lib\imp.py:32: PendingDeprecationWarning: the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
   PendingDeprecationWarning)
@@ -82,13 +82,13 @@ That warning about the deprecation can be ignored (if you even have it.. you mig
 
 When you’re writing unit tests, you’ll end up dealing with failed tests a lot! So let’s purposefully change the test so it fails. In this case, change the line which asserts a mode called “attract” is running to look for a mode called “foo” instead, like this:
 
-```
+``` python
 self.assertModeRunning('foo')
 ```
 
 Save the file and rerun the tests and you should see results like this:
 
-```
+``` console
 C:\pinball\your_machine>python -m unittest
 C:\Python34\lib\imp.py:32: PendingDeprecationWarning: the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
   PendingDeprecationWarning)

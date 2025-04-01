@@ -3,7 +3,7 @@
 
 Once MPF is installed, you can run some automated tests to make sure that everything is working. To do this, open a command prompt, and then type the following command and then press <enter>:
 
-```
+``` console
 python3 -m unittest discover mpf/tests
 ```
 
@@ -13,7 +13,7 @@ When you do this, you should see a bunch of dots on the screen (one for each tes
 
 The important thing is that when the tests are done, you should have a message like this:
 
-```
+``` console
 Ran 587 tests in 27.121s
 
 OK
@@ -27,7 +27,7 @@ These tests are the actual tests that the developers of MPF use to test MPF itse
 
 Remember though that MPF is actually two separate parts, the MPF game engine and the MPF media controller. The command you run just tested the game engine, so now let’s test the media controller. To do this, run the following command (basically the same thing as last time but with an “mc” added to the end, like this):
 
-```
+``` console
 python3 -m unittest discover mpfmc/tests
 ```
 

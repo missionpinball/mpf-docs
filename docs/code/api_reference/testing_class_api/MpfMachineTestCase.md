@@ -58,14 +58,14 @@ Parameters:
 
 An unordered sequence comparison asserting that the same elements, regardless of order. If the same element occurs more than once, it verifies that the elements occur the same number of times.
 
-```
+``` python
 self.assertEqual(Counter(list(first)),
 Counter(list(second)))
 ```
 
 Example:
 
-```
+``` python
 [0, 1, 1] and [1, 0, 1] compare equal.
 [0, 0, 1] and [0, 1] compare unequal.
 ```
@@ -93,7 +93,7 @@ Note that the event must be mocked via self.mock_event() first in order to use t
 
 For example:
 
-```
+``` python
 self.mock_event('my_event')
 self.assertEventNotCalled('my_event')  # This will pass
 
@@ -117,7 +117,7 @@ Parameters:
 
 For example:
 
-```
+``` python
 self.mock_event('jackpot')
 
 self.post_event('jackpot', count=1, first_time=True)
@@ -222,7 +222,7 @@ This method must be used as a context manager, and will yield a recording object
 
 Example:
 
-```
+``` python
 with self.assertLogs('foo', level='INFO') as cm:
 logging.getLogger('foo').info('first message')
 logging.getLogger('foo.bar').error('second message')
@@ -296,7 +296,7 @@ Fail unless an exception of class expected_exception is raised by the callable w
 
 If called with the callable and arguments omitted, will return a context object used like this:
 
-```
+``` python
 with self.assertRaises(SomeException):
   do_something()
 ```
@@ -305,7 +305,7 @@ An optional keyword argument ‘msg’ can be provided when assertRaises is used
 
 The context manager keeps a reference to the exception as the ‘exception’ attribute. This allows you to inspect the exception after the assertion:
 
-```
+``` python
 with self.assertRaises(SomeException) as cm:
   do_something()
 the_exception = cm.exception
@@ -377,7 +377,7 @@ Fail unless a warning of class warnClass is triggered by the callable when invok
 
 If called with the callable and arguments omitted, will return a context object used like this:
 
-```
+``` python
 with self.assertWarns(SomeWarning):
   do_something()
 ```
@@ -386,7 +386,7 @@ An optional keyword argument ‘msg’ can be provided when assertWarns is used 
 
 The context manager keeps a reference to the first matching warning as the ‘warning’ attribute; similarly, the ‘filename’ and ‘lineno’ attributes give you information about the line of Python code from which the warning was triggered. This allows you to inspect the warning after the assertion:
 
-```
+``` python
 with self.assertWarns(SomeWarning) as cm:
   do_something()
 the_warning = cm.warning
@@ -426,9 +426,9 @@ Returns:	A string name of the machine config file to use, complete with the .yam
 
 For example:
 
-```
+``` python
 def get_config_file(self):
-return 'my_config.yaml'
+  return 'my_config.yaml'
 ```
 
 `get_enable_plugins()`
@@ -439,9 +439,9 @@ Returns: True or False
 
 The default is False. To load plugins in your test class, add the following:
 
-```
+``` python
 def get_enable_plugins(self):
-return True
+  return True
 ```
 
 `get_machine_path()`
@@ -453,9 +453,9 @@ Returns:	A string name of the machine path to use
 
 For example:
 
-```
+``` python
 def get_machine_path(self):
-return 'tests/machine_files/my_test/'
+  return 'tests/machine_files/my_test/'
 ```
 
 Note that this path is relative to the MPF package root
@@ -471,9 +471,9 @@ Returns:	String name of the platform this test class will use.
 
 If you don’t include this method in your test class, the platform will be set to virtual. If you want to use the smart virtual platform, you would add the following to your test class:
 
-```
+``` python
 def get_platform(self):
-  return 'smart_virtual`
+  return 'smart_virtual'
 ```
 
 `get_use_bcp()`
@@ -542,7 +542,7 @@ Mocking an event will not “break” it. In other words, any other registered h
 
 For example:
 
-```
+``` python
 self.mock_event('my_event')
 self.assertEventNotCalled('my_event')  # This will be True
 self.post_event('my_event')
@@ -618,7 +618,7 @@ This is needed for tests where you don’t have any ball devices and other situa
 
 Example:
 
-```
+``` python
 self.set_num_balls_known(3)
 ```
 

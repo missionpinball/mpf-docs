@@ -74,7 +74,7 @@ and use a PC with [gen2test.py](https://gitlab.com/mrechte/open-pinball-project/
 
 In the above example one would do:
 
-```
+``` console
 ./gen2test.py --serial 0
 ./gen2test.py --config opp16o16icfg.py
 ./gen2test.py --save

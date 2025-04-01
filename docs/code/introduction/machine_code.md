@@ -24,7 +24,7 @@ All your classes will be referenced as `custom_code.file_name.ClassName`.
 
 Next, edit the class file you created. At a bare minimum, you’ll need this:
 
-```
+``` python
 from mpf.core.custom_code import CustomCode
 
 class Claw(CustomCode):
@@ -41,7 +41,7 @@ Next, edit your machine config file and add a `custom_code:` section, then under
 
 For Demo Man, that looks like this:
 
-```
+``` yaml
 custom_code:
   - custom_code.claw.Claw
 ```
@@ -55,7 +55,7 @@ At this point you should be able to run your game, though nothing should happen 
 Take a look at the final Demo Man claw class to see what we did there. Since custom code classes have access to self.machine and they load when MPF loads, you can do anything you want in them.
 
 
-```
+``` python
 from mpf.core.custom_code import CustomCode
 
 

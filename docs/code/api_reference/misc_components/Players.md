@@ -17,7 +17,7 @@ This Player class is responsible for tracking player variables which is a dictio
 
 First, player variables can be accessed as attributes of the player object directly. For example, to set a player variable foo for the current player, you could use:
 
-```
+``` python
 self.machine.player.foo = 0
 ```
 
@@ -25,7 +25,7 @@ If that variable didn’t exist, it will be automatically created.
 
 You can get the value of player variables by accessing them directly. For example:
 
-```
+``` python
 print(self.machine.player.foo)  # prints 0
 ```
 
@@ -44,7 +44,7 @@ For the change parameter, it will attempt to subtract the old value from the new
 
 For examples, the following three lines:
 
-```
+``` python
 self.machine.player.score = 0
 self.machine.player.score += 500
 self.machine.player.score = 1200

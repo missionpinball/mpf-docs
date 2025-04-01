@@ -237,6 +237,7 @@ keyboard:
  3:
     event: single_led_green
 ```
+
 Pay attention to the event `single_led_green` to understand how to address a single light in your light strip.
 
 

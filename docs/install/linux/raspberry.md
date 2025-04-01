@@ -138,6 +138,7 @@ Note: If you're connected via SSH, you'll need to specify which display should b
 # set default display for windowed apps
 export DISPLAY=:0
 ```
+
 To test MPF with the demo-man game, follow these steps:
 
 ``` shell

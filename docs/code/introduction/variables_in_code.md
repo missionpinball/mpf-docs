@@ -8,7 +8,7 @@ Inside a (game) mode you can access the current player using `self.player`. Alte
 
 You can use player variables like this:
 
-```
+``` python
 player = self.machine.game.player    # do not persist the player because it may change
                                      # alternatively use self.player in modes
 
@@ -28,7 +28,7 @@ player["my_variable"] = 17
 
 You can use machine variables by calling into the MPF machine.
 
-```
+``` python
 # read machine variable
 self.machine.log.info(self.machine.variables.get_machine_var("my_variable"))
 
