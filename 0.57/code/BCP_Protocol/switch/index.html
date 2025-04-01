@@ -34748,17 +34748,17 @@ icons & this code generated via https://realfavicongenerator.net
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#name" class="md-nav__link">
     <span class="md-ellipsis">
       name
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="name">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#state" class="md-nav__link">
@@ -34809,16 +34809,16 @@ icons & this code generated via https://realfavicongenerator.net
 
 <h1 id="switch-bcp-command">switch (BCP command)</h1>
 <p>Indicates that the other side should process the changed state of a switch. When sent from the media controller to the pin controller, this is typically used to implement a virtual keyboard interface via the media controller (where the player can activate pinball machine switches via keyboard keys for testing). For example, for the media controller to tell the pin controller that the player just pushed the start button, the command would be:</p>
-<div class="highlight"><pre><span></span><code>switch?name=start&amp;state=1
+<div class="highlight"><pre><span></span><code><span class="go">switch?name=start&amp;state=1</span>
 </code></pre></div>
 <p>followed very quickly by</p>
-<div class="highlight"><pre><span></span><code>switch?name=start&amp;state=0
+<div class="highlight"><pre><span></span><code><span class="go">switch?name=start&amp;state=0</span>
 </code></pre></div>
 <p>When sent from the pin controller to the media controller, this is used to send switch inputs to things like video modes, high score name entry, and service menu navigation. Note that the pin controller should not send the state of every switch change at all times, as the media controller doesn’t need it and that would add lots of unnecessary commands. Instead the pin controller should only send switches based on some mode of operation that needs them. (For example, when the video mode starts, the pin controller would start sending the switch states of the flipper buttons, and when the video mode ends, it would stop.)</p>
 <h2 id="origin">Origin</h2>
 <p>Pin controller or media controller</p>
 <h2 id="parameters">Parameters</h2>
-<h2 id="name">name</h2>
+<h3 id="name">name</h3>
 <p>Type: <code>string</code></p>
 <p>This is the name of the switch.</p>
 <h3 id="state">state</h3>

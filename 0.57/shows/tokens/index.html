@@ -35196,9 +35196,9 @@ play like this:</p>
 <p>In the above explainations the token values, e.g. led_02 were objects you have defined in your config file. You can as well use values of variables mpf is having, e.g. machine variables, or parameter values of an event.</p>
 <h3 id="event-parameterargument-values">Event parameter(argument) values</h3>
 <p>Let's assume the following event is posted</p>
-<p><div class="highlight"><pre><span></span><code>INFO : EventManager : Event: ======&#39;player_turn_started&#39;====== Args={&#39;player&#39;: &lt;Player 1&gt;, &#39;number&#39;: 1}
+<div class="highlight"><pre><span></span><code><span class="go">INFO : EventManager : Event: ======&#39;player_turn_started&#39;====== Args={&#39;player&#39;: &lt;Player 1&gt;, &#39;number&#39;: 1}</span>
 </code></pre></div>
-The event <code>player_turn_started</code> has for example the argument <code>number</code> for the number of the player whose turn has started.</p>
+<p>The event <code>player_turn_started</code> has for example the argument <code>number</code> for the number of the player whose turn has started.</p>
 <div class="highlight"><pre><span></span><code><span class="nt">show_player</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">player_turn_started</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">player_num</span><span class="p">:</span><span class="w"> </span><span class="c1">#The name of the show to be started upon this event</span>
@@ -35208,13 +35208,13 @@ The event <code>player_turn_started</code> has for example the argument <code>nu
 <p>The number of the player whose turn started is being displayed in the show where you have used the placeholder <code>txt</code>. The argument <code>number</code> is probably used in many events. When using event arguments as tokens, just use the argument name without any prefix or dot notation.</p>
 <h3 id="variable-values">Variable values</h3>
 <p>You can use as well variable values to be used in a token. For example if you want to access a player variable you can access it with <code>current_player.&lt;variable&gt;</code></p>
-<p><div class="highlight"><pre><span></span><code><span class="nt">show_player</span><span class="p">:</span>
+<div class="highlight"><pre><span></span><code><span class="nt">show_player</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">player_turn_started</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">ball_num</span><span class="p">:</span><span class="w"> </span><span class="c1">#The name of the show to be started upon this event</span>
 <span class="w">      </span><span class="nt">show_tokens</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">txt</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(current_player.ball)</span>
 </code></pre></div>
-In this example the ball number of the player is being used in your show once the player's turn has started. In case you want to access a variable of a specific player (which is not necessarily the current player) you can use <code>players[&lt;player_number&gt;].&lt;variable&gt;</code> where <code>player_number</code> is the player starting with 0, e.g. the second player needs the value 1 in this example.</p>
+<p>In this example the ball number of the player is being used in your show once the player's turn has started. In case you want to access a variable of a specific player (which is not necessarily the current player) you can use <code>players[&lt;player_number&gt;].&lt;variable&gt;</code> where <code>player_number</code> is the player starting with 0, e.g. the second player needs the value 1 in this example.</p>
 <p>You can as well access game variables, machine variables or settings. Just use the notation <code>game.&lt;variable&gt;</code> or <code>machine.&lt;variable&gt;</code> or <code>settings.&lt;variable&gt;</code>. You can learn more about using variables as tokens in the <a href="../../config/instructions/dynamic_values/">Dynamic Values</a> reference page.</p>
 <h3 id="formatting-of-variable-values">Formatting of variable values</h3>
 <p>mpf is being build with Python, thus you find in some config files things which are Python specific. An example is how to tell mpf how to format the variable value. In some config files you might find something like this</p>

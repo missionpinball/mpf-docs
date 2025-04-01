@@ -34847,13 +34847,13 @@ icons & this code generated via https://realfavicongenerator.net
 <p>In all commands referenced below, the <code>\n</code> terminator is implicit. Some characters in parameters such as spaces would really be encoded as <code>%20</code> (space) in operation, but are left unencoded here for clarity.</p>
 <h2 id="initial-handshake">Initial Handshake</h2>
 <p>When a connection is initially established, the pinball controller transmits the following command:</p>
-<div class="highlight"><pre><span></span><code>hello?version=1.0
+<div class="highlight"><pre><span></span><code><span class="go">hello?version=1.0</span>
 </code></pre></div>
 <p>…where 1.0 is the version of the Backbox protocol it wants to speak. The media controller may reply with one of two responses:</p>
-<div class="highlight"><pre><span></span><code>hello?version=1.0
+<div class="highlight"><pre><span></span><code><span class="go">hello?version=1.0</span>
 </code></pre></div>
 <p>…indicating that it can speak the protocol version named, and reporting the version it speaks, or</p>
-<div class="highlight"><pre><span></span><code>error?message=unknown protocol version
+<div class="highlight"><pre><span></span><code><span class="go">error?message=unknown protocol version</span>
 </code></pre></div>
 <p>…indicating that it cannot. How the pin controller handles this situation is implementation-dependent.</p>
 <h2 id="bcp-commands">BCP commands</h2>

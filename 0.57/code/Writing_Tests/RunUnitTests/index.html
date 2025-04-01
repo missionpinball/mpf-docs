@@ -34775,21 +34775,21 @@ icons & this code generated via https://realfavicongenerator.net
 
 <h1 id="how-to-run-mpf-unittests">How to run MPF unittests</h1>
 <p>Once MPF is installed, you can run some automated tests to make sure that everything is working. To do this, open a command prompt, and then type the following command and then press <enter>:</p>
-<div class="highlight"><pre><span></span><code>python3 -m unittest discover mpf/tests
+<div class="highlight"><pre><span></span><code><span class="go">python3 -m unittest discover mpf/tests</span>
 </code></pre></div>
 <p>When you do this, you should see a bunch of dots on the screen (one for each test that’s run), and then when it’s done, you should see a message showing how many tests were run and that they were successful. The whole process should take less a minute or so.</p>
 <p>(If you see any messages about some tests taking more than 0.5s, that’s ok.)</p>
 <p>The important thing is that when the tests are done, you should have a message like this:</p>
-<div class="highlight"><pre><span></span><code>Ran 587 tests in 27.121s
+<div class="highlight"><pre><span></span><code><span class="go">Ran 587 tests in 27.121s</span>
 
-OK
+<span class="go">OK</span>
 
-C:\&gt;
+<span class="go">C:\&gt;</span>
 </code></pre></div>
 <p>Note that the number of tests is changing all the time, so it probably won’t be exactly 587. And also the time they took to run will be different depending on how fast your computer is.</p>
 <p>These tests are the actual tests that the developers of MPF use to test MPF itself. We wrote all these tests to make sure that updates and changes we add to MPF don’t break things. :) So if these tests pass, you know your MPF installation is solid.</p>
 <p>Remember though that MPF is actually two separate parts, the MPF game engine and the MPF media controller. The command you run just tested the game engine, so now let’s test the media controller. To do this, run the following command (basically the same thing as last time but with an “mc” added to the end, like this):</p>
-<div class="highlight"><pre><span></span><code>python3 -m unittest discover mpfmc/tests
+<div class="highlight"><pre><span></span><code><span class="go">python3 -m unittest discover mpfmc/tests</span>
 </code></pre></div>
 <p>(Note that mpfmc does not have a dash in it, like it did when you installed it via pip.)</p>
 <p>When you run the MPF-MC tests, you should see a graphical window pop up on the screen, and many of the tests will put graphics and words in that window. Also, some of the tests include audio, so if your speakers are on you should hear some sounds at some point.</p>

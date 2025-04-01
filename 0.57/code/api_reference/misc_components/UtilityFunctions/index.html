@@ -34795,14 +34795,14 @@ icons & this code generated via https://realfavicongenerator.net
 <p>Used to merge dictionaries of dictionaries, like when we’re merging together the machine configuration files. This method is called recursively as it finds sub-dictionaries.</p>
 <p>For example, in the traditional python dictionary update() methods, if a dictionary key exists in the original and merging-in dictionary, the new value will overwrite the old value.</p>
 <p>Consider the following example:</p>
-<p>Original dictionary: config[‘foo’][‘bar’] = 1</p>
-<p>New dictionary we’re merging in: config[‘foo’][‘other_bar’] = 2</p>
+<p>Original dictionary: <code>config['foo']['bar'] = 1</code></p>
+<p>New dictionary we’re merging in: <code>config['foo']['other_bar'] = 2</code></p>
 <p>Default python dictionary update() method would have the updated dictionary as this:</p>
-<div class="highlight"><pre><span></span><code>{‘foo’: {‘other_bar’: 2}}
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="s1">&#39;foo&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;other_bar&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">}}</span>
 </code></pre></div>
 <p>This happens because the original dictionary which had the single key bar was overwritten by a new dictionary which has a single key other_bar.)</p>
 <p>But really we want this:</p>
-<div class="highlight"><pre><span></span><code>{‘foo’: {‘bar’: 1, ‘other_bar’: 2}}
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="s1">&#39;foo&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;bar&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;other_bar&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">}}</span>
 </code></pre></div>
 <p>This code was based on this: https://www.xormedia.com/recursively-merge-dictionaries-in-python/</p>
 <p>Parameters:</p>

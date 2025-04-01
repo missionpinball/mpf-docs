@@ -35089,10 +35089,18 @@ try to use sudo:</p>
 <li>As root, add your username to the sudo group</li>
 <li><code>console
     usermod -aG sudo [your-user]</code></li>
-<li>Exit the root user shell</li>
+</ul>
+</li>
+<li>
+<p>Exit the root user shell</p>
+<ul>
 <li><code>console
     exit</code></li>
-<li>Verify your username was granted sudo access</li>
+</ul>
+</li>
+<li>
+<p>Verify your username was granted sudo access</p>
+<ul>
 <li>
 <p><code>console
     sudo echo</code></p>
@@ -35179,8 +35187,12 @@ virtual machine.</p>
            ether 0a:00:27:00:00:00
            inet 192.168.56.1 netmask 0xffffff00 broadcast 192.168.56.255</code></p>
 </li>
-<li>In the <em>guest</em> OS (Debian), verify the VirtualBox virtual network
-adapter is connected</li>
+</ul>
+</li>
+<li>
+<p>In the <em>guest</em> OS (Debian), verify the VirtualBox virtual network
+    adapter is connected</p>
+<ul>
 <li>
 <p>The following is for my installation. Your command and output may look different</p>
 </li>
@@ -35226,7 +35238,9 @@ environment tools you are accustomed with.</p>
 <div class="highlight"><pre><span></span><code><span class="go">pip3 install pip setuptools --upgrade</span>
 </code></pre></div>
 <ol>
-<li>Clone the Debian installer<ul>
+<li>
+<p>Clone the Debian installer</p>
+<ul>
 <li><code>console
     cd ~
     git clone https://github.com/missionpinball/mpf-debian-installer/
@@ -35234,7 +35248,9 @@ environment tools you are accustomed with.</p>
     chmod +x install &amp;&amp; sudo ./install</code></li>
 </ul>
 </li>
-<li>Setup the mpf directory and clone examples<ul>
+<li>
+<p>Setup the mpf directory and clone examples</p>
+<ul>
 <li><code>console
     cd ~
     mkdir mpf
@@ -35278,12 +35294,16 @@ environment tools you are accustomed with.</p>
 <h2 id="installing-and-running-mpf-monitor">Installing and Running MPF-Monitor</h2>
 <p>The full installation guide for setting up MPF-Monitor <a href="../../../tools/monitor/installation/">can be found here</a>.</p>
 <ol>
-<li>Install PyQt6 (may already be installed):<ul>
+<li>
+<p>Install PyQt6 (may already be installed):</p>
+<ul>
 <li><code>console
     sudo apt-get install python3-pyqt6</code></li>
 </ul>
 </li>
-<li>Install mpf-monitor:<ul>
+<li>
+<p>Install mpf-monitor:</p>
+<ul>
 <li><code>console
     pip install mpf-monitor</code></li>
 </ul>
@@ -35299,8 +35319,12 @@ environment tools you are accustomed with.</p>
 <p><code>console
     mpf monitor</code></p>
 </li>
-<li>Adjust the size of switches and lights by adding the following to
-the first line of your <code>monitor.yaml</code> file:</li>
+</ul>
+</li>
+<li>
+<p>Adjust the size of switches and lights by adding the following to
+    the first line of your <code>monitor.yaml</code> file:</p>
+<ul>
 <li>
 <p><code>yaml
     device_size: 0.1</code></p>

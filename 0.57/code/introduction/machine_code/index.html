@@ -34898,218 +34898,218 @@ icons & this code generated via https://realfavicongenerator.net
 <p>All your classes will be referenced as <code>custom_code.file_name.ClassName</code>.</p>
 <h2 id="open-and-edit-your-custom-code-class-file">Open and edit your custom code class file</h2>
 <p>Next, edit the class file you created. At a bare minimum, you’ll need this:</p>
-<div class="highlight"><pre><span></span><code>from mpf.core.custom_code import CustomCode
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">mpf.core.custom_code</span><span class="w"> </span><span class="kn">import</span> <span class="n">CustomCode</span>
 
-class Claw(CustomCode):
-    pass
+<span class="k">class</span><span class="w"> </span><span class="nc">Claw</span><span class="p">(</span><span class="n">CustomCode</span><span class="p">):</span>
+    <span class="k">pass</span>
 </code></pre></div>
 <p>Note that MPF contains a CustomCode base class which is very simple. You can see the <a href="https://github.com/missionpinball/mpf/blob/dev/mpf/core/custom_code.py">CustomCode source</a> on GitHub. We called our class Claw in this case.</p>
 <p>Pretty much all this does is give you a reference to the main MPF machine controller at <code>self.machine</code>, as well as setup a delay manager you can use and set the name of your class. There’s also an <code>on_load()</code> method which is called when the class is loaded which you can use in your own code.</p>
 <h2 id="add-the-class-to-your-machine-config">Add the class to your machine config</h2>
 <p>Next, edit your machine config file and add a <code>custom_code:</code> section, then under there add the package (folder), followed by a dot, then the module (file name) for your class, followed by a dot, followed by the class name for your class.</p>
 <p>For Demo Man, that looks like this:</p>
-<div class="highlight"><pre><span></span><code>custom_code:
-  - custom_code.claw.Claw
+<div class="highlight"><pre><span></span><code><span class="nt">custom_code</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">custom_code.claw.Claw</span>
 </code></pre></div>
 <p>This references class Claw in file claw.py which lives package custom_code.</p>
 <h2 id="real-world-example">Real-world example</h2>
 <p>At this point you should be able to run your game, though nothing should happen because you haven’t added any code to your code.</p>
 <p>Take a look at the final Demo Man claw class to see what we did there. Since custom code classes have access to self.machine and they load when MPF loads, you can do anything you want in them.</p>
-<div class="highlight"><pre><span></span><code>from mpf.core.custom_code import CustomCode
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">mpf.core.custom_code</span><span class="w"> </span><span class="kn">import</span> <span class="n">CustomCode</span>
 
 
-class Claw(CustomCode):
+<span class="k">class</span><span class="w"> </span><span class="nc">Claw</span><span class="p">(</span><span class="n">CustomCode</span><span class="p">):</span>
 
-    def on_load(self):
+    <span class="k">def</span><span class="w"> </span><span class="nf">on_load</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 
-        self.auto_release_in_progress = False
+        <span class="bp">self</span><span class="o">.</span><span class="n">auto_release_in_progress</span> <span class="o">=</span> <span class="kc">False</span>
 
-        # if the elevator switch is active for more than 100ms, that means
-        # a ball is there, so we want to get it and deliver it to the claw
-        self.machine.switch_controller.add_switch_handler(
-            &#39;s_elevator_hold&#39;, self.get_ball, ms=100)
+        <span class="c1"># if the elevator switch is active for more than 100ms, that means</span>
+        <span class="c1"># a ball is there, so we want to get it and deliver it to the claw</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">switch_controller</span><span class="o">.</span><span class="n">add_switch_handler</span><span class="p">(</span>
+            <span class="s1">&#39;s_elevator_hold&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_ball</span><span class="p">,</span> <span class="n">ms</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
 
-        # This is a one-time thing to check to see if there&#39;s a ball in
-        # the elevator when MPF starts, and if so, we want to get it.
-        if self.machine.switch_controller.is_active(&#39;s_elevator_hold&#39;):
-            self.auto_release_in_progress = True
-            self.get_ball()
+        <span class="c1"># This is a one-time thing to check to see if there&#39;s a ball in</span>
+        <span class="c1"># the elevator when MPF starts, and if so, we want to get it.</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">switch_controller</span><span class="o">.</span><span class="n">is_active</span><span class="p">(</span><span class="s1">&#39;s_elevator_hold&#39;</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">auto_release_in_progress</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">get_ball</span><span class="p">()</span>
 
-        # We&#39;ll use the event &#39;light_claw&#39; to light the claw, so in the
-        # future all we have to do is post this event and everything else
-        # will be automatic.
-        self.machine.events.add_handler(&#39;light_claw&#39;, self.light_claw)
+        <span class="c1"># We&#39;ll use the event &#39;light_claw&#39; to light the claw, so in the</span>
+        <span class="c1"># future all we have to do is post this event and everything else</span>
+        <span class="c1"># will be automatic.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">events</span><span class="o">.</span><span class="n">add_handler</span><span class="p">(</span><span class="s1">&#39;light_claw&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">light_claw</span><span class="p">)</span>
 
-    def enable(self):
-        &quot;&quot;&quot;Enable the claw.&quot;&quot;&quot;
+    <span class="k">def</span><span class="w"> </span><span class="nf">enable</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Enable the claw.&quot;&quot;&quot;</span>
 
-        # move left &amp; right with the flipper switches, and stop moving when
-        # they&#39;re released
+        <span class="c1"># move left &amp; right with the flipper switches, and stop moving when</span>
+        <span class="c1"># they&#39;re released</span>
 
-        self.machine.switch_controller.add_switch_handler(
-            &#39;s_flipper_lower_left&#39;, self.move_left)
-        self.machine.switch_controller.add_switch_handler(
-            &#39;s_flipper_lower_left&#39;, self.stop_moving, state=0)
-        self.machine.switch_controller.add_switch_handler(
-            &#39;s_flipper_lower_right&#39;, self.move_right)
-        self.machine.switch_controller.add_switch_handler(
-            &#39;s_flipper_lower_right&#39;, self.stop_moving, state=0)
+        <span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">switch_controller</span><span class="o">.</span><span class="n">add_switch_handler</span><span class="p">(</span>
+            <span class="s1">&#39;s_flipper_lower_left&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">move_left</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">switch_controller</span><span class="o">.</span><span class="n">add_switch_handler</span><span class="p">(</span>
+            <span class="s1">&#39;s_flipper_lower_left&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">stop_moving</span><span class="p">,</span> <span class="n">state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">switch_controller</span><span class="o">.</span><span class="n">add_switch_handler</span><span class="p">(</span>
+            <span class="s1">&#39;s_flipper_lower_right&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">move_right</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">switch_controller</span><span class="o">.</span><span class="n">add_switch_handler</span><span class="p">(</span>
+            <span class="s1">&#39;s_flipper_lower_right&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">stop_moving</span><span class="p">,</span> <span class="n">state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 
-        # release the ball when the launch button is hit
-        self.machine.switch_controller.add_switch_handler(
-            &#39;s_ball_launch&#39;, self.release)
+        <span class="c1"># release the ball when the launch button is hit</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">switch_controller</span><span class="o">.</span><span class="n">add_switch_handler</span><span class="p">(</span>
+            <span class="s1">&#39;s_ball_launch&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">release</span><span class="p">)</span>
 
-        # stop moving if the claw hits a limit switch
-        self.machine.switch_controller.add_switch_handler(
-            &#39;s_claw_position_1&#39;, self.stop_moving)
+        <span class="c1"># stop moving if the claw hits a limit switch</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">switch_controller</span><span class="o">.</span><span class="n">add_switch_handler</span><span class="p">(</span>
+            <span class="s1">&#39;s_claw_position_1&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">stop_moving</span><span class="p">)</span>
 
-        # We can use this event for slides to explain what&#39;s going on for
-        # the player.
-        self.machine.events.post(&#39;claw_enabled&#39;)
+        <span class="c1"># We can use this event for slides to explain what&#39;s going on for</span>
+        <span class="c1"># the player.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">events</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s1">&#39;claw_enabled&#39;</span><span class="p">)</span>
 
-    def disable(self):
-        &quot;&quot;&quot;Disable the claw.&quot;&quot;&quot;
+    <span class="k">def</span><span class="w"> </span><span class="nf">disable</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Disable the claw.&quot;&quot;&quot;</span>
 
-        self.stop_moving()
+        <span class="bp">self</span><span class="o">.</span><span class="n">stop_moving</span><span class="p">()</span>
 
-        # remove all the switch handlers
-        self.machine.switch_controller.remove_switch_handler(
-            &#39;s_flipper_lower_left&#39;, self.move_left)
-        self.machine.switch_controller.remove_switch_handler(
-            &#39;s_flipper_lower_left&#39;, self.stop_moving, state=0)
-        self.machine.switch_controller.remove_switch_handler(
-            &#39;s_flipper_lower_right&#39;, self.move_right)
-        self.machine.switch_controller.remove_switch_handler(
-            &#39;s_flipper_lower_right&#39;, self.stop_moving, state=0)
-        self.machine.switch_controller.remove_switch_handler(
-            &#39;s_ball_launch&#39;, self.release)
-        self.machine.switch_controller.remove_switch_handler(
-            &#39;s_claw_position_1&#39;, self.stop_moving)
-        self.machine.switch_controller.remove_switch_handler(
-            &#39;s_claw_position_1&#39;, self.release, state=0)
-        self.machine.switch_controller.remove_switch_handler(
-            &#39;s_claw_position_2&#39;, self.release)
+        <span class="c1"># remove all the switch handlers</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">switch_controller</span><span class="o">.</span><span class="n">remove_switch_handler</span><span class="p">(</span>
+            <span class="s1">&#39;s_flipper_lower_left&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">move_left</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">switch_controller</span><span class="o">.</span><span class="n">remove_switch_handler</span><span class="p">(</span>
+            <span class="s1">&#39;s_flipper_lower_left&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">stop_moving</span><span class="p">,</span> <span class="n">state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">switch_controller</span><span class="o">.</span><span class="n">remove_switch_handler</span><span class="p">(</span>
+            <span class="s1">&#39;s_flipper_lower_right&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">move_right</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">switch_controller</span><span class="o">.</span><span class="n">remove_switch_handler</span><span class="p">(</span>
+            <span class="s1">&#39;s_flipper_lower_right&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">stop_moving</span><span class="p">,</span> <span class="n">state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">switch_controller</span><span class="o">.</span><span class="n">remove_switch_handler</span><span class="p">(</span>
+            <span class="s1">&#39;s_ball_launch&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">release</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">switch_controller</span><span class="o">.</span><span class="n">remove_switch_handler</span><span class="p">(</span>
+            <span class="s1">&#39;s_claw_position_1&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">stop_moving</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">switch_controller</span><span class="o">.</span><span class="n">remove_switch_handler</span><span class="p">(</span>
+            <span class="s1">&#39;s_claw_position_1&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">release</span><span class="p">,</span> <span class="n">state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">switch_controller</span><span class="o">.</span><span class="n">remove_switch_handler</span><span class="p">(</span>
+            <span class="s1">&#39;s_claw_position_2&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">release</span><span class="p">)</span>
 
-        self.machine.events.post(&#39;claw_disabled&#39;)
+        <span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">events</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s1">&#39;claw_disabled&#39;</span><span class="p">)</span>
 
-    def move_left(self):
-        &quot;&quot;&quot;Start the claw moving to the left.&quot;&quot;&quot;
-        # before we turn on the driver to move the claw, make sure we&#39;re not
-        # at the left limit
-        if (self.machine.switch_controller.is_active(&#39;s_claw_position_2&#39;) and
-                self.machine.switch_controller.is_active(&#39;s_claw_position_1&#39;)):
-            return
-        self.machine.coils[&#39;c_claw_motor_left&#39;].enable()
+    <span class="k">def</span><span class="w"> </span><span class="nf">move_left</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Start the claw moving to the left.&quot;&quot;&quot;</span>
+        <span class="c1"># before we turn on the driver to move the claw, make sure we&#39;re not</span>
+        <span class="c1"># at the left limit</span>
+        <span class="k">if</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">switch_controller</span><span class="o">.</span><span class="n">is_active</span><span class="p">(</span><span class="s1">&#39;s_claw_position_2&#39;</span><span class="p">)</span> <span class="ow">and</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">switch_controller</span><span class="o">.</span><span class="n">is_active</span><span class="p">(</span><span class="s1">&#39;s_claw_position_1&#39;</span><span class="p">)):</span>
+            <span class="k">return</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">coils</span><span class="p">[</span><span class="s1">&#39;c_claw_motor_left&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">enable</span><span class="p">()</span>
 
-    def move_right(self):
-        &quot;&quot;&quot;Start the claw moving to the right.&quot;&quot;&quot;
-        # before we turn on the driver to move the claw, make sure we&#39;re not
-        # at the right limit
-        if (self.machine.switch_controller.is_active(&#39;s_claw_position_1&#39;) and
-                self.machine.switch_controller.is_inactive(&#39;s_claw_position_2&#39;)):
-            return
-        self.machine.coils[&#39;c_claw_motor_right&#39;].enable()
+    <span class="k">def</span><span class="w"> </span><span class="nf">move_right</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Start the claw moving to the right.&quot;&quot;&quot;</span>
+        <span class="c1"># before we turn on the driver to move the claw, make sure we&#39;re not</span>
+        <span class="c1"># at the right limit</span>
+        <span class="k">if</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">switch_controller</span><span class="o">.</span><span class="n">is_active</span><span class="p">(</span><span class="s1">&#39;s_claw_position_1&#39;</span><span class="p">)</span> <span class="ow">and</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">switch_controller</span><span class="o">.</span><span class="n">is_inactive</span><span class="p">(</span><span class="s1">&#39;s_claw_position_2&#39;</span><span class="p">)):</span>
+            <span class="k">return</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">coils</span><span class="p">[</span><span class="s1">&#39;c_claw_motor_right&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">enable</span><span class="p">()</span>
 
-    def stop_moving(self):
-        &quot;&quot;&quot;Stop the claw moving.&quot;&quot;&quot;
-        self.machine.coils[&#39;c_claw_motor_left&#39;].disable()
-        self.machine.coils[&#39;c_claw_motor_right&#39;].disable()
+    <span class="k">def</span><span class="w"> </span><span class="nf">stop_moving</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Stop the claw moving.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">coils</span><span class="p">[</span><span class="s1">&#39;c_claw_motor_left&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">disable</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">coils</span><span class="p">[</span><span class="s1">&#39;c_claw_motor_right&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">disable</span><span class="p">()</span>
 
-    def release(self):
-        &quot;&quot;&quot;Release the ball by disabling the claw magnet.&quot;&quot;&quot;
-        self.disable_claw_magnet()
-        self.auto_release_in_progress = False
+    <span class="k">def</span><span class="w"> </span><span class="nf">release</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Release the ball by disabling the claw magnet.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">disable_claw_magnet</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">auto_release_in_progress</span> <span class="o">=</span> <span class="kc">False</span>
 
-        # Disable the claw since it doesn&#39;t have a ball anymore
-        self.disable()
+        <span class="c1"># Disable the claw since it doesn&#39;t have a ball anymore</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">disable</span><span class="p">()</span>
 
-    def auto_release(self):
-        &quot;&quot;&quot;Aumatically move and release the ball.&quot;&quot;&quot;
-        # disable the switches since the machine is in control now
-        self.disable()
+    <span class="k">def</span><span class="w"> </span><span class="nf">auto_release</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Aumatically move and release the ball.&quot;&quot;&quot;</span>
+        <span class="c1"># disable the switches since the machine is in control now</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">disable</span><span class="p">()</span>
 
-        # If we&#39;re at the left limit, we need to move right before we can
-        # release the ball.
-        if (self.machine.switch_controller.is_active(&#39;s_claw_position_2&#39;) and
-                self.machine.switch_controller.is_active(&#39;s_claw_position_1&#39;)):
-            self.machine.switch_controller.add_switch_handler(
-                &#39;s_claw_position_1&#39;, self.release, state=0)
-            # move right, drop when switch 1 opens
-            self.move_right()
+        <span class="c1"># If we&#39;re at the left limit, we need to move right before we can</span>
+        <span class="c1"># release the ball.</span>
+        <span class="k">if</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">switch_controller</span><span class="o">.</span><span class="n">is_active</span><span class="p">(</span><span class="s1">&#39;s_claw_position_2&#39;</span><span class="p">)</span> <span class="ow">and</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">switch_controller</span><span class="o">.</span><span class="n">is_active</span><span class="p">(</span><span class="s1">&#39;s_claw_position_1&#39;</span><span class="p">)):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">switch_controller</span><span class="o">.</span><span class="n">add_switch_handler</span><span class="p">(</span>
+                <span class="s1">&#39;s_claw_position_1&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">release</span><span class="p">,</span> <span class="n">state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+            <span class="c1"># move right, drop when switch 1 opens</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">move_right</span><span class="p">()</span>
 
-        # If we&#39;re at the right limit, we need to move left before we can
-        # release the ball
-        elif (self.machine.switch_controller.is_active(&#39;s_claw_position_1&#39;) and
-                self.machine.switch_controller.is_inactive(&#39;s_claw_position_2&#39;)):
-            self.machine.switch_controller.add_switch_handler(
-                &#39;s_claw_position_2&#39;, self.release)
-            # move left, drop when switch 2 closes
-            self.move_left()
+        <span class="c1"># If we&#39;re at the right limit, we need to move left before we can</span>
+        <span class="c1"># release the ball</span>
+        <span class="k">elif</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">switch_controller</span><span class="o">.</span><span class="n">is_active</span><span class="p">(</span><span class="s1">&#39;s_claw_position_1&#39;</span><span class="p">)</span> <span class="ow">and</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">switch_controller</span><span class="o">.</span><span class="n">is_inactive</span><span class="p">(</span><span class="s1">&#39;s_claw_position_2&#39;</span><span class="p">)):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">switch_controller</span><span class="o">.</span><span class="n">add_switch_handler</span><span class="p">(</span>
+                <span class="s1">&#39;s_claw_position_2&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">release</span><span class="p">)</span>
+            <span class="c1"># move left, drop when switch 2 closes</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">move_left</span><span class="p">()</span>
 
-        # If we&#39;re not at any limit, we can release the ball now.
-        else:
-            self.release()
+        <span class="c1"># If we&#39;re not at any limit, we can release the ball now.</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
 
-    def get_ball(self):
-        &quot;&quot;&quot;Get a ball from the elevator.&quot;&quot;&quot;
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_ball</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get a ball from the elevator.&quot;&quot;&quot;</span>
 
-        # If there&#39;s no game in progress, we&#39;re going to auto pickup and
-        # drop the ball with no player input
+        <span class="c1"># If there&#39;s no game in progress, we&#39;re going to auto pickup and</span>
+        <span class="c1"># drop the ball with no player input</span>
 
-        if not self.machine.game:
-            self.auto_release_in_progress = True
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">game</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">auto_release_in_progress</span> <span class="o">=</span> <span class="kc">True</span>
 
-        # If the claw is not already in the ball pickup position, then move it
-        # to the right.
-        if not (self.machine.switch_controller.is_active(&#39;s_claw_position_1&#39;) and
-                self.machine.switch_controller.is_inactive(&#39;s_claw_position_2&#39;)):
-            self.move_right()
+        <span class="c1"># If the claw is not already in the ball pickup position, then move it</span>
+        <span class="c1"># to the right.</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">switch_controller</span><span class="o">.</span><span class="n">is_active</span><span class="p">(</span><span class="s1">&#39;s_claw_position_1&#39;</span><span class="p">)</span> <span class="ow">and</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">switch_controller</span><span class="o">.</span><span class="n">is_inactive</span><span class="p">(</span><span class="s1">&#39;s_claw_position_2&#39;</span><span class="p">)):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">move_right</span><span class="p">()</span>
 
-            self.machine.switch_controller.add_switch_handler(
-                &#39;s_claw_position_1&#39;, self.do_pickup)
+            <span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">switch_controller</span><span class="o">.</span><span class="n">add_switch_handler</span><span class="p">(</span>
+                <span class="s1">&#39;s_claw_position_1&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">do_pickup</span><span class="p">)</span>
 
-        # If the claw is in position for a pickup, we can do that pickup now
-        else:
-            self.do_pickup()
+        <span class="c1"># If the claw is in position for a pickup, we can do that pickup now</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">do_pickup</span><span class="p">()</span>
 
-    def do_pickup(self):
-        &quot;&quot;&quot;Pickup a ball from the elevator&quot;&quot;&quot;
-        self.stop_moving()
-        self.machine.switch_controller.remove_switch_handler(
-            &#39;s_claw_position_1&#39;, self.do_pickup)
-        self.enable_claw_magnet()
-        self.machine.coils[&#39;c_elevator_motor&#39;].enable()
-        self.machine.switch_controller.add_switch_handler(&#39;s_elevator_index&#39;,
-                                                          self.stop_elevator)
+    <span class="k">def</span><span class="w"> </span><span class="nf">do_pickup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Pickup a ball from the elevator&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">stop_moving</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">switch_controller</span><span class="o">.</span><span class="n">remove_switch_handler</span><span class="p">(</span>
+            <span class="s1">&#39;s_claw_position_1&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">do_pickup</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">enable_claw_magnet</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">coils</span><span class="p">[</span><span class="s1">&#39;c_elevator_motor&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">enable</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">switch_controller</span><span class="o">.</span><span class="n">add_switch_handler</span><span class="p">(</span><span class="s1">&#39;s_elevator_index&#39;</span><span class="p">,</span>
+                                                          <span class="bp">self</span><span class="o">.</span><span class="n">stop_elevator</span><span class="p">)</span>
 
-        # If this is not an auto release, enable control of the claw for the
-        # player
-        if not self.auto_release_in_progress:
-            self.enable()
+        <span class="c1"># If this is not an auto release, enable control of the claw for the</span>
+        <span class="c1"># player</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">auto_release_in_progress</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">enable</span><span class="p">()</span>
 
-    def stop_elevator(self):
-        &quot;&quot;&quot;Stop the elevator.&quot;&quot;&quot;
-        self.machine.coils[&#39;c_elevator_motor&#39;].disable()
+    <span class="k">def</span><span class="w"> </span><span class="nf">stop_elevator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Stop the elevator.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">coils</span><span class="p">[</span><span class="s1">&#39;c_elevator_motor&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">disable</span><span class="p">()</span>
 
-        if self.auto_release_in_progress:
-            self.auto_release()
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">auto_release_in_progress</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">auto_release</span><span class="p">()</span>
 
-    def light_claw(self, **kwargs):
-        &quot;&quot;&quot;Lights the claw.&quot;&quot;&quot;
+    <span class="k">def</span><span class="w"> </span><span class="nf">light_claw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Lights the claw.&quot;&quot;&quot;</span>
 
-        # Lighting the claw just enables the diverter so that the ball shot
-        # that way will go to the elevator. Once the ball hits the elevator,
-        # the other methods kick in to deliver it to the claw, and then once
-        # the claw has it, the player can move and release it on their own.
-        self.machine.diverters[&#39;diverter&#39;].enable()
+        <span class="c1"># Lighting the claw just enables the diverter so that the ball shot</span>
+        <span class="c1"># that way will go to the elevator. Once the ball hits the elevator,</span>
+        <span class="c1"># the other methods kick in to deliver it to the claw, and then once</span>
+        <span class="c1"># the claw has it, the player can move and release it on their own.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">diverters</span><span class="p">[</span><span class="s1">&#39;diverter&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">enable</span><span class="p">()</span>
 
-    def disable_claw_magnet(self):
-        &quot;&quot;&quot;Disable the claw magnet.&quot;&quot;&quot;
-        self.machine.coils[&#39;c_claw_magnet&#39;].disable()
+    <span class="k">def</span><span class="w"> </span><span class="nf">disable_claw_magnet</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Disable the claw magnet.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">coils</span><span class="p">[</span><span class="s1">&#39;c_claw_magnet&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">disable</span><span class="p">()</span>
 
-    def enable_claw_magnet(self):
-        &quot;&quot;&quot;Enable the claw magnet.&quot;&quot;&quot;
-        self.machine.coils[&#39;c_claw_magnet&#39;].enable()
+    <span class="k">def</span><span class="w"> </span><span class="nf">enable_claw_magnet</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Enable the claw magnet.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">coils</span><span class="p">[</span><span class="s1">&#39;c_claw_magnet&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">enable</span><span class="p">()</span>
 </code></pre></div>
 <hr />
 <div class="admonition question">

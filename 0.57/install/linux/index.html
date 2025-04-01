@@ -34956,9 +34956,9 @@ this command to check what is installed:</p>
 <span class="go">pip3.9 install mpf-monitor</span>
 </code></pre></div>
 <p>Now you should be ready to use mpf, for a first test run</p>
-<p><div class="highlight"><pre><span></span><code><span class="go">mpf --version</span>
+<div class="highlight"><pre><span></span><code><span class="go">mpf --version</span>
 </code></pre></div>
-You should see a version number printed, as time of writing it is 0.56.2. Maybe you see some higher
+<p>You should see a version number printed, as time of writing it is 0.56.2. Maybe you see some higher
 number. If you get a message that the command <code>mpf</code> is not being found or known you might have to add the location of the
 command to your <code>PATH</code> variable. Most likely (it depends on the shell type you use) you need to add to your <code>.profile</code> or <code>.bashrc</code> file an entry like</p>
 <div class="highlight"><pre><span></span><code><span class="go">export PATH=&quot;$PATH:/home/user/.local/bin&quot;</span>
@@ -34983,25 +34983,25 @@ command-line options.</p>
 <p>If you see a Failed to initialize MPF exception when trying to start MPF
 with Multimorphic P-ROC/P3-ROC boards with Python 3.8.</p>
 <p>Example Error:</p>
-<div class="highlight"><pre><span></span><code>Failed to initialize MPF
-Traceback (most recent call last):
-File “/usr/local/lib/python3.8/dist-packages/mpf/platforms/p_roc_common.py”, line 31, in &lt;module&gt;
-  import pinproc
-ModuleNotFoundError: No module named ‘pinproc’
-During handling of the above exception, another exception occurred:
-Traceback (most recent call last):
-File “/usr/local/lib/python3.8/dist-packages/mpf/platforms/p_roc_common.py”, line 41, in &lt;module&gt;
-  raise ImportError
-ImportError: No module named ‘pinproc’
+<div class="highlight"><pre><span></span><code><span class="go">Failed to initialize MPF</span>
+<span class="go">Traceback (most recent call last):</span>
+<span class="go">File “/usr/local/lib/python3.8/dist-packages/mpf/platforms/p_roc_common.py”, line 31, in &lt;module&gt;</span>
+<span class="go">  import pinproc</span>
+<span class="go">ModuleNotFoundError: No module named ‘pinproc’</span>
+<span class="go">During handling of the above exception, another exception occurred:</span>
+<span class="go">Traceback (most recent call last):</span>
+<span class="go">File “/usr/local/lib/python3.8/dist-packages/mpf/platforms/p_roc_common.py”, line 41, in &lt;module&gt;</span>
+<span class="go">  raise ImportError</span>
+<span class="go">ImportError: No module named ‘pinproc’</span>
 </code></pre></div>
 <p>Try Changing <code>Edit install-proc:</code></p>
 <p>From:</p>
-<div class="highlight"><pre><span></span><code>cd pypinproc
-sudo python3 setup.py install
+<div class="highlight"><pre><span></span><code><span class="go">cd pypinproc</span>
+<span class="go">sudo python3 setup.py install</span>
 </code></pre></div>
 <p>To:</p>
-<div class="highlight"><pre><span></span><code>cd pypinproc
-python3 setup.py install --user
+<div class="highlight"><pre><span></span><code><span class="go">cd pypinproc</span>
+<span class="go">python3 setup.py install --user</span>
 </code></pre></div>
 <h2 id="keeping-mpf-up-to-date">Keeping MPF up-to-date</h2>
 <p>To upgrade MPF just re-run the installer which will make sure that you

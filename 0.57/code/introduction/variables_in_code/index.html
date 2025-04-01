@@ -34856,29 +34856,29 @@ icons & this code generated via https://realfavicongenerator.net
 <p>Player variables are only accessible when a game is running. Be prepared that the current player may change in a multiplayer game.</p>
 <p>Inside a (game) mode you can access the current player using <code>self.player</code>. Alternatively, you can use <code>self.machine.game.player</code> but be aware that both <code>self.machine.game</code> and <code>self.machine.game.player</code> may be None. Using the current player is probably the most common use case, but you can as well access the player variable of a specific player in code.</p>
 <p>You can use player variables like this:</p>
-<div class="highlight"><pre><span></span><code>player = self.machine.game.player    # do not persist the player because it may change
-                                     # alternatively use self.player in modes
+<div class="highlight"><pre><span></span><code><span class="n">player</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">game</span><span class="o">.</span><span class="n">player</span>    <span class="c1"># do not persist the player because it may change</span>
+                                     <span class="c1"># alternatively use self.player in modes</span>
 
-if not player:
-   return    # do something reasonable here but do not crash in the next line
+<span class="k">if</span> <span class="ow">not</span> <span class="n">player</span><span class="p">:</span>
+   <span class="k">return</span>    <span class="c1"># do something reasonable here but do not crash in the next line</span>
 
-# read player variable
-self.machine.log.info(player[&quot;my_variable&quot;])
+<span class="c1"># read player variable</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">player</span><span class="p">[</span><span class="s2">&quot;my_variable&quot;</span><span class="p">])</span>
 
-# set a variable
-player[&quot;my_variable&quot;] = 17
+<span class="c1"># set a variable</span>
+<span class="n">player</span><span class="p">[</span><span class="s2">&quot;my_variable&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">17</span>
 </code></pre></div>
 <h2 id="machine-variables-in-code">Machine Variables in Code</h2>
 <p>You can use machine variables by calling into the MPF machine.</p>
-<div class="highlight"><pre><span></span><code># read machine variable
-self.machine.log.info(self.machine.variables.get_machine_var(&quot;my_variable&quot;))
+<div class="highlight"><pre><span></span><code><span class="c1"># read machine variable</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">variables</span><span class="o">.</span><span class="n">get_machine_var</span><span class="p">(</span><span class="s2">&quot;my_variable&quot;</span><span class="p">))</span>
 
-# configure variable to persist to disk and expire after 1 day (optional)
-# alternatively you can also use &quot;machine_vars&quot; in config to achieve the same
-self.machine.variables.configure_machine_var(&quot;my_variable&quot;, persist=True, expire_secs=86400)
+<span class="c1"># configure variable to persist to disk and expire after 1 day (optional)</span>
+<span class="c1"># alternatively you can also use &quot;machine_vars&quot; in config to achieve the same</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">variables</span><span class="o">.</span><span class="n">configure_machine_var</span><span class="p">(</span><span class="s2">&quot;my_variable&quot;</span><span class="p">,</span> <span class="n">persist</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">expire_secs</span><span class="o">=</span><span class="mi">86400</span><span class="p">)</span>
 
-# set a variable
-self.machine.variables.set_machine_var(&quot;my_variable&quot;, 17)
+<span class="c1"># set a variable</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">variables</span><span class="o">.</span><span class="n">set_machine_var</span><span class="p">(</span><span class="s2">&quot;my_variable&quot;</span><span class="p">,</span> <span class="mi">17</span><span class="p">)</span>
 </code></pre></div>
 <hr />
 <div class="admonition question">

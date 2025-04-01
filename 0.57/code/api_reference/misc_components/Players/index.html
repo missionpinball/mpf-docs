@@ -34774,11 +34774,11 @@ icons & this code generated via https://realfavicongenerator.net
 <p>It also contains a player_list attribute which is a list of the player instances (in order) which you can use to access the non-current player.</p>
 <p>This Player class is responsible for tracking player variables which is a dictionary of key/value pairs maintained on a per-player basis. There are several ways they can be used:</p>
 <p>First, player variables can be accessed as attributes of the player object directly. For example, to set a player variable foo for the current player, you could use:</p>
-<div class="highlight"><pre><span></span><code>self.machine.player.foo = 0
+<div class="highlight"><pre><span></span><code><span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">player</span><span class="o">.</span><span class="n">foo</span> <span class="o">=</span> <span class="mi">0</span>
 </code></pre></div>
 <p>If that variable didn’t exist, it will be automatically created.</p>
 <p>You can get the value of player variables by accessing them directly. For example:</p>
-<div class="highlight"><pre><span></span><code>print(self.machine.player.foo)  # prints 0
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">player</span><span class="o">.</span><span class="n">foo</span><span class="p">)</span>  <span class="c1"># prints 0</span>
 </code></pre></div>
 <p>If you attempt to access a player variable that doesn’t exist, it will automatically be created with a value of 0.</p>
 <p>Every time a player variable is created or changed, an MPF event is posted in the form player_ plus the variable name. For example, creating or changing the foo variable will cause an event called player_foo to be posted.</p>
@@ -34791,9 +34791,9 @@ icons & this code generated via https://realfavicongenerator.net
 </ul>
 <p>For the change parameter, it will attempt to subtract the old value from the new value. If that works, it will return the result as the change. If it doesn’t work (like if you’re not storing numbers in this variable), then the change parameter will be True if the new value is different and False if the value didn’t change.</p>
 <p>For examples, the following three lines:</p>
-<div class="highlight"><pre><span></span><code>self.machine.player.score = 0
-self.machine.player.score += 500
-self.machine.player.score = 1200
+<div class="highlight"><pre><span></span><code><span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">player</span><span class="o">.</span><span class="n">score</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">player</span><span class="o">.</span><span class="n">score</span> <span class="o">+=</span> <span class="mi">500</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">player</span><span class="o">.</span><span class="n">score</span> <span class="o">=</span> <span class="mi">1200</span>
 </code></pre></div>
 <p>will cause the following three events to be posted:</p>
 <p>player_score with Args: value=0, change=0, prev_value=0 player_score with Args: value=500, change=500, prev_value=0 player_score with Args: value=1200, change=700, prev_value=500</p>

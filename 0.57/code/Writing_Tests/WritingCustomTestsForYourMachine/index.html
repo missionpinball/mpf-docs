@@ -34979,50 +34979,50 @@ icons & this code generated via https://realfavicongenerator.net
 <p>Our specific method is called test_step_2_mpf_startup(). (Also it has to start with “test”). When the tests are run each method represents a separate “run” of MPF. The test runner will start up MPF and get it all up and running, and then it will move through the code in the test method, then it will cleanly shut down MPF when it’s done. If there are multiple test methods, then the test running will start and stop MPF multiple times. The key is that each test method is run against a “fresh” MPF copy.</p>
 <p>These test methods will also load the machine config files (just like if the command mpf was run the regular way).</p>
 <p>Anyway, in our test method, we have the only actual line that does anything:</p>
-<div class="highlight"><pre><span></span><code>self.assertModeRunning(&#39;attract&#39;)
+<div class="highlight"><pre><span></span><code><span class="bp">self</span><span class="o">.</span><span class="n">assertModeRunning</span><span class="p">(</span><span class="s1">&#39;attract&#39;</span><span class="p">)</span>
 </code></pre></div>
 <p>This just tests (“asserts”) that a mode called “attract” is running. There are all sorts of MPF-specific assertion methods which we’ll cover in later steps of this tutorial.</p>
 <h3 id="4-run-your-test">4. Run your test</h3>
 <p>You can run your tests via the command prompt from your machine folder. (In other words, the same place where you run mpf to run your machine.)</p>
 <p>The exact command to run is <code>python -m unittest</code>. This should produce output similar to the following:</p>
-<div class="highlight"><pre><span></span><code>C:\pinball\your_machine&gt;python -m unittest
-C:\Python34\lib\imp.py:32: PendingDeprecationWarning: the imp module is deprecated in favour of importlib; see the module&#39;s documentation for alternative uses
-  PendingDeprecationWarning)
-.
-----------------------------------------------------------------------
-Ran 1 test in 0.734s
+<div class="highlight"><pre><span></span><code><span class="go">C:\pinball\your_machine&gt;python -m unittest</span>
+<span class="go">C:\Python34\lib\imp.py:32: PendingDeprecationWarning: the imp module is deprecated in favour of importlib; see the module&#39;s documentation for alternative uses</span>
+<span class="go">  PendingDeprecationWarning)</span>
+<span class="go">.</span>
+<span class="go">----------------------------------------------------------------------</span>
+<span class="go">Ran 1 test in 0.734s</span>
 
-OK
+<span class="go">OK</span>
 
-C:\pinball\your_machine&gt;
+<span class="go">C:\pinball\your_machine&gt;</span>
 </code></pre></div>
 <p>That warning about the deprecation can be ignored (if you even have it.. you might not). The important thing is the message towards the bottom: “Ran 1 test in 0.734s” and the “OK” below it. That means your test passed!</p>
 <h3 id="5-check-out-a-failed-test">5. Check out a failed test</h3>
 <p>When you’re writing unit tests, you’ll end up dealing with failed tests a lot! So let’s purposefully change the test so it fails. In this case, change the line which asserts a mode called “attract” is running to look for a mode called “foo” instead, like this:</p>
-<div class="highlight"><pre><span></span><code>self.assertModeRunning(&#39;foo&#39;)
+<div class="highlight"><pre><span></span><code><span class="bp">self</span><span class="o">.</span><span class="n">assertModeRunning</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">)</span>
 </code></pre></div>
 <p>Save the file and rerun the tests and you should see results like this:</p>
-<div class="highlight"><pre><span></span><code>C:\pinball\your_machine&gt;python -m unittest
-C:\Python34\lib\imp.py:32: PendingDeprecationWarning: the imp module is deprecated in favour of importlib; see the module&#39;s documentation for alternative uses
-  PendingDeprecationWarning)
-F
-======================================================================
-FAIL: test_mpf_starts (tests.test_step_2.TestTutorialMachine)
-Tests Step 2 of the tutorial
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File &quot;C:\pinball\your_machine\tests\test_step_2.py&quot;, line 18, in test_mpf_starts
-    self.assertModeRunning(&#39;foo&#39;)
-  File &quot;C:\Python34\lib\site-packages\mpf\tests\MpfTestCase.py&quot;, line 576, in assertModeRunning
-    raise AssertionError(&quot;Mode {} not known.&quot;.format(mode_name))
-AssertionError: Mode foo not known.
+<div class="highlight"><pre><span></span><code><span class="go">C:\pinball\your_machine&gt;python -m unittest</span>
+<span class="go">C:\Python34\lib\imp.py:32: PendingDeprecationWarning: the imp module is deprecated in favour of importlib; see the module&#39;s documentation for alternative uses</span>
+<span class="go">  PendingDeprecationWarning)</span>
+<span class="go">F</span>
+<span class="go">======================================================================</span>
+<span class="go">FAIL: test_mpf_starts (tests.test_step_2.TestTutorialMachine)</span>
+<span class="go">Tests Step 2 of the tutorial</span>
+<span class="go">----------------------------------------------------------------------</span>
+<span class="go">Traceback (most recent call last):</span>
+<span class="go">  File &quot;C:\pinball\your_machine\tests\test_step_2.py&quot;, line 18, in test_mpf_starts</span>
+<span class="go">    self.assertModeRunning(&#39;foo&#39;)</span>
+<span class="go">  File &quot;C:\Python34\lib\site-packages\mpf\tests\MpfTestCase.py&quot;, line 576, in assertModeRunning</span>
+<span class="go">    raise AssertionError(&quot;Mode {} not known.&quot;.format(mode_name))</span>
+<span class="go">AssertionError: Mode foo not known.</span>
 
-----------------------------------------------------------------------
-Ran 1 test in 0.594s
+<span class="go">----------------------------------------------------------------------</span>
+<span class="go">Ran 1 test in 0.594s</span>
 
-FAILED (failures=1)
+<span class="go">FAILED (failures=1)</span>
 
-C:\pinball\your_machine&gt;
+<span class="go">C:\pinball\your_machine&gt;</span>
 </code></pre></div>
 <p>Note that we see the test run failed, with one failure, and that we can scroll up and see the specific name of the test that failed along with the line that failed, and information about the failure. (In this case it tells us that the mode “foo” is not known.)</p>
 <p>So to get this test to work, you either need to change your MPF config to start a mode called “foo”, or you need to change the test back to looking for a mode called “attract”. :)</p>

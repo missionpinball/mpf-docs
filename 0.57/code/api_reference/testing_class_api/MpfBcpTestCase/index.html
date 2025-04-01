@@ -34781,7 +34781,7 @@ icons & this code generated via https://realfavicongenerator.net
 </ul>
 <p>This method will cause anything scheduled during the time to run, including things like delays, timers, etc.</p>
 <p>Advancing the clock will happen in multiple small steps if things are scheduled to happen during this advance. For example, you can advance the clock 10 seconds like this:</p>
-<div class="highlight"><pre><span></span><code>self.advance_time_and_run(10)
+<div class="highlight"><pre><span></span><code><span class="bp">self</span><span class="o">.</span><span class="n">advance_time_and_run</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 </code></pre></div>
 <p>If there is a delay callback that is scheduled to happen in 2 seconds, then this method will advance the clock 2 seconds, process that delay, and then advance the remaining 8 seconds.</p>
 <p><code>assertAlmostEqual(first, second, places=None, msg=None, delta=None)</code></p>
@@ -34802,12 +34802,12 @@ icons & this code generated via https://realfavicongenerator.net
 </ul>
 <p><code>assertCountEqual(first, second, msg=None)</code></p>
 <p>An unordered sequence comparison asserting that the same elements, regardless of order. If the same element occurs more than once, it verifies that the elements occur the same number of times.</p>
-<div class="highlight"><pre><span></span><code>self.assertEqual(Counter(list(first)),
-  Counter(list(second)))
+<div class="highlight"><pre><span></span><code><span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">Counter</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">first</span><span class="p">)),</span>
+  <span class="n">Counter</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">second</span><span class="p">)))</span>
 </code></pre></div>
 <p>Example:
-<div class="highlight"><pre><span></span><code>[0, 1, 1] and [1, 0, 1] compare equal.
-[0, 0, 1] and [0, 1] compare unequal.
+<div class="highlight"><pre><span></span><code><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="ow">and</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="n">compare</span> <span class="n">equal</span><span class="o">.</span>
+<span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="ow">and</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="n">compare</span> <span class="n">unequal</span><span class="o">.</span>
 </code></pre></div></p>
 <p><code>assertDictContainsSubset(subset, dictionary, msg=None)</code></p>
 <p>Checks whether dictionary is a superset of subset.</p>
@@ -34823,16 +34823,16 @@ icons & this code generated via https://realfavicongenerator.net
 <p>If you want to reset the times count, you can mock the event again.</p>
 <p>Note that the event must be mocked via self.mock_event() first in order to use this method.</p>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>self.mock_event(&#39;my_event&#39;)
-self.assertEventNotCalled(&#39;my_event&#39;)  # This will pass
+<div class="highlight"><pre><span></span><code><span class="bp">self</span><span class="o">.</span><span class="n">mock_event</span><span class="p">(</span><span class="s1">&#39;my_event&#39;</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">assertEventNotCalled</span><span class="p">(</span><span class="s1">&#39;my_event&#39;</span><span class="p">)</span>  <span class="c1"># This will pass</span>
 
-self.post_event(&#39;my_event&#39;)
-self.assertEventCalled(&#39;my_event&#39;) # This will pass
-self.assertEventCalled(&#39;my_event&#39;, 1)  # This will pass
+<span class="bp">self</span><span class="o">.</span><span class="n">post_event</span><span class="p">(</span><span class="s1">&#39;my_event&#39;</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">assertEventCalled</span><span class="p">(</span><span class="s1">&#39;my_event&#39;</span><span class="p">)</span> <span class="c1"># This will pass</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">assertEventCalled</span><span class="p">(</span><span class="s1">&#39;my_event&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># This will pass</span>
 
-self.post_event(&#39;my_event&#39;)
-self.assertEventCalled(&#39;my_event&#39;) # This will pass
-self.assertEventCalled(&#39;my_event&#39;, 2)  # This will pass
+<span class="bp">self</span><span class="o">.</span><span class="n">post_event</span><span class="p">(</span><span class="s1">&#39;my_event&#39;</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">assertEventCalled</span><span class="p">(</span><span class="s1">&#39;my_event&#39;</span><span class="p">)</span> <span class="c1"># This will pass</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">assertEventCalled</span><span class="p">(</span><span class="s1">&#39;my_event&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>  <span class="c1"># This will pass</span>
 </code></pre></div>
 <p><code>assertEventCalledWith(event_name, **kwargs)</code></p>
 <p>Assert an event was called with certain kwargs.</p>
@@ -34842,12 +34842,12 @@ self.assertEventCalled(&#39;my_event&#39;, 2)  # This will pass
 <li><strong>**kwargs</strong> – Name/value parameters to check.</li>
 </ul>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>self.mock_event(&#39;jackpot&#39;)
+<div class="highlight"><pre><span></span><code><span class="bp">self</span><span class="o">.</span><span class="n">mock_event</span><span class="p">(</span><span class="s1">&#39;jackpot&#39;</span><span class="p">)</span>
 
-self.post_event(&#39;jackpot&#39;, count=1, first_time=True)
-self.assertEventCalled(&#39;jackpot&#39;)  # This will pass
-self.assertEventCalledWith(&#39;jackpot&#39;, count=1, first_time=True)  # This will also pass
-self.assertEventCalledWith(&#39;jackpot&#39;, count=1, first_time=False)  # This will fail
+<span class="bp">self</span><span class="o">.</span><span class="n">post_event</span><span class="p">(</span><span class="s1">&#39;jackpot&#39;</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">first_time</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">assertEventCalled</span><span class="p">(</span><span class="s1">&#39;jackpot&#39;</span><span class="p">)</span>  <span class="c1"># This will pass</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">assertEventCalledWith</span><span class="p">(</span><span class="s1">&#39;jackpot&#39;</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">first_time</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># This will also pass</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">assertEventCalledWith</span><span class="p">(</span><span class="s1">&#39;jackpot&#39;</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">first_time</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>  <span class="c1"># This will fail</span>
 </code></pre></div>
 <p><code>assertEventNotCalled(event_name)</code></p>
 <p>Assert that event was not called.</p>
@@ -34902,11 +34902,11 @@ self.assertEventCalledWith(&#39;jackpot&#39;, count=1, first_time=False)  # This
 <p>Fail unless a log message of level level or higher is emitted on logger_name or its children. If omitted, level defaults to INFO and logger defaults to the root logger.</p>
 <p>This method must be used as a context manager, and will yield a recording object with two attributes: output and records. At the end of the context manager, the output attribute will be a list of the matching formatted log messages and the records attribute will be a list of the corresponding LogRecord objects.</p>
 <p>Example:</p>
-<div class="highlight"><pre><span></span><code>with self.assertLogs(&#39;foo&#39;, level=&#39;INFO&#39;) as cm:
-  logging.getLogger(&#39;foo&#39;).info(&#39;first message&#39;)
-  logging.getLogger(&#39;foo.bar&#39;).error(&#39;second message&#39;)
-self.assertEqual(cm.output, [&#39;INFO:foo:first message&#39;,
-  &#39;ERROR:foo.bar:second message&#39;])
+<div class="highlight"><pre><span></span><code><span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">assertLogs</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="s1">&#39;INFO&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">cm</span><span class="p">:</span>
+  <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;first message&#39;</span><span class="p">)</span>
+  <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s1">&#39;foo.bar&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s1">&#39;second message&#39;</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">cm</span><span class="o">.</span><span class="n">output</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;INFO:foo:first message&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;ERROR:foo.bar:second message&#39;</span><span class="p">])</span>
 </code></pre></div>
 <p><code>assertMachineVarEqual(value, machine_var)</code></p>
 <p>Assert that a machine variable exists and has a certain value.</p>
@@ -34941,15 +34941,15 @@ self.assertEqual(cm.output, [&#39;INFO:foo:first message&#39;,
 <p><code>assertRaises(expected_exception, *args, **kwargs)</code></p>
 <p>Fail unless an exception of class expected_exception is raised by the callable when invoked with specified positional and keyword arguments. If a different type of exception is raised, it will not be caught, and the test case will be deemed to have suffered an error, exactly as for an unexpected exception.</p>
 <p>If called with the callable and arguments omitted, will return a context object used like this:</p>
-<p><div class="highlight"><pre><span></span><code>with self.assertRaises(SomeException):
-  do_something()
+<div class="highlight"><pre><span></span><code><span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">assertRaises</span><span class="p">(</span><span class="n">SomeException</span><span class="p">):</span>
+  <span class="n">do_something</span><span class="p">()</span>
 </code></pre></div>
-An optional keyword argument ‘msg’ can be provided when assertRaises is used as a context object.</p>
+<p>An optional keyword argument ‘msg’ can be provided when assertRaises is used as a context object.</p>
 <p>The context manager keeps a reference to the exception as the ‘exception’ attribute. This allows you to inspect the exception after the assertion:</p>
-<div class="highlight"><pre><span></span><code>with self.assertRaises(SomeException) as cm:
-  do_something()
-the_exception = cm.exception
-self.assertEqual(the_exception.error_code, 3)
+<div class="highlight"><pre><span></span><code><span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">assertRaises</span><span class="p">(</span><span class="n">SomeException</span><span class="p">)</span> <span class="k">as</span> <span class="n">cm</span><span class="p">:</span>
+  <span class="n">do_something</span><span class="p">()</span>
+<span class="n">the_exception</span> <span class="o">=</span> <span class="n">cm</span><span class="o">.</span><span class="n">exception</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">the_exception</span><span class="o">.</span><span class="n">error_code</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 </code></pre></div>
 <p><code>assertRaisesRegex(expected_exception, expected_regex, *args, **kwargs)</code></p>
 <p>Asserts that the message in a raised exception matches a regex.</p>
@@ -34997,15 +34997,15 @@ self.assertEqual(the_exception.error_code, 3)
 <p><code>assertWarns(expected_warning, *args, **kwargs)</code></p>
 <p>Fail unless a warning of class warnClass is triggered by the callable when invoked with specified positional and keyword arguments. If a different type of warning is triggered, it will not be handled: depending on the other warning filtering rules in effect, it might be silenced, printed out, or raised as an exception.</p>
 <p>If called with the callable and arguments omitted, will return a context object used like this:</p>
-<div class="highlight"><pre><span></span><code>with self.assertWarns(SomeWarning):
-  do_something()
+<div class="highlight"><pre><span></span><code><span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">assertWarns</span><span class="p">(</span><span class="n">SomeWarning</span><span class="p">):</span>
+  <span class="n">do_something</span><span class="p">()</span>
 </code></pre></div>
 <p>An optional keyword argument ‘msg’ can be provided when assertWarns is used as a context object.</p>
 <p>The context manager keeps a reference to the first matching warning as the ‘warning’ attribute; similarly, the ‘filename’ and ‘lineno’ attributes give you information about the line of Python code from which the warning was triggered. This allows you to inspect the warning after the assertion:</p>
-<div class="highlight"><pre><span></span><code>with self.assertWarns(SomeWarning) as cm:
-  do_something()
-the_warning = cm.warning
-self.assertEqual(the_warning.some_attribute, 147)
+<div class="highlight"><pre><span></span><code><span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">assertWarns</span><span class="p">(</span><span class="n">SomeWarning</span><span class="p">)</span> <span class="k">as</span> <span class="n">cm</span><span class="p">:</span>
+  <span class="n">do_something</span><span class="p">()</span>
+<span class="n">the_warning</span> <span class="o">=</span> <span class="n">cm</span><span class="o">.</span><span class="n">warning</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">the_warning</span><span class="o">.</span><span class="n">some_attribute</span><span class="p">,</span> <span class="mi">147</span><span class="p">)</span>
 </code></pre></div>
 <p><code>assertWarnsRegex(expected_warning, expected_regex, *args, **kwargs)</code></p>
 <p>Asserts that the message in a triggered warning matches a regexp. Basic functioning is similar to assertWarns() with the addition that only warnings whose messages also match the regular expression are considered successful matches.</p>
@@ -35028,140 +35028,105 @@ self.assertEqual(the_warning.some_attribute, 147)
 <p>You should override this method in your own test class to point to the config file you need for your tests.
 Returns:    A string name of the machine config file to use, complete with the .yaml file extension.</p>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>def get_config_file(self):
-  return &#39;my_config.yaml&#39;
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">get_config_file</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+  <span class="k">return</span> <span class="s1">&#39;my_config.yaml&#39;</span>
 </code></pre></div>
 <p><code>get_enable_plugins()</code></p>
 <p>Control whether tests in this class should load MPF plugins.</p>
 <p>Returns: True or False</p>
 <p>The default is False. To load plugins in your test class, add the following:</p>
-<p><div class="highlight"><pre><span></span><code>def get_enable_plugins(self):
-  return True
-`
-
-`get_machine_path()`
-
-Return a string name of the path to the machine folder to use for the tests in this class.
-
-You should override this method in your own test class to point to the machine folder root you need for your tests.
-Returns:    A string name of the machine path to use
-
-For example:
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">get_enable_plugins</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+  <span class="k">return</span> <span class="kc">True</span>
 </code></pre></div>
-def get_machine_path(self):
-  return 'tests/machine_files/my_test/'
-<div class="highlight"><pre><span></span><code>Note that this path is relative to the MPF package root
-
-`get_options()`
-
-Return options for the machine controller.
-
-`get_platform()`
-
-Force this test class to use a certain platform.
-Returns:    String name of the platform this test class will use.
-
-If you don’t include this method in your test class, the platform will be set to virtual. If you want to use the smart virtual platform, you would add the following to your test class:
+<p><code>get_machine_path()</code></p>
+<p>Return a string name of the path to the machine folder to use for the tests in this class.</p>
+<p>You should override this method in your own test class to point to the machine folder root you need for your tests.
+Returns:    A string name of the machine path to use</p>
+<p>For example:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">get_machine_path</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+  <span class="k">return</span> <span class="s1">&#39;tests/machine_files/my_test/&#39;</span>
 </code></pre></div>
-def get_platform(self):
-  return 'smart_virtual`
-<div class="highlight"><pre><span></span><code>`get_use_bcp()
-
-Control whether tests in this class should use BCP.
-
-Returns: True or False
-
-The default is False. To use BCP in your test class, add the following:
+<p>Note that this path is relative to the MPF package root</p>
+<p><code>get_options()</code></p>
+<p>Return options for the machine controller.</p>
+<p><code>get_platform()</code></p>
+<p>Force this test class to use a certain platform.
+Returns:    String name of the platform this test class will use.</p>
+<p>If you don’t include this method in your test class, the platform will be set to virtual. If you want to use the smart virtual platform, you would add the following to your test class:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">get_platform</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+  <span class="k">return</span> <span class="s1">&#39;smart_virtual&#39;</span>
 </code></pre></div>
-def get_use_bcp(self):
-  return True
-<div class="highlight"><pre><span></span><code>`hit_and_release_switch(name)`
-
-Momentarily activates and then deactivates a switch.
-
-Parameters:
-
-* **name** – The name of the switch to hit.
-
-This method immediately activates and deactivates a switch with no time in between.
-
-`hit_and_release_switches_simultaneously(names)`
-
-Momentarily activates and then deactivates multiple switches.
-
-Switches are hit sequentially and then released sequentially. Events are only processed at the end of the sequence which is useful to reproduce race conditions when processing nearly simultaneous hits.
-
-Parameters:
-
-* **names** – The names of the switches to hit and release.
-
-`hit_switch_and_run(name, delta)`
-
-Activates a switch and advances the time.
-
-Parameters:
-
-* **name** – The name of the switch to activate.
-* **delta** – The time (in seconds) to advance the clock.
-
-Note that this method does not deactivate the switch once the time has been advanced, meaning the switch stays active. To make the switch inactive, use the release_switch_and_run().
-
-`machine_run()`
-
-Process any delays, timers, or anything else scheduled.
-
-Note this is the same as:
-
-self.advance_time_and_run(0)
-
-`mock_event(event_name)`
-
-Configure an event to be mocked.
-
-Parameters:
-
-* **event_name** – String name of the event to mock.
-
-Mocking an event is an easy way to check if an event was called without configuring some kind of callback action in your tests.
-
-Note that an event must be mocked here before it’s posted in order for assertEventNotCalled() and assertEventCalled() to work.
-
-Mocking an event will not “break” it. In other words, any other registered handlers for this event will also be called even if the event has been mocked.
-
-For example:
+<p>`get_use_bcp()</p>
+<p>Control whether tests in this class should use BCP.</p>
+<p>Returns: True or False</p>
+<p>The default is False. To use BCP in your test class, add the following:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">get_use_bcp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+  <span class="k">return</span> <span class="kc">True</span>
 </code></pre></div>
-self.mock_event('my_event')
-self.assertEventNotCalled('my_event')  # This will be True
-self.post_event('my_event')
-self.assertEventCalled('my_event')  # This will also be True
-<div class="highlight"><pre><span></span><code>`post_event(event_name, run_time=0)`
-
-Post an MPF event and optionally advance the time.
-
-Parameters:
-
-* **event_name** – String name of the event to post
-* **run_time** – How much time (in seconds) the test should advance after this event has been posted.
-
-For example, to post an event called “shot1_hit”:
+<p><code>hit_and_release_switch(name)</code></p>
+<p>Momentarily activates and then deactivates a switch.</p>
+<p>Parameters:</p>
+<ul>
+<li><strong>name</strong> – The name of the switch to hit.</li>
+</ul>
+<p>This method immediately activates and deactivates a switch with no time in between.</p>
+<p><code>hit_and_release_switches_simultaneously(names)</code></p>
+<p>Momentarily activates and then deactivates multiple switches.</p>
+<p>Switches are hit sequentially and then released sequentially. Events are only processed at the end of the sequence which is useful to reproduce race conditions when processing nearly simultaneous hits.</p>
+<p>Parameters:</p>
+<ul>
+<li><strong>names</strong> – The names of the switches to hit and release.</li>
+</ul>
+<p><code>hit_switch_and_run(name, delta)</code></p>
+<p>Activates a switch and advances the time.</p>
+<p>Parameters:</p>
+<ul>
+<li><strong>name</strong> – The name of the switch to activate.</li>
+<li><strong>delta</strong> – The time (in seconds) to advance the clock.</li>
+</ul>
+<p>Note that this method does not deactivate the switch once the time has been advanced, meaning the switch stays active. To make the switch inactive, use the release_switch_and_run().</p>
+<p><code>machine_run()</code></p>
+<p>Process any delays, timers, or anything else scheduled.</p>
+<p>Note this is the same as:</p>
+<p>self.advance_time_and_run(0)</p>
+<p><code>mock_event(event_name)</code></p>
+<p>Configure an event to be mocked.</p>
+<p>Parameters:</p>
+<ul>
+<li><strong>event_name</strong> – String name of the event to mock.</li>
+</ul>
+<p>Mocking an event is an easy way to check if an event was called without configuring some kind of callback action in your tests.</p>
+<p>Note that an event must be mocked here before it’s posted in order for assertEventNotCalled() and assertEventCalled() to work.</p>
+<p>Mocking an event will not “break” it. In other words, any other registered handlers for this event will also be called even if the event has been mocked.</p>
+<p>For example:</p>
+<div class="highlight"><pre><span></span><code><span class="bp">self</span><span class="o">.</span><span class="n">mock_event</span><span class="p">(</span><span class="s1">&#39;my_event&#39;</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">assertEventNotCalled</span><span class="p">(</span><span class="s1">&#39;my_event&#39;</span><span class="p">)</span>  <span class="c1"># This will be True</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">post_event</span><span class="p">(</span><span class="s1">&#39;my_event&#39;</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">assertEventCalled</span><span class="p">(</span><span class="s1">&#39;my_event&#39;</span><span class="p">)</span>  <span class="c1"># This will also be True</span>
 </code></pre></div>
-self.post_event('shot1_hit')
-<div class="highlight"><pre><span></span><code>To post an event called “tilt” and then advance the time 1.5 seconds:
+<p><code>post_event(event_name, run_time=0)</code></p>
+<p>Post an MPF event and optionally advance the time.</p>
+<p>Parameters:</p>
+<ul>
+<li><strong>event_name</strong> – String name of the event to post</li>
+<li><strong>run_time</strong> – How much time (in seconds) the test should advance after this event has been posted.</li>
+</ul>
+<p>For example, to post an event called “shot1_hit”:</p>
+<div class="highlight"><pre><span></span><code><span class="bp">self</span><span class="o">.</span><span class="n">post_event</span><span class="p">(</span><span class="s1">&#39;shot1_hit&#39;</span><span class="p">)</span>
 </code></pre></div>
-self.post_event('tilt', 1.5)
-<div class="highlight"><pre><span></span><code>`post_event_with_params(event_name, **params)`
-
-Post an MPF event with kwarg parameters.
-
-Parameters:
-
-* **event_name** – String name of the event to post
-* ****params** – One or more kwarg key/value pairs to post with the event.
-
-For example, to post an event called “jackpot” with the parameters count=1 and first_time=True, you would use:
+<p>To post an event called “tilt” and then advance the time 1.5 seconds:</p>
+<div class="highlight"><pre><span></span><code><span class="bp">self</span><span class="o">.</span><span class="n">post_event</span><span class="p">(</span><span class="s1">&#39;tilt&#39;</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">)</span>
 </code></pre></div>
-self.post_event('jackpot', count=1, first_time=True)
-```</p>
+<p><code>post_event_with_params(event_name, **params)</code></p>
+<p>Post an MPF event with kwarg parameters.</p>
+<p>Parameters:</p>
+<ul>
+<li><strong>event_name</strong> – String name of the event to post</li>
+<li><strong>**params</strong> – One or more kwarg key/value pairs to post with the event.</li>
+</ul>
+<p>For example, to post an event called “jackpot” with the parameters count=1 and first_time=True, you would use:</p>
+<div class="highlight"><pre><span></span><code><span class="bp">self</span><span class="o">.</span><span class="n">post_event</span><span class="p">(</span><span class="s1">&#39;jackpot&#39;</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">first_time</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
 <p><code>post_relay_event_with_params(event_name, **params)</code></p>
 <p>Post a relay event synchronously and return the result.</p>
 <p><code>release_switch_and_run(name, delta)</code></p>

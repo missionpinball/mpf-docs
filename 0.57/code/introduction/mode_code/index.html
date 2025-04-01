@@ -34942,20 +34942,20 @@ icons & this code generated via https://realfavicongenerator.net
 </code></pre></div>
 <h2 id="open-up-the-new-python-file-you-just-created">Open up the new Python file you just created</h2>
 <p>Next, open the new mode code Python file you just created and add the bare minimum, which would look like this:</p>
-<div class="highlight"><pre><span></span><code>from mpf.core.mode import Mode
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">mpf.core.mode</span><span class="w"> </span><span class="kn">import</span> <span class="n">Mode</span>
 
-class Base(Mode):
-    pass
+<span class="k">class</span><span class="w"> </span><span class="nc">Base</span><span class="p">(</span><span class="n">Mode</span><span class="p">):</span>
+    <span class="k">pass</span>
 </code></pre></div>
 <p>MPF includes a Mode class which acts as the base class for every mode that runs in a game. That base class lives in the MPF package at mpf.core.mode. You can see it online in GitHub <a href="https://github.com/missionpinball/mpf/blob/dev/mpf/core/mode.py">here</a>.</p>
 <p>Notice that we named our custom class Base. You can name it whatever you want.</p>
 <h2 id="update-your-mode-config-file-to-use-the-custom-code">Update your mode config file to use the custom code</h2>
 <p>Once you create your custom mode code, you need to tell MPF that this mode uses custom code instead of just the built-in code.</p>
 <p>To do this, add a <code>code:</code> entry into the mode config file for the mode where you’re adding custom code. So in this case, that would be in the <code>/modes/base/config/base.yaml</code> file, like this:</p>
-<div class="highlight"><pre><span></span><code>mode:
-  start_events: ball_starting
-  priority: 100
-  code: base.Base
+<div class="highlight"><pre><span></span><code><span class="nt">mode</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">start_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ball_starting</span>
+<span class="w">  </span><span class="nt">priority</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="w">  </span><span class="nt">code</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">base.Base</span>
 </code></pre></div>
 <p>Note that the value for the <code>code:</code> section is the name of the Python module (the file), then a dot, then the name of the class from that file. So in this case, that’s base.Base.</p>
 <h2 id="run-your-game">Run your game!</h2>
@@ -34967,7 +34967,7 @@ class Base(Mode):
 <p><strong>mode_init:</strong> Called once when MPF is starting up</p>
 </li>
 <li>
-<p><strong>mode_start:</strong> Called every time the mode starts, just after the mode_<name>_started event is posted.</p>
+<p><strong>mode_start:</strong> Called every time the mode starts, just after the mode_(name)_started event is posted.</p>
 </li>
 <li>
 <p><strong>add_mode_event_handler:</strong> This is the same as the main add_event_handler() method from the Event Manager, except since it’s mode-specific it will also automatically remove any event handlers that you registered when the mode stops. (If you want to register event handlers that are always watching for events even when the mode is not running, you can use the regular <code>self.machine.mode.add_handler()</code> method.</p>
@@ -34994,49 +34994,49 @@ class Base(Mode):
 </ul>
 <h2 id="example-usage">Example usage</h2>
 <p>Here’s an example of some mode code in use. This example is just a bunch of random things, but again, since you’re writing code here, the sky’s the limit! Seriously you could do all your game logic in mode code and not use the MPF configs at all if you wanted to.</p>
-<div class="highlight"><pre><span></span><code>from mpf.core.mode import Mode
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">mpf.core.mode</span><span class="w"> </span><span class="kn">import</span> <span class="n">Mode</span>
 
 
-class Base(Mode):
+<span class="k">class</span><span class="w"> </span><span class="nc">Base</span><span class="p">(</span><span class="n">Mode</span><span class="p">):</span>
 
-    def mode_init(self):
-        self.machine.log.info(&quot;My custom mode code is being initialized&quot;)
-        #Technically the Python print command works as well, but make it a habit to log properly
+    <span class="k">def</span><span class="w"> </span><span class="nf">mode_init</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;My custom mode code is being initialized&quot;</span><span class="p">)</span>
+        <span class="c1">#Technically the Python print command works as well, but make it a habit to log properly</span>
 
-    def mode_start(self, **kwargs):
-        # The mode_start method needs **kwargs because some events that
-        # start modes pass additional parameters
+    <span class="k">def</span><span class="w"> </span><span class="nf">mode_start</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># The mode_start method needs **kwargs because some events that</span>
+        <span class="c1"># start modes pass additional parameters</span>
 
-        self.machine.log.info(&quot;My custom mode code is starting&quot;)
+        <span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;My custom mode code is starting&quot;</span><span class="p">)</span>
 
-        # Set a delay to call self.my_callback() in 5 seconds
-        self.delay.add(5000, self.my_callback)
+        <span class="c1"># Set a delay to call self.my_callback() in 5 seconds</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">delay</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">5000</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">my_callback</span><span class="p">)</span>
 
-        # what player are we?
-        self.machine.log.info(self.player.number)
+        <span class="c1"># what player are we?</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">player</span><span class="o">.</span><span class="n">number</span><span class="p">)</span>
 
-        # what&#39;s the player&#39;s score?
-        self.machine.log.info(&#39;Score: {}&#39;.format(self.player.score))
+        <span class="c1"># what&#39;s the player&#39;s score?</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Score: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">player</span><span class="o">.</span><span class="n">score</span><span class="p">))</span>
 
-        self.add_mode_event_handler(&#39;player_score&#39;, self.player_score_change)
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_mode_event_handler</span><span class="p">(</span><span class="s1">&#39;player_score&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">player_score_change</span><span class="p">)</span>
 
-        # turn LED &quot;led01&quot; red
-        self.machine.leds.led01.color(&#39;red&#39;)
+        <span class="c1"># turn LED &quot;led01&quot; red</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">leds</span><span class="o">.</span><span class="n">led01</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
 
-    def my_callback(self):
-        self.machine.log.info(&quot;My delayed call was just called!&quot;)
+    <span class="k">def</span><span class="w"> </span><span class="nf">my_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;My delayed call was just called!&quot;</span><span class="p">)</span>
 
-    def player_score_change(self, **kwargs):
-        #Option 1 to log the score using kwargs
-        self.machine.log.info(&quot;Player score went up by %s, was %s and is now %s&quot;, kwargs[&#39;change&#39;], kwargs[&#39;prev_value&#39;], kwargs[&#39;value&#39;])
-        #Option 2 to log the score using the player variable
-        self.machine.log.info(&quot;The new player&#39;s score is {}&quot;.format(self.player.score))
+    <span class="k">def</span><span class="w"> </span><span class="nf">player_score_change</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1">#Option 1 to log the score using kwargs</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Player score went up by </span><span class="si">%s</span><span class="s2">, was </span><span class="si">%s</span><span class="s2"> and is now </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;change&#39;</span><span class="p">],</span> <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;prev_value&#39;</span><span class="p">],</span> <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;value&#39;</span><span class="p">])</span>
+        <span class="c1">#Option 2 to log the score using the player variable</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;The new player&#39;s score is </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">player</span><span class="o">.</span><span class="n">score</span><span class="p">))</span>
 
-    def mode_stop(self, **kwargs):
-        # The mode_stop method needs **kwargs because some events that
-        # stop modes pass additional parameters
+    <span class="k">def</span><span class="w"> </span><span class="nf">mode_stop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># The mode_stop method needs **kwargs because some events that</span>
+        <span class="c1"># stop modes pass additional parameters</span>
 
-        self.machine.log.info(&quot;My custom mode code is stopping&quot;)
+        <span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;My custom mode code is stopping&quot;</span><span class="p">)</span>
 </code></pre></div>
 <p>You can use the API reference (or just look at the source code) to see what options exist. Really you can do anything you want.</p>
 <hr />

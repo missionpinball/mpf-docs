@@ -34944,19 +34944,19 @@ icons & this code generated via https://realfavicongenerator.net
 <p>In your bonus.yaml config section, change each entry from <code>event: bonus_item_name</code> to <code>entry: bonus_item_name</code>.</p>
 <p>With this change, given a bonus entry named "completed_ramps" that was hit 3 times for a score of 3000:</p>
 <p><strong>MPF 0.57 Event:</strong>
-<div class="highlight"><pre><span></span><code>    completed_ramps{hits=3, score=3000}
+<div class="highlight"><pre><span></span><code><span class="go">completed_ramps{hits=3, score=3000}</span>
 </code></pre></div></p>
 <p><strong>MPF 0.80 Event:</strong>
-<div class="highlight"><pre><span></span><code>    bonus_entry{entry=&quot;completed_ramps&quot;, hits=3, score=3000}
+<div class="highlight"><pre><span></span><code><span class="go">bonus_entry{entry=&quot;completed_ramps&quot;, hits=3, score=3000}</span>
 </code></pre></div></p>
 <h3 id="carousel">Carousel</h3>
 <p>Carousel events have changed to use a consolidated <em>item_highlighted</em> event instead of unique events for each item.</p>
 <p>Given a carousel mode "missionselect" and an item "garrus":</p>
 <p><strong>MPF 0.57 Event:</strong>
-<div class="highlight"><pre><span></span><code>    missionselect_garrus_highlighted{direction=&quot;forwards&quot;}
+<div class="highlight"><pre><span></span><code><span class="go">missionselect_garrus_highlighted{direction=&quot;forwards&quot;}</span>
 </code></pre></div></p>
 <p><strong>MPF 0.80 Event:</strong>
-<div class="highlight"><pre><span></span><code>    item_highlighted{carousel=&quot;missionselect&quot;, item=&quot;garrus&quot;, direction=&quot;forwards&quot;}
+<div class="highlight"><pre><span></span><code><span class="go">item_highlighted{carousel=&quot;missionselect&quot;, item=&quot;garrus&quot;, direction=&quot;forwards&quot;}</span>
 </code></pre></div></p>
 <p>The new <em>item_highlighted</em> event is incorporated into GMC, but if you have other custom event handlers for carousel item selection those will need to be updated.</p>
 <h3 id="slides-and-widgets">Slides and Widgets</h3>

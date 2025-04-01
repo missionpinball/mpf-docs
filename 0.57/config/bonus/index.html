@@ -35168,16 +35168,16 @@ at the beginning of each new entry so MPF knows where one entry ends and
 one begins.</p>
 <p>Here's how an example might look based on the aliens, modes, and combos
 example just mentioned:</p>
-<div class="highlight"><pre><span></span><code>bonus_entries:
-  - event: alien_bonus
-    score: 25000
-    player_score_entry: aliens
-  - event: mode_bonus
-    score: 1000000
-    player_score_entry: num_modes
-  - event: combo_bonus
-    score: 100000
-    player_score_entry: combos
+<div class="highlight"><pre><span></span><code><span class="nt">bonus_entries</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">alien_bonus</span>
+<span class="w">    </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">25000</span>
+<span class="w">    </span><span class="nt">player_score_entry</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">aliens</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mode_bonus</span>
+<span class="w">    </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000000</span>
+<span class="w">    </span><span class="nt">player_score_entry</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">num_modes</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">combo_bonus</span>
+<span class="w">    </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100000</span>
+<span class="w">    </span><span class="nt">player_score_entry</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">combos</span>
 </code></pre></div>
 <p>Let's look at each option you can use in each bonus entry:</p>
 <h3 id="event-required">event: (required)</h3>

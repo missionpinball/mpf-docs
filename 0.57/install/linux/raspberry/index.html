@@ -35008,10 +35008,10 @@ git<span class="w"> </span>clone<span class="w"> </span>-b<span class="w"> </spa
 <p>If using nano, push Control-X to exit, Y to save. Then open the config.yaml file to turn on BCP. At the top of the file, you'll see the <code>bcp:</code> section. Simply comment out the <code>connections: None</code> line by placing a # in front of it, like this: <code># connections: None</code></p>
 <p>To run the test, ensure your virtual environment is activated (it should be since you added it to your bash profile) and that you have a display connected. </p>
 <p>Note: If you're connected via SSH, you'll need to specify which display should be used. The default is 0, but your configuration might be different. To do this, simply run the following command. Remember - you only need to do this if you're not using the local console, either directly or via VNC. (You can also add this to your .bashrc file if you want it to be set each time you log in):</p>
-<p><div class="highlight"><pre><span></span><code><span class="c1"># set default display for windowed apps</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># set default display for windowed apps</span>
 <span class="nb">export</span><span class="w"> </span><span class="nv">DISPLAY</span><span class="o">=</span>:0
 </code></pre></div>
-To test MPF with the demo-man game, follow these steps:</p>
+<p>To test MPF with the demo-man game, follow these steps:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># Switch to demo-man directory</span>
 <span class="nb">cd</span><span class="w"> </span>~/mpf-git/mpf-examples/demo_man
 

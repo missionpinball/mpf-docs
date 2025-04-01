@@ -34788,6 +34788,8 @@ icons & this code generated via https://realfavicongenerator.net
 <li><strong>fraction</strong> – The fraction between 0 and 1 that is used to set the blend point between the two colors.</li>
 </ul>
 <p>Returns: An RGBColor object that is a blend between the start and end</p>
+<p><code>red</code></p>
+<p>Return the red component of the RGB color representation.</p>
 <p><code>blue</code></p>
 <p>Return the blue component of the RGB color representation.</p>
 <p><code>green</code></p>
@@ -34812,14 +34814,12 @@ with each item being an integer 0-255.</p>
 <p><code>static random_rgb() → Tuple[int, int, int]</code></p>
 <p>Generate a uniformly random RGB value.
 Returns:    A tuple of three integers with values between 0 and 255 inclusive</p>
-<p><code>red</code></p>
-<p>Return the red component of the RGB color representation.</p>
 <p><code>rgb</code></p>
 <p>Return an RGB representation of the color.</p>
 <p><code>static rgb_to_hex(rgb: Tuple[int, int, int]) → str</code></p>
 <p>Convert an RGB color representation to a HEX color representation.</p>
-<div class="highlight"><pre><span></span><code>(r, g, b) :: r -&gt; [0, 255]
-g -&gt; [0, 255] b -&gt; [0, 255]
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="p">::</span> <span class="n">r</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">]</span>
+<span class="n">g</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">]</span> <span class="n">b</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">]</span>
 </code></pre></div>
 <p>Parameters:</p>
 <ul>
