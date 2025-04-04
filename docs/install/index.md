@@ -1,11 +1,11 @@
 ---
-title: Downloading & Installing MPF (2023 Version)
+title: Downloading & Installing MPF
 ---
 
 # Installing MPF
 
 
-The current stable version of MPF is `0.57.1`, and the upcoming release is `0.80.0`.
+The current stable version of MPF is `0.57.3`, and the upcoming release is `0.80.0`.
 
 !!! note "New MPF Coming Soon!"
 
