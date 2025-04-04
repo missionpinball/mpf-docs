@@ -2,13 +2,13 @@
 title: GMC Tilt Slides
 ---
 
-# Tilt Slides in GMC
+# Tilt Mode Slide in GMC
 
 GMC provides a default slide for handling warnings and tilt, and the standard [tilt mode](../../game_logic/modes/tilt.md)
 in the MPF configuration provides a set of automatic hooks to display the slide with different messages.
 
 The previous guide, [Bonus Slides in GMC](bonus_mode.md), walks through creating your own slide
-to override the default provided by MPF. Regarding the GMC slide files, Tilt slide customization works in just the same way.
+to override the default provided by MPF. Regarding the GMC slide file, Tilt slide customization works in just the same way.
 
 ## Configure Tilt Settings
 
@@ -23,7 +23,7 @@ If you use a number larger than three for your [tilt:warnings_to_tilt setting](.
 these further warning events do not have default slides provided, nor slide_player hooks.
 
 For example, if you change the setting to 4 and wanted to use the text "UH OH" for the third warning,
-you could declare the `slide_player` extension in your overriding tilt mode file:
+you could define the `slide_player` extension in your overriding tilt mode file:
 
 ``` yaml
 ##! mode: modes/tilt/config/tilt.yaml
@@ -39,11 +39,10 @@ slide_player:
 
 There are two basic approaches to customizing the tilt slide.
 If you only want the standard warning and tilt text (and any custom further warning texts per the previous section),
-but want to add various display elements, you can provide a custom slide with an event variable for `text`.
+but want to add various display elements, you can provide a custom slide with a MPFVariable node configured for the event variable `text`.
 
-The if you want further complexity or different behaviors around the slides, but still want to use the
-default tilt mode, you can override the `slide_player` from the default tilt mode and use slides in
-any way you want.
+If instead you want further complexity or different behaviors around the slides, but still want to use the
+default tilt mode for its game logic, you can override the `slide_player` from the default tilt mode and use slides in any way you want.
 
 ## Approach 1: Replace the default slide `tscn` file
 

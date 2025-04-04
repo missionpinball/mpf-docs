@@ -671,7 +671,7 @@ nav:
       - Random Sound Pools: gmc/guides/random-sound-pools.md
       - Random Slide Children: gmc/guides/random-slide-children.md
       - Bonus Mode Slide: gmc/guides/bonus_mode.md
-      - Tilt Mode Slides: gmc/guides/tilt_mode.md
+      - Tilt Mode Slide: gmc/guides/tilt_mode.md
       - Spanning Multiple Monitors: gmc/guides/spanning-multiple-monitors.md
       - Display Filter Effects: gmc/guides/window-filters.md
       - Launching MPF Game with Godot: gmc/guides/launching-the-mpf-game-with-godot.md

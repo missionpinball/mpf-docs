@@ -24,7 +24,7 @@ The most basic of shows, "on" just turns a light or lights on to its default col
 ### Color
 
 This show does not allow for selection of light color. The default on color
-of the light will be used if none has been declared on the device.
+of the light will be used if none has been defined on the device.
 See: [lights:default_on_color](../config/lights.md#default_on_color).
 
 ### Tokens
