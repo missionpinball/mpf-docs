@@ -94,7 +94,7 @@ icons & this code generated via https://realfavicongenerator.net
     <div data-md-component="skip">
       
         
-        <a href="#tilt-slides-in-gmc" class="md-skip">
+        <a href="#tilt-mode-slide-in-gmc" class="md-skip">
           Skip to content
         </a>
       
@@ -15982,7 +15982,7 @@ icons & this code generated via https://realfavicongenerator.net
   
   
   <span class="md-ellipsis">
-    Tilt Mode Slides
+    Tilt Mode Slide
     
   </span>
   
@@ -15995,7 +15995,7 @@ icons & this code generated via https://realfavicongenerator.net
   
   
   <span class="md-ellipsis">
-    Tilt Mode Slides
+    Tilt Mode Slide
     
   </span>
   
@@ -34915,11 +34915,11 @@ icons & this code generated via https://realfavicongenerator.net
   
 
 
-<h1 id="tilt-slides-in-gmc">Tilt Slides in GMC</h1>
+<h1 id="tilt-mode-slide-in-gmc">Tilt Mode Slide in GMC</h1>
 <p>GMC provides a default slide for handling warnings and tilt, and the standard <a href="../../../game_logic/modes/tilt/">tilt mode</a>
 in the MPF configuration provides a set of automatic hooks to display the slide with different messages.</p>
 <p>The previous guide, <a href="../bonus_mode/">Bonus Slides in GMC</a>, walks through creating your own slide
-to override the default provided by MPF. Regarding the GMC slide files, Tilt slide customization works in just the same way.</p>
+to override the default provided by MPF. Regarding the GMC slide file, Tilt slide customization works in just the same way.</p>
 <h2 id="configure-tilt-settings">Configure Tilt Settings</h2>
 <p>If you don't have a tilt mode already, follow the general <a href="../../../game_logic/tilt/">tilt guide</a>.
 The <a href="../../../config/tilt/#optional-settings">configuration settings</a> have not been changed between MPF 0.57 and 0.80.</p>
@@ -34929,7 +34929,7 @@ The first tilt warning sends the text "WARNING", the second sends "DANGER", and 
 <p>If you use a number larger than three for your <a href="../../../config/tilt/#warnings_to_tilt">tilt:warnings_to_tilt setting</a>,
 these further warning events do not have default slides provided, nor slide_player hooks.</p>
 <p>For example, if you change the setting to 4 and wanted to use the text "UH OH" for the third warning,
-you could declare the <code>slide_player</code> extension in your overriding tilt mode file:</p>
+you could define the <code>slide_player</code> extension in your overriding tilt mode file:</p>
 <div class="highlight"><pre><span></span><code><span class="c1">##! mode: modes/tilt/config/tilt.yaml</span>
 <span class="nt">slide_player</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">tilt_warning_3</span><span class="p">:</span><span class="w"> </span><span class="c1"># event</span>
@@ -34941,10 +34941,9 @@ you could declare the <code>slide_player</code> extension in your overriding til
 <h2 id="creating-a-custom-tilt-slide">Creating a custom Tilt Slide</h2>
 <p>There are two basic approaches to customizing the tilt slide.
 If you only want the standard warning and tilt text (and any custom further warning texts per the previous section),
-but want to add various display elements, you can provide a custom slide with an event variable for <code>text</code>.</p>
-<p>The if you want further complexity or different behaviors around the slides, but still want to use the
-default tilt mode, you can override the <code>slide_player</code> from the default tilt mode and use slides in
-any way you want.</p>
+but want to add various display elements, you can provide a custom slide with a MPFVariable node configured for the event variable <code>text</code>.</p>
+<p>If instead you want further complexity or different behaviors around the slides, but still want to use the
+default tilt mode for its game logic, you can override the <code>slide_player</code> from the default tilt mode and use slides in any way you want.</p>
 <h2 id="approach-1-replace-the-default-slide-tscn-file">Approach 1: Replace the default slide <code>tscn</code> file</h2>
 <p>To replace the default tilt slide, you need to create a new slide named <code>tilt.tscn</code> whereever you
 create your GMC slides. The only event token provided by the default config is <code>text</code>, so
