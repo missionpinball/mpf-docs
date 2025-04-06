@@ -42,25 +42,24 @@ your config. (If you don't include them, the default will be used).
 Single value, type: one of the following options: play, remove. Default:
 `play`
 
-`play`
+#### `play`:
 
-:   Makes the slide active. Note that the actual slide shown on a
-    display will be whichever active slide has the highest priority, so
-    depending on what other slides are active, this action might not
-    technically show the slide.
+Makes the slide active. Note that the actual slide shown on a
+display will be whichever active slide has the highest priority, so
+depending on what other slides are active, this action might not
+technically show the slide.
 
-    Also note that if a transition is specified (either in the slide
-    definition or the `transition:` section here, then than transition
-    will be used when showing this slide.
+Also note that if a transition is specified (either in the slide
+definition or the `transition:` section here, then than transition
+will be used when showing this slide.
 
-`remove`
+#### `remove`:
 
-:   Removes the slide from the list of active slides. If this slide is
-    the highest priority slide that's currently showing, then the
-    next-highest priority slide will be shown in its place.
+Removes the slide from the list of active slides. If this slide is
+the highest priority slide that's currently showing, then the
+next-highest priority slide will be shown in its place.
 
-    If a `transition_out:` setting is used, then that transition will be
-    used here.
+If a `transition_out:` setting is used, then that transition will be used here.
 
 For example, to remove *slide1* when the event *remove_slide_1* is
 posted:
