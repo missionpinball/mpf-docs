@@ -119,19 +119,19 @@ For
 [conditional events](../../events/overview/conditional.md), the prefix for ball devices is
 `device.ball_devices.(name)`.
 
-*available_balls*
+### *available_balls*:
 
-:   Number of balls that are available to be ejected. This differs from
-    *balls* since it's possible that this device could have balls that
-    are being used for some other eject, and thus not available.
+Number of balls that are available to be ejected. This differs from
+*balls* since it's possible that this device could have balls that
+are being used for some other eject, and thus not available.
 
-*state*
+### *state*:
 
-:   What state this device is in.
+What state this device is in.
 
-*balls*
+### *balls*:
 
-:   How many balls this device is currently holding.
+How many balls this device is currently holding.
 
 ## Related How To guides
 

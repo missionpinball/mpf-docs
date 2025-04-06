@@ -32,9 +32,9 @@ For
 [conditional events](../events/overview/conditional.md), the prefix for accelerometers is
 `device.accelerometers.(name)`.
 
-*value*
+### *value*:
 
-:   A three-item tuple (x, y, z) of the current accelerometer values.
+A three-item tuple (x, y, z) of the current accelerometer values.
 
 ## Related How To guides
 
@@ -42,7 +42,7 @@ For
 
 ## Related Events
 
-*None*
+### *None*:
 
-:   Varies based on the configured (you can configure events to be
-    emitted when certain G-force thresholds are exceeded).
+Varies based on the configured (you can configure events to be
+emitted when certain G-force thresholds are exceeded).

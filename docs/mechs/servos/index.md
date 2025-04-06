@@ -49,10 +49,9 @@ For
 [dynamic values](../../config/instructions/dynamic_values.md) and
 [conditional events](../../events/overview/conditional.md), the prefix for servos is `device.servos.(name)`.
 
-*position*
+### *position*:
 
-:   Value, stored in memory of what servo position should be, on a scale
-    from 0.0 to 1.0.
+Value, stored in memory of what servo position should be, on a scale from 0.0 to 1.0.
 
 Related How To guides:
 

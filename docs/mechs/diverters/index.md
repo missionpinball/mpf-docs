@@ -176,20 +176,20 @@ For
 [dynamic values](../../config/instructions/dynamic_values.md) and
 [conditional events](../../events/overview/conditional.md), the prefix for diverters is `device.diverters.(name)`.
 
-*active*
+### *active*:
 
-:   Boolean (true/false) as to whether this diverter is actively on and
-    in the powered state.
+Boolean (true/false) as to whether this diverter is actively on and
+in the powered state.
 
-*enabled*
+### *enabled*:
 
-:   Boolean (true/false) as to whether this diverter is enabled (meaning
-    it will be activated when a ball approaches it).
+Boolean (true/false) as to whether this diverter is enabled (meaning
+it will be activated when a ball approaches it).
 
-*eject_state*
+### *eject_state*:
 
-:   Boolean (true/false) which shows whether this diverter will be
-    activating to route a ball eject from an upstream ball device.
+Boolean (true/false) which shows whether this diverter will be
+activating to route a ball eject from an upstream ball device.
 
 ## Related How To guides
 

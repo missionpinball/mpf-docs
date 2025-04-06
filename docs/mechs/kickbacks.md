@@ -46,9 +46,9 @@ For
 [dynamic values](../config/instructions/dynamic_values.md) and
 [conditional events](../events/overview/conditional.md), the prefix for kickbacks is `device.kickbacks.(name)`.
 
-*enabled*
+### *enabled*:
 
-:   Boolean (true/false) which shows whether this kickback is enabled.
+Boolean (true/false) which shows whether this kickback is enabled.
 
 ## Related Events
 

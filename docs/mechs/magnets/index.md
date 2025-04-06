@@ -95,14 +95,13 @@ For
 [dynamic values](../../config/instructions/dynamic_values.md) and
 [conditional events](../../events/overview/conditional.md), the prefix for magnets is `device.magnets.(name)`.
 
-*active*
+### *active*:
 
-:   Boolean (true/false) as to whether this magnet is actively on and in
-    the powered state.
+Boolean (true/false) as to whether this magnet is actively on and in the powered state.
 
-*enabled*
+### *enabled*:
 
-:   Boolean (true/false) which shows whether this ball hold is enabled.
+Boolean (true/false) which shows whether this ball hold is enabled.
 
 ## Related How To guides
 
