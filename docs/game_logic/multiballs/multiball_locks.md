@@ -11,7 +11,6 @@ Related Config File Sections:
 * [multiball_locks:](../../config/multiball_locks.md)
 
 
-
 Multiball locks work in concert with multiball logic to "lock" balls
 for multiball. To use a multiball lock, you configure it for the ball
 device (or devices) that will be used to lock balls, and then when a
@@ -25,33 +24,33 @@ Video about ball locks and multiballs:
 
 Multiball locks can be configured in one of four modes of operation:
 
-`virtual_only`
+## `virtual_only`
 
-:   When a new ball is locked, the lock count is increased. Period. It
-    does not matter how many physical balls are locked. Separate counts
-    are maintained per player. This is usually the best option for locks
-    in modern machines.
+When a new ball is locked, the lock count is increased. Period. It
+does not matter how many physical balls are locked. Separate counts
+are maintained per player. This is usually the best option for locks
+in modern machines.
 
-`physical_only`
+## `physical_only`
 
-:   As the name implies, the number of balls locked is always the same
-    as the physical number of balls in the lock. A new ball locked will
-    increase the lock count for that player and lock the ball. However
-    if another player "steals" one of the locked balls, then when the
-    previous player starts their turn, the lock count is updated based
-    on the physical balls locked. This is mostly for EM and early solid
-    state machines where balls would be locked in different places on
-    the playfield but the next player could steal them if the player who
-    locked them didn't get multiball started.
+As the name implies, the number of balls locked is always the same
+as the physical number of balls in the lock. A new ball locked will
+increase the lock count for that player and lock the ball. However
+if another player "steals" one of the locked balls, then when the
+previous player starts their turn, the lock count is updated based
+on the physical balls locked. This is mostly for EM and early solid
+state machines where balls would be locked in different places on
+the playfield but the next player could steal them if the player who
+locked them didn't get multiball started.
 
-`min_virtual_physical`
+## `min_virtual_physical`
 
-:   Similar to physical only except a player locking a ball will always
-    increase the lock count even if that same ball is ejected again.
+Similar to physical only except a player locking a ball will always
+increase the lock count even if that same ball is ejected again.
 
-`no_virtual`
+## `no_virtual`:
 
-:   MPF forgets everything when the player changes.
+MPF forgets everything when the player changes.
 
 Ball locks are stored on a per-player basic and are NOT based on the
 number of balls that are physically contained in any ball devices.
@@ -85,15 +84,15 @@ For
 [conditional events](../../events/overview/conditional.md), the prefix for multiball locks is
 `device.multiball_locks.(name)`.
 
-*enabled*
+### *enabled*:
 
-:   Boolean (true/false) as to whether this multiball lock is enabled.
+Boolean (true/false) as to whether this multiball lock is enabled.
 
-*locked_balls*
+### *locked_balls*:
 
-:   The number of balls that are locked. Note that how this number is
-    calculated varies depending on how the ball counting strategy is
-    configured for this multiball lock.
+The number of balls that are locked. Note that how this number is
+calculated varies depending on how the ball counting strategy is
+configured for this multiball lock.
 
 ## Related How To guides
 
@@ -104,5 +103,5 @@ For
 
 ## Related Events
 
-* [multiball_lock_(name)_locked_ball](../../events/multiball_lock_multiball_lock_locked_ball.md)
+* [multiball_lock_(name)\_locked_ball](../../events/multiball_lock_multiball_lock_locked_ball.md)
 * [multiball_lock_(name)_full](../../events/multiball_lock_multiball_lock_full.md)

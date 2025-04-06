@@ -144,7 +144,6 @@ For
 [conditional events](../../events/overview/conditional.md), the prefix for state machines is
 `device.state_machines.(name)`.
 
-*state*
+### *state*:
 
-:   The state of this state machine as string. This will be one of your
-    entries in your states section.
+The state of this state machine as string. This will be one of your entries in your states section.

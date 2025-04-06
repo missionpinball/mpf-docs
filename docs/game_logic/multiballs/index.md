@@ -41,8 +41,8 @@ ball is confirmed to be on the playfield. For the first ball this
 happens when a playfield switch is hit after the eject. However, this
 will not work with more than one ball on the playfield (e.g. during a
 multiball). In this case, the launcher will wait until its eject
-timeout passed (`eject timeouts in ball_devices </config/ball_devices>`) which defaults to 10s. Therefore, you need to tune
-`eject_timeouts` of your launcher to fix this issue.
+timeout passed (`eject timeouts in ball_devices </config/ball_devices>`) which defaults to 10s.
+Therefore, you need to tune `eject_timeouts` of your launcher to fix this issue.
 
 ## Monitorable Properties
 
@@ -50,23 +50,22 @@ For
 [dynamic values](../../config/instructions/dynamic_values.md) and
 [conditional events](../../events/overview/conditional.md), the prefix for multiballs is `device.multiballs.(name)`.
 
-*balls_added_live*
+### *balls_added_live*:
 
-:   Numeric value of how many balls this multiball added into play.
+Numeric value of how many balls this multiball added into play.
 
-*balls_live_target*
+### *balls_live_target*:
 
-:   Numeric value of how many balls this multiball is attempting to keep
-    in play.
+Numeric value of how many balls this multiball is attempting to keep in play.
 
-*enabled*
+### *enabled*:
 
-:   Boolean (true/false) as to whether this multiball is enabled.
+Boolean (true/false) as to whether this multiball is enabled.
 
-*shoot_again*
+### *shoot_again*:
 
-:   Boolean (true/false) as to whether this multiball is in "shoot
-    again" mode which means it's attempting to keep live.
+Boolean (true/false) as to whether this multiball is in "shoot
+again" mode which means it's attempting to keep live.
 
 ## Related How To guides
 
@@ -78,12 +77,12 @@ For
 
 ## Related Events
 
-* [multiball_(name)_started](../../events/multiball_multiball_started.md)
-* [multiball_(name)_hurry_up](../../events/multiball_multiball_hurry_up.md)
-* [multiball_(name)_grace_period](../../events/multiball_multiball_grace_period.md)
-* [multiball_(name)_shoot_again](../../events/multiball_multiball_shoot_again.md)
-* [multiball_(name)_lost_ball](../../events/multiball_multiball_lost_ball.md)
-* [multiball_(name)_shoot_again_ended](../../events/multiball_multiball_shoot_again_ended.md)
-* [multiball_(name)_ended](../../events/multiball_multiball_ended.md)
-* [ball_save_(multiball_name)_timer_start](../../events/ball_save_multiball_timer_start.md)
-* [ball_save_(multiball_name)_add_a_ball_timer_start](../../events/ball_save_multiball_add_a_ball_timer_start.md)
+* [multiball_(name)\_started](../../events/multiball_multiball_started.md)
+* [multiball_(name)\_hurry_up](../../events/multiball_multiball_hurry_up.md)
+* [multiball_(name)\_grace_period](../../events/multiball_multiball_grace_period.md)
+* [multiball_(name)\_shoot_again](../../events/multiball_multiball_shoot_again.md)
+* [multiball_(name)\_lost_ball](../../events/multiball_multiball_lost_ball.md)
+* [multiball_(name)\_shoot_again_ended](../../events/multiball_multiball_shoot_again_ended.md)
+* [multiball_(name)\_ended](../../events/multiball_multiball_ended.md)
+* [ball_save_(multiball_name)\_timer_start](../../events/ball_save_multiball_timer_start.md)
+* [ball_save_(multiball_name)\_add_a_ball_timer_start](../../events/ball_save_multiball_add_a_ball_timer_start.md)

@@ -59,11 +59,11 @@ For
 [dynamic values](../../config/instructions/dynamic_values.md) and
 [conditional events](../../events/overview/conditional.md), the prefix for shot groups is `device.shot_groups.(name)`.
 
-*common_state*
+### *common_state*
 
-:   The name of the common state of all shots in the group. Will be
-    `None` if there is no common state. State names depend on the
-    profile of your shots (by default `lit` and `unlit`).
+The name of the common state of all shots in the group. Will be
+`None` if there is no common state. State names depend on the
+profile of your shots (by default `lit` and `unlit`).
 
 ## Shot Group Overview:
 

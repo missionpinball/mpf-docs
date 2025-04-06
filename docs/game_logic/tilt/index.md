@@ -118,13 +118,13 @@ For
 [dynamic values](../../config/instructions/dynamic_values.md) and
 [conditional events](../../events/overview/conditional.md), the prefix for ball devices is `mode.tilt.<name>`.
 
-*tilt_settle_ms_remaining*
+### *tilt_settle_ms_remaining*:
 
-:   Milliseconds until the tilt bob is considered settled.
+Milliseconds until the tilt bob is considered settled.
 
-*tilt_warnings_remaining*
+### *tilt_warnings_remaining*:
 
-:   Remaining warnings until the game is tilted.
+Remaining warnings until the game is tilted.
 
 Related How To guides:
 

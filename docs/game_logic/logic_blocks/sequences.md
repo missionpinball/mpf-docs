@@ -65,22 +65,22 @@ For
 [dynamic values](../../config/instructions/dynamic_values.md) and
 [conditional events](../../events/overview/conditional.md), the prefix for sequences is `device.sequences.(name)`.
 
-*value*
+### *value*:
 
-:   The state of this sequence as list. There will be one entry for
-    every element in the sequence. For instance, if your sequence has
-    three elements if will be a list of len three with index 0 for the
-    status of your first element, 1 for the seconds and 2 for the third
-    element. Elements will be 0 at the beginning and turn to 1 when
-    completed.
+The state of this sequence as list. There will be one entry for
+every element in the sequence. For instance, if your sequence has
+three elements if will be a list of len three with index 0 for the
+status of your first element, 1 for the seconds and 2 for the third
+element. Elements will be 0 at the beginning and turn to 1 when
+completed.
 
-*enabled*
+### *enabled*:
 
-:   Boolean (true/false) which shows whether this sequence is enabled.
+Boolean (true/false) which shows whether this sequence is enabled.
 
-*completed*
+### *completed*:
 
-:   True if the block is completed. Otherwise False.
+True if the block is completed. Otherwise False.
 
 This is an example:
 

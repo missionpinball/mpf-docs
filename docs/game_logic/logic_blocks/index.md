@@ -12,25 +12,24 @@ achievements, and other parts of your game logic.
 
 There are four types of logic blocks in MPF:
 
-[Counter Logic Blocks](counters.md)
+## [Counter Logic Blocks](counters.md)
 
-:   Count the number of times an event happens, and when a certain
-    number is hit, a "complete" event is posted.
+Count the number of times an event happens, and when a certain
+number is hit, a "complete" event is posted.
 
-[Accrual Logic Blocks](accruals.md)
+## [Accrual Logic Blocks](accruals.md)
 
-:   Watch for several different events to occur, and once they all do
-    (no matter what order they happen in), a "complete" event is
-    posted.
+Watch for several different events to occur, and once they all do
+(no matter what order they happen in), a "complete" event is posted.
 
-[Sequence Logic Blocks](sequences.md)
+## [Sequence Logic Blocks](sequences.md)
 
-:   Watch for several different events that need to occur *in a specific
-    order*, and once they do, a "complete" event is posted.
+Watch for several different events that need to occur *in a specific
+order*, and once they do, a "complete" event is posted.
 
-[State Machine Logic Block](state_machines.md)
+## [State Machine Logic Block](state_machines.md)
 
-:   A generic state machine with arbitrary state transitions and state.
+A generic state machine with arbitrary state transitions and state.
 
 Logic blocks can be configured to store their state in player variables,
 meaning that each logic block will remember where it was from

@@ -270,48 +270,48 @@ Stepping through how we're using each setting:
 
 `show_tokens:`
 
-:   link this achievement to it's light on the playfield.
+link this achievement to it's light on the playfield.
 
-`show_when_selected: flash`
+`show_when_selected: flash`:
 
-:   Plays the show called "flash" when this achievement is selected.
-    Note that the default "flash" show is 1 sec on / 1 sec off. While
-    you can play it faster, the original Addams Family flashed the
-    lights more like .75s on / .25 off, so you'd probably want to
-    create a custom version of the "flash" show for TAF that flashed
-    them more like the original version.
+Plays the show called "flash" when this achievement is selected.
+Note that the default "flash" show is 1 sec on / 1 sec off. While
+you can play it faster, the original Addams Family flashed the
+lights more like .75s on / .25 off, so you'd probably want to
+create a custom version of the "flash" show for TAF that flashed
+them more like the original version.
 
-`show_when_completed: on`
+`show_when_completed: on`:
 
-:   Plays the show called "on" when this achievement is complete
+Plays the show called "on" when this achievement is complete
 
-`events_when_started: award_thing_multiball`
+`events_when_started: award_thing_multiball`:
 
-:   Posts an event called *award_thing_multiball* when this achievement
-    is started. We'll use this as the start event for the Thing
-    Multiball mode.
+Posts an event called *award_thing_multiball* when this achievement
+is started. We'll use this as the start event for the Thing
+Multiball mode.
 
-`enable_events: initialize_mansion, reset_mansion`
+`enable_events: initialize_mansion, reset_mansion`:
 
-:   Enables this achievement when either of the events
-    *initialize_mansion* or *reset_mansion* is posted. Prior to that,
-    this achievement will be disabled.
+Enables this achievement when either of the events
+*initialize_mansion* or *reset_mansion* is posted. Prior to that,
+this achievement will be disabled.
 
-`complete_events: award_thing_multiball`
+`complete_events: award_thing_multiball`:
 
-:   Watches for the event *award_thing_multiball*, and when it sees it,
-    it marks this achievement as complete. Notice this is the same event
-    that this achievement posts when it starts. In other words, we've
-    configured it so the achievement is complete as soon as it starts!
-    This is by design, because the rules state that once an achievement
-    is awarded, the chair can be relit immediately, and it's possible
-    to receive the next award even while the mode from the prior award
-    is still running.
+Watches for the event *award_thing_multiball*, and when it sees it,
+it marks this achievement as complete. Notice this is the same event
+that this achievement posts when it starts. In other words, we've
+configured it so the achievement is complete as soon as it starts!
+This is by design, because the rules state that once an achievement
+is awarded, the chair can be relit immediately, and it's possible
+to receive the next award even while the mode from the prior award
+is still running.
 
-`reset_events: reset_mansion`
+`reset_events: reset_mansion`:
 
-:   Watches for an event called *reset_mansion* that will reset this
-    achievement back to its initial (disabled) state.
+Watches for an event called *reset_mansion* that will reset this
+achievement back to its initial (disabled) state.
 
 This achievements configuration takes care of the following rules:
 
@@ -383,80 +383,78 @@ achievement_groups:
 
 Let's look at each of these settings:
 
-`achievements:`
+`achievements:`:
 
-:   This is just the list of the 12 achievements that make up this
-    group.
+This is just the list of the 12 achievements that make up this group.
 
-`show_tokens:`
+`show_tokens:`:
 
-:   These are the show tokens for the group itself. In this case
-    it's the yellow light on the electric chair, since this light
-    turns on and off to indicate whether the chair or swamp can be shot
-    to award the currently selected item.
+These are the show tokens for the group itself. In this case
+it's the yellow light on the electric chair, since this light
+turns on and off to indicate whether the chair or swamp can be shot
+to award the currently selected item.
 
-`auto_select: yes`
+`auto_select: yes`:
 
-:   This is used to make sure that one achievement is selected at all
-    times. If the currently selected achievement is completed, the
-    achievement group will notice that there is no currently selected
-    achievement and it will pick one from random from the remaining
-    achievements (those that are "enabled").
+This is used to make sure that one achievement is selected at all
+times. If the currently selected achievement is completed, the
+achievement group will notice that there is no currently selected
+achievement and it will pick one from random from the remaining
+achievements (those that are "enabled").
 
-`events_when_all_completed: select_tour_mansion`
+`events_when_all_completed: select_tour_mansion`:
 
-:   Posts an event called *select_tour_mansion* once all 12 achievements
-    in this group in complete. We'll use this later to light the "tour
-    mansion" award.
+Posts an event called *select_tour_mansion* once all 12 achievements
+in this group in complete. We'll use this later to light the "tour
+mansion" award.
 
-`enable_while_no_achievement_started: no`
+`enable_while_no_achievement_started: no`:
 
-:   In our case, we do not want to automatically enable the achievement
-    group when no achievement is started, because the rules for Addams
-    Family say that the player has to shoot the center ramp or right
-    inlane to light the chair (which is enabling this achievement
-    group).
+In our case, we do not want to automatically enable the achievement
+group when no achievement is started, because the rules for Addams
+Family say that the player has to shoot the center ramp or right
+inlane to light the chair (which is enabling this achievement group).
 
-`show_when_enabled: on`
+`show_when_enabled: on`:
 
-:   This plays the show called "on" when the achievement group is in
-    the enabled state. This will have the effect of turning on the
-    yellow chair light (from the `show_tokens:` section) when the
-    achievement group is enabled and the selected item can be awarded.
+This plays the show called "on" when the achievement group is in
+the enabled state. This will have the effect of turning on the
+yellow chair light (from the `show_tokens:` section) when the
+achievement group is enabled and the selected item can be awarded.
 
-`select_random_achievement_events: sw_jet`
+`select_random_achievement_events: sw_jet`:
 
-:   In Addams Family, each pop bumper hit changes the currently selected
-    mansion award. To make this happen, we added a tag called "jet" to
-    the five pop bumper switches. (That will post an event called
-    *sw_jet* any time one of these switches is hit. Then we add that
-    event name here which will cause this achievement group to change
-    the currently selected award.
+In Addams Family, each pop bumper hit changes the currently selected
+mansion award. To make this happen, we added a tag called "jet" to
+the five pop bumper switches. (That will post an event called
+*sw_jet* any time one of these switches is hit. Then we add that
+event name here which will cause this achievement group to change
+the currently selected award.
 
-`allow_selection_change_while_disabled: yes`
+`allow_selection_change_while_disabled: yes`:
 
-:   The pop bumper hits to change the current selection happens
-    regardless of whether the group is enabled (e.g. the chair is lit)
-    or not, so we use this setting to allow that selection change to
-    happen at any time.
+The pop bumper hits to change the current selection happens
+regardless of whether the group is enabled (e.g. the chair is lit)
+or not, so we use this setting to allow that selection change to
+happen at any time.
 
-`start_selected_events: balldevice_electric_chair_ball_enter, balldevice_swamp_kickout_ball_enter, award_mansion_from_bear`
+`start_selected_events: balldevice_electric_chair_ball_enter, balldevice_swamp_kickout_ball_enter, award_mansion_from_bear`:
 
-:   A shot to either the electric chair or the swamp kickout will award
-    the selected achievement.
+A shot to either the electric chair or the swamp kickout will award
+the selected achievement.
 
-`enable_events: light_chair`
+`enable_events: light_chair`:
 
-:   When an event called *light_chair* is posted, this achievement group
-    will be enabled (which will turn on the chair light and allow the
-    selected achievement to be started via the `start_selected_events:`.
+When an event called *light_chair* is posted, this achievement group
+will be enabled (which will turn on the chair light and allow the
+selected achievement to be started via the `start_selected_events:`.
 
-`disable_events: unlight_chair`
+`disable_events: unlight_chair`:
 
-:   When an event called *unlight_chair* is posted, this achievement group
-    will be disabled. The chair light will turn off, and the
-    `start_selected_events:` will not cause the current selected
-    achievement to start.
+When an event called *unlight_chair* is posted, this achievement group
+will be disabled. The chair light will turn off, and the
+`start_selected_events:` will not cause the current selected
+achievement to start.
 
 This step takes care of:
 
