@@ -14,59 +14,59 @@ working with the sound & audio features in MPF.
 
 ## Common Digital Audio Terms
 
-Bit Depth
+### Bit Depth
 
-:   The number of bits used to represent and store a single sample. Bit
-    depth (also commonly referred to as sample resolution) determines
-    the number of possible levels that can be captured during
-    digitalization. 16-bit represents 65,536 (2 to the 16th power)
-    possible values. The MPF-MC audio library only supports 16-bit audio
-    files.
+The number of bits used to represent and store a single sample. Bit
+depth (also commonly referred to as sample resolution) determines
+the number of possible levels that can be captured during
+digitalization. 16-bit represents 65,536 (2 to the 16th power)
+possible values. The MPF-MC audio library only supports 16-bit audio
+files.
 
-Brickwall limiter
+### Brickwall limiter
 
-:   A brickwall limiter is used to ensure an audio signal does not
-    exceed a certain threshold. Any input value exceeding the threshold
-    is set to the threshold value. This is used in the mixing engine to
-    ensure 16-bit integers do not exceed their maximum value and wrap
-    around (which adds ugly sounding distortion). It is important to set
-    sound and track volume levels properly in order to avoid the
-    clipping that brickwall limiting adds when mixing signals that are
-    too loud.
+A brickwall limiter is used to ensure an audio signal does not
+exceed a certain threshold. Any input value exceeding the threshold
+is set to the threshold value. This is used in the mixing engine to
+ensure 16-bit integers do not exceed their maximum value and wrap
+around (which adds ugly sounding distortion). It is important to set
+sound and track volume levels properly in order to avoid the
+clipping that brickwall limiting adds when mixing signals that are
+too loud.
 
-[Ducking](ducking.md)
+### [Ducking](ducking.md)
 
-:   Ducking is an audio effect that lowers the level of one audio signal
-    based upon the level of another audio signal (one sound "ducks"
-    out of the way of another).
+Ducking is an audio effect that lowers the level of one audio signal
+based upon the level of another audio signal (one sound "ducks"
+out of the way of another).
 
-FLAC
+### FLAC
 
-:   Free Lossless Audio Codec (FLAC) is an audio file format which
-    allows digital audio to be losslessly compressed such that file size
-    is reduced without any information being lost.
+Free Lossless Audio Codec (FLAC) is an audio file format which
+allows digital audio to be losslessly compressed such that file size
+is reduced without any information being lost.
 
-Normalization
+### Normalization
 
-:   Normalization is the process of changing an audio recording's
-    overall volume by a fixed amount to reach a target level.
+Normalization is the process of changing an audio recording's
+overall volume by a fixed amount to reach a target level.
 
-Ogg Vorbis (OGG)
+### Ogg Vorbis (OGG)
 
-:   A free and open-source audio coding format. Ogg Vorbis is a lossy
-    compressed audio file format.
+A free and open-source audio coding format. Ogg Vorbis is a lossy
+compressed audio file format.
 
-Sample Rate
+### Sample Rate
 
-:   The number of samples per second taken from a continuous signal to
-    make a discrete signal. A common example of sample rate is CD audio
-    which is recorded at 44,100 Hz (44,100 samples per second).
+The number of samples per second taken from a continuous signal to
+make a discrete signal. A common example of sample rate is CD audio
+which is recorded at 44,100 Hz (44,100 samples per second).
 
-WAV
+### WAV
 
-:   Waveform Audio File Format is a Microsoft and IBM audio file format
-    standard for storing an audio bitstream on computers. WAV is a
-    lossless uncompressed audio file format.
+Waveform Audio File Format is a Microsoft and IBM audio file format
+standard for storing an audio bitstream on computers. WAV is a
+lossless uncompressed audio file format.
 
 ## Preparing your sound files for use in MPF
 

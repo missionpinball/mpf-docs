@@ -67,26 +67,26 @@ lights:
     number: 8-47
 ```
 
-The backbox backlight
+### The backbox backlight
 
-:   Stern SPIKE systems have controllable brightness for the white
-    lights in the backbox that illuminate the translight. All of those
-    LEDs are tied together and controlled as one with the address `0-0`.
+Stern SPIKE systems have controllable brightness for the white
+lights in the backbox that illuminate the translight. All of those
+LEDs are tied together and controlled as one with the address `0-0`.
 
-GI (General Illumination)
+### GI (General Illumination)
 
-:   GI in Stern SPIKE systems are just regular LEDs. You can tag them
-    with the tag `gi` and then turn them on in the attract mode and/or
-    use them in shows for special effects. Really there's nothing
-    special about them. They're just lights. (Just remember they're
-    controlled and defined as "lights", not as "GIs".)
+GI in Stern SPIKE systems are just regular LEDs. You can tag them
+with the tag `gi` and then turn them on in the attract mode and/or
+use them in shows for special effects. Really there's nothing
+special about them. They're just lights. (Just remember they're
+controlled and defined as "lights", not as "GIs".)
 
-Flashers
+### Flashers
 
-:   Flashers in Stern SPIKE systems are also controlled just like normal
-    lights. They just happen to be super bright, but other than that,
-    use them like any other LED. (Just remember they're controlled and
-    defined as "lights", not as "flashers".)
+Flashers in Stern SPIKE systems are also controlled just like normal
+lights. They just happen to be super bright, but other than that,
+use them like any other LED. (Just remember they're controlled and
+defined as "lights", not as "flashers".)
 
 ## RGB LEDs
 
