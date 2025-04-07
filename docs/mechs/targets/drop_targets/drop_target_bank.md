@@ -51,18 +51,17 @@ For
 [conditional events](../../../events/overview/conditional.md), the prefix for drop target banks is
 `device.drop_target_banks.(name)`.
 
-*complete*
+### *complete*:
 
-:   Boolean (true/false) which shows whether every target in this bank
-    is complete (down).
+Boolean (true/false) which shows whether every target in this bank is complete (down).
 
-*down*
+### *down*:
 
-:   Number of drop targets in the bank that are in the down state.
+Number of drop targets in the bank that are in the down state.
 
-*up*
+### *up*:
 
-:   Number of drop targets in the bank that are in the up state.
+Number of drop targets in the bank that are in the up state.
 
 ## Related How To guides
 

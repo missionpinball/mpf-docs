@@ -82,18 +82,17 @@ your config. (If you don't include them, the default will be used).
 Single value, type: one of the following options: add, remove, update.
 Default: `add`
 
-`add`
+#### `add`:
 
-:   The widget or widget group is added to the slide or display target.
+The widget or widget group is added to the slide or display target.
 
-`remove`
+#### `remove`:
 
-:   The widget or widget group is removed from the slide or display
-    target.
+The widget or widget group is removed from the slide or display target.
 
-`update`
+#### `update`:
 
-:   One or more of the widget or widget group's properties is updated.
+One or more of the widget or widget group's properties is updated.
 
 ### key:
 

@@ -39,40 +39,40 @@ spike:
 
 Some notes on the settings:
 
-port:
+### port:
 
-:   Use the port of your USB-serial adapter or of the internal serial on
-    your computer. On Windows, this will have a name like "COM5".
+Use the port of your USB-serial adapter or of the internal serial on
+your computer. On Windows, this will have a name like "COM5".
 
-baud:
+### baud:
 
-:   This needs to match the value from Step 3 in the
-    [MPF SPIKE bridge instructions](mpf-spike-bridge.md). It is used to initialize the connection to SPIKE only.
-    Afterwards, the bridge will switch to `runtime_baud`.
+This needs to match the value from Step 3 in the
+[MPF SPIKE bridge instructions](mpf-spike-bridge.md). It is used to initialize the connection to SPIKE only.
+Afterwards, the bridge will switch to `runtime_baud`.
 
-flow_control:
+### flow_control:
 
-:   If your hardware supports flow control and you connected "RTS" and
-    "CTS" in the previous steps set this to True. It will make the
-    connection much more stable at higher speeds. It can be `False` for
-    a first test.
+If your hardware supports flow control and you connected "RTS" and
+"CTS" in the previous steps set this to True. It will make the
+connection much more stable at higher speeds. It can be `False` for
+a first test.
 
-runtime_baud:
+### runtime_baud:
 
-:   Note that since only control and switch information is sent across
-    this bus, 115k baud is plenty fast enough if you choose not to use a
-    DMD. However, if you want to use a DMD you need more speed (see
-    below for details).
+Note that since only control and switch information is sent across
+this bus, 115k baud is plenty fast enough if you choose not to use a
+DMD. However, if you want to use a DMD you need more speed (see
+below for details).
 
-debug:
+### debug:
 
-:   Set this to true for print more details in the log.
+Set this to true for print more details in the log.
 
-nodes:
+### nodes:
 
-:   This is a list of the node board addresses that your system has. You
-    can get this from the manual. Here's an example from Wrestlemania
-    Pro:
+This is a list of the node board addresses that your system has. You
+can get this from the manual. Here's an example from Wrestlemania
+Pro:
 
   ![image](../images/spike_node_table.png)
 

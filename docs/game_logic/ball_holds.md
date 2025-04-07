@@ -36,13 +36,13 @@ For
 [dynamic values](../config/instructions/dynamic_values.md) and
 [conditional events](../events/overview/conditional.md), the prefix for ball holds is `device.ball_holds.(name)`.
 
-*balls_held*
+### *balls_held*:
 
-:   The number of balls this ball hold is currently holding
+The number of balls this ball hold is currently holding
 
-*enabled*
+### *enabled*:
 
-:   Boolean (true/false) which shows whether this ball hold is enabled.
+Boolean (true/false) which shows whether this ball hold is enabled.
 
 ## Related How To guides
 

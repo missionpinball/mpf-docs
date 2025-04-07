@@ -110,10 +110,10 @@ For
 [conditional events](../events/overview/conditional.md), the prefix for combo switches is
 `device.combo_switches.(name)`.
 
-*state*
+### *state*:
 
-:   String which reflects what state this combo switch is in. Options
-    wil be one of the following: *inactive*, *both* or *one*.
+String which reflects what state this combo switch is in. Options
+wil be one of the following: *inactive*, *both* or *one*.
 
 ## Related How To guides
 

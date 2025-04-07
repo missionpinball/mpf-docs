@@ -60,77 +60,76 @@ change_tick_interval, reset_tick_interval.
 Take a look at the various types of actions you can perform on timers
 with control events:
 
-`add`
+#### `add`:
 
-:   Adds the time (specified in the `value:` setting) to the timer. If
-    the value would be higher than the timer's `max_value:` setting,
-    then the value is set to the max value. Posts the
-    *timer_\(name\)_time_added* event.
+Adds the time (specified in the `value:` setting) to the timer. If
+the value would be higher than the timer's `max_value:` setting,
+then the value is set to the max value. Posts the
+*timer_\(name\)_time_added* event.
 
-    This action does not change the timer's running state.
+This action does not change the timer's running state.
 
-    The timer is checked for done after the value has been added. (So,
-    for example, if you have a timer that's set to count up, and the
-    timer finishes at 10, and the timer is currently at 6, and you add
-    value of 5, then the timer will be complete.
+The timer is checked for done after the value has been added. (So,
+for example, if you have a timer that's set to count up, and the
+timer finishes at 10, and the timer is currently at 6, and you add
+value of 5, then the timer will be complete.
 
-`subtract`
+#### `subtract`:
 
-:   Subtracts time (specified in the `value:` setting) from the timer.
-    Posts the *timer_\(name\)_time_subtracted* event and checks to see
-    if the timer is complete.
+Subtracts time (specified in the `value:` setting) from the timer.
+Posts the *timer_\(name\)_time_subtracted* event and checks to see
+if the timer is complete.
 
-`jump`
+#### `jump`:
 
-:   "Jumps" the timer to a specific new value (specified in the
-    `value:` setting) and checks to see if the timer is complete.
+"Jumps" the timer to a specific new value (specified in the
+`value:` setting) and checks to see if the timer is complete.
 
-`start`
+#### `start`:
 
-:   Starts the timer if it's not running. Does nothing if the timer is
-    already running. Posts the *timer_\(name\)_started* event.
+Starts the timer if it's not running. Does nothing if the timer is
+already running. Posts the *timer_\(name\)_started* event.
 
-`stop`
+#### `stop`:
 
-:   Stops the timer and posts the *timer_\(name\)_stopped* event.
-    Removes any outstanding "pause" delays.
+Stops the timer and posts the *timer_\(name\)_stopped* event.
+Removes any outstanding "pause" delays.
 
-`reset`
+#### `reset`:
 
-:   Changes the timers current value back to the `start_value:`. Nothing
-    else is touched, so if the timer is running, it stays running, etc.
+Changes the timers current value back to the `start_value:`. Nothing
+else is touched, so if the timer is running, it stays running, etc.
 
-`restart`
+#### `restart`:
 
-:   Acts as a combination of reset, then start.
+Acts as a combination of reset, then start.
 
-`pause`
+#### `pause`:
 
-:   Pauses the timer for a given `value:` time (in seconds). Note that
-    the timer pause value is real world seconds and does not take the
-    timers tick interval into consideration. If the pause value is 0,
-    the timer is paused indefinitely. Posts the
-    *timer_\(name\)_paused* event.
+Pauses the timer for a given `value:` time (in seconds). Note that
+the timer pause value is real world seconds and does not take the
+timers tick interval into consideration. If the pause value is 0,
+the timer is paused indefinitely. Posts the
+*timer_\(name\)_paused* event.
 
-`set_tick_interval`
+#### `set_tick_interval`:
 
-:   Sets the tick interval to a new value (specified in the `value:`
-    setting).
+Sets the tick interval to a new value (specified in the `value:` setting).
 
-`change_tick_interval`
+#### `change_tick_interval`:
 
-:   Changes the tick interval by multiplying the current tick interval
-    by the new one specified in the `value:` setting. In other words, if
-    you want to make the tick interval 10% faster, than set this to
-    `value: 1.1`. If you want to make it 50% slower, set this to
-    `value: 0.5`, etc.
+Changes the tick interval by multiplying the current tick interval
+by the new one specified in the `value:` setting. In other words, if
+you want to make the tick interval 10% faster, than set this to
+`value: 1.1`. If you want to make it 50% slower, set this to
+`value: 0.5`, etc.
 
-`reset_tick_interval`
+#### `reset_tick_interval`:
 
-:   (added in MPF 0.33)
+(added in MPF 0.33)
 
-    Resets the timer's tick interval back to the original from the
-    `tick_interval:` setting.
+Resets the timer's tick interval back to the original from the
+`tick_interval:` setting.
 
 ### event:
 

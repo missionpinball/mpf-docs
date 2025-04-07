@@ -91,57 +91,58 @@ start playing automatically. Default is `True`.
 
 Sets what happens when the video ends. Options include:
 
-`loop`
+#### `loop`:
 
-:   The video loops and starts playing again
+The video loops and starts playing again
 
-`pause`
+#### `pause`:
 
-:   The video stops and stays at the end (so it continues showing the
-    final frame)
+The video stops and stays at the end (so it continues showing the final frame)
 
-`stop`
+#### `stop`:
 
-:   The video stops and the position is reset back to the beginning.
-    This is the default.
+The video stops and the position is reset back to the beginning.
+This is the default.
 
 ### control_events:
 
 Control the playback of this video with MPF events. Options include:
 
-`play`
+#### `play`:
 
-:   Starts playing the video from its current position.
+Starts playing the video from its current position.
 
-`pause`
+#### `pause`:
 
-:   Pauses the video at its current position.
+Pauses the video at its current position.
 
-`stop`
+#### `stop`:
 
-:   Stops the video and resets the position back to the beginning.
+Stops the video and resets the position back to the beginning.
 
-`seek`
+#### `seek`:
 
-:   Moves the video to a certain position based on a percentage. `0` is
-    the beginning of the video, `1` is the end, `0.5` is 50% through,
-    etc. (This is similar to `position:`, except it's based on percent
-    instead of position.
+Moves the video to a certain position based on a percentage. `0` is
+the beginning of the video, `1` is the end, `0.5` is 50% through,
+etc. (This is similar to `position:`, except it's based on percent
+instead of position.
 
-    This setting does not change the play/stop state.
+This setting does not change the play/stop state.
 
-`position`
+#### `position`:
 
-:   Moves the video to a certain position based on the time, (in
-    seconds). In other words `value: 4.2` here would move the video to
-    the 4.2 second mark. (This is similar to `seek:` except it's based
-    on seconds instead of percent.)
+Moves the video to a certain position based on the time, (in
+seconds). In other words `value: 4.2` here would move the video to
+the 4.2 second mark. (This is similar to `seek:` except it's based
+on seconds instead of percent.)
 
-`volume`
+#### `volume`:
 
-:   Sets the volume of the video on a scale from `0` to `1`.
+Sets the volume of the video on a scale from `0` to `1`.
 
-    This setting does not change the play/stop state.
+This setting does not change the play/stop state.
+
+### Control Events:
 
 To use control events, add a `control_events:` section to the video
 widget, then create a list (with dashes) of `event:`, `action:` and

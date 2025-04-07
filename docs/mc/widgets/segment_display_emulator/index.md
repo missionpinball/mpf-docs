@@ -117,23 +117,21 @@ you don't want an initial text value, use "".
 
 The current display flash mode. Options include:
 
-`off`
+#### `off`:
 
-:   The segment display does not flash (flashing is off). This is the
-    default.
+The segment display does not flash (flashing is off). This is the default.
 
-`all`
+#### `all`:
 
-:   All characters in the display will flash.
+All characters in the display will flash.
 
-`match`
+#### `match`:
 
-:   Only the last two characters in the display will flash.
+Only the last two characters in the display will flash.
 
-`mask`
+#### `mask`:
 
-:   The `flash_mask` parameter determines which characters in the
-    display will flash.
+The `flash_mask` parameter determines which characters in the display will flash.
 
 ### flash_frequency:
 
@@ -156,14 +154,13 @@ wish for the non-flashing character positions.
 
 The type of display (7 segment, 14 segment). Options include:
 
-`7seg`
+#### `7seg`:
 
-:   The segment display emulates a 7-segment display.
+The segment display emulates a 7-segment display.
 
-`14seg`
+#### `14seg`:
 
-:   The segment display emulates a 14-segment display. This is the
-    default value.
+The segment display emulates a 14-segment display. This is the default value.
 
 ### character_count:
 

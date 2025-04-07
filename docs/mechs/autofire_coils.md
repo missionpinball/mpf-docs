@@ -207,10 +207,9 @@ For
 [dynamic values](../config/instructions/dynamic_values.md) and
 [conditional events](../events/overview/conditional.md), the prefix for autofire coils is `device.autofires.(name)`.
 
-*enabled*
+### *enabled*:
 
-:   Boolean (true/false) which shows whether this autofire coil is
-    enabled.
+Boolean (true/false) which shows whether this autofire coil is enabled.
 
 ## Fully working basic example
 
@@ -306,7 +305,6 @@ A few comments on the above example:
 
 ## Related Events
 
-*None*
+### *None*:
 
-:   The autofire coils can be configured to enable or disable based on
-    other events.
+The autofire coils can be configured to enable or disable based on other events.

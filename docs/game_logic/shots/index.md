@@ -104,15 +104,14 @@ For
 [dynamic values](../../config/instructions/dynamic_values.md) and
 [conditional events](../../events/overview/conditional.md), the prefix for multiballs is `device.shots.(name)`.
 
-*state*
+### *state*
 
-:   Index of the current state. Will start at 0 and increments when the
-    shot advances.
+Index of the current state. Will start at 0 and increments when the shot advances.
 
-*state_name*
+### *state_name*
 
-:   String representation of the state of the shot. Might be 'lit',
-    'unlit' or whatever is inside your shot_profile.
+String representation of the state of the shot. Might be 'lit',
+'unlit' or whatever is inside your shot_profile.
 
 This is an example:
 
@@ -151,9 +150,9 @@ switch `s_target` is hit and the shot is in state `lit`.
 ## Related Events
 
 * [(shot_name)_hit](../../events/shot_hit.md)
-* [(shot_name)_(profile)_hit](../../events/shot_profile_hit.md)
-* [(shot_name)_(profile)_(state)_hit](../../events/shot_profile_state_hit.md)
-* [(shot_name)_(state)_hit](../../events/shot_state_hit.md)
+* [(shot_name)\_(profile)_hit](../../events/shot_profile_hit.md)
+* [(shot_name)\_(profile)\_(state)_hit](../../events/shot_profile_state_hit.md)
+* [(shot_name)\_(state)_hit](../../events/shot_state_hit.md)
 
 Related How To Guides
 

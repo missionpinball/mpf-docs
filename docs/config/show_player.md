@@ -46,39 +46,37 @@ your config. (If you don't include them, the default will be used).
 Single value, type: one of the following options: play, stop, pause,
 resume, advance, step_back, update, queue. Default: `play`
 
-`play`
+#### `play`:
 
-:   Starts playing the show. This is the default action which will
-    happen if you don't include an `action:` setting.
+Starts playing the show. This is the default action which will
+happen if you don't include an `action:` setting.
 
-`stop`
+#### `stop`:
 
-:   Stops the show. Removes and "undoes" anything the show did, and
-    posts the show stop events.
+Stops the show. Removes and "undoes" anything the show did, and
+posts the show stop events.
 
-`pause`
+#### `pause`:
 
-:   Pauses the show by holding it at the current step. Posts the show
-    pause events.
+Pauses the show by holding it at the current step. Posts the show pause events.
 
-`resume`
+#### `resume`:
 
-:   Resumes a previously paused show.
+Resumes a previously paused show.
 
-`advance`
+#### `advance`:
 
-:   Manually advances a show to the next step. Posts the show advance
-    events.
+Manually advances a show to the next step. Posts the show advance events.
 
-`step_back`
+#### `step_back`
 
-:   Manually moves the show back to the previous step. Posts the show
-    step_back events.
+Manually moves the show back to the previous step. Posts the show
+step_back events.
 
-`update`
+#### `update`:
 
-:   Not yet implemented. In the future it will be used to change a
-    setting of a running show, like changing the playback speed.
+Not yet implemented. In the future it will be used to change a
+setting of a running show, like changing the playback speed.
 
 ### block_queue:
 

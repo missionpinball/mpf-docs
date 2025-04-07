@@ -104,11 +104,11 @@ For
 [dynamic values](../../config/instructions/dynamic_values.md) and
 [conditional events](../../events/overview/conditional.md), the prefix for lights is `device.lights.(name)`.
 
-*color*
+### *color*:
 
-:   The color of this string. If you set it to brightness values all
-    color channels will have the same value. Brightness 100 (of 255)
-    will be hex 64 and color 646464.
+The color of this string. If you set it to brightness values all
+color channels will have the same value. Brightness 100 (of 255)
+will be hex 64 and color 646464.
 
 ## Related How To guides
 

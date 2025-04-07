@@ -72,17 +72,17 @@ For
 [dynamic values](../../config/instructions/dynamic_values.md) and
 [conditional events](../../events/overview/conditional.md), the prefix for counters is `device.counters.(name)`.
 
-*value*
+### *value*:
 
-:   The count of this counter.
+The count of this counter.
 
-*enabled*
+### *enabled*:
 
-:   Boolean (true/false) which shows whether this counter is enabled.
+Boolean (true/false) which shows whether this counter is enabled.
 
-*completed*
+### *completed*:
 
-:   True if the block is completed. Otherwise False.
+True if the block is completed. Otherwise False.
 
 This is an example:
 

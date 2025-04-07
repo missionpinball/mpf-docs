@@ -122,9 +122,8 @@ Single value, type: `time string (ms) or template`
 [Instructions for entering templates](instructions/dynamic_values.md)). Default: `0`
 
 The time before the add-a-ball ball save ends (in MPF time string
-format) that will cause the [multiball](../index.md)_\(name\)_hurry_up event to be
-posted. Use this to change the script for the light or trigger other
-effect.
+format) that will cause the [multiball_(name)\_hurry_up](../events/multiball_multiball_hurry_up.md) event to be
+posted. Use this to change the script for the light or trigger other effect.
 
 ### add_a_ball_shoot_again:
 
@@ -149,21 +148,21 @@ number of balls it should add into play. Adjusting this setting is
 useful when you have multiple (or stacked) multiballs and you want to
 control how the combined counts work.
 
-*total*
+#### *total*:
 
-:   Means the `ball_count:` setting will provide a target for the total
-    number of balls that should be in play when this multiball starts.
-    So if this multiball has a `ball_count: 3`, and it starts when 2
-    balls are live on the playfield, then this multiball will only add 1
-    more ball to bring the total to 3.
+Means the `ball_count:` setting will provide a target for the total
+number of balls that should be in play when this multiball starts.
+So if this multiball has a `ball_count: 3`, and it starts when 2
+balls are live on the playfield, then this multiball will only add 1
+more ball to bring the total to 3.
 
-*add*
+#### *add*:
 
-:   Means that the `ball_count:` setting will specify the number of
-    balls that are added into play on top of whatever number of balls
-    are already in play. So if this multiball is set to `ball_count: 2`
-    and there are already 2 balls in play, then this multiball will add
-    2 more balls for a total of 4 balls live.
+Means that the `ball_count:` setting will specify the number of
+balls that are added into play on top of whatever number of balls
+are already in play. So if this multiball is set to `ball_count: 2`
+and there are already 2 balls in play, then this multiball will add
+2 more balls for a total of 4 balls live.
 
 ### ball_locks:
 
@@ -217,7 +216,7 @@ Single value, type: `time string (ms) or template`
 [Instructions for entering templates](instructions/dynamic_values.md)). Default: `0`
 
 The time before the ball save ends (in MPF time string format) that will
-cause the [multiball](../index.md)_\(name\)_hurry_up event to be posted. Use this
+cause the [multiball_(name)\_hurry_up](../events/multiball_multiball_hurry_up.md) event to be posted. Use this
 to change the script for the light or trigger other effect.
 
 ### replace_balls_in_play:
