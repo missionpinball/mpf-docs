@@ -21531,6 +21531,111 @@ icons & this code generated via https://realfavicongenerator.net
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="action:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add" class="md-nav__link">
+    <span class="md-ellipsis">
+      add:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subtract" class="md-nav__link">
+    <span class="md-ellipsis">
+      subtract:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jump" class="md-nav__link">
+    <span class="md-ellipsis">
+      jump:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start" class="md-nav__link">
+    <span class="md-ellipsis">
+      start:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stop" class="md-nav__link">
+    <span class="md-ellipsis">
+      stop:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reset" class="md-nav__link">
+    <span class="md-ellipsis">
+      reset:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restart" class="md-nav__link">
+    <span class="md-ellipsis">
+      restart:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pause" class="md-nav__link">
+    <span class="md-ellipsis">
+      pause:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_tick_interval" class="md-nav__link">
+    <span class="md-ellipsis">
+      set_tick_interval:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change_tick_interval" class="md-nav__link">
+    <span class="md-ellipsis">
+      change_tick_interval:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reset_tick_interval" class="md-nav__link">
+    <span class="md-ellipsis">
+      reset_tick_interval:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -34900,6 +35005,111 @@ icons & this code generated via https://realfavicongenerator.net
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="action:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add" class="md-nav__link">
+    <span class="md-ellipsis">
+      add:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subtract" class="md-nav__link">
+    <span class="md-ellipsis">
+      subtract:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jump" class="md-nav__link">
+    <span class="md-ellipsis">
+      jump:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start" class="md-nav__link">
+    <span class="md-ellipsis">
+      start:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stop" class="md-nav__link">
+    <span class="md-ellipsis">
+      stop:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reset" class="md-nav__link">
+    <span class="md-ellipsis">
+      reset:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restart" class="md-nav__link">
+    <span class="md-ellipsis">
+      restart:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pause" class="md-nav__link">
+    <span class="md-ellipsis">
+      pause:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_tick_interval" class="md-nav__link">
+    <span class="md-ellipsis">
+      set_tick_interval:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change_tick_interval" class="md-nav__link">
+    <span class="md-ellipsis">
+      change_tick_interval:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reset_tick_interval" class="md-nav__link">
+    <span class="md-ellipsis">
+      reset_tick_interval:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -35035,56 +35245,52 @@ start, stop, reset, restart, pause, set_tick_interval,
 change_tick_interval, reset_tick_interval.</p>
 <p>Take a look at the various types of actions you can perform on timers
 with control events:</p>
-<p><code>add</code></p>
-<p>:   Adds the time (specified in the <code>value:</code> setting) to the timer. If
-    the value would be higher than the timer's <code>max_value:</code> setting,
-    then the value is set to the max value. Posts the
-    <em>timer_(name)_time_added</em> event.</p>
-<pre><code>This action does not change the timer's running state.
-
-The timer is checked for done after the value has been added. (So,
+<h4 id="add"><code>add</code>:</h4>
+<p>Adds the time (specified in the <code>value:</code> setting) to the timer. If
+the value would be higher than the timer's <code>max_value:</code> setting,
+then the value is set to the max value. Posts the
+<em>timer_(name)_time_added</em> event.</p>
+<p>This action does not change the timer's running state.</p>
+<p>The timer is checked for done after the value has been added. (So,
 for example, if you have a timer that's set to count up, and the
 timer finishes at 10, and the timer is currently at 6, and you add
-value of 5, then the timer will be complete.
-</code></pre>
-<p><code>subtract</code></p>
-<p>:   Subtracts time (specified in the <code>value:</code> setting) from the timer.
-    Posts the <em>timer_(name)_time_subtracted</em> event and checks to see
-    if the timer is complete.</p>
-<p><code>jump</code></p>
-<p>:   "Jumps" the timer to a specific new value (specified in the
-    <code>value:</code> setting) and checks to see if the timer is complete.</p>
-<p><code>start</code></p>
-<p>:   Starts the timer if it's not running. Does nothing if the timer is
-    already running. Posts the <em>timer_(name)_started</em> event.</p>
-<p><code>stop</code></p>
-<p>:   Stops the timer and posts the <em>timer_(name)_stopped</em> event.
-    Removes any outstanding "pause" delays.</p>
-<p><code>reset</code></p>
-<p>:   Changes the timers current value back to the <code>start_value:</code>. Nothing
-    else is touched, so if the timer is running, it stays running, etc.</p>
-<p><code>restart</code></p>
-<p>:   Acts as a combination of reset, then start.</p>
-<p><code>pause</code></p>
-<p>:   Pauses the timer for a given <code>value:</code> time (in seconds). Note that
-    the timer pause value is real world seconds and does not take the
-    timers tick interval into consideration. If the pause value is 0,
-    the timer is paused indefinitely. Posts the
-    <em>timer_(name)_paused</em> event.</p>
-<p><code>set_tick_interval</code></p>
-<p>:   Sets the tick interval to a new value (specified in the <code>value:</code>
-    setting).</p>
-<p><code>change_tick_interval</code></p>
-<p>:   Changes the tick interval by multiplying the current tick interval
-    by the new one specified in the <code>value:</code> setting. In other words, if
-    you want to make the tick interval 10% faster, than set this to
-    <code>value: 1.1</code>. If you want to make it 50% slower, set this to
-    <code>value: 0.5</code>, etc.</p>
-<p><code>reset_tick_interval</code></p>
-<p>:   (added in MPF 0.33)</p>
-<pre><code>Resets the timer's tick interval back to the original from the
-`tick_interval:` setting.
-</code></pre>
+value of 5, then the timer will be complete.</p>
+<h4 id="subtract"><code>subtract</code>:</h4>
+<p>Subtracts time (specified in the <code>value:</code> setting) from the timer.
+Posts the <em>timer_(name)_time_subtracted</em> event and checks to see
+if the timer is complete.</p>
+<h4 id="jump"><code>jump</code>:</h4>
+<p>"Jumps" the timer to a specific new value (specified in the
+<code>value:</code> setting) and checks to see if the timer is complete.</p>
+<h4 id="start"><code>start</code>:</h4>
+<p>Starts the timer if it's not running. Does nothing if the timer is
+already running. Posts the <em>timer_(name)_started</em> event.</p>
+<h4 id="stop"><code>stop</code>:</h4>
+<p>Stops the timer and posts the <em>timer_(name)_stopped</em> event.
+Removes any outstanding "pause" delays.</p>
+<h4 id="reset"><code>reset</code>:</h4>
+<p>Changes the timers current value back to the <code>start_value:</code>. Nothing
+else is touched, so if the timer is running, it stays running, etc.</p>
+<h4 id="restart"><code>restart</code>:</h4>
+<p>Acts as a combination of reset, then start.</p>
+<h4 id="pause"><code>pause</code>:</h4>
+<p>Pauses the timer for a given <code>value:</code> time (in seconds). Note that
+the timer pause value is real world seconds and does not take the
+timers tick interval into consideration. If the pause value is 0,
+the timer is paused indefinitely. Posts the
+<em>timer_(name)_paused</em> event.</p>
+<h4 id="set_tick_interval"><code>set_tick_interval</code>:</h4>
+<p>Sets the tick interval to a new value (specified in the <code>value:</code> setting).</p>
+<h4 id="change_tick_interval"><code>change_tick_interval</code>:</h4>
+<p>Changes the tick interval by multiplying the current tick interval
+by the new one specified in the <code>value:</code> setting. In other words, if
+you want to make the tick interval 10% faster, than set this to
+<code>value: 1.1</code>. If you want to make it 50% slower, set this to
+<code>value: 0.5</code>, etc.</p>
+<h4 id="reset_tick_interval"><code>reset_tick_interval</code>:</h4>
+<p>(added in MPF 0.33)</p>
+<p>Resets the timer's tick interval back to the original from the
+<code>tick_interval:</code> setting.</p>
 <h3 id="event">event:</h3>
 <p>Single value, type: <code>string</code>.</p>
 <p>The event which will trigger this value.</p>

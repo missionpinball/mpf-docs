@@ -20749,6 +20749,30 @@ icons & this code generated via https://realfavicongenerator.net
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="action:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#play" class="md-nav__link">
+    <span class="md-ellipsis">
+      play:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove" class="md-nav__link">
+    <span class="md-ellipsis">
+      remove:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -34966,6 +34990,30 @@ icons & this code generated via https://realfavicongenerator.net
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="action:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#play" class="md-nav__link">
+    <span class="md-ellipsis">
+      play:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove" class="md-nav__link">
+    <span class="md-ellipsis">
+      remove:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -35154,22 +35202,19 @@ your config. (If you don't include them, the default will be used).</p>
 <h3 id="action">action:</h3>
 <p>Single value, type: one of the following options: play, remove. Default:
 <code>play</code></p>
-<p><code>play</code></p>
-<p>:   Makes the slide active. Note that the actual slide shown on a
-    display will be whichever active slide has the highest priority, so
-    depending on what other slides are active, this action might not
-    technically show the slide.</p>
-<pre><code>Also note that if a transition is specified (either in the slide
-definition or the `transition:` section here, then than transition
-will be used when showing this slide.
-</code></pre>
-<p><code>remove</code></p>
-<p>:   Removes the slide from the list of active slides. If this slide is
-    the highest priority slide that's currently showing, then the
-    next-highest priority slide will be shown in its place.</p>
-<pre><code>If a `transition_out:` setting is used, then that transition will be
-used here.
-</code></pre>
+<h4 id="play"><code>play</code>:</h4>
+<p>Makes the slide active. Note that the actual slide shown on a
+display will be whichever active slide has the highest priority, so
+depending on what other slides are active, this action might not
+technically show the slide.</p>
+<p>Also note that if a transition is specified (either in the slide
+definition or the <code>transition:</code> section here, then than transition
+will be used when showing this slide.</p>
+<h4 id="remove"><code>remove</code>:</h4>
+<p>Removes the slide from the list of active slides. If this slide is
+the highest priority slide that's currently showing, then the
+next-highest priority slide will be shown in its place.</p>
+<p>If a <code>transition_out:</code> setting is used, then that transition will be used here.</p>
 <p>For example, to remove <em>slide1</em> when the event <em>remove_slide_1</em> is
 posted:</p>
 <div class="highlight"><pre><span></span><code><span class="c1">#! slides:</span>

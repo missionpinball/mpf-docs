@@ -11168,11 +11168,71 @@ icons & this code generated via https://realfavicongenerator.net
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#virtual_only" class="md-nav__link">
+    <span class="md-ellipsis">
+      virtual_only
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#physical_only" class="md-nav__link">
+    <span class="md-ellipsis">
+      physical_only
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#min_virtual_physical" class="md-nav__link">
+    <span class="md-ellipsis">
+      min_virtual_physical
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#no_virtual" class="md-nav__link">
+    <span class="md-ellipsis">
+      no_virtual:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#monitorable-properties" class="md-nav__link">
     <span class="md-ellipsis">
       Monitorable Properties
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Monitorable Properties">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enabled" class="md-nav__link">
+    <span class="md-ellipsis">
+      enabled:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#locked_balls" class="md-nav__link">
+    <span class="md-ellipsis">
+      locked_balls:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -34847,11 +34907,71 @@ icons & this code generated via https://realfavicongenerator.net
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#virtual_only" class="md-nav__link">
+    <span class="md-ellipsis">
+      virtual_only
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#physical_only" class="md-nav__link">
+    <span class="md-ellipsis">
+      physical_only
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#min_virtual_physical" class="md-nav__link">
+    <span class="md-ellipsis">
+      min_virtual_physical
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#no_virtual" class="md-nav__link">
+    <span class="md-ellipsis">
+      no_virtual:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#monitorable-properties" class="md-nav__link">
     <span class="md-ellipsis">
       Monitorable Properties
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Monitorable Properties">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enabled" class="md-nav__link">
+    <span class="md-ellipsis">
+      enabled:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#locked_balls" class="md-nav__link">
+    <span class="md-ellipsis">
+      locked_balls:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -34913,26 +35033,26 @@ ball enters one of those devices, the lock count is increased by one.</p>
 </div>
 
 <p>Multiball locks can be configured in one of four modes of operation:</p>
-<p><code>virtual_only</code></p>
-<p>:   When a new ball is locked, the lock count is increased. Period. It
-    does not matter how many physical balls are locked. Separate counts
-    are maintained per player. This is usually the best option for locks
-    in modern machines.</p>
-<p><code>physical_only</code></p>
-<p>:   As the name implies, the number of balls locked is always the same
-    as the physical number of balls in the lock. A new ball locked will
-    increase the lock count for that player and lock the ball. However
-    if another player "steals" one of the locked balls, then when the
-    previous player starts their turn, the lock count is updated based
-    on the physical balls locked. This is mostly for EM and early solid
-    state machines where balls would be locked in different places on
-    the playfield but the next player could steal them if the player who
-    locked them didn't get multiball started.</p>
-<p><code>min_virtual_physical</code></p>
-<p>:   Similar to physical only except a player locking a ball will always
-    increase the lock count even if that same ball is ejected again.</p>
-<p><code>no_virtual</code></p>
-<p>:   MPF forgets everything when the player changes.</p>
+<h2 id="virtual_only"><code>virtual_only</code></h2>
+<p>When a new ball is locked, the lock count is increased. Period. It
+does not matter how many physical balls are locked. Separate counts
+are maintained per player. This is usually the best option for locks
+in modern machines.</p>
+<h2 id="physical_only"><code>physical_only</code></h2>
+<p>As the name implies, the number of balls locked is always the same
+as the physical number of balls in the lock. A new ball locked will
+increase the lock count for that player and lock the ball. However
+if another player "steals" one of the locked balls, then when the
+previous player starts their turn, the lock count is updated based
+on the physical balls locked. This is mostly for EM and early solid
+state machines where balls would be locked in different places on
+the playfield but the next player could steal them if the player who
+locked them didn't get multiball started.</p>
+<h2 id="min_virtual_physical"><code>min_virtual_physical</code></h2>
+<p>Similar to physical only except a player locking a ball will always
+increase the lock count even if that same ball is ejected again.</p>
+<h2 id="no_virtual"><code>no_virtual</code>:</h2>
+<p>MPF forgets everything when the player changes.</p>
 <p>Ball locks are stored on a per-player basic and are NOT based on the
 number of balls that are physically contained in any ball devices.</p>
 <p>When a ball is locked, a new ball will be added into play (from
@@ -34959,12 +35079,12 @@ of your <a href="../../../config/playfields/">playfield</a>.</p>
 <a href="../../../config/instructions/dynamic_values/">dynamic values</a> and
 <a href="../../../events/overview/conditional/">conditional events</a>, the prefix for multiball locks is
 <code>device.multiball_locks.(name)</code>.</p>
-<p><em>enabled</em></p>
-<p>:   Boolean (true/false) as to whether this multiball lock is enabled.</p>
-<p><em>locked_balls</em></p>
-<p>:   The number of balls that are locked. Note that how this number is
-    calculated varies depending on how the ball counting strategy is
-    configured for this multiball lock.</p>
+<h3 id="enabled"><em>enabled</em>:</h3>
+<p>Boolean (true/false) as to whether this multiball lock is enabled.</p>
+<h3 id="locked_balls"><em>locked_balls</em>:</h3>
+<p>The number of balls that are locked. Note that how this number is
+calculated varies depending on how the ball counting strategy is
+configured for this multiball lock.</p>
 <h2 id="related-how-to-guides">Related How To guides</h2>
 <ul>
 <li><a href="../multiball_with_traditional_ball_lock/">Multiball with a traditional ball lock</a></li>

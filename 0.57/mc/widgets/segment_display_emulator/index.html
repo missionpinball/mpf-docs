@@ -34837,6 +34837,48 @@ icons & this code generated via https://realfavicongenerator.net
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="flash_mode:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#off" class="md-nav__link">
+    <span class="md-ellipsis">
+      off:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#all" class="md-nav__link">
+    <span class="md-ellipsis">
+      all:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#match" class="md-nav__link">
+    <span class="md-ellipsis">
+      match:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mask" class="md-nav__link">
+    <span class="md-ellipsis">
+      mask:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -34863,6 +34905,30 @@ icons & this code generated via https://realfavicongenerator.net
       display_type:
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="display_type:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#7seg" class="md-nav__link">
+    <span class="md-ellipsis">
+      7seg:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14seg" class="md-nav__link">
+    <span class="md-ellipsis">
+      14seg:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -35111,16 +35177,14 @@ value is required.</p>
 you don't want an initial text value, use "".</p>
 <h3 id="flash_mode">flash_mode:</h3>
 <p>The current display flash mode. Options include:</p>
-<p><code>off</code></p>
-<p>:   The segment display does not flash (flashing is off). This is the
-    default.</p>
-<p><code>all</code></p>
-<p>:   All characters in the display will flash.</p>
-<p><code>match</code></p>
-<p>:   Only the last two characters in the display will flash.</p>
-<p><code>mask</code></p>
-<p>:   The <code>flash_mask</code> parameter determines which characters in the
-    display will flash.</p>
+<h4 id="off"><code>off</code>:</h4>
+<p>The segment display does not flash (flashing is off). This is the default.</p>
+<h4 id="all"><code>all</code>:</h4>
+<p>All characters in the display will flash.</p>
+<h4 id="match"><code>match</code>:</h4>
+<p>Only the last two characters in the display will flash.</p>
+<h4 id="mask"><code>mask</code>:</h4>
+<p>The <code>flash_mask</code> parameter determines which characters in the display will flash.</p>
 <h3 id="flash_frequency">flash_frequency:</h3>
 <p>The number of times per second the display should flash. The default is
 <code>1.0</code>.</p>
@@ -35136,11 +35200,10 @@ any other character (other than <code>F</code>). You can use whatever character 
 wish for the non-flashing character positions.</p>
 <h3 id="display_type">display_type:</h3>
 <p>The type of display (7 segment, 14 segment). Options include:</p>
-<p><code>7seg</code></p>
-<p>:   The segment display emulates a 7-segment display.</p>
-<p><code>14seg</code></p>
-<p>:   The segment display emulates a 14-segment display. This is the
-    default value.</p>
+<h4 id="7seg"><code>7seg</code>:</h4>
+<p>The segment display emulates a 7-segment display.</p>
+<h4 id="14seg"><code>14seg</code>:</h4>
+<p>The segment display emulates a 14-segment display. This is the default value.</p>
 <h3 id="character_count">character_count:</h3>
 <p>The number of character positions in the widget. The size of each
 character is determined by the widget size and the width is divided by

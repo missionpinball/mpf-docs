@@ -34791,6 +34791,48 @@ icons & this code generated via https://realfavicongenerator.net
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Monitorable Properties">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#balls_added_live" class="md-nav__link">
+    <span class="md-ellipsis">
+      balls_added_live:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#balls_live_target" class="md-nav__link">
+    <span class="md-ellipsis">
+      balls_live_target:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enabled" class="md-nav__link">
+    <span class="md-ellipsis">
+      enabled:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shoot_again" class="md-nav__link">
+    <span class="md-ellipsis">
+      shoot_again:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -34864,22 +34906,21 @@ ball is confirmed to be on the playfield. For the first ball this
 happens when a playfield switch is hit after the eject. However, this
 will not work with more than one ball on the playfield (e.g. during a
 multiball). In this case, the launcher will wait until its eject
-timeout passed (<code>eject timeouts in ball_devices &lt;/config/ball_devices&gt;</code>) which defaults to 10s. Therefore, you need to tune
-<code>eject_timeouts</code> of your launcher to fix this issue.</p>
+timeout passed (<code>eject timeouts in ball_devices &lt;/config/ball_devices&gt;</code>) which defaults to 10s.
+Therefore, you need to tune <code>eject_timeouts</code> of your launcher to fix this issue.</p>
 <h2 id="monitorable-properties">Monitorable Properties</h2>
 <p>For
 <a href="../../config/instructions/dynamic_values/">dynamic values</a> and
 <a href="../../events/overview/conditional/">conditional events</a>, the prefix for multiballs is <code>device.multiballs.(name)</code>.</p>
-<p><em>balls_added_live</em></p>
-<p>:   Numeric value of how many balls this multiball added into play.</p>
-<p><em>balls_live_target</em></p>
-<p>:   Numeric value of how many balls this multiball is attempting to keep
-    in play.</p>
-<p><em>enabled</em></p>
-<p>:   Boolean (true/false) as to whether this multiball is enabled.</p>
-<p><em>shoot_again</em></p>
-<p>:   Boolean (true/false) as to whether this multiball is in "shoot
-    again" mode which means it's attempting to keep live.</p>
+<h3 id="balls_added_live"><em>balls_added_live</em>:</h3>
+<p>Numeric value of how many balls this multiball added into play.</p>
+<h3 id="balls_live_target"><em>balls_live_target</em>:</h3>
+<p>Numeric value of how many balls this multiball is attempting to keep in play.</p>
+<h3 id="enabled"><em>enabled</em>:</h3>
+<p>Boolean (true/false) as to whether this multiball is enabled.</p>
+<h3 id="shoot_again"><em>shoot_again</em>:</h3>
+<p>Boolean (true/false) as to whether this multiball is in "shoot
+again" mode which means it's attempting to keep live.</p>
 <h2 id="related-how-to-guides">Related How To guides</h2>
 <ul>
 <li><a href="multiball_locks/">Multiball locks</a></li>

@@ -34791,6 +34791,30 @@ icons & this code generated via https://realfavicongenerator.net
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Monitorable Properties">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#state" class="md-nav__link">
+    <span class="md-ellipsis">
+      state
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#state_name" class="md-nav__link">
+    <span class="md-ellipsis">
+      state_name
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -34910,12 +34934,11 @@ the shot.</p>
 <p>For
 <a href="../../config/instructions/dynamic_values/">dynamic values</a> and
 <a href="../../events/overview/conditional/">conditional events</a>, the prefix for multiballs is <code>device.shots.(name)</code>.</p>
-<p><em>state</em></p>
-<p>:   Index of the current state. Will start at 0 and increments when the
-    shot advances.</p>
-<p><em>state_name</em></p>
-<p>:   String representation of the state of the shot. Might be 'lit',
-    'unlit' or whatever is inside your shot_profile.</p>
+<h3 id="state"><em>state</em></h3>
+<p>Index of the current state. Will start at 0 and increments when the shot advances.</p>
+<h3 id="state_name"><em>state_name</em></h3>
+<p>String representation of the state of the shot. Might be 'lit',
+'unlit' or whatever is inside your shot_profile.</p>
 <p>This is an example:</p>
 <div class="highlight"><pre><span></span><code><span class="c1">#! switches:</span>
 <span class="c1">#!   lane_l:</span>
@@ -34950,7 +34973,7 @@ switch <code>s_target</code> is hit and the shot is in state <code>lit</code>.</
 <ul>
 <li><a href="../../events/shot_hit/">(shot_name)_hit</a></li>
 <li><a href="../../events/shot_profile_hit/">(shot_name)_(profile)_hit</a></li>
-<li><a href="../../events/shot_profile_state_hit/">(shot_name)<em>(profile)</em>(state)_hit</a></li>
+<li><a href="../../events/shot_profile_state_hit/">(shot_name)_(profile)_(state)_hit</a></li>
 <li><a href="../../events/shot_state_hit/">(shot_name)_(state)_hit</a></li>
 </ul>
 <p>Related How To Guides</p>

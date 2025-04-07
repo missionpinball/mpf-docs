@@ -4552,6 +4552,66 @@ icons & this code generated via https://realfavicongenerator.net
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="2. Configure your hardware platform for SPIKE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#port" class="md-nav__link">
+    <span class="md-ellipsis">
+      port:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#baud" class="md-nav__link">
+    <span class="md-ellipsis">
+      baud:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flow_control" class="md-nav__link">
+    <span class="md-ellipsis">
+      flow_control:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#runtime_baud" class="md-nav__link">
+    <span class="md-ellipsis">
+      runtime_baud:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debug" class="md-nav__link">
+    <span class="md-ellipsis">
+      debug:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      nodes:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -34862,6 +34922,66 @@ icons & this code generated via https://realfavicongenerator.net
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="2. Configure your hardware platform for SPIKE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#port" class="md-nav__link">
+    <span class="md-ellipsis">
+      port:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#baud" class="md-nav__link">
+    <span class="md-ellipsis">
+      baud:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flow_control" class="md-nav__link">
+    <span class="md-ellipsis">
+      flow_control:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#runtime_baud" class="md-nav__link">
+    <span class="md-ellipsis">
+      runtime_baud:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debug" class="md-nav__link">
+    <span class="md-ellipsis">
+      debug:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      nodes:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -34924,29 +35044,29 @@ you see the serial port.</p>
 <span class="w">  </span><span class="nt">runtime_baud</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">115200</span>
 </code></pre></div>
 <p>Some notes on the settings:</p>
-<p>port:</p>
-<p>:   Use the port of your USB-serial adapter or of the internal serial on
-    your computer. On Windows, this will have a name like "COM5".</p>
-<p>baud:</p>
-<p>:   This needs to match the value from Step 3 in the
-    <a href="../mpf-spike-bridge/">MPF SPIKE bridge instructions</a>. It is used to initialize the connection to SPIKE only.
-    Afterwards, the bridge will switch to <code>runtime_baud</code>.</p>
-<p>flow_control:</p>
-<p>:   If your hardware supports flow control and you connected "RTS" and
-    "CTS" in the previous steps set this to True. It will make the
-    connection much more stable at higher speeds. It can be <code>False</code> for
-    a first test.</p>
-<p>runtime_baud:</p>
-<p>:   Note that since only control and switch information is sent across
-    this bus, 115k baud is plenty fast enough if you choose not to use a
-    DMD. However, if you want to use a DMD you need more speed (see
-    below for details).</p>
-<p>debug:</p>
-<p>:   Set this to true for print more details in the log.</p>
-<p>nodes:</p>
-<p>:   This is a list of the node board addresses that your system has. You
-    can get this from the manual. Here's an example from Wrestlemania
-    Pro:</p>
+<h3 id="port">port:</h3>
+<p>Use the port of your USB-serial adapter or of the internal serial on
+your computer. On Windows, this will have a name like "COM5".</p>
+<h3 id="baud">baud:</h3>
+<p>This needs to match the value from Step 3 in the
+<a href="../mpf-spike-bridge/">MPF SPIKE bridge instructions</a>. It is used to initialize the connection to SPIKE only.
+Afterwards, the bridge will switch to <code>runtime_baud</code>.</p>
+<h3 id="flow_control">flow_control:</h3>
+<p>If your hardware supports flow control and you connected "RTS" and
+"CTS" in the previous steps set this to True. It will make the
+connection much more stable at higher speeds. It can be <code>False</code> for
+a first test.</p>
+<h3 id="runtime_baud">runtime_baud:</h3>
+<p>Note that since only control and switch information is sent across
+this bus, 115k baud is plenty fast enough if you choose not to use a
+DMD. However, if you want to use a DMD you need more speed (see
+below for details).</p>
+<h3 id="debug">debug:</h3>
+<p>Set this to true for print more details in the log.</p>
+<h3 id="nodes">nodes:</h3>
+<p>This is a list of the node board addresses that your system has. You
+can get this from the manual. Here's an example from Wrestlemania
+Pro:</p>
 <p><img alt="image" src="../../images/spike_node_table.png" /></p>
 <pre><code>  Only map the node boards and ignore the extension boards because
 those   are transparent to MPF. Just consider 8 and 8a/8b to be the

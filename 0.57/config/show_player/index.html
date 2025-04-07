@@ -20680,6 +20680,75 @@ icons & this code generated via https://realfavicongenerator.net
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="action:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#play" class="md-nav__link">
+    <span class="md-ellipsis">
+      play:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stop" class="md-nav__link">
+    <span class="md-ellipsis">
+      stop:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pause" class="md-nav__link">
+    <span class="md-ellipsis">
+      pause:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resume" class="md-nav__link">
+    <span class="md-ellipsis">
+      resume:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advance" class="md-nav__link">
+    <span class="md-ellipsis">
+      advance:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step_back" class="md-nav__link">
+    <span class="md-ellipsis">
+      step_back
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update" class="md-nav__link">
+    <span class="md-ellipsis">
+      update:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -35056,6 +35125,75 @@ icons & this code generated via https://realfavicongenerator.net
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="action:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#play" class="md-nav__link">
+    <span class="md-ellipsis">
+      play:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stop" class="md-nav__link">
+    <span class="md-ellipsis">
+      stop:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pause" class="md-nav__link">
+    <span class="md-ellipsis">
+      pause:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resume" class="md-nav__link">
+    <span class="md-ellipsis">
+      resume:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advance" class="md-nav__link">
+    <span class="md-ellipsis">
+      advance:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step_back" class="md-nav__link">
+    <span class="md-ellipsis">
+      step_back
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update" class="md-nav__link">
+    <span class="md-ellipsis">
+      update:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -35334,26 +35472,24 @@ your config. (If you don't include them, the default will be used).</p>
 <h3 id="action">action:</h3>
 <p>Single value, type: one of the following options: play, stop, pause,
 resume, advance, step_back, update, queue. Default: <code>play</code></p>
-<p><code>play</code></p>
-<p>:   Starts playing the show. This is the default action which will
-    happen if you don't include an <code>action:</code> setting.</p>
-<p><code>stop</code></p>
-<p>:   Stops the show. Removes and "undoes" anything the show did, and
-    posts the show stop events.</p>
-<p><code>pause</code></p>
-<p>:   Pauses the show by holding it at the current step. Posts the show
-    pause events.</p>
-<p><code>resume</code></p>
-<p>:   Resumes a previously paused show.</p>
-<p><code>advance</code></p>
-<p>:   Manually advances a show to the next step. Posts the show advance
-    events.</p>
-<p><code>step_back</code></p>
-<p>:   Manually moves the show back to the previous step. Posts the show
-    step_back events.</p>
-<p><code>update</code></p>
-<p>:   Not yet implemented. In the future it will be used to change a
-    setting of a running show, like changing the playback speed.</p>
+<h4 id="play"><code>play</code>:</h4>
+<p>Starts playing the show. This is the default action which will
+happen if you don't include an <code>action:</code> setting.</p>
+<h4 id="stop"><code>stop</code>:</h4>
+<p>Stops the show. Removes and "undoes" anything the show did, and
+posts the show stop events.</p>
+<h4 id="pause"><code>pause</code>:</h4>
+<p>Pauses the show by holding it at the current step. Posts the show pause events.</p>
+<h4 id="resume"><code>resume</code>:</h4>
+<p>Resumes a previously paused show.</p>
+<h4 id="advance"><code>advance</code>:</h4>
+<p>Manually advances a show to the next step. Posts the show advance events.</p>
+<h4 id="step_back"><code>step_back</code></h4>
+<p>Manually moves the show back to the previous step. Posts the show
+step_back events.</p>
+<h4 id="update"><code>update</code>:</h4>
+<p>Not yet implemented. In the future it will be used to change a
+setting of a running show, like changing the playback speed.</p>
 <h3 id="block_queue">block_queue:</h3>
 <p>Single value, type: <code>boolean</code> (<code>true</code>/<code>false</code>). Default: <code>false</code></p>
 <p>You can use <code>block_queue: yes</code> if you want the show to block a queue

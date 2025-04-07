@@ -19728,6 +19728,30 @@ icons & this code generated via https://realfavicongenerator.net
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="ball_count_type:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#total" class="md-nav__link">
+    <span class="md-ellipsis">
+      total:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add" class="md-nav__link">
+    <span class="md-ellipsis">
+      add:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -35140,6 +35164,30 @@ icons & this code generated via https://realfavicongenerator.net
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="ball_count_type:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#total" class="md-nav__link">
+    <span class="md-ellipsis">
+      total:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add" class="md-nav__link">
+    <span class="md-ellipsis">
+      add:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -35448,9 +35496,8 @@ onto the add_a_ball_shoot_again.</p>
 (<a href="../instructions/time_strings/">Instructions for entering time strings</a> and
 <a href="../instructions/dynamic_values/">Instructions for entering templates</a>). Default: <code>0</code></p>
 <p>The time before the add-a-ball ball save ends (in MPF time string
-format) that will cause the <a href="../../">multiball</a>_(name)_hurry_up event to be
-posted. Use this to change the script for the light or trigger other
-effect.</p>
+format) that will cause the <a href="../../events/multiball_multiball_hurry_up/">multiball_(name)_hurry_up</a> event to be
+posted. Use this to change the script for the light or trigger other effect.</p>
 <h3 id="add_a_ball_shoot_again">add_a_ball_shoot_again:</h3>
 <p>Single value, type: <code>time string (ms) or template</code>
 (<a href="../instructions/time_strings/">Instructions for entering time strings</a> and
@@ -35467,18 +35514,18 @@ this time will be re-added into play.</p>
 number of balls it should add into play. Adjusting this setting is
 useful when you have multiple (or stacked) multiballs and you want to
 control how the combined counts work.</p>
-<p><em>total</em></p>
-<p>:   Means the <code>ball_count:</code> setting will provide a target for the total
-    number of balls that should be in play when this multiball starts.
-    So if this multiball has a <code>ball_count: 3</code>, and it starts when 2
-    balls are live on the playfield, then this multiball will only add 1
-    more ball to bring the total to 3.</p>
-<p><em>add</em></p>
-<p>:   Means that the <code>ball_count:</code> setting will specify the number of
-    balls that are added into play on top of whatever number of balls
-    are already in play. So if this multiball is set to <code>ball_count: 2</code>
-    and there are already 2 balls in play, then this multiball will add
-    2 more balls for a total of 4 balls live.</p>
+<h4 id="total"><em>total</em>:</h4>
+<p>Means the <code>ball_count:</code> setting will provide a target for the total
+number of balls that should be in play when this multiball starts.
+So if this multiball has a <code>ball_count: 3</code>, and it starts when 2
+balls are live on the playfield, then this multiball will only add 1
+more ball to bring the total to 3.</p>
+<h4 id="add"><em>add</em>:</h4>
+<p>Means that the <code>ball_count:</code> setting will specify the number of
+balls that are added into play on top of whatever number of balls
+are already in play. So if this multiball is set to <code>ball_count: 2</code>
+and there are already 2 balls in play, then this multiball will add
+2 more balls for a total of 4 balls live.</p>
 <h3 id="ball_locks">ball_locks:</h3>
 <p>List of one (or more) values, each is a type: string name of a
 <a href="../ball_devices/">ball_devices:</a> device.
@@ -35516,7 +35563,7 @@ onto the shoot_again.</p>
 (<a href="../instructions/time_strings/">Instructions for entering time strings</a> and
 <a href="../instructions/dynamic_values/">Instructions for entering templates</a>). Default: <code>0</code></p>
 <p>The time before the ball save ends (in MPF time string format) that will
-cause the <a href="../../">multiball</a>_(name)_hurry_up event to be posted. Use this
+cause the <a href="../../events/multiball_multiball_hurry_up/">multiball_(name)_hurry_up</a> event to be posted. Use this
 to change the script for the light or trigger other effect.</p>
 <h3 id="replace_balls_in_play">replace_balls_in_play:</h3>
 <p>Single value, type: <code>boolean</code> (<code>true</code>/<code>false</code>). Default: <code>false</code></p>
