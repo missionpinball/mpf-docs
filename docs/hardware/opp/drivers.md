@@ -8,6 +8,7 @@ title: OPP coils / drivers
 Related Config File Sections:
 
 * [coils:](../../config/coils.md)
+* [opp_coils:](../../config/opp_coils.md)
 
 There are a few things to know about controlling drivers and coils with
 OPP hardware.

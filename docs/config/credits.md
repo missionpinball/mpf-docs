@@ -300,3 +300,7 @@ versus specials versus high score awards, etc.
 ### award:
 
 Numeric value of the number of credits you'd like to award.
+
+## Related How To guides
+
+* [Coins & Credits](../game_logic/credits.md)

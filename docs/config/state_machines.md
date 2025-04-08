@@ -161,6 +161,8 @@ empty.
 
 Not used.
 
+## Related Config fields:
+
 * [state_machine_transitions:](state_machine_transitions.md)
 * [state_machine_states:](state_machine_states.md)
 

@@ -41,3 +41,7 @@ How long should the digital output be held to low after a step pulse?
 This time depends on the latency/jitter of your output and the speed
 your stepper can be moved. Usually the jitter of your output is the
 limiting factor.
+
+## Related How To guides
+
+* [How to use Step Stick Steppers in MPF](../hardware/stepstick.md)

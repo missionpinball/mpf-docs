@@ -194,10 +194,6 @@ it's not showing up.
 
 ### transition_out:
 
-Unknown type. See description below.
-
---8<-- "todo.md"
-
 Note that you can also configure a transition when the slide is shown
 (in either a show or via the slide_player), so you don't need to define
 a transition as part of the slide definition unless you want that
@@ -208,4 +204,4 @@ slide_player or show will take precedence.
 
 ## Related How To guides
 
---8<-- "todo.md"
+* [Slides](../mc/slides/index.md)

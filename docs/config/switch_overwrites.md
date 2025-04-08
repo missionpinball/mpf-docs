@@ -29,3 +29,7 @@ Default: `None`
 
 Overwrite the `debounce` setting on a coil. See `debounce` in
 [switches:](switches.md) for details.
+
+## Related How To guides
+
+* [Switches](../mechs/switches/index.md)

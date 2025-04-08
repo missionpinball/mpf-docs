@@ -200,3 +200,7 @@ limit. This setting is ignored when `simultaneous_limit` is set to
     playing instance).
 * `skip` - Do not steal/stop any currently running instances of the
     sound. Simply skip playback of the newly requested instance.
+
+## Related How To guides
+
+* [Sounds, Music & Audio](../mc/sound/index.md)

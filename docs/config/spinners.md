@@ -200,8 +200,6 @@ Name of this device in service mode.
 List of one (or more) values, each is a type: `string`. Defaults to
 empty.
 
---8<-- "todo.md"
-
 ## Related How To guides
 
---8<-- "todo.md"
+* [Spinners](../mechs/spinners.md)

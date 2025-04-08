@@ -209,8 +209,6 @@ One or more sub-entries. Each in the format of `string` : `string`
 
 ### transition:
 
-Unknown type. See description below.
-
 Note that you can also configure a transition when the slide is defined
 in the [slides:](slides.md) section of your
 config if you want to use the same transition every time for a slide and
@@ -220,8 +218,6 @@ If you specify a transition in both places, the transition in the
 slide_player or show will take precedence.
 
 ### transition_out:
-
-Unknown type. See description below.
 
 Note that you can add a transition out to the slide player when a slide
 is shown, and it will be "attached" to the slide and used when that
@@ -263,10 +259,9 @@ then the incoming transition will take precedence.
 
 ### widgets:
 
-Unknown type. See description below.
-
 --8<-- "todo.md"
 
 ## Related How To guides
 
---8<-- "todo.md"
+* [Slide player](../config_players/slide_player.md)
+* [Tutorial: Slide with Score, Player, and Ball](../gmc/guides/base-slide-with-score.md)

@@ -216,3 +216,7 @@ play state for the layer when the sound loop set is played. Options for
     playback.
 * `stop` - The layer will be stopped whenever the sound loop set
     begins playback.
+
+## Related How To guides
+
+* [Sounds, Music & Audio](../mc/sound/index.md)

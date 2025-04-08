@@ -265,3 +265,7 @@ The step number the show will start on.
 Single value, type: `integer`. Default: `None`
 
 The sync_ms value of the show.
+
+## Related How To guides
+
+* [Shot Profiles](../game_logic/shots/shot_profiles.md)

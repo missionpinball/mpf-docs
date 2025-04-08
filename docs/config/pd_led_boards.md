@@ -308,3 +308,7 @@ Single value, type: `integer`. Default: `1603`
 
 Clock cycles for a reset bit in a WS281x chain (at 32MHz). Usually this
 does not have to be changed.
+
+## Related How To guides
+
+* [How to configure LEDs on the PD-LED (P-ROC/P3-ROC)](../hardware/multimorphic/leds.md)
