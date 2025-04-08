@@ -82,7 +82,7 @@ flipper device class).
 MPF contains built-in support for the flipper cancel combo. If you add
 the tag `left_flipper` to your left flipper switch, and `right_flipper`
 to your right flipper switch, then whenever the player hits both
-flippers at the same time, an MPF event called *flipper_cancel* will be
+flippers at the same time, an MPF event called [*flipper_cancel*](../../events/flipper_cancel.md) will be
 posted. This is implemented as
 [combo switch](../../game_logic/combo_switches.md).
 

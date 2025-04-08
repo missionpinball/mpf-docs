@@ -122,8 +122,7 @@ The bonus mode can be configured with more options, including:
 
 * Reset player variables and/or multipliers after bonuses are awarded
 * Show bonus scores for entries that awarded zero points
-* "Hurry up" the bonus mode based on a triggering event (e.g.
-    *flipper_cancel*)
+* "Hurry up" the bonus mode based on a triggering event (e.g. [*flipper_cancel*](../../events/flipper_cancel.md))
 * After awarding all bonuses, wait for an event before ending the mode
 
 All these options are detailed in the [bonus (mode_settings:)](../../config/bonus.md) documentation.
@@ -133,7 +132,6 @@ All these options are detailed in the [bonus (mode_settings:)](../../config/bonu
 * [bonus_multiplier](../../events/bonus_multiplier.md)
 * [bonus_start](../../events/bonus_start.md)
 * [bonus_subtotal](../../events/bonus_subtotal.md)
-* Plus other events defined in your bonus mode's `bonus_entries`
-    settings
+* Plus other events defined in your bonus mode's `bonus_entries` settings
 
 * [How to configure End of Ball Bonus](configuring_bonus.md)

@@ -62,7 +62,7 @@ Notice that we added tags called `left_flipper` and `right_flipper`.
 These are optional, but recommended. The reason is that MPF includes a
 [combo switch](../game_logic/combo_switches.md) feature which posts events when player switches are held in
 combination. If you add these tags to your flipper switches, an event
-called *flipper_cancel* will be posted when the player hits both flipper
+called [*flipper_cancel*](../../events/flipper_cancel.md) will be posted when the player hits both flipper
 buttons at the same time which you can use to cancel shows and other
 things you want the player to be able to skip.
 

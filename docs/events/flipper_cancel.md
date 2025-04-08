@@ -16,4 +16,7 @@ Note that in order for this event to work, you have to add
 
 See [combo_switches:](../config/combo_switches.md) for details.
 
+This event is used as the default [hurry_up_event](../config/bonus.md#hurry_up_event)
+for MPF's built-in bonus mode.
+
 --8<-- "event_no_keywords_notice.md"
