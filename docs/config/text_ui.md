@@ -58,4 +58,4 @@ player variables will be displayed.
 
 ## Related How To guides
 
---8<-- "todo.md"
+* [Dynamically Updating Text](../mc/widgets/text/text_dynamic.md)

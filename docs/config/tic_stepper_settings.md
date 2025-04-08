@@ -22,29 +22,23 @@ The following sections are optional in the `tic_stepper_settings:`
 section of your config. (If you don't include them, the default will be
 used).
 
+--8<-- "todo.md"
+
 ### current_limit:
 
 Single value, type: `integer`. Default: `192`
-
---8<-- "todo.md"
 
 ### max_acceleration:
 
 Single value, type: `integer`. Default: `40000`
 
---8<-- "todo.md"
-
 ### max_deceleration:
 
 Single value, type: `integer`. Default: `40000`
 
---8<-- "todo.md"
-
 ### max_speed:
 
 Single value, type: `integer`. Default: `2000000`
-
---8<-- "todo.md"
 
 ### poll_ms:
 
@@ -59,13 +53,9 @@ this.
 
 Single value, type: `integer`. Default: `0`
 
---8<-- "todo.md"
-
 ### step_mode:
 
 Single value, type: `integer`. Default: `1`
-
---8<-- "todo.md"
 
 ## Related How To guides
 

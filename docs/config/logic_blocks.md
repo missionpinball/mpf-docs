@@ -24,9 +24,14 @@ counters:
 
 There are three type of logic blocks:
 
+* [accruals:](accruals.md)
+* [counters:](counters.md)
+* [sequences:](sequences.md)
+
+Click each of the links above for details and settings for each type of logic block.
+
+## Related How To guides
+
 * [accruals:](../game_logic/logic_blocks/accruals.md)
 * [counters:](../game_logic/logic_blocks/counters.md)
 * [sequences:](../game_logic/logic_blocks/sequences.md)
-
-Click each of the links above for details and settings for each type of
-logic block.

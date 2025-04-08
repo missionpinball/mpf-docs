@@ -108,3 +108,9 @@ If `true` this device will start enabled. If `false` this device will
 start disabled. If you omit this the device will start enabled unless
 you specify `enable_events` in which case the device will start
 disabled.
+
+## Related How To guides
+
+* [accruals:](../game_logic/logic_blocks/accruals.md)
+* [counters:](../game_logic/logic_blocks/counters.md)
+* [sequences:](../game_logic/logic_blocks/sequences.md)

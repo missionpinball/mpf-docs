@@ -188,3 +188,7 @@ This is nice if you don't want a bonus screen to show up for something
 the player has not done, like "0 ramps = 0 points" or whatever. (Or
 maybe you want to make this "true" to show the player how bad they
 are?) :)
+
+## Related How To guides
+
+* [How to configure End of Ball Bonus](../game_logic/bonus/configuring_bonus.md)

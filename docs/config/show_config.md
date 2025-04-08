@@ -77,3 +77,8 @@ Single value, type: `integer`.
 
 See the [Synchronizing multiple shows](../shows/sync_ms.md) documentation for
 details.
+
+## Related How To guides
+
+* [Shows](../shows/index.md)
+* [Tutorial step 16: Create an attract mode display show](../tutorial/16_attract_mode_show.md)

@@ -350,4 +350,6 @@ details.
 
 ## Related How To guides
 
---8<-- "todo.md"
+* [Shows](../shows/index.md)
+* [Tutorial step 16: Create an attract mode display show](../tutorial/16_attract_mode_show.md)
+* [Show player](../config_players/show_player.md)

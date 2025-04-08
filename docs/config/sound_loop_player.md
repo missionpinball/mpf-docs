@@ -377,3 +377,7 @@ Single value, type: `integer`.
 An integer value that specifies which layer number of the currently
 playing sound loop set should be stopped when the sound loop set master
 sound reaches the end. Layers are numbered beginning with 1.
+
+## Related How To guides
+
+* [Sound Loop player](../config_players/sound_loop_player.md)

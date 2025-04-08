@@ -38,8 +38,6 @@ does not need to be modified as the default value should be correct.
 
 Single value, type: `boolean` (`true`/`false`). Default: `false`
 
---8<-- "todo.md"
-
 ### segment_displays:
 
 List of one (or more) values, each is a type: string name of a
@@ -52,4 +50,4 @@ appropriate information to the MPF-MC.
 
 ## Related How To guides
 
---8<-- "todo.md"
+* [How to setup and use the virtual segment display emulator](../mc/widgets/segment_display_emulator/how_to.md)

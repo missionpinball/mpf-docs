@@ -1294,7 +1294,6 @@ nav:
     - MPF's default shows: shows/default_shows.md
     - Starting & stopping shows: shows/playing.md
     - Synchronizing multiple shows: shows/sync_ms.md
-    - Playing Shows in a Show: shows/shows_in_shows.md
   - MPF Errors from Log Files:
     - logs/index.md
     - CFE-coils-1: logs/CFE-coils-1.md

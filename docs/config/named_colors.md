@@ -45,4 +45,4 @@ light_player:
 
 ## Related How To guides
 
---8<-- "todo.md"
+* [Lights](../mechs/lights/index.md)
