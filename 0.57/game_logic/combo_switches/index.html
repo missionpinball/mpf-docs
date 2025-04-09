@@ -34931,7 +34931,7 @@ the same time. In fact MPF contains built-in support for the flipper
 cancel combo. If you add the tag <code>left_flipper</code> to your left flipper
 switch, and <code>right_flipper</code> to your right flipper switch, then whenever
 the player hits both flippers at the same time, an MPF event called
-<em>flipper_cancel</em> will be posted.</p>
+<a href="../../events/flipper_cancel/"><em>flipper_cancel</em></a> will be posted.</p>
 <p>Combo switches are also used for things like different kinds of skill
 shots. For example, in <em>Attack From Mars</em>, if the player hits the launch
 button, the ball is launched into the pop bumper area, but if the player
@@ -34965,7 +34965,7 @@ set a <code>max_offset_time:</code> to make sure this event is only posted if th
 player hits the flipper buttons within 500ms, then you can copy and add
 this section to your own machine config file and it will overwrite this
 default config.</p>
-<p>Here is an example of using flipper_cancel to cancel a show:</p>
+<p>Here is an example of using <a href="../../events/flipper_cancel/">flipper_cancel</a> to cancel a show:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">switches</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">s_flipper_left</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">left_flipper</span>
@@ -35022,6 +35022,7 @@ wil be one of the following: <em>inactive</em>, <em>both</em> or <em>one</em>.</
 <li><a href="../../events/combo_switch_inactive/">(combo_switch_name)_inactive</a></li>
 <li><a href="../../events/combo_switch_switches_1/">(combo_switch_name)_switches_1</a></li>
 <li><a href="../../events/combo_switch_switches_2/">(combo_switch_name)_switches_2</a></li>
+<li><a href="../../events/flipper_cancel/">flipper_cancel</a></li>
 </ul>
 <hr />
 <div class="admonition question">
