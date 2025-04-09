@@ -58,10 +58,18 @@ screen). Set to `0` (or leave this setting out) to play the video at
 whatever size the asset is configured for (or, if a size is not
 specified there, at the native video size).
 
+OLD VERSIONS:
 Note that the `height:` and `width:` settings cannot stretch or skew the
 video. So if you enter values that result in an aspect ratio for the
 video widget that does not match the video itself, then the video will
 be sized as large as it can within the bounds of the size of the widget.
+
+TESTED IN MPF 0.57:
+The `height:` and `width:` settings can now stretch the video, 
+skewing hasn't been tested. It's important to note, that both values must
+be set for the changes to happen; for example: if you only set `height:`
+to the desired value, the `width:` setting will default to `0` causing the
+video to be in it's native size.
 
 ### width:
 
