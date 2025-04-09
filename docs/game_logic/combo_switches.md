@@ -18,7 +18,7 @@ the same time. In fact MPF contains built-in support for the flipper
 cancel combo. If you add the tag `left_flipper` to your left flipper
 switch, and `right_flipper` to your right flipper switch, then whenever
 the player hits both flippers at the same time, an MPF event called
-*flipper_cancel* will be posted.
+[*flipper_cancel*](../events/flipper_cancel.md) will be posted.
 
 Combo switches are also used for things like different kinds of skill
 shots. For example, in *Attack From Mars*, if the player hits the launch
@@ -61,7 +61,7 @@ player hits the flipper buttons within 500ms, then you can copy and add
 this section to your own machine config file and it will overwrite this
 default config.
 
-Here is an example of using flipper_cancel to cancel a show:
+Here is an example of using [flipper_cancel](../events/flipper_cancel.md) to cancel a show:
 
 ``` yaml
 switches:
@@ -124,5 +124,6 @@ wil be one of the following: *inactive*, *both* or *one*.
 * [(combo_switch_name)_one](../events/combo_switch_one.md)
 * [(combo_switch_name)_both](../events/combo_switch_both.md)
 * [(combo_switch_name)_inactive](../events/combo_switch_inactive.md)
-* [(combo_switch_name)_switches_1](../events/combo_switch_switches_1.md)
-* [(combo_switch_name)_switches_2](../events/combo_switch_switches_2.md)
+* [(combo_switch_name)\_switches_1](../events/combo_switch_switches_1.md)
+* [(combo_switch_name)\_switches_2](../events/combo_switch_switches_2.md)
+* [flipper_cancel](../events/flipper_cancel.md)

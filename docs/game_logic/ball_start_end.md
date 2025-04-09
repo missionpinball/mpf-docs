@@ -238,7 +238,7 @@ shows:
 ```
 
 Both shows can be canceled using both flippers which will post the
-`flipper_cancel` event. Remove that
+[`flipper_cancel` event](../events/flipper_cancel.md). Remove that
 [show_player](../config/show_player.md) entry
 if you don't want that. See the
 [flipper mech](../mechs/flippers/index.md)

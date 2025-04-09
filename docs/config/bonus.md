@@ -64,12 +64,14 @@ want to jump directly to the last slide, then you can enter a value of
 
 ### hurry_up_event:
 
-Name of an event. Default is `flipper_cancel`.
+Name of an event. Default is `flipper_cancel`. 
 
 The event that will cause the bonus mode to change its delay between
 slides from the `display_delay_ms:` time to the `hurry_up_delay_ms:`
 time. When this event is posted, the next slide is shown immediately,
 and the timing is set to the new hurry up value.
+
+See: [flipper_cancel](../events/flipper_cancel.md)
 
 ### end_bonus_event:
 
