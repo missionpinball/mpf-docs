@@ -35235,10 +35235,17 @@ assets are <a href="../../../assets/videos/">here</a>.</p>
 screen). Set to <code>0</code> (or leave this setting out) to play the video at
 whatever size the asset is configured for (or, if a size is not
 specified there, at the native video size).</p>
-<p>Note that the <code>height:</code> and <code>width:</code> settings cannot stretch or skew the
+<p>OLD VERSIONS:
+Note that the <code>height:</code> and <code>width:</code> settings cannot stretch or skew the
 video. So if you enter values that result in an aspect ratio for the
 video widget that does not match the video itself, then the video will
 be sized as large as it can within the bounds of the size of the widget.</p>
+<p>TESTED IN MPF 0.57 &amp; KIVY 2.2.1:
+With the 2.2.1 Kivy version <code>height:</code> and <code>width:</code> settings can now stretch the video, 
+skewing hasn't been tested. It's important to note, that both values must
+be set for the changes to happen; for example: if you only set <code>height:</code>
+to the desired value, the <code>width:</code> setting will default to <code>0</code> causing the
+video to be in it's native size.</p>
 <h3 id="width">width:</h3>
 <p>Lets you specify the width of the video. Set to <code>0</code> (or leave the
 setting out) to use the setting from the video asset and/or the native
