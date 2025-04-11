@@ -10,7 +10,7 @@ title: "widget_styles:"
 | Valid in | |
 |-----|:----:|
 |[machine](instructions/machine_config.md) config files |**YES** :white_check_mark:|
-|[mode](instructions/mode_config.md) config files|**YES** :white_check_mark:|
+|[mode](instructions/mode_config.md) config files|**NO** :no_entry_sign:|
 
 The `widget_styles:` section of your config is where you configure
 styles for your widgets.
