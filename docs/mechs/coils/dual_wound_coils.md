@@ -17,7 +17,7 @@ A *dual-wound coil* is a coil (solenoid) with two windings--one
 weaker / lower-power winding for "holding" the coil in the active
 position.
 
-image:: /mechs/images/dual_coil_no_diode.jpg
+![image](../images/dual_coil_no_diode.jpg)
 
 Dual-wound coils are typically used for flippers, diverters, gates, and
 other devices in pinball machines that need a strong initial movement
@@ -30,16 +30,21 @@ the settings for a particular dual-wound coil (and give it a new name),
 and then you can use that dual-wound coil anywhere in MPF that a coil is
 configured.
 
+Flipper configuration supports dual-wound coils inherently - you do not
+need to define a dual-wound coil if you are only going to use it with a flipper.
+Instead, see: [How to configure dual-wound flippers](../flippers/dual_wound.md)
+
 ## Hardware
 
-Dual wound coils are like two coils in one but instead of two times two
-terminals they only have three terminals. Both coils share one of those
-terminals. Unfortunately, this is not standardized and different for
-different types of coils.
+Dual wound coils are like two coils in one, but instead of having two
+pairs of terminals (so four leads), the coil will have three. Both separate
+coil windings in the dual-wound coil share one of the three terminals.
+Due to the wide variety of designs across manufacturers and eras, there is no
+single standard for the arrangement and connection of the terminals.
 
-To make sure you connect things right you need a multimeter and measure
-the resistance between all three terminals. It might be wise to remove
-all free-fly diodes while measuring (or at least make sure to measure
+To make sure you connect things correctly you need to use a multimeter
+to measure the resistance between each pair of the three terminals.
+It might be wise to remove all free-fly diodes while measuring (or at least make sure to measure
 the inverse direction). You are looking for the main coil with low
 resistance (2-20 Ohm) and one with higher resistance (50 to 200 Ohm).
 You can look up the expected resistance in one of the linked charts in
