@@ -184,6 +184,12 @@ Single value, type `bool`. Default `false`
 
 One audio bus is allowed to be set as default, and any sound playback trigger that does not include a value for `bus:` will play on this bus.
 
+### `duck_default`
+
+Single value, type `bool`. Default `false`
+
+One audio bus is allowed to be set as the default ducking target. Any sound playback trigger using ducking settings that has not specified a value for `bus:` in the ducking settings will duck the audio on this bus.
+
 ### `simultaneous_sounds`
 
 Single value, type `int`. Default `None`
