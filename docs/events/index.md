@@ -216,9 +216,6 @@ will posted an event called *switch_s_left_slingshot_active*.
 ## Other Event Groups
 
 * [Queue Events](queue_events/index.md)
-    * [machine_reset_phase_1](machine_reset_phase_1.md) *Queue Event*
-    * [machine_reset_phase_2](machine_reset_phase_2.md) *Queue Event*
-    * [machine_reset_phase_3](machine_reset_phase_3.md) *Queue Event*
     * [game_starting](game_starting.md) *Queue Event*
     * [game_ending](game_ending.md) *Queue Event*
     * [player_adding](player_adding.md) *Queue Event*
@@ -226,9 +223,22 @@ will posted an event called *switch_s_left_slingshot_active*.
     * [player_turn_ending](player_turn_ending.md) *Queue Event*
     * [ball_starting](ball_starting.md) *Queue Event*
     * [ball_ending](ball_ending.md) *Queue Event*
+    * [match_has_match](match_has_match.md) *Queue Event*
+    * [match_no_match](match_no_match.md) *Queue Event*
+
     * [mode_(name)_starting](mode_name_starting.md) *Queue Event*
     * [mode_(name)_stopping](mode_name_stopping.md) *Queue Event*
     * [balldevice_(name)\_ball_eject_attempt](balldevice_ball_device_ball_eject_attempt.md) *Queue Event*
+
+    * [init_phase_1](init_phase_1.md) *Queue Event*
+    * [init_phase_2](init_phase_2.md) *Queue Event*
+    * [init_phase_3](init_phase_3.md) *Queue Event*
+    * [init_phase_4](init_phase_4.md) *Queue Event*
+    * [init_phase_5](init_phase_5.md) *Queue Event*
+    * [machine_reset_phase_1](machine_reset_phase_1.md) *Queue Event*
+    * [machine_reset_phase_2](machine_reset_phase_2.md) *Queue Event*
+    * [machine_reset_phase_3](machine_reset_phase_3.md) *Queue Event*
+
 
 * Audio Management Events
     * [master_volume_decrease](master_volume_decrease.md)
@@ -307,18 +317,18 @@ will posted an event called *switch_s_left_slingshot_active*.
 
 * MPF Initialization Events
     * [init_done](init_done.md)
-    * [init_phase_1](init_phase_1.md)
-    * [init_phase_2](init_phase_2.md)
-    * [init_phase_3](init_phase_3.md)
-    * [init_phase_4](init_phase_4.md)
-    * [init_phase_5](init_phase_5.md)
+    * [init_phase_1](init_phase_1.md) *Queue Event*
+    * [init_phase_2](init_phase_2.md) *Queue Event*
+    * [init_phase_3](init_phase_3.md) *Queue Event*
+    * [init_phase_4](init_phase_4.md) *Queue Event*
+    * [init_phase_5](init_phase_5.md) *Queue Event*
     * [loading_assets](loading_assets.md)
     * [asset_loading_complete](asset_loading_complete.md)
     * See flowchart: [MPF Boot Up / Start Up Sequence](../flowcharts/mpf_boot.md)
 
 * Match Events
-    * [match_has_match](match_has_match.md)
-    * [match_no_match](match_no_match.md)
+    * [match_has_match](match_has_match.md) *Queue Event*
+    * [match_no_match](match_no_match.md) *Queue Event*
 
 * MC (Pre 0.80.x) Events
     * [mc_ready](mc_ready.md)

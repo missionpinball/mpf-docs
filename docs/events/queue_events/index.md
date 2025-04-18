@@ -16,6 +16,11 @@ See:
 ## Events:
 
 * Machine Events
+    * [init_phase_1](../init_phase_1.md) *Queue Event*
+    * [init_phase_2](../init_phase_2.md) *Queue Event*
+    * [init_phase_3](../init_phase_3.md) *Queue Event*
+    * [init_phase_4](../init_phase_4.md) *Queue Event*
+    * [init_phase_5](../init_phase_5.md) *Queue Event*
     * [machine_reset_phase_1](../machine_reset_phase_1.md) *Queue Event*
     * [machine_reset_phase_2](../machine_reset_phase_2.md) *Queue Event*
     * [machine_reset_phase_3](../machine_reset_phase_3.md) *Queue Event*
@@ -39,3 +44,8 @@ See:
     
 * Ball Device Events
     * [balldevice_(name)\_ball_eject_attempt](../balldevice_ball_device_ball_eject_attempt.md) *Queue Event*
+
+* Match Mode Events
+    * [match_has_match](../match_has_match.md) *Queue Event*
+    * [match_no_match](../match_no_match.md) *Queue Event*
+
