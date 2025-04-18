@@ -197,8 +197,6 @@ will posted an event called *switch_s_left_slingshot_active*.
     * [sw_(tag)_inactive](sw_tag_inactive.md)
     * [(name)_active](switch_active.md)
     * [(name)_inactive](switch_inactive.md)
-    * [switch_(name)_active](switch_switch_active.md)
-    * [switch_(name)_inactive](switch_switch_inactive.md)
 
 * [Timed Switch Events](timed_switches/index.md)
     * [(name)_active](timed_switch_active.md)
@@ -250,6 +248,8 @@ will posted an event called *switch_s_left_slingshot_active*.
     * [collecting_balls_complete](collecting_balls_complete.md)
     * [multi_player_ball_started](multi_player_ball_started.md)
     * [single_player_ball_started](single_player_ball_started.md)
+    * See flowchart: [Ball Start Sequence](../flowcharts/ball_start.md)
+    * See flowchart: [Ball End Sequence](../flowcharts/ball_end.md)
 
 * Ball Search Events
     * [ball_search_failed](ball_search_failed.md)
@@ -290,6 +290,7 @@ will posted an event called *switch_s_left_slingshot_active*.
     * [game_will_start](game_will_start.md)
     * [request_to_start_game](request_to_start_game.md)
     * [shutdown](shutdown.md)
+    * See flowchart: [Game Start Sequence](../flowcharts/game_start.md)
 
 * Logicblock Events (Counters, Accruals, Sequences)
     * [logicblock_(name)_complete](logicblock_name_complete.md)
@@ -302,6 +303,7 @@ will posted an event called *switch_s_left_slingshot_active*.
     * [machine_reset_phase_2](machine_reset_phase_2.md) *Queue Event*
     * [machine_reset_phase_3](machine_reset_phase_3.md) *Queue Event*
     * [reset_complete](reset_complete.md)
+    * See flowchart: [MPF Boot Up / Start Up Sequence](../flowcharts/mpf_boot.md)
 
 * MPF Initialization Events
     * [init_done](init_done.md)
@@ -312,6 +314,7 @@ will posted an event called *switch_s_left_slingshot_active*.
     * [init_phase_5](init_phase_5.md)
     * [loading_assets](loading_assets.md)
     * [asset_loading_complete](asset_loading_complete.md)
+    * See flowchart: [MPF Boot Up / Start Up Sequence](../flowcharts/mpf_boot.md)
 
 * Match Events
     * [match_has_match](match_has_match.md)
@@ -324,6 +327,8 @@ will posted an event called *switch_s_left_slingshot_active*.
     * [mc_reset_phase_2](mc_reset_phase_2.md)
     * [mc_reset_phase_3](mc_reset_phase_3.md)
     * [displays_initialized](displays_initialized.md)
+    * [switch_(name)_active](switch_switch_active.md)
+    * [switch_(name)_inactive](switch_switch_inactive.md)
 
 * Mode Lifecycle Events
     * [mode_(name)_started](mode_name_started.md)
@@ -332,6 +337,8 @@ will posted an event called *switch_s_left_slingshot_active*.
     * [mode_(name)_stopping](mode_name_stopping.md) *Queue Event*
     * [mode_(name)\_will_start](mode_name_will_start.md)
     * [mode_(name)\_will_stop](mode_name_will_stop.md)
+    * See flowchart: [Mode Start Sequence](../flowcharts/mode_start.md)
+    * See flowchart: [Mode Stop Sequence](../flowcharts/mode_stop.md)
 
 * Multiplayer Management Events
     * [multiplayer_game](multiplayer_game.md)
