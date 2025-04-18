@@ -1137,6 +1137,22 @@ nav:
       - timer_(name)_time_added: events/timer_timer_time_added.md
       - timer_(name)_time_subtracted: events/timer_timer_time_subtracted.md
 
+    - Queue Events:
+      - events/queue_events/index.md
+      - machine_reset_phase_1: events/machine_reset_phase_1.md
+      - machine_reset_phase_2: events/machine_reset_phase_2.md
+      - machine_reset_phase_3: events/machine_reset_phase_3.md
+      - game_starting: events/game_starting.md
+      - game_ending: events/game_ending.md
+      - player_adding: events/player_adding.md
+      - player_turn_starting: events/player_turn_starting.md
+      - player_turn_ending: events/player_turn_ending.md
+      - ball_starting: events/ball_starting.md
+      - ball_ending: events/ball_ending.md
+      - mode_(name)_starting: events/mode_name_starting.md
+      - mode_(name)_stopping: events/mode_name_stopping.md
+      - balldevice_(name)_ball_eject_attempt: events/balldevice_ball_device_ball_eject_attempt.md
+
     - Audio Management Events:
       - master_volume_decrease: events/master_volume_decrease.md
       - master_volume_increase: events/master_volume_increase.md
