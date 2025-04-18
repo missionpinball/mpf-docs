@@ -47,6 +47,10 @@ You can create your own queue events with the
 [queue_relay_player:](../../config/queue_relay_player.md) config file
 sections.
 
+Queue Events are categorized in the Events Reference by their device
+or other grouping type, but are also listed together in the
+[Queue Events event listing page](../queue_events/index.md).
+
 ## Note for Programmers
 
 If you're a programmer and familiar with Python, you'll notice in the

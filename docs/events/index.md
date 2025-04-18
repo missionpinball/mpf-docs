@@ -46,7 +46,7 @@ will posted an event called *switch_s_left_slingshot_active*.
 
     * [Ball Device Events](ball_devices/index.md)
         * [balldevice_(name)\_ball_count_changed](balldevice_ball_device_ball_count_changed.md)
-        * [balldevice_(name)\_ball_eject_attempt](balldevice_ball_device_ball_eject_attempt.md)
+        * [balldevice_(name)\_ball_eject_attempt](balldevice_ball_device_ball_eject_attempt.md) *Queue Event*
         * [balldevice_(name)\_ball_eject_failed](balldevice_ball_device_ball_eject_failed.md)
         * [balldevice_(name)\_ball_eject_success](balldevice_ball_device_ball_eject_success.md)
         * [balldevice_(name)\_ball_enter](balldevice_ball_device_ball_enter.md)
@@ -214,6 +214,22 @@ will posted an event called *switch_s_left_slingshot_active*.
         * [timer_(name)\_time_subtracted](timer_timer_time_subtracted.md)
 
 * Other Event Groups
+
+    * [Queue Events](queue_events/index.md)
+        * [machine_reset_phase_1](machine_reset_phase_1.md) *Queue Event*
+        * [machine_reset_phase_2](machine_reset_phase_2.md) *Queue Event*
+        * [machine_reset_phase_3](machine_reset_phase_3.md) *Queue Event*
+        * [game_starting](game_starting.md) *Queue Event*
+        * [game_ending](game_ending.md) *Queue Event*
+        * [player_adding](player_adding.md) *Queue Event*
+        * [player_turn_starting](player_turn_starting.md) *Queue Event*
+        * [player_turn_ending](player_turn_ending.md) *Queue Event*
+        * [ball_starting](ball_starting.md) *Queue Event*
+        * [ball_ending](ball_ending.md) *Queue Event*
+        * [mode_(name)_starting](mode_name_starting.md) *Queue Event*
+        * [mode_(name)_stopping](mode_name_stopping.md) *Queue Event*
+        * [balldevice_(name)\_ball_eject_attempt](balldevice_ball_device_ball_eject_attempt.md) *Queue Event*
+
     * Audio Management Events
         * [master_volume_decrease](master_volume_decrease.md)
         * [master_volume_increase](master_volume_increase.md)
@@ -264,10 +280,10 @@ will posted an event called *switch_s_left_slingshot_active*.
 
     * Game Lifecycle Events
         * [game_ended](game_ended.md)
-        * [game_ending](game_ending.md)
+        * [game_ending](game_ending.md) *Queue Event*
         * [game_start](game_start.md)
         * [game_started](game_started.md)
-        * [game_starting](game_starting.md)
+        * [game_starting](game_starting.md) *Queue Event*
         * [game_will_end](game_will_end.md)
         * [game_will_start](game_will_start.md)
         * [request_to_start_game](request_to_start_game.md)
@@ -280,9 +296,9 @@ will posted an event called *switch_s_left_slingshot_active*.
         * [(logicblock_name)_timeout](name_timeout.md)
 
     * Machine Reset Events
-        * [machine_reset_phase_1](machine_reset_phase_1.md)
-        * [machine_reset_phase_2](machine_reset_phase_2.md)
-        * [machine_reset_phase_3](machine_reset_phase_3.md)
+        * [machine_reset_phase_1](machine_reset_phase_1.md) *Queue Event*
+        * [machine_reset_phase_2](machine_reset_phase_2.md) *Queue Event*
+        * [machine_reset_phase_3](machine_reset_phase_3.md) *Queue Event*
         * [reset_complete](reset_complete.md)
 
     * MPF Initialization Events
@@ -309,9 +325,9 @@ will posted an event called *switch_s_left_slingshot_active*.
 
     * Mode Lifecycle Events
         * [mode_(name)_started](mode_name_started.md)
-        * [mode_(name)_starting](mode_name_starting.md)
+        * [mode_(name)_starting](mode_name_starting.md) *Queue Event*
         * [mode_(name)_stopped](mode_name_stopped.md)
-        * [mode_(name)_stopping](mode_name_stopping.md)
+        * [mode_(name)_stopping](mode_name_stopping.md) *Queue Event*
         * [mode_(name)\_will_start](mode_name_will_start.md)
         * [mode_(name)\_will_stop](mode_name_will_stop.md)
 
@@ -319,11 +335,11 @@ will posted an event called *switch_s_left_slingshot_active*.
         * [multiplayer_game](multiplayer_game.md)
         * [player_add_request](player_add_request.md)
         * [player_added](player_added.md)
-        * [player_adding](player_adding.md)
+        * [player_adding](player_adding.md) *Queue Event*
         * [player_turn_ended](player_turn_ended.md)
-        * [player_turn_ending](player_turn_ending.md)
+        * [player_turn_ending](player_turn_ending.md) *Queue Event*
         * [player_turn_started](player_turn_started.md)
-        * [player_turn_starting](player_turn_starting.md)
+        * [player_turn_starting](player_turn_starting.md) *Queue Event*
         * [player_turn_will_end](player_turn_will_end.md)
         * [player_turn_will_start](player_turn_will_start.md)
         * [player_will_add](player_will_add.md)
