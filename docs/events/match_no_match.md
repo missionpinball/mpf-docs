@@ -9,6 +9,9 @@ title: match_no_match
 
 All players missed the match number.
 
+This is a queue event. The match mode match_no_match
+will not be complete until the queue is cleared.
+
 ## Keyword arguments
 
 (See the [Conditional Events](overview/conditional.md)
@@ -33,4 +36,4 @@ Winner number
 
 #### `winners`:
 
-Number of winners (always 0 here)
+Number of winners (always 0 here as there are no matches)

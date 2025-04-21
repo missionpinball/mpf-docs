@@ -9,6 +9,9 @@ title: match_has_match
 
 At least one player has a match.
 
+This is a queue event. The match mode match_has_match
+will not be complete until the queue is cleared.
+
 ## Keyword arguments
 
 (See the [Conditional Events](overview/conditional.md)
