@@ -5,7 +5,9 @@ title: balldevice_(name)_ball_eject_attempt
 # balldevice_(name)\_ball_eject_attempt
 
 
---8<-- "event.md"
+!!! note "This is an MPF Event"
+
+    The content on this page is technical documentation for an [MPF Event](../overview/index.md).
 
 Event is posted by [ball_devices:](../../config/ball_devices.md)
 
