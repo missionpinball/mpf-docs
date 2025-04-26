@@ -37,18 +37,22 @@ on your machine code. A VCS tracks changes to files and allows you to review,
 revert, and isolate changes to make sure you never lose progress or get your
 game into an irrecoverable bad state.
 
-Additionally, using a repository means that you can share your code with others,
-which is important when asking for help and support.
+If you use an online repository you can share your code with others, which is
+important when asking for help and support.
 
-The most popular system is Git, and you can use Git for free on GitHub. Follow these
-guides to get setup with a GitHub account and create a new repository, which will
+The most popular system is Git. You can use it online with services like GitHub,
+or use it locally to manage files on your computer. Either way you can use Git 
+for free.
+
+### Online Repository
+Follow these guides to get setup with a GitHub account and create a new repository, which will
 hold all the code for your game.
 
   * [Create a GitHub account](https://docs.github.com/en/get-started/start-your-journey/creating-an-account-on-github)
   * [Create a new repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository)
   * [Clone your repository to your computer](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
 
-If you follow these steps, you'll now have a folder on your computer that you can
+If you followed these steps, you'll now have a folder on your computer that you can
 sync with the online repository, track changes in, and share with others. This
 folder will be your machine folder, discussed in the next step.
 
@@ -57,6 +61,23 @@ folder will be your machine folder, discussed in the next step.
     If you have an existing MPF game already, you can still easily convert it to use Git for version control. Follow the above steps and clone your repository to a new folder an your computer, and then copy your MPF machine folder contents into the repository folder. Stage and commit all the files, then delete your old machine folder and work out of the new repository folder.
 
 For managing your repository, a desktop client can save a lot of headache. [SourceTree](https://www.sourcetreeapp.com) and [GitHub Desktop](https://desktop.github.com) are popular, easy-to-use choices.
+
+### Offline Repository
+Why would I want to use Git locally? Well, you:
+* Might want to store files in your repository that incorporate intellectual property with restrictive rights that do not permit uploading to any online services
+* May have proprietary information in your repository
+* Could be embarrassed by your terrible code (don't be!)
+
+Grab yourself a Git client - there are many fabulous choices, some free. You can get the Git client from Git - it comes with a GUI (git-gui), which makes setting up a repository fairly easy:
+* Make your machine folder
+* Run git-gui in the directory
+* Create your repository
+
+[git-scm.com](https://git-scm.com/)
+
+When you need to share your repository, you can always convert it to a Git repo, or make a new Git repo with a subset of files in it.
+
+!!! tip "Some people use their GitHub repo as a backup. Using Git on a local repository provides significantly less protection, remember to back up properly!"
 
 ## 3. Your machine folder
 
@@ -105,7 +126,7 @@ C:\pinball\your_machine\config\config.yaml
 Note that if you're on Windows and you just right-click and select *New
 Text Document*, make sure that Windows Explorer is configured to show
 file extensions so you actually create a file called `config.yaml` and
-not `config.yaml.txt`. (That's in the "View" menu of Explorer.)
+not `config.yaml.txt`. Find the option in the "View" menu of Explorer.
 
 ## 4. Add #config_version=6 to the top of your config file
 
