@@ -9,9 +9,8 @@ source software that you run on a computer (Windows, Mac, Linux,
 Raspberry Pi, etc.) to control a real, physical pinball machine. (More
 info one what MPF is [here](http://missionpinball.org).)
 
-Most people develop their game on their laptop, and then when they're
-done, transfer it to a smaller computer permanently installed in their
-pinball machine.
+Most people develop their game on a main computer, transfering the game to a 
+smaller computer permanently installed in their pinball machine.
 
 The computer running MPF is connected to a
 [modern pinball control system](../hardware/index.md) via USB. (MPF supports several different control systems,
@@ -32,7 +31,7 @@ machine, including:
     steppers, flippers, ball locks, diverters, etc.)
 * Pinball logic (ball locks, multiball, modes, tilt, high scores, ball
     saves, ball search, extra balls, etc.)
-* The display (or displays): DMD, RGB LED, and/or LCD
+* The displays: DMD, RGB LED, and/or LCD
 * Audio & sounds
 * Coordinated "shows" of actions which flash lights, fade LEDs, play
     sounds and video, etc.
