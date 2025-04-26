@@ -16,25 +16,24 @@ alters the path of the ball based on the state it's in, including:
 
 ![image](../images/diverter2.jpg)
 
-* A traditional diverter which is a metal flap at the end of a rod,
+* A traditional diverter is a metal flap at the end of a rod,
     typically used on ramps to "divert" the ball one way or the other.
 * A coil-controlled post that pops up (or down) to let the ball either
-    pass over it or bounce back in some other direction. (This is
-    sometimes called an "up/down" post.)
-* A coil-controlled gate, typically which only allows the ball to flow
-    through it in a single direction, but lifted out of the way via a
-    coil when active which allows the ball to travel through it in both
-    directions.
+    pass over it or bounce in some other direction. This is
+    sometimes called an "up/down" post.
+* A coil-controlled gate, typically allows the ball to flow through it
+    in a single direction, but when active allows the ball to travel
+    through it in both directions.
 * A "trap door" pop-up which captures the ball when it's up but
-    lets the ball roll over it to another shot when it's down. (Like
-    the trap door / basement in Theatre of Magic.)
+    lets the ball roll over it when down. Like the trap door / basement
+    in Theatre of Magic.
 * A single drop target that blocks the entrance to a shot when it's
-    up, such as in the back of the saucer in Attack from Mars or the
-    ones that block the ramps in Ghostbusters.
+    up, such as in the back of the saucer in Attack from Mars or those
+    that block the ramps in Ghostbusters.
 * Something else completely custom, such as the Ringmaster in Cirqus
-    Voltaire. (When it's up the ball can hit it and drop down under the
+    Voltaire. When it's up the ball can hit it and drop down under the
     playfield, and when it's down the ball rolls over it and hits
-    standup targets behind it.)
+    standup targets behind it.
 
 At this point you might be thinking, "Wait, you consider a trap door or
 the Ringmaster to be a diverter?? What???" But if you think about it
@@ -42,40 +41,6 @@ from the perspective of pinball software, yeah, trap doors and the
 Ringmaster *are* diverters because when then are not active, a ball shot
 to them goes towards one place, and when they're active, a ball is
 "diverted" to go somewhere else.
-
-In MPF, a diverter (sometimes spelled "divertor") is anything that
-alters the path of the ball based on the state it's in, including:
-
-![image](../images/diverter1.jpg)
-
-![image](../images/diverter2.jpg)
-
-* A traditional diverter which is a metal flap at the end of a rod,
-    typically used on ramps to "divert" the ball one way or the other.
-* A coil-controlled post that pops up (or down) to let the ball either
-    pass over it or bounce back in some other direction. (This is
-    sometimes called an "up/down" post.)
-* A coil-controlled gate, typically which only allows the ball to flow
-    through it in a single direction, but lifted out of the way via a
-    coil when active which allows the ball to travel through it in both
-    directions.
-* A "trap door" pop-up which captures the ball when it's up but
-    lets the ball roll over it to another shot when it's down. (Like
-    the trap door / basement in Theatre of Magic.)
-* A single drop target that blocks the entrance to a shot when it's
-    up, such as in the back of the saucer in Attack from Mars or the
-    ones that block the ramps in Ghostbusters.
-* Something else completely custom, such as the Ringmaster in Cirqus
-    Voltaire. (When it's up the ball can hit it and drop down under the
-    playfield, and when it's down the ball rolls over it and hits
-    standup targets behind it.)
-
-At this point you might be thinking, "Wait, you consider a trap door or
-the Ringmaster to be a diverter?? What???" But if you think about it
-from the perspective of pinball software, yeah, trap doors and the
-Ringmaster *are* diverters because when then are not active, a ball shot
-to them goes towards one place, and when they're active, a ball is
-"diverted" to go somewhere else.) note
 
 !!! note
 
@@ -85,10 +50,10 @@ to them goes towards one place, and when they're active, a ball is
     MPF is able to move balls to where they need to be.
 
 Most diverters are held in their "on" position as long as their driver
-coil enabled, and then when they're disabled they return back to their
-off position. That said, some are different. The Ringmaster has a motor
-which raises and lowers it, and drop targets have coils that are just
-pulsed to raise/lower them, so this is not a hard and fast rule.
+coil is enabled, and then when they're disabled they return to their
+off position. That said, some are different. The Ringmaster in Cirqus
+Voltaire has a motor which raises and lowers it, and drop targets have
+coils that are just pulsed to raise/lower them.
 
 So based on all that, let's look at how the MPF actually handles
 diverters. At the most basic level, most diverters are just a coil, so
@@ -100,12 +65,11 @@ the glue that we've pre-written into our diverter device code.
 
 For example, many diverters attached to ramps do not hold their coils in
 the "on" position for the entire time that they're on. Instead they
-use the ramp entry switch to see when a ball is coming their way, and
-when one is they quickly activate so they can catch the ball in time to
-divert it. They also typically have a timeout where they deactivate
-themselves if they don't actually see a ball get diverted, (like with a
-weak ramp shot that trips the ramp entry switch but that isn't powerful
-enough to make it all the way up the ramp to the diverter.)
+use an entry switch to see when a ball is coming their way, and quickly
+activate so they can catch the ball in time to divert it. They also typically
+have a timeout after which they deactivate themselves if they don't receive
+a ball, such as with a weak ramp shot that trips the ramp entry switch but 
+that isn't powerful enough to make it all the way up the ramp to the diverter.
 
 MPF's diverter devices also include support for automatic enabling and
 disabling (based on events), and they include intelligence to know which
@@ -138,9 +102,9 @@ turning on that diverter and holding it on forever, the game just
 watches for that ramp entry switch and then quickly fires the diverter
 to route the ball to the other exit. Then once the ball passes by the
 diverter, it hits a second switch which turns off the diverter.
-(Typically the diverter activation also has a timeout which is used when
+Typically the diverter activation also has a timeout which is used when
 a weak shot is made where the ball trips the ramp entrance switch but
-doesn't actually make it all the way up the ramp to the diverter.)
+doesn't actually make it all the way up the ramp to the diverter.
 
 So in MPF parlance, we say that the diverter is *enabled* whenever it's
 ready to be fired, but it's not actually *active* until the coil is
