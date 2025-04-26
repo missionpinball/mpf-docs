@@ -6612,6 +6612,30 @@ icons & this code generated via https://realfavicongenerator.net
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="2. Create a Repository for your machine">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#online-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      Online Repository
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#offline-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      Offline Repository
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -35271,6 +35295,30 @@ icons & this code generated via https://realfavicongenerator.net
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="2. Create a Repository for your machine">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#online-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      Online Repository
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#offline-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      Offline Repository
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -35382,17 +35430,20 @@ pinball game config.</p>
 on your machine code. A VCS tracks changes to files and allows you to review,
 revert, and isolate changes to make sure you never lose progress or get your
 game into an irrecoverable bad state.</p>
-<p>Additionally, using a repository means that you can share your code with others,
-which is important when asking for help and support.</p>
-<p>The most popular system is Git, and you can use Git for free on GitHub. Follow these
-guides to get setup with a GitHub account and create a new repository, which will
+<p>If you use an online repository you can share your code with others, which is
+important when asking for help and support.</p>
+<p>The most popular system is Git. You can use it online with services like GitHub,
+or use it locally to manage files on your computer. Either way you can use Git 
+for free.</p>
+<h3 id="online-repository">Online Repository</h3>
+<p>Follow these guides to get setup with a GitHub account and create a new repository, which will
 hold all the code for your game.</p>
 <ul>
 <li><a href="https://docs.github.com/en/get-started/start-your-journey/creating-an-account-on-github">Create a GitHub account</a></li>
 <li><a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository">Create a new repository</a></li>
 <li><a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository">Clone your repository to your computer</a></li>
 </ul>
-<p>If you follow these steps, you'll now have a folder on your computer that you can
+<p>If you followed these steps, you'll now have a folder on your computer that you can
 sync with the online repository, track changes in, and share with others. This
 folder will be your machine folder, discussed in the next step.</p>
 <div class="admonition note">
@@ -35400,6 +35451,20 @@ folder will be your machine folder, discussed in the next step.</p>
 <p>If you have an existing MPF game already, you can still easily convert it to use Git for version control. Follow the above steps and clone your repository to a new folder an your computer, and then copy your MPF machine folder contents into the repository folder. Stage and commit all the files, then delete your old machine folder and work out of the new repository folder.</p>
 </div>
 <p>For managing your repository, a desktop client can save a lot of headache. <a href="https://www.sourcetreeapp.com">SourceTree</a> and <a href="https://desktop.github.com">GitHub Desktop</a> are popular, easy-to-use choices.</p>
+<h3 id="offline-repository">Offline Repository</h3>
+<p>Why would I want to use Git locally? Well, you:
+* Might want to store files in your repository that incorporate intellectual property with restrictive rights that do not permit uploading to any online services
+* May have proprietary information in your repository
+* Could be embarrassed by your terrible code (don't be!)</p>
+<p>Grab yourself a Git client - there are many fabulous choices, some free. You can get the Git client from Git - it comes with a GUI (git-gui), which makes setting up a repository fairly easy:
+* Make your machine folder
+* Run git-gui in the directory
+* Create your repository</p>
+<p><a href="https://git-scm.com/">git-scm.com</a></p>
+<p>When you need to share your repository, you can always convert it to a Git repo, or make a new Git repo with a subset of files in it.</p>
+<div class="admonition tip">
+<p class="admonition-title">Some people use their GitHub repo as a backup. Using Git on a local repository provides significantly less protection, remember to back up properly!</p>
+</div>
 <h2 id="3-your-machine-folder">3. Your machine folder</h2>
 <p>Okay, so let's get started with your own game's machine folder.</p>
 <div class="admonition info">
@@ -35433,7 +35498,7 @@ should be here:</p>
 <p>Note that if you're on Windows and you just right-click and select <em>New
 Text Document</em>, make sure that Windows Explorer is configured to show
 file extensions so you actually create a file called <code>config.yaml</code> and
-not <code>config.yaml.txt</code>. (That's in the "View" menu of Explorer.)</p>
+not <code>config.yaml.txt</code>. Find the option in the "View" menu of Explorer.</p>
 <h2 id="4-add-config_version6-to-the-top-of-your-config-file">4. Add #config_version=6 to the top of your config file</h2>
 <p>The first thing you need to do when you create any new config file for
 MPF is to add an entry on the very top line that tells MPF what
