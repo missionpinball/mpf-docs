@@ -35624,7 +35624,7 @@ to <a href="../../examples/">config file examples</a> for more examples of real 
 </table>
 <p>The <code>ball_saves:</code> section of your config is where you create <a href="#">ball save
 devices</a>. Here's an example:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">ball_saves</span><span class="p">:</span>
+<p><div class="highlight"><pre><span></span><code><span class="nt">ball_saves</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">default</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">active_time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10s</span>
 <span class="w">    </span><span class="nt">hurry_up_time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2s</span>
@@ -35632,9 +35632,12 @@ devices</a>. Here's an example:</p>
 <span class="w">    </span><span class="nt">enable_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mode_base_started</span>
 <span class="w">    </span><span class="nt">timer_start_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">balldevice_plunger_lane_ball_eject_success</span>
 <span class="w">    </span><span class="nt">auto_launch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-<span class="w">    </span><span class="nt">balls_to_save</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">balls_to_save</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
 <span class="w">    </span><span class="nt">debug</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
+Note that the total time starts once on the very first ball and is not being reset on a ball drain. In the above example that means that you have three ball saves
+within 12 seconds (10s active time plus 2s grace period). If your first ball drains after 10s, you get a ball save, if the next ball drains again after another
+10s you do <em>not</em> get a second ball save because the timer is not reset and a total of 20s has elapsed.</p>
 <h2 id="optional-settings">Optional settings</h2>
 <p>The following sections are optional in the <code>ball_saves:</code> section of your
 config. (If you don't include them, the default will be used).</p>
