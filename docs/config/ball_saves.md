@@ -24,9 +24,12 @@ ball_saves:
     enable_events: mode_base_started
     timer_start_events: balldevice_plunger_lane_ball_eject_success
     auto_launch: true
-    balls_to_save: 1
+    balls_to_save: 3
     debug: true
 ```
+Note that the total time starts once on the very first ball and is not being reset on a ball drain. In the above example that means that you have three ball saves
+within 12 seconds (10s active time plus 2s grace period). If your first ball drains after 10s, you get a ball save, if the next ball drains again after another
+10s you do *not* get a second ball save because the timer is not reset and a total of 20s has elapsed.
 
 ## Optional settings
 
