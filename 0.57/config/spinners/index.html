@@ -35569,29 +35569,29 @@ from active to idle.</p>
 <p>A spinner switch is hit</p>
 <ol>
 <li>The spinner becomes "active" and sets a timeout for <code>active_ms:</code> duration</li>
-<li>The spinner posts <em>spinner_(name)_active</em> event</li>
-<li>The spinner posts <em>spinner_(name)_hit</em> event</li>
+<li>The spinner posts <a href="../../events/spinner_spinner_active/"><em>spinner_(name)_active</em></a> event</li>
+<li>The spinner posts <a href="../../events/spinner_spinner_hit/"><em>spinner_(name)_hit</em></a> event</li>
 </ol>
 </li>
 <li>
 <p>Additional switch hits occur</p>
 <ol>
 <li>The spinner resets the timeout for another <code>active_ms:</code> duration</li>
-<li>The spinner posts a <em>spinner_(name)_hit</em> event for each hit</li>
+<li>The spinner posts a <a href="../../events/spinner_spinner_hit/"><em>spinner_(name)_hit</em></a> event for each hit</li>
 </ol>
 </li>
 <li>
 <p>Switch hits stop and the active delay timer expires</p>
 <ol>
 <li>The spinner switches to "inactive" state</li>
-<li>The spinner posts <em>spinner_(name)_inactive</em> event</li>
+<li>The spinner posts <a href="../../events/spinner_spinner_inactive/"><em>spinner_(name)_inactive</em></a> event</li>
 <li>(Optional) If <code>idle_ms:</code> is defined, the spinner sets a timeout for idle_ms duration</li>
 </ol>
 </li>
 <li>
 <p>(Optional) No switch hits occur and the idle delay timer expires</p>
 <ol>
-<li>The spinner posts <em>spinner_(name)_idle</em> event</li>
+<li>The spinner posts <a href="../../events/spinner_spinner_idle/"><em>spinner_(name)_idle</em></a> event</li>
 <li>The spinner switches to "idle" state</li>
 </ol>
 </li>
@@ -35629,8 +35629,8 @@ empty.</p>
 <p>A list of labels to apply to the switches in the spinner. If used, the
 number of labels should equal the number of switches.</p>
 <p>When a spinner switch is hit and <code>labels:</code> are defined, additional
-events will be posted with <em>spinner_(name)_(label)_active</em> and
-<em>spinner_(name)_(label)_hit</em>. This allows the game to trigger
+events will be posted with <a href="../../events/spinner_spinner_label_active/"><em>spinner_(name)_(label)_active</em></a> and
+<a href="../../events/spinner_spinner_label_hit/"><em>spinner_(name)_(label)_hit</em></a>. This allows the game to trigger
 different behavior based on which spinner switch is hit first or spins
 more times.</p>
 <h3 id="playfield">playfield:</h3>
