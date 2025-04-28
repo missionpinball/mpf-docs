@@ -86,5 +86,5 @@ counters:
 * [spinner_(name)_inactive](../events/spinner_spinner_inactive.md)
 * [spinner_(name)_idle](../events/spinner_spinner_idle.md)
 * [spinner_(name)_active](../events/spinner_spinner_active.md)
-* [spinner_(name)_(label)_hit](../events/spinner_spinner_label_hit.md)
-* [spinner_(name)_(label)_active](../events/spinner_spinner_label_active.md)
+* [spinner_(name)\_(label)_hit](../events/spinner_spinner_label_hit.md)
+* [spinner_(name)\_(label)_active](../events/spinner_spinner_label_active.md)

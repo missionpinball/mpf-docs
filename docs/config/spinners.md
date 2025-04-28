@@ -51,20 +51,20 @@ The basic flow:
 
 2. A spinner switch is hit
     1. The spinner becomes "active" and sets a timeout for `active_ms:` duration
-    2. The spinner posts *spinner_\(name\)_active* event
-    3. The spinner posts *spinner_\(name\)_hit* event
+    2. The spinner posts [*spinner_\(name\)_active*](../events/spinner_spinner_active.md) event
+    3. The spinner posts [*spinner_\(name\)_hit*](../events/spinner_spinner_hit.md) event
 
 3. Additional switch hits occur
     1. The spinner resets the timeout for another `active_ms:` duration
-    2. The spinner posts a *spinner_\(name\)_hit* event for each hit
+    2. The spinner posts a [*spinner_\(name\)_hit*](../events/spinner_spinner_hit.md) event for each hit
 
 4. Switch hits stop and the active delay timer expires
     1. The spinner switches to "inactive" state
-    2. The spinner posts *spinner_\(name\)_inactive* event
+    2. The spinner posts [*spinner_\(name\)_inactive*](../events/spinner_spinner_inactive.md) event
     3. (Optional) If `idle_ms:` is defined, the spinner sets a timeout for idle_ms duration
 
 5. (Optional) No switch hits occur and the idle delay timer expires
-    1. The spinner posts *spinner_\(name\)_idle* event
+    1. The spinner posts [*spinner_\(name\)_idle*](../events/spinner_spinner_idle.md) event
     2. The spinner switches to "idle" state
 
 ## Optional settings
@@ -119,8 +119,8 @@ A list of labels to apply to the switches in the spinner. If used, the
 number of labels should equal the number of switches.
 
 When a spinner switch is hit and `labels:` are defined, additional
-events will be posted with *spinner_\(name\)_\(label\)_active* and
-*spinner_\(name\)_\(label\)_hit*. This allows the game to trigger
+events will be posted with [*spinner_\(name\)_\(label\)_active*](../events/spinner_spinner_label_active.md) and
+[*spinner_\(name\)_\(label\)_hit*](../events/spinner_spinner_label_hit.md). This allows the game to trigger
 different behavior based on which spinner switch is hit first or spins
 more times.
 
