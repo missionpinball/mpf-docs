@@ -90,5 +90,5 @@ Single value, type: `string`. Default: `standard`
 
 ## Related How To guides
 
-* [Service Mode](../machine_management/service_mode.md)
-* [Service Mode](../game_logic/service_mode.md)
+* [Machine Management - Service Mode](../machine_management/service_mode.md)
+* [Game Logic - Service Mode](../game_logic/service_mode.md)
