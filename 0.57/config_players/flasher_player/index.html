@@ -32165,6 +32165,15 @@ icons & this code generated via https://realfavicongenerator.net
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -35237,6 +35246,15 @@ icons & this code generated via https://realfavicongenerator.net
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -35262,9 +35280,7 @@ icons & this code generated via https://realfavicongenerator.net
 
 
 <h1 id="flasher-player">Flasher player</h1>
-<p>The <em>flasher player</em> is a
-<a href="../">config player</a>
-that's used to flash lights.</p>
+<p>The <em>flasher player</em> is a <a href="../">config player</a> that's used to flash lights.</p>
 <h2 id="usage-in-config-files">Usage in config files</h2>
 <p>In config files, the flasher player is used via the <code>flasher_player:</code>
 section.</p>
@@ -35274,6 +35290,28 @@ step.</p>
 <h2 id="config-options">Config Options</h2>
 <p>See <a href="../../config/flasher_player/">flasher_player:</a> for config
 details.</p>
+<h2 id="examples">Examples</h2>
+<p>Simple flasher behavior on a <a href="../../events/switch_active/">switch_active</a> event with default length and color:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">flasher_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_switch_active</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my_light</span>
+</code></pre></div>
+<p>Flasher with customized color and timing:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">flasher_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_second_switch_active</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">my_second_light</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
+<span class="w">      </span><span class="nt">ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">300ms</span>
+</code></pre></div>
+<p>Multiple flashers triggered by a single event:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">flasher_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_trigger_event</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">my_double_flasher_light_1</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">blue</span>
+<span class="w">      </span><span class="nt">ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">250ms</span>
+<span class="w">    </span><span class="nt">my_double_flasher_light_2</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">green</span>
+<span class="w">      </span><span class="nt">ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">250ms</span>
+</code></pre></div>
 <hr />
 <div class="admonition question">
 <p class="admonition-title">Something missing or wrong? You can fix it!</p>
