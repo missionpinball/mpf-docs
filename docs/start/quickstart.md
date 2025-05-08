@@ -20,7 +20,7 @@ This is for people who know what they're doing. If you're lost, check out our fu
 
 1. In the Godot Editor, go to *Project Settings > Plugins* and check the Enable box for **Godot MC**. (Godot will show lots of errors during this step and the next, ignore them).
 
-1. In the Godot Editor *Project Settings > Autoload* select the folder to add a new Autoload and choose the file *addons/mpf-gmc/mpd_gmc.gd*. Set the Node name to `MPF` (all caps) and press Add.
+1. In the Godot Editor *Project Settings > Globals* select the folder to add a new Autoload and choose the file *addons/mpf-gmc/mpd_gmc.gd*. Set the Node name to `MPF` (all caps) and press Add.
 
 1. Save your Godot project and then in the editor menu select *Project > Reload Current Project*.
 
