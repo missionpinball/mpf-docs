@@ -35561,7 +35561,9 @@ icons & this code generated via https://realfavicongenerator.net
 </code></pre></div>
 <p><strong>Symlink Users:</strong> If you are using a symlink to mirror the <em>mpf-gmc</em> folder in your project <em>addons</em> folder, the above steps are enough.</p>
 <p><strong>Copy+Paste Users:</strong> If you have copy+pasted the <em>mpf-gmc</em> folder from the GMC repository to your project <em>addons</em> folder, you will need to re-copy+paste the folder after you fetch and pull.</p>
-<p>Because of how Godot processes and caches plugins and autoloads, sometimes pulling a fresh update of GMC will trigger errors and warnings in the Godot log. This is expected the first time you open your project in Godot after a GMC update. You can use the <em>Project &gt; Reload Current Project</em> menu to refresh the Godot editor and clear out errors after updating.</p>
+<p>Because of how Godot processes and caches plugins and autoloads, sometimes pulling a fresh update of GMC will trigger errors and warnings in the Godot log.
+This is expected the first time you open your project in Godot after a GMC update.
+You can use the <em>Project &gt; Reload Current Project</em> menu to refresh the Godot editor and clear out errors after updating.</p>
 <div class="admonition note">
 <p class="admonition-title">In Case of Catastrophe</p>
 <p>In some cases, a godot project can get corrupted with cached variants of GMC autoload/class files that cause a slew of errors on startup, even after restarting the editor.</p>
@@ -35572,9 +35574,15 @@ icons & this code generated via https://realfavicongenerator.net
 <p class="admonition-title">There will be errors</p>
 <p>During this step, at various points some pieces will be setup before others and Godot will present errors about files not found or scripts unable to be parsed. It is safe to ignore these errors for now: we will restart Godot after this step and everything will be in order.</p>
 </div>
-<p>In the Godot Editor, open the <em>Project &gt; Project Settings</em> menu and select the <em>Plugins</em> tab. You should see an option there for <strong>Godot MC</strong>, check the checkbox to enable the plugin. If the plugin is not visible in the plugin list, you should check to see if you placed the <em>addons</em> folder in the wrong location.</p>
+<p>In the Godot Editor, open the <em>Project &gt; Project Settings</em> menu and select the <em>Plugins</em> tab.
+You should see an option there for <strong>Godot MC</strong>, check the checkbox to enable the plugin.
+If the plugin is not visible in the plugin list, you should check to see if you placed the <em>addons</em> folder in the wrong location.</p>
 <p><img alt="image" src="../images/project_settings_plugins.png" /></p>
-<p>Now go to the <em>Autoload</em> tab and click the folder icon to select an Autoload script. Navigate to the <em>addons/mpf-gmc</em> folder and choose the file <em>mpf_gmc.gd</em>. Under <em>Node Name</em> set the name to "MPF" (all caps) and press <em>Add</em>. You should see a new line appear with a checkbox enabled.</p>
+<p>Now go to the <em>Globals</em> tab, <em>Autoload</em> subtab, and add a new autoload by pressing the folder icon (<em>NOT</em> the "+ Add" button yet).
+Navigate to the <em>addons/mpf-gmc</em> folder and choose the file <em>mpf_gmc.gd</em>.
+Under <em>Node Name</em> set the name to "MPF" (all caps) and press <em>+ Add</em>.
+You should see a new line appear with a checkbox enabled.</p>
+<p>(Note: for Godot versions before 4.3, instead of "Globals" the project settings tab for "Globals" may be instead called "Autoload".)</p>
 <p><img alt="image" src="../images/project_settings_autoload.png" /></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>

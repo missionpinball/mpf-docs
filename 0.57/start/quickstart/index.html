@@ -35265,6 +35265,7 @@ icons & this code generated via https://realfavicongenerator.net
 <p>This is for people who know what they're doing. If you're lost, check out our full
 <a href="../../install/">installation guides</a>.</p>
 <h2 id="quickstart-for-gmc">Quickstart for GMC</h2>
+<p>For full guide see: <a href="../../gmc/installation/">GMC Installation</a></p>
 <ol>
 <li>
 <p>Download the Godot Editor from <a href="https://godotengine.org">https://godotengine.org</a></p>
@@ -35282,7 +35283,7 @@ icons & this code generated via https://realfavicongenerator.net
 <p>In the Godot Editor, go to <em>Project Settings &gt; Plugins</em> and check the Enable box for <strong>Godot MC</strong>. (Godot will show lots of errors during this step and the next, ignore them).</p>
 </li>
 <li>
-<p>In the Godot Editor <em>Project Settings &gt; Globals</em> select the folder to add a new Autoload and choose the file <em>addons/mpf-gmc/mpd_gmc.gd</em>. Set the Node name to <code>MPF</code> (all caps) and press Add.</p>
+<p>In the Godot Editor <em>Project Settings &gt; Globals</em> click the folder icon to add a new Autoload and choose the file <em>addons/mpf-gmc/mpd_gmc.gd</em>. Set the Node name to <code>MPF</code> (all caps) and press Add.</p>
 </li>
 <li>
 <p>Save your Godot project and then in the editor menu select <em>Project &gt; Reload Current Project</em>.</p>
@@ -35304,22 +35305,26 @@ icons & this code generated via https://realfavicongenerator.net
 </li>
 <li>
 <p>In your terminal, navigate to the project folder you created and initialize an MPF config file.</p>
+<p><code>console
+(mpf) my_project_folder $&gt; mkdir config
+(mpf) my_project_folder $&gt; echo "#config_version=6" &gt; config/config.yaml</code></p>
 </li>
 </ol>
-<div class="highlight"><pre><span></span><code><span class="go">    (mpf) my_project_folder $&gt; mkdir config</span>
-<span class="go">    (mpf) my_project_folder $&gt; echo &quot;#config_version=6&quot; &gt; config/config.yaml</span>
-</code></pre></div>
 <h2 id="running-the-game">Running the Game</h2>
 <ol>
 <li>
-<p>Press the play button in the top-right of the Godot Editor. When prompted to select a main scene, select <em>addons/mpf-gmc/slides/window.tscn</em>. You should see a window appear with the MPF logo and text reading "Waiting for MPF..."</p>
+<p>To run the GMC project, press the play button in the top-right of the Godot Editor. When prompted to select a main scene, select <em>addons/mpf-gmc/slides/window.tscn</em>. You should see a window appear with the MPF logo and text reading "Waiting for MPF..."</p>
 </li>
 <li>
-<p>In your terminal, type <code>mpf -xt</code></p>
+<p>To run the MPF game with virtual platform and console logging, type <code>mpf -xt</code>.</p>
+<p>For full run options see: <a href="../../running/mpf/">MPF command-line utility</a> and <a href="../../running/commands/game/">mpf game (command-line utility)</a></p>
+<p>To configure the GMC project to automatically run the <code>mpf game</code> for you, see: <a href="../../gmc/guides/launching-the-mpf-game-with-godot/">Launching the MPF game with Godot</a></p>
+</li>
+<li>
+<p>The Godot window should now say "Connected to MPF". Congratulations, you're running a pinball game!</p>
 </li>
 </ol>
-<p>The Godot window should now say "Connected to MPF". Congratulations, you're running a pinball game!</p>
-<p>You can now proceed to <a href="../../gmc/setup/">set up your GMC slides</a> and start creating modes.</p>
+<p>You can now proceed to <a href="../../gmc/setup/">set up your GMC slides</a> and <a href="../../game_logic/modes/custom_modes/">start creating modes</a>.</p>
 <hr />
 <div class="admonition question">
 <p class="admonition-title">Something missing or wrong? You can fix it!</p>
