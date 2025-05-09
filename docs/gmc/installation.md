@@ -143,7 +143,9 @@ If you cloned the MPF-GMC repository, you need to fetch and pull:
 
 **Copy+Paste Users:** If you have copy+pasted the *mpf-gmc* folder from the GMC repository to your project *addons* folder, you will need to re-copy+paste the folder after you fetch and pull.
 
-Because of how Godot processes and caches plugins and autoloads, sometimes pulling a fresh update of GMC will trigger errors and warnings in the Godot log. This is expected the first time you open your project in Godot after a GMC update. You can use the *Project > Reload Current Project* menu to refresh the Godot editor and clear out errors after updating.
+Because of how Godot processes and caches plugins and autoloads, sometimes pulling a fresh update of GMC will trigger errors and warnings in the Godot log.
+This is expected the first time you open your project in Godot after a GMC update.
+You can use the *Project > Reload Current Project* menu to refresh the Godot editor and clear out errors after updating.
 
 !!! note "In Case of Catastrophe"
 
@@ -157,11 +159,18 @@ Because of how Godot processes and caches plugins and autoloads, sometimes pulli
 
     During this step, at various points some pieces will be setup before others and Godot will present errors about files not found or scripts unable to be parsed. It is safe to ignore these errors for now: we will restart Godot after this step and everything will be in order.
 
-In the Godot Editor, open the *Project > Project Settings* menu and select the *Plugins* tab. You should see an option there for **Godot MC**, check the checkbox to enable the plugin. If the plugin is not visible in the plugin list, you should check to see if you placed the *addons* folder in the wrong location.
+In the Godot Editor, open the *Project > Project Settings* menu and select the *Plugins* tab.
+You should see an option there for **Godot MC**, check the checkbox to enable the plugin.
+If the plugin is not visible in the plugin list, you should check to see if you placed the *addons* folder in the wrong location.
 
 ![image](images/project_settings_plugins.png)
 
-Now go to the *Autoload* tab and click the folder icon to select an Autoload script. Navigate to the *addons/mpf-gmc* folder and choose the file *mpf_gmc.gd*. Under *Node Name* set the name to "MPF" (all caps) and press *Add*. You should see a new line appear with a checkbox enabled.
+Now go to the *Globals* tab, *Autoload* subtab, and add a new autoload by pressing the folder icon (*NOT* the "+ Add" button yet).
+Navigate to the *addons/mpf-gmc* folder and choose the file *mpf_gmc.gd*.
+Under *Node Name* set the name to "MPF" (all caps) and press *+ Add*.
+You should see a new line appear with a checkbox enabled.
+
+(Note: for Godot versions before 4.3, instead of "Globals" the project settings tab for "Globals" may be instead called "Autoload".)
 
 ![image](images/project_settings_autoload.png)
 
