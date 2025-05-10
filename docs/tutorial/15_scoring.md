@@ -27,7 +27,7 @@ made, combos made, number of modes completed, aliens destroyed, etc.
 The variable player is responsible for adding and subtracting value from
 any player variable based on events that happen in MPF. You configure
 which events add or subtract value to which player variables in the
-`variable_player:` section of a mode's configuration file.
+[variable_player:](../config/variable_player.md) section of a mode's configuration file.
 
 ## 2. Add a *variable_player:* section to your base.yaml mode config file
 
@@ -49,7 +49,7 @@ posts an event *\(switch_name\)_active* . (A second event called
 *\(switch_name\)_inactive* is also posted when the switch opens back
 up.) To give the player points when a switch is hit, add sub-entries to
 the `variable_player:` section of your config file, with some switch
-name followed by "_active", like this:
+name followed by "\_active", like this:
 
 ``` yaml
 ##! mode: base
@@ -105,7 +105,7 @@ can just wire up scoring to a switch to see it working.)
 ## 4. Play with more player variables
 
 As we said, you can add or subtract value from any player variable via
-the `variable_player:` section--even player variables that you make up.
+the `variable_player:` section -- even player variables that you make up.
 
 For example, try changing your scoring section to this:
 

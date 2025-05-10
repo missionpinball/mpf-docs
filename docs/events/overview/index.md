@@ -14,7 +14,7 @@ Video about events in MPF:
 It's easiest to understand the concept of events by going through some
 examples.
 
-For example, you might have a `variable_player:` entry in your config
+For example, you might have a [variable_player:](../../config/variable_player.md) entry in your config
 which watches for an event called *target1_hit*, and when it sees it, it
 adds 1000 points to the player's score, like this:
 
@@ -28,7 +28,7 @@ variable_player:
 What's really happening behind the scenes here is MPF's
 variable_player system tells the event system, "Hey, if you see an
 event called *target1_hit*, let me know about it." (This is called
-"registering a handler", because the variable_player system is
+"registering a handler", because the [variable_player](../../config/variable_player.md) system is
 registering with the event since that it can handle that event.)
 
 Then later on, the switch for target 1 gets activated, and the shot

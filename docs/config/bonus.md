@@ -132,7 +132,7 @@ Let's look at each option you can use in each bonus entry:
 ### event: (required)
 
 The name of the event that is posted by the bonus mode. You should use a
-`slide_player:` in your bonus mode with slide entries based on these
+[slide_player:](slide_player.md) in your bonus mode with slide entries based on these
 names, so when the bonus mode posts that event, you can show a slide
 with the relevant information for that bonus entry.
 
@@ -154,7 +154,7 @@ variable times 25000.
 
 Note that the bonus mode doesn't care what player variable you use, and
 it would be up to you to make sure that the player variable you choose
-is updated throughout your game (either through a `variable_player:`
+is updated throughout your game (either through a [variable_player:](variable_player.md)
 section or a logic block or something like that).
 
 Also if you choose not to include this entry, that's fine. In that case

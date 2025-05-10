@@ -8,6 +8,7 @@ title: Player Variables
 Related Config File Sections:
 
 * [player_vars:](../config/player_vars.md)
+* [variable_player:](../config/variable_player.md)
 
 MPF contains lots of features which make working with players easy
 including variables. If you are not a programmer, variables are just
@@ -100,8 +101,8 @@ location such as the machine configuration file.
 MPF configuration files do not work with variables as easily as "real"
 programming languages. The primary method of changing a variable is by
 configuring the change you would like to make. In the current version of
-MPF, this is primarily done in the `variable_player:` section of your
-mode.
+MPF, this is primarily done in the [`variable_player:`](../config/variable_player.md)
+section of your mode.
 
 ``` yaml
 ##! mode: my_mode
@@ -172,18 +173,23 @@ slide_player:
 #! assert_text_on_top_slide "Initial Ladder > No Mode > 1"
 ```
 
-Related How To guides:
+## Related How To guides:
 
-* [Help us to write it](../about/help.md)
+* [Scoring](../game_logic/scoring/index.md)
 
-Related Events
+## Related Events
+
+* [player_(variable_name)](../events/player_player_var.md)
+* [player_score](../events/player_score.md)
+
+## Player Lifecycle Events
 
 * [player_add_request](../events/player_add_request.md)
 * [player_added](../events/player_added.md)
 * [player_turn_will_start](../events/player_turn_will_start.md)
 * [player_turn_starting](../events/player_turn_starting.md)
 * [player_turn_started](../events/player_turn_started.md)
-* [ball_save_(name)_saving_ball](../events/ball_save_ball_save_saving_ball.md)
+* [ball_save_(name)\_saving_ball](../events/ball_save_ball_save_saving_ball.md)
 * [player_turn_will_end](../events/player_turn_will_end.md)
 * [player_turn_ending](../events/player_turn_ending.md)
 * [player_turn_ended](../events/player_turn_ended.md)
