@@ -100,22 +100,24 @@ one has a manual plunge option.
 If you have this type of coil-powered plunger, follow the
 [guide](coil_fired.md) to configure it in MPF.
 
-Related How To guides:
+## Related How To guides:
+
+* [mechanical_with_switch](mechanical_with_switch.md)
+* [mechanical_no_switch](mechanical_no_switch.md)
+* [coil_fired](coil_fired.md)
+* [auto_manual](auto_manual.md)
 
 * [Tutorial step 8: Add your plunger lane](../../tutorial/8_plunger.md)
 * [Troubleshooting P-Roc/P3-Roc](../ball_devices/troubleshooting.md)
-Related Events
+
+## Related Events
 
 * [balldevice_ball_missing](../../events/balldevice_ball_missing.md)
 * [balldevice_balls_available](../../events/balldevice_balls_available.md)
-* [balldevice_(name)_ball_missing](../../events/balldevice_ball_device_ball_missing.md)
+* [balldevice_(name)\_ball_missing](../../events/balldevice_ball_device_ball_missing.md)
 * [balldevice_captured_from_(captures_from)](../../events/balldevice_captured_from_captures_from.md)
-* [balldevice_(name)_ball_eject_attempt](../../events/balldevice_ball_device_ball_eject_attempt.md)
-* [balldevice_(name)_ball_eject_failed](../../events/balldevice_ball_device_ball_eject_failed.md)
-* [balldevice_(name)_ball_eject_success](../../events/balldevice_ball_device_ball_eject_success.md)
-* [balldevice_(name)_ejecting_ball](../../events/balldevice_ball_device_ejecting_ball.md)
+* [balldevice_(name)\_ball_eject_attempt](../../events/balldevice_ball_device_ball_eject_attempt.md)
+* [balldevice_(name)\_ball_eject_failed](../../events/balldevice_ball_device_ball_eject_failed.md)
+* [balldevice_(name)\_ball_eject_success](../../events/balldevice_ball_device_ball_eject_success.md)
+* [balldevice_(name)\_ejecting_ball](../../events/balldevice_ball_device_ejecting_ball.md)
 
-[mechanical_with_switch](mechanical_with_switch.md)
-[mechanical_no_switch](mechanical_no_switch.md)
-[coil_fired](coil_fired.md)
-[auto_manual](auto_manual.md)

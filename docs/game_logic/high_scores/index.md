@@ -369,13 +369,13 @@ widget_styles:
 #! assert_mode_running attract
 ```
 
-Related How To guides:
+## Related How To guides:
 
 * [high_scores_in_ems](../scoring/index.md)
 * [high_scores_in_ems](../../game_design/index.md)
 * [High Scores in EM Machines](high_scores_in_ems.md)--
 
-Related Events
+## Related Events
 
 * [mode_high_score_started](../../events/mode_name_started.md)
 * [mode_high_score_stopped](../../events/mode_name_stopped.md)--

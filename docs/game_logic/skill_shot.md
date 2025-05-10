@@ -187,6 +187,6 @@ which will fail the skill shot 5s after the ball left the plunger.
 Usually, you want to create a modes which starts on `skill_success` and
 another mode which starts on `skill_failed` to play some shows.
 
-Related How To guides:
+## Related How To guides:
 
 * [How to design a game in MPF using Modes](../game_design/index.md)

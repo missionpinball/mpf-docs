@@ -53,7 +53,7 @@ For
 
 Value, stored in memory of what servo position should be, on a scale from 0.0 to 1.0.
 
-Related How To guides:
+## Related How To guides:
 
 * [Programming Servo Sequences](servo_sequence.md)
 

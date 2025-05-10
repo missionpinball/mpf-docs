@@ -113,7 +113,7 @@ sudo mpf game
 This is needed for the matrix to access the hardware and it will drop
 privileges after it started.
 
-Related How To guides
+## Related How To guides
 
  * [Installing Fantastic with RPI DMD](https://github.com/yetifrisstlama/Fan-Tas-Tic-machine#installing-everything-on-the-raspberry-pi-from-scratch)
 

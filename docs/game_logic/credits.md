@@ -677,11 +677,11 @@ hit 25ct are added (or 1/2 credit).
 This mode will also play sounds and show slides when adding credits or
 players since both can happen before or during a game.
 
-Related How To guides:
+## Related How To guides:
 
 * [How to design a game in MPF using Modes](../game_design/index.md)
 
-Machine Variables
+## [Machine Variables](../machine_vars/index.md)
 
 * [credit_units](../machine_vars/credit_units.md)
 * [credits_numerator](../machine_vars/credits_numerator.md)
@@ -689,7 +689,7 @@ Machine Variables
 * [credits_value](../machine_vars/credits_value.md)
 * [credits_whole_num](../machine_vars/credits_whole_num.md)
 
-Related Events
+## Related Events
 
 * [credits_added](../events/credits_added.md)
 * [enabling_credit_play](../events/enabling_credit_play.md)

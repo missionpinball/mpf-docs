@@ -135,7 +135,7 @@ autofire_coils:
 Adjust `default_pulse_ms` and `default_pulse_power` in your coil to
 control the strength and sound of your pop bumpers.
 
-Related How To guides:
+## Related How To guides:
 
 * [Mechanical Switches](../switches/mechanical_switches.md)
 * [Matrix Lights (Bulbs)](../lights/matrix_lights.md)

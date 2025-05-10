@@ -88,6 +88,6 @@ widget_styles:
     adjust_bottom: 3
 ```
 
-Related How To guides:
+## Related How To guides:
 
 * [How to design a game in MPF using Modes](../game_design/index.md)

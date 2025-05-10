@@ -77,6 +77,6 @@ diverters:
     disable_events: ball_ended
 ```
 
-Related How To guides:
+## Related How To guides:
 
 * [Diverters](../../index.md)

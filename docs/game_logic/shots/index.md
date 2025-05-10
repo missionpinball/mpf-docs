@@ -154,7 +154,7 @@ switch `s_target` is hit and the shot is in state `lit`.
 * [(shot_name)\_(profile)\_(state)_hit](../../events/shot_profile_state_hit.md)
 * [(shot_name)\_(state)_hit](../../events/shot_state_hit.md)
 
-Related How To Guides
+## Related How To Guides
 
 * [Tutorial step 18: Add your first shot](../../tutorial/18_shots.md)
 * [Shots on inlane/outlanes](../../mechs/switches/rollover_switches.md)

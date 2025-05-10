@@ -88,6 +88,6 @@ Related Events
 * [match_has_match](../events/match_has_match.md)
 * [match_no_match](../events/match_no_match.md)
 
-Related How To guides
+## Related How To guides
 
 * [How to design a game in MPF using Modes](../game_design/index.md)

@@ -32,6 +32,6 @@ that's as simple as adding a config file for the attract mode to your
 game folder and then configuring light and display shows to play. See
 the tutorial for details on how to do this.
 
-Related How To Guides
+## Related How To Guides
 
 * [high score in attract](../high_scores/index.md)----

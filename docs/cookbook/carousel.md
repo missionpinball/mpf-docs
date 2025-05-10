@@ -279,6 +279,6 @@ mode:
 ##Then the rest of the mode's code.
 ```
 
-Related How To guides:
+## Related How To guides:
 
 * [How to design a game in MPF using Modes](../index.md)

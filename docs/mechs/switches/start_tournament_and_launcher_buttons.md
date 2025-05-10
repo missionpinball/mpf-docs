@@ -50,7 +50,7 @@ The tag `start` will hook the button into your game. See
 [Tutorial step 9. Add the start button](../../tutorial/9_start_button.md) for details.
 You might want to integrate the button into your attract light show.
 
-Related How To guides:
+## Related How To guides:
 
 * [Tutorial step 9. Add the start button](../../tutorial/9_start_button.md)
 * [Mechanical Switches](mechanical_switches.md)
