@@ -258,10 +258,10 @@ loops_award_display:
 
 High score mode will also create a few machine variables for you:
 
-* [high_scores](../../machine_vars/high_score_categoryposition_label.md) - `score1_label` = GRAND CHAMPION
-* [high_scores](../../machine_vars/high_score_categoryposition_name.md) - `score1_name` = MPF
-* [high_scores](../../machine_vars/high_score_categoryposition_value.md) - `score1_value` = 1000000
-* [high_scores](../../machine_vars/high_score_categoryposition_variabletype_variable.md) - `score1_player_character` = Squid
+* [high_scores - score1_label](../../machine_vars/high_score_categoryposition_label.md) = GRAND CHAMPION
+* [high_scores - score1_name](../../machine_vars/high_score_categoryposition_name.md) = MPF
+* [high_scores - score1_value](../../machine_vars/high_score_categoryposition_value.md) = 1000000
+* [high_scores - score1_player_character](../../machine_vars/high_score_categoryposition_variabletype_variable.md) = Squid
 
 In this case this will be `score1_value`, `score1_name` and
 `score1_label` (till `score9_value`, `score9_name` and `score9_label`).
@@ -368,6 +368,14 @@ widget_styles:
 ##! test
 #! assert_mode_running attract
 ```
+
+Generically, these machine variables are:
+
+* [(high_score_category)(position)\_label](../../machine_vars/high_score_categoryposition_label.md)
+* [(high_score_category)(position)\_name](../../machine_vars/high_score_categoryposition_name.md)
+* [(high_score_category)(position)\_value](../../machine_vars/high_score_categoryposition_value.md)
+* [(high_score_category)(position)\_(variable_type)\_(variable)](../../machine_vars/high_score_categoryposition_variabletype_variable.md)
+
 
 ## Related How To guides:
 
