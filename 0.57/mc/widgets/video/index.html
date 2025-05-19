@@ -24,7 +24,7 @@ icons & this code generated via https://realfavicongenerator.net
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.13">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
@@ -35678,6 +35678,12 @@ etc. (This is similar to <code>position:</code>, except it's based on percent
 instead of position.</p>
 <p>This setting does not change the play/stop state.</p>
 <h4 id="position"><code>position</code>:</h4>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>With Kivy 2.2.1 this feature might be a little buggy as in the kivy config, video duration is hard coded to 1.
+Because MPF-MC uses the built in seek() with the position property divided by the duration (so 1), this effectively functions
+as the normal seek. This is an error on Kivy's side and may not affect other versions.</p>
+</div>
 <p>Moves the video to a certain position based on the time, (in
 seconds). In other words <code>value: 4.2</code> here would move the video to
 the 4.2 second mark. (This is similar to <code>seek:</code> except it's based
