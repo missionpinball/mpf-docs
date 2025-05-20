@@ -35329,7 +35329,7 @@ need to pick a pinball control system. (We have a list of supported
 control systems <a href="../../hardware/">here</a>.)
 If you want to get started as cheaply as possible, the Open Pinball
 Project hardware is open source which you can build yourself. You can
-probably build all the hardware you need for under \$100.</p>
+probably build all the hardware you need for under $100.</p>
 <h2 id="what-computer-hardware-do-i-need">What computer hardware do I need?</h2>
 <p>MPF supports Windows, Mac, and Linux, so pretty much any computer is
 fine. Most people do their development of MPF on whatever computer they
@@ -35337,10 +35337,15 @@ use in their daily lives, then when they're getting close to done with
 their machine, they install a dedicated computer (or even a Raspberry
 Pi) in their machine to run MPF.</p>
 <h2 id="what-python-version-can-i-use-with-mpf">What Python version can I use with MPF?</h2>
-<p>The stable version (0.56) of MPF uses Python 3.7 - 3.9. We walk
-you through getting Python installed in our
+<p>The stable version (0.57, currently on 0.57.3) of MPF can be used with
+Python versions 3.8-3.11 (with 3.12+ being tested with minor issues).
+We walk you through getting Python installed in our
 <a href="../../install/">installation documentation</a>.</p>
-<p>The dev branch (0.57) of MPF supports Python 3.8 - 3.11.</p>
+<p>The previous version of MPF, 0.56. is only compatible with Python from
+version 3.7 through 3.9.</p>
+<p>The next revision (0.80.x) of MPF supports Python 3.8 - 3.11, but does
+not support the legacy Media Controller. The media controller for 0.80
+is called GMC, and is in active development.</p>
 <h2 id="should-i-use-the-stable-version-or-development-version">Should I use the stable version or development version?</h2>
 <p>We recommend that people use the latest "stable" (or "release")
 version of MPF unless you need specific features from the "dev" (next)
@@ -35349,7 +35354,7 @@ version.</p>
 <p>If you want information about an older version of MPF, we have
 <a href="../../versions/docs/">prior version documentation bundles</a>.</p>
 <p>You can install older versions of MPF with pip, like this:</p>
-<pre><code>pip install mpf-mc==0.31
+<pre><code>pip install mpf==0.56.0.dev33
 </code></pre>
 <hr />
 <div class="admonition question">
