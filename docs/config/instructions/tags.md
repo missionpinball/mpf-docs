@@ -171,11 +171,18 @@ For the full reference of Ball Device tags, see [ball_devices:tags](../ball_devi
 
 ### Switch Tags
 
-Switches in particular have a wide variety of built-in behaviors provided by MPF. Features such as flipper cancel and automatic ball detection on playfields will automatically work if you include these tags. To see the full reference, visit [switches:tags](../switches.md#tags).
+Switches in particular have a wide variety of built-in behaviors provided by MPF.
+Features such as flipper cancel, automatic ball detection on playfields,
+and high_score text input selection will automatically work
+if you include the appropriate tags on your switch configurations.
+To see the full reference, visit [switches:tags](../switches.md#tags).
 
 ### Playfield Tags
 
-If your game has a single playfield, it should have the tag "default" set in its config. If your game has multiple playfields, one of them will need to be tagged as default - usually it will be the one that the plunger lane most frequently ejects to. See: [playfields:tags](../playfields.md#tags).
+If your game has a single playfield, it should have the tag "default" set in its config.
+If your game has multiple playfields, one of them will need to be tagged as default -
+usually it will be the one that the plunger lane most frequently ejects to.
+See: [playfields:tags](../playfields.md#tags).
 
 
 ## Using `*` for a catch all
