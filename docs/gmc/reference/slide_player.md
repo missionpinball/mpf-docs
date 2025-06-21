@@ -165,7 +165,7 @@ The name of the slide method to call when `action: method` is used. Additional p
 
 ### priority:
 
-Single value, type: int_or_token. Defaults to empty.
+Single value, type: `int_or_token`. Defaults to empty.
 
 An adjustment to the priority of the slide that will be shown.
 

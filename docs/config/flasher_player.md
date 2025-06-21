@@ -42,7 +42,7 @@ color `AAAAAA`.
 
 ### ms:
 
-Single value, type: ms_or_token. Default: `100ms`
+Single value, type: `ms_or_token`. Default: `100ms`
 
 Configures how long should that flasher be enabled.
 

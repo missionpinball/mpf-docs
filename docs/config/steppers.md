@@ -169,7 +169,7 @@ details.
 
 ### platform_settings:
 
-Single value, type: dict. Defaults to empty.
+Single value, type: `dict`. Defaults to empty.
 
 Platform specific stepper settings for this stepper. Check the
 [documentation of your platform](../hardware/platform.md) for details.

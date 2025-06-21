@@ -205,7 +205,7 @@ on.
 
 ### loops:
 
-Single value, type: int_or_token. Default: `-1`
+Single value, type: `int_or_token`. Default: `-1`
 
 Controls the looping / repeating of the show. The default if you don't
 include this setting is `loops: -1` means that the show will repeat
@@ -250,7 +250,7 @@ advance to its next step.
 
 ### priority:
 
-Single value, type: int_or_token. Default: `0`
+Single value, type: `int_or_token`. Default: `0`
 
 Adjusts the priority of the show that's played.
 
@@ -339,7 +339,7 @@ Note that you can use a
 
 ### sync_ms:
 
-Single value, type: int_or_token. Defaults to empty.
+Single value, type: `int_or_token`. Defaults to empty.
 
 Sets the sync_ms value of this show which will delay the start to a
 certain millisecond multiple to ensure that multiple shows started at

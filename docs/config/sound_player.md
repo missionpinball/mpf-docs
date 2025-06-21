@@ -203,7 +203,7 @@ Used to reference this sound entry when stopping/pausing/resuming it.
 
 ### loops:
 
-Single value, type: int_or_token. Defaults to empty.
+Single value, type: `int_or_token`. Defaults to empty.
 
 Please refer to the [sounds:](sounds.md) documentation for details about this setting as it just
 overwrites the setting in your sound.
@@ -226,14 +226,14 @@ overwrites the setting in your sound.
 
 ### pan:
 
-Single value, type: float_or_token. Defaults to empty.
+Single value, type: `float_or_token`. Defaults to empty.
 
 Please refer to the [sounds:](sounds.md) documentation for details about this setting as it just
 overwrites the setting in your sound.
 
 ### priority:
 
-Single value, type: int_or_token. Defaults to empty.
+Single value, type: `int_or_token`. Defaults to empty.
 
 Please refer to the [sounds:](sounds.md) documentation for details about this setting as it just
 overwrites the setting in your sound.

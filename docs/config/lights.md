@@ -113,7 +113,7 @@ config. (If you don't include them, the default will be used).
 
 ### channels:
 
-Single value, type: dict. Defaults to empty.
+Single value, type: `dict`. Defaults to empty.
 
 Instead of a single `number` address for a light, you can enter channels
 corresponding to the multi-color channels of an RGB or RGBW LED. Each
@@ -219,7 +219,7 @@ lights:
 
 ### platform_settings:
 
-Single value, type: dict. Defaults to empty.
+Single value, type: `dict`. Defaults to empty.
 
 Platform-specific light settings. Consult your platform documentation
 for details.

@@ -25,7 +25,7 @@ your config. (If you don't include them, the default will be used).
 
 ### hold_power:
 
-Single value, type: float(0,1).
+Single value, type: `float(0,1)`.
 
 Overwrite the `hold_power` of the coil for this device. See
 `default_hold_power` in [coils:](coils.md) for
@@ -41,7 +41,7 @@ Overwrite the `pulse_ms` of the coil for this device. See
 
 ### pulse_power:
 
-Single value, type: float(0,1).
+Single value, type: `float(0,1)`.
 
 Overwrite the `pulse_power` of the coil for this device. See
 `default_pulse_power` in [coils:](coils.md) for
