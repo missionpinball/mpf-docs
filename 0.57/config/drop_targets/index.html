@@ -35702,7 +35702,7 @@ which is used throughout your machine.</p>
 <p>The following sections are required in the <code>drop_targets:</code> section of
 your config:</p>
 <h3 id="switch">switch:</h3>
-<p>Single value, type: string name of a
+<p>Single value, type: <code>string</code> name of a
 <a href="../switches/">switches:</a> device. Defaults to
 empty.</p>
 <p>The name of the switch that's activated when this drop target is down.
@@ -35746,7 +35746,7 @@ target up.</p>
 running. (Otherwise the ball search pulsing coils will set switches that
 could add to the score, start modes, etc. Default is <code>500ms</code>.</p>
 <h3 id="knockdown_coil">knockdown_coil:</h3>
-<p>Single value, type: string name of a <a href="../coils/">coils:</a> device. Defaults to empty.</p>
+<p>Single value, type: <code>string</code> name of a <a href="../coils/">coils:</a> device. Defaults to empty.</p>
 <p>This is an optional coil that's used to knock down a drop target. Most
 drop targets do not have these. (In the <em>Judge Dredd</em> example above,
 you'll notice that only the <em>D</em> target has a knockdown coil.</p>
@@ -35775,14 +35775,14 @@ submit your change. It's easy! <span class="twemoji"><svg xmlns="http://www.w3.o
 </div></p>
 </div>
 <h3 id="playfield">playfield:</h3>
-<p>Single value, type: string name of a
+<p>Single value, type: <code>string</code> name of a
 <a href="../playfields/">playfields:</a> device. Default:
 <code>playfield</code></p>
 <p>The name of the playfield that this autofire device is on. The default
 setting is "playfield", so you only have to change this value if you
 have more than one playfield and you're managing them separately.</p>
 <h3 id="reset_coil">reset_coil:</h3>
-<p>Single value, type: string name of a <a href="../coils/">coils:</a> device. Defaults to empty.</p>
+<p>Single value, type: <code>string</code> name of a <a href="../coils/">coils:</a> device. Defaults to empty.</p>
 <p>The name of the coil that is pulsed to reset this drop target. The pulse
 time will be whatever you configure as the default pulse time for this
 coil in the <em>coils:</em> section of your machine configuration file.

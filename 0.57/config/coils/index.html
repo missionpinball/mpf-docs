@@ -35805,7 +35805,7 @@ not have <em>default_hold_power</em> configured or <em>allow_enabled</em> set to
 then the coil will not actually be enabled and you'll get an error in
 your log file.</p>
 <h3 id="default_hold_power">default_hold_power:</h3>
-<p>Single value, type: float(0,1). Defaults to empty.</p>
+<p>Single value, type: <code>float(0,1)</code>. Defaults to empty.</p>
 <p>This setting lets you control how much power is sent to the coil when
 it's "held" in the on position. This is an float value from 0-1 (i.e.
 0% power to 100% power) which controls the relative power.</p>
@@ -35829,7 +35829,7 @@ for. This can be overridden in other ways, but this is the default that
 will be used most of the time. Default is <em>10ms</em>, which is extremely
 weak, but set low for safety purposes.</p>
 <h3 id="default_pulse_power">default_pulse_power:</h3>
-<p>Single value, type: float(0,1). Defaults to empty.</p>
+<p>Single value, type: <code>float(0,1)</code>. Defaults to empty.</p>
 <p>The power factor which controls how much power is applied during the
 initial pulse phase of the coil's activation. (Note that not all
 hardware platforms support variable pulse power.) See the section on
@@ -35883,7 +35883,7 @@ submit your change. It's easy! <span class="twemoji"><svg xmlns="http://www.w3.o
 </div></p>
 </div>
 <h3 id="max_hold_power">max_hold_power:</h3>
-<p>Single value, type: float(0,1). Defaults to empty.</p>
+<p>Single value, type: <code>float(0,1)</code>. Defaults to empty.</p>
 <p>This controlls the maximum allowed hold power for this this coil. While
 <em>default_hold_power</em> sets the default for all enable calls on the coil
 this defined the upper limit. If this is not set MPF will use
@@ -35894,7 +35894,7 @@ this defined the upper limit. If this is not set MPF will use
 <p>Maximum allowed pulse time for this coil. If set, MPF will raise an
 error if any code tries to pulse the coil for more than <code>max_pulse_ms</code>.</p>
 <h3 id="max_pulse_power">max_pulse_power:</h3>
-<p>Single value, type: float(0,1). Default: <code>1.0</code></p>
+<p>Single value, type: <code>float(0,1)</code>. Default: <code>1.0</code></p>
 <p>Set the maxium pulse power. If pulse is called on the coil without any
 parameters <em>default_pulse_power</em> is used.</p>
 <h3 id="platform">platform:</h3>
@@ -35906,11 +35906,11 @@ and this coil is not connected to the default platform.</p>
 <p>See the <a href="../../hardware/platform/">Mixing-and-Matching hardware platforms</a> guide for
 details.</p>
 <h3 id="platform_settings">platform_settings:</h3>
-<p>Single value, type: dict. Defaults to empty.</p>
+<p>Single value, type: <code>dict</code>. Defaults to empty.</p>
 <p>Dict of platform specific settings. Consult your platform documentation
 for those settings.</p>
 <h3 id="psu">psu:</h3>
-<p>Single value, type: string name of a <a href="../psus/">psus:</a> device. Default: <code>default</code></p>
+<p>Single value, type: <code>string</code> name of a <a href="../psus/">psus:</a> device. Default: <code>default</code></p>
 <p>Specify to which <a href="../psus/">power supply unit</a> this coil is connected. This is used for power management.
 In some cases, MPF can deliberately delay coil pulses to prevent too
 many coils from firing and drawing to much current from your PSU.</p>

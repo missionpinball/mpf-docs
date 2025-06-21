@@ -35844,7 +35844,7 @@ elsewhere. (See the How To guides for details.)</p>
 <p>The following sections are required in the <code>flippers:</code> section of your
 config:</p>
 <h3 id="main_coil">main_coil:</h3>
-<p>Single value, type: string name of a <a href="../coils/">coils:</a> device. Defaults to empty.</p>
+<p>Single value, type: <code>string</code> name of a <a href="../coils/">coils:</a> device. Defaults to empty.</p>
 <p>The name of the main flipper coil. For flippers that only have
 single-wound coils, this is where you specify that coil. In that case
 you would also configure the lower-power hold option for this coil in
@@ -35854,7 +35854,7 @@ config.</p>
 <p>The following sections are optional in the <code>flippers:</code> section of your
 config. (If you don't include them, the default will be used).</p>
 <h3 id="activation_switch">activation_switch:</h3>
-<p>Single value, type: string name of a
+<p>Single value, type: <code>string</code> name of a
 <a href="../switches/">switches:</a> device. Defaults to
 empty.</p>
 <p>The switch that controls this flipper (i.e. the flipper button). This
@@ -35892,7 +35892,7 @@ milliseconds until issuing an EOS repulse. The rational for this is that
 we do not want to stress the main coil too much. For instance if the
 hold coil break we do not want to continuously pulse the coil.</p>
 <h3 id="eos_switch">eos_switch:</h3>
-<p>Single value, type: string name of a
+<p>Single value, type: <code>string</code> name of a
 <a href="../switches/">switches:</a> device. Defaults to
 empty.</p>
 <p>EOS switch on this flipper (if there is one).</p>
@@ -35902,7 +35902,7 @@ empty.</p>
 you're using an end of stroke switch with this flipper, enter the
 switch name here.</p>
 <h3 id="hold_coil">hold_coil:</h3>
-<p>Single value, type: string name of a <a href="../coils/">coils:</a> device. Defaults to empty.</p>
+<p>Single value, type: <code>string</code> name of a <a href="../coils/">coils:</a> device. Defaults to empty.</p>
 <p>The name of the hold coil winding for dual-wound flipper coils.</p>
 <h3 id="hold_coil_overwrite">hold_coil_overwrite:</h3>
 <p>Single value, type:
@@ -35930,7 +35930,7 @@ Defaults to empty.</p>
 <p>Overwrites settings on the main_coil. See
 <a href="../coil_overwrites/">coil_overwrites:</a> for details.</p>
 <h3 id="playfield">playfield:</h3>
-<p>Single value, type: string name of a
+<p>Single value, type: <code>string</code> name of a
 <a href="../playfields/">playfields:</a> device. Default:
 <code>playfield</code></p>
 <p>change this value if you have more than one playfield and you're

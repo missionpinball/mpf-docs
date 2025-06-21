@@ -35490,11 +35490,11 @@ devices do not have explicit support for dual-wound coils.</p>
 <p>The following sections are required in the <code>dual_wound_coils:</code> section
 of your config:</p>
 <h3 id="hold_coil">hold_coil:</h3>
-<p>Single value, type: string name of a <a href="../coils/">coils:</a> device. Defaults to empty.</p>
+<p>Single value, type: <code>string</code> name of a <a href="../coils/">coils:</a> device. Defaults to empty.</p>
 <p>The name of the hold coil winding. This coil must be a valid coil
 defined in your <code>coils:</code> section.</p>
 <h3 id="main_coil">main_coil:</h3>
-<p>Single value, type: string name of a <a href="../coils/">coils:</a> device. Defaults to empty.</p>
+<p>Single value, type: <code>string</code> name of a <a href="../coils/">coils:</a> device. Defaults to empty.</p>
 <p>The name of the main (power) coil winding. This coil must be a valid
 coil defined in your <code>coils:</code> section.</p>
 <p>When this dual-wound coils is enabled, this coil will be pulsed for the
@@ -35504,7 +35504,7 @@ number of milliseconds specified in the original coil's
 <p>The following sections are optional in the <code>dual_wound_coils:</code> section
 of your config. (If you don't include them, the default will be used).</p>
 <h3 id="eos_switch">eos_switch:</h3>
-<p>Single value, type: string name of a
+<p>Single value, type: <code>string</code> name of a
 <a href="../switches/">switches:</a> device. Defaults to
 empty.</p>
 <p>The name of a switch which, when activated, will disable the power to

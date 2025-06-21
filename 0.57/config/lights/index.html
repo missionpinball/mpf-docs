@@ -35764,7 +35764,7 @@ syntax also works for parallel LEDs and other types of lights.</p>
 <p>The following sections are optional in the <code>lights:</code> section of your
 config. (If you don't include them, the default will be used).</p>
 <h3 id="channels">channels:</h3>
-<p>Single value, type: dict. Defaults to empty.</p>
+<p>Single value, type: <code>dict</code>. Defaults to empty.</p>
 <p>Instead of a single <code>number</code> address for a light, you can enter channels
 corresponding to the multi-color channels of an RGB or RGBW LED. Each
 channel entry can contain any of the <code>lights</code> parameters listed on this
@@ -35842,11 +35842,11 @@ might be the case for <a href="../../mechs/lights/gis/">GIs</a> for example. Thi
 <span class="w">    </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">drivers</span>
 </code></pre></div>
 <h3 id="platform_settings">platform_settings:</h3>
-<p>Single value, type: dict. Defaults to empty.</p>
+<p>Single value, type: <code>dict</code>. Defaults to empty.</p>
 <p>Platform-specific light settings. Consult your platform documentation
 for details.</p>
 <h3 id="previous">previous:</h3>
-<p>Single value, type: string name of a <a href="./">lights:</a> device. Defaults to empty.</p>
+<p>Single value, type: <code>string</code> name of a <a href="./">lights:</a> device. Defaults to empty.</p>
 <p>Instead of specifying the number for each light in a chain you can also
 use the previous setting. To do this only specify the number of the
 first light in the chain and then link all consequent light using the

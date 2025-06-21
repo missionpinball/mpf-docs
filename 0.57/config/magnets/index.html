@@ -35641,7 +35641,7 @@ control the timing of grabbing, releasing, and "flinging" the ball.</p>
 <p>The following sections are required in the <code>magnets:</code> section of your
 config:</p>
 <h3 id="magnet_coil">magnet_coil:</h3>
-<p>Single value, type: string name of a <a href="../coils/">coils:</a> device. Defaults to empty.</p>
+<p>Single value, type: <code>string</code> name of a <a href="../coils/">coils:</a> device. Defaults to empty.</p>
 <p>Note that is any of the magnet activation times are longer than 255ms
 and the magnet pulse power is 100%, then you will need to add
 <code>allow_enable: true</code> to the coil's entry in the <code>coils:</code> section of the
@@ -35679,7 +35679,7 @@ ball after its dropped it.</p>
 <p>These events cause the magnet to immediately attempt to grab a ball. The
 magnet will be activated for the <code>grab_time:</code>.</p>
 <h3 id="grab_switch">grab_switch:</h3>
-<p>Single value, type: string name of a
+<p>Single value, type: <code>string</code> name of a
 <a href="../switches/">switches:</a> device. Defaults to
 empty.</p>
 <p>The switch which activates grabbing a ball.</p>
@@ -35688,7 +35688,7 @@ empty.</p>
 (<a href="../instructions/time_strings/">Instructions for entering time strings</a>). Default: <code>1.5s</code></p>
 <p>How long the magnet will be energized when attempting to grab a ball.</p>
 <h3 id="playfield">playfield:</h3>
-<p>Single value, type: string name of a
+<p>Single value, type: <code>string</code> name of a
 <a href="../playfields/">playfields:</a> device. Default:
 <code>playfield</code></p>
 <p>The playfield on which this magnet is.</p>
