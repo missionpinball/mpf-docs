@@ -22,7 +22,7 @@ your config:
 
 ### clock_pin:
 
-Single value, type: string name of a
+Single value, type: `string` name of a
 [digital_outputs:](digital_outputs.md)
 device. Defaults to empty.
 
@@ -30,7 +30,7 @@ This output is used to clock the SPI chip.
 
 ### cs_pin:
 
-Single value, type: string name of a
+Single value, type: `string` name of a
 [digital_outputs:](digital_outputs.md)
 device. Defaults to empty.
 
@@ -39,7 +39,7 @@ triggers the parallel read of the chip.
 
 ### miso_pin:
 
-Single value, type: string name of a
+Single value, type: `string` name of a
 [switches:](switches.md) device. Defaults to
 empty.
 

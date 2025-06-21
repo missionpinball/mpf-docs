@@ -23,19 +23,19 @@ of your config:
 
 ### coil1:
 
-Single value, type: string name of a [coils:](coils.md) device. Defaults to empty.
+Single value, type: `string` name of a [coils:](coils.md) device. Defaults to empty.
 
 --8<-- "todo.md"
 
 ### coil2:
 
-Single value, type: string name of a [coils:](coils.md) device. Defaults to empty.
+Single value, type: `string` name of a [coils:](coils.md) device. Defaults to empty.
 
 --8<-- "todo.md"
 
 ### flipper:
 
-Single value, type: string name of a
+Single value, type: `string` name of a
 [flippers:](flippers.md) device. Defaults to
 empty.
 
@@ -48,7 +48,7 @@ of your config. (If you don't include them, the default will be used).
 
 ### switch1:
 
-Single value, type: string name of a
+Single value, type: `string` name of a
 [switches:](switches.md) device. Defaults to
 empty.
 
@@ -56,7 +56,7 @@ empty.
 
 ### switch2:
 
-Single value, type: string name of a
+Single value, type: `string` name of a
 [switches:](switches.md) device. Defaults to
 empty.
 

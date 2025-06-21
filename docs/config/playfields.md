@@ -25,7 +25,7 @@ config:
 
 ### default_source_device:
 
-Single value, type: string name of a
+Single value, type: `string` name of a
 [ball_devices:](ball_devices.md) device.
 Defaults to empty.
 

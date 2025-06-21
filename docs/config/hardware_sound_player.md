@@ -61,7 +61,7 @@ Single value, type: dict. Defaults to empty.
 
 ### sound_system:
 
-Single value, type: string name of a
+Single value, type: `string` name of a
 [hardware_sound_systems:](hardware_sound_systems.md) device. Default: `default`
 
 In case you got multiple hardware_sound platforms you can expliticly

@@ -66,7 +66,7 @@ your config:
 
 ### coil:
 
-Single value, type: string name of a [coils:](coils.md) device. Defaults to empty.
+Single value, type: `string` name of a [coils:](coils.md) device. Defaults to empty.
 
 The name of the coil you want to fire. (Actually, perhaps we should
 phrase it as the name of the coil you want to change the state on,
@@ -75,7 +75,7 @@ stop firing based on a switch change.)
 
 ### switch:
 
-Single value, type: string name of a
+Single value, type: `string` name of a
 [switches:](switches.md) device. Defaults to
 empty.
 
@@ -157,7 +157,7 @@ controller hardware.
 
 ### playfield:
 
-Single value, type: string name of a
+Single value, type: `string` name of a
 [playfields:](playfields.md) device. Default:
 `playfield`
 

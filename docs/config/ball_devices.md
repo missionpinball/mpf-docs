@@ -49,7 +49,7 @@ many balls that device can hold. Default will be set to the number of
 
 ### ball_missing_target:
 
-Single value, type: string name of a
+Single value, type: `string` name of a
 [playfields:](playfields.md) device. Default:
 `playfield`
 
@@ -108,7 +108,7 @@ activations.)
 
 ### captures_from:
 
-Single value, type: string name of a
+Single value, type: `string` name of a
 [playfields:](playfields.md) device. Default:
 `playfield`
 
@@ -127,7 +127,7 @@ ball eject if you have `confirm_eject_type: event`.
 
 ### confirm_eject_switch:
 
-Single value, type: string name of a
+Single value, type: `string` name of a
 [switches:](switches.md) device. Defaults to
 empty.
 
@@ -566,7 +566,7 @@ value 3 times and then increase it on the 4th.
 
 ### target_on_unexpected_ball:
 
-Single value, type: string name of a
+Single value, type: `string` name of a
 [ball_devices:](ball_devices.md) device.
 Defaults to empty.
 

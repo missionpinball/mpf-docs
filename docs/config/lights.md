@@ -226,7 +226,7 @@ for details.
 
 ### previous:
 
-Single value, type: string name of a [lights:](lights.md) device. Defaults to empty.
+Single value, type: `string` name of a [lights:](lights.md) device. Defaults to empty.
 
 Instead of specifying the number for each light in a chain you can also
 use the previous setting. To do this only specify the number of the

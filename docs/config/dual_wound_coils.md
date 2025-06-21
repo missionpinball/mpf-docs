@@ -56,14 +56,14 @@ of your config:
 
 ### hold_coil:
 
-Single value, type: string name of a [coils:](coils.md) device. Defaults to empty.
+Single value, type: `string` name of a [coils:](coils.md) device. Defaults to empty.
 
 The name of the hold coil winding. This coil must be a valid coil
 defined in your `coils:` section.
 
 ### main_coil:
 
-Single value, type: string name of a [coils:](coils.md) device. Defaults to empty.
+Single value, type: `string` name of a [coils:](coils.md) device. Defaults to empty.
 
 The name of the main (power) coil winding. This coil must be a valid
 coil defined in your `coils:` section.
@@ -79,7 +79,7 @@ of your config. (If you don't include them, the default will be used).
 
 ### eos_switch:
 
-Single value, type: string name of a
+Single value, type: `string` name of a
 [switches:](switches.md) device. Defaults to
 empty.
 

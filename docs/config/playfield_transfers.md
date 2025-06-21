@@ -47,7 +47,7 @@ section of your config:
 
 ### captures_from:
 
-Single value, type: string name of a
+Single value, type: `string` name of a
 [ball_devices:](ball_devices.md) device.
 Defaults to empty.
 
@@ -55,7 +55,7 @@ Source playfield for the transfer.
 
 ### eject_target:
 
-Single value, type: string name of a
+Single value, type: `string` name of a
 [ball_devices:](ball_devices.md) device.
 Defaults to empty.
 
@@ -69,7 +69,7 @@ used).
 
 ### ball_switch:
 
-Single value, type: string name of a
+Single value, type: `string` name of a
 [switches:](switches.md) device. Defaults to
 empty.
 

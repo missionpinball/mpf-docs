@@ -168,7 +168,7 @@ config. (If you don't include them, the default will be used).
 
 #### switch:
 
-Single value, type: string name of a `switches:` device. Default: `None`
+Single value, type: `string` name of a `switches:` device. Default: `None`
 
 The name of the switch (from your machine-wide *switches:* section) for
 the credit switch.

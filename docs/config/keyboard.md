@@ -89,7 +89,7 @@ and *direction=1*.
 
 ### switch:
 
-Single value, type: string name of a
+Single value, type: `string` name of a
 [switches:](switches.md) device. Defaults to
 empty.
 

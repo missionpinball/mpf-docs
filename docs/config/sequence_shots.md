@@ -154,7 +154,7 @@ A sequence of events which will complete the sequence.
 
 ### playfield:
 
-Single value, type: string name of a
+Single value, type: `string` name of a
 [playfields:](playfields.md) device. Default:
 `playfield`
 

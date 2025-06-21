@@ -89,7 +89,7 @@ your config:
 
 ### switch:
 
-Single value, type: string name of a
+Single value, type: `string` name of a
 [switches:](switches.md) device. Defaults to
 empty.
 
@@ -151,7 +151,7 @@ could add to the score, start modes, etc. Default is `500ms`.
 
 ### knockdown_coil:
 
-Single value, type: string name of a [coils:](coils.md) device. Defaults to empty.
+Single value, type: `string` name of a [coils:](coils.md) device. Defaults to empty.
 
 This is an optional coil that's used to knock down a drop target. Most
 drop targets do not have these. (In the *Judge Dredd* example above,
@@ -182,7 +182,7 @@ Single value, type: `integer`. Defaults to empty.
 
 ### playfield:
 
-Single value, type: string name of a
+Single value, type: `string` name of a
 [playfields:](playfields.md) device. Default:
 `playfield`
 
@@ -192,7 +192,7 @@ have more than one playfield and you're managing them separately.
 
 ### reset_coil:
 
-Single value, type: string name of a [coils:](coils.md) device. Defaults to empty.
+Single value, type: `string` name of a [coils:](coils.md) device. Defaults to empty.
 
 The name of the coil that is pulsed to reset this drop target. The pulse
 time will be whatever you configure as the default pulse time for this

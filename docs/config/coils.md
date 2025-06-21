@@ -219,7 +219,7 @@ for those settings.
 
 ### psu:
 
-Single value, type: string name of a [psus:](psus.md) device. Default: `default`
+Single value, type: `string` name of a [psus:](psus.md) device. Default: `default`
 
 Specify to which [power supply unit](psus.md) this coil is connected. This is used for power management.
 In some cases, MPF can deliberately delay coil pulses to prevent too

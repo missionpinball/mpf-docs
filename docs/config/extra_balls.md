@@ -59,7 +59,7 @@ Whether the device starts enabled or disabled.
 
 ### group:
 
-Single value, type: string name of a
+Single value, type: `string` name of a
 [extra_ball_groups:](extra_ball_groups.md)
 device. Defaults to empty.
 

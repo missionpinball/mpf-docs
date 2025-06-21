@@ -119,7 +119,7 @@ determine whether the stepper is at the home position.
 
 ### homing_switch:
 
-Single value, type: string name of a
+Single value, type: `string` name of a
 [switches:](switches.md) device. Defaults to
 empty.
 
