@@ -228,7 +228,7 @@ will default to the current player.
 
 ### string:
 
-Single value, type: template_str. Defaults to empty.
+Single value, type: `template_str`. Defaults to empty.
 
 Here's an example from *Brooks 'n Dunn* where there is a player
 variable (set via a counter) which tracks the player's current album

@@ -289,7 +289,7 @@ practical use, you'd just configure the show tokens in one place.
 
 ### show_when_enabled:
 
-Single value, type: string name of a [shows:](../shows/index.md) device. Defaults to empty.
+Single value, type: `string` name of a [shows:](../shows/index.md) device. Defaults to empty.
 
 Name of the show that will be started when this achievement group has
 been enabled. Also, any tokens configured in the `show_tokens:` section

@@ -74,7 +74,7 @@ config:
 
 ### diag_led_driver:
 
-Single value, type: string name of a [coils:](coils.md) device. Defaults to empty.
+Single value, type: `string` name of a [coils:](coils.md) device. Defaults to empty.
 
 The coil to use to drive the diag LED on the snux board. This is usually
 driver 23 on the Snux board.

@@ -60,7 +60,7 @@ information on specifying colors in config files.
 
 ### expire:
 
-Single value, type: ms_or_token. Defaults to empty.
+Single value, type: `ms_or_token`. Defaults to empty.
 
 Only used with `action` `add`. Text will be removed after `expire` ms.
 
@@ -101,7 +101,7 @@ used if `replace` is used.
 
 ### priority:
 
-Single value, type: int_or_token. Default: `0`
+Single value, type: `int_or_token`. Default: `0`
 
 Priority of this text. The segment display will maintain a stack and
 show the text on top (highest priority). Only relevant if [segment_displays](segment_displays.md) `update_method` is `stack`, not being

@@ -86,7 +86,7 @@ of 200 and a count of 5 will create 5 LEDs with the numbers 7-200,
 
 ### previous:
 
-Single value, type: string name of a [lights:](lights.md) device. Defaults to empty.
+Single value, type: `string` name of a [lights:](lights.md) device. Defaults to empty.
 
 --8<-- "todo.md"
 

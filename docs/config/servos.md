@@ -118,7 +118,7 @@ details.
 
 ### platform_settings:
 
-Single value, type: dict. Defaults to empty.
+Single value, type: `dict`. Defaults to empty.
 
 --8<-- "todo.md"
 

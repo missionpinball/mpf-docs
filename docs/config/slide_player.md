@@ -144,7 +144,7 @@ priorities to control which slides are shown.
 
 ### priority:
 
-Single value, type: int_or_token. Defaults to empty.
+Single value, type: `int_or_token`. Defaults to empty.
 
 An adjustment to the priority of the slide that will be shown.
 

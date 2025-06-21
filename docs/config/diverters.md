@@ -126,7 +126,7 @@ Events in this list, when posted, cause this diverter to activate.
 
 ### activation_coil:
 
-Single value, type: string name of a [coils:](coils.md) device. Defaults to empty.
+Single value, type: `string` name of a [coils:](coils.md) device. Defaults to empty.
 
 The name of the coil that is used to activate your diverter.
 
@@ -196,7 +196,7 @@ Events in this list, when posted, cause this diverter to deactivate.
 
 ### deactivation_coil:
 
-Single value, type: string name of a [coils:](coils.md) device. Defaults to empty.
+Single value, type: `string` name of a [coils:](coils.md) device. Defaults to empty.
 
 The name of the coil that's used to deactivate your diverter. You only
 need to specify this coil if it's a different coil from from
@@ -279,7 +279,7 @@ itself to make sure the balls gets to where it needs to go.
 
 ### playfield:
 
-Single value, type: string name of a
+Single value, type: `string` name of a
 [playfields:](playfields.md) device. Default:
 `playfield`
 

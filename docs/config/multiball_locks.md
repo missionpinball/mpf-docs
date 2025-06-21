@@ -201,7 +201,7 @@ the default playfield source device.
 
 ### source_playfield:
 
-Single value, type: string name of a
+Single value, type: `string` name of a
 [ball_devices:](ball_devices.md) device.
 Default: `playfield`
 

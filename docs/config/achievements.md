@@ -275,42 +275,42 @@ documentation.)
 
 ### show_when_completed:
 
-Single value, type: string name of a [shows:](../shows/index.md) device. Defaults to empty.
+Single value, type: `string` name of a [shows:](../shows/index.md) device. Defaults to empty.
 
 Name of the show that will be started when this achievement has been
 completed.
 
 ### show_when_disabled:
 
-Single value, type: string name of a [shows:](../shows/index.md) device. Defaults to empty.
+Single value, type: `string` name of a [shows:](../shows/index.md) device. Defaults to empty.
 
 Name of the show that will be started when this achievement has been
 disabled.
 
 ### show_when_enabled:
 
-Single value, type: string name of a [shows:](../shows/index.md) device. Defaults to empty.
+Single value, type: `string` name of a [shows:](../shows/index.md) device. Defaults to empty.
 
 Name of the show that will be started when this achievement has been
 enabled.
 
 ### show_when_selected:
 
-Single value, type: string name of a [shows:](../shows/index.md) device. Defaults to empty.
+Single value, type: `string` name of a [shows:](../shows/index.md) device. Defaults to empty.
 
 Name of the show that will be started when this achievement has been
 selected.
 
 ### show_when_started:
 
-Single value, type: string name of a [shows:](../shows/index.md) device. Defaults to empty.
+Single value, type: `string` name of a [shows:](../shows/index.md) device. Defaults to empty.
 
 Name of the show that will be started when this achievement has been
 started.
 
 ### show_when_stopped:
 
-Single value, type: string name of a [shows:](../shows/index.md) device. Defaults to empty.
+Single value, type: `string` name of a [shows:](../shows/index.md) device. Defaults to empty.
 
 Name of the show that will be started when this achievement has been
 stopped.
