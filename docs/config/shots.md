@@ -19,7 +19,7 @@ be hit in order, or an event or series of events.
 Shots are used for things like standup targets, rollover lanes, drop
 targets, ramps, loops, orbits, etc.
 
-Each shot can have a [*shot profile*](shot_profile.md) applied to it which defines what
+Each shot can have a [*shot profile*](shot_profiles.md) applied to it which defines what
 happens when its hit. For example the shot profile might specify that
 the shot starts unlit, then when it's hit it becomes complete. Or a
 shot profile might specify that it's flashing slowly, and each hit
