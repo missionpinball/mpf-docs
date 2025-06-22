@@ -114,6 +114,14 @@ will posted an event called *switch_s_left_slingshot_active*.
     * [extra_ball_group_(name)\_lit_awarded](extra_ball_group_extra_ball_group_lit_awarded.md)
     * [extra_ball_group_(name)_unlit](extra_ball_group_extra_ball_group_unlit.md)
 
+* [High Score Events](high_score/index.md)
+    * [high_score_enter_initials](high_score_enter_initials.md)
+    * [high_score_award_display](high_score_award_display.md)
+    * [text_input_high_score_complete](text_input_high_score_complete.md)
+    * [score_award_display](score_award_display.md)
+    * [(award_name)\_award_display](award_name_award_display.md)
+    * [(category_name)\_award_display](category_name_award_display.md)
+
 * [Kickback Events](kickbacks/index.md)
     * [kickback_(name)_fired](kickback_kickback_fired.md)
 

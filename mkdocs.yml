@@ -1036,6 +1036,14 @@ nav:
       - extra_ball_group_(name)_lit: events/extra_ball_group_extra_ball_group_lit.md
       - extra_ball_group_(name)_lit_awarded: events/extra_ball_group_extra_ball_group_lit_awarded.md
       - extra_ball_group_(name)_unlit: events/extra_ball_group_extra_ball_group_unlit.md
+    - High Score Events:
+      - events/high_score/index.md
+      - high_score_enter_initials: events/high_score_enter_initials.md
+      - high_score_award_display: events/high_score_award_display.md
+      - text_input_high_score_complete: events/text_input_high_score_complete.md
+      - score_award_display: events/score_award_display.md
+      - (award_name)_award_display: events/award_name_award_display.md
+      - (category_name)_award_display: events/category_name_award_display.md
     - kickback Events:
       - events/kickbacks/index.md
       - kickback_(name)_fired: events/kickback_kickback_fired.md
