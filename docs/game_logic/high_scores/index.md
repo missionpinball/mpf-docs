@@ -7,7 +7,7 @@ title: High Scores
 
 Related Config File Sections:
 
-* [high_scores_in_ems](../../config/high_score.md)
+* [high_score:](../../config/high_score.md)
 
 MPF includes support for high scores which is where players can enter
 their names (or initials) when they've achieved a high score. Features
@@ -379,12 +379,12 @@ Generically, these machine variables are:
 
 ## Related How To guides:
 
-* [high_scores_in_ems](../scoring/index.md)
-* [high_scores_in_ems](../../game_design/index.md)
-* [High Scores in EM Machines](high_scores_in_ems.md)--
+* [Scoring](../scoring/index.md)
+* [How to design a game in MPF using Modes](../../game_design/index.md)
+* [High Scores in EM Machines](high_scores_in_ems.md)
 
 ## Related Events
 
+* [High Score Events](../../events/high_score/index.md)
 * [mode_high_score_started](../../events/mode_name_started.md)
-* [mode_high_score_stopped](../../events/mode_name_stopped.md)--
-* [High Scores in EM Machines](high_scores_in_ems.md)
+* [mode_high_score_stopped](../../events/mode_name_stopped.md)

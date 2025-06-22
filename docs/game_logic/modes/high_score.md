@@ -21,5 +21,5 @@ reads them in when MPF boots to create machine variables that can be
 accessed from your game, and it automatically updates the high scores on
 disk when they change after a game ends.
 
-See [High Scores](../high_scores/index.md) for
-details.
+See [High Scores](../high_scores/index.md) for details.
+See [High Score Events](../../events/high_score/index.md) for events from the built-in mode.
