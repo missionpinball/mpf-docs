@@ -21497,6 +21497,63 @@ icons & this code generated via https://realfavicongenerator.net
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="tags:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#built-in-tags" class="md-nav__link">
+    <span class="md-ellipsis">
+      Built-in Tags
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tags-for-optional-built-in-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tags for optional built-in modes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tags for optional built-in modes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tilt-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tilt Mode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#high-score-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      High Score Mode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#service-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Service Mode
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -35758,6 +35815,63 @@ icons & this code generated via https://realfavicongenerator.net
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="tags:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#built-in-tags" class="md-nav__link">
+    <span class="md-ellipsis">
+      Built-in Tags
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tags-for-optional-built-in-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tags for optional built-in modes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tags for optional built-in modes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tilt-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tilt Mode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#high-score-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      High Score Mode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#service-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Service Mode
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -36019,6 +36133,7 @@ tags on its own.</p>
 consumed by something, e.g. <code>light_player</code> or if <code>debug:true</code> is defined
 for them. They will be posted regardless of the <code>debug</code> setting, it is
 only a question of visibility in the <code>mpf monitor</code>.</p>
+<h4 id="built-in-tags">Built-in Tags</h4>
 <p>Special-purpose tags for switches include:</p>
 <ul>
 <li><code>playfield_active</code> - This tag should be used for all switches on the
@@ -36034,16 +36149,46 @@ only a question of visibility in the <code>mpf monitor</code>.</p>
 <li><code>start</code> - Lets MPF know that this switch is used to start a game.
     (Note that in MPF, the game start process is kicked off when this
     switch is released, not pressed, which allows the "time held down"
-    to be sent to MPF to perform alternate game start actions.) See: <a href="../../tutorial/9_start_button/">Start Button</a>.</li>
+    to be sent to MPF to perform alternate game start actions.) See: <a href="../../tutorial/9_start_button/">Start Button</a>.
+    With MPF 0.80, the <code>start</code> tag is used by the high_score mode to select a letter or submit the name text.</li>
 <li><code>left_flipper</code> and <code>right_flipper</code> - MPF will provide automatic <a href="../../events/flipper_cradle/">flipper_cradle</a>
     and <a href="../../events/flipper_cancel/">flipper_cancel</a> events if your cabinet flipper buttons are tagged with
-    their respective flippers.</li>
+    their respective flippers. With MPF 0.80, the built-in high_score mode and slide hook onto these two flipper tags
+    to control character selection and submission.</li>
+</ul>
+<h4 id="tags-for-optional-built-in-modes">Tags for optional built-in modes</h4>
+<p>Some of the default modes included with MPF include switch tag hooks so that it is easy for you to incorporate features into your game.</p>
+<h5 id="tilt-mode">Tilt Mode</h5>
+<p>MPF's default tilt mode supports both slam tilt and plumb-bob tilt detection, either or both tags may be used.
+See: <a href="../../game_logic/tilt/">Tilt</a></p>
+<ul>
+<li><code>tilt_warning</code> - This is added to a plumb-bob style tilt switch.</li>
+<li><code>slam_tilt</code> - This is added to a slam tilt type switch. </li>
+</ul>
+<h5 id="high-score-mode">High Score Mode</h5>
+<p>(<em>tag support new in MPF 0.80</em>)</p>
+<p>The built-in <a href="../../game_logic/high_scores/">high_score mode</a> in MPF 0.80 and high_score slide in GMC allow players
+to select letters and submit their high score via use of an <a href="../../gmc/reference/mpf-text-input/">MPFTextInput</a> in Godot.</p>
+<ul>
+<li><code>left_flipper</code> and <code>right_flipper</code> - These tags are reused by the high score text input to move
+    the highlighted item left or right</li>
+<li><code>start</code> - The start tag is reused by the high score mode to select the highlighted item</li>
+</ul>
+<h5 id="service-mode">Service Mode</h5>
+<p>The Service Mode code included with MPF is intended for four-button service doors
+and has support for coin door detection and other features. The way this works is
+through a variety of tags, including the re-use of some existing tags.
+See: <a href="../../game_logic/service_mode/">Service Mode</a></p>
+<ul>
 <li><code>service_esc</code>, <code>service_down</code>, <code>service_up</code>, and <code>service_enter</code> - When using the builtin
     Service Mode, you will want to tag four different switches with these tags so the
-    operator can use the interface without keyboard or mouse access. See: <a href="../../game_logic/service_mode/">Service Mode</a></li>
-<li><code>service_door_open</code> - This is used for the coin door switch to manage the service mode. See: <a href="../../game_logic/service_mode/">Service Mode</a></li>
-<li><code>tilt_warning</code> - This is added to a plumb-bob style tilt switch. See: <a href="../../game_logic/tilt/">Tilt</a></li>
-<li><code>slam_tilt</code> - This is added to a slam tilt type switch. See: <a href="../../game_logic/tilt/">Tilt</a></li>
+    operator can use the interface without keyboard or mouse access.</li>
+<li><code>service_door_open</code> or <code>service_door_closed</code> - Service mode will hook into
+    the open or closed detection behavior of your coin door switch if you include
+    one of these tags. Only one is necessary, but both are available depending on
+    whether your switch is normally open or normally closed.</li>
+<li><code>start</code>, <code>left_flipper</code>, and <code>right_flipper</code> - Service mode will reuse these three tags
+    that you likely already had defined for other machine features. (See section above.)</li>
 </ul>
 <h2 id="monitorable-properties">Monitorable Properties</h2>
 <p>For

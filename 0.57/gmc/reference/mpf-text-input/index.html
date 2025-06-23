@@ -35726,15 +35726,19 @@ icons & this code generated via https://realfavicongenerator.net
 <p>A <code>LabelSettings</code> resource that will be applied to the special characters (SPACE, DEL, END) of the on-screen keyboard. A saved file can be provided with <em>Quick Load</em>, or a resource created directly within the node by clicking <em>New LabelSettings</em>.</p>
 <p>If no settings are provided, the <code>character_appearance</code> will be applied to the special characters.</p>
 <h2 id="events-and-mpf-integration">Events and MPF Integration</h2>
-<p>To control the on-screen keyboard from the pinball machine, an <code>event_player</code> must be setup that sends the event <em>"text_input"</em> with an appropriate <code>action</code> value (one of "left", "right", or "select").</p>
+<p>The MPFTextInput included in the default <a href="../../../game_logic/modes/high_score/">high_score mode</a> has event controls already defined.
+These included event_player bindings use the standard flipper and start tags to control the input. If you are adding an MPFTextInput on your own
+to some other slide, or if you want to add more buttons to control the selected items on the high score slide,
+you will need to create a way to post <em><code>text_input</code></em> events with the appropriate <code>action</code> value.</p>
+<p>For example, to allow more switches to control the on-screen keyboard, you could define an <code>event_player</code> that sends the event <em>"text_input"</em> with one of the three supported <code>action</code> values ("left", "right", or "select").</p>
 <div class="highlight"><pre><span></span><code><span class="nt">event_player</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">s_flipper_left_active</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_my_additional_left_control_active</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text_input</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">left</span>
-<span class="w">  </span><span class="nt">s_flipper_right_active</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_my_additional_right_control_active</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text_input</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">right</span>
-<span class="w">  </span><span class="nt">s_start_button_active</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_another_select_button_active</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text_input</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">select</span>
 </code></pre></div>
