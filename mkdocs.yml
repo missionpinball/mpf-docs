@@ -1359,9 +1359,47 @@ nav:
       - Devices: code/api_reference/api_reference_device.md
       - Modes: code/api_reference/api_reference_modes.md
       - Hardware Platforms: code/api_reference/api_reference_hardware_platforms.md
-      - Config Players: code/api_reference/api_reference_config_players.md
-      - Test: code/api_reference/api_reference_testing_class_api.md
-      - Miscellaneous Components: code/api_reference/api_reference_misc_components.md
+      - Config Players:
+        - code/api_reference/api_reference_config_players.md
+        - blocking_player: code/api_reference/config_players/blocking_player.md
+        - coil_player: code/api_reference/config_players/coil_player.md
+        - event_player: code/api_reference/config_players/event_player.md
+        - flasher_player: code/api_reference/config_players/flasher_player.md
+        - hardware_sound_player: code/api_reference/config_players/hardware_sound_player.md
+        - light_player: code/api_reference/config_players/light_player.md
+        - queue_event_player: code/api_reference/config_players/queue_event_player.md
+        - queue_relay_player: code/api_reference/config_players/queue_relay_player.md
+        - random_event_player: code/api_reference/config_players/random_event_player.md
+        - score_queue_player: code/api_reference/config_players/score_queue_player.md
+        - segment_display_player: code/api_reference/config_players/segment_display_player.md
+        - show_player: code/api_reference/config_players/show_player.md
+        - variable_player: code/api_reference/config_players/variable_player.md
+
+      - Test:
+        - code/api_reference/api_reference_testing_class_api.md
+        - code/api_reference/testing_class_api/MockBcpClient.md
+        - code/api_reference/testing_class_api/MpfBcpTestCase.md
+        - code/api_reference/testing_class_api/MpfFakeGameTestCase.md
+        - code/api_reference/testing_class_api/MpfMachineTestCase.md
+        - code/api_reference/testing_class_api/MpfTestCase.md
+        - code/api_reference/testing_class_api/TestDataManager.md
+        - code/api_reference/testing_class_api/TestMachineController.md
+      - Miscellaneous Components:
+        - code/api_reference/api_reference_misc_components.md
+        - code/api_reference/misc_components/BallSearch.md
+        - code/api_reference/misc_components/FileManager.md
+        - code/api_reference/misc_components/LogMixin.md
+        - code/api_reference/misc_components/ModeBaseClass.md
+        - code/api_reference/misc_components/Players.md
+        - code/api_reference/misc_components/RGBAColor.md
+        - code/api_reference/misc_components/RGBColor.md
+        - code/api_reference/misc_components/Randomizer.md
+        - code/api_reference/misc_components/Timers.md
+        - code/api_reference/misc_components/UtilityFunctions.md
+        - code/api_reference/misc_components/DataManager.md
+        - code/api_reference/misc_components/DelayManager.md
+        - code/api_reference/misc_components/DelayManagerRegistry.md
+
     - Writing Tests:
       - code/Writing_Tests/index.md
       - Running Tests: code/Writing_Tests/RunUnitTests.md
