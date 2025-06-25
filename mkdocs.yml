@@ -1368,6 +1368,27 @@ nav:
       - Writing Tests: code/Writing_Tests/WritingCustomTestsForYourMachine.md
     - BCP Interface:
       - code/BCP_Protocol/index.md
+      - ball_start (BCP Command): code/BCP_Protocol/ball_start.md
+      - ball_end (BCP Command): code/BCP_Protocol/ball_end.md
+      - device (BCP Command): code/BCP_Protocol/device.md
+      - error (BCP Command): code/BCP_Protocol/error.md
+      - goodbye (BCP Command): code/BCP_Protocol/goodbye.md
+      - hello (BCP Command): code/BCP_Protocol/hello.md
+      - machine_variable (BCP Command): code/BCP_Protocol/machine_variable.md
+      - mode_list (BCP Command): code/BCP_Protocol/mode_list.md
+      - mode_start (BCP Command): code/BCP_Protocol/mode_start.md
+      - mode_stop (BCP Command): code/BCP_Protocol/mode_stop.md
+      - monitor_start (BCP Command): code/BCP_Protocol/monitor_start.md
+      - monitor_stop (BCP Command): code/BCP_Protocol/monitor_stop.md
+      - player_added (BCP Command): code/BCP_Protocol/player_added.md
+      - player_turn_start (BCP Command): code/BCP_Protocol/player_turn_start.md
+      - player_variable (BCP Command): code/BCP_Protocol/player_variable.md
+      - register_trigger (BCP Command): code/BCP_Protocol/register_trigger.md
+      - remove_trigger (BCP Command): code/BCP_Protocol/remove_trigger.md
+      - reset (BCP Command): code/BCP_Protocol/reset.md
+      - reset_complete (BCP Command): code/BCP_Protocol/reset_complete.md
+      - switch (BCP Command): code/BCP_Protocol/switch.md
+      - trigger (BCP Command): code/BCP_Protocol/trigger.md
 
 - Showcase:
   - showcase/index.md
