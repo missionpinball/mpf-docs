@@ -1,7 +1,9 @@
 
 # self.machine.segment_display_player
 
-`class mpf.config_players.segment_display_player.SegmentDisplayPlayer(machine)`
+``` python
+class mpf.config_players.segment_display_player.SegmentDisplayPlayer(machine)
+```
 
 Bases: `mpf.config_players.device_config_player.DeviceConfigPlayer`
 
@@ -26,4 +28,3 @@ Parse express config.
 `play(settings, context, calling_context, priority=0, **kwargs)`
 
 Show text on display.
-

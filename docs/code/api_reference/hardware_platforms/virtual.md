@@ -1,9 +1,11 @@
 
 # self.machine.hardware_platforms[‘virtual’]
 
-`class mpf.platforms.virtual.VirtualHardwarePlatform(machine)`
+``` python
+class mpf.platforms.virtual.VirtualHardwarePlatform(machine)
+```
 
-Bases: mpf.core.platform.AccelerometerPlatform, mpf.core.platform.I2cPlatform, mpf.core.platform.ServoPlatform, mpf.core.platform.LightsPlatform, mpf.core.platform.SwitchPlatform, mpf.core.platform.DriverPlatform, mpf.core.platform.DmdPlatform, mpf.core.platform.RgbDmdPlatform, mpf.core.platform.SegmentDisplayPlatform, mpf.core.platform.StepperPlatform, mpf.core.platform.HardwareSoundPlatform
+Bases: `mpf.core.platform.AccelerometerPlatform`, `mpf.core.platform.I2cPlatform`, `mpf.core.platform.ServoPlatform`, `mpf.core.platform.LightsPlatform`, `mpf.core.platform.SwitchPlatform`, `mpf.core.platform.DriverPlatform`, `mpf.core.platform.DmdPlatform`, `mpf.core.platform.RgbDmdPlatform`, `mpf.core.platform.SegmentDisplayPlatform`, `mpf.core.platform.StepperPlatform`, `mpf.core.platform.HardwareSoundPlatform`
 
 Base class for the virtual hardware platform.
 
@@ -110,4 +112,3 @@ Validate stepper sections.
 `validate_switch_section(switch, config)`
 
 Validate switch sections.
-

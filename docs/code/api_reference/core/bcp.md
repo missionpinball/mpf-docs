@@ -1,6 +1,8 @@
 # self.machine.bcp
 
-`class mpf.core.bcp.bcp.Bcp(machine: MachineController)`
+``` python
+class mpf.core.bcp.bcp.Bcp(machine: MachineController)
+```
 
 Bases: `mpf.core.mpf_controller.MpfController`
 

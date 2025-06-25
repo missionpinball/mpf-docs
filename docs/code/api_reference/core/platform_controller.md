@@ -1,8 +1,10 @@
 # self.machine.platform_controller
 
-`class mpf.core.platform_controller.PlatformController(machine: MachineController)`
+``` python
+class mpf.core.platform_controller.PlatformController(machine: MachineController)
+```
 
-Bases: mpf.core.mpf_controller.MpfController
+Bases: `mpf.core.mpf_controller.MpfController`
 
 Manages all platforms and rules.
 

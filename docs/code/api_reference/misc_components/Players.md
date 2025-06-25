@@ -1,9 +1,11 @@
 
 # Players
 
-`class mpf.core.player.Player(machine, index)`
+``` python
+class mpf.core.player.Player(machine, index)
+```
 
-Bases: object
+Bases: `object`
 
 Base class for a player in a game.
 
@@ -84,4 +86,3 @@ Class attribute which specifies whether any monitors have been registered to tra
 `send_all_variable_events()`
 
 Send a player variable event for the current value of all player variables.
-

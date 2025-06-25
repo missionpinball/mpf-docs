@@ -1,9 +1,11 @@
 
 # self.machine.variable_player
 
-`class mpf.config_players.variable_player.VariablePlayer(machine: mpf.core.machine.MachineController)`
+``` python
+class mpf.config_players.variable_player.VariablePlayer(machine: mpf.core.machine.MachineController)
+```
 
-Bases: mpf.core.config_player.ConfigPlayer
+Bases: `mpf.core.config_player.ConfigPlayer`
 
 Posts events based on config.
 
@@ -42,4 +44,3 @@ Variable name.
 `validate_config_entry(settings: dict, name: str) → dict`
 
 Validate one entry of this player.
-

@@ -1,9 +1,11 @@
 
 # self.machine.auditor
 
-`class mpf.plugins.auditor.Auditor(machine: MachineController)`
+``` python
+class mpf.plugins.auditor.Auditor(machine: MachineController)
+```
 
-Bases: object
+Bases: `object`
 
 Writes switch events, regular events, and player variables to an audit log file.
 
@@ -63,4 +65,3 @@ Parameters:
 `enabled`
 
 Attribute that’s viewed by other core components to let them know they should send auditing events. Set this via the enable() and disable() methods.
-

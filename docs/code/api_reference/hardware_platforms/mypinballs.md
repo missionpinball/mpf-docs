@@ -1,9 +1,11 @@
 
 # self.machine.hardware_platforms[‘mypinballs’]
 
-`class mpf.platforms.mypinballs.mypinballs.MyPinballsHardwarePlatform(machine)`
+``` python
+class mpf.platforms.mypinballs.mypinballs.MyPinballsHardwarePlatform(machine)
+```
 
-Bases: mpf.core.platform.SegmentDisplayPlatform
+Bases: `mpf.core.platform.SegmentDisplayPlatform`
 
 Hardware platform for MyPinballs 7-segment controller.
 
@@ -30,4 +32,3 @@ Send a byte command.
 `stop()`
 
 Stop platform.
-

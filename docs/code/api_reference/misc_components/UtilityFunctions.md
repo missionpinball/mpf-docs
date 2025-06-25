@@ -1,9 +1,11 @@
 
 # Utility Functions
 
-`class mpf.core.utility_functions.Util`
+``` python
+class mpf.core.utility_functions.Util`
+```
 
-Bases: object
+Bases: `object`
 
 Utility functions for MPF.
 

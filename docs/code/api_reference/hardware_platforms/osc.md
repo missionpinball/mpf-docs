@@ -1,9 +1,11 @@
 
 # self.machine.hardware_platforms[‘osc’]
 
-`class mpf.platforms.osc.OscPlatform(machine)`
+``` python
+class mpf.platforms.osc.OscPlatform(machine)
+```
 
-Bases: mpf.core.platform.LightsPlatform, mpf.core.platform.SwitchPlatform
+Bases: `mpf.core.platform.LightsPlatform`, `mpf.core.platform.SwitchPlatform`
 
 A platform to control lights via OSC.
 
@@ -38,4 +40,3 @@ Parse light number to three RGB channels.
 `stop()`
 
 Stop server.
-

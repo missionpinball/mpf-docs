@@ -1,9 +1,11 @@
 
 # Mode base class
 
-`class mpf.core.mode.Mode(machine: MachineController, config, name: str, path, asset_paths)`
+``` python
+class mpf.core.mode.Mode(machine: MachineController, config, name: str, path, asset_paths)
+```
 
-Bases: mpf.core.logging.LogMixin
+Bases: `mpf.core.logging.LogMixin`
 
 Base class for a mode.
 
@@ -161,4 +163,3 @@ Returns true if the mode is running. Otherwise false.
 Log a message at the warning level.
 
 These messages will always be shown in the console and the log file.
-

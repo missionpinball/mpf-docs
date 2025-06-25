@@ -1,9 +1,11 @@
 
 # self.machine.show_player
 
-`class mpf.config_players.show_player.ShowPlayer(machine)`
+``` python
+class mpf.config_players.show_player.ShowPlayer(machine)
+```
 
-Bases: mpf.config_players.device_config_player.DeviceConfigPlayer
+Bases: `mpf.config_players.device_config_player.DeviceConfigPlayer`
 
 Plays, starts, stops, pauses, resumes or advances shows based on config.
 
@@ -30,4 +32,3 @@ Handle subscriptions.
 `play(settings, context, calling_context, priority=0, **kwargs)`
 
 Play, start, stop, pause, resume or advance show based on config.
-

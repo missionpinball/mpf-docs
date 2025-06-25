@@ -1,9 +1,11 @@
 
 # self.machine.hardware_platforms[‘smbus2’]
 
-`class mpf.platforms.smbus2.Smbus2(machine)`
+``` python
+class mpf.platforms.smbus2.Smbus2(machine)
+```
 
-Bases: mpf.core.platform.I2cPlatform
+Bases: `mpf.core.platform.I2cPlatform`
 
 I2C platform which uses the smbus interface on linux via the smbus2 python extension.
 
@@ -22,4 +24,3 @@ Configure device on smbus2.
 `initialize()`
 
 Check if smbus2 extension has been imported.
-

@@ -1,9 +1,11 @@
 
 # self.machine.hardware_platforms[‘step_stick’]
 
-`class mpf.platforms.step_stick.StepStickDigitalOutputPlatform(machine)`
+``` python
+class mpf.platforms.step_stick.StepStickDigitalOutputPlatform(machine)
+```
 
-Bases: mpf.core.platform.StepperPlatform
+Bases: `mpf.core.platform.StepperPlatform`
 
 Drive a stepper using a StepStick controller on a digital output.
 
@@ -22,4 +24,3 @@ Configure a stepper driven by StepStick on a digital output.
 `classmethod get_stepper_config_section()`
 
 Return config section.
-

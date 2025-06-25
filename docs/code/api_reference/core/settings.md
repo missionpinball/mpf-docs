@@ -1,9 +1,11 @@
 
 # self.machine.settings
 
-`class mpf.core.settings_controller.SettingsController(machine)`
+``` python
+class mpf.core.settings_controller.SettingsController(machine)
+```
 
-Bases: mpf.core.mpf_controller.MpfController
+Bases: `mpf.core.mpf_controller.MpfController`
 
 Manages operator controllable settings.
 
@@ -38,4 +40,3 @@ Return all available settings.
 `set_setting_value(setting_name, value)`
 
 Set the value of a setting.
-

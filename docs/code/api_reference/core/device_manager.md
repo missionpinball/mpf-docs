@@ -1,9 +1,11 @@
 
 # self.machine.device_manager
 
-`class mpf.core.device_manager.DeviceManager(machine)`
+``` python
+class mpf.core.device_manager.DeviceManager(machine)
+```
 
-Bases: mpf.core.mpf_controller.MpfController
+Bases: `mpf.core.mpf_controller.MpfController`
 
 Manages all the devices in MPF.
 
@@ -70,4 +72,3 @@ Parameters:
 `stop_devices()`
 
 Stop all devices in the machine.
-

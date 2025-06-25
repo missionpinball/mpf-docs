@@ -1,9 +1,11 @@
 
 # self.machine.hardware_platforms[‘drivers’]
 
-`class mpf.platforms.driver_light_platform.DriverLightPlatform(machine)`
+``` python
+class mpf.platforms.driver_light_platform.DriverLightPlatform(machine)
+```
 
-Bases: mpf.core.platform.LightsPlatform
+Bases: `mpf.core.platform.LightsPlatform`
 
 Lights on drivers.
 
@@ -26,4 +28,3 @@ Parse number.
 `stop()`
 
 Stop all fades.
-

@@ -1,9 +1,11 @@
 
 # Ball Search
 
-`class mpf.core.ball_search.BallSearch(machine: mpf.core.machine.MachineController, playfield: Playfield)`
+``` python
+class mpf.core.ball_search.BallSearch(machine: mpf.core.machine.MachineController, playfield: Playfield)
+```
 
-Bases: mpf.core.mpf_controller.MpfController
+Bases: `mpf.core.mpf_controller.MpfController`
 
 Implements Ball search for a playfield device.
 
@@ -156,4 +158,3 @@ This will check to see if there are balls on the playfield, and if so, enable ba
 Log a message at the warning level.
 
 These messages will always be shown in the console and the log file.
-

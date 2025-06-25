@@ -1,9 +1,11 @@
 
 # self.machine.hardware_platforms[‘pololu_maestro’]
 
-`class mpf.platforms.pololu_maestro.PololuMaestroHardwarePlatform(machine)`
+``` python
+class mpf.platforms.pololu_maestro.PololuMaestroHardwarePlatform(machine)
+```
 
-Bases: mpf.core.platform.ServoPlatform
+Bases: `mpf.core.platform.ServoPlatform`
 
 Supports the Pololu Maestro servo controllers via PySerial.
 
@@ -32,4 +34,3 @@ Initialise platform.
 `stop()`
 
 Close serial.
-

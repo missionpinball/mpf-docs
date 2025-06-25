@@ -1,9 +1,11 @@
 
 # self.machine.text_ui
 
-`class mpf.core.text_ui.TextUi(machine: MachineController)`
+``` python
+class mpf.core.text_ui.TextUi(machine: MachineController)
+```
 
-Bases: mpf.core.mpf_controller.MpfController
+Bases: `mpf.core.mpf_controller.MpfController`
 
 Handles the text-based UI.
 
@@ -18,4 +20,3 @@ The text_ui has the following methods & attributes available. Note that methods 
 `stop(**kwargs)`
 
 Stop the Text UI and restore the original console screen.
-

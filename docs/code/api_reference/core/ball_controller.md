@@ -1,9 +1,11 @@
 
 # self.machine.ball_controller
 
-`class mpf.core.ball_controller.BallController(machine: mpf.core.machine.MachineController)`
+``` python
+class mpf.core.ball_controller.BallController(machine: mpf.core.machine.MachineController)
+```
 
-Bases: mpf.core.mpf_controller.MpfController
+Bases: `mpf.core.mpf_controller.MpfController`
 
 Tracks and manages all the balls in a pinball machine.
 
@@ -45,4 +47,3 @@ Dump ball count of all devices.
 
 Handle result of the request_to_start_game event.
 Checks to make sure that the balls are in all the right places and returns. If too many balls are missing (based on the config files ‘Min Balls’ setting), it will return False to reject the game start request.
-

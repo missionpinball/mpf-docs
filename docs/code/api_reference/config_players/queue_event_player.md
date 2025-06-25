@@ -1,9 +1,11 @@
 
 # self.machine.queue_event_player
 
-`class mpf.config_players.queue_event_player.QueueEventPlayer(machine)`
+``` python
+class mpf.config_players.queue_event_player.QueueEventPlayer(machine)
+```
 
-Bases: mpf.core.config_player.ConfigPlayer
+Bases: `mpf.core.config_player.ConfigPlayer`
 
 Posts queue events based on config.
 
@@ -26,4 +28,3 @@ Post queue events.
 `validate_config_entry(settings, name)`
 
 Validate one entry of this player.
-

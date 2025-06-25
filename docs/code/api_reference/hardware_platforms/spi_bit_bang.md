@@ -1,9 +1,11 @@
 
 # self.machine.hardware_platforms[‘spi_bit_bang’]
 
-`class mpf.platforms.spi_bit_bang.SpiBitBangPlatform(machine)`
+``` python
+class mpf.platforms.spi_bit_bang.SpiBitBangPlatform(machine)
+```
 
-Bases: mpf.core.platform.SwitchPlatform
+Bases: `mpf.core.platform.SwitchPlatform`
 
 Platform which reads switch via SPI using bit banging.
 
@@ -32,4 +34,3 @@ Register handler for late init.
 `read_spi(bits)`
 
 Read from SPI.
-

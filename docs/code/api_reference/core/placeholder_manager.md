@@ -1,9 +1,11 @@
 
 # self.machine.placeholder_manager
 
-`class mpf.core.placeholder_manager.PlaceholderManager(machine)`
+``` python
+class mpf.core.placeholder_manager.PlaceholderManager(machine)
+```
 
-Bases: mpf.core.placeholder_manager.BasePlaceholderManager
+Bases: `mpf.core.placeholder_manager.BasePlaceholderManager`
 
 Manages templates and placeholders for MPF.
 
@@ -18,4 +20,3 @@ The placeholder_manager has the following methods & attributes available. Note t
 `get_global_parameters(name)`
 
 Return global params.
-

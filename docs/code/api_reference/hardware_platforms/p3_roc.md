@@ -1,9 +1,11 @@
 
 # self.machine.hardware_platforms[‘p3_roc’]
 
-`class mpf.platforms.p3_roc.P3RocHardwarePlatform(machine)`
+``` python
+class mpf.platforms.p3_roc.P3RocHardwarePlatform(machine)
+```
 
-Bases: mpf.platforms.p_roc_common.PROCBasePlatform, mpf.core.platform.I2cPlatform, mpf.core.platform.AccelerometerPlatform
+Bases: `mpf.platforms.p_roc_common.PROCBasePlatform`, `mpf.core.platform.I2cPlatform`, `mpf.core.platform.AccelerometerPlatform`
 
 Platform class for the P3-ROC hardware controller.
 
@@ -86,4 +88,3 @@ Start GPIO poller.
 `stop()`
 
 Stop platform.
-

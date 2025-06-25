@@ -1,7 +1,9 @@
 
 # LogMixin
 
-`class mpf.core.logging.LogMixin`
+``` python
+class mpf.core.logging.LogMixin
+```
 
 Bases: object
 
@@ -59,4 +61,3 @@ Raise a ConfigFileError exception.
 Log a message at the warning level.
 
 These messages will always be shown in the console and the log file.
-

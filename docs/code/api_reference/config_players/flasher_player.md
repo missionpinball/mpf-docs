@@ -1,9 +1,11 @@
 
 # self.machine.flasher_player
 
-`class mpf.config_players.flasher_player.FlasherPlayer(machine)`
+``` python
+class mpf.config_players.flasher_player.FlasherPlayer(machine)
+```
 
-Bases: mpf.config_players.device_config_player.DeviceConfigPlayer
+Bases: `mpf.config_players.device_config_player.DeviceConfigPlayer`
 
 Triggers flashers based on config.
 
@@ -22,4 +24,3 @@ Parse express config.
 `play(settings, context, calling_context, priority=0, **kwargs)`
 
 Flash flashers.
-

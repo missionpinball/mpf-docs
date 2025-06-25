@@ -1,9 +1,11 @@
 
 # self.machine.light_player
 
-`class mpf.config_players.light_player.LightPlayer(machine)`
+``` python
+class mpf.config_players.light_player.LightPlayer(machine)
+```
 
-Bases: mpf.config_players.device_config_player.DeviceConfigPlayer
+Bases: `mpf.config_players.device_config_player.DeviceConfigPlayer`
 
 Sets lights based on config.
 
@@ -30,4 +32,3 @@ Handle subscriptions.
 `play(settings, context, calling_context, priority=0, **kwargs)`
 
 Set light color based on config.
-

@@ -1,7 +1,9 @@
 
 # File Manager
 
-`class mpf.core.file_manager.FileManager`
+``` python
+class mpf.core.file_manager.FileManager
+```
 
 Bases: object
 
@@ -33,4 +35,3 @@ Returns: Location of file
 `static save(filename, data)`
 
 Save data to file.
-

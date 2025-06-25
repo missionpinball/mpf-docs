@@ -1,8 +1,10 @@
 # self.machine.hardware_platforms[‘opp’]
 
-`class mpf.platforms.opp.opp.OppHardwarePlatform(machine)`
+``` python
+class mpf.platforms.opp.opp.OppHardwarePlatform(machine)
+```
 
-Bases: mpf.core.platform.LightsPlatform, mpf.core.platform.SwitchPlatform, mpf.core.platform.DriverPlatform
+Bases: `mpf.core.platform.LightsPlatform`, `mpf.core.platform.SwitchPlatform`, `mpf.core.platform.DriverPlatform`
 
 Platform class for the OPP hardware.
 
