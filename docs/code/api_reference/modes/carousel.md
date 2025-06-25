@@ -1,9 +1,11 @@
 
 # self.machine.modes.carousel
 
-`class mpf.modes.carousel.code.carousel.Carousel(*args, **kwargs)`
+``` python
+class mpf.modes.carousel.code.carousel.Carousel(*args, **kwargs)
+```
 
-Bases: mpf.core.mode.Mode
+Bases: `mpf.core.mode.Mode`
 
 Mode which allows the player to select another mode to run.
 
@@ -129,4 +131,3 @@ Returns true if the mode is running. Otherwise false.
 Log a message at the warning level.
 
 These messages will always be shown in the console and the log file.
-

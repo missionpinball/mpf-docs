@@ -1,9 +1,11 @@
 
 # self.machine.modes.high_score
 
-`class mpf.modes.high_score.code.high_score.HighScore(*args, **kwargs)`
+``` python
+class mpf.modes.high_score.code.high_score.HighScore(*args, **kwargs)
+```
 
-Bases: mpf.core.async_mode.AsyncMode
+Bases: `mpf.core.async_mode.AsyncMode`
 
 High score mode.
 
@@ -131,4 +133,3 @@ Returns true if the mode is running. Otherwise false.
 Log a message at the warning level.
 
 These messages will always be shown in the console and the log file.
-

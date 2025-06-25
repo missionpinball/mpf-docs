@@ -1,9 +1,11 @@
 
 # self.machine.modes.service
 
-`class mpf.modes.service.code.service.Service(*args, **kwargs)`
+``` python
+class mpf.modes.service.code.service.Service(*args, **kwargs)
+```
 
-Bases: mpf.core.async_mode.AsyncMode
+Bases: `mpf.core.async_mode.AsyncMode`
 
 The service mode.
 
@@ -129,4 +131,3 @@ Returns true if the mode is running. Otherwise false.
 Log a message at the warning level.
 
 These messages will always be shown in the console and the log file.
-

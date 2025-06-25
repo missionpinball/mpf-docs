@@ -139,4 +139,3 @@ Information includes Python version, Python executable, platform, and core archi
 Log a message at the warning level.
 
 These messages will always be shown in the console and the log file.
-

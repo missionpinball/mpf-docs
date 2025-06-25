@@ -1,9 +1,11 @@
 
 # MpfGameTestCase
 
-`class mpf.tests.MpfGameTestCase.MpfGameTestCase(methodName)`
+``` python
+class mpf.tests.MpfGameTestCase.MpfGameTestCase(methodName)
+```
 
-Bases: mpf.tests.MpfTestCase.MpfTestCase
+Bases: `mpf.tests.MpfTestCase.MpfTestCase`
 
 Test case for starting and running games.
 
@@ -776,4 +778,3 @@ Tear down test.
 Return the verbosity setting of the currently running unittest program, or 0 if none is running.
 
 Returns: An integer value of the current verbosity setting.
-

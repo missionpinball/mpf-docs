@@ -3,7 +3,7 @@
 
 `class mpf.tests.TestDataManager.TestDataManager(data)`
 
-Bases: mpf.core.data_manager.DataManager
+Bases: `mpf.core.data_manager.DataManager`
 
 A patched version of the DataManager which is used in unit tests.
 
@@ -44,4 +44,3 @@ Update all data.
 Log a message at the warning level.
 
 These messages will always be shown in the console and the log file.
-

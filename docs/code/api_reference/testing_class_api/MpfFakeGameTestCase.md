@@ -1,7 +1,10 @@
 
 # MpfFakeGameTestCase
 
-`class mpf.tests.MpfFakeGameTestCase.MpfFakeGameTestCase(methodName)`
+
+``` python
+class mpf.tests.MpfFakeGameTestCase.MpfFakeGameTestCase(methodName)
+```
 
 Bases: mpf.tests.MpfGameTestCase.MpfGameTestCase
 
@@ -772,4 +775,3 @@ Tear down test.
 Return the verbosity setting of the currently running unittest program, or 0 if none is running.
 
 Returns: An integer value of the current verbosity setting.
-

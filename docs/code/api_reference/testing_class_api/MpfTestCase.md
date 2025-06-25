@@ -5,7 +5,7 @@
 class mpf.tests.MpfTestCase.MpfTestCase(methodName='runTest')
 ```
 
-Bases: unittest.case.TestCase
+Bases: `unittest.case.TestCase`
 
 Primary TestCase class used for all MPF unit tests.
 
@@ -655,4 +655,3 @@ Tear down test.
 Return the verbosity setting of the currently running unittest program, or 0 if none is running.
 
 Returns: An integer value of the current verbosity setting.
-

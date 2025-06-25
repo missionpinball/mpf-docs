@@ -1,7 +1,7 @@
 
 # Hardware Platforms
 
-Hardware platforms are stored in a machine hardware_platforms dictionary, for example, self.machine.hardware_platforms['fast'] or self.machine.hardware_platforms['p_roc'].
+Hardware platforms are stored in a machine hardware_platforms dictionary, for example, `self.machine.hardware_platforms['fast']` or `self.machine.hardware_platforms['p_roc']`.
 
 * [drivers](hardware_platforms/drivers.md)
 * [fadecandy](hardware_platforms/fadecandy.md)
@@ -33,5 +33,3 @@ Hardware platforms are stored in a machine hardware_platforms dictionary, for ex
 * [virtual](hardware_platforms/virtual.md)
 * [virtual_pinball](hardware_platforms/virtual_pinball.md)
 * [visual_pinball_evolution](hardware_platforms/visual_pinball_evolution.md)
-
-

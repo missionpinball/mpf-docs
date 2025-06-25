@@ -1,7 +1,9 @@
 
 # MockBcpClient
 
-`class mpf.tests.MpfBcpTestCase.MockBcpClient(machine, name, bcp)`
+``` python
+class mpf.tests.MpfBcpTestCase.MockBcpClient(machine, name, bcp)
+```
 
 Bases: `mpf.core.bcp.bcp_client.BaseBcpClient`
 
@@ -52,5 +54,3 @@ Stop client connection.
 Log a message at the warning level.
 
 These messages will always be shown in the console and the log file.
-
-
