@@ -1,5 +1,6 @@
+# queue_event_player API Reference
 
-# self.machine.queue_event_player
+`self.machine.queue_event_player`
 
 ``` python
 class mpf.config_players.queue_event_player.QueueEventPlayer(machine)

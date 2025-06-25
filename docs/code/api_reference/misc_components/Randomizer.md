@@ -1,4 +1,4 @@
-# Randomizer
+# Randomizer API Reference
 
 ``` python
 class mpf.core.randomizer.Randomizer(items)

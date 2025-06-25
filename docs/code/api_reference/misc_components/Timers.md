@@ -1,1 +1,1 @@
-# Timers
+# Timers API Reference

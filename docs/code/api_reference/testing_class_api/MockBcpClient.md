@@ -1,4 +1,3 @@
-
 # MockBcpClient
 
 ``` python

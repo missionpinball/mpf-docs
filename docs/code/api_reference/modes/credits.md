@@ -1,5 +1,6 @@
+# Credits Mode API Reference
 
-# self.machine.modes.credits
+`self.machine.modes.credits`
 
 ``` python
 class mpf.modes.credits.code.credits.Credits(*args, **kwargs)

@@ -1,7 +1,8 @@
-
 # TestDataManager
 
-`class mpf.tests.TestDataManager.TestDataManager(data)`
+``` python
+class mpf.tests.TestDataManager.TestDataManager(data)
+```
 
 Bases: `mpf.core.data_manager.DataManager`
 

@@ -1,5 +1,4 @@
-
-# Utility Functions
+# Utility Functions API Reference
 
 ``` python
 class mpf.core.utility_functions.Util`
@@ -285,4 +284,4 @@ Returns an integer. The examples listed above return 200, 2000 and 0, respective
 
 Decode a string of real-world time into an float of seconds.
 
-See ‘string_to_ms’ for a description of the time string.
+See `string_to_ms` for a description of the time string.

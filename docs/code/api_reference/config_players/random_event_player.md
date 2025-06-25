@@ -1,5 +1,6 @@
+# random_event_player API Reference
 
-# self.machine.random_event_player
+`self.machine.random_event_player`
 
 ``` python
 class mpf.config_players.random_event_player.RandomEventPlayer(machine)

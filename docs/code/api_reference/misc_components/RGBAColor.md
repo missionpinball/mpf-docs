@@ -1,5 +1,4 @@
-
-# RGBAColor
+# RGBAColor API Reference
 
 ``` python
 class mpf.core.rgba_color.RGBAColor(color: Union[mpf.core.rgb_color.RGBColor, str, Tuple[int, int, int], Tuple[int, int, int, int], List[int]])

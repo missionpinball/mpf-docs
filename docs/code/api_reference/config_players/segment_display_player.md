@@ -1,5 +1,6 @@
+# segment_display_player API Reference
 
-# self.machine.segment_display_player
+`self.machine.segment_display_player`
 
 ``` python
 class mpf.config_players.segment_display_player.SegmentDisplayPlayer(machine)

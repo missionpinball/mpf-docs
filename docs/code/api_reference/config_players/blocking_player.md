@@ -1,5 +1,6 @@
+# blocking_player API Reference
 
-# self.machine.blocking_player
+`self.machine.blocking_player`
 
 ``` python
 class mpf.config_players.block_event_player.BlockEventPlayer(machine)

@@ -1,5 +1,6 @@
+# event_player API Reference
 
-# self.machine.event_player
+`self.machine.event_player`
 
 ``` python
 class mpf.config_players.event_player.EventPlayer(machine)

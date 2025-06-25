@@ -1,5 +1,6 @@
+# score_queue_player API Reference
 
-# self.machine.score_queue_player
+`self.machine.score_queue_player`
 
 ``` python
 class mpf.config_players.score_queue_player.ScoreQueuePlayer(machine)

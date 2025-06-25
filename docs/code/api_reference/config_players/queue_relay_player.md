@@ -1,5 +1,6 @@
+# queue_relay_player API Reference
 
-# self.machine.queue_relay_player
+`self.machine.queue_relay_player`
 
 ``` python
 class mpf.config_players.queue_relay_player.QueueRelayPlayer(machine)

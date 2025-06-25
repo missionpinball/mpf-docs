@@ -1,5 +1,6 @@
+# light_player API Reference
 
-# self.machine.light_player
+`self.machine.light_player`
 
 ``` python
 class mpf.config_players.light_player.LightPlayer(machine)

@@ -1,5 +1,6 @@
+# coil_player API Reference
 
-# self.machine.coil_player
+`self.machine.coil_player`
 
 ``` python
 class mpf.config_players.coil_player.CoilPlayer(machine)

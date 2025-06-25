@@ -1,5 +1,6 @@
+# Match Mode API Reference
 
-# self.machine.modes.match
+`self.machine.modes.match`
 
 ``` python
 class mpf.modes.match.code.match.Match(*args, **kwargs)

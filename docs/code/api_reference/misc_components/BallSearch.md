@@ -1,5 +1,4 @@
-
-# Ball Search
+# Ball Search API Reference
 
 ``` python
 class mpf.core.ball_search.BallSearch(machine: mpf.core.machine.MachineController, playfield: Playfield)

@@ -1,11 +1,10 @@
-
-# File Manager
+# File Manager API Reference
 
 ``` python
 class mpf.core.file_manager.FileManager
 ```
 
-Bases: object
+Bases: `object`
 
 Manages file interfaces.
 

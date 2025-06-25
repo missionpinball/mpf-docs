@@ -1,4 +1,3 @@
-
 # MpfMachineTestCase
 
 ``` python

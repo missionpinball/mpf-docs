@@ -1,5 +1,6 @@
+# Attract Mode API Reference
 
-# self.machine.modes.attract
+`self.machine.modes.attract`
 
 ``` python
 class mpf.modes.attract.code.attract.Attract(*args, **kwargs)

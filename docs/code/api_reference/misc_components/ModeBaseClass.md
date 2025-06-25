@@ -1,5 +1,4 @@
-
-# Mode base class
+# Mode base class API Reference
 
 ``` python
 class mpf.core.mode.Mode(machine: MachineController, config, name: str, path, asset_paths)

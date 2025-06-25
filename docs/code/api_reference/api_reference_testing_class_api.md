@@ -1,4 +1,3 @@
-
 # Testing Class API
 
 MPF includes several unit test classes which you can use to write tests which test MPF or to write tests for your own game.

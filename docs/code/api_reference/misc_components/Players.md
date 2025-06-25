@@ -1,5 +1,4 @@
-
-# Players
+# Player API Reference
 
 ``` python
 class mpf.core.player.Player(machine, index)
@@ -58,7 +57,7 @@ player_score with Args: value=0, change=0, prev_value=0 player_score with Args: 
 
 ## Methods & Attributes
 
-The Players has the following methods & attributes available. Note that methods & attributes inherited from the base class are not included here.
+The Player has the following methods & attributes available. Note that methods & attributes inherited from the base class are not included here.
 
 `enable_events(enable=True, send_all_variables=True)`
 

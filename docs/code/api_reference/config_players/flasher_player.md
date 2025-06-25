@@ -1,5 +1,6 @@
+# flasher_player API Reference
 
-# self.machine.flasher_player
+`self.machine.flasher_player`
 
 ``` python
 class mpf.config_players.flasher_player.FlasherPlayer(machine)

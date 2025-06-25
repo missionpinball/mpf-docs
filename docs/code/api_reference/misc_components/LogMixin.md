@@ -1,11 +1,10 @@
-
-# LogMixin
+# LogMixin API Reference
 
 ``` python
 class mpf.core.logging.LogMixin
 ```
 
-Bases: object
+Bases: `object`
 
 Mixin class to add smart logging functionality to modules.
 

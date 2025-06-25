@@ -1,12 +1,10 @@
-
 # MpfFakeGameTestCase
-
 
 ``` python
 class mpf.tests.MpfFakeGameTestCase.MpfFakeGameTestCase(methodName)
 ```
 
-Bases: mpf.tests.MpfGameTestCase.MpfGameTestCase
+Bases: `mpf.tests.MpfGameTestCase.MpfGameTestCase`
 
 Test case for a game that does not require ball devices & start switches.
 

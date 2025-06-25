@@ -1,5 +1,4 @@
-
-# Data Manager
+# Data Manager API Reference
 
 ``` python
 class mpf.core.data_manager.DataManager(machine, name, min_wait_secs=1)

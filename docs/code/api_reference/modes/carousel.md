@@ -1,5 +1,6 @@
+# Carousel Mode API Reference
 
-# self.machine.modes.carousel
+`self.machine.modes.carousel`
 
 ``` python
 class mpf.modes.carousel.code.carousel.Carousel(*args, **kwargs)

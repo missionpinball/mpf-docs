@@ -1,5 +1,6 @@
+# show_player API Reference
 
-# self.machine.show_player
+`self.machine.show_player`
 
 ``` python
 class mpf.config_players.show_player.ShowPlayer(machine)

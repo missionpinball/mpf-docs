@@ -1,5 +1,6 @@
+# Game Mode API Reference
 
-# self.machine.modes.game
+`self.machine.modes.game`
 
 ``` python
 class mpf.modes.game.code.game.Game(*args, **kwargs)

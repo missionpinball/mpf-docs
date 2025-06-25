@@ -1,5 +1,6 @@
+# Service Mode API Reference
 
-# self.machine.modes.service
+`self.machine.modes.service`
 
 ``` python
 class mpf.modes.service.code.service.Service(*args, **kwargs)

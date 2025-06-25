@@ -1,5 +1,6 @@
+# hardware_sound_player API Reference
 
-# self.machine.hardware_sound_player
+`self.machine.hardware_sound_player`
 
 ``` python
 class mpf.config_players.hardware_sound_player.HardwareSoundPlayer(machine)

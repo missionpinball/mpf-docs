@@ -1,5 +1,4 @@
-
-# Delay Manager
+# Delay Manager API Reference
 
 ``` python
 class mpf.core.delays.DelayManager(machine: MachineController)

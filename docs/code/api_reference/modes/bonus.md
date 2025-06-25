@@ -1,5 +1,6 @@
+# Bonus Mode API Reference
 
-# self.machine.modes.bonus
+`self.machine.modes.bonus`
 
 ``` python
 class mpf.modes.bonus.code.bonus.Bonus(*args, **kwargs)

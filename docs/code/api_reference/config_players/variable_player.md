@@ -1,5 +1,6 @@
+# variable_player API Reference
 
-# self.machine.variable_player
+`self.machine.variable_player`
 
 ``` python
 class mpf.config_players.variable_player.VariablePlayer(machine: mpf.core.machine.MachineController)

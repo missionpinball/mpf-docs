@@ -1,5 +1,6 @@
+# High Score Mode API Reference
 
-# self.machine.modes.high_score
+`self.machine.modes.high_score`
 
 ``` python
 class mpf.modes.high_score.code.high_score.HighScore(*args, **kwargs)

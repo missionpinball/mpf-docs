@@ -1,7 +1,8 @@
-
 # TestMachineController
 
-`class mpf.tests.MpfTestCase.TestMachineController(options, config, config_patches, config_defaults, clock, mock_data, enable_plugins=False)`
+``` python
+class mpf.tests.MpfTestCase.TestMachineController(options, config, config_patches, config_defaults, clock, mock_data, enable_plugins=False)
+```
 
 Bases: `mpf.core.machine.MachineController`
 

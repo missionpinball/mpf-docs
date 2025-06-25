@@ -1,5 +1,6 @@
+# Tilt Mode API Reference
 
-# self.machine.modes.tilt
+`self.machine.modes.tilt`
 
 ``` python
 class mpf.modes.tilt.code.tilt.Tilt(*args, **kwargs)
