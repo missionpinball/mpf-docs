@@ -1344,6 +1344,7 @@ nav:
     - MPF Examples Repo: examples/mpf-examples.md
     - Demo Man Example Game: examples/demo_man.md
     - MC Demo: examples/mc_demo.md
+
   - Extending MPF with Custom Code:
     - code/index.md
     - Getting Started:
@@ -1353,11 +1354,95 @@ nav:
       - Variables in Code: code/introduction/variables_in_code.md
       - Setup Dev Env: code/introduction/setup.md
       - Debugging: code/introduction/debug.md
+
     - API Reference:
       - code/api_reference/index.md
-      - Core: code/api_reference/api_reference_core.md
-      - Devices: code/api_reference/api_reference_device.md
-      - Modes: code/api_reference/api_reference_modes.md
+      - Core:
+        - code/api_reference/api_reference_core.md
+        - auditor: code/api_reference/core/auditor.md
+        - ball_controller: code/api_reference/core/ball_controller.md
+        - bcp: code/api_reference/core/bcp.md
+        - device_manager: code/api_reference/core/device_manager.md
+        - events: code/api_reference/core/events.md
+        - info_lights: code/api_reference/core/info_lights.md
+        - light_controller: code/api_reference/core/light_controller.md
+        - machine: code/api_reference/core/machine.md
+        - mode_controller: code/api_reference/core/mode_controller.md
+        - placeholder_manager: code/api_reference/core/placeholder_manager.md
+        - platform_controller: code/api_reference/core/platform_controller.md
+        - service: code/api_reference/core/service.md
+        - settings: code/api_reference/core/settings.md
+        - show_controller: code/api_reference/core/show_controller.md
+        - switch_controller: code/api_reference/core/switch_controller.md
+        - switch_player: code/api_reference/core/switch_player.md
+        - text_ui: code/api_reference/core/text_ui.md
+        - twitch_bot: code/api_reference/core/twitch_bot.md
+
+      - Devices:
+        - code/api_reference/api_reference_device.md
+        - accelerometers: code/api_reference/devices/accelerometers.md
+        - accruals: code/api_reference/devices/accruals.md
+        - achievement_groups: code/api_reference/devices/achievement_groups.md
+        - achievements: code/api_reference/devices/achievements.md
+        - autofires: code/api_reference/devices/autofires.md
+        - ball_devices: code/api_reference/devices/ball_devices.md
+        - ball_holds: code/api_reference/devices/ball_holds.md
+        - ball_routings: code/api_reference/devices/ball_routings.md
+        - ball_saves: code/api_reference/devices/ball_saves.md
+        - coils: code/api_reference/devices/coils.md
+        - combo_switches: code/api_reference/devices/combo_switches.md
+        - counters: code/api_reference/devices/counters.md
+        - digital_outputs: code/api_reference/devices/digital_outputs.md
+        - diverters: code/api_reference/devices/diverters.md
+        - dmds: code/api_reference/devices/dmds.md
+        - drop_target_banks: code/api_reference/devices/drop_target_banks.md
+        - drop_targets: code/api_reference/devices/drop_targets.md
+        - dual_wound_coils: code/api_reference/devices/dual_wound_coils.md
+        - extra_ball_groups: code/api_reference/devices/extra_ball_groups.md
+        - extra_balls: code/api_reference/devices/extra_balls.md
+        - flippers: code/api_reference/devices/flippers.md
+        - hardware_sound_systems: code/api_reference/devices/hardware_sound_systems.md
+        - kickbacks: code/api_reference/devices/kickbacks.md
+        - light_rings: code/api_reference/devices/light_rings.md
+        - light_stripes: code/api_reference/devices/light_stripes.md
+        - lights: code/api_reference/devices/lights.md
+        - magnets: code/api_reference/devices/magnets.md
+        - motors: code/api_reference/devices/motors.md
+        - multiball_locks: code/api_reference/devices/multiball_locks.md
+        - multiballs: code/api_reference/devices/multiballs.md
+        - playfield_transfers: code/api_reference/devices/playfield_transfers.md
+        - playfields: code/api_reference/devices/playfields.md
+        - psus: code/api_reference/devices/psus.md
+        - rgb_dmds: code/api_reference/devices/rgb_dmds.md
+        - score_queues: code/api_reference/devices/score_queues.md
+        - score_reel_groups: code/api_reference/devices/score_reel_groups.md
+        - score_reels: code/api_reference/devices/score_reels.md
+        - segment_displays: code/api_reference/devices/segment_displays.md
+        - sequence_shots: code/api_reference/devices/sequence_shots.md
+        - sequences: code/api_reference/devices/sequences.md
+        - servos: code/api_reference/devices/servos.md
+        - shot_groups: code/api_reference/devices/shot_groups.md
+        - shot_profiles: code/api_reference/devices/shot_profiles.md
+        - shots: code/api_reference/devices/shots.md
+        - show_queues: code/api_reference/devices/show_queues.md
+        - state_machines: code/api_reference/devices/state_machines.md
+        - steppers: code/api_reference/devices/steppers.md
+        - switches: code/api_reference/devices/switches.md
+        - timed_switches: code/api_reference/devices/timed_switches.md
+        - timers: code/api_reference/devices/timers.md
+
+      - Modes:
+        - code/api_reference/api_reference_modes.md
+        - attract: code/api_reference/modes/attract.md
+        - bonus: code/api_reference/modes/bonus.md
+        - carousel: code/api_reference/modes/carousel.md
+        - credits: code/api_reference/modes/credits.md
+        - game: code/api_reference/modes/game.md
+        - high_score: code/api_reference/modes/high_score.md
+        - match: code/api_reference/modes/match.md
+        - service: code/api_reference/modes/service.md
+        - tilt: code/api_reference/modes/tilt.md
+
       - Hardware Platforms: code/api_reference/api_reference_hardware_platforms.md
       - Config Players:
         - code/api_reference/api_reference_config_players.md
@@ -1384,6 +1469,7 @@ nav:
         - code/api_reference/testing_class_api/MpfTestCase.md
         - code/api_reference/testing_class_api/TestDataManager.md
         - code/api_reference/testing_class_api/TestMachineController.md
+
       - Miscellaneous Components:
         - code/api_reference/api_reference_misc_components.md
         - code/api_reference/misc_components/BallSearch.md
