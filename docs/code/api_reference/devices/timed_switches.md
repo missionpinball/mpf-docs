@@ -1,9 +1,11 @@
 
 # self.machine.timed_switches.*
 
-`class mpf.devices.timed_switch.TimedSwitch(*args, **kwargs)`
+``` python
+class mpf.devices.timed_switch.TimedSwitch(*args, **kwargs)
+```
 
-Bases: mpf.core.system_wide_device.SystemWideDevice, mpf.core.mode_device.ModeDevice
+Bases: `mpf.core.system_wide_device.SystemWideDevice`, `mpf.core.mode_device.ModeDevice`
 
 Timed Switch device.
 
@@ -40,4 +42,3 @@ Raise a ConfigFileError exception.
 `subscribe_attribute(item, machine)`
 
 Subscribe to an attribute.
-

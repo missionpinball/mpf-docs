@@ -1,8 +1,10 @@
 # self.machine.dmds.*
 
-`class mpf.devices.dmd.Dmd(machine, name)`
+``` python
+class mpf.devices.dmd.Dmd(machine, name)
+```
 
-Bases: mpf.core.system_wide_device.SystemWideDevice
+Bases: `mpf.core.system_wide_device.SystemWideDevice`
 
 A physical DMD.
 

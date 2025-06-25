@@ -1,9 +1,11 @@
 
 # self.machine.combo_switches.*
 
-`class mpf.devices.combo_switch.ComboSwitch(*args, **kwargs)`
+``` python
+class mpf.devices.combo_switch.ComboSwitch(*args, **kwargs)
+```
 
-Bases: mpf.core.system_wide_device.SystemWideDevice, mpf.core.mode_device.ModeDevice
+Bases: `mpf.core.system_wide_device.SystemWideDevice`, `mpf.core.mode_device.ModeDevice`
 
 Combo Switch device.
 
@@ -42,4 +44,3 @@ Return current state.
 `subscribe_attribute(item, machine)`
 
 Subscribe to an attribute.
-

@@ -1,9 +1,11 @@
 
 # self.machine.score_queues.*
 
-`class mpf.devices.score_queue.ScoreQueue(machine, name)`
+``` python
+class mpf.devices.score_queue.ScoreQueue(machine, name)
+```
 
-Bases: mpf.core.system_wide_device.SystemWideDevice
+Bases: `mpf.core.system_wide_device.SystemWideDevice`
 
 Score queues for SS games.
 
@@ -31,4 +33,3 @@ Score a value via the queue.
 
 `stop_device()`
 Stop queue.
-

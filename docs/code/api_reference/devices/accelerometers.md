@@ -1,9 +1,11 @@
 
 # self.machine.accelerometers.*
 
-`class mpf.devices.accelerometer.Accelerometer(*args, **kwargs)`
+``` python
+class mpf.devices.accelerometer.Accelerometer(*args, **kwargs)
+```
 
-Bases: mpf.core.system_wide_device.SystemWideDevice
+Bases: `mpf.core.system_wide_device.SystemWideDevice`
 
 Implements a multi-axis accelerometer. In modern machines, accelerometers can be used for tilt detection and to detect whether a machine is properly leveled. The accelerometer device produces a data stream of readings which MPF converts to g-forces, and then events can be posted when the “hit” (or g-force) of an accelerometer exceeds a predefined threshold.
 
@@ -46,4 +48,3 @@ Subscribe to an attribute.
 `update_acceleration(x: float, y: float, z: float) → None`
 
 Calculate acceleration based on readings from hardware.
-

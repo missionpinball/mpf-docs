@@ -1,9 +1,11 @@
 
 # self.machine.multiballs.*
 
-`class mpf.devices.multiball.Multiball(*args, **kwargs)`
+``` python
+class mpf.devices.multiball.Multiball(*args, **kwargs)
+```
 
-Bases: mpf.core.enable_disable_mixin.EnableDisableMixin, mpf.core.system_wide_device.SystemWideDevice, mpf.core.mode_device.ModeDevice
+Bases: `mpf.core.enable_disable_mixin.EnableDisableMixin`, `mpf.core.system_wide_device.SystemWideDevice`, `mpf.core.mode_device.ModeDevice`
 
 Multiball device for MPF.
 
@@ -94,4 +96,3 @@ Stop shoot again.
 `subscribe_attribute(item, machine)`
 
 Subscribe to an attribute.
-

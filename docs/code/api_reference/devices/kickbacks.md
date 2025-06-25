@@ -1,9 +1,11 @@
 
 # self.machine.kickbacks.*
 
-`class mpf.devices.kickback.Kickback(*args, **kwargs)`
+``` python
+class mpf.devices.kickback.Kickback(*args, **kwargs)
+```
 
-Bases: mpf.devices.autofire.AutofireCoil
+Bases: `mpf.devices.autofire.AutofireCoil`
 
 A kickback device which will fire a ball back into the playfield.
 
@@ -64,4 +66,3 @@ Raise a ConfigFileError exception.
 `subscribe_attribute(item, machine)`
 
 Subscribe to an attribute.
-

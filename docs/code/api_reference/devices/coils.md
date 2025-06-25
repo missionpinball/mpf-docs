@@ -1,10 +1,10 @@
+# self.machine.coils.*
 
-self.machine.coils.*
+``` python
+class mpf.devices.driver.Driver(machine: mpf.core.machine.MachineController, name: str)
+```
 
-
-`class mpf.devices.driver.Driver(machine: mpf.core.machine.MachineController, name: str)`
-
-Bases: mpf.core.system_wide_device.SystemWideDevice
+Bases: `mpf.core.system_wide_device.SystemWideDevice`
 
 Generic class that holds driver objects. A ‘driver’ is any device controlled from a driver board which is typically the high-voltage stuff like coils and flashers. This class exposes the methods you should use on these driver types of devices. Each platform module (i.e. P-ROC, FAST, etc.) subclasses this class to actually communicate with the physical hardware and perform the actions.
 
@@ -75,4 +75,3 @@ Parameters:
 `raise_config_error(msg, error_no, *, context=None) → NoReturn`
 
 Raise a ConfigFileError exception.
-

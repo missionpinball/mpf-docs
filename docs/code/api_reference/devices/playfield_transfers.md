@@ -1,9 +1,11 @@
 
 # self.machine.playfield_transfers.*
 
-`class mpf.devices.playfield_transfer.PlayfieldTransfer(machine, name)`
+``` python
+class mpf.devices.playfield_transfer.PlayfieldTransfer(machine, name)
+```
 
-Bases: mpf.core.system_wide_device.SystemWideDevice
+Bases: `mpf.core.system_wide_device.SystemWideDevice`
 
 Device which move a ball from one playfield to another.
 
@@ -32,4 +34,3 @@ Raise a ConfigFileError exception.
 `transfer()`
 
 Transfer a ball to the target playfield.
-

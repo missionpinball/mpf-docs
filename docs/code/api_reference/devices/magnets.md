@@ -1,9 +1,11 @@
 
 # self.machine.magnets.*
 
-`class mpf.devices.magnet.Magnet(*args, **kwargs)`
+``` python
+class mpf.devices.magnet.Magnet(*args, **kwargs)
+```
 
-Bases: mpf.core.enable_disable_mixin.EnableDisableMixinSystemWideDevice, mpf.core.system_wide_device.SystemWideDevice
+Bases: `mpf.core.enable_disable_mixin.EnableDisableMixinSystemWideDevice`, `mpf.core.system_wide_device.SystemWideDevice`
 
 Controls a playfield magnet in a pinball machine.
 
@@ -78,4 +80,3 @@ Release ball and disable magnet.
 `subscribe_attribute(item, machine)`
 
 Subscribe to an attribute.
-

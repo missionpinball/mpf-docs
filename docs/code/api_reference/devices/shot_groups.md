@@ -1,9 +1,11 @@
 
 # self.machine.shot_groups.*
 
-`class mpf.devices.shot_group.ShotGroup(*args, **kwargs)`
+``` python
+class mpf.devices.shot_group.ShotGroup(*args, **kwargs)
+```
 
-Bases: mpf.core.mode_device.ModeDevice
+Bases: `mpf.core.mode_device.ModeDevice`
 
 Represents a group of shots in a pinball machine by grouping together multiple Shot class devices.
 
@@ -130,4 +132,3 @@ This method is the same as calling rotate(‘right’)
 `subscribe_attribute(item, machine)`
 
 Subscribe to an attribute.
-

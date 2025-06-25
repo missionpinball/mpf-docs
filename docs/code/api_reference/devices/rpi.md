@@ -1,9 +1,11 @@
 
 # self.machine.hardware_platforms[‘rpi’]
 
-`class mpf.platforms.rpi.rpi.RaspberryPiHardwarePlatform(machine)`
+``` python
+class mpf.platforms.rpi.rpi.RaspberryPiHardwarePlatform(machine)
+```
 
-Bases: mpf.core.platform.SwitchPlatform, mpf.core.platform.DriverPlatform, mpf.core.platform.ServoPlatform, mpf.core.platform.I2cPlatform
+Bases: `mpf.core.platform.SwitchPlatform`, `mpf.core.platform.DriverPlatform`, `mpf.core.platform.ServoPlatform`, `mpf.core.platform.I2cPlatform`
 
 Control the hardware of a Raspberry Pi.
 
@@ -72,4 +74,3 @@ Raise exception.
 `stop()`
 
 Stop platform.
-

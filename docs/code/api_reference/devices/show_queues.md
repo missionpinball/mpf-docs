@@ -1,9 +1,11 @@
 
 # self.machine.show_queues.*
 
-`class mpf.devices.show_queue.ShowQueue(machine, name)`
+``` python
+class mpf.devices.show_queue.ShowQueue(machine, name)
+```
 
-Bases: mpf.core.system_wide_device.SystemWideDevice
+Bases: `mpf.core.system_wide_device.SystemWideDevice`
 
 Represents a show queue.
 
@@ -28,4 +30,3 @@ Return a formatted log line with log link and context.
 `raise_config_error(msg, error_no, *, context=None) → NoReturn`
 
 Raise a ConfigFileError exception.
-

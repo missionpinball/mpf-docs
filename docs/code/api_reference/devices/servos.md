@@ -1,9 +1,11 @@
 
 # self.machine.servos.*
 
-`class mpf.devices.servo.Servo(*args, **kwargs)`
+``` python
+class mpf.devices.servo.Servo(*args, **kwargs)
+```
 
-Bases: mpf.core.system_wide_device.SystemWideDevice
+Bases: `mpf.core.system_wide_device.SystemWideDevice`
 
 Represents a servo in a pinball machine.
 
@@ -54,4 +56,3 @@ Set speed parameter.
 `subscribe_attribute(item, machine)`
 
 Subscribe to an attribute.
-

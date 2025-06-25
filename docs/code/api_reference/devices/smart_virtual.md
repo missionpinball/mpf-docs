@@ -1,9 +1,11 @@
 
 # self.machine.hardware_platforms[‘smart_virtual’]
 
-`class mpf.platforms.smart_virtual.SmartVirtualHardwarePlatform(machine)`
+``` python
+class mpf.platforms.smart_virtual.SmartVirtualHardwarePlatform(machine)
+```
 
-Bases: mpf.platforms.virtual.VirtualHardwarePlatform
+Bases: `mpf.platforms.virtual.VirtualHardwarePlatform`
 
 Base class for the smart_virtual hardware platform.
 
@@ -26,4 +28,3 @@ Configure driver.
 `start()`
 
 Initialise platform when all devices are ready.
-

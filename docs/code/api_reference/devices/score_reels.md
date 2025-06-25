@@ -1,9 +1,11 @@
 
 # self.machine.score_reels.*
 
-`class mpf.devices.score_reel.ScoreReel(machine, name)`
+``` python
+class mpf.devices.score_reel.ScoreReel(machine, name)
+```
 
-Bases: mpf.core.system_wide_device.SystemWideDevice
+Bases: `mpf.core.system_wide_device.SystemWideDevice`
 
 Represents an individual electro-mechanical score reel in a pinball machine.
 
@@ -57,4 +59,3 @@ Stop device.
 `wait_for_ready()`
 
 Return a future for ready.
-

@@ -1,8 +1,10 @@
 # self.machine.rgb_dmds.*
 
-`class mpf.devices.rgb_dmd.RgbDmd(machine, name)`
+``` python
+class mpf.devices.rgb_dmd.RgbDmd(machine, name)
+```
 
-Bases: mpf.core.system_wide_device.SystemWideDevice
+Bases: `mpf.core.system_wide_device.SystemWideDevice`
 
 A physical DMD.
 

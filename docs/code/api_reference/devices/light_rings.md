@@ -1,9 +1,11 @@
 
 # self.machine.light_rings.*
 
-`class mpf.devices.light_group.LightRing(machine: mpf.core.machine.MachineController, name)`
+``` python
+class mpf.devices.light_group.LightRing(machine: mpf.core.machine.MachineController, name)
+```
 
-Bases: mpf.devices.light_group.LightGroup
+Bases: `mpf.devices.light_group.LightGroup`
 
 A light ring.
 
@@ -30,4 +32,3 @@ Return all lights in group as token.
 `raise_config_error(msg, error_no, *, context=None) → NoReturn`
 
 Raise a ConfigFileError exception.
-

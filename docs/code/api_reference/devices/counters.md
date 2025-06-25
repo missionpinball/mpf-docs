@@ -1,9 +1,11 @@
 
 # self.machine.counters.*
 
-`class mpf.devices.logic_blocks.Counter(machine: mpf.core.machine.MachineController, name: str)`
+``` python
+class mpf.devices.logic_blocks.Counter(machine: mpf.core.machine.MachineController, name: str)
+```
 
-Bases: mpf.devices.logic_blocks.LogicBlock
+Bases: `mpf.devices.logic_blocks.LogicBlock`
 
 A type of LogicBlock that tracks multiple hits of a single event. This counter can be configured to track hits towards a specific end-goal (like number of tilt hits to tilt), or it can be an open-ended count (like total number of ramp shots). It can also be configured to count up or to count down, and can have a configurable counting interval.
 
@@ -125,4 +127,3 @@ Subscribe to an attribute.
 `value`
 
 Return value or None if that is currently not possible.
-
