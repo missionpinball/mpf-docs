@@ -26,7 +26,7 @@ Sequences have the following methods & attributes available. Note that methods &
 
 Mark this logic block as complete.
 
-Posts the ‘events_when_complete’ events and optionally restarts this logic block or disables it, depending on this block’s configuration settings.
+Posts the 'events_when_complete' events and optionally restarts this logic block or disables it, depending on this block's configuration settings.
 
 `completed`
 

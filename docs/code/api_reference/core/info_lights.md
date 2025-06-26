@@ -12,7 +12,7 @@ Uses lights to represent game state. Info lights are primarily used in EM and ea
 
 ## Accessing the info_lights in code
 
-There is only one instance of the info_lights in MPF, and it’s accessible via `self.machine.info_lights`.
+There is only one instance of the info_lights in MPF, and it's accessible via `self.machine.info_lights`.
 
 ## Methods & Attributes
 

@@ -20,7 +20,7 @@ Accruals have the following methods & attributes available. Note that methods & 
 
 `complete()`
 
-Mark this logic block as complete. Posts the ‘events_when_complete’ events and optionally restarts this logic block or disables it, depending on this block’s configuration settings.
+Mark this logic block as complete. Posts the 'events_when_complete' events and optionally restarts this logic block or disables it, depending on this block's configuration settings.
 
 `completed`
 

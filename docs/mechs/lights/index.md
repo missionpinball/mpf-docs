@@ -87,7 +87,7 @@ lights:
 ```
 
 ## Fully working Example 1 - Basics
-Let’s bring above informaton together and learn by example. Though the following example is a fully working minimal set for the Cobra controller, it is as well helpful to understand the concpet more if you use a different set of hardware. For this example to work physically, the Cobra board needs to have 5V power supply and a Neopixel strip connected to NEO0. No need for a high voltage power supply like you need for coils. The example has been built for a WS2811 strip, but can be used as well for a WS2812 strips and others. This `config.yaml` is the only configuration file you need in your project. The config file is fully valid for the Cobra board connected to a Linux PC running MPF. If you have a Cobra board but run Windows or macOS you have to change the `ports`. If you run a completely different hardware you have to adapt the `hardware` section.
+Let's bring above informaton together and learn by example. Though the following example is a fully working minimal set for the Cobra controller, it is as well helpful to understand the concpet more if you use a different set of hardware. For this example to work physically, the Cobra board needs to have 5V power supply and a Neopixel strip connected to NEO0. No need for a high voltage power supply like you need for coils. The example has been built for a WS2811 strip, but can be used as well for a WS2812 strips and others. This `config.yaml` is the only configuration file you need in your project. The config file is fully valid for the Cobra board connected to a Linux PC running MPF. If you have a Cobra board but run Windows or macOS you have to change the `ports`. If you run a completely different hardware you have to adapt the `hardware` section.
 
 ``` yaml
 #config_version=5
@@ -149,7 +149,7 @@ When you run this configuration, you can use the keys 1 - 5 to set certain light
 
 * off: to switch an led off
 * hex code: e.g. DFFF00 to define each color channel, here red=DF, green=FF, blue=00. Note that the code has no leading # since that would be a comment in your config file
-* html name: e.g. LightSalmon, you can check the available names here https://htmlcolorcodes.com/color-names/ Capitalization doesn’t matter in the config file, e.g. LightSalmon or lightsalmon are equally good
+* html name: e.g. LightSalmon, you can check the available names here https://htmlcolorcodes.com/color-names/ Capitalization doesn't matter in the config file, e.g. LightSalmon or lightsalmon are equally good
 
 
 In the `light_player` section you can either define the color as value

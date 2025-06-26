@@ -50,7 +50,7 @@ Returns float.
 
 Recursively merge dictionaries.
 
-Used to merge dictionaries of dictionaries, like when we’re merging together the machine configuration files. This method is called recursively as it finds sub-dictionaries.
+Used to merge dictionaries of dictionaries, like when we're merging together the machine configuration files. This method is called recursively as it finds sub-dictionaries.
 
 For example, in the traditional python dictionary update() methods, if a dictionary key exists in the original and merging-in dictionary, the new value will overwrite the old value.
 
@@ -58,7 +58,7 @@ Consider the following example:
 
 Original dictionary: `config['foo']['bar'] = 1`
 
-New dictionary we’re merging in: `config['foo']['other_bar'] = 2`
+New dictionary we're merging in: `config['foo']['other_bar'] = 2`
 
 Default python dictionary update() method would have the updated dictionary as this:
 
@@ -116,7 +116,7 @@ Take a string input of hex numbers and an integer.
 Parameters:
 
 * **inputstring** – A string of incoming hex colors, like ffff00.
-* **maxvalue** – Integer of the max value you’d like to return. Default is 255. (This is the real value of why this method exists.)
+* **maxvalue** – Integer of the max value you'd like to return. Default is 255. (This is the real value of why this method exists.)
 
 Returns integer representation of the hex string.
 
@@ -129,7 +129,7 @@ This always groups the hex string in twos, so an input of ffff00 will be returne
 Parameters:
 
 * **input_string** – A string of incoming hex colors, like ffff00.
-* **output_length** – Integer value of the number of items you’d like in your returned list. Default is 3. This method will ignore extra characters if the input_string is too long, and it will pad the left with zeros if the input string is too short.
+* **output_length** – Integer value of the number of items you'd like in your returned list. Default is 3. This method will ignore extra characters if the input_string is too long, and it will pad the left with zeros if the input string is too short.
 
 Returns list of integers, like [255, 255, 0].
 
@@ -145,7 +145,7 @@ Return true if string is hex.
 
 `static is_power2(num: int) → bool`
 
-Check a number to see if it’s a power of two.
+Check a number to see if it's a power of two.
 
 Parameters:
 
@@ -240,7 +240,7 @@ This version honors placeholders/templates for events.
 
 Parameters:
 
-* **string** – The string you’d like to convert.
+* **string** – The string you'd like to convert.
 
 Returns a python list object containing whatever was between commas in the string.
 
@@ -262,7 +262,7 @@ Convert a comma-separated string into a Python list if not already a list.
 
 Parameters:
 
-* **string** – The string you’d like to convert.
+* **string** – The string you'd like to convert.
 
 Returns a python list object containing whatever was between commas in the string.
 
@@ -276,7 +276,7 @@ Example inputs:
 
 If no “s” or “ms” is provided, this method assumes “milliseconds.”
 
-If time is ‘None’ or a string of ‘None’, this method returns 0.
+If time is 'None' or a string of 'None', this method returns 0.
 
 Returns an integer. The examples listed above return 200, 2000 and 0, respectively.
 

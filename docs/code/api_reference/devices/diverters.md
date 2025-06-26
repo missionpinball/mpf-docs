@@ -22,11 +22,11 @@ Diverters have the following methods & attributes available. Note that methods &
 
 `activate()`
 
-Physically activate this diverter’s coil.
+Physically activate this diverter's coil.
 
 `deactivate()`
 
-Deactivate this diverter.  This method will disable the activation_coil, and (optionally) if it’s configured with a deactivation coil, it will pulse it.
+Deactivate this diverter.  This method will disable the activation_coil, and (optionally) if it's configured with a deactivation coil, it will pulse it.
 
 `disable(auto=False)`
 
@@ -35,7 +35,7 @@ Disable this diverter. This method will remove the hardware rule if this diverte
 Parameters:
 
 * **auto** – Boolean value which is used to indicate whether this diverter disabled itself automatically. This is passed to the event which is posted.
-* ****kwargs** – This is here because this disable method is called by whatever event the game programmer specifies in their machine configuration file, so we don’t know what event that might be or whether it has random kwargs attached to it.
+* ****kwargs** – This is here because this disable method is called by whatever event the game programmer specifies in their machine configuration file, so we don't know what event that might be or whether it has random kwargs attached to it.
 
 `enable(auto=False)`
 

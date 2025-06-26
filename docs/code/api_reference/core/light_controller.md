@@ -12,7 +12,7 @@ Handles light updates and light monitoring.
 
 ## Accessing the light_controller in code
 
-There is only one instance of the light_controller in MPF, and it’s accessible via `self.machine.light_controller`.
+There is only one instance of the light_controller in MPF, and it's accessible via `self.machine.light_controller`.
 
 ## Methods & Attributes
 

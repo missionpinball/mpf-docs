@@ -31,7 +31,7 @@ Add ticks to this timer.
 
 Parameters:
 
-* **timer_value** – The number of ticks you want to add to this timer’s current value.
+* **timer_value** – The number of ticks you want to add to this timer's current value.
 * **kwargs** – Not used in this method. Only exists since this method is often registered as an event handler which may contain additional keyword arguments.
 
 `change_tick_interval(change=0.0, **kwargs)`
@@ -40,7 +40,7 @@ Change the interval for each “tick” of this timer.
 
 Parameters:
 
-* **change** – Float or int of the change you want to make to this timer’s tick rate. Note this value is multiplied by the current tick interval: >1 will increase the tick interval (slow the timer) and <1 will decrease the tick interval (accelerate the timer). To set an absolute value, use the set_tick_interval() method.
+* **change** – Float or int of the change you want to make to this timer's tick rate. Note this value is multiplied by the current tick interval: >1 will increase the tick interval (slow the timer) and <1 will decrease the tick interval (accelerate the timer). To set an absolute value, use the set_tick_interval() method.
 * **`**kwargs`** – Not used in this method. Only exists since this method is often registered as an event handler which may contain additional keyword arguments.
 
 `enable() → None`
@@ -76,7 +76,7 @@ Pause the timer and posts the `timer_(name)_paused` event.
 
 Parameters:
 
-* **timer_value** – How many seconds you want to pause the timer for. Note that this pause time is real-world seconds and does not take into consideration this timer’s tick interval.
+* **timer_value** – How many seconds you want to pause the timer for. Note that this pause time is real-world seconds and does not take into consideration this timer's tick interval.
 * ****kwargs** – Not used in this method. Only exists since this method is often registered as an event handler which may contain additional keyword arguments.
 
 `raise_config_error(msg, error_no, *, context=None) → NoReturn`
@@ -85,7 +85,7 @@ Raise a ConfigFileError exception.
 
 `reset(**kwargs)`
 
-Reset this timer based to the starting value that’s already been configured.
+Reset this timer based to the starting value that's already been configured.
 
 Does not start or stop the timer.
 
@@ -116,7 +116,7 @@ Parameters:
 
 `start(**kwargs)`
 
-Start this timer based on the starting value that’s already been configured.
+Start this timer based on the starting value that's already been configured.
 
 Use jump() if you want to set the starting time value.
 
@@ -139,7 +139,7 @@ Subtract ticks from this timer.
 
 Parameters:
 
-* **timer_value** – The number of ticks you want to subtract from this timer’s current value.
+* **timer_value** – The number of ticks you want to subtract from this timer's current value.
 * **`**kwargs`** – Not used in this method. Only exists since this method is often registered as an event handler which may contain additional keyword arguments.
 
 `ticks`

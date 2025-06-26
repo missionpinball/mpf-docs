@@ -12,7 +12,7 @@ Manages all platforms and rules.
 
 ## Accessing the platform_controller in code
 
-There is only one instance of the platform_controller in MPF, and it’s accessible via `self.machine.platform_controller`.
+There is only one instance of the platform_controller in MPF, and it's accessible via `self.machine.platform_controller`.
 
 ## Methods & Attributes
 

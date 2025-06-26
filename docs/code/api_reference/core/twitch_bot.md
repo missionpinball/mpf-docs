@@ -12,7 +12,7 @@ Adds Twitch chat room events.
 
 ## Accessing the twitch_bot in code
 
-There is only one instance of the `twitch_bot` in MPF, and it’s accessible via `self.machine.twitch_bot`.
+There is only one instance of the `twitch_bot` in MPF, and it's accessible via `self.machine.twitch_bot`.
 
 ## Methods & Attributes
 

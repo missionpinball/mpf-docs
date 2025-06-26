@@ -8,7 +8,7 @@ Note
 
 “Devices” in MPF are more than physical hardware devices. Many of the “game logic” components listed in the user documentation (achievements, ball holds, extra balls, etc.) are implemented as “devices” in MPF code. (So you can think of devices as being either physical or logical.)
 
-Here’s a list of all the device types in MPF, linked to their API references.
+Here's a list of all the device types in MPF, linked to their API references.
 
 * [accelerometers](devices/accelerometers.md)
 * [accruals](devices/accruals.md)

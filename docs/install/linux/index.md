@@ -1,4 +1,5 @@
 ---
+
 title: Installing MPF on Linux
 ---
 
@@ -155,12 +156,12 @@ Failed to initialize MPF
 Traceback (most recent call last):
 File “/usr/local/lib/python3.8/dist-packages/mpf/platforms/p_roc_common.py”, line 31, in <module>
   import pinproc
-ModuleNotFoundError: No module named ‘pinproc’
+ModuleNotFoundError: No module named 'pinproc'
 During handling of the above exception, another exception occurred:
 Traceback (most recent call last):
 File “/usr/local/lib/python3.8/dist-packages/mpf/platforms/p_roc_common.py”, line 41, in <module>
   raise ImportError
-ImportError: No module named ‘pinproc’
+ImportError: No module named 'pinproc'
 ```
 
 Try Changing `Edit install-proc:`

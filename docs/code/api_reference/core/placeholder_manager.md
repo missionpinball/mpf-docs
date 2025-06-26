@@ -12,7 +12,7 @@ Manages templates and placeholders for MPF.
 
 ## Accessing the placeholder_manager in code
 
-There is only one instance of the placeholder_manager in MPF, and it’s accessible via self.machine.placeholder_manager.
+There is only one instance of the placeholder_manager in MPF, and it's accessible via self.machine.placeholder_manager.
 
 ## Methods & Attributes
 

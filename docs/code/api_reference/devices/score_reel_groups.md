@@ -42,13 +42,13 @@ This method will pad shorter ints with zeros, and it will chop off leading digit
 
 Parameters:
 
-* **value** – The interger value you’d like to convert.
+* **value** – The interger value you'd like to convert.
 
 Returns a list containing the values for each corresponding score reel, with the lowest reel digit position in list position 0.
 
 `light(**kwargs)`
 
-Light up this ScoreReelGroup based on the ‘light_tag’ in its config.
+Light up this ScoreReelGroup based on the 'light_tag' in its config.
 
 `raise_config_error(msg, error_no, *, context=None) → NoReturn`
 
@@ -58,9 +58,9 @@ Raise a ConfigFileError exception.
 
 Reset the score reel group to display the value passed.
 
-This method will “jump” the score reel group to display the value that’s passed as an it. (Note this “jump” technique means it will just move the reels as fast as it can, and nonsensical values might show up on the reel while the movement is in progress.)
+This method will “jump” the score reel group to display the value that's passed as an it. (Note this “jump” technique means it will just move the reels as fast as it can, and nonsensical values might show up on the reel while the movement is in progress.)
 
-This method is used to “reset” a reel group to all zeros at the beginning of a game, and can also be used to reset a reel group that is confused or to switch a reel to the new player’s score if multiple players a sharing the same reel group.
+This method is used to “reset” a reel group to all zeros at the beginning of a game, and can also be used to reset a reel group that is confused or to switch a reel to the new player's score if multiple players a sharing the same reel group.
 
 Note you can choose to pass either an integer representation of the value, or a value list.
 
@@ -70,7 +70,7 @@ Parameters:
 
 `unlight(**kwargs)`
 
-Turn off the lights for this ScoreReelGroup based on the ‘light_tag’ in its config.
+Turn off the lights for this ScoreReelGroup based on the 'light_tag' in its config.
 
 `wait_for_ready()`
 

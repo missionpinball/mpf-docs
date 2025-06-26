@@ -4,9 +4,9 @@ title: "Adding custom code to your game"
 
 # Adding custom code to your game
 
-While one of the goals of MPF is to allow you to do as much of your game’s configuration as possible with the config files, we recognize that many people will want to mix in some custom code to their machines.
+While one of the goals of MPF is to allow you to do as much of your game's configuration as possible with the config files, we recognize that many people will want to mix in some custom code to their machines.
 
-Fortunately that’s easy to do, and you don’t have to “hack” MPF or break anything to make it happen!
+Fortunately that's easy to do, and you don't have to “hack” MPF or break anything to make it happen!
 
 The amount of custom code you use is up to you, depending on your personal preferences, your comfort with Python, and what exactly you want to do with your machine.
 

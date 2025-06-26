@@ -18,7 +18,7 @@ The Ball Search has the following methods & attributes available. Note that meth
 
 Block ball search for this playfield.
 
-Blocking will disable ball search if it’s enabled or running, and will prevent ball search from enabling if it’s disabled until ball_search_unblock() is called.
+Blocking will disable ball search if it's enabled or running, and will prevent ball search from enabling if it's disabled until ball_search_unblock() is called.
 
 `blocked = None`
 

@@ -12,7 +12,7 @@ Provides all service information and can perform service tasks.
 
 ## Accessing the service in code
 
-There is only one instance of the service in MPF, and it’s accessible via `self.machine.service`.
+There is only one instance of the service in MPF, and it's accessible via `self.machine.service`.
 
 ## Methods & Attributes
 

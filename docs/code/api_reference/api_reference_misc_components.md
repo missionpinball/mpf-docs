@@ -1,6 +1,6 @@
 # Miscellaneous Components
 
-There are several other components and systems of MPF that don’t fit into any of the other categories. Those are covered here.
+There are several other components and systems of MPF that don't fit into any of the other categories. Those are covered here.
 
 * [Ball Search](misc_components/BallSearch.md)
 * [File Manager](misc_components/FileManager.md)

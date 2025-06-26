@@ -20,20 +20,20 @@ Lights have the following methods & attributes available. Note that methods & at
 
 `clear_stack()`
 
-Remove all entries from the stack and resets this light to ‘off’.
+Remove all entries from the stack and resets this light to 'off'.
 
 `color(color, fade_ms=None, priority=0, key=None, start_time=None)`
 
-Add or update a color entry in this light’s stack.
+Add or update a color entry in this light's stack.
 
 Calling this methods is how you tell this light what color you want it to be.
 
 Parameters:
 
 * **color** – RGBColor() instance, or a string color name, hex value, or 3-integer list/tuple of colors.
-* **fade_ms** – Int of the number of ms you want this light to fade to the color in. A value of 0 means it’s instant. A value of None (the default) means that it will use this light’s and/or the machine’s default fade_ms setting.
-* **priority** – Int value of the priority of these incoming settings. If this light has current settings in the stack at a higher priority, the settings you’re adding here won’t take effect. However they’re still added to the stack, so if the higher priority settings are removed, then the next-highest apply.
-* **key** – An arbitrary identifier (can be any immutable object) that’s used to identify these settings for later removal. If any settings in the stack already have this key, those settings will be replaced with these new settings.
+* **fade_ms** – Int of the number of ms you want this light to fade to the color in. A value of 0 means it's instant. A value of None (the default) means that it will use this light's and/or the machine's default fade_ms setting.
+* **priority** – Int value of the priority of these incoming settings. If this light has current settings in the stack at a higher priority, the settings you're adding here won't take effect. However they're still added to the stack, so if the higher priority settings are removed, then the next-highest apply.
+* **key** – An arbitrary identifier (can be any immutable object) that's used to identify these settings for later removal. If any settings in the stack already have this key, those settings will be replaced with these new settings.
 * **start_time** – Time this occured to synchronize lights.
 
 `color_correct(color)`
@@ -67,7 +67,7 @@ Returns an updated RGBColor() instance with gamma corrected.
 
 `get_color()`
 
-Return an RGBColor() instance of the ‘color’ setting of the highest color setting in the stack.
+Return an RGBColor() instance of the 'color' setting of the highest color setting in the stack.
 
 This is usually the same color as the physical light, but not always (since physical lights are updated once per frame, this value could vary.
 
@@ -75,7 +75,7 @@ Also note the color returned is the “raw” color that does has not had the co
 
 `get_color_below(priority, key)`
 
-Return an RGBColor() instance of the ‘color’ setting of the highest color below a certain key.
+Return an RGBColor() instance of the 'color' setting of the highest color below a certain key.
 
 Similar to get_color.
 
@@ -124,17 +124,17 @@ Remove a group of color settings from the stack.
 
 Parameters:
 
-* **key** – The key of the settings to remove (based on the ‘key’ parameter that was originally passed to the color() method.)
+* **key** – The key of the settings to remove (based on the 'key' parameter that was originally passed to the color() method.)
 * **fade_ms** – Time to fade out the light.
 
-This method triggers a light update, so if the highest priority settings were removed, the light will be updated with whatever’s below it. If no settings remain after these are removed, the light will turn off.
+This method triggers a light update, so if the highest priority settings were removed, the light will be updated with whatever's below it. If no settings remain after these are removed, the light will turn off.
 
 `stack`
 
 A list of dicts which represents different commands that have come in to set this light to a certain color (and/or fade). Each entry in the list contains the following key/value pairs:
 
         `priority`:
-            The relative priority of this color command. Higher numbers take precedent, and the highest priority entry will be the command that’s currently active. In the event of a tie, whichever entry was added last wins (based on ‘start_time’ below).
+            The relative priority of this color command. Higher numbers take precedent, and the highest priority entry will be the command that's currently active. In the event of a tie, whichever entry was added last wins (based on 'start_time' below).
         `start_time`:
             The clock time when this command was added. Primarily used to calculate fades, but also used as a tie-breaker for multiple entries with the same priority.
         `start_color`:
@@ -142,7 +142,7 @@ A list of dicts which represents different commands that have come in to set thi
         `dest_time`:
             Clock time that represents when a fade (from start_color to dest_color) will be done. If this is 0, that means there is no fade. When a fade is complete, this value is reset to 0.
         `dest_color`:
-            RGBColor() of the destination this light is fading to. If a command comes in with no fade, then this will be the same as the ‘color’ below.
+            RGBColor() of the destination this light is fading to. If a command comes in with no fade, then this will be the same as the 'color' below.
         `key`:
             An arbitrary unique identifier to keep multiple entries in the stack separate. If a new color command comes in with a key that already exists for an entry in the stack, that entry will be replaced by the new entry. The key is also used to remove entries from the stack (e.g. when shows or modes end and they want to remove their commands from the light).
 

@@ -41,7 +41,7 @@ Return a formatted log line with log link and context.
 
 `get_data(section=None)`
 
-Return the value of this DataManager’s data.
+Return the value of this DataManager's data.
 
 Parameters:
 

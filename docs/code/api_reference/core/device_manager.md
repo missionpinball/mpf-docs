@@ -12,7 +12,7 @@ Manages all the devices in MPF.
 
 ## Accessing the device_manager in code
 
-There is only one instance of the device_manager in MPF, and it’s accessible via self.machine.device_manager.
+There is only one instance of the device_manager in MPF, and it's accessible via self.machine.device_manager.
 
 ## Methods & Attributes
 
