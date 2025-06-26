@@ -1,9 +1,12 @@
+# score_reel_groups API Reference
 
-# self.machine.score_reel_groups.*
+`self.machine.score_reel_groups.*`
 
-`class mpf.devices.score_reel_group.ScoreReelGroup(machine, name)`
+``` python
+class mpf.devices.score_reel_group.ScoreReelGroup(machine, name)
+```
 
-Bases: mpf.core.system_wide_device.SystemWideDevice
+Bases: `mpf.core.system_wide_device.SystemWideDevice`
 
 Represents a logical grouping of score reels in a pinball machine.
 
@@ -72,4 +75,3 @@ Turn off the lights for this ScoreReelGroup based on the ‘light_tag’ in its 
 `wait_for_ready()`
 
 Return a future which will be done when all reels reached their destination.
-

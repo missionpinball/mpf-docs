@@ -1,9 +1,12 @@
+# Game Mode API Reference
 
-# self.machine.modes.game
+`self.machine.modes.game`
 
-`class mpf.modes.game.code.game.Game(*args, **kwargs)`
+``` python
+class mpf.modes.game.code.game.Game(*args, **kwargs)
+```
 
-Bases: mpf.core.async_mode.AsyncMode
+Bases: `mpf.core.async_mode.AsyncMode`
 
 Base mode that runs an active game on a pinball machine.
 
@@ -195,4 +198,3 @@ Returns true if the mode is running. Otherwise false.
 Log a message at the warning level.
 
 These messages will always be shown in the console and the log file.
-

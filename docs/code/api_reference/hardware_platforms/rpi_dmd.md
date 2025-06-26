@@ -1,9 +1,12 @@
+# rpi_dmd API Reference
 
-# self.machine.hardware_platforms[‘rpi_dmd’]
+`self.machine.hardware_platforms['rpi_dmd']`
 
-`class mpf.platforms.rpi_dmd.RpiDmdPlatform(machine)`
+``` python
+class mpf.platforms.rpi_dmd.RpiDmdPlatform(machine)
+```
 
-Bases: mpf.core.platform.RgbDmdPlatform
+Bases: `mpf.core.platform.RgbDmdPlatform`
 
 Raspberry Pi GPIO RGB DMD.
 
@@ -26,4 +29,3 @@ Initialise platform.
 `stop()`
 
 Stop platform.
-

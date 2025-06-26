@@ -1,9 +1,12 @@
+# playfields API Reference
 
-self.machine.playfields.*
+`self.machine.playfields.*`
 
+``` python
 class mpf.devices.playfield.Playfield(*args, **kwargs)
+```
 
-Bases: mpf.core.system_wide_device.SystemWideDevice
+Bases: `mpf.core.system_wide_device.SystemWideDevice`
 
 One playfield in a pinball machine.
 
@@ -138,4 +141,3 @@ Handle an unexpected ball.
 `static wait_for_ready_to_receive(source)`
 
 Playfield is always ready to receive.
-

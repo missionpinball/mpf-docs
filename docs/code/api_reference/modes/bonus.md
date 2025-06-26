@@ -1,7 +1,10 @@
+# Bonus Mode API Reference
 
-# self.machine.modes.bonus
+`self.machine.modes.bonus`
 
-`class mpf.modes.bonus.code.bonus.Bonus(*args, **kwargs)`
+``` python
+class mpf.modes.bonus.code.bonus.Bonus(*args, **kwargs)
+```
 
 Bases: mpf.core.mode.Mode
 
@@ -137,4 +140,3 @@ Returns true if the mode is running. Otherwise false.
 Log a message at the warning level.
 
 These messages will always be shown in the console and the log file.
-

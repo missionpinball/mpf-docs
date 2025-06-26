@@ -1,9 +1,12 @@
+# shot_profiles API Reference
 
-# self.machine.shot_profiles.*
+`self.machine.shot_profiles.*`
 
-`class mpf.devices.shot_profile.ShotProfile(machine: mpf.core.machine.MachineController, name: str)`
+``` python
+class mpf.devices.shot_profile.ShotProfile(machine: mpf.core.machine.MachineController, name: str)
+```
 
-Bases: mpf.core.mode_device.ModeDevice, mpf.core.system_wide_device.SystemWideDevice
+Bases: `mpf.core.mode_device.ModeDevice`, `mpf.core.system_wide_device.SystemWideDevice`
 
 A shot profile.
 
@@ -32,4 +35,3 @@ Return a formatted log line with log link and context.
 `raise_config_error(msg, error_no, *, context=None) → NoReturn`
 
 Raise a ConfigFileError exception.
-

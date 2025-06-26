@@ -1,9 +1,12 @@
+# trinamics_steprocker API Reference
 
-# self.machine.hardware_platforms[‘trinamics_steprocker’]
+`self.machine.hardware_platforms['trinamics_steprocker']`
 
-`class mpf.platforms.trinamics_steprocker.TrinamicsStepRocker(machine)`
+``` python
+class mpf.platforms.trinamics_steprocker.TrinamicsStepRocker(machine)
+```
 
-Bases: mpf.core.platform.StepperPlatform
+Bases: `mpf.core.platform.StepperPlatform`
 
 Supports the Trinamics Step Rocker via PySerial.
 

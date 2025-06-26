@@ -1,8 +1,12 @@
-# self.machine.platform_controller
+# platform_controller API Reference
 
-`class mpf.core.platform_controller.PlatformController(machine: MachineController)`
+`self.machine.platform_controller`
 
-Bases: mpf.core.mpf_controller.MpfController
+``` python
+class mpf.core.platform_controller.PlatformController(machine: MachineController)
+```
+
+Bases: `mpf.core.mpf_controller.MpfController`
 
 Manages all platforms and rules.
 

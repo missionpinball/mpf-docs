@@ -1,9 +1,12 @@
+# light_stripes API Reference
 
-self.machine.light_stripes.*
+`self.machine.light_stripes.*`
 
-`class mpf.devices.light_group.LightStrip(machine: mpf.core.machine.MachineController, name)`
+``` python
+class mpf.devices.light_group.LightStrip(machine: mpf.core.machine.MachineController, name)
+```
 
-Bases: mpf.devices.light_group.LightGroup
+Bases: `mpf.devices.light_group.LightGroup`
 
 A light strip.
 
@@ -31,4 +34,3 @@ Return all lights in group as token.
 `raise_config_error(msg, error_no, *, context=None) → NoReturn`
 
 Raise a ConfigFileError exception.
-

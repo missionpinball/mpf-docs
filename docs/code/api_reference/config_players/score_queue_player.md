@@ -1,7 +1,10 @@
+# score_queue_player API Reference
 
-# self.machine.score_queue_player
+`self.machine.score_queue_player`
 
-`class mpf.config_players.score_queue_player.ScoreQueuePlayer(machine)`
+``` python
+class mpf.config_players.score_queue_player.ScoreQueuePlayer(machine)
+```
 
 Bases: `mpf.core.config_player.ConfigPlayer`
 
@@ -30,4 +33,3 @@ Variable name.
 `validate_config_entry(settings: dict, name: str) → dict`
 
 Validate one entry of this player.
-

@@ -1,9 +1,10 @@
-
 # MpfMachineTestCase
 
-`class mpf.tests.MpfMachineTestCase.MpfMachineTestCase(methodName='runTest')`
+``` python
+class mpf.tests.MpfMachineTestCase.MpfMachineTestCase(methodName='runTest')
+```
 
-Bases: mpf.tests.MpfMachineTestCase.BaseMpfMachineTestCase
+Bases: `mpf.tests.MpfMachineTestCase.BaseMpfMachineTestCase`
 
 MPF only machine test case.
 
@@ -649,4 +650,3 @@ Tear down test.
 Return the verbosity setting of the currently running unittest program, or 0 if none is running.
 
 Returns: An integer value of the current verbosity setting.
-

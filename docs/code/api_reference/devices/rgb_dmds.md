@@ -1,8 +1,12 @@
-# self.machine.rgb_dmds.*
+# rgb_dmds API Reference
 
-`class mpf.devices.rgb_dmd.RgbDmd(machine, name)`
+`self.machine.rgb_dmds.*`
 
-Bases: mpf.core.system_wide_device.SystemWideDevice
+``` python
+class mpf.devices.rgb_dmd.RgbDmd(machine, name)
+```
+
+Bases: `mpf.core.system_wide_device.SystemWideDevice`
 
 A physical DMD.
 

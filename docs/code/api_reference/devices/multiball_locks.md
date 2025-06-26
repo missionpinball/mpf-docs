@@ -1,9 +1,12 @@
+# multiball_locks API Reference
 
-# self.machine.multiball_locks.*
+`self.machine.multiball_locks.*`
 
+``` python
 class mpf.devices.multiball_lock.MultiballLock(*args, **kwargs)
+```
 
-Bases: mpf.core.enable_disable_mixin.EnableDisableMixin, mpf.core.mode_device.ModeDevice
+Bases: `mpf.core.enable_disable_mixin.EnableDisableMixin`, `mpf.core.mode_device.ModeDevice`
 
 Ball lock device which locks balls for a multiball.
 
@@ -82,4 +85,3 @@ Reset the locked balls for the current player.
 `subscribe_attribute(item, machine)`
 
 Subscribe to an attribute.
-

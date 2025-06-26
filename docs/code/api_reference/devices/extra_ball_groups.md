@@ -1,11 +1,14 @@
+# extra_ball_groups API Reference
 
-# self.machine.extra_ball_groups.*
+`self.machine.extra_ball_groups.*`
 
+``` python
 class mpf.devices.extra_ball_group.ExtraBallGroup(*args, **kwargs)
+```
 
-    Bases: mpf.core.system_wide_device.SystemWideDevice
+Bases: `mpf.core.system_wide_device.SystemWideDevice`
 
-    Tracks and manages groups of extra balls devices.
+Tracks and manages groups of extra balls devices.
 
 ## Accessing extra_ball_groups in code
 
@@ -66,4 +69,3 @@ Raise a ConfigFileError exception.
 `subscribe_attribute(item, machine)`
 
 Subscribe to an attribute.
-

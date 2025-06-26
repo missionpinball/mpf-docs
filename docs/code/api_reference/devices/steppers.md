@@ -1,9 +1,12 @@
+# steppers API Reference
 
-# self.machine.steppers.*
+`self.machine.steppers.*`
 
-`class mpf.devices.stepper.Stepper(*args, **kwargs)`
+``` python
+class mpf.devices.stepper.Stepper(*args, **kwargs)
+```
 
-Bases: mpf.core.system_wide_device.SystemWideDevice
+Bases: `mpf.core.system_wide_device.SystemWideDevice`
 
 Represents an stepper motor based axis in a pinball machine.
 
@@ -54,4 +57,3 @@ Stop motor.
 `subscribe_attribute(item, machine)`
 
 Subscribe to an attribute.
-

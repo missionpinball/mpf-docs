@@ -1,9 +1,12 @@
+# lights API Reference
 
-# self.machine.lights.*
+`self.machine.lights.*`
 
-`class mpf.devices.light.Light(*args, **kwargs)`
+``` python
+class mpf.devices.light.Light(*args, **kwargs)
+```
 
-Bases: mpf.core.system_wide_device.SystemWideDevice, mpf.devices.device_mixins.DevicePositionMixin
+Bases: `mpf.core.system_wide_device.SystemWideDevice`, `mpf.devices.device_mixins.DevicePositionMixin`
 
 A light in a pinball machine.
 
@@ -168,4 +171,3 @@ Returns the devices y position from config
 Get the Z value from the config.
 
 Returns the devices z position from config
-

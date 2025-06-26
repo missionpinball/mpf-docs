@@ -1,9 +1,12 @@
+# switches API Reference
 
-# self.machine.switches.*
+`self.machine.switches.*`
 
-`class mpf.devices.switch.Switch(*args, **kwargs)`
+``` python
+class mpf.devices.switch.Switch(*args, **kwargs)
+```
 
-Bases: mpf.core.system_wide_device.SystemWideDevice, mpf.devices.device_mixins.DevicePositionMixin
+Bases: `mpf.core.system_wide_device.SystemWideDevice`, `mpf.devices.device_mixins.DevicePositionMixin`
 
 A switch in a pinball machine.
 
@@ -82,4 +85,3 @@ Returns the devices y position from config
 Get the Z value from the config.
 
 Returns the devices z position from config
-

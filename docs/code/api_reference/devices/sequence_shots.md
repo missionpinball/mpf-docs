@@ -1,9 +1,12 @@
+# sequence_shots API Reference
 
-# self.machine.sequence_shots.*
+`self.machine.sequence_shots.*`
 
-`class mpf.devices.sequence_shot.SequenceShot(machine, name)`
+``` python
+class mpf.devices.sequence_shot.SequenceShot(machine, name)
+```
 
-Bases: mpf.core.system_wide_device.SystemWideDevice, mpf.core.mode_device.ModeDevice
+Bases: `mpf.core.system_wide_device.SystemWideDevice`, `mpf.core.mode_device.ModeDevice`
 
 A device which represents a sequence shot.
 
@@ -40,4 +43,3 @@ Raise a ConfigFileError exception.
 `reset_all_sequences()`
 
 Reset all sequences.
-

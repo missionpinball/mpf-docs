@@ -1,9 +1,12 @@
+# coil_player API Reference
 
-# self.machine.coil_player
+`self.machine.coil_player`
 
-`class mpf.config_players.coil_player.CoilPlayer(machine)`
+``` python
+class mpf.config_players.coil_player.CoilPlayer(machine)
+```
 
-Bases: mpf.config_players.device_config_player.DeviceConfigPlayer
+Bases: `mpf.config_players.device_config_player.DeviceConfigPlayer`
 
 Triggers coils based on config.
 
@@ -26,4 +29,3 @@ Parse short config version.
 ` play(settings, context: str, calling_context: str, priority: int = 0, **kwargs)`
 
 Enable, Pulse or disable coils.
-

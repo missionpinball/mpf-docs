@@ -1,9 +1,12 @@
+# lisy API Reference
 
-# self.machine.hardware_platforms[‘lisy’]
+`self.machine.hardware_platforms['lisy']`
 
-`class mpf.platforms.lisy.lisy.LisyHardwarePlatform(machine)`
+``` python
+class mpf.platforms.lisy.lisy.LisyHardwarePlatform(machine)
+```
 
-Bases: mpf.core.platform.SwitchPlatform, mpf.core.platform.LightsPlatform, mpf.core.platform.DriverPlatform, mpf.core.platform.SegmentDisplaySoftwareFlashPlatform, mpf.core.platform.HardwareSoundPlatform, mpf.core.logging.LogMixin
+Bases: `mpf.core.platform.SwitchPlatform`, `mpf.core.platform.LightsPlatform`, `mpf.core.platform.DriverPlatform`, `mpf.core.platform.SegmentDisplaySoftwareFlashPlatform`, `mpf.core.platform.HardwareSoundPlatform`, `mpf.core.logging.LogMixin`
 
 LISY platform.
 
@@ -98,4 +101,3 @@ Start reading switch changes.
 `stop()`
 
 Stop platform.
-

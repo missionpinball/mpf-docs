@@ -1,9 +1,12 @@
+# Credits Mode API Reference
 
-# self.machine.modes.credits
+`self.machine.modes.credits`
 
+``` python
 class mpf.modes.credits.code.credits.Credits(*args, **kwargs)
+```
 
-Bases: mpf.core.mode.Mode
+Bases: `mpf.core.mode.Mode`
 
 Mode which manages the credits and prevents the game from starting without credits.
 
@@ -41,7 +44,7 @@ Returns a EventHandlerKey to the handler which you can use to later remove the h
 
 Note that if you do add a handler via this method and then remove it manually, that’s ok too.
 
-`clear_all_credits(**kwargs)
+`clear_all_credits(**kwargs)`
 
 Clear all credits.
 
@@ -149,4 +152,3 @@ Toggle between free and credits play.
 Log a message at the warning level.
 
 These messages will always be shown in the console and the log file.
-

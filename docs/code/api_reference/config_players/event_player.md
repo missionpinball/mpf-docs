@@ -1,9 +1,12 @@
+# event_player API Reference
 
-# self.machine.event_player
+`self.machine.event_player`
 
-`class mpf.config_players.event_player.EventPlayer(machine)`
+``` python
+class mpf.config_players.event_player.EventPlayer(machine)
+```
 
-Bases: mpf.config_players.flat_config_player.FlatConfigPlayer
+Bases: `mpf.config_players.flat_config_player.FlatConfigPlayer`
 
 Posts events based on config.
 
@@ -26,4 +29,3 @@ Parse list.
 `play(settings, context, calling_context, priority=0, **kwargs)`
 
 Post (delayed) events.
-

@@ -1,9 +1,12 @@
+# digital_outputs API Reference
 
-# self.machine.digital_outputs.*
+`self.machine.digital_outputs.*`
 
-`class mpf.devices.digital_output.DigitalOutput(machine: mpf.core.machine.MachineController, name: str)`
+``` python
+class mpf.devices.digital_output.DigitalOutput(machine: mpf.core.machine.MachineController, name: str)
+```
 
-Bases: mpf.core.system_wide_device.SystemWideDevice
+Bases: `mpf.core.system_wide_device.SystemWideDevice`
 
 A digital output on either a light or driver platform.
 
@@ -46,4 +49,3 @@ Pulse digital output.
 `raise_config_error(msg, error_no, *, context=None) → NoReturn`
 
 Raise a ConfigFileError exception.
-

@@ -1,8 +1,12 @@
-# self.machine.hardware_platforms[‘opp’]
+# opp API Reference
 
-`class mpf.platforms.opp.opp.OppHardwarePlatform(machine)`
+`self.machine.hardware_platforms['opp']`
 
-Bases: mpf.core.platform.LightsPlatform, mpf.core.platform.SwitchPlatform, mpf.core.platform.DriverPlatform
+``` python
+class mpf.platforms.opp.opp.OppHardwarePlatform(machine)
+```
+
+Bases: `mpf.core.platform.LightsPlatform`, `mpf.core.platform.SwitchPlatform`, `mpf.core.platform.DriverPlatform`
 
 Platform class for the OPP hardware.
 

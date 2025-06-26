@@ -1,9 +1,12 @@
+# shots API Reference
 
-# self.machine.shots.*
+`self.machine.shots.*`
 
-`class mpf.devices.shot.Shot(*args, **kwargs)`
+``` python
+class mpf.devices.shot.Shot(*args, **kwargs)
+```
 
-Bases: mpf.core.enable_disable_mixin.EnableDisableMixin, mpf.core.mode_device.ModeDevice
+Bases: `mpf.core.enable_disable_mixin.EnableDisableMixin`, `mpf.core.mode_device.ModeDevice`
 
 A device which represents a generic shot.
 
@@ -135,4 +138,3 @@ Return current state name.
 `subscribe_attribute(item, machine)`
 
 Subscribe to an attribute.
-

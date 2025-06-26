@@ -1,9 +1,12 @@
+# diverters API Reference
 
-# self.machine.diverters.*
+`self.machine.diverters.*`
 
-`class mpf.devices.diverter.Diverter(*args, **kwargs)`
+``` python
+class mpf.devices.diverter.Diverter(*args, **kwargs)
+```
 
-Bases: mpf.core.system_wide_device.SystemWideDevice
+Bases: `mpf.core.system_wide_device.SystemWideDevice`
 
 Represents a diverter in a pinball machine.
 
@@ -87,4 +90,3 @@ Schedule a delay to deactivate this diverter.
 `subscribe_attribute(item, machine)`
 
 Subscribe to an attribute.
-

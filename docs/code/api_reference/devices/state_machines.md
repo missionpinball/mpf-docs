@@ -1,9 +1,12 @@
+# state_machines API Reference
 
-# self.machine.state_machines.*
+`self.machine.state_machines.*`
 
-`class mpf.devices.state_machine.StateMachine(*args, **kwargs)`
+``` python
+class mpf.devices.state_machine.StateMachine(*args, **kwargs)
+```
 
-Bases: mpf.core.system_wide_device.SystemWideDevice, mpf.core.mode_device.ModeDevice
+Bases: `mpf.core.system_wide_device.SystemWideDevice`, `mpf.core.mode_device.ModeDevice`
 
 A generic state machine.
 
@@ -44,4 +47,3 @@ Return the current state.
 `subscribe_attribute(item, machine)`
 
 Subscribe to an attribute.
-

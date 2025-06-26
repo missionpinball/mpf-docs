@@ -1,7 +1,8 @@
+# Data Manager API Reference
 
-# Data Manager
-
-`class mpf.core.data_manager.DataManager(machine, name, min_wait_secs=1)`
+``` python
+class mpf.core.data_manager.DataManager(machine, name, min_wait_secs=1)
+```
 
 Bases: `mpf.core.mpf_controller.MpfController`
 
@@ -71,4 +72,3 @@ Update all data.
 Log a message at the warning level.
 
 These messages will always be shown in the console and the log file.
-

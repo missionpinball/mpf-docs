@@ -1,9 +1,12 @@
+# extra_balls API Reference
 
-# self.machine.extra_balls.*
+`self.machine.extra_balls.*`
 
-`class mpf.devices.extra_ball.ExtraBall(*args, **kwargs)`
+``` python
+class mpf.devices.extra_ball.ExtraBall(*args, **kwargs)
+```
 
-Bases: mpf.core.mode_device.ModeDevice
+Bases: `mpf.core.mode_device.ModeDevice`
 
 An extra ball which can be awarded once per player.
 
@@ -74,4 +77,3 @@ Raise a ConfigFileError exception.
 `subscribe_attribute(item, machine)`
 
 Subscribe to an attribute.
-

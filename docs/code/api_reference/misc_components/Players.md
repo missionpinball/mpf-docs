@@ -1,9 +1,10 @@
+# Player API Reference
 
-# Players
+``` python
+class mpf.core.player.Player(machine, index)
+```
 
-`class mpf.core.player.Player(machine, index)`
-
-Bases: object
+Bases: `object`
 
 Base class for a player in a game.
 
@@ -56,7 +57,7 @@ player_score with Args: value=0, change=0, prev_value=0 player_score with Args: 
 
 ## Methods & Attributes
 
-The Players has the following methods & attributes available. Note that methods & attributes inherited from the base class are not included here.
+The Player has the following methods & attributes available. Note that methods & attributes inherited from the base class are not included here.
 
 `enable_events(enable=True, send_all_variables=True)`
 
@@ -84,4 +85,3 @@ Class attribute which specifies whether any monitors have been registered to tra
 `send_all_variable_events()`
 
 Send a player variable event for the current value of all player variables.
-

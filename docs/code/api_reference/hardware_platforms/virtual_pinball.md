@@ -1,9 +1,12 @@
+# virtual_pinball API Reference
 
-# self.machine.hardware_platforms[‘virtual_pinball’]
+`self.machine.hardware_platforms['virtual_pinball']`
 
-`class mpf.platforms.virtual_pinball.virtual_pinball.VirtualPinballPlatform(machine)`
+``` python
+class mpf.platforms.virtual_pinball.virtual_pinball.VirtualPinballPlatform(machine)
+```
 
-Bases: mpf.core.platform.LightsPlatform, mpf.core.platform.SwitchPlatform, mpf.core.platform.DriverPlatform
+Bases: `mpf.core.platform.LightsPlatform`, `mpf.core.platform.SwitchPlatform`, `mpf.core.platform.DriverPlatform`
 
 VPX platform.
 
@@ -122,4 +125,3 @@ Start machine.
 `vpx_switch(number)`
 
 Return switch value.
-

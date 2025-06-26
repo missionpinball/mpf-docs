@@ -1,9 +1,12 @@
+# drop_target_banks API Reference
 
-# self.machine.drop_target_banks.*
+`self.machine.drop_target_banks.*`
 
-`class mpf.devices.drop_target.DropTargetBank(*args, **kwargs)`
+``` python
+class mpf.devices.drop_target.DropTargetBank(*args, **kwargs)
+```
 
-Bases: mpf.core.system_wide_device.SystemWideDevice, mpf.core.mode_device.ModeDevice
+Bases: `mpf.core.system_wide_device.SystemWideDevice`, `mpf.core.mode_device.ModeDevice`
 
 A bank of drop targets in a pinball machine by grouping together multiple DropTarget class devices.
 
@@ -50,4 +53,3 @@ Reset this bank of drop targets. This method has some intelligence to figure out
 `subscribe_attribute(item, machine)`
 
 Subscribe to an attribute.
-

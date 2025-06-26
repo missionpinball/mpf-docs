@@ -1,9 +1,12 @@
+# fast API Reference
 
-# self.machine.hardware_platforms[‘fast’]
+`self.machine.hardware_platforms['fast']`
 
-`class mpf.platforms.fast.fast.FastHardwarePlatform(machine)`
+``` python
+class mpf.platforms.fast.fast.FastHardwarePlatform(machine)
+```
 
-Bases: mpf.core.platform.ServoPlatform, mpf.core.platform.LightsPlatform, mpf.core.platform.DmdPlatform, mpf.core.platform.SwitchPlatform, mpf.core.platform.DriverPlatform
+Bases: `mpf.core.platform.ServoPlatform`, `mpf.core.platform.LightsPlatform`, `mpf.core.platform.DmdPlatform`, `mpf.core.platform.SwitchPlatform`, `mpf.core.platform.DriverPlatform`
 
 Platform class for the FAST hardware controller.
 
@@ -221,4 +224,3 @@ Update all the LEDs connected to a FAST controller.
 This is done once per game loop for efficiency (i.e. all LEDs are sent as a single update rather than lots of individual ones).
 
 Also, every LED is updated every loop, even if it doesn’t change. This is in case some interference causes a LED to change color. Since we update every loop, it will only be the wrong color for one tick.
-

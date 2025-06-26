@@ -1,7 +1,6 @@
-
 # Config Players
 
-Config players are available as machine attributes in the form of their player name plus _player, for example, self.machine.light_player or self.machine.score_player.
+Config players are available as machine attributes in the form of their player name plus \_player, for example, `self.machine.light_player` or `self.machine.score_player`.
 
 * [blocking_player](config_players/blocking_player.md)
 * [coil_player](config_players/coil_player.md)
@@ -16,5 +15,3 @@ Config players are available as machine attributes in the form of their player n
 * [segment_display_player](config_players/segment_display_player.md)
 * [show_player](config_players/show_player.md)
 * [variable_player](config_players/variable_player.md)
-
-

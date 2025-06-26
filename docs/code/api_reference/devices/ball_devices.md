@@ -1,9 +1,12 @@
+# ball_devices API Reference
 
-self.machine.ball_devices.*
+`self.machine.ball_devices.*`
 
-`class mpf.devices.ball_device.ball_device.BallDevice(*args, **kwargs)`
+``` python
+class mpf.devices.ball_device.ball_device.BallDevice(*args, **kwargs)
+```
 
-Bases: mpf.core.system_wide_device.SystemWideDevice
+Bases: `mpf.core.system_wide_device.SystemWideDevice`
 
 Base class for a ‘Ball Device’ in a pinball machine. A ball device is anything that can hold one or more balls, such as a trough, an eject hole, a VUK, a catapult, etc.
 
@@ -181,4 +184,3 @@ Handle an unexpected ball.
 `wait_for_ready_to_receive(source)`
 
 Wait until this device is ready to receive a ball.
-

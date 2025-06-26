@@ -1,9 +1,12 @@
+# service API Reference
 
-# self.machine.service
+`self.machine.service`
 
-`class mpf.core.service_controller.ServiceController(machine)`
+``` python
+class mpf.core.service_controller.ServiceController(machine)
+```
 
-Bases: mpf.core.mpf_controller.MpfController
+Bases: `mpf.core.mpf_controller.MpfController`
 
 Provides all service information and can perform service tasks.
 
@@ -42,4 +45,3 @@ Start service mode.
 `stop_service()`
 
 Stop service mode.
-

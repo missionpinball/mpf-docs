@@ -1,8 +1,12 @@
-# self.machine.timers.*
+# timers API Reference
 
-`class mpf.devices.timer.Timer(*args, **kwargs)`
+`self.machine.timers.*`
 
-Bases: mpf.core.mode_device.ModeDevice
+``` python
+class mpf.devices.timer.Timer(*args, **kwargs)
+```
+
+Bases: `mpf.core.mode_device.ModeDevice`
 
 Parent class for a mode timer.
 
@@ -37,7 +41,7 @@ Change the interval for each “tick” of this timer.
 Parameters:
 
 * **change** – Float or int of the change you want to make to this timer’s tick rate. Note this value is multiplied by the current tick interval: >1 will increase the tick interval (slow the timer) and <1 will decrease the tick interval (accelerate the timer). To set an absolute value, use the set_tick_interval() method.
-* ****kwargs** – Not used in this method. Only exists since this method is often registered as an event handler which may contain additional keyword arguments.
+* **`**kwargs`** – Not used in this method. Only exists since this method is often registered as an event handler which may contain additional keyword arguments.
 
 `enable() → None`
 
@@ -68,7 +72,7 @@ Parameters:
 
 `pause(timer_value=0, **kwargs)`
 
-Pause the timer and posts the ‘timer_<name>_paused’ event.
+Pause the timer and posts the `timer_(name)_paused` event.
 
 Parameters:
 
@@ -108,7 +112,7 @@ This is an absolute setting. To apply a change to the current value, use the cha
 Parameters:
 
 * **timer_value** – The new number of seconds between each tick of this timer. This value should always be positive.
-* ****kwargs** – Not used in this method. Only exists since this method is often registered as an event handler which may contain additional keyword arguments.
+* **`**kwargs`** – Not used in this method. Only exists since this method is often registered as an event handler which may contain additional keyword arguments.
 
 `start(**kwargs)`
 
@@ -122,8 +126,8 @@ Parameters:
 
 `stop(**kwargs)`
 
-Stop the timer and posts the ‘timer_<name>_stopped’ event.
-Parameters:	**kwargs – Not used in this method. Only exists since this method is often registered as an event handler which may contain additional keyword arguments.
+Stop the timer and posts the `timer_(name)_stopped` event.
+Parameters:	`**kwargs` – Not used in this method. Only exists since this method is often registered as an event handler which may contain additional keyword arguments.
 
 `subscribe_attribute(item, machine)`
 
@@ -136,7 +140,7 @@ Subtract ticks from this timer.
 Parameters:
 
 * **timer_value** – The number of ticks you want to subtract from this timer’s current value.
-* ****kwargs** – Not used in this method. Only exists since this method is often registered as an event handler which may contain additional keyword arguments.
+* **`**kwargs`** – Not used in this method. Only exists since this method is often registered as an event handler which may contain additional keyword arguments.
 
 `ticks`
 
@@ -146,5 +150,5 @@ Return ticks.
 
 Automatically called when this timer completes.
 
-Posts the ‘timer_<name>_complete’ event. Can be manually called to mark this timer as complete.
-Parameters:	**kwargs – Not used in this method. Only exists since this method is often registered as an event handler which may contain additional keyword arguments.
+Posts the `timer_(name)_complete` event. Can be manually called to mark this timer as complete.
+Parameters:	`**kwargs` – Not used in this method. Only exists since this method is often registered as an event handler which may contain additional keyword arguments.

@@ -1,7 +1,8 @@
-
 # MpfBcpTestCase
 
-`class mpf.tests.MpfBcpTestCase.MpfBcpTestCase(methodName='runTest')`
+``` python
+class mpf.tests.MpfBcpTestCase.MpfBcpTestCase(methodName='runTest')
+```
 
 Bases: `mpf.tests.MpfTestCase.MpfTestCase`
 

@@ -1,6 +1,10 @@
-# self.machine.bcp
+# bcp API Reference
 
-`class mpf.core.bcp.bcp.Bcp(machine: MachineController)`
+`self.machine.bcp`
+
+``` python
+class mpf.core.bcp.bcp.Bcp(machine: MachineController)
+```
 
 Bases: `mpf.core.mpf_controller.MpfController`
 

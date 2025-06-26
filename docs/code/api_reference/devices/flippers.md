@@ -1,9 +1,12 @@
+# flippers API Reference
 
-# self.machine.flippers.*
+`self.machine.flippers.*`
 
-`class mpf.devices.flipper.Flipper(*args, **kwargs)`
+``` python
+class mpf.devices.flipper.Flipper(*args, **kwargs)
+```
 
-Bases: mpf.core.system_wide_device.SystemWideDevice
+Bases: `mpf.core.system_wide_device.SystemWideDevice`
 
 Represents a flipper in a pinball machine. Subclass of Device. Contains several methods for actions that can be performed on this flipper, like enable(), disable(), etc. Flippers have several options, including player buttons, EOS swtiches, multiple coil options (pulsing, hold coils, etc.)
 
@@ -77,4 +80,3 @@ Activate the flipper via software as if the flipper button was pushed. This is n
 `sw_release()`
 
 Deactivate the flipper via software as if the flipper button was released. See the documentation for sw_flip() for details.
-

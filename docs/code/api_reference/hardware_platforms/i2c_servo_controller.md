@@ -1,9 +1,12 @@
+# i2c_servo_controller API Reference
 
-# self.machine.hardware_platforms[‘i2c_servo_controller’]
+`self.machine.hardware_platforms['i2c_servo_controller']`
 
-`class mpf.platforms.i2c_servo_controller.I2CServoControllerHardwarePlatform(machine)`
+``` python
+class mpf.platforms.i2c_servo_controller.I2CServoControllerHardwarePlatform(machine)
+```
 
-Bases: mpf.core.platform.ServoPlatform
+Bases: `mpf.core.platform.ServoPlatform`
 
 Supports the PCA9685/PCA9635 chip via I2C.
 
@@ -26,4 +29,3 @@ Initialise platform.
 `stop()`
 
 Stop platform.
-

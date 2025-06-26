@@ -1,9 +1,12 @@
+# drop_targets API Reference
 
-# self.machine.drop_targets.*
+`self.machine.drop_targets.*`
 
-`class mpf.devices.drop_target.DropTarget(*args, **kwargs)`
+``` python
+class mpf.devices.drop_target.DropTarget(*args, **kwargs)
+```
 
-Bases: mpf.core.system_wide_device.SystemWideDevice
+Bases: `mpf.core.system_wide_device.SystemWideDevice`
 
 Represents a single drop target in a pinball machine.
 
@@ -83,4 +86,3 @@ Reset this drop target. If this drop target is configured with a reset coil, the
 `subscribe_attribute(item, machine)`
 
 Subscribe to an attribute.
-

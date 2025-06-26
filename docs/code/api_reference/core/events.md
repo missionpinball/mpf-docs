@@ -1,9 +1,12 @@
+# events API Reference
 
-# self.machine.events
+`self.machine.events`
 
-`class mpf.core.events.EventManager(machine: MachineController)`
+``` python
+class mpf.core.events.EventManager(machine: MachineController)
+```
 
-Bases: mpf.core.mpf_controller.MpfController
+Bases: `mpf.core.mpf_controller.MpfController`
 
 Handles all the events and manages the handlers in MPF.
 
@@ -60,7 +63,7 @@ Parameters:
 
 * **event** – A string name of the event you’re posting. Note that you can post whatever event you want. You don’t have to set up anything ahead of time, and if no handlers are registered for the event you post, so be it.
 * **callback** – An optional method which will be called when the final handler is done processing this event. Default is None.
-* ****kwargs** – One or more options keyword/value pairs that will be passed to each handler. (The event manager will enforce that handlers have **kwargs in their signatures when they’re registered to prevent run-time crashes from unexpected kwargs that were included in post() calls.
+* **`**kwargs`** – One or more options keyword/value pairs that will be passed to each handler. (The event manager will enforce that handlers have `**kwargs` in their signatures when they’re registered to prevent run-time crashes from unexpected kwargs that were included in post() calls.
 
 `post_async(event: str, **kwargs) → _asyncio.Future`
 
@@ -84,7 +87,7 @@ Parameters:
 
 * **event** - A string name of the event you’re posting. Note that you can post whatever event you want. You don’t have to set up anything ahead of time, and if no handlers are registered for the event you post, so be it.
 * **callback** - The method which will be called when the final handler is done processing this event and any handlers that registered waits have cleared their waits.
-* ****kwargs** - One or more options keyword/value pairs that will be passed to each handler. (Just make sure your handlers are expecting them. You can add **kwargs to your handler methods if certain ones don’t need them.)
+* **`**kwargs`** - One or more options keyword/value pairs that will be passed to each handler. (Just make sure your handlers are expecting them. You can add `**kwargs` to your handler methods if certain ones don’t need them.)
 
 Post the queue event called `pizza_time`, and then call `self.pizza_done` when done: `self.machine.events.post_queue('pizza_time', self.pizza_done)`
 
@@ -100,7 +103,7 @@ Parameters:
 
 * **event** – A string name of the event you’re posting. Note that you can post whatever event you want. You don’t have to set up anything ahead of time, and if no handlers are registered for the event you post, so be it.
 * **callback** – The method which will be called when the final handler is done processing this event. Default is None.
-* ****kwargs** – One or more options keyword/value pairs that will be passed to each handler. (Just make sure your handlers are expecting them. You can add **kwargs to your handler methods if certain ones don’t need them.)
+* **`**kwargs`** – One or more options keyword/value pairs that will be passed to each handler. (Just make sure your handlers are expecting them. You can add `**kwargs` to your handler methods if certain ones don’t need them.)
 
 Events are processed serially (e.g. one at a time), so if the event core is in the process of handling another event, this event is added to a queue and processed after the current event is done. You can control the order the handlers will be called by optionally specifying a priority when the handlers were registered. (Higher priority values will be processed first.) Relay events differ from standard events in that the resulting kwargs from one handler are passed to the next handler. (In other words, standard events mean that all the handlers get the same initial kwargs, whereas relay events “relay” the resulting kwargs from one handler to the next.)
 
@@ -171,4 +174,3 @@ Wait for any event from event_names.
 `wait_for_event(event_name: str) → _asyncio.Future`
 
 Wait for event.
-

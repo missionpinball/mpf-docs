@@ -1,9 +1,10 @@
+# File Manager API Reference
 
-# File Manager
+``` python
+class mpf.core.file_manager.FileManager
+```
 
-`class mpf.core.file_manager.FileManager`
-
-Bases: object
+Bases: `object`
 
 Manages file interfaces.
 
@@ -33,4 +34,3 @@ Returns: Location of file
 `static save(filename, data)`
 
 Save data to file.
-

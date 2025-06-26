@@ -1,9 +1,12 @@
+# pin2dmd API Reference
 
-# self.machine.hardware_platforms[‘pin2dmd’]
+`self.machine.hardware_platforms['pin2dmd']`
 
-`class mpf.platforms.pin2dmd.Pin2DmdHardwarePlatform(machine)`
+``` python
+class mpf.platforms.pin2dmd.Pin2DmdHardwarePlatform(machine)
+```
 
-Bases: mpf.core.platform.RgbDmdPlatform
+Bases: `mpf.core.platform.RgbDmdPlatform`
 
 PIN2DMD RGB DMD hardware.
 
@@ -26,4 +29,3 @@ Initialise platform.
 `stop()`
 
 Stop platform.
-

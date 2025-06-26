@@ -1,8 +1,12 @@
-# self.machine.switch_controller
+# switch_controller API Reference
 
-`class mpf.core.switch_controller.SwitchController(machine: mpf.core.machine.MachineController)`
+`self.machine.switch_controller`
 
-Bases: mpf.core.mpf_controller.MpfController
+``` python
+class mpf.core.switch_controller.SwitchController(machine: mpf.core.machine.MachineController)
+```
+
+Bases: `mpf.core.mpf_controller.MpfController`
 
 Tracks all switches in the machine, receives switch activity, and converts switch changes into events.
 

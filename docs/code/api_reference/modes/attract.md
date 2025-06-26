@@ -1,9 +1,12 @@
+# Attract Mode API Reference
 
-# self.machine.modes.attract
+`self.machine.modes.attract`
 
-`class mpf.modes.attract.code.attract.Attract(*args, **kwargs)`
+``` python
+class mpf.modes.attract.code.attract.Attract(*args, **kwargs)
+```
 
-Bases: mpf.core.mode.Mode
+Bases: `mpf.core.mode.Mode`
 
 Default mode running in a machine when a game is not in progress.
 
@@ -157,4 +160,3 @@ Returns true if the mode is running. Otherwise false.
 Log a message at the warning level.
 
 These messages will always be shown in the console and the log file.
-

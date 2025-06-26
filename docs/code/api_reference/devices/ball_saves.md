@@ -1,9 +1,12 @@
+# ball_saves API Reference
 
-# self.machine.ball_saves.*
+`self.machine.ball_saves.*`
 
-`class mpf.devices.ball_save.BallSave(*args, **kwargs)`
+``` python
+class mpf.devices.ball_save.BallSave(*args, **kwargs)
+```
 
-Bases: mpf.core.system_wide_device.SystemWideDevice, mpf.core.mode_device.ModeDevice
+Bases: `mpf.core.system_wide_device.SystemWideDevice`, `mpf.core.mode_device.ModeDevice`
 
 Ball save device which will give back the ball within a certain time.
 
@@ -70,4 +73,3 @@ Subscribe to an attribute.
 `timer_start() → None`
 
 Start the timer.  This is usually called after the ball was ejected while the ball save may have been enabled earlier.
-

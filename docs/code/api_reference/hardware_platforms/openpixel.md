@@ -1,9 +1,12 @@
+# openpixel API Reference
 
-# self.machine.hardware_platforms[‘openpixel’]
+`self.machine.hardware_platforms['openpixel']`
 
-`class mpf.platforms.openpixel.OpenpixelHardwarePlatform(machine: MachineController)`
+``` python
+class mpf.platforms.openpixel.OpenpixelHardwarePlatform(machine: MachineController)
+```
 
-Bases: mpf.core.platform.LightsPlatform
+Bases: `mpf.core.platform.LightsPlatform`
 
 Base class for the open pixel hardware platform.
 
@@ -34,4 +37,3 @@ Parse number to three channels.
 `stop()`
 
 Stop platform.
-

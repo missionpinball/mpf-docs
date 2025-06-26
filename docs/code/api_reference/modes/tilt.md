@@ -1,9 +1,12 @@
+# Tilt Mode API Reference
 
-# self.machine.modes.tilt
+`self.machine.modes.tilt`
 
-`class mpf.modes.tilt.code.tilt.Tilt(*args, **kwargs)`
+``` python
+class mpf.modes.tilt.code.tilt.Tilt(*args, **kwargs)
+```
 
-Bases: mpf.core.mode.Mode
+Bases: `mpf.core.mode.Mode`
 
 A mode which handles a tilt in a pinball machine.
 
@@ -159,4 +162,3 @@ If the number of warnings is the number to cause a tilt, a tilt will be processe
 Log a message at the warning level.
 
 These messages will always be shown in the console and the log file.
-

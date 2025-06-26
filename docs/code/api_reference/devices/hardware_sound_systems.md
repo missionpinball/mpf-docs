@@ -1,9 +1,12 @@
+# hardware_sound_systems API Reference
 
-# self.machine.hardware_sound_systems.*
+`self.machine.hardware_sound_systems.*`
 
-`class mpf.devices.hardware_sound_system.HardwareSoundSystem(machine, name)`
+``` python
+class mpf.devices.hardware_sound_system.HardwareSoundSystem(machine, name)
+```
 
-Bases: mpf.core.system_wide_device.SystemWideDevice
+Bases: `mpf.core.system_wide_device.SystemWideDevice`
 
 Hardware sound system using in EM and SS machines.
 
@@ -50,4 +53,3 @@ Stop all sounds on track.
 `text_to_speech(text: str, platform_options, track: int = 1)`
 
 Text to speech output.
-

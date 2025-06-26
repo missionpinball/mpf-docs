@@ -1,7 +1,8 @@
-
 # TestMachineController
 
-`class mpf.tests.MpfTestCase.TestMachineController(options, config, config_patches, config_defaults, clock, mock_data, enable_plugins=False)`
+``` python
+class mpf.tests.MpfTestCase.TestMachineController(options, config, config_patches, config_defaults, clock, mock_data, enable_plugins=False)
+```
 
 Bases: `mpf.core.machine.MachineController`
 
@@ -139,4 +140,3 @@ Information includes Python version, Python executable, platform, and core archi
 Log a message at the warning level.
 
 These messages will always be shown in the console and the log file.
-

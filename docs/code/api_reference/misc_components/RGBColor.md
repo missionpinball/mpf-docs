@@ -1,9 +1,10 @@
+# RGBColor API Reference
 
-# RGBColor
+``` python
+class mpf.core.rgb_color.RGBColor(color: Union[RGBColor, str, List[int], Tuple[int, int, int]] = None)
+```
 
-`class mpf.core.rgb_color.RGBColor(color: Union[RGBColor, str, List[int], Tuple[int, int, int]] = None)`
-
-Bases: object
+Bases: `object`
 
 One RGB Color.
 
@@ -105,4 +106,3 @@ Return type:	str
 Convert a string which could be either a standard color name or a hex value to an RGB value (tuple).
 
 If the name is not found and the supplied value is not a valid hex string it raises an error. :param value: A standard color name or hex value. :param default: The default value to return if the color name is not found and the supplied value is not a valid hex color string. :return: RGB representation of the named color. :rtype: tuple
-

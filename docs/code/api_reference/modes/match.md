@@ -1,9 +1,12 @@
+# Match Mode API Reference
 
-# self.machine.modes.match
+`self.machine.modes.match`
 
-`class mpf.modes.match.code.match.Match(*args, **kwargs)`
+``` python
+class mpf.modes.match.code.match.Match(*args, **kwargs)
+```
 
-Bases: mpf.core.async_mode.AsyncMode
+Bases: `mpf.core.async_mode.AsyncMode`
 
 Match mode.
 
@@ -129,4 +132,3 @@ Returns true if the mode is running. Otherwise false.
 Log a message at the warning level.
 
 These messages will always be shown in the console and the log file.
-

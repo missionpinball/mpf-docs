@@ -1,9 +1,12 @@
+# sequences API Reference
 
-# self.machine.sequences.*
+`self.machine.sequences.*`
 
-`class mpf.devices.logic_blocks.Sequence(*args, **kwargs)`
+``` python
+class mpf.devices.logic_blocks.Sequence(*args, **kwargs)
+```
 
-Bases: mpf.devices.logic_blocks.LogicBlock
+Bases: `mpf.devices.logic_blocks.LogicBlock`
 
 A type of LogicBlock which tracks many different events (steps) towards a goal.
 
@@ -102,4 +105,3 @@ Subscribe to an attribute.
 `value`
 
 Return value or None if that is currently not possible.
-

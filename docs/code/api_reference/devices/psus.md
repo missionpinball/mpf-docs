@@ -1,9 +1,12 @@
+# psus API Reference
 
-# self.machine.psus.*
+`self.machine.psus.*`
 
-`class mpf.devices.power_supply_unit.PowerSupplyUnit(machine, name)`
+``` python
+class mpf.devices.power_supply_unit.PowerSupplyUnit(machine, name)
+```
 
-Bases: mpf.core.system_wide_device.SystemWideDevice
+Bases: `mpf.core.system_wide_device.SystemWideDevice`
 
 Represents a power supply in a pinball machine.
 
@@ -30,4 +33,3 @@ Notify PSU about pulse.
 `raise_config_error(msg, error_no, *, context=None) → NoReturn`
 
 Raise a ConfigFileError exception.
-

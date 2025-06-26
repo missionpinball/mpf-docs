@@ -1,10 +1,12 @@
+# machine API Reference
 
-# self.machine
+`self.machine`
 
-`class mpf.core.machine.MachineController(options: dict, config: mpf.core.config_loader.MpfConfig)`
+``` python
+class mpf.core.machine.MachineController(options: dict, config: mpf.core.config_loader.MpfConfig)
+```
 
-Bases: mpf.core.logging.LogMixin
-
+Bases: `mpf.core.logging.LogMixin`
 
 Parameters:
 
@@ -108,4 +110,3 @@ Validate a config section.
 `verify_system_info()`
 
 Dump information about the Python installation to the log. Information includes Python version, Python executable, platform, and core architecture.
-

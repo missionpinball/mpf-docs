@@ -1,9 +1,12 @@
+# accruals API Reference
 
-# self.machine.accruals.*
+`self.machine.accruals.*`
 
-`class mpf.devices.logic_blocks.Accrual(*args, **kwargs)`
+``` python
+class mpf.devices.logic_blocks.Accrual(*args, **kwargs)
+```
 
-Bases: mpf.devices.logic_blocks.LogicBlock
+Bases: `mpf.devices.logic_blocks.LogicBlock`
 
 A type of LogicBlock which tracks many different events (steps) towards a goal. The steps are able to happen in any order.
 
@@ -94,4 +97,3 @@ Subscribe to an attribute.
 `value`
 
 Return value or None if that is currently not possible.
-

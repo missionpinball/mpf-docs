@@ -1,9 +1,12 @@
+# light_controller API Reference
 
-# self.machine.light_controller
+`self.machine.light_controller`
 
-`class mpf.core.light_controller.LightController(machine: mpf.core.machine.MachineController)`
+``` python
+class mpf.core.light_controller.LightController(machine: mpf.core.machine.MachineController)
+```
 
-Bases: mpf.core.mpf_controller.MpfController
+Bases: `mpf.core.mpf_controller.MpfController`
 
 Handles light updates and light monitoring.
 
@@ -22,4 +25,3 @@ Initialise the light subsystem.
 `monitor_lights()`
 
 Update the color of lights for the monitor.
-

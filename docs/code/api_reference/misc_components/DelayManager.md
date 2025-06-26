@@ -1,7 +1,8 @@
+# Delay Manager API Reference
 
-# Delay Manager
-
-`class mpf.core.delays.DelayManager(machine: MachineController)`
+``` python
+class mpf.core.delays.DelayManager(machine: MachineController)
+```
 
 Bases: `mpf.core.mpf_controller.MpfController`
 
@@ -138,4 +139,3 @@ Parameters:
 Log a message at the warning level.
 
 These messages will always be shown in the console and the log file.
-

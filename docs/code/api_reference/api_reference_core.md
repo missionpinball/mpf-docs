@@ -1,6 +1,6 @@
 # Core Components
 
-Core MPF machine components, accessible to programmers at self.machine.*name*. For example, the ball controller is at self.machine.ball_controller, the event manager is self.machine.events, etc.
+Core MPF machine components, accessible to programmers at `self.machine.*name*`. For example, the ball controller is at `self.machine.ball_controller`, the event manager is `self.machine.events`, etc.
 
 * [auditor](core/auditor.md)
 * [ball_controller](core/ball_controller.md)
@@ -20,4 +20,3 @@ Core MPF machine components, accessible to programmers at self.machine.*name*. F
 * [switch_player](core/switch_player.md)
 * [text_ui](core/text_ui.md)
 * [twitch_bot](core/twitch_bot.md)
-

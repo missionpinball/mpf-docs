@@ -1,9 +1,10 @@
+# Utility Functions API Reference
 
-# Utility Functions
+``` python
+class mpf.core.utility_functions.Util`
+```
 
-`class mpf.core.utility_functions.Util`
-
-Bases: object
+Bases: `object`
 
 Utility functions for MPF.
 
@@ -283,4 +284,4 @@ Returns an integer. The examples listed above return 200, 2000 and 0, respective
 
 Decode a string of real-world time into an float of seconds.
 
-See ‘string_to_ms’ for a description of the time string.
+See `string_to_ms` for a description of the time string.

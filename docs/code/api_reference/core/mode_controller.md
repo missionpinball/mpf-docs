@@ -1,9 +1,12 @@
+# mode_controller API Reference
 
-# self.machine.mode_controller
+`self.machine.mode_controller`
 
-`class mpf.core.mode_controller.ModeController(machine: mpf.core.machine.MachineController)`
+``` python
+class mpf.core.mode_controller.ModeController(machine: mpf.core.machine.MachineController)
+```
 
-Bases: mpf.core.mpf_controller.MpfController
+Bases: `mpf.core.mpf_controller.MpfController`
 
 Responsible for loading, unloading, and managing all modes in MPF.
 
@@ -74,4 +77,3 @@ Remove an existing start method.
 `set_mode_state(mode: mpf.core.mode.Mode, active: bool)`
 
 Remember mode state.
-
