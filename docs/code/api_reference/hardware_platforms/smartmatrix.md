@@ -1,5 +1,6 @@
+# smartmatrix API Reference
 
-# self.machine.hardware_platforms[‘smartmatrix’]
+`self.machine.hardware_platforms['smartmatrix']`
 
 ``` python
 class mpf.platforms.smartmatrix.SmartMatrixHardwarePlatform(machine)

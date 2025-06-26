@@ -1,5 +1,6 @@
+# openpixel API Reference
 
-# self.machine.hardware_platforms[‘openpixel’]
+`self.machine.hardware_platforms['openpixel']`
 
 ``` python
 class mpf.platforms.openpixel.OpenpixelHardwarePlatform(machine: MachineController)

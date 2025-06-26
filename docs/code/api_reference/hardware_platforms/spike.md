@@ -1,5 +1,6 @@
+# spike API Reference
 
-# self.machine.hardware_platforms[‘spike’]
+`self.machine.hardware_platforms['spike']`
 
 ``` python
 class mpf.platforms.spike.spike.SpikePlatform(machine)

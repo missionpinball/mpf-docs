@@ -1,5 +1,6 @@
+# drivers API Reference
 
-# self.machine.hardware_platforms[‘drivers’]
+`self.machine.hardware_platforms['drivers']`
 
 ``` python
 class mpf.platforms.driver_light_platform.DriverLightPlatform(machine)

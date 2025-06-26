@@ -1,5 +1,6 @@
+# fadecandy API Reference
 
-# self.machine.hardware_platforms[‘fadecandy’]
+`self.machine.hardware_platforms['fadecandy']`
 
 ``` python
 class mpf.platforms.fadecandy.FadecandyHardwarePlatform(machine: MachineController)

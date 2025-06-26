@@ -1,5 +1,6 @@
+# smbus2 API Reference
 
-# self.machine.hardware_platforms[‘smbus2’]
+`self.machine.hardware_platforms['smbus2']`
 
 ``` python
 class mpf.platforms.smbus2.Smbus2(machine)

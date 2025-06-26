@@ -1,5 +1,6 @@
+# light_segment_displays API Reference
 
-# self.machine.hardware_platforms[‘light_segment_displays’]
+`self.machine.hardware_platforms['light_segment_displays']`
 
 ``` python
 class mpf.platforms.light_segment_displays.LightSegmentDisplaysPlatform(machine)

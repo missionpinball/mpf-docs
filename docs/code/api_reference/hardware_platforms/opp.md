@@ -1,4 +1,6 @@
-# self.machine.hardware_platforms[‘opp’]
+# opp API Reference
+
+`self.machine.hardware_platforms['opp']`
 
 ``` python
 class mpf.platforms.opp.opp.OppHardwarePlatform(machine)

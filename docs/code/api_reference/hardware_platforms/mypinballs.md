@@ -1,5 +1,6 @@
+# mypinballs API Reference
 
-# self.machine.hardware_platforms[‘mypinballs’]
+`self.machine.hardware_platforms['mypinballs']`
 
 ``` python
 class mpf.platforms.mypinballs.mypinballs.MyPinballsHardwarePlatform(machine)

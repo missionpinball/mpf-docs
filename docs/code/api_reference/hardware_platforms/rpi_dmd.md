@@ -1,5 +1,6 @@
+# rpi_dmd API Reference
 
-# self.machine.hardware_platforms[‘rpi_dmd’]
+`self.machine.hardware_platforms['rpi_dmd']`
 
 ``` python
 class mpf.platforms.rpi_dmd.RpiDmdPlatform(machine)

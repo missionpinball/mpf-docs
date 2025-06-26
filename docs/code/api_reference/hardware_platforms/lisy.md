@@ -1,5 +1,6 @@
+# lisy API Reference
 
-# self.machine.hardware_platforms[‘lisy’]
+`self.machine.hardware_platforms['lisy']`
 
 ``` python
 class mpf.platforms.lisy.lisy.LisyHardwarePlatform(machine)

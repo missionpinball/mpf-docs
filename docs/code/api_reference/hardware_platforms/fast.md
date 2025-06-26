@@ -1,5 +1,6 @@
+# fast API Reference
 
-# self.machine.hardware_platforms[‘fast’]
+`self.machine.hardware_platforms['fast']`
 
 ``` python
 class mpf.platforms.fast.fast.FastHardwarePlatform(machine)

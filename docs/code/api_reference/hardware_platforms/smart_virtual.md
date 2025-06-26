@@ -1,5 +1,6 @@
+# smart_virtual API Reference
 
-# self.machine.hardware_platforms[‘smart_virtual’]
+`self.machine.hardware_platforms['smart_virtual']`
 
 ``` python
 class mpf.platforms.smart_virtual.SmartVirtualHardwarePlatform(machine)

@@ -1,5 +1,6 @@
+# snux API Reference
 
-# self.machine.hardware_platforms[‘snux’]
+`self.machine.hardware_platforms['snux']`
 
 ``` python
 class mpf.platforms.snux.SnuxHardwarePlatform(machine: mpf.core.machine.MachineController)

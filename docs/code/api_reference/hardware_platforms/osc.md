@@ -1,5 +1,6 @@
+# osc API Reference
 
-# self.machine.hardware_platforms[‘osc’]
+`self.machine.hardware_platforms['osc']`
 
 ``` python
 class mpf.platforms.osc.OscPlatform(machine)

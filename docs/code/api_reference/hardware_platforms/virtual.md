@@ -1,5 +1,6 @@
+# virtual API Reference
 
-# self.machine.hardware_platforms[‘virtual’]
+`self.machine.hardware_platforms['virtual']`
 
 ``` python
 class mpf.platforms.virtual.VirtualHardwarePlatform(machine)

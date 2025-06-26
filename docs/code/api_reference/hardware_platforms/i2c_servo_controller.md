@@ -1,5 +1,6 @@
+# i2c_servo_controller API Reference
 
-# self.machine.hardware_platforms[‘i2c_servo_controller’]
+`self.machine.hardware_platforms['i2c_servo_controller']`
 
 ``` python
 class mpf.platforms.i2c_servo_controller.I2CServoControllerHardwarePlatform(machine)
