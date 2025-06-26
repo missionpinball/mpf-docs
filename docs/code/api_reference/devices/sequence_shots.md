@@ -1,5 +1,6 @@
+# sequence_shots API Reference
 
-# self.machine.sequence_shots.*
+`self.machine.sequence_shots.*`
 
 ``` python
 class mpf.devices.sequence_shot.SequenceShot(machine, name)

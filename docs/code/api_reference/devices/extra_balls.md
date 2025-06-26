@@ -1,5 +1,6 @@
+# extra_balls API Reference
 
-# self.machine.extra_balls.*
+`self.machine.extra_balls.*`
 
 ``` python
 class mpf.devices.extra_ball.ExtraBall(*args, **kwargs)

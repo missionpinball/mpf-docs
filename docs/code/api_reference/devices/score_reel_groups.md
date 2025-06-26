@@ -1,5 +1,6 @@
+# score_reel_groups API Reference
 
-# self.machine.score_reel_groups.*
+`self.machine.score_reel_groups.*`
 
 ``` python
 class mpf.devices.score_reel_group.ScoreReelGroup(machine, name)

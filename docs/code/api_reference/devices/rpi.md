@@ -1,5 +1,6 @@
+# rpi API Reference
 
-# self.machine.hardware_platforms[‘rpi’]
+`self.machine.hardware_platforms[rpi]`
 
 ``` python
 class mpf.platforms.rpi.rpi.RaspberryPiHardwarePlatform(machine)

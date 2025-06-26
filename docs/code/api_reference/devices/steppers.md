@@ -1,5 +1,6 @@
+# steppers API Reference
 
-# self.machine.steppers.*
+`self.machine.steppers.*`
 
 ``` python
 class mpf.devices.stepper.Stepper(*args, **kwargs)

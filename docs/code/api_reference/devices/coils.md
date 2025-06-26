@@ -1,4 +1,6 @@
-# self.machine.coils.*
+# coils API Reference
+
+`self.machine.coils.*`
 
 ``` python
 class mpf.devices.driver.Driver(machine: mpf.core.machine.MachineController, name: str)

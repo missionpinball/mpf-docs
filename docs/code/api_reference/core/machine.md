@@ -1,5 +1,6 @@
+# machine API Reference
 
-# self.machine
+`self.machine`
 
 ``` python
 class mpf.core.machine.MachineController(options: dict, config: mpf.core.config_loader.MpfConfig)

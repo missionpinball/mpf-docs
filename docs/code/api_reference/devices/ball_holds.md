@@ -1,5 +1,6 @@
+# ball_holds API Reference
 
-# self.machine.ball_holds.*
+`self.machine.ball_holds.*`
 
 ``` python
 class mpf.devices.ball_hold.BallHold(*args, **kwargs)

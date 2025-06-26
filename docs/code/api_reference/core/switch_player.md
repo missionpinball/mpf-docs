@@ -1,5 +1,6 @@
+# switch_player API Reference
 
-# self.machine.switch_player
+`self.machine.switch_player`
 
 ``` python
 class mpf.plugins.switch_player.SwitchPlayer(machine)

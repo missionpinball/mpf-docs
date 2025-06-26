@@ -1,4 +1,6 @@
-# self.machine.platform_controller
+# platform_controller API Reference
+
+`self.machine.platform_controller`
 
 ``` python
 class mpf.core.platform_controller.PlatformController(machine: MachineController)

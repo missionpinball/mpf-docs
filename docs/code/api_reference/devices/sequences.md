@@ -1,5 +1,6 @@
+# sequences API Reference
 
-# self.machine.sequences.*
+`self.machine.sequences.*`
 
 ``` python
 class mpf.devices.logic_blocks.Sequence(*args, **kwargs)

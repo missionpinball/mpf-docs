@@ -1,4 +1,6 @@
-# self.machine.rgb_dmds.*
+# rgb_dmds API Reference
+
+`self.machine.rgb_dmds.*`
 
 ``` python
 class mpf.devices.rgb_dmd.RgbDmd(machine, name)

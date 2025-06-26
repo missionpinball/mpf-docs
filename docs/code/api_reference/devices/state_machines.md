@@ -1,5 +1,6 @@
+# state_machines API Reference
 
-# self.machine.state_machines.*
+`self.machine.state_machines.*`
 
 ``` python
 class mpf.devices.state_machine.StateMachine(*args, **kwargs)

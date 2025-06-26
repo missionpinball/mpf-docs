@@ -1,5 +1,6 @@
+# service API Reference
 
-# self.machine.service
+`self.machine.service`
 
 ``` python
 class mpf.core.service_controller.ServiceController(machine)

@@ -1,5 +1,6 @@
+# show_queues API Reference
 
-# self.machine.show_queues.*
+`self.machine.show_queues.*`
 
 ``` python
 class mpf.devices.show_queue.ShowQueue(machine, name)

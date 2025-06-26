@@ -1,5 +1,6 @@
+# spi_bit_bang API Reference
 
-# self.machine.hardware_platforms[‘spi_bit_bang’]
+`self.machine.hardware_platforms['spi_bit_bang']`
 
 ``` python
 class mpf.platforms.spi_bit_bang.SpiBitBangPlatform(machine)

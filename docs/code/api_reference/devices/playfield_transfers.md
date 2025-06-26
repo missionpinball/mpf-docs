@@ -1,5 +1,6 @@
+# playfield_transfers API Reference
 
-# self.machine.playfield_transfers.*
+`self.machine.playfield_transfers.*`
 
 ``` python
 class mpf.devices.playfield_transfer.PlayfieldTransfer(machine, name)

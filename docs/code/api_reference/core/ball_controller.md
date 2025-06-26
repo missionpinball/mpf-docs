@@ -1,5 +1,6 @@
+# ball_controller API Reference
 
-# self.machine.ball_controller
+`self.machine.ball_controller`
 
 ``` python
 class mpf.core.ball_controller.BallController(machine: mpf.core.machine.MachineController)

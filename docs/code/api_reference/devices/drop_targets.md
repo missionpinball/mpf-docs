@@ -1,5 +1,6 @@
+# drop_targets API Reference
 
-# self.machine.drop_targets.*
+`self.machine.drop_targets.*`
 
 ``` python
 class mpf.devices.drop_target.DropTarget(*args, **kwargs)

@@ -1,5 +1,6 @@
+# servos API Reference
 
-# self.machine.servos.*
+`self.machine.servos.*`
 
 ``` python
 class mpf.devices.servo.Servo(*args, **kwargs)

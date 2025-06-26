@@ -1,5 +1,6 @@
+# system11 API Reference
 
-# self.machine.hardware_platforms[‘system11’]
+`self.machine.hardware_platforms['system11']`
 
 ``` python
 class mpf.platforms.system11.System11OverlayPlatform(machine: mpf.core.machine.MachineController)

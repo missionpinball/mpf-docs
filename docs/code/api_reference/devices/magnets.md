@@ -1,5 +1,6 @@
+# magnets API Reference
 
-# self.machine.magnets.*
+`self.machine.magnets.*`
 
 ``` python
 class mpf.devices.magnet.Magnet(*args, **kwargs)

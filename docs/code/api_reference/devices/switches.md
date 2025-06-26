@@ -1,5 +1,6 @@
+# switches API Reference
 
-# self.machine.switches.*
+`self.machine.switches.*`
 
 ``` python
 class mpf.devices.switch.Switch(*args, **kwargs)

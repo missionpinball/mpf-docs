@@ -1,5 +1,6 @@
+# kickbacks API Reference
 
-# self.machine.kickbacks.*
+`self.machine.kickbacks.*`
 
 ``` python
 class mpf.devices.kickback.Kickback(*args, **kwargs)

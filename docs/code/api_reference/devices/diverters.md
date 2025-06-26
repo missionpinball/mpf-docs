@@ -1,5 +1,6 @@
+# diverters API Reference
 
-# self.machine.diverters.*
+`self.machine.diverters.*`
 
 ``` python
 class mpf.devices.diverter.Diverter(*args, **kwargs)

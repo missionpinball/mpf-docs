@@ -1,5 +1,6 @@
+# ball_devices API Reference
 
-self.machine.ball_devices.*
+`self.machine.ball_devices.*`
 
 ``` python
 class mpf.devices.ball_device.ball_device.BallDevice(*args, **kwargs)

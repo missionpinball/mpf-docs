@@ -1,5 +1,6 @@
+# motors API Reference
 
-# self.machine.motors.*
+`self.machine.motors.*`
 
 ``` python
 class mpf.devices.motor.Motor(*args, **kwargs)

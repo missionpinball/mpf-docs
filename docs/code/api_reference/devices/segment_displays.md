@@ -1,5 +1,6 @@
+# segment_displays API Reference
 
-self.machine.segment_displays.*
+`self.machine.segment_displays.*`
 
 ``` python
 class mpf.devices.segment_display.SegmentDisplay(*args, **kwargs)

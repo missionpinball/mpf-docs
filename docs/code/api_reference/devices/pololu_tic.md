@@ -1,5 +1,6 @@
+# pololu_tic API Reference
 
-# self.machine.hardware_platforms[‘pololu_tic’]
+`self.machine.hardware_platforms[`pololu_tic`]`
 
 ``` python
 class mpf.platforms.pololu.pololu_tic.PololuTICHardwarePlatform(machine)

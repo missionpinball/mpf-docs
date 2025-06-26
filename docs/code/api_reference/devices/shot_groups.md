@@ -1,5 +1,6 @@
+# shot_groups API Reference
 
-# self.machine.shot_groups.*
+`self.machine.shot_groups.*`
 
 ``` python
 class mpf.devices.shot_group.ShotGroup(*args, **kwargs)

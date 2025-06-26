@@ -1,5 +1,6 @@
+# shots API Reference
 
-# self.machine.shots.*
+`self.machine.shots.*`
 
 ``` python
 class mpf.devices.shot.Shot(*args, **kwargs)

@@ -1,4 +1,6 @@
-# self.machine.switch_controller
+# switch_controller API Reference
+
+`self.machine.switch_controller`
 
 ``` python
 class mpf.core.switch_controller.SwitchController(machine: mpf.core.machine.MachineController)

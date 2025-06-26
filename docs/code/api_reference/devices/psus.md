@@ -1,5 +1,6 @@
+# psus API Reference
 
-# self.machine.psus.*
+`self.machine.psus.*`
 
 ``` python
 class mpf.devices.power_supply_unit.PowerSupplyUnit(machine, name)

@@ -1,5 +1,6 @@
+# show_controller API Reference
 
-# self.machine.show_controller
+`self.machine.show_controller`
 
 ``` python
 class mpf.core.show_controller.ShowController(machine)

@@ -1,5 +1,6 @@
+# twitch_bot API Reference
 
-# self.machine.twitch_bot
+`self.machine.twitch_bot`
 
 ``` python
 class mpf.plugins.twitch_bot.TwitchBot(machine)

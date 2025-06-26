@@ -1,5 +1,6 @@
+# text_ui API Reference
 
-# self.machine.text_ui
+`self.machine.text_ui`
 
 ``` python
 class mpf.core.text_ui.TextUi(machine: MachineController)

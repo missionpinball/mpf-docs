@@ -1,5 +1,6 @@
+# autofires API Reference
 
-# self.machine.autofires.*
+`self.machine.autofires.*`
 
 ``` python
 class mpf.devices.autofire.AutofireCoil(*args, **kwargs)

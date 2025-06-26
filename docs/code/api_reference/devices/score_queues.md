@@ -1,5 +1,6 @@
+# score_queues API Reference
 
-# self.machine.score_queues.*
+`self.machine.score_queues.*`
 
 ``` python
 class mpf.devices.score_queue.ScoreQueue(machine, name)

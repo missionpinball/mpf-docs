@@ -1,5 +1,6 @@
+# drop_target_banks API Reference
 
-# self.machine.drop_target_banks.*
+`self.machine.drop_target_banks.*`
 
 ``` python
 class mpf.devices.drop_target.DropTargetBank(*args, **kwargs)

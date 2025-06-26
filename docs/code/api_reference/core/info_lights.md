@@ -1,5 +1,6 @@
+# info_lights API Reference
 
-# self.machine.info_lights
+`self.machine.info_lights`
 
 ``` python
 class mpf.plugins.info_lights.InfoLights(machine)

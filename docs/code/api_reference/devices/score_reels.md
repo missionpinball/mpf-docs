@@ -1,5 +1,6 @@
+# score_reels API Reference
 
-# self.machine.score_reels.*
+`self.machine.score_reels.*`
 
 ``` python
 class mpf.devices.score_reel.ScoreReel(machine, name)

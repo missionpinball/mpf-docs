@@ -1,5 +1,6 @@
+# flippers API Reference
 
-# self.machine.flippers.*
+`self.machine.flippers.*`
 
 ``` python
 class mpf.devices.flipper.Flipper(*args, **kwargs)

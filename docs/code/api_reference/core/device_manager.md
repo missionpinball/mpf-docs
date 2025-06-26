@@ -1,5 +1,6 @@
+# device_manager API Reference
 
-# self.machine.device_manager
+`self.machine.device_manager`
 
 ``` python
 class mpf.core.device_manager.DeviceManager(machine)

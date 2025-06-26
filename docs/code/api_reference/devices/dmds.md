@@ -1,4 +1,6 @@
-# self.machine.dmds.*
+# dmds API Reference
+
+`self.machine.dmds.*`
 
 ``` python
 class mpf.devices.dmd.Dmd(machine, name)

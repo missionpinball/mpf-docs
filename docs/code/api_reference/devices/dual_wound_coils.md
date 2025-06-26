@@ -1,5 +1,6 @@
+# dual_wound_coils API Reference
 
-# self.machine.dual_wound_coils.*
+`self.machine.dual_wound_coils.*`
 
 ``` python
 class mpf.devices.dual_wound_coil.DualWoundCoil(machine, name)

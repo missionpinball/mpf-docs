@@ -1,5 +1,6 @@
+# counters API Reference
 
-# self.machine.counters.*
+`self.machine.counters.*`
 
 ``` python
 class mpf.devices.logic_blocks.Counter(machine: mpf.core.machine.MachineController, name: str)

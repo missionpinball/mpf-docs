@@ -1,5 +1,6 @@
+# mode_controller API Reference
 
-# self.machine.mode_controller
+`self.machine.mode_controller`
 
 ``` python
 class mpf.core.mode_controller.ModeController(machine: mpf.core.machine.MachineController)

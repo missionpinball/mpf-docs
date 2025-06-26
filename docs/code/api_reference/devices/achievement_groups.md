@@ -1,5 +1,6 @@
+# achievement_groups API reference
 
-# self.machine.achievement_groups.*
+`self.machine.achievement_groups.*`
 
 ``` python
 class mpf.devices.achievement_group.AchievementGroup(*args, **kwargs)

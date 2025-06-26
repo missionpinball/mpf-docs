@@ -1,5 +1,6 @@
+# accruals API Reference
 
-# self.machine.accruals.*
+`self.machine.accruals.*`
 
 ``` python
 class mpf.devices.logic_blocks.Accrual(*args, **kwargs)

@@ -1,5 +1,6 @@
+# timed_switches API Reference
 
-# self.machine.timed_switches.*
+`self.machine.timed_switches.*`
 
 ``` python
 class mpf.devices.timed_switch.TimedSwitch(*args, **kwargs)

@@ -1,5 +1,6 @@
+# auditor API Reference
 
-# self.machine.auditor
+`self.machine.auditor`
 
 ``` python
 class mpf.plugins.auditor.Auditor(machine: MachineController)

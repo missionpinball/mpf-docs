@@ -1,5 +1,6 @@
+# multiball_locks API Reference
 
-# self.machine.multiball_locks.*
+`self.machine.multiball_locks.*`
 
 ``` python
 class mpf.devices.multiball_lock.MultiballLock(*args, **kwargs)

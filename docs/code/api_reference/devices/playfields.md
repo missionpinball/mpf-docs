@@ -1,4 +1,6 @@
-# self.machine.playfields.*
+# playfields API Reference
+
+`self.machine.playfields.*`
 
 ``` python
 class mpf.devices.playfield.Playfield(*args, **kwargs)

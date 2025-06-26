@@ -1,5 +1,6 @@
+# shot_profiles API Reference
 
-# self.machine.shot_profiles.*
+`self.machine.shot_profiles.*`
 
 ``` python
 class mpf.devices.shot_profile.ShotProfile(machine: mpf.core.machine.MachineController, name: str)

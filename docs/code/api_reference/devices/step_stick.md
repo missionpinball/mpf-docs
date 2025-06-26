@@ -1,5 +1,6 @@
+# step_stick API Reference
 
-# self.machine.hardware_platforms[‘step_stick’]
+`self.machine.hardware_platforms['step_stick']`
 
 ``` python
 class mpf.platforms.step_stick.StepStickDigitalOutputPlatform(machine)

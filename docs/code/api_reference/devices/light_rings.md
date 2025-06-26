@@ -1,5 +1,6 @@
+# light_rings API Reference
 
-# self.machine.light_rings.*
+`self.machine.light_rings.*`
 
 ``` python
 class mpf.devices.light_group.LightRing(machine: mpf.core.machine.MachineController, name)

@@ -1,5 +1,6 @@
+# achievements API Reference
 
-# self.machine.achievements.*
+`self.machine.achievements.*`
 
 ``` python
 class mpf.devices.achievement.Achievement(*args, **kwargs)

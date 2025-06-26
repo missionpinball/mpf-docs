@@ -1,5 +1,6 @@
+# digital_outputs API Reference
 
-# self.machine.digital_outputs.*
+`self.machine.digital_outputs.*`
 
 ``` python
 class mpf.devices.digital_output.DigitalOutput(machine: mpf.core.machine.MachineController, name: str)

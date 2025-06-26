@@ -1,5 +1,6 @@
+# placeholder_manager API Reference
 
-# self.machine.placeholder_manager
+`self.machine.placeholder_manager`
 
 ``` python
 class mpf.core.placeholder_manager.PlaceholderManager(machine)

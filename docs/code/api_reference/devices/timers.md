@@ -1,4 +1,6 @@
-# self.machine.timers.*
+# timers API Reference
+
+`self.machine.timers.*`
 
 ``` python
 class mpf.devices.timer.Timer(*args, **kwargs)

@@ -1,5 +1,6 @@
+# light_controller API Reference
 
-# self.machine.light_controller
+`self.machine.light_controller`
 
 ``` python
 class mpf.core.light_controller.LightController(machine: mpf.core.machine.MachineController)

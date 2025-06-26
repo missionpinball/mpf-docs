@@ -1,5 +1,6 @@
+# hardware_sound_systems API Reference
 
-# self.machine.hardware_sound_systems.*
+`self.machine.hardware_sound_systems.*`
 
 ``` python
 class mpf.devices.hardware_sound_system.HardwareSoundSystem(machine, name)

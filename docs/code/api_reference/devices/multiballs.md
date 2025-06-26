@@ -1,5 +1,6 @@
+# multiballs API Reference
 
-# self.machine.multiballs.*
+`self.machine.multiballs.*`
 
 ``` python
 class mpf.devices.multiball.Multiball(*args, **kwargs)

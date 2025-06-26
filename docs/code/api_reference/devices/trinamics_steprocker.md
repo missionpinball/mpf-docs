@@ -1,5 +1,6 @@
+# trinamics_steprocker API Reference
 
-# self.machine.hardware_platforms[‘trinamics_steprocker’]
+`self.machine.hardware_platforms['trinamics_steprocker']`
 
 ``` python
 class mpf.platforms.trinamics_steprocker.TrinamicsStepRocker(machine)

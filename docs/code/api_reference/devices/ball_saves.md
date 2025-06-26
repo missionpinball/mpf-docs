@@ -1,5 +1,6 @@
+# ball_saves API Reference
 
-# self.machine.ball_saves.*
+`self.machine.ball_saves.*`
 
 ``` python
 class mpf.devices.ball_save.BallSave(*args, **kwargs)

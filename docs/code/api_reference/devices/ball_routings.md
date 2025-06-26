@@ -1,5 +1,6 @@
+# ball_routings API Reference
 
-# self.machine.ball_routings.*
+`self.machine.ball_routings.*`
 
 ``` python
 class mpf.devices.ball_routing.BallRouting(*args, **kwargs)

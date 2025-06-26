@@ -1,5 +1,6 @@
+# events API Reference
 
-# self.machine.events
+`self.machine.events`
 
 ``` python
 class mpf.core.events.EventManager(machine: MachineController)

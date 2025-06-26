@@ -1,5 +1,6 @@
+# p_roc API Reference
 
-# self.machine.hardware_platforms[‘p_roc’]
+`self.machine.hardware_platforms['p_roc']`
 
 ``` python
 class mpf.platforms.p_roc.PRocHardwarePlatform(machine)

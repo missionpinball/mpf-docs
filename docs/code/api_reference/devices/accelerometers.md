@@ -1,5 +1,6 @@
+# accelerometers API Reference
 
-# self.machine.accelerometers.*
+`self.machine.accelerometers.*`
 
 ``` python
 class mpf.devices.accelerometer.Accelerometer(*args, **kwargs)

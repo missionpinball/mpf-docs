@@ -1,5 +1,6 @@
+# pin2dmd API Reference
 
-# self.machine.hardware_platforms[‘pin2dmd’]
+`self.machine.hardware_platforms['pin2dmd']`
 
 ``` python
 class mpf.platforms.pin2dmd.Pin2DmdHardwarePlatform(machine)

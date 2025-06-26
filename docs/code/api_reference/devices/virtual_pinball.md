@@ -1,5 +1,6 @@
+# virtual_pinball API Reference
 
-# self.machine.hardware_platforms[‘virtual_pinball’]
+`self.machine.hardware_platforms['virtual_pinball']`
 
 ``` python
 class mpf.platforms.virtual_pinball.virtual_pinball.VirtualPinballPlatform(machine)

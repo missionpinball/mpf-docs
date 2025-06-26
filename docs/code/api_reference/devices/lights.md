@@ -1,5 +1,6 @@
+# lights API Reference
 
-# self.machine.lights.*
+`self.machine.lights.*`
 
 ``` python
 class mpf.devices.light.Light(*args, **kwargs)

@@ -1,5 +1,6 @@
+# combo_switches API Reference
 
-# self.machine.combo_switches.*
+`self.machine.combo_switches.*`
 
 ``` python
 class mpf.devices.combo_switch.ComboSwitch(*args, **kwargs)

@@ -1,5 +1,6 @@
+# light_stripes API Reference
 
-self.machine.light_stripes.*
+`self.machine.light_stripes.*`
 
 ``` python
 class mpf.devices.light_group.LightStrip(machine: mpf.core.machine.MachineController, name)

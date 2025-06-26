@@ -1,5 +1,6 @@
+# settings API Reference
 
-# self.machine.settings
+`self.machine.settings`
 
 ``` python
 class mpf.core.settings_controller.SettingsController(machine)
