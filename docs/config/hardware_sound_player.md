@@ -1,9 +1,8 @@
 ---
-title: "hardware_sound_player:"
+title: "hardware_sound_player: Config Reference"
 ---
 
-# hardware_sound_player:
-
+# hardware_sound_player: Config Reference
 
 --8<-- "config_section.md"
 

@@ -1,9 +1,8 @@
 ---
-title: "pololu_tic:"
+title: "pololu_tic: Config Reference"
 ---
 
-# pololu_tic:
-
+# pololu_tic: Config Reference
 
 --8<-- "config_section.md"
 

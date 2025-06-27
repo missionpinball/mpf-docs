@@ -1,9 +1,8 @@
 ---
-title: "drop_target_banks:"
+title: "drop_target_banks: Config Reference"
 ---
 
-# drop_target_banks:
-
+# drop_target_banks: Config Reference
 
 --8<-- "config_section.md"
 

@@ -1,9 +1,8 @@
 ---
-title: "steppers:"
+title: "steppers: Config Reference"
 ---
 
-# steppers:
-
+# steppers: Config Reference
 
 --8<-- "config_section.md"
 

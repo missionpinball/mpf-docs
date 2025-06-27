@@ -1,9 +1,8 @@
 ---
-title: "bitmap_fonts:"
+title: "bitmap_fonts: Config Reference"
 ---
 
-# bitmap_fonts:
-
+# bitmap_fonts: Config Reference
 
 --8<-- "config_section.md"
 

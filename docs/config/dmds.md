@@ -1,9 +1,8 @@
 ---
-title: "dmds:"
+title: "dmds: Config Reference"
 ---
 
-# dmds:
-
+# dmds: Config Reference
 
 --8<-- "config_section.md"
 

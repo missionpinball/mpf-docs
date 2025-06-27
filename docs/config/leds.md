@@ -1,9 +1,8 @@
 ---
-title: "leds:"
+title: "leds: Config Reference"
 ---
 
-# leds:
-
+# leds: Config Reference
 
 --8<-- "config_section.md"
 

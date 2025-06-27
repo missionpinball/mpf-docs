@@ -1,9 +1,8 @@
 ---
-title: "flasher_player:"
+title: "flasher_player: Config Reference"
 ---
 
-# flasher_player:
-
+# flasher_player: Config Reference
 
 --8<-- "config_section.md"
 

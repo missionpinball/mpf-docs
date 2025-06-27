@@ -1,9 +1,8 @@
 ---
-title: "mypinballs:"
+title: "mypinballs: Config Reference"
 ---
 
-# mypinballs:
-
+# mypinballs: Config Reference
 
 --8<-- "config_section.md"
 

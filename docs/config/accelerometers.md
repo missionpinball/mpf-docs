@@ -1,19 +1,15 @@
 ---
-title: "accelerometers:"
+title: "accelerometers: Config Reference"
 ---
 
-# accelerometers:
-
+# accelerometers: Config Reference
 
 --8<-- "config_section.md"
-
 
 | Valid in | |
 |-----|:----:|
 |[machine](instructions/machine_config.md) config files |**YES** :white_check_mark:|
 |[mode](instructions/mode_config.md) config files|**NO** :no_entry_sign:|
-
-
 
 Hardware platforms which support accelerometers
 

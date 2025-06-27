@@ -1,9 +1,8 @@
 ---
-title: "shot_groups:"
+title: "shot_groups: Config Reference"
 ---
 
-# shot_groups:
-
+# shot_groups: Config Reference
 
 --8<-- "config_section.md"
 

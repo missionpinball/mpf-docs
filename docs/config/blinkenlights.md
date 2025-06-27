@@ -1,9 +1,8 @@
 ---
-title: "blinkenlights:"
+title: "blinkenlights: Config Reference"
 ---
 
-# blinkenlights:
-
+# blinkenlights: Config Reference
 
 --8<-- "config_section.md"
 

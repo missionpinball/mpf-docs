@@ -1,9 +1,8 @@
 ---
-title: "p_roc:"
+title: "p_roc: Config Reference"
 ---
 
-# p_roc:
-
+# p_roc: Config Reference
 
 --8<-- "config_section.md"
 

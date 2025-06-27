@@ -1,9 +1,8 @@
 ---
-title: "playfields:"
+title: "playfields: Config Reference"
 ---
 
-# playfields:
-
+# playfields: Config Reference
 
 --8<-- "config_section.md"
 

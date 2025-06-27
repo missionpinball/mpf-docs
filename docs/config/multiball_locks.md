@@ -1,9 +1,8 @@
 ---
-title: "multiball_locks:"
+title: "multiball_locks: Config Reference"
 ---
 
-# multiball_locks:
-
+# multiball_locks: Config Reference
 
 --8<-- "config_section.md"
 

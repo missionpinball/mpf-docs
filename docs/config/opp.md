@@ -1,9 +1,8 @@
 ---
-title: "opp:"
+title: "opp: Config Reference"
 ---
 
-# opp:
-
+# opp: Config Reference
 
 --8<-- "config_section.md"
 

@@ -1,9 +1,8 @@
 ---
-title: "fast:"
+title: "fast: Config Reference"
 ---
 
-# fast:
-
+# fast: Config Reference
 
 --8<-- "config_section.md"
 

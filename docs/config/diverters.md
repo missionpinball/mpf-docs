@@ -1,9 +1,8 @@
 ---
-title: "diverters:"
+title: "diverters: Config Reference"
 ---
 
-# diverters:
-
+# diverters: Config Reference
 
 --8<-- "config_section.md"
 

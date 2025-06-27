@@ -1,9 +1,8 @@
 ---
-title: "assets:"
+title: "assets: Config Reference"
 ---
 
-# assets:
-
+# assets: Config Reference
 
 --8<-- "config_section.md"
 

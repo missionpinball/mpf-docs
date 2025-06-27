@@ -1,9 +1,8 @@
 ---
-title: "coil_overwrites:"
+title: "coil_overwrites: Config Reference"
 ---
 
-# coil_overwrites:
-
+# coil_overwrites: Config Reference
 
 --8<-- "config_section.md"
 

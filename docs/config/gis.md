@@ -1,9 +1,8 @@
 ---
-title: "gis:"
+title: "gis: Config Reference"
 ---
 
-# gis:
-
+# gis: Config Reference
 
 !!! warning
 

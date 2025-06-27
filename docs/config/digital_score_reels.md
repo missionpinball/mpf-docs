@@ -1,9 +1,8 @@
 ---
-title: "digital_score_reels:"
+title: "digital_score_reels: Config Reference"
 ---
 
-# digital_score_reels:
-
+# digital_score_reels: Config Reference
 
 --8<-- "config_section.md"
 

@@ -1,9 +1,8 @@
 ---
-title: "event_player:"
+title: "event_player: Config Reference"
 ---
 
-# event_player:
-
+# event_player: Config Reference
 
 --8<-- "config_section.md"
 

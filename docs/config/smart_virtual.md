@@ -1,9 +1,8 @@
 ---
-title: "smart_virtual:"
+title: "smart_virtual: Config Reference"
 ---
 
-# smart_virtual:
-
+# smart_virtual: Config Reference
 
 --8<-- "config_section.md"
 

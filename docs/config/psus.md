@@ -1,9 +1,8 @@
 ---
-title: "psus:"
+title: "psus: Config Reference"
 ---
 
-# psus:
-
+# psus: Config Reference
 
 --8<-- "config_section.md"
 

@@ -1,9 +1,8 @@
 ---
-title: "system11:"
+title: "system11: Config Reference"
 ---
 
-# system11:
-
+# system11: Config Reference
 
 --8<-- "config_section.md"
 

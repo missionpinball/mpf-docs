@@ -1,9 +1,8 @@
 ---
-title: "playfield_transfers:"
+title: "playfield_transfers: Config Reference"
 ---
 
-# playfield_transfers:
-
+# playfield_transfers: Config Reference
 
 --8<-- "config_section.md"
 

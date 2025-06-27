@@ -1,9 +1,8 @@
 ---
-title: "rgb_dmds:"
+title: "rgb_dmds: Config Reference"
 ---
 
-# rgb_dmds:
-
+# rgb_dmds: Config Reference
 
 --8<-- "config_section.md"
 

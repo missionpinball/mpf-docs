@@ -1,9 +1,8 @@
 ---
-title: "sound_player:"
+title: "sound_player: Config Reference"
 ---
 
-# sound_player:
-
+# sound_player: Config Reference
 
 --8<-- "config_section.md"
 

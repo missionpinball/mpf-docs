@@ -1,9 +1,8 @@
 ---
-title: "pin2dmd:"
+title: "pin2dmd: Config Reference"
 ---
 
-# pin2dmd:
-
+# pin2dmd: Config Reference
 
 --8<-- "config_section.md"
 

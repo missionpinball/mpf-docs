@@ -1,9 +1,8 @@
 ---
-title: "video_pools:"
+title: "video_pools: Config Reference"
 ---
 
-# video_pools:
-
+# video_pools: Config Reference
 
 --8<-- "config_section.md"
 

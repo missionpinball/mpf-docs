@@ -1,9 +1,8 @@
 ---
-title: "pololu_maestro:"
+title: "pololu_maestro: Config Reference"
 ---
 
-# pololu_maestro:
-
+# pololu_maestro: Config Reference
 
 --8<-- "config_section.md"
 

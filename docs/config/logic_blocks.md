@@ -1,9 +1,8 @@
 ---
-title: "logic_blocks:"
+title: "logic_blocks: Config Reference"
 ---
 
-# logic_blocks:
-
+# logic_blocks: Config Reference
 
 Logic blocks moved one level up in MPF 0.50. Instead of
 

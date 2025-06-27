@@ -1,9 +1,8 @@
 ---
-title: "tilt:"
+title: "tilt: Config Reference"
 ---
 
-# tilt:
-
+# tilt: Config Reference
 
 --8<-- "config_section.md"
 

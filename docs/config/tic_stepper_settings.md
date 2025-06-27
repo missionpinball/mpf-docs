@@ -1,9 +1,8 @@
 ---
-title: "tic_stepper_settings:"
+title: "tic_stepper_settings: Config Reference"
 ---
 
-# tic_stepper_settings:
-
+# tic_stepper_settings: Config Reference
 
 --8<-- "config_section.md"
 

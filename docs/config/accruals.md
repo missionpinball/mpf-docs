@@ -1,9 +1,8 @@
 ---
-title: "accruals:"
+title: "accruals: Config Reference"
 ---
 
-# accruals:
-
+# accruals: Config Reference
 
 --8<-- "config_section.md"
 

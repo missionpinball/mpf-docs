@@ -1,9 +1,8 @@
 ---
-title: "fast_coils:"
+title: "fast_coils: Config Reference"
 ---
 
-# fast_coils:
-
+# fast_coils: Config Reference
 
 --8<-- "config_section.md"
 

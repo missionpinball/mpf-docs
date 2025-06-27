@@ -1,9 +1,8 @@
 ---
-title: "flashers:"
+title: "flashers: Config Reference"
 ---
 
-# flashers:
-
+# flashers: Config Reference
 
 *Removed in 0.50.*
 

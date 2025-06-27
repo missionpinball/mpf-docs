@@ -1,9 +1,8 @@
 ---
-title: "light_player:"
+title: "light_player: Config Reference"
 ---
 
-# light_player:
-
+# light_player: Config Reference
 
 --8<-- "config_section.md"
 

@@ -1,9 +1,8 @@
 ---
-title: "score_reels:"
+title: "score_reels: Config Reference"
 ---
 
-# score_reels:
-
+# score_reels: Config Reference
 
 --8<-- "config_section.md"
 

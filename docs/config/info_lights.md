@@ -1,9 +1,8 @@
 ---
-title: "info_lights:"
+title: "info_lights: Config Reference"
 ---
 
-# info_lights:
-
+# info_lights: Config Reference
 
 --8<-- "config_section.md"
 

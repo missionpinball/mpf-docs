@@ -1,9 +1,8 @@
 ---
-title: "shot_profiles:"
+title: "shot_profiles: Config Reference"
 ---
 
-# shot_profiles:
-
+# shot_profiles: Config Reference
 
 --8<-- "config_section.md"
 

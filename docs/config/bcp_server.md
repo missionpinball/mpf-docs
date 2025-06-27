@@ -1,9 +1,8 @@
 ---
-title: "bcp_server:"
+title: "bcp_server: Config Reference"
 ---
 
-# bcp_server:
-
+# bcp_server: Config Reference
 
 --8<-- "config_section.md"
 

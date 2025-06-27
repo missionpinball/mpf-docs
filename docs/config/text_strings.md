@@ -1,9 +1,8 @@
 ---
-title: "text_strings:"
+title: "text_strings: Config Reference"
 ---
 
-# text_strings:
-
+# text_strings: Config Reference
 
 --8<-- "config_section.md"
 

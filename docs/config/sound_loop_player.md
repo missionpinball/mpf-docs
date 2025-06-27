@@ -1,9 +1,8 @@
 ---
-title: "sound_loop_player:"
+title: "sound_loop_player: Config Reference"
 ---
 
-# sound_loop_player:
-
+# sound_loop_player: Config Reference
 
 --8<-- "config_section.md"
 

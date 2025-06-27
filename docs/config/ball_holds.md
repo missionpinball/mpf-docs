@@ -1,9 +1,8 @@
 ---
-title: "ball_holds:"
+title: "ball_holds: Config Reference"
 ---
 
-# ball_holds:
-
+# ball_holds: Config Reference
 
 --8<-- "config_section.md"
 

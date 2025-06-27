@@ -1,9 +1,8 @@
 ---
-title: "multiballs:"
+title: "multiballs: Config Reference"
 ---
 
-# multiballs:
-
+# multiballs: Config Reference
 
 --8<-- "config_section.md"
 

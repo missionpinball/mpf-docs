@@ -1,9 +1,8 @@
 ---
-title: "window:"
+title: "window: Config Reference"
 ---
 
-# window:
-
+# window: Config Reference
 
 --8<-- "config_section.md"
 

@@ -1,9 +1,8 @@
 ---
-title: "image_pools:"
+title: "image_pools: Config Reference"
 ---
 
-# image_pools:
-
+# image_pools: Config Reference
 
 --8<-- "config_section.md"
 

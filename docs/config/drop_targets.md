@@ -1,9 +1,8 @@
 ---
-title: "drop_targets:"
+title: "drop_targets: Config Reference"
 ---
 
-# drop_targets:
-
+# drop_targets: Config Reference
 
 --8<-- "config_section.md"
 

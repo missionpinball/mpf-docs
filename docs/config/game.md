@@ -1,9 +1,8 @@
 ---
-title: "game:"
+title: "game: Config Reference"
 ---
 
-# game:
-
+# game: Config Reference
 
 --8<-- "config_section.md"
 

@@ -1,9 +1,8 @@
 ---
-title: "queue_event_player:"
+title: "queue_event_player: Config Reference"
 ---
 
-# queue_event_player:
-
+# queue_event_player: Config Reference
 
 --8<-- "config_section.md"
 

@@ -1,9 +1,8 @@
 ---
-title: "machine_vars:"
+title: "machine_vars: Config Reference"
 ---
 
-# machine_vars:
-
+# machine_vars: Config Reference
 
 --8<-- "config_section.md"
 

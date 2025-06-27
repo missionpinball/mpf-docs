@@ -1,9 +1,8 @@
 ---
-title: "twitch_client:"
+title: "twitch_client: Config Reference"
 ---
 
-# twitch_client:
-
+# twitch_client: Config Reference
 
 --8<-- "config_section.md"
 

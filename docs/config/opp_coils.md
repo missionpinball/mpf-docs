@@ -1,9 +1,8 @@
 ---
-title: "opp_coils:"
+title: "opp_coils: Config Reference"
 ---
 
-# opp_coils:
-
+# opp_coils: Config Reference
 
 --8<-- "config_section.md"
 

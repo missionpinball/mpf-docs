@@ -1,9 +1,8 @@
 ---
-title: "sound_system:"
+title: "sound_system: Config Reference"
 ---
 
-# sound_system:
-
+# sound_system: Config Reference
 
 --8<-- "config_section.md"
 

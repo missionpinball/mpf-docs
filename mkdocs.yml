@@ -718,192 +718,192 @@ nav:
       - Gamma correction in MPF: config/instructions/gamma_correction.md
       - How to enter gain values in config files: config/instructions/gain_values.md
 
-    - config/accelerometers.md
-    - config/accruals.md
-    - config/achievement_groups.md
-    - config/achievements.md
-    - config/animations.md
-    - config/assets.md
-    - config/auditor.md
-    - config/autofire_coils.md
-    - config/ball_devices.md
-    - config/ball_holds.md
-    - config/ball_locks.md
-    - config/ball_routings.md
-    - config/ball_saves.md
-    - config/bcp.md
-    - config/bcp_connection.md
-    - config/bcp_server.md
-    - config/bitmap_fonts.md
-    - config/blinkenlight_player.md
-    - config/blinkenlights.md
-    - config/bonus.md
-    - config/coil_overwrites.md
-    - config/coil_player.md
-    - config/coils.md
-    - config/color_correction_profile.md
-    - config/combo_switches.md
-    - config/config.md
-    - config/counter_control_events.md
-    - config/counters.md
-    - config/credits.md
-    - config/custom_code.md
-    - config/digital_outputs.md
-    - config/digital_score_reels.md
-    - config/display_light_player.md
-    - config/displays.md
-    - config/diverters.md
-    - config/dmds.md
-    - config/drop_target_banks.md
-    - config/drop_targets.md
-    - config/dual_wound_coils.md
-    - config/event_player.md
-    - config/extra_ball_groups.md
-    - config/extra_balls.md
-    - config/fadecandy.md
-    - config/fast.md
-    - config/fast_coils.md
-    - config/fast_switches.md
-    - config/flasher_player.md
-    - config/flashers.md
-    - config/flippers.md
-    - config/game.md
-    - config/gi_player.md
-    - config/gis.md
-    - config/hardware.md
-    - config/hardware_benchmark.md
-    - config/hardware_sound_player.md
-    - config/hardware_sound_systems.md
-    - config/high_score.md
-    - config/image_pools.md
-    - config/images.md
-    - config/images_frame_skips.md
-    - config/info_lights.md
-    - config/keyboard.md
-    - config/kickbacks.md
-    - config/kivy_config.md
-    - config/led_player.md
-    - config/leds.md
-    - config/light_player.md
-    - config/light_rings.md
-    - config/light_segment_displays.md
-    - config/light_segment_displays_device.md
-    - config/light_settings.md
-    - config/light_stripes.md
-    - config/lights.md
-    - config/lisy.md
-    - config/logging.md
-    - config/logic_blocks.md
-    - config/logic_blocks_common.md
-    - config/machine.md
-    - config/machine_vars.md
-    - config/magnets.md
-    - config/matrix_lights.md
-    - config/mc_custom_code.md
-    - config/mc_scriptlets.md
-    - config/mode.md
-    - config/mode_settings.md
-    - config/modes.md
-    - config/motors.md
-    - config/mpf-mc.md
-    - config/mpf.md
-    - config/multiball_locks.md
-    - config/multiballs.md
-    - config/mypinballs.md
-    - config/named_colors.md
-    - config/neoseg_displays.md
-    - config/open_pixel_control.md
-    - config/opp.md
-    - config/opp_coils.md
-    - config/osc.md
-    - config/p_roc.md
-    - config/pd_led_boards.md
-    - config/pin2dmd.md
-    - config/pkone.md
-    - config/player_vars.md
-    - config/playfield_transfers.md
-    - config/playfields.md
-    - config/playlist_player.md
-    - config/playlists.md
-    - config/plugins.md
-    - config/pololu_maestro.md
-    - config/pololu_tic.md
-    - config/psus.md
-    - config/queue_event_player.md
-    - config/queue_relay_player.md
-    - config/random_event_player.md
-    - config/raspberry_pi.md
-    - config/rgb_dmds.md
-    - config/rpi_dmd.md
-    - config/score_queue_player.md
-    - config/score_queues.md
-    - config/score_reel_groups.md
-    - config/score_reels.md
-    - config/scriptlets.md
-    - config/segment_display_player.md
-    - config/segment_displays.md
-    - config/sequence_shots.md
-    - config/sequences.md
-    - config/servo_controllers.md
-    - config/servos.md
-    - config/settings.md
-    - config/shot_control_events.md
-    - config/shot_groups.md
-    - config/shot_profiles.md
-    - config/shots.md
-    - config/show_config.md
-    - config/show_player.md
-    - config/show_pools.md
-    - config/shows.md
-    - config/slide_player.md
-    - config/slides.md
-    - config/smart_virtual.md
-    - config/smartmatrix.md
-    - config/snux.md
-    - config/sound_ducking.md
-    - config/sound_loop_player.md
-    - config/sound_loop_sets.md
-    - config/sound_marker.md
-    - config/sound_player.md
-    - config/sound_pools.md
-    - config/sound_system.md
-    - config/sound_system_tracks.md
-    - config/sounds.md
-    - config/speedometers.md
-    - config/spi_bit_bang.md
-    - config/spike.md
-    - config/spike_node.md
-    - config/spinners.md
-    - config/state_machine_states.md
-    - config/state_machine_transitions.md
-    - config/state_machines.md
-    - config/steppers.md
-    - config/step_stick_stepper_settings.md
-    - config/switch_overwrites.md
-    - config/switch_player.md
-    - config/switches.md
-    - config/system11.md
-    - config/template_setting.md
-    - config/text_strings.md
-    - config/text_ui.md
-    - config/tic_stepper_settings.md
-    - config/tilt.md
-    - config/timed_switches.md
-    - config/timer_control_events.md
-    - config/timers.md
-    - config/track_player.md
-    - config/trinamics_steprocker.md
-    - config/twitch_client.md
-    - config/variable_player.md
-    - config/video_pools.md
-    - config/videos.md
-    - config/virtual_platform_start_active_switches.md
-    - config/virtual_segment_display_connector.md
-    - config/vpe.md
-    - config/widget_player.md
-    - config/widget_styles.md
-    - config/widgets.md
-    - config/window.md
+    - "accelerometers:": config/accelerometers.md
+    - "accruals:": config/accruals.md
+    - "achievement_groups:": config/achievement_groups.md
+    - "achievements:": config/achievements.md
+    - "animations:": config/animations.md
+    - "assets:": config/assets.md
+    - "auditor:": config/auditor.md
+    - "autofire_coils:": config/autofire_coils.md
+    - "ball_devices:": config/ball_devices.md
+    - "ball_holds:": config/ball_holds.md
+    - "ball_locks:": config/ball_locks.md
+    - "ball_routings:": config/ball_routings.md
+    - "ball_saves:": config/ball_saves.md
+    - "bcp:": config/bcp.md
+    - "bcp_connection:": config/bcp_connection.md
+    - "bcp_server:": config/bcp_server.md
+    - "bitmap_fonts:": config/bitmap_fonts.md
+    - "blinkenlight_player:": config/blinkenlight_player.md
+    - "blinkenlights:": config/blinkenlights.md
+    - "bonus (mode_settings:)": config/bonus.md
+    - "coil_overwrites:": config/coil_overwrites.md
+    - "coil_player:": config/coil_player.md
+    - "coils:": config/coils.md
+    - "color_correction_profile:": config/color_correction_profile.md
+    - "combo_switches:": config/combo_switches.md
+    - "config:": config/config.md
+    - "counter_control_events:": config/counter_control_events.md
+    - "counters:": config/counters.md
+    - "credits:": config/credits.md
+    - "custom_code:": config/custom_code.md
+    - "digital_outputs:": config/digital_outputs.md
+    - "digital_score_reels:": config/digital_score_reels.md
+    - "display_light_player:": config/display_light_player.md
+    - "displays:": config/displays.md
+    - "diverters:": config/diverters.md
+    - "dmds:": config/dmds.md
+    - "drop_target_banks:": config/drop_target_banks.md
+    - "drop_targets:": config/drop_targets.md
+    - "dual_wound_coils:": config/dual_wound_coils.md
+    - "event_player:": config/event_player.md
+    - "extra_ball_groups:": config/extra_ball_groups.md
+    - "extra_balls:": config/extra_balls.md
+    - "fadecandy:": config/fadecandy.md
+    - "fast:": config/fast.md
+    - "fast_coils:": config/fast_coils.md
+    - "fast_switches:": config/fast_switches.md
+    - "flasher_player:": config/flasher_player.md
+    - "flashers:": config/flashers.md
+    - "flippers:": config/flippers.md
+    - "game:": config/game.md
+    - "gi_player:": config/gi_player.md
+    - "gis:": config/gis.md
+    - "hardware:": config/hardware.md
+    - "hardware_benchmark:": config/hardware_benchmark.md
+    - "hardware_sound_player:": config/hardware_sound_player.md
+    - "hardware_sound_systems:": config/hardware_sound_systems.md
+    - "high_score:": config/high_score.md
+    - "image_pools:": config/image_pools.md
+    - "images:": config/images.md
+    - "images_frame_skips:": config/images_frame_skips.md
+    - "info_lights:": config/info_lights.md
+    - "keyboard:": config/keyboard.md
+    - "kickbacks:": config/kickbacks.md
+    - "kivy_config:": config/kivy_config.md
+    - "led_player:": config/led_player.md
+    - "leds:": config/leds.md
+    - "light_player:": config/light_player.md
+    - "light_rings:": config/light_rings.md
+    - "light_segment_displays:": config/light_segment_displays.md
+    - "light_segment_displays_device:": config/light_segment_displays_device.md
+    - "light_settings:": config/light_settings.md
+    - "light_stripes:": config/light_stripes.md
+    - "lights:": config/lights.md
+    - "lisy:": config/lisy.md
+    - "logging:": config/logging.md
+    - "logic_blocks:": config/logic_blocks.md
+    - "logic_blocks_common:": config/logic_blocks_common.md
+    - "machine:": config/machine.md
+    - "machine_vars:": config/machine_vars.md
+    - "magnets:": config/magnets.md
+    - "matrix_lights:": config/matrix_lights.md
+    - "mc_custom_code:": config/mc_custom_code.md
+    - "mc_scriptlets:": config/mc_scriptlets.md
+    - "mode:": config/mode.md
+    - "mode_settings:": config/mode_settings.md
+    - "modes:": config/modes.md
+    - "motors:": config/motors.md
+    - "mpf:": config/mpf-mc.md
+    - "mpf:": config/mpf.md
+    - "multiball_locks:": config/multiball_locks.md
+    - "multiballs:": config/multiballs.md
+    - "mypinballs:": config/mypinballs.md
+    - "named_colors:": config/named_colors.md
+    - "neoseg_displays:": config/neoseg_displays.md
+    - "open_pixel_control:": config/open_pixel_control.md
+    - "opp:": config/opp.md
+    - "opp_coils:": config/opp_coils.md
+    - "osc:": config/osc.md
+    - "p_roc:": config/p_roc.md
+    - "pd_led_boards:": config/pd_led_boards.md
+    - "pin2dmd:": config/pin2dmd.md
+    - "pkone:": config/pkone.md
+    - "player_vars:": config/player_vars.md
+    - "playfield_transfers:": config/playfield_transfers.md
+    - "playfields:": config/playfields.md
+    - "playlist_player:": config/playlist_player.md
+    - "playlists:": config/playlists.md
+    - "plugins:": config/plugins.md
+    - "pololu_maestro:": config/pololu_maestro.md
+    - "pololu_tic:": config/pololu_tic.md
+    - "psus:": config/psus.md
+    - "queue_event_player:": config/queue_event_player.md
+    - "queue_relay_player:": config/queue_relay_player.md
+    - "random_event_player:": config/random_event_player.md
+    - "raspberry_pi:": config/raspberry_pi.md
+    - "rgb_dmds:": config/rgb_dmds.md
+    - "rpi_dmd:": config/rpi_dmd.md
+    - "score_queue_player:": config/score_queue_player.md
+    - "score_queues:": config/score_queues.md
+    - "score_reel_groups:": config/score_reel_groups.md
+    - "score_reels:": config/score_reels.md
+    - "scriptlets:": config/scriptlets.md
+    - "segment_display_player:": config/segment_display_player.md
+    - "segment_displays:": config/segment_displays.md
+    - "sequence_shots:": config/sequence_shots.md
+    - "sequences:": config/sequences.md
+    - "servo_controllers:": config/servo_controllers.md
+    - "servos:": config/servos.md
+    - "settings:": config/settings.md
+    - "shot_control_events:": config/shot_control_events.md
+    - "shot_groups:": config/shot_groups.md
+    - "shot_profiles:": config/shot_profiles.md
+    - "shots:": config/shots.md
+    - "show_config:": config/show_config.md
+    - "show_player:": config/show_player.md
+    - "show_pools:": config/show_pools.md
+    - "shows:": config/shows.md
+    - "slide_player:": config/slide_player.md
+    - "slides:": config/slides.md
+    - "smart_virtual:": config/smart_virtual.md
+    - "smartmatrix:": config/smartmatrix.md
+    - "snux:": config/snux.md
+    - "sound_ducking:": config/sound_ducking.md
+    - "sound_loop_player:": config/sound_loop_player.md
+    - "sound_loop_sets:": config/sound_loop_sets.md
+    - "sound_marker:": config/sound_marker.md
+    - "sound_player:": config/sound_player.md
+    - "sound_pools:": config/sound_pools.md
+    - "sound_system:": config/sound_system.md
+    - "sound_system_tracks:": config/sound_system_tracks.md
+    - "sounds:": config/sounds.md
+    - "speedometers:": config/speedometers.md
+    - "spi_bit_bang:": config/spi_bit_bang.md
+    - "spike:": config/spike.md
+    - "spike_node:": config/spike_node.md
+    - "spinners:": config/spinners.md
+    - "state_machine_states:": config/state_machine_states.md
+    - "state_machine_transitions:": config/state_machine_transitions.md
+    - "state_machines:": config/state_machines.md
+    - "steppers:": config/steppers.md
+    - "step_stick_stepper_settings:": config/step_stick_stepper_settings.md
+    - "switch_overwrites:": config/switch_overwrites.md
+    - "switch_player:": config/switch_player.md
+    - "switches:": config/switches.md
+    - "system11:": config/system11.md
+    - "template_setting:": config/template_setting.md
+    - "text_strings:": config/text_strings.md
+    - "text_ui:": config/text_ui.md
+    - "tic_stepper_settings:": config/tic_stepper_settings.md
+    - "tilt:": config/tilt.md
+    - "timed_switches:": config/timed_switches.md
+    - "timer_control_events:": config/timer_control_events.md
+    - "timers:": config/timers.md
+    - "track_player:": config/track_player.md
+    - "trinamics_steprocker:": config/trinamics_steprocker.md
+    - "twitch_client:": config/twitch_client.md
+    - "variable_player:": config/variable_player.md
+    - "video_pools:": config/video_pools.md
+    - "videos:": config/videos.md
+    - "virtual_platform_start_active_switches:": config/virtual_platform_start_active_switches.md
+    - "virtual_segment_display_connector:": config/virtual_segment_display_connector.md
+    - "vpe:": config/vpe.md
+    - "widget_player:": config/widget_player.md
+    - "widget_styles:": config/widget_styles.md
+    - "widgets:": config/widgets.md
+    - "window:": config/window.md
   - Game Variables:
     - game_vars/index.md
     - balls_in_play: game_vars/balls_in_play.md

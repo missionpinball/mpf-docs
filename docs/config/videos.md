@@ -1,9 +1,8 @@
 ---
-title: "videos:"
+title: "videos: Config Reference"
 ---
 
-# videos:
-
+# videos: Config Reference
 
 --8<-- "config_section.md"
 

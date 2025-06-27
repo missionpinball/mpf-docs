@@ -1,9 +1,8 @@
 ---
-title: "kivy_config:"
+title: "kivy_config: Config Reference"
 ---
 
-# kivy_config:
-
+# kivy_config: Config Reference
 
 --8<-- "config_section.md"
 

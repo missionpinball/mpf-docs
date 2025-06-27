@@ -1,9 +1,8 @@
 ---
-title: "logging:"
+title: "logging: Config Reference"
 ---
 
-# logging:
-
+# logging: Config Reference
 
 --8<-- "config_section.md"
 

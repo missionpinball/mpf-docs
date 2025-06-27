@@ -1,9 +1,8 @@
 ---
-title: "snux:"
+title: "snux: Config Reference"
 ---
 
-# snux:
-
+# snux: Config Reference
 
 --8<-- "config_section.md"
 

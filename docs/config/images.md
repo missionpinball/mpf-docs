@@ -1,9 +1,8 @@
 ---
-title: "images:"
+title: "images: Config Reference"
 ---
 
-# images:
-
+# images: Config Reference
 
 --8<-- "config_section.md"
 

@@ -1,9 +1,8 @@
 ---
-title: "sound_ducking:"
+title: "sound_ducking: Config Reference"
 ---
 
-# sound_ducking:
-
+# sound_ducking: Config Reference
 
 --8<-- "config_section.md"
 

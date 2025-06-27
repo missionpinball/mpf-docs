@@ -1,9 +1,8 @@
 ---
-title: "raspberry_pi:"
+title: "raspberry_pi: Config Reference"
 ---
 
-# raspberry_pi:
-
+# raspberry_pi: Config Reference
 
 --8<-- "config_section.md"
 

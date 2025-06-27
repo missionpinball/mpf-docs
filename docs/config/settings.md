@@ -1,9 +1,8 @@
 ---
-title: "settings:"
+title: "settings: Config Reference"
 ---
 
-# settings:
-
+# settings: Config Reference
 
 --8<-- "config_section.md"
 

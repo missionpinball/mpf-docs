@@ -1,9 +1,8 @@
 ---
-title: "lights:"
+title: "lights: Config Reference"
 ---
 
-# lights:
-
+# lights: Config Reference
 
 --8<-- "config_section.md"
 

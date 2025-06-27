@@ -1,9 +1,8 @@
 ---
-title: "dual_wound_coils:"
+title: "dual_wound_coils: Config Reference"
 ---
 
-# dual_wound_coils:
-
+# dual_wound_coils: Config Reference
 
 --8<-- "config_section.md"
 

@@ -1,9 +1,8 @@
 ---
-title: "text_ui:"
+title: "text_ui: Config Reference"
 ---
 
-# text_ui:
-
+# text_ui: Config Reference
 
 --8<-- "config_section.md"
 

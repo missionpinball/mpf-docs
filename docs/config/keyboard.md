@@ -1,9 +1,8 @@
 ---
-title: "keyboard:"
+title: "keyboard: Config Reference"
 ---
 
-# keyboard:
-
+# keyboard: Config Reference
 
 --8<-- "config_section.md"
 

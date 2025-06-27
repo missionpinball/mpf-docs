@@ -1,9 +1,8 @@
 ---
-title: "timer_control_events:"
+title: "timer_control_events: Config Reference"
 ---
 
-# timer_control_events:
-
+# timer_control_events: Config Reference
 
 --8<-- "config_section.md"
 

@@ -1,9 +1,8 @@
 ---
-title: "digital_outputs:"
+title: "digital_outputs: Config Reference"
 ---
 
-# digital_outputs:
-
+# digital_outputs: Config Reference
 
 --8<-- "config_section.md"
 
