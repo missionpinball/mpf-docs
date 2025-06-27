@@ -2,7 +2,7 @@
 
 MPF's API reference is broken into several categories. All of it is presented in the way that the modules and classes are actually used in MPF.
 
-* [Core Components](api_reference_core.md): MPF core components.
+* [Core Components](core/index.md): MPF core components.
 
 * [Devices](api_reference_device.md): MPF devices, including physical devices like flippers, ball devices, switches, lights, etc. as well as logical devices like ball saves, extra balls, multiballs, etc.
 
