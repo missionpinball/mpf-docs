@@ -1,4 +1,3 @@
-
 # mode_list (BCP command)
 This message informs the media controller about which modes are currently running. It is sent whenever a mode starts or stops, but only to clients currently [monitoring](monitor_start.md) the `mode` category.
 

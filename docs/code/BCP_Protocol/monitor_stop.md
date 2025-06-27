@@ -1,4 +1,3 @@
-
 # monitor_stop (BCP command)
 
 New in version 0.33.

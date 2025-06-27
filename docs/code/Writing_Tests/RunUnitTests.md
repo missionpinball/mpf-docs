@@ -1,4 +1,3 @@
-
 # How to run MPF unittests
 
 Once MPF is installed, you can run some automated tests to make sure that everything is working. To do this, open a command prompt, and then type the following command and then press <enter>:

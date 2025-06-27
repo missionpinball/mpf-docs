@@ -1,4 +1,3 @@
-
 # device (BCP command)
 
 ## Origin

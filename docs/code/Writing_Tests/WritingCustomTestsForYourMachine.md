@@ -1,4 +1,3 @@
-
 # Writing Custom Tests for your Machine
 
 As we already mentioned, the creators of MPF are HUGE believers in the value of automated testing. To that end, MPF includes everything you need to write automated tests that test the logical functionality of your machine. These tests are extremely valuable even if your game is just based on config files.

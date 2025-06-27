@@ -1,4 +1,3 @@
-
 # Mission Pinball website & documentation
 
 This repo contains all the source code for [MissionPinball.org](https://missionpinball.org), which also includes all user documentation.
