@@ -1359,138 +1359,138 @@ nav:
       - code/api_reference/index.md
       - Core:
         - code/api_reference/api_reference_core.md
-        - auditor: code/api_reference/core/auditor.md
-        - ball_controller: code/api_reference/core/ball_controller.md
-        - bcp: code/api_reference/core/bcp.md
-        - device_manager: code/api_reference/core/device_manager.md
-        - events: code/api_reference/core/events.md
-        - info_lights: code/api_reference/core/info_lights.md
-        - light_controller: code/api_reference/core/light_controller.md
-        - machine: code/api_reference/core/machine.md
-        - mode_controller: code/api_reference/core/mode_controller.md
-        - placeholder_manager: code/api_reference/core/placeholder_manager.md
-        - platform_controller: code/api_reference/core/platform_controller.md
-        - service: code/api_reference/core/service.md
-        - settings: code/api_reference/core/settings.md
-        - show_controller: code/api_reference/core/show_controller.md
-        - switch_controller: code/api_reference/core/switch_controller.md
-        - switch_player: code/api_reference/core/switch_player.md
-        - text_ui: code/api_reference/core/text_ui.md
-        - twitch_bot: code/api_reference/core/twitch_bot.md
+        - code/api_reference/core/auditor.md
+        - code/api_reference/core/ball_controller.md
+        - code/api_reference/core/bcp.md
+        - code/api_reference/core/device_manager.md
+        - code/api_reference/core/events.md
+        - code/api_reference/core/info_lights.md
+        - code/api_reference/core/light_controller.md
+        - code/api_reference/core/machine.md
+        - code/api_reference/core/mode_controller.md
+        - code/api_reference/core/placeholder_manager.md
+        - code/api_reference/core/platform_controller.md
+        - code/api_reference/core/service.md
+        - code/api_reference/core/settings.md
+        - code/api_reference/core/show_controller.md
+        - code/api_reference/core/switch_controller.md
+        - code/api_reference/core/switch_player.md
+        - code/api_reference/core/text_ui.md
+        - code/api_reference/core/twitch_bot.md
 
       - Devices:
         - code/api_reference/api_reference_device.md
-        - accelerometers: code/api_reference/devices/accelerometers.md
-        - accruals: code/api_reference/devices/accruals.md
-        - achievement_groups: code/api_reference/devices/achievement_groups.md
-        - achievements: code/api_reference/devices/achievements.md
-        - autofires: code/api_reference/devices/autofires.md
-        - ball_devices: code/api_reference/devices/ball_devices.md
-        - ball_holds: code/api_reference/devices/ball_holds.md
-        - ball_routings: code/api_reference/devices/ball_routings.md
-        - ball_saves: code/api_reference/devices/ball_saves.md
-        - coils: code/api_reference/devices/coils.md
-        - combo_switches: code/api_reference/devices/combo_switches.md
-        - counters: code/api_reference/devices/counters.md
-        - digital_outputs: code/api_reference/devices/digital_outputs.md
-        - diverters: code/api_reference/devices/diverters.md
-        - dmds: code/api_reference/devices/dmds.md
-        - drop_target_banks: code/api_reference/devices/drop_target_banks.md
-        - drop_targets: code/api_reference/devices/drop_targets.md
-        - dual_wound_coils: code/api_reference/devices/dual_wound_coils.md
-        - extra_ball_groups: code/api_reference/devices/extra_ball_groups.md
-        - extra_balls: code/api_reference/devices/extra_balls.md
-        - flippers: code/api_reference/devices/flippers.md
-        - hardware_sound_systems: code/api_reference/devices/hardware_sound_systems.md
-        - kickbacks: code/api_reference/devices/kickbacks.md
-        - light_rings: code/api_reference/devices/light_rings.md
-        - light_stripes: code/api_reference/devices/light_stripes.md
-        - lights: code/api_reference/devices/lights.md
-        - magnets: code/api_reference/devices/magnets.md
-        - motors: code/api_reference/devices/motors.md
-        - multiball_locks: code/api_reference/devices/multiball_locks.md
-        - multiballs: code/api_reference/devices/multiballs.md
-        - playfield_transfers: code/api_reference/devices/playfield_transfers.md
-        - playfields: code/api_reference/devices/playfields.md
-        - psus: code/api_reference/devices/psus.md
-        - rgb_dmds: code/api_reference/devices/rgb_dmds.md
-        - score_queues: code/api_reference/devices/score_queues.md
-        - score_reel_groups: code/api_reference/devices/score_reel_groups.md
-        - score_reels: code/api_reference/devices/score_reels.md
-        - segment_displays: code/api_reference/devices/segment_displays.md
-        - sequence_shots: code/api_reference/devices/sequence_shots.md
-        - sequences: code/api_reference/devices/sequences.md
-        - servos: code/api_reference/devices/servos.md
-        - shot_groups: code/api_reference/devices/shot_groups.md
-        - shot_profiles: code/api_reference/devices/shot_profiles.md
-        - shots: code/api_reference/devices/shots.md
-        - show_queues: code/api_reference/devices/show_queues.md
-        - state_machines: code/api_reference/devices/state_machines.md
-        - steppers: code/api_reference/devices/steppers.md
-        - switches: code/api_reference/devices/switches.md
-        - timed_switches: code/api_reference/devices/timed_switches.md
-        - timers: code/api_reference/devices/timers.md
+        - code/api_reference/devices/accelerometers.md
+        - code/api_reference/devices/accruals.md
+        - code/api_reference/devices/achievement_groups.md
+        - code/api_reference/devices/achievements.md
+        - code/api_reference/devices/autofires.md
+        - code/api_reference/devices/ball_devices.md
+        - code/api_reference/devices/ball_holds.md
+        - code/api_reference/devices/ball_routings.md
+        - code/api_reference/devices/ball_saves.md
+        - code/api_reference/devices/coils.md
+        - code/api_reference/devices/combo_switches.md
+        - code/api_reference/devices/counters.md
+        - code/api_reference/devices/digital_outputs.md
+        - code/api_reference/devices/diverters.md
+        - code/api_reference/devices/dmds.md
+        - code/api_reference/devices/drop_target_banks.md
+        - code/api_reference/devices/drop_targets.md
+        - code/api_reference/devices/dual_wound_coils.md
+        - code/api_reference/devices/extra_ball_groups.md
+        - code/api_reference/devices/extra_balls.md
+        - code/api_reference/devices/flippers.md
+        - code/api_reference/devices/hardware_sound_systems.md
+        - code/api_reference/devices/kickbacks.md
+        - code/api_reference/devices/light_rings.md
+        - code/api_reference/devices/light_stripes.md
+        - code/api_reference/devices/lights.md
+        - code/api_reference/devices/magnets.md
+        - code/api_reference/devices/motors.md
+        - code/api_reference/devices/multiball_locks.md
+        - code/api_reference/devices/multiballs.md
+        - code/api_reference/devices/playfield_transfers.md
+        - code/api_reference/devices/playfields.md
+        - code/api_reference/devices/psus.md
+        - code/api_reference/devices/rgb_dmds.md
+        - code/api_reference/devices/score_queues.md
+        - code/api_reference/devices/score_reel_groups.md
+        - code/api_reference/devices/score_reels.md
+        - code/api_reference/devices/segment_displays.md
+        - code/api_reference/devices/sequence_shots.md
+        - code/api_reference/devices/sequences.md
+        - code/api_reference/devices/servos.md
+        - code/api_reference/devices/shot_groups.md
+        - code/api_reference/devices/shot_profiles.md
+        - code/api_reference/devices/shots.md
+        - code/api_reference/devices/show_queues.md
+        - code/api_reference/devices/state_machines.md
+        - code/api_reference/devices/steppers.md
+        - code/api_reference/devices/switches.md
+        - code/api_reference/devices/timed_switches.md
+        - code/api_reference/devices/timers.md
 
       - Modes:
         - code/api_reference/api_reference_modes.md
-        - attract: code/api_reference/modes/attract.md
-        - bonus: code/api_reference/modes/bonus.md
-        - carousel: code/api_reference/modes/carousel.md
-        - credits: code/api_reference/modes/credits.md
-        - game: code/api_reference/modes/game.md
-        - high_score: code/api_reference/modes/high_score.md
-        - match: code/api_reference/modes/match.md
-        - service: code/api_reference/modes/service.md
-        - tilt: code/api_reference/modes/tilt.md
+        - code/api_reference/modes/attract.md
+        - code/api_reference/modes/bonus.md
+        - code/api_reference/modes/carousel.md
+        - code/api_reference/modes/credits.md
+        - code/api_reference/modes/game.md
+        - code/api_reference/modes/high_score.md
+        - code/api_reference/modes/match.md
+        - code/api_reference/modes/service.md
+        - code/api_reference/modes/tilt.md
 
       - Hardware Platforms:
         - code/api_reference/api_reference_hardware_platforms.md
-        - drivers: code/api_reference/hardware_platforms/drivers.md
-        - fadecandy: code/api_reference/hardware_platforms/fadecandy.md
-        - fast: code/api_reference/hardware_platforms/fast.md
-        - i2c_servo_controller: code/api_reference/hardware_platforms/i2c_servo_controller.md
-        - light_segment_displays: code/api_reference/hardware_platforms/light_segment_displays.md
-        - lisy: code/api_reference/hardware_platforms/lisy.md
-        - mma8451: code/api_reference/hardware_platforms/mma8451.md
-        - mypinballs: code/api_reference/hardware_platforms/mypinballs.md
-        - openpixel: code/api_reference/hardware_platforms/openpixel.md
-        - opp: code/api_reference/hardware_platforms/opp.md
-        - osc: code/api_reference/hardware_platforms/osc.md
-        - p3_roc: code/api_reference/hardware_platforms/p3_roc.md
-        - p_roc: code/api_reference/hardware_platforms/p_roc.md
-        - pin2dmd: code/api_reference/hardware_platforms/pin2dmd.md
-        - pololu_maestro: code/api_reference/hardware_platforms/pololu_maestro.md
-        - pololu_tic: code/api_reference/hardware_platforms/pololu_tic.md
-        - rpi: code/api_reference/hardware_platforms/rpi.md
-        - rpi_dmd: code/api_reference/hardware_platforms/rpi_dmd.md
-        - smart_virtual: code/api_reference/hardware_platforms/smart_virtual.md
-        - smartmatrix: code/api_reference/hardware_platforms/smartmatrix.md
-        - smbus2: code/api_reference/hardware_platforms/smbus2.md
-        - snux: code/api_reference/hardware_platforms/snux.md
-        - spi_bit_bang: code/api_reference/hardware_platforms/spi_bit_bang.md
-        - spike: code/api_reference/hardware_platforms/spike.md
-        - step_stick: code/api_reference/hardware_platforms/step_stick.md
-        - system11: code/api_reference/hardware_platforms/system11.md
-        - trinamics_steprocker: code/api_reference/hardware_platforms/trinamics_steprocker.md
-        - virtual: code/api_reference/hardware_platforms/virtual.md
-        - virtual_pinball: code/api_reference/hardware_platforms/virtual_pinball.md
-        - visual_pinball_evolution: code/api_reference/hardware_platforms/visual_pinball_evolution.md
+        - code/api_reference/hardware_platforms/drivers.md
+        - code/api_reference/hardware_platforms/fadecandy.md
+        - code/api_reference/hardware_platforms/fast.md
+        - code/api_reference/hardware_platforms/i2c_servo_controller.md
+        - code/api_reference/hardware_platforms/light_segment_displays.md
+        - code/api_reference/hardware_platforms/lisy.md
+        - code/api_reference/hardware_platforms/mma8451.md
+        - code/api_reference/hardware_platforms/mypinballs.md
+        - code/api_reference/hardware_platforms/openpixel.md
+        - code/api_reference/hardware_platforms/opp.md
+        - code/api_reference/hardware_platforms/osc.md
+        - code/api_reference/hardware_platforms/p3_roc.md
+        - code/api_reference/hardware_platforms/p_roc.md
+        - code/api_reference/hardware_platforms/pin2dmd.md
+        - code/api_reference/hardware_platforms/pololu_maestro.md
+        - code/api_reference/hardware_platforms/pololu_tic.md
+        - code/api_reference/hardware_platforms/rpi.md
+        - code/api_reference/hardware_platforms/rpi_dmd.md
+        - code/api_reference/hardware_platforms/smart_virtual.md
+        - code/api_reference/hardware_platforms/smartmatrix.md
+        - code/api_reference/hardware_platforms/smbus2.md
+        - code/api_reference/hardware_platforms/snux.md
+        - code/api_reference/hardware_platforms/spi_bit_bang.md
+        - code/api_reference/hardware_platforms/spike.md
+        - code/api_reference/hardware_platforms/step_stick.md
+        - code/api_reference/hardware_platforms/system11.md
+        - code/api_reference/hardware_platforms/trinamics_steprocker.md
+        - code/api_reference/hardware_platforms/virtual.md
+        - code/api_reference/hardware_platforms/virtual_pinball.md
+        - code/api_reference/hardware_platforms/visual_pinball_evolution.md
 
       - Config Players:
         - code/api_reference/api_reference_config_players.md
-        - blocking_player: code/api_reference/config_players/blocking_player.md
-        - coil_player: code/api_reference/config_players/coil_player.md
-        - event_player: code/api_reference/config_players/event_player.md
-        - flasher_player: code/api_reference/config_players/flasher_player.md
-        - hardware_sound_player: code/api_reference/config_players/hardware_sound_player.md
-        - light_player: code/api_reference/config_players/light_player.md
-        - queue_event_player: code/api_reference/config_players/queue_event_player.md
-        - queue_relay_player: code/api_reference/config_players/queue_relay_player.md
-        - random_event_player: code/api_reference/config_players/random_event_player.md
-        - score_queue_player: code/api_reference/config_players/score_queue_player.md
-        - segment_display_player: code/api_reference/config_players/segment_display_player.md
-        - show_player: code/api_reference/config_players/show_player.md
-        - variable_player: code/api_reference/config_players/variable_player.md
+        - code/api_reference/config_players/blocking_player.md
+        - code/api_reference/config_players/coil_player.md
+        - code/api_reference/config_players/event_player.md
+        - code/api_reference/config_players/flasher_player.md
+        - code/api_reference/config_players/hardware_sound_player.md
+        - code/api_reference/config_players/light_player.md
+        - code/api_reference/config_players/queue_event_player.md
+        - code/api_reference/config_players/queue_relay_player.md
+        - code/api_reference/config_players/random_event_player.md
+        - code/api_reference/config_players/score_queue_player.md
+        - code/api_reference/config_players/segment_display_player.md
+        - code/api_reference/config_players/show_player.md
+        - code/api_reference/config_players/variable_player.md
 
       - Test:
         - code/api_reference/api_reference_testing_class_api.md
