@@ -1379,7 +1379,7 @@ nav:
         - code/api_reference/core/twitch_bot.md
 
       - Devices:
-        - code/api_reference/api_reference_device.md
+        - code/api_reference/devices/index.md
         - code/api_reference/devices/accelerometers.md
         - code/api_reference/devices/accruals.md
         - code/api_reference/devices/achievement_groups.md
@@ -1432,7 +1432,7 @@ nav:
         - code/api_reference/devices/timers.md
 
       - Modes:
-        - code/api_reference/api_reference_modes.md
+        - code/api_reference/modes/index.md
         - code/api_reference/modes/attract.md
         - code/api_reference/modes/bonus.md
         - code/api_reference/modes/carousel.md
@@ -1444,7 +1444,7 @@ nav:
         - code/api_reference/modes/tilt.md
 
       - Hardware Platforms:
-        - code/api_reference/api_reference_hardware_platforms.md
+        - code/api_reference/hardware_platforms/index.md
         - code/api_reference/hardware_platforms/drivers.md
         - code/api_reference/hardware_platforms/fadecandy.md
         - code/api_reference/hardware_platforms/fast.md
@@ -1477,7 +1477,7 @@ nav:
         - code/api_reference/hardware_platforms/visual_pinball_evolution.md
 
       - Config Players:
-        - code/api_reference/api_reference_config_players.md
+        - code/api_reference/config_players/index.md
         - code/api_reference/config_players/blocking_player.md
         - code/api_reference/config_players/coil_player.md
         - code/api_reference/config_players/event_player.md
@@ -1492,8 +1492,8 @@ nav:
         - code/api_reference/config_players/show_player.md
         - code/api_reference/config_players/variable_player.md
 
-      - Test:
-        - code/api_reference/api_reference_testing_class_api.md
+      - Testing Class API:
+        - code/api_reference/testing_class_api/index.md
         - code/api_reference/testing_class_api/MockBcpClient.md
         - code/api_reference/testing_class_api/MpfBcpTestCase.md
         - code/api_reference/testing_class_api/MpfFakeGameTestCase.md
@@ -1503,7 +1503,7 @@ nav:
         - code/api_reference/testing_class_api/TestMachineController.md
 
       - Miscellaneous Components:
-        - code/api_reference/api_reference_misc_components.md
+        - code/api_reference/misc_components/index.md
         - code/api_reference/misc_components/BallSearch.md
         - code/api_reference/misc_components/FileManager.md
         - code/api_reference/misc_components/LogMixin.md
