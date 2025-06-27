@@ -20,18 +20,18 @@ Return True if this mode is active.
 
 Register an event handler which is automatically removed when this mode stops.
 
-This method is similar to the Event Manager’s add_handler() method, except this method automatically unregisters the handlers when the mode ends.
+This method is similar to the Event Manager's add_handler() method, except this method automatically unregisters the handlers when the mode ends.
 
 Parameters:
 
-* **event** – String name of the event you’re adding a handler for. Since events are text strings, they don’t have to be pre-defined.
+* **event** – String name of the event you're adding a handler for. Since events are text strings, they don't have to be pre-defined.
 * **handler** – The method that will be called when the event is fired.
-* **priority** – An arbitrary integer value that defines what order the handlers will be called in. The default is 1, so if you have a handler that you want to be called first, add it here with a priority of 2. (Or 3 or 10 or 100000.) The numbers don’t matter. They’re called from highest to lowest. (i.e. priority 100 is called before priority 1.)
-* ****kwargs** – Any any additional keyword/argument pairs entered here will be attached to the handler and called whenever that handler is called. Note these are in addition to kwargs that could be passed as part of the event post. If there’s a conflict, the event-level ones will win.
+* **priority** – An arbitrary integer value that defines what order the handlers will be called in. The default is 1, so if you have a handler that you want to be called first, add it here with a priority of 2. (Or 3 or 10 or 100000.) The numbers don't matter. They're called from highest to lowest. (i.e. priority 100 is called before priority 1.)
+* ****kwargs** – Any any additional keyword/argument pairs entered here will be attached to the handler and called whenever that handler is called. Note these are in addition to kwargs that could be passed as part of the event post. If there's a conflict, the event-level ones will win.
 
-Returns a EventHandlerKey to the handler which you can use to later remove the handler via remove_handler_by_key. Though you don’t need to remove the handler since the whole point of this method is they’re automatically removed when the mode stops.
+Returns a EventHandlerKey to the handler which you can use to later remove the handler via remove_handler_by_key. Though you don't need to remove the handler since the whole point of this method is they're automatically removed when the mode stops.
 
-Note that if you do add a handler via this method and then remove it manually, that’s ok too.
+Note that if you do add a handler via this method and then remove it manually, that's ok too.
 
 `auto_stop_on_ball_end`
 
@@ -50,11 +50,11 @@ Parameters:
 
 `configure_mode_settings(config: dict) → None`
 
-Process this mode’s configuration settings from a config dictionary.
+Process this mode's configuration settings from a config dictionary.
 
 `create_mode_devices() → None`
 
-Create new devices that are specified in a mode config that haven’t been created in the machine-wide.
+Create new devices that are specified in a mode config that haven't been created in the machine-wide.
 
 `debug_log(msg: str, *args, context=None, error_no=None, **kwargs) → None`
 
@@ -130,7 +130,7 @@ Raise a ConfigFileError exception.
 
 `restart_on_next_ball`
 
-Controls whether this mode will restart on the next ball. This only works if the mode was running when the ball ended. It’s tracked per- player in the ‘restart_modes_on_next_ball’ player variable.
+Controls whether this mode will restart on the next ball. This only works if the mode was running when the ball ended. It's tracked per- player in the 'restart_modes_on_next_ball' player variable.
 
 `start(mode_priority=None, callback=None, **kwargs) → None`
 
@@ -138,7 +138,7 @@ Start this mode.
 
 Parameters:
 
-* **mode_priority** – Integer value of what you want this mode to run at. If you don’t specify one, it will use the “Mode: priority” setting from this mode’s configuration file.
+* **mode_priority** – Integer value of what you want this mode to run at. If you don't specify one, it will use the “Mode: priority” setting from this mode's configuration file.
 * **callback** – Callback to call when this mode has been started.
 * ****kwargs** – Catch-all since this mode might start from events with who-knows-what keyword arguments.
 

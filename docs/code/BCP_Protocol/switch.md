@@ -11,7 +11,7 @@ followed very quickly by
 switch?name=start&state=0
 ```
 
-When sent from the pin controller to the media controller, this is used to send switch inputs to things like video modes, high score name entry, and service menu navigation. Note that the pin controller should not send the state of every switch change at all times, as the media controller doesn’t need it and that would add lots of unnecessary commands. Instead the pin controller should only send switches based on some mode of operation that needs them. (For example, when the video mode starts, the pin controller would start sending the switch states of the flipper buttons, and when the video mode ends, it would stop.)
+When sent from the pin controller to the media controller, this is used to send switch inputs to things like video modes, high score name entry, and service menu navigation. Note that the pin controller should not send the state of every switch change at all times, as the media controller doesn't need it and that would add lots of unnecessary commands. Instead the pin controller should only send switches based on some mode of operation that needs them. (For example, when the video mode starts, the pin controller would start sending the switch states of the flipper buttons, and when the video mode ends, it would stop.)
 
 ## Origin
 Pin controller or media controller

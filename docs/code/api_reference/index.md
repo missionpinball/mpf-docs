@@ -1,6 +1,6 @@
 # API Reference
 
-MPF’s API reference is broken into several categories. All of it is presented in the way that the modules and classes are actually used in MPF.
+MPF's API reference is broken into several categories. All of it is presented in the way that the modules and classes are actually used in MPF.
 
 * [Core Components](api_reference_core.md): MPF core components.
 
@@ -14,4 +14,4 @@ MPF’s API reference is broken into several categories. All of it is presented 
 
 * [Tests](api_reference_testing_class_api.md): All unit test base classes for writing tests for MPF and your own game.
 
-* [Miscellaneous Components](api_reference_misc_components.md): Things that don’t fit into other categories, including utility functions, the base classes for modes, players, timers, and other utility functions.
+* [Miscellaneous Components](api_reference_misc_components.md): Things that don't fit into other categories, including utility functions, the base classes for modes, players, timers, and other utility functions.

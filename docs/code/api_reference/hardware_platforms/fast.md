@@ -22,7 +22,7 @@ The fast platform has the following methods & attributes available. Note that me
 
 Clear a hardware rule.
 
-This is used if you want to remove the linkage between a switch and some driver activity. For example, if you wanted to disable your flippers (so that a player pushing the flipper buttons wouldn’t cause the flippers to flip), you’d call this method with your flipper button as the sw_num.
+This is used if you want to remove the linkage between a switch and some driver activity. For example, if you wanted to disable your flippers (so that a player pushing the flipper buttons wouldn't cause the flippers to flip), you'd call this method with your flipper button as the sw_num.
 
 Parameters:
 
@@ -65,11 +65,11 @@ Configure the switch object for a FAST Pinball controller.
 
 FAST Controllers support two types of switches: local and network. Local switches are switches that are connected to the FAST controller board itself, and network switches are those connected to a FAST I/O board.
 
-MPF needs to know which type of switch is this is. You can specify the switch’s connection type in the config file via the connection: setting (either local or network).
+MPF needs to know which type of switch is this is. You can specify the switch's connection type in the config file via the connection: setting (either local or network).
 
 If a connection type is not specified, this method will use some intelligence to try to figure out which default should be used.
 
-If the DriverBoard type is fast, then it assumes the default is network. If it’s anything else (wpc, system11, bally, etc.) then it assumes the connection type is local. Connection types can be mixed and matched in the same machine.
+If the DriverBoard type is fast, then it assumes the default is network. If it's anything else (wpc, system11, bally, etc.) then it assumes the connection type is local. Connection types can be mixed and matched in the same machine.
 
 Parameters:
 
@@ -170,15 +170,15 @@ Register an IO board.
 
 Parameters:
 
-* **board** – ‘mpf.platform.fast.fast_io_board.FastIoBoard’ to register
+* **board** – 'mpf.platform.fast.fast_io_board.FastIoBoard' to register
 
 `register_processor_connection(name: str, communicator)`
 
 Register processor.
 
-Once a communication link has been established with one of the processors on the FAST board, this method lets the communicator let MPF know which processor it’s talking to.
+Once a communication link has been established with one of the processors on the FAST board, this method lets the communicator let MPF know which processor it's talking to.
 
-This is a separate method since we don’t know which processor is on which serial port ahead of time.
+This is a separate method since we don't know which processor is on which serial port ahead of time.
 
 Parameters:
 
@@ -223,4 +223,4 @@ Update all the LEDs connected to a FAST controller.
 
 This is done once per game loop for efficiency (i.e. all LEDs are sent as a single update rather than lots of individual ones).
 
-Also, every LED is updated every loop, even if it doesn’t change. This is in case some interference causes a LED to change color. Since we update every loop, it will only be the wrong color for one tick.
+Also, every LED is updated every loop, even if it doesn't change. This is in case some interference causes a LED to change color. Since we update every loop, it will only be the wrong color for one tick.

@@ -10,7 +10,7 @@ Bases: `mpf.core.platform.StepperPlatform`
 
 Supports the Trinamics Step Rocker via PySerial.
 
-Works with Trinamics Step Rocker. TBD other ‘TMCL’ based steppers eval boards
+Works with Trinamics Step Rocker. TBD other 'TMCL' based steppers eval boards
 
 ## Accessing the trinamics_steprocker platform via code
 

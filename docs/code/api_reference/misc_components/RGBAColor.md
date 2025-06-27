@@ -16,7 +16,7 @@ The RGBAColor has the following methods & attributes available. Note that method
 
 Add (or updates if it already exists) a color.
 
-Note that this is not permanent, the list is reset when MPF restarts (though you can define your own custom colors in your config file’s colors: section). You can use this function to dynamically change the values of colors in shows (they take place the next time an LED switches to that color).
+Note that this is not permanent, the list is reset when MPF restarts (though you can define your own custom colors in your config file's colors: section). You can use this function to dynamically change the values of colors in shows (they take place the next time an LED switches to that color).
 
 Parameters:
 

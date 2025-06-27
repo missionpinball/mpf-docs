@@ -11,7 +11,7 @@ Bases: `object`
 Writes switch events, regular events, and player variables to an audit log file.
 
 ## Accessing the auditor in code
-There is only one instance of the auditor in MPF, and it’s accessible via self.machine.auditor.
+There is only one instance of the auditor in MPF, and it's accessible via self.machine.auditor.
 
 ## Methods & Attributes
 
@@ -23,7 +23,7 @@ Log an auditable event.
 Parameters:
 
 * **audit_class** – A string of the section we want this event to be logged to.
-* **event** – A string name of the event we’re auditing.
+* **event** – A string name of the event we're auditing.
 * ****kwargs** – Not used, but included since some of the audit events might include random kwargs.
 
 `audit_event(eventname, **kwargs)`
@@ -65,4 +65,4 @@ Parameters:
 
 `enabled`
 
-Attribute that’s viewed by other core components to let them know they should send auditing events. Set this via the enable() and disable() methods.
+Attribute that's viewed by other core components to let them know they should send auditing events. Set this via the enable() and disable() methods.

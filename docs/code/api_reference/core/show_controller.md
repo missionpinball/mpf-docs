@@ -12,7 +12,7 @@ Manages all the shows in a pinball machine. The ShowController handles prioritie
 
 ## Accessing the show_controller in code
 
-There is only one instance of the show_controller in MPF, and it’s accessible via `self.machine.show_controller`.
+There is only one instance of the show_controller in MPF, and it's accessible via `self.machine.show_controller`.
 
 ## Methods & Attributes
 

@@ -74,10 +74,10 @@ Register a monitor.
 
 Parameters:
 
-* **monitor_class** – String name of the monitor class for this monitor that’s being registered.
+* **monitor_class** – String name of the monitor class for this monitor that's being registered.
 * **monitor** – Callback to notify
 
-MPF uses monitors to allow components to monitor certain internal elements of MPF. For example, a player variable monitor could be setup to be notified of any changes to a player variable, or a switch monitor could be used to allow a plugin to be notified of any changes to any switches. The MachineController’s list of registered monitors doesn’t actually do anything. Rather it’s a dictionary of sets which the monitors themselves can reference when they need to do something. We just needed a central registry of monitors.
+MPF uses monitors to allow components to monitor certain internal elements of MPF. For example, a player variable monitor could be setup to be notified of any changes to a player variable, or a switch monitor could be used to allow a plugin to be notified of any changes to any switches. The MachineController's list of registered monitors doesn't actually do anything. Rather it's a dictionary of sets which the monitors themselves can reference when they need to do something. We just needed a central registry of monitors.
 
 `reset() → None`
 

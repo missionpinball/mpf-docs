@@ -12,7 +12,7 @@ Handles the text-based UI.
 
 ## Accessing the text_ui in code
 
-There is only one instance of the `text_ui` in MPF, and it’s accessible via `self.machine.text_ui`.
+There is only one instance of the `text_ui` in MPF, and it's accessible via `self.machine.text_ui`.
 
 ## Methods & Attributes
 

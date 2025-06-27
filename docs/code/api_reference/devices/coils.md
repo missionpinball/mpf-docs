@@ -8,7 +8,7 @@ class mpf.devices.driver.Driver(machine: mpf.core.machine.MachineController, nam
 
 Bases: `mpf.core.system_wide_device.SystemWideDevice`
 
-Generic class that holds driver objects. A ‘driver’ is any device controlled from a driver board which is typically the high-voltage stuff like coils and flashers. This class exposes the methods you should use on these driver types of devices. Each platform module (i.e. P-ROC, FAST, etc.) subclasses this class to actually communicate with the physical hardware and perform the actions.
+Generic class that holds driver objects. A 'driver' is any device controlled from a driver board which is typically the high-voltage stuff like coils and flashers. This class exposes the methods you should use on these driver types of devices. Each platform module (i.e. P-ROC, FAST, etc.) subclasses this class to actually communicate with the physical hardware and perform the actions.
 
 Args: Same as the Device parent class
 
@@ -26,7 +26,7 @@ Disable this driver.
 
 `enable(pulse_ms: int = None, pulse_power: float = None, hold_power: float = None)`
 
-Enable a driver by holding it ‘on’.
+Enable a driver by holding it 'on'.
 
 Parameters:
 

@@ -24,7 +24,7 @@ Switches have the following methods & attributes available. Note that methods & 
 
 Add switch handler (callback) for this switch which is called when this switch state changes.
 
-Note that this method just calls the Switch Controller’s add_switch_handler() method behind the scenes.
+Note that this method just calls the Switch Controller's add_switch_handler() method behind the scenes.
 
 Parameters:
 

@@ -26,7 +26,7 @@ The opp platform has the following methods & attributes available. Note that met
 
 Clear a hardware rule.
 
-This is used if you want to remove the linkage between a switch and some driver activity. For example, if you wanted to disable your flippers (so that a player pushing the flipper buttons wouldn’t cause the flippers to flip), you’d call this method with your flipper button as the sw_num.
+This is used if you want to remove the linkage between a switch and some driver activity. For example, if you wanted to disable your flippers (so that a player pushing the flipper buttons wouldn't cause the flippers to flip), you'd call this method with your flipper button as the sw_num.
 
 `configure_driver(config: mpf.core.platform.DriverConfig, number: str, platform_settings: dict)`
 

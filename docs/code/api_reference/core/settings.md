@@ -12,7 +12,7 @@ Manages operator controllable settings.
 
 ## Accessing the settings in code
 
-There is only one instance of the settings in MPF, and it’s accessible via `self.machine.settings`.
+There is only one instance of the settings in MPF, and it's accessible via `self.machine.settings`.
 
 ## Methods & Attributes
 

@@ -56,7 +56,7 @@ Get the value of a placeholder.
 
 `is_ok_to_light() → bool`
 
-Check if it’s possible to light an extra ball. Returns True or False. This method checks to see if the group is enabled and whether the max_lit setting has been exceeded.
+Check if it's possible to light an extra ball. Returns True or False. This method checks to see if the group is enabled and whether the max_lit setting has been exceeded.
 
 `light()`
 

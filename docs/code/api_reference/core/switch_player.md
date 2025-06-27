@@ -12,7 +12,7 @@ Plays back switch sequences from a config file, used for testing.
 
 ## Accessing the switch_player in code
 
-There is only one instance of the `switch_player` in MPF, and it’s accessible via `self.machine.switch_player`.
+There is only one instance of the `switch_player` in MPF, and it's accessible via `self.machine.switch_player`.
 
 ## Methods & Attributes
 

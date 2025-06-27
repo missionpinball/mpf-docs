@@ -8,7 +8,7 @@ class mpf.devices.ball_device.ball_device.BallDevice(*args, **kwargs)
 
 Bases: `mpf.core.system_wide_device.SystemWideDevice`
 
-Base class for a ‘Ball Device’ in a pinball machine. A ball device is anything that can hold one or more balls, such as a trough, an eject hole, a VUK, a catapult, etc.
+Base class for a 'Ball Device' in a pinball machine. A ball device is anything that can hold one or more balls, such as a trough, an eject hole, a VUK, a catapult, etc.
 
 Args: Same as Device.
 
@@ -26,7 +26,7 @@ Notify this device that there is a ball heading its way.
 
 `available_balls`
 
-Number of balls that are available to be ejected. This differs from balls since it’s possible that this device could have balls that are being used for some other eject, and thus not available.
+Number of balls that are available to be ejected. This differs from balls since it's possible that this device could have balls that are being used for some other eject, and thus not available.
 
 `balls`
 
@@ -105,7 +105,7 @@ Handle mechanical eject.
 
 `classmethod is_playfield()`
 
-Return True if this ball device is a Playfield-type device, False if it’s a regular ball device.
+Return True if this ball device is a Playfield-type device, False if it's a regular ball device.
 
 `lost_ejected_ball(target)`
 

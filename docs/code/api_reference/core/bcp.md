@@ -12,7 +12,7 @@ BCP Module.
 
 ## Accessing the bcp in code
 
-There is only one instance of the bcp in MPF, and it’s accessible via self.machine.bcp.
+There is only one instance of the bcp in MPF, and it's accessible via self.machine.bcp.
 
 ## Methods & Attributes
 

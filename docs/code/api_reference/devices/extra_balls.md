@@ -64,7 +64,7 @@ Check whether this extra ball can be lit. This method takes into consideration w
 
 `light()`
 
-Light an extra ball for potential collection by the player. Lighting an extra ball will immediately increase count against the max_per_game setting, even if the extra ball is a member of a group that’s disabled or if the player never actually collects the extra ball. Note that this only really does anything if this extra ball is a member of a group.
+Light an extra ball for potential collection by the player. Lighting an extra ball will immediately increase count against the max_per_game setting, even if the extra ball is a member of a group that's disabled or if the player never actually collects the extra ball. Note that this only really does anything if this extra ball is a member of a group.
 
 `player`
 

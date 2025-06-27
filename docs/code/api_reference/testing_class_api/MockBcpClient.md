@@ -8,7 +8,7 @@ Bases: `mpf.core.bcp.bcp_client.BaseBcpClient`
 
 A Mock BCP Client.
 
-This is used in tests require BCP for testing but where you don’t actually create a real BCP connection.
+This is used in tests require BCP for testing but where you don't actually create a real BCP connection.
 
 ## Methods & Attributes
 

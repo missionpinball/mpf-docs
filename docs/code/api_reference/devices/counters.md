@@ -24,7 +24,7 @@ Check if counter is completed. Return true if the counter has reached or surpass
 
 `complete()`
 
-Mark this logic block as complete. Posts the`events_when_complete` events and optionally restarts this logic block or disables it, depending on this block’s configuration settings.
+Mark this logic block as complete. Posts the`events_when_complete` events and optionally restarts this logic block or disables it, depending on this block's configuration settings.
 
 `completed`
 
@@ -119,7 +119,7 @@ Restart this logic block by calling reset() and enable(). Automatically called w
 
 `stop_ignoring_hits(**kwargs)`
 
-Cause the Counter to stop ignoring subsequent hits that occur within the ‘multiple_hit_window’. Automatically called when the window time expires. Can safely be manually called.
+Cause the Counter to stop ignoring subsequent hits that occur within the 'multiple_hit_window'. Automatically called when the window time expires. Can safely be manually called.
 
 `subscribe_attribute(item, machine)`
 
