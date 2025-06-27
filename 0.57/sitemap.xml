@@ -169,31 +169,7 @@
          <lastmod>2025-06-27</lastmod>
     </url>
     <url>
-         <loc>https://missionpinball.org/latest/code/api_reference/api_reference_config_players/</loc>
-         <lastmod>2025-06-27</lastmod>
-    </url>
-    <url>
-         <loc>https://missionpinball.org/latest/code/api_reference/api_reference_core/</loc>
-         <lastmod>2025-06-27</lastmod>
-    </url>
-    <url>
-         <loc>https://missionpinball.org/latest/code/api_reference/api_reference_device/</loc>
-         <lastmod>2025-06-27</lastmod>
-    </url>
-    <url>
-         <loc>https://missionpinball.org/latest/code/api_reference/api_reference_hardware_platforms/</loc>
-         <lastmod>2025-06-27</lastmod>
-    </url>
-    <url>
-         <loc>https://missionpinball.org/latest/code/api_reference/api_reference_misc_components/</loc>
-         <lastmod>2025-06-27</lastmod>
-    </url>
-    <url>
-         <loc>https://missionpinball.org/latest/code/api_reference/api_reference_modes/</loc>
-         <lastmod>2025-06-27</lastmod>
-    </url>
-    <url>
-         <loc>https://missionpinball.org/latest/code/api_reference/api_reference_testing_class_api/</loc>
+         <loc>https://missionpinball.org/latest/code/api_reference/config_players/</loc>
          <lastmod>2025-06-27</lastmod>
     </url>
     <url>
@@ -246,6 +222,10 @@
     </url>
     <url>
          <loc>https://missionpinball.org/latest/code/api_reference/config_players/variable_player/</loc>
+         <lastmod>2025-06-27</lastmod>
+    </url>
+    <url>
+         <loc>https://missionpinball.org/latest/code/api_reference/core/</loc>
          <lastmod>2025-06-27</lastmod>
     </url>
     <url>
@@ -318,6 +298,10 @@
     </url>
     <url>
          <loc>https://missionpinball.org/latest/code/api_reference/core/twitch_bot/</loc>
+         <lastmod>2025-06-27</lastmod>
+    </url>
+    <url>
+         <loc>https://missionpinball.org/latest/code/api_reference/devices/</loc>
          <lastmod>2025-06-27</lastmod>
     </url>
     <url>
@@ -521,6 +505,10 @@
          <lastmod>2025-06-27</lastmod>
     </url>
     <url>
+         <loc>https://missionpinball.org/latest/code/api_reference/hardware_platforms/</loc>
+         <lastmod>2025-06-27</lastmod>
+    </url>
+    <url>
          <loc>https://missionpinball.org/latest/code/api_reference/hardware_platforms/drivers/</loc>
          <lastmod>2025-06-27</lastmod>
     </url>
@@ -641,6 +629,10 @@
          <lastmod>2025-06-27</lastmod>
     </url>
     <url>
+         <loc>https://missionpinball.org/latest/code/api_reference/misc_components/</loc>
+         <lastmod>2025-06-27</lastmod>
+    </url>
+    <url>
          <loc>https://missionpinball.org/latest/code/api_reference/misc_components/BallSearch/</loc>
          <lastmod>2025-06-27</lastmod>
     </url>
@@ -693,6 +685,10 @@
          <lastmod>2025-06-27</lastmod>
     </url>
     <url>
+         <loc>https://missionpinball.org/latest/code/api_reference/modes/</loc>
+         <lastmod>2025-06-27</lastmod>
+    </url>
+    <url>
          <loc>https://missionpinball.org/latest/code/api_reference/modes/attract/</loc>
          <lastmod>2025-06-27</lastmod>
     </url>
@@ -726,6 +722,10 @@
     </url>
     <url>
          <loc>https://missionpinball.org/latest/code/api_reference/modes/tilt/</loc>
+         <lastmod>2025-06-27</lastmod>
+    </url>
+    <url>
+         <loc>https://missionpinball.org/latest/code/api_reference/testing_class_api/</loc>
          <lastmod>2025-06-27</lastmod>
     </url>
     <url>
