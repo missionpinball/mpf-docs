@@ -4,7 +4,6 @@ title: Ball Search
 
 # Ball Search
 
-
 Related Config File Sections:
 
 * [ball_devices:](../../config/ball_devices.md)
@@ -52,4 +51,3 @@ until the balls drain, etc.)
 * [ball_search_stopped](../../events/ball_search_stopped.md)
 * [flipper_cradle](../../events/flipper_cradle.md)
 * [flipper_cradle_release](../../events/flipper_cradle_release.md)
-

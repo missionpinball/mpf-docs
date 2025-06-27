@@ -39,4 +39,3 @@ self.machine.variables.configure_machine_var("my_variable", persist=True, expire
 # set a variable
 self.machine.variables.set_machine_var("my_variable", 17)
 ```
-

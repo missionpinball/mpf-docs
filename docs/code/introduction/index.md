@@ -11,6 +11,3 @@ Follow either the examples for the [machine wide](machine_code.md) extension or 
 As long as you only write smaller extensions you don't have to setup a full Python development environment. Of course you can and the more complex your development gets the more handy it might be. The [setup guide](setup.md) you only have to follow if you really want to develop MPF itself and not only to write an extension for your game.
 
 Last but not least of course the [API Reference](../api_reference/index.md) is very important for you.
-
-
-

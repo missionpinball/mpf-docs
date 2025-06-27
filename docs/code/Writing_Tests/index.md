@@ -8,5 +8,3 @@ You can run built-in tests to test MPF itself or extend them if you think you fo
 
 * [How to run MPF unittests](RunUnitTests.md)
 * [Writing Custom Tests for your Machine](WritingCustomTestsForYourMachine.md)
-
-

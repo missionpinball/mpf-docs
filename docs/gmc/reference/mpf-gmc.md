@@ -182,4 +182,3 @@ Examples:
 
     pluralize("Shot%s Remaining", 3)
     # > "Shots Remaining"
-

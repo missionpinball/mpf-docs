@@ -93,5 +93,3 @@ The following BCP commands have been defined (and implemented) in MPF:
 * [reset_complete](reset_complete.md)
 * [switch](switch.md)
 * [trigger](trigger.md)
-
-

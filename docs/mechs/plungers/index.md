@@ -4,7 +4,6 @@ title: Plungers & Ball Launch Devices
 
 # Plungers & Ball Launch Devices
 
-
 Related Config File Sections:
 
 * [ball_devices:](../../config/ball_devices.md)
@@ -120,4 +119,3 @@ If you have this type of coil-powered plunger, follow the
 * [balldevice_(name)\_ball_eject_failed](../../events/balldevice_ball_device_ball_eject_failed.md)
 * [balldevice_(name)\_ball_eject_success](../../events/balldevice_ball_device_ball_eject_success.md)
 * [balldevice_(name)\_ejecting_ball](../../events/balldevice_ball_device_ejecting_ball.md)
-

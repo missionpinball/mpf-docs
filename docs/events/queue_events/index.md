@@ -12,7 +12,6 @@ See:
 * [queue_event_player:](../../config/queue_event_player.md)
 * [queue_relay_player:](../../config/queue_relay_player.md)
 
-
 ## Events:
 
 * Machine Events
@@ -48,4 +47,3 @@ See:
 * Match Mode Events
     * [match_has_match](../match_has_match.md) *Queue Event*
     * [match_no_match](../match_no_match.md) *Queue Event*
-
