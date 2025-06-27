@@ -39880,7 +39880,7 @@ icons & this code generated via https://realfavicongenerator.net
 <p>Check all the value switches for this score reel.</p>
 <p>This check only happens if self.ready is True. If the reel is not ready, it means another advance request has come in after the initial one. In that case then the subsequent advance will call this method again when after that advance is done.</p>
 <p>If this method finds an active switch, it sets self.physical_value to that. Otherwise it sets it to -999. It will also update self.assumed_value if it finds an active switch. Otherwise it leaves that value unchanged.</p>
-<p>This method is automatically called (via a delay) after the reel advances. The delay is based on the config value self.config[‘hw_confirm_time’].</p>
+<p>This method is automatically called (via a delay) after the reel advances. The delay is based on the config value self.config['hw_confirm_time'].</p>
 <p>TODO: What happens if there are multiple active switches? Currently it will return the highest one. Is that ok?</p>
 <p><code>format_log_line(msg, context, error_no) → str</code></p>
 <p>Return a formatted log line with log link and context.</p>
@@ -39893,7 +39893,7 @@ icons & this code generated via https://realfavicongenerator.net
 <li><strong>value</strong> – Destination value which this reel should try to reach.</li>
 </ul>
 <p>Returns: The value of the destination. If the current
-<code>self.assumed_value</code> is -999, this method will always return -999 since it doesn’t know where the reel is and therefore doesn’t know what the destination value would be.</p>
+<code>self.assumed_value</code> is -999, this method will always return -999 since it doesn't know where the reel is and therefore doesn't know what the destination value would be.</p>
 <p><code>stop(**kwargs)</code></p>
 <p>Stop device.</p>
 <p><code>wait_for_ready()</code></p>

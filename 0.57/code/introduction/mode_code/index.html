@@ -39937,7 +39937,7 @@ icons & this code generated via https://realfavicongenerator.net
 <h1 id="how-to-add-custom-python-code-to-a-game-mode">How to add custom Python code to a game mode</h1>
 <p>The easiest and most common way to add custom Python code into your MPF game is to add a code module to a mode folder. That lets you run code when that mode is active and helps you break up any custom code you write per mode.</p>
 <p>This “mode code” (as we call it) has access to the full MPF API. You can post events, register event handlers which run custom things when events are posted, access device state and control devices, read and set player variables, post slides… really anything MPF can do, you can do.</p>
-<p>Here’s how you get started with custom mode code.</p>
+<p>Here's how you get started with custom mode code.</p>
 <h2 id="create-the-module-file-to-hold-you-code">Create the module (file) to hold you code</h2>
 <p>First, go into the mode folder where you want to create your custom code, and add a “code” folder to that mode folder. Then inside that folder, create a file (we usually give this file the same name as the mode) with a .py extension.</p>
 <p>For example, if you wanted to create custom code for your base mode, it might look like this:</p>
@@ -39962,15 +39962,15 @@ icons & this code generated via https://realfavicongenerator.net
 <p>Notice that we named our custom class Base. You can name it whatever you want.</p>
 <h2 id="update-your-mode-config-file-to-use-the-custom-code">Update your mode config file to use the custom code</h2>
 <p>Once you create your custom mode code, you need to tell MPF that this mode uses custom code instead of just the built-in code.</p>
-<p>To do this, add a <code>code:</code> entry into the mode config file for the mode where you’re adding custom code. So in this case, that would be in the <code>/modes/base/config/base.yaml</code> file, like this:</p>
+<p>To do this, add a <code>code:</code> entry into the mode config file for the mode where you're adding custom code. So in this case, that would be in the <code>/modes/base/config/base.yaml</code> file, like this:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">mode</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">start_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ball_starting</span>
 <span class="w">  </span><span class="nt">priority</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
 <span class="w">  </span><span class="nt">code</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">base.Base</span>
 </code></pre></div>
-<p>Note that the value for the <code>code:</code> section is the name of the Python module (the file), then a dot, then the name of the class from that file. So in this case, that’s base.Base.</p>
+<p>Note that the value for the <code>code:</code> section is the name of the Python module (the file), then a dot, then the name of the class from that file. So in this case, that's base.Base.</p>
 <h2 id="run-your-game">Run your game!</h2>
-<p>At this point you should be able to run your game and nothing should happen. This is good, because if it doesn’t crash, that means you did everything right. Of course nothing special happens because you didn’t actually add any code to your custom mode code, so you won’t see anything different.</p>
+<p>At this point you should be able to run your game and nothing should happen. This is good, because if it doesn't crash, that means you did everything right. Of course nothing special happens because you didn't actually add any code to your custom mode code, so you won't see anything different.</p>
 <h2 id="add-some-custom-methods-to-do-things">Add some custom methods to do things</h2>
 <p>You can look at the Mode base class (the link from GitHub from earlier) to see what the base Mode class does. However, we have created a few “convenience” methods that you can use. They are:</p>
 <ul>
@@ -39981,30 +39981,30 @@ icons & this code generated via https://realfavicongenerator.net
 <p><strong>mode_start:</strong> Called every time the mode starts, just after the mode_(name)_started event is posted.</p>
 </li>
 <li>
-<p><strong>add_mode_event_handler:</strong> This is the same as the main add_event_handler() method from the Event Manager, except since it’s mode-specific it will also automatically remove any event handlers that you registered when the mode stops. (If you want to register event handlers that are always watching for events even when the mode is not running, you can use the regular <code>self.machine.mode.add_handler()</code> method.</p>
+<p><strong>add_mode_event_handler:</strong> This is the same as the main add_event_handler() method from the Event Manager, except since it's mode-specific it will also automatically remove any event handlers that you registered when the mode stops. (If you want to register event handlers that are always watching for events even when the mode is not running, you can use the regular <code>self.machine.mode.add_handler()</code> method.</p>
 </li>
 </ul>
-<p>You don’t have to use all of these if you don’t want to.</p>
+<p>You don't have to use all of these if you don't want to.</p>
 <p>Also, modes have additional convenience attributes you can use within your mode code:</p>
 <ul>
 <li>
-<p><strong>self.config:</strong> A link to the config dictionary for the mode’s config file.</p>
+<p><strong>self.config:</strong> A link to the config dictionary for the mode's config file.</p>
 </li>
 <li>
-<p><strong>self.priority:</strong> The priority the mode is running at. (Don’t change this. Just read it.)</p>
+<p><strong>self.priority:</strong> The priority the mode is running at. (Don't change this. Just read it.)</p>
 </li>
 <li>
 <p><strong>self.delay:</strong> An instance of the delay manager you can use to set delayed callbacks for this mode. Any active ones will be automatically removed when the mode ends.</p>
 </li>
 <li>
-<p><strong>self.player:</strong> A link to the current player object that’s automatically updated when the player changes. This will be None if the mode is running outside of a game.</p>
+<p><strong>self.player:</strong> A link to the current player object that's automatically updated when the player changes. This will be None if the mode is running outside of a game.</p>
 </li>
 <li>
 <p><strong>self.active:</strong> A boolean (True/False) value you can query to see if the mode is running.</p>
 </li>
 </ul>
 <h2 id="example-usage">Example usage</h2>
-<p>Here’s an example of some mode code in use. This example is just a bunch of random things, but again, since you’re writing code here, the sky’s the limit! Seriously you could do all your game logic in mode code and not use the MPF configs at all if you wanted to.</p>
+<p>Here's an example of some mode code in use. This example is just a bunch of random things, but again, since you're writing code here, the sky's the limit! Seriously you could do all your game logic in mode code and not use the MPF configs at all if you wanted to.</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">mpf.core.mode</span><span class="w"> </span><span class="kn">import</span> <span class="n">Mode</span>
 
 

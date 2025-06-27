@@ -39891,7 +39891,7 @@ Parameters: delta – How much time to advance the test clock by (in seconds)</p
 <p><code>assertDictContainsSubset(subset, dictionary, msg=None)</code></p>
 <p>Checks whether dictionary is a superset of subset.</p>
 <p><code>assertEqual(first, second, msg=None)</code></p>
-<p>Fail if the two objects are unequal as determined by the ‘==’ operator.</p>
+<p>Fail if the two objects are unequal as determined by the '==' operator.</p>
 <p><code>assertEventCalled(event_name, times=None)</code></p>
 <p>Assert that event was called.</p>
 <p>Parameters:</p>
@@ -40000,7 +40000,7 @@ Parameters: delta – How much time to advance the test clock by (in seconds)</p
 <p>Note that decimal places (from zero) are usually not the same as significant digits (measured from the most significant digit).</p>
 <p>Objects that are equal automatically fail.</p>
 <p><code>assertNotEqual(first, second, msg=None)</code></p>
-<p>Fail if the two objects are equal as determined by the ‘!=’ operator.</p>
+<p>Fail if the two objects are equal as determined by the '!=' operator.</p>
 <p><code>assertNotIn(member, container, msg=None)</code></p>
 <p>Just like self.assertTrue(a not in b), but with a nicer default message.</p>
 <p><code>assertNotIsInstance(obj, cls, msg=None)</code></p>
@@ -40023,8 +40023,8 @@ Parameters: delta – How much time to advance the test clock by (in seconds)</p
 <div class="highlight"><pre><span></span><code><span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">assertRaises</span><span class="p">(</span><span class="n">SomeException</span><span class="p">):</span>
   <span class="n">do_something</span><span class="p">()</span>
 </code></pre></div>
-<p>An optional keyword argument ‘msg’ can be provided when assertRaises is used as a context object.</p>
-<p>The context manager keeps a reference to the exception as the ‘exception’ attribute. This allows you to inspect the exception after the assertion:</p>
+<p>An optional keyword argument 'msg' can be provided when assertRaises is used as a context object.</p>
+<p>The context manager keeps a reference to the exception as the 'exception' attribute. This allows you to inspect the exception after the assertion:</p>
 <div class="highlight"><pre><span></span><code><span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">assertRaises</span><span class="p">(</span><span class="n">SomeException</span><span class="p">)</span> <span class="k">as</span> <span class="n">cm</span><span class="p">:</span>
   <span class="n">do_something</span><span class="p">()</span>
 <span class="n">the_exception</span> <span class="o">=</span> <span class="n">cm</span><span class="o">.</span><span class="n">exception</span>
@@ -40079,8 +40079,8 @@ Parameters: delta – How much time to advance the test clock by (in seconds)</p
 <div class="highlight"><pre><span></span><code><span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">assertWarns</span><span class="p">(</span><span class="n">SomeWarning</span><span class="p">):</span>
   <span class="n">do_something</span><span class="p">()</span>
 </code></pre></div>
-<p>An optional keyword argument ‘msg’ can be provided when assertWarns is used as a context object.</p>
-<p>The context manager keeps a reference to the first matching warning as the ‘warning’ attribute; similarly, the ‘filename’ and ‘lineno’ attributes give you information about the line of Python code from which the warning was triggered. This allows you to inspect the warning after the assertion:</p>
+<p>An optional keyword argument 'msg' can be provided when assertWarns is used as a context object.</p>
+<p>The context manager keeps a reference to the first matching warning as the 'warning' attribute; similarly, the 'filename' and 'lineno' attributes give you information about the line of Python code from which the warning was triggered. This allows you to inspect the warning after the assertion:</p>
 <div class="highlight"><pre><span></span><code><span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">assertWarns</span><span class="p">(</span><span class="n">SomeWarning</span><span class="p">)</span> <span class="k">as</span> <span class="n">cm</span><span class="p">:</span>
   <span class="n">do_something</span><span class="p">()</span>
 <span class="n">the_warning</span> <span class="o">=</span> <span class="n">cm</span><span class="o">.</span><span class="n">warning</span>
@@ -40131,7 +40131,7 @@ Returns:    A string name of the machine path to use</p>
 <p><code>get_platform()</code></p>
 <p>Force this test class to use a certain platform.
 Returns:    String name of the platform this test class will use.</p>
-<p>If you don’t include this method in your test class, the platform will be set to virtual. If you want to use the smart virtual platform, you would add the following to your test class:</p>
+<p>If you don't include this method in your test class, the platform will be set to virtual. If you want to use the smart virtual platform, you would add the following to your test class:</p>
 <p>def get_platform(self):
   return 'smart_virtual'</p>
 <p><code>get_use_bcp()</code></p>
@@ -40174,7 +40174,7 @@ Returns:    String name of the platform this test class will use.</p>
 <li><strong>event_name</strong> – String name of the event to mock.</li>
 </ul>
 <p>Mocking an event is an easy way to check if an event was called without configuring some kind of callback action in your tests.</p>
-<p>Note that an event must be mocked here before it’s posted in order for assertEventNotCalled() and assertEventCalled() to work.</p>
+<p>Note that an event must be mocked here before it's posted in order for assertEventNotCalled() and assertEventCalled() to work.</p>
 <p>Mocking an event will not “break” it. In other words, any other registered handlers for this event will also be called even if the event has been mocked.</p>
 <p>For example:</p>
 <div class="highlight"><pre><span></span><code><span class="bp">self</span><span class="o">.</span><span class="n">mock_event</span><span class="p">(</span><span class="s1">&#39;my_event&#39;</span><span class="p">)</span>
@@ -40222,14 +40222,14 @@ Returns:    String name of the platform this test class will use.</p>
 <p><code>setUp()</code></p>
 <p>Setup test.</p>
 <p><code>set_num_balls_known(balls)</code></p>
-<p>Set the ball controller’s num_balls_known attribute.</p>
-<p>This is needed for tests where you don’t have any ball devices and other situations where you need the ball controller to think the machine has a certain amount of balls to run a test.</p>
+<p>Set the ball controller's num_balls_known attribute.</p>
+<p>This is needed for tests where you don't have any ball devices and other situations where you need the ball controller to think the machine has a certain amount of balls to run a test.</p>
 <p>Example:</p>
 <div class="highlight"><pre><span></span><code><span class="bp">self</span><span class="o">.</span><span class="n">set_num_balls_known</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 </code></pre></div>
 <p><code>shortDescription()</code></p>
 <p>Returns a one-line description of the test, or None if no description has been provided.</p>
-<p>The default implementation of this method returns the first line of the specified test method’s docstring.</p>
+<p>The default implementation of this method returns the first line of the specified test method's docstring.</p>
 <p><code>skipTest(reason)</code></p>
 <p>Skip this test.</p>
 <p><code>start_mode(mode)</code></p>

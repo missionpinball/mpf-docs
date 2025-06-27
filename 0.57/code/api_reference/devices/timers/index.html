@@ -39884,14 +39884,14 @@ icons & this code generated via https://realfavicongenerator.net
 <p>Add ticks to this timer.</p>
 <p>Parameters:</p>
 <ul>
-<li><strong>timer_value</strong> – The number of ticks you want to add to this timer’s current value.</li>
+<li><strong>timer_value</strong> – The number of ticks you want to add to this timer's current value.</li>
 <li><strong>kwargs</strong> – Not used in this method. Only exists since this method is often registered as an event handler which may contain additional keyword arguments.</li>
 </ul>
 <p><code>change_tick_interval(change=0.0, **kwargs)</code></p>
 <p>Change the interval for each “tick” of this timer.</p>
 <p>Parameters:</p>
 <ul>
-<li><strong>change</strong> – Float or int of the change you want to make to this timer’s tick rate. Note this value is multiplied by the current tick interval: &gt;1 will increase the tick interval (slow the timer) and &lt;1 will decrease the tick interval (accelerate the timer). To set an absolute value, use the set_tick_interval() method.</li>
+<li><strong>change</strong> – Float or int of the change you want to make to this timer's tick rate. Note this value is multiplied by the current tick interval: &gt;1 will increase the tick interval (slow the timer) and &lt;1 will decrease the tick interval (accelerate the timer). To set an absolute value, use the set_tick_interval() method.</li>
 <li><strong><code>**kwargs</code></strong> – Not used in this method. Only exists since this method is often registered as an event handler which may contain additional keyword arguments.</li>
 </ul>
 <p><code>enable() → None</code></p>
@@ -39914,13 +39914,13 @@ icons & this code generated via https://realfavicongenerator.net
 <p>Pause the timer and posts the <code>timer_(name)_paused</code> event.</p>
 <p>Parameters:</p>
 <ul>
-<li><strong>timer_value</strong> – How many seconds you want to pause the timer for. Note that this pause time is real-world seconds and does not take into consideration this timer’s tick interval.</li>
+<li><strong>timer_value</strong> – How many seconds you want to pause the timer for. Note that this pause time is real-world seconds and does not take into consideration this timer's tick interval.</li>
 <li><strong>**kwargs</strong> – Not used in this method. Only exists since this method is often registered as an event handler which may contain additional keyword arguments.</li>
 </ul>
 <p><code>raise_config_error(msg, error_no, *, context=None) → NoReturn</code></p>
 <p>Raise a ConfigFileError exception.</p>
 <p><code>reset(**kwargs)</code></p>
-<p>Reset this timer based to the starting value that’s already been configured.</p>
+<p>Reset this timer based to the starting value that's already been configured.</p>
 <p>Does not start or stop the timer.</p>
 <p>Parameters:</p>
 <ul>
@@ -39942,7 +39942,7 @@ icons & this code generated via https://realfavicongenerator.net
 <li><strong><code>**kwargs</code></strong> – Not used in this method. Only exists since this method is often registered as an event handler which may contain additional keyword arguments.</li>
 </ul>
 <p><code>start(**kwargs)</code></p>
-<p>Start this timer based on the starting value that’s already been configured.</p>
+<p>Start this timer based on the starting value that's already been configured.</p>
 <p>Use jump() if you want to set the starting time value.</p>
 <p>Parameters:</p>
 <ul>
@@ -39957,7 +39957,7 @@ Parameters: <code>**kwargs</code> – Not used in this method. Only exists since
 <p>Subtract ticks from this timer.</p>
 <p>Parameters:</p>
 <ul>
-<li><strong>timer_value</strong> – The number of ticks you want to subtract from this timer’s current value.</li>
+<li><strong>timer_value</strong> – The number of ticks you want to subtract from this timer's current value.</li>
 <li><strong><code>**kwargs</code></strong> – Not used in this method. Only exists since this method is often registered as an event handler which may contain additional keyword arguments.</li>
 </ul>
 <p><code>ticks</code></p>

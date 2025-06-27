@@ -39898,12 +39898,12 @@ icons & this code generated via https://realfavicongenerator.net
 <p>Register a monitor.</p>
 <p>Parameters:</p>
 <ul>
-<li><strong>monitor_class</strong> – String name of the monitor class for this monitor that’s being registered.</li>
+<li><strong>monitor_class</strong> – String name of the monitor class for this monitor that's being registered.</li>
 <li><strong>monitor</strong> – Callback to notify</li>
 </ul>
 <p>MPF uses monitors to allow components to monitor certain internal elements of MPF.</p>
 <p>For example, a player variable monitor could be setup to be notified of any changes to a player variable, or a switch monitor could be used to allow a plugin to be notified of any changes to any switches.</p>
-<p>The MachineController’s list of registered monitors doesn’t actually do anything. Rather it’s a dictionary of sets which the monitors themselves can reference when they need to do something. We just needed a central registry of monitors.</p>
+<p>The MachineController's list of registered monitors doesn't actually do anything. Rather it's a dictionary of sets which the monitors themselves can reference when they need to do something. We just needed a central registry of monitors.</p>
 <p><code>reset() → None</code></p>
 <p>Reset the machine.</p>
 <p>This method is safe to call. It essentially sets up everything from scratch without reloading the config files and assets from disk. This method is called after a game ends and before attract mode begins.</p>

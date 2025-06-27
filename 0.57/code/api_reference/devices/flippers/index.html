@@ -39873,7 +39873,7 @@ icons & this code generated via https://realfavicongenerator.net
 <p>Parameters:</p>
 <ul>
 <li><strong>machine</strong> – A reference to the machine controller instance.</li>
-<li><strong>name</strong> – A string of the name you’ll refer to this flipper object as.</li>
+<li><strong>name</strong> – A string of the name you'll refer to this flipper object as.</li>
 </ul>
 <h2 id="accessing-flippers-in-code">Accessing flippers in code</h2>
 <p>The device collection which contains the <code>flippers</code> in your machine is available via <code>self.machine.flippers</code>. For example, to access one called “foo”, you would use <code>self.machine.flippers.foo</code>. You can also access flippers in dictionary form, e.g. <code>self.machine.flippers['foo']</code>. You can also get devices by tag or hardware number. See the DeviceCollection documentation for details.</p>
@@ -39882,7 +39882,7 @@ icons & this code generated via https://realfavicongenerator.net
 <p><code>disable()</code></p>
 <p>Disable the flipper.  This method makes it so the cabinet flipper buttons no longer control the flippers. Used when no game is active and when the player has tilted.</p>
 <p><code>enable()</code></p>
-<p>Enable the flipper by writing the necessary hardware rules to the hardware controller.  The hardware rules for coils can be kind of complex given all the options, so we’ve mapped all the options out here. We literally have methods to enable the various rules based on the rule letters here, which we’ve implemented below. Keeps it easy to understand. Note there’s a platform feature saved at: <code>self.machine.config['platform']['hw_enable_auto_disable']</code>. If True, it means that the platform hardware rules will automatically disable a coil that has been enabled when the trigger switch is disabled. If False, it means the hardware platform needs its own rule to disable the coil when the switch is disabled. Methods F and G below check for that feature setting and will not be applied to the hardware if it’s True.</p>
+<p>Enable the flipper by writing the necessary hardware rules to the hardware controller.  The hardware rules for coils can be kind of complex given all the options, so we've mapped all the options out here. We literally have methods to enable the various rules based on the rule letters here, which we've implemented below. Keeps it easy to understand. Note there's a platform feature saved at: <code>self.machine.config['platform']['hw_enable_auto_disable']</code>. If True, it means that the platform hardware rules will automatically disable a coil that has been enabled when the trigger switch is disabled. If False, it means the hardware platform needs its own rule to disable the coil when the switch is disabled. Methods F and G below check for that feature setting and will not be applied to the hardware if it's True.</p>
 <p>Two coils, using EOS switch to indicate the end of the power stroke: Rule Type Coil Switch Action A. Enable Main Button active D. Enable Hold Button active E. Disable Main EOS active</p>
 <p>One coil, using EOS switch: Rule Type Coil Switch Action A. Enable Main Button active H. PWM Main EOS active</p>
 <p>Two coils, not using EOS switch: Rule Type Coil Switch Action B. Pulse Main Button active D. Enable Hold Button active</p>

@@ -39857,16 +39857,16 @@ icons & this code generated via https://realfavicongenerator.net
 <p>Return True if this mode is active.</p>
 <p><code>add_mode_event_handler(event: str, handler: Callable, priority: int = 0, **kwargs) → mpf.core.events.EventHandlerKey</code></p>
 <p>Register an event handler which is automatically removed when this mode stops.</p>
-<p>This method is similar to the Event Manager’s add_handler() method, except this method automatically unregisters the handlers when the mode ends.</p>
+<p>This method is similar to the Event Manager's add_handler() method, except this method automatically unregisters the handlers when the mode ends.</p>
 <p>Parameters:</p>
 <ul>
-<li><strong>event</strong> – String name of the event you’re adding a handler for. Since events are text strings, they don’t have to be pre-defined.</li>
+<li><strong>event</strong> – String name of the event you're adding a handler for. Since events are text strings, they don't have to be pre-defined.</li>
 <li><strong>handler</strong> – The method that will be called when the event is fired.</li>
-<li><strong>priority</strong> – An arbitrary integer value that defines what order the handlers will be called in. The default is 1, so if you have a handler that you want to be called first, add it here with a priority of 2. (Or 3 or 10 or 100000.) The numbers don’t matter. They’re called from highest to lowest. (i.e. priority 100 is called before priority 1.)</li>
-<li><strong>**kwargs</strong> – Any any additional keyword/argument pairs entered here will be attached to the handler and called whenever that handler is called. Note these are in addition to kwargs that could be passed as part of the event post. If there’s a conflict, the event-level ones will win.</li>
+<li><strong>priority</strong> – An arbitrary integer value that defines what order the handlers will be called in. The default is 1, so if you have a handler that you want to be called first, add it here with a priority of 2. (Or 3 or 10 or 100000.) The numbers don't matter. They're called from highest to lowest. (i.e. priority 100 is called before priority 1.)</li>
+<li><strong>**kwargs</strong> – Any any additional keyword/argument pairs entered here will be attached to the handler and called whenever that handler is called. Note these are in addition to kwargs that could be passed as part of the event post. If there's a conflict, the event-level ones will win.</li>
 </ul>
-<p>Returns a EventHandlerKey to the handler which you can use to later remove the handler via remove_handler_by_key. Though you don’t need to remove the handler since the whole point of this method is they’re automatically removed when the mode stops.</p>
-<p>Note that if you do add a handler via this method and then remove it manually, that’s ok too.</p>
+<p>Returns a EventHandlerKey to the handler which you can use to later remove the handler via remove_handler_by_key. Though you don't need to remove the handler since the whole point of this method is they're automatically removed when the mode stops.</p>
+<p>Note that if you do add a handler via this method and then remove it manually, that's ok too.</p>
 <p><code>auto_stop_on_ball_end</code></p>
 <p>Controls whether this mode is stopped when the ball ends, regardless of its stop_events settings.</p>
 <p><code>configure_logging(logger: str, console_level: str = 'basic', file_level: str = 'basic', url_base=None)</code></p>
@@ -39879,9 +39879,9 @@ icons & this code generated via https://realfavicongenerator.net
 <li><strong>url_base</strong> – Base URL for docs links in exceptions.</li>
 </ul>
 <p><code>configure_mode_settings(config: dict) → None</code></p>
-<p>Process this mode’s configuration settings from a config dictionary.</p>
+<p>Process this mode's configuration settings from a config dictionary.</p>
 <p><code>create_mode_devices() → None</code></p>
-<p>Create new devices that are specified in a mode config that haven’t been created in the machine-wide.</p>
+<p>Create new devices that are specified in a mode config that haven't been created in the machine-wide.</p>
 <p><code>debug_log(msg: str, *args, context=None, error_no=None, **kwargs) → None</code></p>
 <p>Log a message at the debug level.</p>
 <p>Note that whether this message shows up in the console or log file is controlled by the settings used with configure_logging().</p>
@@ -39919,12 +39919,12 @@ icons & this code generated via https://realfavicongenerator.net
 <p><code>raise_config_error(msg, error_no, *, context=None) → NoReturn</code></p>
 <p>Raise a ConfigFileError exception.</p>
 <p><code>restart_on_next_ball</code></p>
-<p>Controls whether this mode will restart on the next ball. This only works if the mode was running when the ball ended. It’s tracked per- player in the ‘restart_modes_on_next_ball’ player variable.</p>
+<p>Controls whether this mode will restart on the next ball. This only works if the mode was running when the ball ended. It's tracked per- player in the 'restart_modes_on_next_ball' player variable.</p>
 <p><code>start(mode_priority=None, callback=None, **kwargs) → None</code></p>
 <p>Start this mode.</p>
 <p>Parameters:</p>
 <ul>
-<li><strong>mode_priority</strong> – Integer value of what you want this mode to run at. If you don’t specify one, it will use the “Mode: priority” setting from this mode’s configuration file.</li>
+<li><strong>mode_priority</strong> – Integer value of what you want this mode to run at. If you don't specify one, it will use the “Mode: priority” setting from this mode's configuration file.</li>
 <li><strong>callback</strong> – Callback to call when this mode has been started.</li>
 <li><strong>**kwargs</strong> – Catch-all since this mode might start from events with who-knows-what keyword arguments.</li>
 </ul>

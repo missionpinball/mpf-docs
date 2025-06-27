@@ -39871,7 +39871,7 @@ icons & this code generated via https://realfavicongenerator.net
 <p>Bases: <code>mpf.core.mpf_controller.MpfController</code></p>
 <p>Tracks all switches in the machine, receives switch activity, and converts switch changes into events.</p>
 <h2 id="accessing-the-switch_controller-in-code">Accessing the switch_controller in code</h2>
-<p>There is only one instance of the switch_controller in MPF, and it’s accessible via <code>self.machine.switch_controller</code>.</p>
+<p>There is only one instance of the switch_controller in MPF, and it's accessible via <code>self.machine.switch_controller</code>.</p>
 <h2 id="methods-attributes">Methods &amp; Attributes</h2>
 <p>The switch_controller has the following methods &amp; attributes available. Note that methods &amp; attributes inherited from base classes are not included here.</p>
 <p><code>add_monitor(monitor: Callable[[mpf.core.switch_controller.MonitoredSwitchChange], None])</code></p>
@@ -39880,10 +39880,10 @@ icons & this code generated via https://realfavicongenerator.net
 <p>Register a handler to take action on a switch event.</p>
 <p>Parameters:</p>
 <ul>
-<li><strong>switch_name</strong> – String name of the switch you’re adding this handler for.</li>
+<li><strong>switch_name</strong> – String name of the switch you're adding this handler for.</li>
 <li><strong>callback</strong> – The method you want called when this switch handler fires.</li>
-<li><strong>state</strong> – Integer of the state transition you want to callback to be triggered on. Default is 1 which means it’s called when the switch goes from inactive to active, but you can also use 0 which means your callback will be called when the switch becomes inactive</li>
-<li><strong>ms – Integer</strong> - If you specify a ‘ms’ parameter, the handler won’t be called until the witch is in that state for that many milliseconds.</li>
+<li><strong>state</strong> – Integer of the state transition you want to callback to be triggered on. Default is 1 which means it's called when the switch goes from inactive to active, but you can also use 0 which means your callback will be called when the switch becomes inactive</li>
+<li><strong>ms – Integer</strong> - If you specify a 'ms' parameter, the handler won't be called until the witch is in that state for that many milliseconds.</li>
 <li><strong>return_info</strong> – If True, the switch controller will pass the parameters of the switch handler as arguments to the callback, including switch_name, state, and ms. If False (default), it just calls the callback with no parameters.</li>
 <li><strong>callback_kwargs</strong> – Additional kwargs that will be passed with the callback.</li>
 </ul>
@@ -39899,13 +39899,13 @@ icons & this code generated via https://realfavicongenerator.net
 <li><strong>switch</strong> – Switch object to check.</li>
 <li><strong>ms</strong> – Milliseconds that the switch has been active. If this is non-zero, then this method will only return True if the switch has been in that state for at least the number of ms specified.</li>
 </ul>
-<p>Returns: True if the switch_name has been active for the given number of ms. If ms is not specified, returns True if the switch is in the state regardless of how long it’s been in that state.</p>
+<p>Returns: True if the switch_name has been active for the given number of ms. If ms is not specified, returns True if the switch is in the state regardless of how long it's been in that state.</p>
 <p><code>is_inactive(switch, ms=None)</code></p>
 <p>Query whether a switch is inactive.</p>
 <p>Parameters:</p>
 <ul>
 <li><strong>switch</strong> – Switch object to check.</li>
-<li><strong>ms</strong> – Milliseconds that the switch has been inactive. If this is non-zero, then this method will only return True if the switch has been in that state for at least the number of ms specified. number of ms. If ms is not specified, returns True if the switch is in the state regardless of how long it’s been in that state.</li>
+<li><strong>ms</strong> – Milliseconds that the switch has been inactive. If this is non-zero, then this method will only return True if the switch has been in that state for at least the number of ms specified. number of ms. If ms is not specified, returns True if the switch is in the state regardless of how long it's been in that state.</li>
 </ul>
 <p><code>is_state(switch: mpf.devices.switch.Switch, state, ms=0.0)</code></p>
 <p>Check if switch is in state. Query whether a switch is in a given state and (optionally) whether it has been in that state for the specified number of ms.</p>
@@ -39915,26 +39915,26 @@ icons & this code generated via https://realfavicongenerator.net
 <li><strong>state</strong> – Bool of the state to check. True is active and False is inactive.</li>
 <li><strong>ms</strong> – Milliseconds that the switch has been in that state. If this is non-zero, then this method will only return True if the switch has been in that state for at least the number of ms specified.</li>
 </ul>
-<p>Returns: True if the switch_name has been in the state for the given number of ms. If ms is not specified, returns True if the switch is in the state regardless of how long it’s been in that state.</p>
+<p>Returns: True if the switch_name has been in the state for the given number of ms. If ms is not specified, returns True if the switch is in the state regardless of how long it's been in that state.</p>
 <p><code>log_active_switches(**kwargs)</code></p>
 <p>Write out entries to the INFO log file of all switches that are currently active.</p>
 <p><code>process_switch(name, state, logical=False, timestamp=None)</code></p>
-<p>Process a new switch state change for a switch by name.  This is the method that is called by the platform driver whenever a switch changes state. It’s also used by the “other” modules that activate switches, including the keyboard and OSC interfaces. State 0 means the switch changed from active to inactive, and 1 means it changed from inactive to active. (The hardware &amp; platform code handles NC versus NO switches and translates them to ‘active’ versus ‘inactive’.)</p>
+<p>Process a new switch state change for a switch by name.  This is the method that is called by the platform driver whenever a switch changes state. It's also used by the “other” modules that activate switches, including the keyboard and OSC interfaces. State 0 means the switch changed from active to inactive, and 1 means it changed from inactive to active. (The hardware &amp; platform code handles NC versus NO switches and translates them to 'active' versus 'inactive'.)</p>
 <p>Parameters:</p>
 <ul>
 <li><strong>name</strong> – The string name of the switch.</li>
-<li><strong>state</strong> – Boolean or int of state of the switch you’re processing, True/1 is active, False/0 is inactive.</li>
-<li><strong>logical</strong> – Boolean which specifies whether the ‘state’ argument represents the “physical” or “logical” state of the switch. If True, a 1 means this switch is active and a 0 means it’s inactive, regardless of the NC/NO configuration of the switch. If False, then the state parameter passed will be inverted if the switch is configured to be an ‘NC’ type. Typically the hardware will send switch states in their raw (logical=False) states, but other interfaces like the keyboard and OSC will use logical=True.</li>
+<li><strong>state</strong> – Boolean or int of state of the switch you're processing, True/1 is active, False/0 is inactive.</li>
+<li><strong>logical</strong> – Boolean which specifies whether the 'state' argument represents the “physical” or “logical” state of the switch. If True, a 1 means this switch is active and a 0 means it's inactive, regardless of the NC/NO configuration of the switch. If False, then the state parameter passed will be inverted if the switch is configured to be an 'NC' type. Typically the hardware will send switch states in their raw (logical=False) states, but other interfaces like the keyboard and OSC will use logical=True.</li>
 <li><strong>timestamp</strong> – Timestamp when this switch change happened.</li>
 </ul>
 <p><code>process_switch_by_num(num, state, platform, logical=False, timestamp=None)</code></p>
 <p>Process a switch state change by switch number.</p>
 <p>Parameters:</p>
 <ul>
-<li><strong>num</strong> – The switch number (based on the platform number) for the switch you’re setting.</li>
+<li><strong>num</strong> – The switch number (based on the platform number) for the switch you're setting.</li>
 <li><strong>state</strong> – The state to set, either 0 or 1.</li>
 <li><strong>platform</strong> – The platform this switch is on.</li>
-<li><strong>logical</strong> – Whether the state you’re setting is the logical or physical state of the switch. If a switch is NO (normally open), then the logical and physical states will be the same. NC (normally closed) switches will have physical and logical states that are inverted from each other.</li>
+<li><strong>logical</strong> – Whether the state you're setting is the logical or physical state of the switch. If a switch is NO (normally open), then the logical and physical states will be the same. NC (normally closed) switches will have physical and logical states that are inverted from each other.</li>
 <li><strong>timestamp</strong> – Timestamp when this switch change happened.</li>
 </ul>
 <p><code>process_switch_obj(obj: mpf.devices.switch.Switch, state, logical, timestamp=None)</code></p>
@@ -39942,11 +39942,11 @@ icons & this code generated via https://realfavicongenerator.net
 <p>Parameters:</p>
 <ul>
 <li><strong>obj</strong> – The switch object.</li>
-<li><strong>state</strong> – Boolean or int of state of the switch you’re processing, True/1 is active, False/0 is inactive.</li>
-<li><strong>logical</strong> – Boolean which specifies whether the ‘state’ argument represents the “physical” or “logical” state of the switch. If True, a 1 means this switch is active and a 0 means it’s inactive, regardless of the NC/NO configuration of the switch. If False, then the state parameter passed will be inverted if the switch is configured to be an ‘NC’ type. Typically the hardware will send switch states in their raw (logical=False) states, but other interfaces like the keyboard and OSC will use logical=True.</li>
+<li><strong>state</strong> – Boolean or int of state of the switch you're processing, True/1 is active, False/0 is inactive.</li>
+<li><strong>logical</strong> – Boolean which specifies whether the 'state' argument represents the “physical” or “logical” state of the switch. If True, a 1 means this switch is active and a 0 means it's inactive, regardless of the NC/NO configuration of the switch. If False, then the state parameter passed will be inverted if the switch is configured to be an 'NC' type. Typically the hardware will send switch states in their raw (logical=False) states, but other interfaces like the keyboard and OSC will use logical=True.</li>
 <li><strong>timestamp</strong> – Timestamp when this switch change happened.</li>
 </ul>
-<p>This is the method that is called by the platform driver whenever a switch changes state. It’s also used by the “other” modules that activate switches, including the keyboard and OSC interfaces. State 0 means the switch changed from active to inactive, and 1 means it changed from inactive to active. (The hardware &amp; platform code handles NC versus NO switches and translates them to ‘active’ versus ‘inactive’.)</p>
+<p>This is the method that is called by the platform driver whenever a switch changes state. It's also used by the “other” modules that activate switches, including the keyboard and OSC interfaces. State 0 means the switch changed from active to inactive, and 1 means it changed from inactive to active. (The hardware &amp; platform code handles NC versus NO switches and translates them to 'active' versus 'inactive'.)</p>
 <p><code>register_switch(switch: mpf.devices.switch.Switch)</code></p>
 <p>Add a switch object to the switch controller for tracking.</p>
 <p>Parameters:</p>
@@ -39954,7 +39954,7 @@ icons & this code generated via https://realfavicongenerator.net
 <p><code>remove_monitor(monitor: Callable[[mpf.core.switch_controller.MonitoredSwitchChange], None])</code></p>
 <p>Remove a monitor callback.</p>
 <p><code>remove_switch_handler(switch_name, callback, state=1, ms=0)</code></p>
-<p>Remove a registered switch handler. Currently this only works if you specify everything exactly as you set it up. (Except for return_info, which doesn’t matter if true or false, it will remove either / both.</p>
+<p>Remove a registered switch handler. Currently this only works if you specify everything exactly as you set it up. (Except for return_info, which doesn't matter if true or false, it will remove either / both.</p>
 <p><code>remove_switch_handler_by_key(switch_handler: mpf.core.switch_controller.SwitchHandler)</code></p>
 <p>Remove switch handler by key returned from <code>add_switch_handler</code>.</p>
 <p><code>remove_switch_handler_by_keys(switch_handlers: List[mpf.core.switch_controller.SwitchHandler])</code></p>
@@ -39964,7 +39964,7 @@ icons & this code generated via https://realfavicongenerator.net
 <p><code>update_switches_from_hw()</code></p>
 <p>Update the states of all the switches be re-reading the states from the hardware platform. This method works silently and does not post any events if any switches changed state.</p>
 <p><code>verify_switches() → bool</code></p>
-<p>Verify that switches states match the hardware. Loops through all the switches and queries their hardware states via their platform interfaces and then compares that to the state that MPF thinks the switches are in. Throws logging warnings if anything doesn’t match.  This method is notification only. It doesn’t fix anything.</p>
+<p>Verify that switches states match the hardware. Loops through all the switches and queries their hardware states via their platform interfaces and then compares that to the state that MPF thinks the switches are in. Throws logging warnings if anything doesn't match.  This method is notification only. It doesn't fix anything.</p>
 <p><code>wait_for_any_switch(switches: List[mpf.devices.switch.Switch], state: int = 1, only_on_change=True, ms=0)</code></p>
 <p>Wait for the first switch in the list to change into state.</p>
 <p>Parameters:</p>

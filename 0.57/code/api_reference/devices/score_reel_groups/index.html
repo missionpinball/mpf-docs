@@ -39887,24 +39887,24 @@ icons & this code generated via https://realfavicongenerator.net
 <p>This method will pad shorter ints with zeros, and it will chop off leading digits for ints that are too long. (For example, if you pass a value of 10000 to a ScoreReelGroup which only has 4 digits, the returns list would correspond to 0000, since your score reel unit has rolled over.)</p>
 <p>Parameters:</p>
 <ul>
-<li><strong>value</strong> – The interger value you’d like to convert.</li>
+<li><strong>value</strong> – The interger value you'd like to convert.</li>
 </ul>
 <p>Returns a list containing the values for each corresponding score reel, with the lowest reel digit position in list position 0.</p>
 <p><code>light(**kwargs)</code></p>
-<p>Light up this ScoreReelGroup based on the ‘light_tag’ in its config.</p>
+<p>Light up this ScoreReelGroup based on the 'light_tag' in its config.</p>
 <p><code>raise_config_error(msg, error_no, *, context=None) → NoReturn</code></p>
 <p>Raise a ConfigFileError exception.</p>
 <p><code>set_value(value)</code></p>
 <p>Reset the score reel group to display the value passed.</p>
-<p>This method will “jump” the score reel group to display the value that’s passed as an it. (Note this “jump” technique means it will just move the reels as fast as it can, and nonsensical values might show up on the reel while the movement is in progress.)</p>
-<p>This method is used to “reset” a reel group to all zeros at the beginning of a game, and can also be used to reset a reel group that is confused or to switch a reel to the new player’s score if multiple players a sharing the same reel group.</p>
+<p>This method will “jump” the score reel group to display the value that's passed as an it. (Note this “jump” technique means it will just move the reels as fast as it can, and nonsensical values might show up on the reel while the movement is in progress.)</p>
+<p>This method is used to “reset” a reel group to all zeros at the beginning of a game, and can also be used to reset a reel group that is confused or to switch a reel to the new player's score if multiple players a sharing the same reel group.</p>
 <p>Note you can choose to pass either an integer representation of the value, or a value list.</p>
 <p>Parameters:</p>
 <ul>
 <li><strong>value</strong> – An integer value of what the new displayed value (i.e. score) should be. This is the default option if you only pass a single positional argument, e.g. set_value(2100).</li>
 </ul>
 <p><code>unlight(**kwargs)</code></p>
-<p>Turn off the lights for this ScoreReelGroup based on the ‘light_tag’ in its config.</p>
+<p>Turn off the lights for this ScoreReelGroup based on the 'light_tag' in its config.</p>
 <p><code>wait_for_ready()</code></p>
 <p>Return a future which will be done when all reels reached their destination.</p>
 <hr />

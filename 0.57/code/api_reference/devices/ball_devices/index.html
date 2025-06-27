@@ -39869,7 +39869,7 @@ icons & this code generated via https://realfavicongenerator.net
 <div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">mpf</span><span class="o">.</span><span class="n">devices</span><span class="o">.</span><span class="n">ball_device</span><span class="o">.</span><span class="n">ball_device</span><span class="o">.</span><span class="n">BallDevice</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 </code></pre></div>
 <p>Bases: <code>mpf.core.system_wide_device.SystemWideDevice</code></p>
-<p>Base class for a ‘Ball Device’ in a pinball machine. A ball device is anything that can hold one or more balls, such as a trough, an eject hole, a VUK, a catapult, etc.</p>
+<p>Base class for a 'Ball Device' in a pinball machine. A ball device is anything that can hold one or more balls, such as a trough, an eject hole, a VUK, a catapult, etc.</p>
 <p>Args: Same as Device.</p>
 <h2 id="accessing-ball_devices-in-code">Accessing ball_devices in code</h2>
 <p>The device collection which contains the ball_devices in your machine is available via self.machine.ball_devices. For example, to access one called “foo”, you would use <code>self.machine.ball_devices.foo</code>. You can also access <code>ball_devices</code> in dictionary form, e.g. <code>self.machine.ball_devices['foo']</code>. You can also get devices by tag or hardware number. See the DeviceCollection documentation for details.</p>
@@ -39878,7 +39878,7 @@ icons & this code generated via https://realfavicongenerator.net
 <p><code>add_incoming_ball(incoming_ball: mpf.devices.ball_device.incoming_balls_handler.IncomingBall)</code></p>
 <p>Notify this device that there is a ball heading its way.</p>
 <p><code>available_balls</code></p>
-<p>Number of balls that are available to be ejected. This differs from balls since it’s possible that this device could have balls that are being used for some other eject, and thus not available.</p>
+<p>Number of balls that are available to be ejected. This differs from balls since it's possible that this device could have balls that are being used for some other eject, and thus not available.</p>
 <p><code>balls</code></p>
 <p>Return the number of balls we expect in the near future.</p>
 <p><code>cancel_path_if_target_is(start, target)</code></p>
@@ -39920,7 +39920,7 @@ icons & this code generated via https://realfavicongenerator.net
 <p><code>handle_mechanial_eject_during_idle()</code></p>
 <p>Handle mechanical eject.</p>
 <p><code>classmethod is_playfield()</code></p>
-<p>Return True if this ball device is a Playfield-type device, False if it’s a regular ball device.</p>
+<p>Return True if this ball device is a Playfield-type device, False if it's a regular ball device.</p>
 <p><code>lost_ejected_ball(target)</code></p>
 <p>Handle an outgoing lost ball.</p>
 <p><code>lost_idle_ball()</code></p>

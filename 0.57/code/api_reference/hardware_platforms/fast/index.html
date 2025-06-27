@@ -39876,7 +39876,7 @@ icons & this code generated via https://realfavicongenerator.net
 <p>The fast platform has the following methods &amp; attributes available. Note that methods &amp; attributes inherited from base classes are not included here.</p>
 <p><code>clear_hw_rule(switch, coil)</code></p>
 <p>Clear a hardware rule.</p>
-<p>This is used if you want to remove the linkage between a switch and some driver activity. For example, if you wanted to disable your flippers (so that a player pushing the flipper buttons wouldn’t cause the flippers to flip), you’d call this method with your flipper button as the sw_num.</p>
+<p>This is used if you want to remove the linkage between a switch and some driver activity. For example, if you wanted to disable your flippers (so that a player pushing the flipper buttons wouldn't cause the flippers to flip), you'd call this method with your flipper button as the sw_num.</p>
 <p>Parameters:</p>
 <ul>
 <li><strong>switch</strong> – The switch whose rule you want to clear.</li>
@@ -39905,9 +39905,9 @@ icons & this code generated via https://realfavicongenerator.net
 <p><code>configure_switch(number: str, config: mpf.core.platform.SwitchConfig, platform_config: dict) → mpf.platforms.fast.fast_switch.FASTSwitch</code></p>
 <p>Configure the switch object for a FAST Pinball controller.</p>
 <p>FAST Controllers support two types of switches: local and network. Local switches are switches that are connected to the FAST controller board itself, and network switches are those connected to a FAST I/O board.</p>
-<p>MPF needs to know which type of switch is this is. You can specify the switch’s connection type in the config file via the connection: setting (either local or network).</p>
+<p>MPF needs to know which type of switch is this is. You can specify the switch's connection type in the config file via the connection: setting (either local or network).</p>
 <p>If a connection type is not specified, this method will use some intelligence to try to figure out which default should be used.</p>
-<p>If the DriverBoard type is fast, then it assumes the default is network. If it’s anything else (wpc, system11, bally, etc.) then it assumes the connection type is local. Connection types can be mixed and matched in the same machine.</p>
+<p>If the DriverBoard type is fast, then it assumes the default is network. If it's anything else (wpc, system11, bally, etc.) then it assumes the connection type is local. Connection types can be mixed and matched in the same machine.</p>
 <p>Parameters:</p>
 <ul>
 <li><strong>number</strong> – Number of this switch.</li>
@@ -39977,12 +39977,12 @@ Parameters:</p>
 <p>Register an IO board.</p>
 <p>Parameters:</p>
 <ul>
-<li><strong>board</strong> – ‘mpf.platform.fast.fast_io_board.FastIoBoard’ to register</li>
+<li><strong>board</strong> – 'mpf.platform.fast.fast_io_board.FastIoBoard' to register</li>
 </ul>
 <p><code>register_processor_connection(name: str, communicator)</code></p>
 <p>Register processor.</p>
-<p>Once a communication link has been established with one of the processors on the FAST board, this method lets the communicator let MPF know which processor it’s talking to.</p>
-<p>This is a separate method since we don’t know which processor is on which serial port ahead of time.</p>
+<p>Once a communication link has been established with one of the processors on the FAST board, this method lets the communicator let MPF know which processor it's talking to.</p>
+<p>This is a separate method since we don't know which processor is on which serial port ahead of time.</p>
 <p>Parameters:</p>
 <ul>
 <li><strong>communicator</strong> – communicator object</li>
@@ -40007,7 +40007,7 @@ Parameters:</p>
 <p><code>update_leds()</code></p>
 <p>Update all the LEDs connected to a FAST controller.</p>
 <p>This is done once per game loop for efficiency (i.e. all LEDs are sent as a single update rather than lots of individual ones).</p>
-<p>Also, every LED is updated every loop, even if it doesn’t change. This is in case some interference causes a LED to change color. Since we update every loop, it will only be the wrong color for one tick.</p>
+<p>Also, every LED is updated every loop, even if it doesn't change. This is in case some interference causes a LED to change color. Since we update every loop, it will only be the wrong color for one tick.</p>
 <hr />
 <div class="admonition question">
 <p class="admonition-title">Something missing or wrong? You can fix it!</p>

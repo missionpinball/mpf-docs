@@ -39861,12 +39861,12 @@ icons & this code generated via https://realfavicongenerator.net
 <ul>
 <li><strong>ms</strong> – The number of milliseconds you want this delay to be for.</li>
 <li><strong>callback</strong> – The method that is called when this delay ends.</li>
-<li><strong>name</strong> – String name of this delay. This name is arbitrary and only used to identify the delay later if you want to remove or change it. If you don’t provide it, a UUID4 name will be created.</li>
+<li><strong>name</strong> – String name of this delay. This name is arbitrary and only used to identify the delay later if you want to remove or change it. If you don't provide it, a UUID4 name will be created.</li>
 <li><strong>**kwargs</strong> – Any other (optional) kwarg pairs you pass will be passed along as kwargs to the callback method.</li>
 </ul>
 <p>Returns string name or UUID4 of the delay which you can use to remove it later.</p>
 <p><code>add_if_doesnt_exist(ms: int, callback: Callable[[...], None], name: str, **kwargs) → str</code></p>
-<p>Add a delay only if a delay with that name doesn’t exist already.</p>
+<p>Add a delay only if a delay with that name doesn't exist already.</p>
 <p>Parameters:</p>
 <ul>
 <li><strong>ms</strong> – Int of the number of milliseconds you want this delay to be for.</li>
@@ -39879,7 +39879,7 @@ icons & this code generated via https://realfavicongenerator.net
 <p>Check to see if a delay exists.</p>
 <p>Parameters:</p>
 <ul>
-<li><strong>delay</strong> – A string of the delay you’re checking for.</li>
+<li><strong>delay</strong> – A string of the delay you're checking for.</li>
 </ul>
 <p>Returns true if the delay exists. False otherwise.</p>
 <p><code>clear() → None</code></p>
@@ -39914,16 +39914,16 @@ icons & this code generated via https://realfavicongenerator.net
 <p>Removing a delay prevents the callback from being called and cancels the delay.</p>
 <p>Parameters:</p>
 <ul>
-<li><strong>name</strong> – String name of the delay you want to remove. If there is no delay with this name, that’s ok. Nothing happens.</li>
+<li><strong>name</strong> – String name of the delay you want to remove. If there is no delay with this name, that's ok. Nothing happens.</li>
 </ul>
 <p><code>reset(ms: int, callback: Callable[[...], None], name: str, **kwargs) → str</code></p>
 <p>Reset a delay.</p>
-<p>Resetting will first delete the existing delay (if it exists) and then add new delay with the new settings. If the delay does not exist, that’s ok, and this method is essentially the same as just adding a delay with this name.</p>
+<p>Resetting will first delete the existing delay (if it exists) and then add new delay with the new settings. If the delay does not exist, that's ok, and this method is essentially the same as just adding a delay with this name.</p>
 <p>Parameters:</p>
 <ul>
 <li><strong>ms</strong> – The number of milliseconds you want this delay to be for.</li>
 <li><strong>callback</strong> – The method that is called when this delay ends.</li>
-<li><strong>name</strong> – String name of this delay. This name is arbitrary and only used to identify the delay later if you want to remove or change it. If you don’t provide it, a UUID4 name will be created.</li>
+<li><strong>name</strong> – String name of this delay. This name is arbitrary and only used to identify the delay later if you want to remove or change it. If you don't provide it, a UUID4 name will be created.</li>
 <li><strong>**kwargs</strong> – Any other (optional) kwarg pairs you pass will be passed along as kwargs to the callback method.</li>
 </ul>
 <p>Returns string name or UUID4 of the delay which you can use to remove it later.</p>
@@ -39932,7 +39932,7 @@ icons & this code generated via https://realfavicongenerator.net
 <p>This will cancel the future running of the delay callback.</p>
 <p>Parameters:</p>
 <ul>
-<li><strong>name</strong> – Name of the delay to run. If this name is not an active delay, that’s fine. Nothing happens.</li>
+<li><strong>name</strong> – Name of the delay to run. If this name is not an active delay, that's fine. Nothing happens.</li>
 </ul>
 <p><code>warning_log(msg: str, *args, context=None, error_no=None, **kwargs) → None</code></p>
 <p>Log a message at the warning level.</p>

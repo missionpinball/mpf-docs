@@ -39871,7 +39871,7 @@ icons & this code generated via https://realfavicongenerator.net
 <p>Bases: <code>mpf.core.mpf_controller.MpfController</code></p>
 <p>Handles all the events and manages the handlers in MPF.</p>
 <h2 id="accessing-the-events-in-code">Accessing the events in code</h2>
-<p>There is only one instance of the events in MPF, and it’s accessible via self.machine.events.</p>
+<p>There is only one instance of the events in MPF, and it's accessible via self.machine.events.</p>
 <h2 id="methods-attributes">Methods &amp; Attributes</h2>
 <p>The events has the following methods &amp; attributes available. Note that methods &amp; attributes inherited from base classes are not included here.</p>
 <p><code>add_async_handler(event: str, handler: Any, priority: int = 1, blocking_facility: Any = None, **kwargs) → mpf.core.events.EventHandlerKey</code></p>
@@ -39880,11 +39880,11 @@ icons & this code generated via https://realfavicongenerator.net
 <p>Register an event handler to respond to an event.</p>
 <p>Parameters:</p>
 <ul>
-<li><strong>event</strong> – String name of the event you’re adding a handler for. Since events are text strings, they don’t have to be pre-defined.</li>
-<li><strong>handler</strong> – The callable method that will be called when the event is fired. Since it’s possible for events to have kwargs attached to them, the handler method must include **kwargs in its signature.</li>
-<li><strong>priority</strong> – An arbitrary integer value that defines what order the handlers will be called in. The default is 1, so if you have a handler that you want to be called first, add it here with a priority of 2. (Or 3 or 10 or 100000.) The numbers don’t matter. They’re called from highest to lowest. (i.e. priority 100 is called before priority 1.)</li>
+<li><strong>event</strong> – String name of the event you're adding a handler for. Since events are text strings, they don't have to be pre-defined.</li>
+<li><strong>handler</strong> – The callable method that will be called when the event is fired. Since it's possible for events to have kwargs attached to them, the handler method must include **kwargs in its signature.</li>
+<li><strong>priority</strong> – An arbitrary integer value that defines what order the handlers will be called in. The default is 1, so if you have a handler that you want to be called first, add it here with a priority of 2. (Or 3 or 10 or 100000.) The numbers don't matter. They're called from highest to lowest. (i.e. priority 100 is called before priority 1.)</li>
 <li><strong>blocking_facility</strong> – Facility which can block this event.</li>
-<li><strong>**kwargs</strong> – Any any additional keyword/argument pairs entered here will be attached to the handler and called whenever that handler is called. Note these are in addition to kwargs that could be passed as part of the event post. If there’s a conflict, the event-level ones will win.</li>
+<li><strong>**kwargs</strong> – Any any additional keyword/argument pairs entered here will be attached to the handler and called whenever that handler is called. Note these are in addition to kwargs that could be passed as part of the event post. If there's a conflict, the event-level ones will win.</li>
 </ul>
 <p>Returns EventHandlerKey to the handler which you can use to later remove the handler via remove_handler_by_key. For example: <code>my_handler = self.machine.events.add_handler('ev', self.test))</code> Then later to remove all the handlers that a module added, you could: for handler in handler_list: <code>events.remove_handler(my_handler)</code></p>
 <p><code>does_event_exist(event_name: str) → bool</code></p>
@@ -39899,15 +39899,15 @@ icons & this code generated via https://realfavicongenerator.net
 <p>Parameters:</p>
 <ul>
 <li><strong>event_string</strong> – String to parse
-Returns 2-item tuple- First item is the event name. Second item is the condition (A BoolTemplate instance) if it exists, or None if it doesn’t.</li>
+Returns 2-item tuple- First item is the event name. Second item is the condition (A BoolTemplate instance) if it exists, or None if it doesn't.</li>
 </ul>
 <p><code>post(event: str, callback=None, **kwargs) → None</code></p>
 <p>Post an event which causes all the registered handlers to be called. Events are processed serially (e.g. one at a time), so if the event core is in the process of handling another event, this event is added to a queue and processed after the current event is done. You can control the order the handlers will be called by optionally specifying a priority when the handlers were registered. (Higher priority values will be processed first.)</p>
 <p>Parameters:</p>
 <ul>
-<li><strong>event</strong> – A string name of the event you’re posting. Note that you can post whatever event you want. You don’t have to set up anything ahead of time, and if no handlers are registered for the event you post, so be it.</li>
+<li><strong>event</strong> – A string name of the event you're posting. Note that you can post whatever event you want. You don't have to set up anything ahead of time, and if no handlers are registered for the event you post, so be it.</li>
 <li><strong>callback</strong> – An optional method which will be called when the final handler is done processing this event. Default is None.</li>
-<li><strong><code>**kwargs</code></strong> – One or more options keyword/value pairs that will be passed to each handler. (The event manager will enforce that handlers have <code>**kwargs</code> in their signatures when they’re registered to prevent run-time crashes from unexpected kwargs that were included in post() calls.</li>
+<li><strong><code>**kwargs</code></strong> – One or more options keyword/value pairs that will be passed to each handler. (The event manager will enforce that handlers have <code>**kwargs</code> in their signatures when they're registered to prevent run-time crashes from unexpected kwargs that were included in post() calls.</li>
 </ul>
 <p><code>post_async(event: str, **kwargs) → _asyncio.Future</code></p>
 <p>Post event and wait until all handlers are done.</p>
@@ -39915,7 +39915,7 @@ Returns 2-item tuple- First item is the event name. Second item is the condition
 <p>Post an boolean event which causes all the registered handlers to be called one-by-one. Boolean events differ from regular events in that if any handler returns False, the remaining handlers will not be called. Events are processed serially (e.g. one at a time), so if the event core is in the process of handling another event, this event is added to a queue and processed after the current event is done. You can control the order the handlers will be called by optionally specifying a priority when the handlers were registered. (Higher priority values will be processed first.)</p>
 <p>Parameters:</p>
 <ul>
-<li><strong>event</strong> – A string name of the event you’re posting. Note that you can post whatever event you want. You don’t have to set up anything ahead of time, and if no handlers are registered for the event you post, so be it.</li>
+<li><strong>event</strong> – A string name of the event you're posting. Note that you can post whatever event you want. You don't have to set up anything ahead of time, and if no handlers are registered for the event you post, so be it.</li>
 <li><strong>callback</strong> – An optional method which will be called when the final handler is done processing this event. Default is None. If any handler returns False and cancels this boolean event, the callback will still be called, but a new kwarg ev_result=False will be passed to it.</li>
 <li><strong>**kwargs</strong> – One or more options keyword/value pairs that will be passed to each handler.</li>
 </ul>
@@ -39923,9 +39923,9 @@ Returns 2-item tuple- First item is the event name. Second item is the condition
 <p>Post a queue event which causes all the registered handlers to be called. Queue events differ from standard events in that individual handlers are given the option to register a “wait”, and the callback will not be called until any handler(s) that registered a wait will have to release that wait. Once all the handlers release their waits, the callback is called. Events are processed serially (e.g. one at a time), so if the event core is in the process of handling another event, this event is added to a queue and processed after the current event is done. You can control the order the handlers will be called by optionally specifying a priority when the handlers were registered. (Higher numeric values will be processed first.)</p>
 <p>Parameters:</p>
 <ul>
-<li><strong>event</strong> - A string name of the event you’re posting. Note that you can post whatever event you want. You don’t have to set up anything ahead of time, and if no handlers are registered for the event you post, so be it.</li>
+<li><strong>event</strong> - A string name of the event you're posting. Note that you can post whatever event you want. You don't have to set up anything ahead of time, and if no handlers are registered for the event you post, so be it.</li>
 <li><strong>callback</strong> - The method which will be called when the final handler is done processing this event and any handlers that registered waits have cleared their waits.</li>
-<li><strong><code>**kwargs</code></strong> - One or more options keyword/value pairs that will be passed to each handler. (Just make sure your handlers are expecting them. You can add <code>**kwargs</code> to your handler methods if certain ones don’t need them.)</li>
+<li><strong><code>**kwargs</code></strong> - One or more options keyword/value pairs that will be passed to each handler. (Just make sure your handlers are expecting them. You can add <code>**kwargs</code> to your handler methods if certain ones don't need them.)</li>
 </ul>
 <p>Post the queue event called <code>pizza_time</code>, and then call <code>self.pizza_done</code> when done: <code>self.machine.events.post_queue('pizza_time', self.pizza_done)</code></p>
 <p><code>post_queue_async(event: str, **kwargs) → _asyncio.Future</code></p>
@@ -39934,9 +39934,9 @@ Returns 2-item tuple- First item is the event name. Second item is the condition
 <p>Post a relay event which causes all the registered handlers to be called. A dictionary can be passed from handler-to-handler and modified as needed.</p>
 <p>Parameters:</p>
 <ul>
-<li><strong>event</strong> – A string name of the event you’re posting. Note that you can post whatever event you want. You don’t have to set up anything ahead of time, and if no handlers are registered for the event you post, so be it.</li>
+<li><strong>event</strong> – A string name of the event you're posting. Note that you can post whatever event you want. You don't have to set up anything ahead of time, and if no handlers are registered for the event you post, so be it.</li>
 <li><strong>callback</strong> – The method which will be called when the final handler is done processing this event. Default is None.</li>
-<li><strong><code>**kwargs</code></strong> – One or more options keyword/value pairs that will be passed to each handler. (Just make sure your handlers are expecting them. You can add <code>**kwargs</code> to your handler methods if certain ones don’t need them.)</li>
+<li><strong><code>**kwargs</code></strong> – One or more options keyword/value pairs that will be passed to each handler. (Just make sure your handlers are expecting them. You can add <code>**kwargs</code> to your handler methods if certain ones don't need them.)</li>
 </ul>
 <p>Events are processed serially (e.g. one at a time), so if the event core is in the process of handling another event, this event is added to a queue and processed after the current event is done. You can control the order the handlers will be called by optionally specifying a priority when the handlers were registered. (Higher priority values will be processed first.) Relay events differ from standard events in that the resulting kwargs from one handler are passed to the next handler. (In other words, standard events mean that all the handlers get the same initial kwargs, whereas relay events “relay” the resulting kwargs from one handler to the next.)</p>
 <p><code>post_relay_async(event: str, **kwargs) → _asyncio.Future</code></p>
@@ -39980,7 +39980,7 @@ Returns 2-item tuple- First item is the event name. Second item is the condition
 <li><strong>priority</strong> – Optional priority of the new handler that will be registered.</li>
 <li><strong>**kwargs</strong> – The kwargs you want to check and the kwargs that will be registered with the new handler.</li>
 </ul>
-<p>If you don’t pass kwargs, this method will just look for the handler and event combination. If you do pass kwargs, it will make sure they match before replacing the existing entry. If this method doesn’t find a match, it will still add the new handler.</p>
+<p>If you don't pass kwargs, this method will just look for the handler and event combination. If you do pass kwargs, it will make sure they match before replacing the existing entry. If this method doesn't find a match, it will still add the new handler.</p>
 <p><code>wait_for_any_event(event_names: List[str]) → _asyncio.Future</code></p>
 <p>Wait for any event from event_names.</p>
 <p><code>wait_for_event(event_name: str) → _asyncio.Future</code></p>

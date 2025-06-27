@@ -39858,11 +39858,11 @@ icons & this code generated via https://realfavicongenerator.net
 <p>First, player variables can be accessed as attributes of the player object directly. For example, to set a player variable foo for the current player, you could use:</p>
 <div class="highlight"><pre><span></span><code><span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">player</span><span class="o">.</span><span class="n">foo</span> <span class="o">=</span> <span class="mi">0</span>
 </code></pre></div>
-<p>If that variable didn’t exist, it will be automatically created.</p>
+<p>If that variable didn't exist, it will be automatically created.</p>
 <p>You can get the value of player variables by accessing them directly. For example:</p>
 <div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">player</span><span class="o">.</span><span class="n">foo</span><span class="p">)</span>  <span class="c1"># prints 0</span>
 </code></pre></div>
-<p>If you attempt to access a player variable that doesn’t exist, it will automatically be created with a value of 0.</p>
+<p>If you attempt to access a player variable that doesn't exist, it will automatically be created with a value of 0.</p>
 <p>Every time a player variable is created or changed, an MPF event is posted in the form player_ plus the variable name. For example, creating or changing the foo variable will cause an event called player_foo to be posted.</p>
 <p>The player variable event will have four parameters posted along with it:</p>
 <ul>
@@ -39871,7 +39871,7 @@ icons & this code generated via https://realfavicongenerator.net
 <li><code>change</code> (the change in the value)</li>
 <li><code>player_num</code> (the player number the variable belongs to)</li>
 </ul>
-<p>For the change parameter, it will attempt to subtract the old value from the new value. If that works, it will return the result as the change. If it doesn’t work (like if you’re not storing numbers in this variable), then the change parameter will be True if the new value is different and False if the value didn’t change.</p>
+<p>For the change parameter, it will attempt to subtract the old value from the new value. If that works, it will return the result as the change. If it doesn't work (like if you're not storing numbers in this variable), then the change parameter will be True if the new value is different and False if the value didn't change.</p>
 <p>For examples, the following three lines:</p>
 <div class="highlight"><pre><span></span><code><span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">player</span><span class="o">.</span><span class="n">score</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">player</span><span class="o">.</span><span class="n">score</span> <span class="o">+=</span> <span class="mi">500</span>

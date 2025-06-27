@@ -39871,7 +39871,7 @@ icons & this code generated via https://realfavicongenerator.net
 <p>Bases: <code>mpf.core.mpf_controller.MpfController</code></p>
 <p>Tracks and manages all the balls in a pinball machine.</p>
 <h2 id="accessing-the-ball_controller-in-code">Accessing the ball_controller in code</h2>
-<pre><code>There is only one instance of the ball_controller in MPF, and it’s accessible via self.machine.ball_controller.
+<pre><code>There is only one instance of the ball_controller in MPF, and it's accessible via self.machine.ball_controller.
 </code></pre>
 <h2 id="methods-attributes">Methods &amp; Attributes</h2>
 <p>The ball_controller has the following methods &amp; attributes available. Note that methods &amp; attributes inherited from base classes are not included here.</p>
@@ -39879,23 +39879,23 @@ icons & this code generated via https://realfavicongenerator.net
 <p>Inform ball controller about a capured ball (which might be new).</p>
 <p><code>are_balls_collected(target: Union[str, Iterable[str]]) → bool</code></p>
 <p>Check to see if all the balls are contained in devices tagged with the parameter that was passed.
-Note if you pass a target that’s not used in any ball devices, this method will return True. (Because you’re asking if all balls are nowhere, and they always are. :)</p>
+Note if you pass a target that's not used in any ball devices, this method will return True. (Because you're asking if all balls are nowhere, and they always are. :)</p>
 <p>Parameters:</p>
 <ul>
-<li><strong>target</strong> – String or list of strings of the tags you’d like to collect the balls to. Default of None will be replaced with ‘home’ and ‘trough’.</li>
+<li><strong>target</strong> – String or list of strings of the tags you'd like to collect the balls to. Default of None will be replaced with 'home' and 'trough'.</li>
 </ul>
 <p><code>collect_balls(target='home, trough') → None</code></p>
 <p>Ensure that all balls are in contained in ball devices with the tag or list of tags you pass.
-Typically this would be used after a game ends, or when the machine is reset or first starts up, to ensure that all balls are in devices tagged with ‘home’ and/or ‘trough’.</p>
+Typically this would be used after a game ends, or when the machine is reset or first starts up, to ensure that all balls are in devices tagged with 'home' and/or 'trough'.</p>
 <p>Parameters:</p>
 <ul>
-<li><strong>target</strong> – A string of the tag name or a list of tags names of the ball devices you want all the balls to end up in. Default is [‘home’, ‘trough’].</li>
+<li><strong>target</strong> – A string of the tag name or a list of tags names of the ball devices you want all the balls to end up in. Default is ['home', 'trough'].</li>
 </ul>
 <p><code>dump_ball_counts() → None</code></p>
 <p>Dump ball count of all devices.</p>
 <p><code>request_to_start_game(**kwargs) → bool</code></p>
 <p>Handle result of the request_to_start_game event.
-Checks to make sure that the balls are in all the right places and returns. If too many balls are missing (based on the config files ‘Min Balls’ setting), it will return False to reject the game start request.</p>
+Checks to make sure that the balls are in all the right places and returns. If too many balls are missing (based on the config files 'Min Balls' setting), it will return False to reject the game start request.</p>
 <hr />
 <div class="admonition question">
 <p class="admonition-title">Something missing or wrong? You can fix it!</p>

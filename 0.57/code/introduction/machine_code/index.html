@@ -39901,21 +39901,21 @@ icons & this code generated via https://realfavicongenerator.net
 <h1 id="how-to-add-machine-wide-custom-code">How to add machine-wide custom code</h1>
 <p>MPF contains a “CustomCode” concept which lets you add custom code to your game.</p>
 <p>CustomCode classes are Python modules that run at the “root” of your game. You can use them to do anything you want.</p>
-<p>CustomCode classes are sort of “machine-level” custom code. CustomCode classes are nice if you have some kind of custom device type that doesn’t match up to any of MPF’s built in devices. The elevator and claw unloader in Demolition Man is a good example, and what we’ll use here.</p>
+<p>CustomCode classes are sort of “machine-level” custom code. CustomCode classes are nice if you have some kind of custom device type that doesn't match up to any of MPF's built in devices. The elevator and claw unloader in Demolition Man is a good example, and what we'll use here.</p>
 <p>(You can read about how to download and run Demo Man in the example games section section of the MPF User Documentation.)</p>
-<p>Here’s how to create a custom code class:</p>
+<p>Here's how to create a custom code class:</p>
 <h2 id="create-your-custom-code-file">Create your custom code file</h2>
 <p>First, add a <code>custom_code</code> folder to your machine folder. Then inside there, create the Python file that will hold your custom code classes.</p>
 <p>All your classes will be referenced as <code>custom_code.file_name.ClassName</code>.</p>
 <h2 id="open-and-edit-your-custom-code-class-file">Open and edit your custom code class file</h2>
-<p>Next, edit the class file you created. At a bare minimum, you’ll need this:</p>
+<p>Next, edit the class file you created. At a bare minimum, you'll need this:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">mpf.core.custom_code</span><span class="w"> </span><span class="kn">import</span> <span class="n">CustomCode</span>
 
 <span class="k">class</span><span class="w"> </span><span class="nc">Claw</span><span class="p">(</span><span class="n">CustomCode</span><span class="p">):</span>
     <span class="k">pass</span>
 </code></pre></div>
 <p>Note that MPF contains a CustomCode base class which is very simple. You can see the <a href="https://github.com/missionpinball/mpf/blob/dev/mpf/core/custom_code.py">CustomCode source</a> on GitHub. We called our class Claw in this case.</p>
-<p>Pretty much all this does is give you a reference to the main MPF machine controller at <code>self.machine</code>, as well as setup a delay manager you can use and set the name of your class. There’s also an <code>on_load()</code> method which is called when the class is loaded which you can use in your own code.</p>
+<p>Pretty much all this does is give you a reference to the main MPF machine controller at <code>self.machine</code>, as well as setup a delay manager you can use and set the name of your class. There's also an <code>on_load()</code> method which is called when the class is loaded which you can use in your own code.</p>
 <h2 id="add-the-class-to-your-machine-config">Add the class to your machine config</h2>
 <p>Next, edit your machine config file and add a <code>custom_code:</code> section, then under there add the package (folder), followed by a dot, then the module (file name) for your class, followed by a dot, followed by the class name for your class.</p>
 <p>For Demo Man, that looks like this:</p>
@@ -39924,7 +39924,7 @@ icons & this code generated via https://realfavicongenerator.net
 </code></pre></div>
 <p>This references class Claw in file claw.py which lives package custom_code.</p>
 <h2 id="real-world-example">Real-world example</h2>
-<p>At this point you should be able to run your game, though nothing should happen because you haven’t added any code to your code.</p>
+<p>At this point you should be able to run your game, though nothing should happen because you haven't added any code to your code.</p>
 <p>Take a look at the final Demo Man claw class to see what we did there. Since custom code classes have access to self.machine and they load when MPF loads, you can do anything you want in them.</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">mpf.core.custom_code</span><span class="w"> </span><span class="kn">import</span> <span class="n">CustomCode</span>
 

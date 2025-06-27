@@ -39874,11 +39874,11 @@ icons & this code generated via https://realfavicongenerator.net
 <p>Returns float.</p>
 <p><code>static dict_merge(a, b, combine_lists=True) → dict</code></p>
 <p>Recursively merge dictionaries.</p>
-<p>Used to merge dictionaries of dictionaries, like when we’re merging together the machine configuration files. This method is called recursively as it finds sub-dictionaries.</p>
+<p>Used to merge dictionaries of dictionaries, like when we're merging together the machine configuration files. This method is called recursively as it finds sub-dictionaries.</p>
 <p>For example, in the traditional python dictionary update() methods, if a dictionary key exists in the original and merging-in dictionary, the new value will overwrite the old value.</p>
 <p>Consider the following example:</p>
 <p>Original dictionary: <code>config['foo']['bar'] = 1</code></p>
-<p>New dictionary we’re merging in: <code>config['foo']['other_bar'] = 2</code></p>
+<p>New dictionary we're merging in: <code>config['foo']['other_bar'] = 2</code></p>
 <p>Default python dictionary update() method would have the updated dictionary as this:</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span><span class="s1">&#39;foo&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;other_bar&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">}}</span>
 </code></pre></div>
@@ -39914,7 +39914,7 @@ icons & this code generated via https://realfavicongenerator.net
 <p>Parameters:</p>
 <ul>
 <li><strong>inputstring</strong> – A string of incoming hex colors, like ffff00.</li>
-<li><strong>maxvalue</strong> – Integer of the max value you’d like to return. Default is 255. (This is the real value of why this method exists.)</li>
+<li><strong>maxvalue</strong> – Integer of the max value you'd like to return. Default is 255. (This is the real value of why this method exists.)</li>
 </ul>
 <p>Returns integer representation of the hex string.</p>
 <p><code>static hex_string_to_list(input_string, output_length=3) → List[int]</code></p>
@@ -39923,7 +39923,7 @@ icons & this code generated via https://realfavicongenerator.net
 <p>Parameters:</p>
 <ul>
 <li><strong>input_string</strong> – A string of incoming hex colors, like ffff00.</li>
-<li><strong>output_length</strong> – Integer value of the number of items you’d like in your returned list. Default is 3. This method will ignore extra characters if the input_string is too long, and it will pad the left with zeros if the input string is too short.</li>
+<li><strong>output_length</strong> – Integer value of the number of items you'd like in your returned list. Default is 3. This method will ignore extra characters if the input_string is too long, and it will pad the left with zeros if the input string is too short.</li>
 </ul>
 <p>Returns list of integers, like [255, 255, 0].</p>
 <p>Raises ValueError if the input string contains non-hex chars.</p>
@@ -39932,7 +39932,7 @@ icons & this code generated via https://realfavicongenerator.net
 <p><code>static is_hex_string(string: str) → bool</code></p>
 <p>Return true if string is hex.</p>
 <p><code>static is_power2(num: int) → bool</code></p>
-<p>Check a number to see if it’s a power of two.</p>
+<p>Check a number to see if it's a power of two.</p>
 <p>Parameters:</p>
 <ul>
 <li><strong>num</strong> – The number to check</li>
@@ -39992,7 +39992,7 @@ icons & this code generated via https://realfavicongenerator.net
 <p>This version honors placeholders/templates for events.</p>
 <p>Parameters:</p>
 <ul>
-<li><strong>string</strong> – The string you’d like to convert.</li>
+<li><strong>string</strong> – The string you'd like to convert.</li>
 </ul>
 <p>Returns a python list object containing whatever was between commas in the string.</p>
 <p><code>static string_to_gain(gain_string: str) → float</code></p>
@@ -40007,7 +40007,7 @@ icons & this code generated via https://realfavicongenerator.net
 <p>Convert a comma-separated string into a Python list if not already a list.</p>
 <p>Parameters:</p>
 <ul>
-<li><strong>string</strong> – The string you’d like to convert.</li>
+<li><strong>string</strong> – The string you'd like to convert.</li>
 </ul>
 <p>Returns a python list object containing whatever was between commas in the string.</p>
 <p><code>static string_to_ms(time_string: str) → int</code></p>
@@ -40015,7 +40015,7 @@ icons & this code generated via https://realfavicongenerator.net
 <p>Example inputs:</p>
 <p>200ms 2s None</p>
 <p>If no “s” or “ms” is provided, this method assumes “milliseconds.”</p>
-<p>If time is ‘None’ or a string of ‘None’, this method returns 0.</p>
+<p>If time is 'None' or a string of 'None', this method returns 0.</p>
 <p>Returns an integer. The examples listed above return 200, 2000 and 0, respectively.</p>
 <p><code>static string_to_secs(time_string: str) → float</code></p>
 <p>Decode a string of real-world time into an float of seconds.</p>

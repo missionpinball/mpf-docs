@@ -39869,7 +39869,7 @@ icons & this code generated via https://realfavicongenerator.net
 <div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">mpf</span><span class="o">.</span><span class="n">devices</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">Driver</span><span class="p">(</span><span class="n">machine</span><span class="p">:</span> <span class="n">mpf</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">MachineController</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span>
 </code></pre></div>
 <p>Bases: <code>mpf.core.system_wide_device.SystemWideDevice</code></p>
-<p>Generic class that holds driver objects. A ‘driver’ is any device controlled from a driver board which is typically the high-voltage stuff like coils and flashers. This class exposes the methods you should use on these driver types of devices. Each platform module (i.e. P-ROC, FAST, etc.) subclasses this class to actually communicate with the physical hardware and perform the actions.</p>
+<p>Generic class that holds driver objects. A 'driver' is any device controlled from a driver board which is typically the high-voltage stuff like coils and flashers. This class exposes the methods you should use on these driver types of devices. Each platform module (i.e. P-ROC, FAST, etc.) subclasses this class to actually communicate with the physical hardware and perform the actions.</p>
 <p>Args: Same as the Device parent class</p>
 <h2 id="accessing-coils-in-code">Accessing coils in code</h2>
 <p>The device collection which contains the coils in your machine is available via <code>self.machine.coils</code>. For example, to access one called “foo”, you would use <code>self.machine.coils.foo</code>. You can also access coils in dictionary form, e.g. <code>self.machine.coils['foo']</code>. You can also get devices by tag or hardware number. See the DeviceCollection documentation for details.</p>
@@ -39878,7 +39878,7 @@ icons & this code generated via https://realfavicongenerator.net
 <p><code>disable()</code></p>
 <p>Disable this driver.</p>
 <p><code>enable(pulse_ms: int = None, pulse_power: float = None, hold_power: float = None)</code></p>
-<p>Enable a driver by holding it ‘on’.</p>
+<p>Enable a driver by holding it 'on'.</p>
 <p>Parameters:</p>
 <ul>
 <li><strong>pulse_ms</strong> – The number of milliseconds the driver should be enabled for. If no value is provided, the driver will be enabled for the value specified in the config dictionary.</li>
