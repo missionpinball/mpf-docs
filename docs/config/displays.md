@@ -1,9 +1,8 @@
 ---
-title: "displays:"
+title: "displays: Config Reference"
 ---
 
-# displays:
-
+# displays: Config Reference
 
 --8<-- "config_section.md"
 

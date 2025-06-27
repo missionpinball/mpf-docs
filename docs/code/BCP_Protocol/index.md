@@ -1,4 +1,3 @@
-
 # BCP Protocol Specification
 
 This document describes the Backbox Control Protocol, (or “BCP”), a simple, fast protocol for communications between an implementation of a pinball game controller and a multimedia controller.
@@ -94,5 +93,3 @@ The following BCP commands have been defined (and implemented) in MPF:
 * [reset_complete](reset_complete.md)
 * [switch](switch.md)
 * [trigger](trigger.md)
-
-

@@ -1,9 +1,8 @@
 ---
-title: "coil_player:"
+title: "coil_player: Config Reference"
 ---
 
-# coil_player:
-
+# coil_player: Config Reference
 
 --8<-- "config_section.md"
 

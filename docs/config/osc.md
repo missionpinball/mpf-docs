@@ -1,9 +1,8 @@
 ---
-title: "osc:"
+title: "osc: Config Reference"
 ---
 
-# osc:
-
+# osc: Config Reference
 
 --8<-- "config_section.md"
 

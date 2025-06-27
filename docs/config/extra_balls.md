@@ -1,9 +1,8 @@
 ---
-title: "extra_balls:"
+title: "extra_balls: Config Reference"
 ---
 
-# extra_balls:
-
+# extra_balls: Config Reference
 
 --8<-- "config_section.md"
 

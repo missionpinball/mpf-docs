@@ -1,9 +1,8 @@
 ---
-title: "scriptlets:"
+title: "scriptlets: Config Reference"
 ---
 
-# scriptlets:
-
+# scriptlets: Config Reference
 
 --8<-- "config_section.md"
 

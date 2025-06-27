@@ -1,9 +1,8 @@
 ---
-title: "custom_code:"
+title: "custom_code: Config Reference"
 ---
 
-# custom_code:
-
+# custom_code: Config Reference
 
 --8<-- "config_section.md"
 

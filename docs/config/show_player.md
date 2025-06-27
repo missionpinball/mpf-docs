@@ -1,9 +1,8 @@
 ---
-title: "show_player:"
+title: "show_player: Config Reference"
 ---
 
-# show_player:
-
+# show_player: Config Reference
 
 --8<-- "config_section.md"
 

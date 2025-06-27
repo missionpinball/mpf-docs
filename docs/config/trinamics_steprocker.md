@@ -1,9 +1,8 @@
 ---
-title: "trinamics_steprocker:"
+title: "trinamics_steprocker: Config Reference"
 ---
 
-# trinamics_steprocker:
-
+# trinamics_steprocker: Config Reference
 
 --8<-- "config_section.md"
 

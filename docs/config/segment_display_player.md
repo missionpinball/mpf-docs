@@ -1,9 +1,8 @@
 ---
-title: "segment_display_player:"
+title: "segment_display_player: Config Reference"
 ---
 
-# segment_display_player:
-
+# segment_display_player: Config Reference
 
 --8<-- "config_section.md"
 

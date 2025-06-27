@@ -1,9 +1,8 @@
 ---
-title: "sequence_shots:"
+title: "sequence_shots: Config Reference"
 ---
 
-# sequence_shots:
-
+# sequence_shots: Config Reference
 
 --8<-- "config_section.md"
 

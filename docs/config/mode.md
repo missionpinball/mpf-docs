@@ -1,9 +1,8 @@
 ---
-title: "mode:"
+title: "mode: Config Reference"
 ---
 
-# mode:
-
+# mode: Config Reference
 
 --8<-- "config_section.md"
 

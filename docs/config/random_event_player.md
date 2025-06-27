@@ -1,9 +1,8 @@
 ---
-title: "random_event_player:"
+title: "random_event_player: Config Reference"
 ---
 
-# random_event_player:
-
+# random_event_player: Config Reference
 
 --8<-- "config_section.md"
 

@@ -1,9 +1,8 @@
 ---
-title: "matrix_lights:"
+title: "matrix_lights: Config Reference"
 ---
 
-# matrix_lights:
-
+# matrix_lights: Config Reference
 
 !!! warning
 

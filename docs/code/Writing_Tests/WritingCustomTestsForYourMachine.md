@@ -1,4 +1,3 @@
-
 # Writing Custom Tests for your Machine
 
 As we already mentioned, the creators of MPF are HUGE believers in the value of automated testing. To that end, MPF includes everything you need to write automated tests that test the logical functionality of your machine. These tests are extremely valuable even if your game is just based on config files.
@@ -125,5 +124,3 @@ If you get some kind of loading error or config error, make sure you're running 
 If you get a message about 0 tests run, make sure you have that empty __init__.py in your tests folder.
 
 And if you get some weird error that you can't figure out, then post a message to the MPF Google Group.
-
-

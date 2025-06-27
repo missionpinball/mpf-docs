@@ -1,9 +1,8 @@
 ---
-title: "spike_node:"
+title: "spike_node: Config Reference"
 ---
 
-# spike_node:
-
+# spike_node: Config Reference
 
 --8<-- "config_section.md"
 

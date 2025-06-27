@@ -1,9 +1,8 @@
 ---
-title: "hardware_sound_systems:"
+title: "hardware_sound_systems: Config Reference"
 ---
 
-# hardware_sound_systems:
-
+# hardware_sound_systems: Config Reference
 
 --8<-- "config_section.md"
 

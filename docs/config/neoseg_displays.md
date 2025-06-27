@@ -1,9 +1,8 @@
 ---
-title: "neoseg_displays:"
+title: "neoseg_displays: Config Reference"
 ---
 
-# neoseg_displays:
-
+# neoseg_displays: Config Reference
 
 --8<-- "config_section.md"
 

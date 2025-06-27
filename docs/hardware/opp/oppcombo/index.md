@@ -86,5 +86,3 @@ With those boards, I digitized a 1975 Gottlieb Fast Draw, which was presented to
 on June 1rst-2nd, 2024, South of France, where it ran 375 plays without any software problem.
 
 ![image](../../images/pontacq.jpg)
-
-

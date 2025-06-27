@@ -1,9 +1,8 @@
 ---
-title: "images_frame_skips:"
+title: "images_frame_skips: Config Reference"
 ---
 
-# images_frame_skips:
-
+# images_frame_skips: Config Reference
 
 --8<-- "config_section.md"
 

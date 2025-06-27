@@ -1,9 +1,8 @@
 ---
-title: "open_pixel_control:"
+title: "open_pixel_control: Config Reference"
 ---
 
-# open_pixel_control:
-
+# open_pixel_control: Config Reference
 
 --8<-- "config_section.md"
 

@@ -1,9 +1,8 @@
 ---
-title: "switch_player:"
+title: "switch_player: Config Reference"
 ---
 
-# switch_player:
-
+# switch_player: Config Reference
 
 --8<-- "config_section.md"
 

@@ -1,9 +1,8 @@
 ---
-title: "counters:"
+title: "counters: Config Reference"
 ---
 
-# counters:
-
+# counters: Config Reference
 
 --8<-- "config_section.md"
 

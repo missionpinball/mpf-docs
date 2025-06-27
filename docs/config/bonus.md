@@ -1,9 +1,8 @@
 ---
-title: "bonus (mode_settings:)"
+title: "bonus (mode_settings:) Config Reference"
 ---
 
-# bonus (mode_settings:)
-
+# bonus (mode_settings:) Config Reference
 
 --8<-- "config_section.md"
 

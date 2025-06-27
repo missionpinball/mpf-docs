@@ -1,9 +1,8 @@
 ---
-title: "timers:"
+title: "timers: Config Reference"
 ---
 
-# timers:
-
+# timers: Config Reference
 
 --8<-- "config_section.md"
 

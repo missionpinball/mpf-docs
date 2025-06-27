@@ -1,9 +1,8 @@
 ---
-title: "magnets:"
+title: "magnets: Config Reference"
 ---
 
-# magnets:
-
+# magnets: Config Reference
 
 --8<-- "config_section.md"
 

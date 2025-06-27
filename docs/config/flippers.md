@@ -1,9 +1,8 @@
 ---
-title: "flippers:"
+title: "flippers: Config Reference"
 ---
 
-# flippers:
-
+# flippers: Config Reference
 
 --8<-- "config_section.md"
 

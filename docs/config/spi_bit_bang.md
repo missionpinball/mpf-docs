@@ -1,9 +1,8 @@
 ---
-title: "spi_bit_bang:"
+title: "spi_bit_bang: Config Reference"
 ---
 
-# spi_bit_bang:
-
+# spi_bit_bang: Config Reference
 
 --8<-- "config_section.md"
 

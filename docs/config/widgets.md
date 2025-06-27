@@ -1,9 +1,8 @@
 ---
-title: "widgets:"
+title: "widgets: Config Reference"
 ---
 
-# widgets:
-
+# widgets: Config Reference
 
 --8<-- "config_section.md"
 

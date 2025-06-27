@@ -1,9 +1,8 @@
 ---
-title: "state_machine_transitions:"
+title: "state_machine_transitions: Config Reference"
 ---
 
-# state_machine_transitions:
-
+# state_machine_transitions: Config Reference
 
 --8<-- "config_section.md"
 

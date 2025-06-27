@@ -1,9 +1,8 @@
 ---
-title: "smartmatrix:"
+title: "smartmatrix: Config Reference"
 ---
 
-# smartmatrix:
-
+# smartmatrix: Config Reference
 
 --8<-- "config_section.md"
 

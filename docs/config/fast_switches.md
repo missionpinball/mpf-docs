@@ -1,9 +1,8 @@
 ---
-title: "fast_switches:"
+title: "fast_switches: Config Reference"
 ---
 
-# fast_switches:
-
+# fast_switches: Config Reference
 
 --8<-- "config_section.md"
 

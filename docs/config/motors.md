@@ -1,9 +1,8 @@
 ---
-title: "motors:"
+title: "motors: Config Reference"
 ---
 
-# motors:
-
+# motors: Config Reference
 
 --8<-- "config_section.md"
 

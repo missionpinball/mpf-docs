@@ -1,4 +1,3 @@
-
 # How to run MPF unittests
 
 Once MPF is installed, you can run some automated tests to make sure that everything is working. To do this, open a command prompt, and then type the following command and then press <enter>:
@@ -42,4 +41,3 @@ Notes about the MPF-MC tests:
 * These tests create a window on the screen and then just re-use the same window for all tests (to save time). So don't worry if it looks like the window content is scaled weird or blurry or doesn't fill the entire window.
 * Many of these tests are used to test internal workings of the media controller itself, so there will be lots of time when the pop up window is blank or appears frozen since the tests are testing non-visual things.
 * The animation and transition tests include testing functionality to stop, restart, pause, and skip frames. So if things look “jerky” in the tests, don't worry, that doesn't mean your computer is slow, it's just how the tests work! :)
-

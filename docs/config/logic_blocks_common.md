@@ -1,9 +1,8 @@
 ---
-title: "logic_blocks_common:"
+title: "logic_blocks_common: Config Reference"
 ---
 
-# logic_blocks_common:
-
+# logic_blocks_common: Config Reference
 
 The following sections are optional in the `logic_blocks_common:`
 section of your config. (If you don't include them, the default will be

@@ -1,9 +1,8 @@
 ---
-title: "fadecandy:"
+title: "fadecandy: Config Reference"
 ---
 
-# fadecandy:
-
+# fadecandy: Config Reference
 
 --8<-- "config_section.md"
 

@@ -1,9 +1,8 @@
 ---
-title: "servos:"
+title: "servos: Config Reference"
 ---
 
-# servos:
-
+# servos: Config Reference
 
 --8<-- "config_section.md"
 

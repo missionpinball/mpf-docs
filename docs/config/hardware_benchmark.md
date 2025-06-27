@@ -1,9 +1,8 @@
 ---
-title: "hardware_benchmark:"
+title: "hardware_benchmark: Config Reference"
 ---
 
-# hardware_benchmark:
-
+# hardware_benchmark: Config Reference
 
 --8<-- "config_section.md"
 

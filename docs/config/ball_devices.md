@@ -1,9 +1,8 @@
 ---
-title: "ball_devices:"
+title: "ball_devices: Config Reference"
 ---
 
-# ball_devices:
-
+# ball_devices: Config Reference
 
 --8<-- "config_section.md"
 

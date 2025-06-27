@@ -1,4 +1,3 @@
-
 # Setting up your MPF Dev Environment
 
 !!! note "MPF 0.80 installation update"

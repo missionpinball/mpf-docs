@@ -164,6 +164,3 @@ mpf both -X
 You can step left and right through the slides to see animations and videos. You can also test audio here by listening for sounds during slide transitions.
 
 Now that MPF is working on the Raspberry Pi, there are steps to take to tweak the device itself and harden it for use in the machine. Those are A) not fully known and B) outside the scope of this page, but as information becomes available, it can be added. 
-
-
-

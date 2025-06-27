@@ -1,9 +1,8 @@
 ---
-title: "spinners:"
+title: "spinners: Config Reference"
 ---
 
-# spinners:
-
+# spinners: Config Reference
 
 --8<-- "config_section.md"
 

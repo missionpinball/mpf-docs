@@ -1,0 +1,62 @@
+# Devices API Reference Index
+
+Instances of MPF devices, available at `self.machine.*device_collection*.*device_name*`. For example, a flipper device called “right_flipper” is at `self.machine.flippers.right_flipper`, and a multiball called “awesome” is accessible at `self.machine.multiballs.awesome`.
+
+Note that device collections are accessible as attributes and items, so the right flipper mentioned above is also available to programmers at `self.machine.flippers['right_flipper']`.
+
+Note:
+
+“Devices” in MPF are more than physical hardware devices. Many of the “game logic” components listed in the user documentation (achievements, ball holds, extra balls, etc.) are implemented as “devices” in MPF code. (So you can think of devices as being either physical or logical.)
+
+Here's a list of all the device types in MPF, linked to their API references.
+
+* [accelerometers](accelerometers.md)
+* [accruals](accruals.md)
+* [achievement_groups](achievement_groups.md)
+* [achievements](achievements.md)
+* [autofires](autofires.md)
+* [ball_devices](ball_devices.md)
+* [ball_holds](ball_holds.md)
+* [ball_routings](ball_routings.md)
+* [ball_saves](ball_saves.md)
+* [coils](coils.md)
+* [combo_switches](combo_switches.md)
+* [counters](counters.md)
+* [digital_outputs](digital_outputs.md)
+* [diverters](diverters.md)
+* [dmds](dmds.md)
+* [drop_target_banks](drop_target_banks.md)
+* [drop_targets](drop_targets.md)
+* [dual_wound_coils](dual_wound_coils.md)
+* [extra_ball_groups](extra_ball_groups.md)
+* [extra_balls](extra_balls.md)
+* [flippers](flippers.md)
+* [hardware_sound_systems](hardware_sound_systems.md)
+* [kickbacks](kickbacks.md)
+* [light_rings](light_rings.md)
+* [light_stripes](light_stripes.md)
+* [lights](lights.md)
+* [magnets](magnets.md)
+* [motors](motors.md)
+* [multiball_locks](multiball_locks.md)
+* [multiballs](multiballs.md)
+* [playfield_transfers](playfield_transfers.md)
+* [playfields](playfields.md)
+* [psus](psus.md)
+* [rgb_dmds](rgb_dmds.md)
+* [score_queues](score_queues.md)
+* [score_reel_groups](score_reel_groups.md)
+* [score_reels](score_reels.md)
+* [segment_displays](segment_displays.md)
+* [sequence_shots](sequence_shots.md)
+* [sequences](sequences.md)
+* [servos](servos.md)
+* [shot_groups](shot_groups.md)
+* [shot_profiles](shot_profiles.md)
+* [shots](shots.md)
+* [show_queues](show_queues.md)
+* [state_machines](state_machines.md)
+* [steppers](steppers.md)
+* [switches](switches.md)
+* [timed_switches](timed_switches.md)
+* [timers](timers.md)

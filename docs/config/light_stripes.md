@@ -1,9 +1,8 @@
 ---
-title: "light_stripes:"
+title: "light_stripes: Config Reference"
 ---
 
-# light_stripes:
-
+# light_stripes: Config Reference
 
 --8<-- "config_section.md"
 

@@ -1,9 +1,8 @@
 ---
-title: "light_segment_displays:"
+title: "light_segment_displays: Config Reference"
 ---
 
-# light_segment_displays:
-
+# light_segment_displays: Config Reference
 
 --8<-- "config_section.md"
 

@@ -1,9 +1,8 @@
 ---
-title: "sound_loop_sets:"
+title: "sound_loop_sets: Config Reference"
 ---
 
-# sound_loop_sets:
-
+# sound_loop_sets: Config Reference
 
 --8<-- "config_section.md"
 

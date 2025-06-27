@@ -1,9 +1,8 @@
 ---
-title: "animations:"
+title: "animations: Config Reference"
 ---
 
-# animations:
-
+# animations: Config Reference
 
 --8<-- "config_section.md"
 

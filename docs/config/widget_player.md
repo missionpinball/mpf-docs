@@ -1,9 +1,8 @@
 ---
-title: "widget_player:"
+title: "widget_player: Config Reference"
 ---
 
-# widget_player:
-
+# widget_player: Config Reference
 
 --8<-- "config_section.md"
 

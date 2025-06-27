@@ -1,9 +1,8 @@
 ---
-title: "variable_player:"
+title: "variable_player: Config Reference"
 ---
 
-# variable_player:
-
+# variable_player: Config Reference
 
 --8<-- "config_section.md"
 
@@ -273,4 +272,3 @@ changes.
 * [Machine Variables Reference](../machine_vars/index.md)
 * [Scoring](../game_logic/scoring/index.md)
 * [Persisting the State of a Logic Block in a Player Variable](../game_logic/logic_blocks/persisting_state_in_a_player_variable.md)
-

@@ -1,9 +1,8 @@
 ---
-title: "slide_player:"
+title: "slide_player: Config Reference"
 ---
 
-# slide_player:
-
+# slide_player: Config Reference
 
 --8<-- "config_section.md"
 

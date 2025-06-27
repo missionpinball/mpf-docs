@@ -1,9 +1,8 @@
 ---
-title: "shot_control_events:"
+title: "shot_control_events: Config Reference"
 ---
 
-# shot_control_events:
-
+# shot_control_events: Config Reference
 
 --8<-- "config_section.md"
 

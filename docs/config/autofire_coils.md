@@ -1,9 +1,8 @@
 ---
-title: "autofire_coils:"
+title: "autofire_coils: Config Reference"
 ---
 
-# autofire_coils:
-
+# autofire_coils: Config Reference
 
 --8<-- "config_section.md"
 

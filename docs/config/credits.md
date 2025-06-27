@@ -1,9 +1,8 @@
 ---
-title: "credits:"
+title: "credits: Config Reference"
 ---
 
-# credits:
-
+# credits: Config Reference
 
 --8<-- "config_section.md"
 

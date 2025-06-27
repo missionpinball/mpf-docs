@@ -1,9 +1,8 @@
 ---
-title: "player_vars:"
+title: "player_vars: Config Reference"
 ---
 
-# player_vars:
-
+# player_vars: Config Reference
 
 --8<-- "config_section.md"
 

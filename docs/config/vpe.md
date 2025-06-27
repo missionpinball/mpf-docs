@@ -1,9 +1,8 @@
 ---
-title: "vpe:"
+title: "vpe: Config Reference"
 ---
 
-# vpe:
-
+# vpe: Config Reference
 
 --8<-- "config_section.md"
 

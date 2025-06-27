@@ -1,9 +1,8 @@
 ---
-title: "achievement_groups:"
+title: "achievement_groups: Config Reference"
 ---
 
-# achievement_groups:
-
+# achievement_groups: Config Reference
 
 --8<-- "config_section.md"
 

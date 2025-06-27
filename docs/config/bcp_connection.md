@@ -1,9 +1,8 @@
 ---
-title: "bcp_connection:"
+title: "bcp_connection: Config Reference"
 ---
 
-# bcp_connection:
-
+# bcp_connection: Config Reference
 
 --8<-- "config_section.md"
 

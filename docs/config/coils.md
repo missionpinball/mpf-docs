@@ -1,9 +1,8 @@
 ---
-title: "coils:"
+title: "coils: Config Reference"
 ---
 
-# coils:
-
+# coils: Config Reference
 
 --8<-- "config_section.md"
 

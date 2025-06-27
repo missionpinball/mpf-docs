@@ -1,4 +1,3 @@
-
 # Automated Testing
 
 The MPF dev team are strong believers in automated testing, and we use a test-driven development (TDD) process for developing MPF itself. (At the time of this writing, there are over 800 unit tests for MPF and MPF-MC, each which contain dozens of individual tests.)
@@ -9,5 +8,3 @@ You can run built-in tests to test MPF itself or extend them if you think you fo
 
 * [How to run MPF unittests](RunUnitTests.md)
 * [Writing Custom Tests for your Machine](WritingCustomTestsForYourMachine.md)
-
-

@@ -1,9 +1,8 @@
 ---
-title: "auditor:"
+title: "auditor: Config Reference"
 ---
 
-# auditor:
-
+# auditor: Config Reference
 
 --8<-- "config_section.md"
 

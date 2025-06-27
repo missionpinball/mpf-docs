@@ -1,9 +1,8 @@
 ---
-title: "mpf:"
+title: "mpf: Config Reference"
 ---
 
-# mpf:
-
+# mpf: Config Reference
 
 --8<-- "config_section.md"
 

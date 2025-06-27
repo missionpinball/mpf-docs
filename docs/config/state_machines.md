@@ -1,9 +1,8 @@
 ---
-title: "state_machines:"
+title: "state_machines: Config Reference"
 ---
 
-# state_machines:
-
+# state_machines: Config Reference
 
 --8<-- "config_section.md"
 

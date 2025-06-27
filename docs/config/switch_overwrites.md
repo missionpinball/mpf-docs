@@ -1,9 +1,8 @@
 ---
-title: "switch_overwrites:"
+title: "switch_overwrites: Config Reference"
 ---
 
-# switch_overwrites:
-
+# switch_overwrites: Config Reference
 
 --8<-- "config_section.md"
 

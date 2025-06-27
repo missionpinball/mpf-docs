@@ -1,9 +1,9 @@
-## Playfield Devices
+# Playfield Devices
 
 In the context of MPF Monitor, a **device** refers to a switch,
 light, or diverter.
 
-### Adding devices to playfield
+## Adding devices to playfield
 
 1.  Locate the *Devices* window.
 2.  Locate the light or switch you want to add to the playfield.
@@ -13,7 +13,7 @@ light, or diverter.
 
     You can use the search box to filter to the name you are looking for.
 
-### Changing the default size of all devices
+## Changing the default size of all devices
 
 1.  Ensure Device Inspector is disabled.
 2.  Change the size slider or spinbox.
@@ -24,7 +24,7 @@ light, or diverter.
     default size changes. You can reset this for a device by selecting the
     device and clicking "Reset to Defaults".
 
-### Sorting and filtering devices
+## Sorting and filtering devices
 
 * To filter devices, type your keyword in the device search box.
 * Sorting devices:

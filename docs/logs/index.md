@@ -32,4 +32,3 @@ MPF tries to give IDs to errors that happen a lot so you can look them up here, 
 ### Warning Logs:
 
 * [Log-SwitchController-1](Log-SwitchController-1.md)
-

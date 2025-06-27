@@ -1,9 +1,8 @@
 ---
-title: "sound_pools:"
+title: "sound_pools: Config Reference"
 ---
 
-# sound_pools:
-
+# sound_pools: Config Reference
 
 --8<-- "config_section.md"
 

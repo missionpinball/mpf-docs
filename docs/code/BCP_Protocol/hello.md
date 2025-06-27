@@ -1,4 +1,3 @@
-
 # hello (BCP command)
 This is the initial handshake command upon first connection. It sends the BCP protocol version that the origin controller speaks.
 

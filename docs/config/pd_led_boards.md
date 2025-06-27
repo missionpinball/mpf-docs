@@ -1,9 +1,8 @@
 ---
-title: "pd_led_boards:"
+title: "pd_led_boards: Config Reference"
 ---
 
-# pd_led_boards:
-
+# pd_led_boards: Config Reference
 
 --8<-- "config_section.md"
 

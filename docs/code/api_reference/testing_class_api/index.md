@@ -1,4 +1,4 @@
-# Testing Class API
+# Testing Class API Reference Index
 
 MPF includes several unit test classes which you can use to write tests which test MPF or to write tests for your own game.
 
@@ -10,15 +10,15 @@ It might be helpful to look at the real internal tests that MPF uses (which all 
 
 Here's a diagram which shows how all the MPF and MPF-MC test case classes relate to each other:
 
-![Testing Classes](testing_class_api/test_classes.png)
+![Testing Classes](test_classes.png)
 
 And the API reference for each:
 
-* [MockBcpClient](testing_class_api/MockBcpClient.md)
-* [MpfBcpTestCase](testing_class_api/MpfBcpTestCase.md)
-* [MpfFakeGameTestCase](testing_class_api/MpfFakeGameTestCase.md)
-* [MpfGameTestCase](testing_class_api/MpfGameTestCase.md)
-* [MpfMachineTestCase](testing_class_api/MpfMachineTestCase.md)
-* [MpfTestCase](testing_class_api/MpfTestCase.md)
-* [TestDataManager](testing_class_api/TestDataManager.md)
-* [TestMachineController](testing_class_api/TestMachineController.md)
+* [MockBcpClient](MockBcpClient.md)
+* [MpfBcpTestCase](MpfBcpTestCase.md)
+* [MpfFakeGameTestCase](MpfFakeGameTestCase.md)
+* [MpfGameTestCase](MpfGameTestCase.md)
+* [MpfMachineTestCase](MpfMachineTestCase.md)
+* [MpfTestCase](MpfTestCase.md)
+* [TestDataManager](TestDataManager.md)
+* [TestMachineController](TestMachineController.md)

@@ -1,9 +1,8 @@
 ---
-title: "kickbacks:"
+title: "kickbacks: Config Reference"
 ---
 
-# kickbacks:
-
+# kickbacks: Config Reference
 
 --8<-- "config_section.md"
 

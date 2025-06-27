@@ -1,9 +1,8 @@
 ---
-title: "named_colors:"
+title: "named_colors: Config Reference"
 ---
 
-# named_colors:
-
+# named_colors: Config Reference
 
 --8<-- "config_section.md"
 

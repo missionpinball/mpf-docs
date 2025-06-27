@@ -1,9 +1,8 @@
 ---
-title: "switches:"
+title: "switches: Config Reference"
 ---
 
-# switches:
-
+# switches: Config Reference
 
 --8<-- "config_section.md"
 

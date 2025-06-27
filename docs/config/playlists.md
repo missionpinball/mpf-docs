@@ -1,9 +1,8 @@
 ---
-title: "playlists:"
+title: "playlists: Config Reference"
 ---
 
-# playlists:
-
+# playlists: Config Reference
 
 --8<-- "config_section.md"
 

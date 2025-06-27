@@ -1,9 +1,8 @@
 ---
-title: "light_rings:"
+title: "light_rings: Config Reference"
 ---
 
-# light_rings:
-
+# light_rings: Config Reference
 
 --8<-- "config_section.md"
 

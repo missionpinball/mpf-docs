@@ -1,9 +1,8 @@
 ---
-title: "queue_relay_player:"
+title: "queue_relay_player: Config Reference"
 ---
 
-# queue_relay_player:
-
+# queue_relay_player: Config Reference
 
 --8<-- "config_section.md"
 

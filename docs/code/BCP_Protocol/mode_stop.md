@@ -1,4 +1,3 @@
-
 # mode_stop (BCP command)
 Indicates the mode has stopped.
 
