@@ -46,3 +46,16 @@ drains and the ball is over.
 11. Otherwise the game mode's `player_rotate()` method is called.
 
 12. The game mode's `player_turn_start()` method is called.
+
+## Related Guides:
+
+Flowchart: [Ball Start Sequence](ball_start.md)
+
+## Related Events:
+
+* [Ball Lifecycle Events](../events/ball_lifecycle/index.md)
+    * [ball_drain](../events/ball_drain.md) *Relay Event*
+    * [ball_will_end](../events/ball_will_end.md)
+    * [ball_ending](../events/ball_ending.md) *Queue Event*
+    * [ball_ended](../events/ball_ended.md)
+    * [balls_in_play](../events/balls_in_play.md)
