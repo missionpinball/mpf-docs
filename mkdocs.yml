@@ -1165,6 +1165,7 @@ nav:
       - master_volume_decrease: events/master_volume_decrease.md
       - master_volume_increase: events/master_volume_increase.md
     - Ball Lifecycle Events:
+      - events/ball_lifecycle/index.md
       - ball_drain: events/ball_drain.md
       - ball_ended: events/ball_ended.md
       - ball_ending: events/ball_ending.md

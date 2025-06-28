@@ -252,7 +252,7 @@ will posted an event called *switch_s_left_slingshot_active*.
     * [master_volume_decrease](master_volume_decrease.md)
     * [master_volume_increase](master_volume_increase.md)
 
-* Ball Lifecycle Events
+* [Ball Lifecycle Events](ball_lifecycle/index.md)
     * [ball_drain](ball_drain.md)
     * [ball_ended](ball_ended.md)
     * [ball_ending](ball_ending.md)
