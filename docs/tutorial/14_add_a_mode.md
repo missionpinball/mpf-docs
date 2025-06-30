@@ -97,7 +97,7 @@ look like this:
 ##! mode: my_mode
 #config_version=5
 mode:
-  start_events: ball_started
+  start_events: ball_starting
   priority: 100
 ```
 
