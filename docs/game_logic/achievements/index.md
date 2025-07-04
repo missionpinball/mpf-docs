@@ -35,7 +35,21 @@ Here are some examples from real machines that would map to
 
 * Indiana Jones
 
+## Monitorable Properties
+
+For
+[dynamic values](../../config/instructions/dynamic_values.md) and
+[conditional events](../../events/overview/conditional.md), the prefix for achievement groups is
+`device.achievements.(name)`.
+
 *state*
 
-(  The string name of the state this achievement is in. Options will be
-    one of the following)
+The string name of the state this achievement is in. 
+Options will be one of the following:
+
+   * disabled
+   * enabled
+   * started
+   * stopped
+   * selected
+   * completed
