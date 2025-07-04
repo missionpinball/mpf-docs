@@ -88,8 +88,6 @@ extra:
 # welcome wall is for editors to try things out!
 not_in_nav: |
   index.md
-  code/BCP_Protocol/
-  code/api_reference/
   showcase/
   images/icons/README.md
   welcome_wall.md
@@ -1501,6 +1499,7 @@ nav:
       - code/api_reference/testing_class_api/index.md
       - code/api_reference/testing_class_api/MockBcpClient.md
       - code/api_reference/testing_class_api/MpfBcpTestCase.md
+      - code/api_reference/testing_class_api/MpfGameTestCase.md
       - code/api_reference/testing_class_api/MpfFakeGameTestCase.md
       - code/api_reference/testing_class_api/MpfMachineTestCase.md
       - code/api_reference/testing_class_api/MpfTestCase.md
