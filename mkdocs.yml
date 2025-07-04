@@ -1523,7 +1523,7 @@ nav:
       - code/api_reference/misc_components/DelayManager.md
       - code/api_reference/misc_components/DelayManagerRegistry.md
 
-  - BCP Interface:
+  - BCP Protocol Specification:
     - code/BCP_Protocol/index.md
     - ball_start (BCP Command): code/BCP_Protocol/ball_start.md
     - ball_end (BCP Command): code/BCP_Protocol/ball_end.md
