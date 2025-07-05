@@ -39665,6 +39665,23 @@ icons & this code generated via https://realfavicongenerator.net
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#monitorable-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Monitorable Properties
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -39720,9 +39737,22 @@ when not complete, "flashing" when active, "on" when complete, etc.)</p>
 <p>Indiana Jones</p>
 </li>
 </ul>
+<h2 id="monitorable-properties">Monitorable Properties</h2>
+<p>For
+<a href="../../config/instructions/dynamic_values/">dynamic values</a> and
+<a href="../../events/overview/conditional/">conditional events</a>, the prefix for achievement groups is
+<code>device.achievements.(name)</code>.</p>
 <p><em>state</em></p>
-<p>(  The string name of the state this achievement is in. Options will be
-    one of the following)</p>
+<p>The string name of the state this achievement is in. 
+Options will be one of the following:</p>
+<ul>
+<li>disabled</li>
+<li>enabled</li>
+<li>started</li>
+<li>stopped</li>
+<li>selected</li>
+<li>completed</li>
+</ul>
 <hr />
 <div class="admonition question">
 <p class="admonition-title">Something missing or wrong? You can fix it!</p>
