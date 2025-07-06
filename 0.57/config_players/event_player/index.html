@@ -40066,24 +40066,22 @@ the value will be posted as a string.</p>
 <h3 id="priority">Priority:</h3>
 <p>Note that as with other config players, event player can accept
 priorties for events to be posted. This can be useful in scenarios such
-as where a player variable must be updated prior to a condtional check,
+as where a player variable must be updated prior to a conditional check,
 so that they happen in the desired order.</p>
 <div class="highlight"><pre><span></span><code><span class="nt">event_player</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">mode_dynamo_started</span><span class="p">:</span>
-<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">reset_pv_tokens_collected_to_0</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">priority</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">50</span>
+<span class="w">    </span><span class="nt">reset_pv_tokens_collected_to_0</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">priority</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">50</span>
 <span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">play_slide{current_player.pv_tokens_collected &lt;= 5}</span><span class="p p-Indicator">:</span>
 <span class="w">      </span><span class="nt">priority</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
 <span class="w">      </span><span class="nt">slide</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dynamo_collect_more_tokens_slide</span>
 </code></pre></div>
 <h2 id="usage-in-config-files">Usage in config files</h2>
-<p>In config files, the event player is used via the <code>event_player:</code>
-section.</p>
+<p>In config files, the event player is used via the <code>event_player:</code> section.</p>
 <h2 id="usage-in-shows">Usage in shows</h2>
 <p>In shows, the event player is used via the <code>events:</code> section of a step.</p>
 <h2 id="config-options">Config Options</h2>
-<p>See <a href="../../config/event_player/">event_player:</a> for config
-details.</p>
+<p>See <a href="../../config/event_player/">event_player:</a> for config details.</p>
 <hr />
 <div class="admonition question">
 <p class="admonition-title">Something missing or wrong? You can fix it!</p>
