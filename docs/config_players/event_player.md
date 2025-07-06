@@ -200,13 +200,13 @@ event_player:
 
 Note that as with other config players, event player can accept
 priorties for events to be posted. This can be useful in scenarios such
-as where a player variable must be updated prior to a condtional check,
+as where a player variable must be updated prior to a conditional check,
 so that they happen in the desired order.
 
 ``` yaml
 event_player:
   mode_dynamo_started:
-    reset_pv_tokens_collected_to_0
+    reset_pv_tokens_collected_to_0:
       priority: 50
     play_slide{current_player.pv_tokens_collected <= 5}:
       priority: 5
@@ -215,8 +215,7 @@ event_player:
 
 ## Usage in config files
 
-In config files, the event player is used via the `event_player:`
-section.
+In config files, the event player is used via the `event_player:` section.
 
 ## Usage in shows
 
@@ -224,5 +223,4 @@ In shows, the event player is used via the `events:` section of a step.
 
 ## Config Options
 
-See [event_player:](../config/event_player.md) for config
-details.
+See [event_player:](../config/event_player.md) for config details.
