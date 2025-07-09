@@ -1,5 +1,9 @@
 # timers API Reference
 
+Config Reference:
+
+* [timers:](../../../config/timers.md)
+
 `self.machine.timers.*`
 
 ``` python

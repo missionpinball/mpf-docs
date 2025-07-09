@@ -1,5 +1,9 @@
 # text_ui API Reference
 
+Config Reference:
+
+* [text_ui:](../../../config/text_ui.md)
+
 `self.machine.text_ui`
 
 ``` python

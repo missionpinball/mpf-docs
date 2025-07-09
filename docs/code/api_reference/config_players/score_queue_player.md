@@ -1,5 +1,9 @@
 # score_queue_player API Reference
 
+Config Reference:
+
+* [score_queue_player:](../../../config/score_queue_player.md)
+
 `self.machine.score_queue_player`
 
 ``` python

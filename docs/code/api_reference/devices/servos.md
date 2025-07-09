@@ -1,5 +1,9 @@
 # servos API Reference
 
+Config Reference:
+
+* [servos:](../../../config/servos.md)
+
 `self.machine.servos.*`
 
 ``` python

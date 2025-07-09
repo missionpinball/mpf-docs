@@ -1,5 +1,9 @@
 # pololu_tic API Reference
 
+Config Reference:
+
+* [pololu_tic:](../../../config/pololu_tic.md)
+
 `self.machine.hardware_platforms['pololu_tic']`
 
 ``` python

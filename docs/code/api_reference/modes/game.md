@@ -1,5 +1,9 @@
 # Game Mode API Reference
 
+Config Reference:
+
+* [game:](../../../config/game.md)
+
 `self.machine.modes.game`
 
 ``` python

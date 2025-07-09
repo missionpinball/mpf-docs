@@ -1,5 +1,9 @@
 # Ball Search API Reference
 
+Config Reference:
+
+* [playfields:enable_ball_search](../../../config/playfields.md#enable_ball_search)
+
 ``` python
 class mpf.core.ball_search.BallSearch(machine: mpf.core.machine.MachineController, playfield: Playfield)
 ```

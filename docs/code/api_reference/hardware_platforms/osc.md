@@ -1,5 +1,9 @@
 # osc API Reference
 
+Config Reference:
+
+* [osc:](../../../config/osc.md)
+
 `self.machine.hardware_platforms['osc']`
 
 ``` python

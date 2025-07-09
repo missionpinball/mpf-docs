@@ -1,5 +1,9 @@
 # p_roc API Reference
 
+Config Reference:
+
+* [p_roc:](../../../config/p_roc.md)
+
 `self.machine.hardware_platforms['p_roc']`
 
 ``` python

@@ -1,5 +1,9 @@
 # fast API Reference
 
+Config Reference:
+
+* [fast:](../../../config/fast.md)
+
 `self.machine.hardware_platforms['fast']`
 
 ``` python

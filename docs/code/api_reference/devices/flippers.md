@@ -1,5 +1,9 @@
 # flippers API Reference
 
+Config Reference:
+
+* [flippers:](../../../config/flippers.md)
+
 `self.machine.flippers.*`
 
 ``` python

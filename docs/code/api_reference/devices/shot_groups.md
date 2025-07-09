@@ -1,5 +1,9 @@
 # shot_groups API Reference
 
+Config Reference:
+
+* [shot_groups:](../../../config/shot_groups.md)
+
 `self.machine.shot_groups.*`
 
 ``` python

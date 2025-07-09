@@ -1,5 +1,9 @@
 # sequence_shots API Reference
 
+Config Reference:
+
+* [sequence_shots:](../../../config/sequence_shots.md)
+
 `self.machine.sequence_shots.*`
 
 ``` python

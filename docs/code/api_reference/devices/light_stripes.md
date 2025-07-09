@@ -1,5 +1,9 @@
 # light_stripes API Reference
 
+Config Reference:
+
+* [light_stripes:](../../../config/light_stripes.md)
+
 `self.machine.light_stripes.*`
 
 ``` python

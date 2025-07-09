@@ -1,5 +1,9 @@
 # light_segment_displays API Reference
 
+Config Reference:
+
+* [light_segment_displays:](../../../config/light_segment_displays.md)
+
 `self.machine.hardware_platforms['light_segment_displays']`
 
 ``` python

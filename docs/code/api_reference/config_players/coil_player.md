@@ -1,5 +1,9 @@
 # coil_player API Reference
 
+Config Reference:
+
+* [coil_player:](../../../config/coil_player.md)
+
 `self.machine.coil_player`
 
 ``` python

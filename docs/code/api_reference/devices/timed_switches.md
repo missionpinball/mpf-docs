@@ -1,5 +1,9 @@
 # timed_switches API Reference
 
+Config Reference:
+
+* [timed_switches:](../../../config/timed_switches.md)
+
 `self.machine.timed_switches.*`
 
 ``` python

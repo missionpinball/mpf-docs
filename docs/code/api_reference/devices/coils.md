@@ -1,5 +1,9 @@
 # coils API Reference
 
+Config Reference:
+
+* [coils:](../../../config/coils.md)
+
 `self.machine.coils.*`
 
 ``` python

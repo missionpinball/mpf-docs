@@ -1,5 +1,9 @@
 # shots API Reference
 
+Config Reference:
+
+* [shots:](../../../config/shots.md)
+
 `self.machine.shots.*`
 
 ``` python

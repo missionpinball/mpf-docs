@@ -1,5 +1,9 @@
 # drop_target_banks API Reference
 
+Config Reference:
+
+* [drop_target_banks:](../../../config/drop_target_banks.md)
+
 `self.machine.drop_target_banks.*`
 
 ``` python

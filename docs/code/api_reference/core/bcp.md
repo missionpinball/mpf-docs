@@ -1,5 +1,9 @@
 # bcp API Reference
 
+Config Reference:
+
+* [bcp:](../../../config/bcp.md)
+
 `self.machine.bcp`
 
 ``` python

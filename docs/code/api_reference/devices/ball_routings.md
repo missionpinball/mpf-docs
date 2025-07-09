@@ -1,5 +1,9 @@
 # ball_routings API Reference
 
+Config Reference:
+
+* [ball_routings:](../../../config/ball_routings.md)
+
 `self.machine.ball_routings.*`
 
 ``` python

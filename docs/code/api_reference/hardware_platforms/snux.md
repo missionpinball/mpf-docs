@@ -1,5 +1,9 @@
 # snux API Reference
 
+Config Reference:
+
+* [snux:](../../../config/snux.md)
+
 `self.machine.hardware_platforms['snux']`
 
 ``` python

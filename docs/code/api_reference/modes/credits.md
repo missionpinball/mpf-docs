@@ -1,5 +1,9 @@
 # Credits Mode API Reference
 
+Config Reference:
+
+* [credits:](../../../config/credits.md)
+
 `self.machine.modes.credits`
 
 ``` python

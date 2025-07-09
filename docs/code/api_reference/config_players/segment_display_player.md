@@ -1,5 +1,9 @@
 # segment_display_player API Reference
 
+Config Reference:
+
+* [segment_display_player:](../../../config/segment_display_player.md)
+
 `self.machine.segment_display_player`
 
 ``` python

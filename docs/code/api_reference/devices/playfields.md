@@ -1,5 +1,9 @@
 # playfields API Reference
 
+Config Reference:
+
+* [playfields:](../../../config/playfields.md)
+
 `self.machine.playfields.*`
 
 ``` python

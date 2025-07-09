@@ -1,5 +1,9 @@
 # motors API Reference
 
+Config Reference:
+
+* [motors:](../../../config/motors.md)
+
 `self.machine.motors.*`
 
 ``` python

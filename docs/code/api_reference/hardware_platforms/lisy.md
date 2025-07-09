@@ -1,5 +1,9 @@
 # lisy API Reference
 
+Config Reference:
+
+* [lisy:](../../../config/lisy.md)
+
 `self.machine.hardware_platforms['lisy']`
 
 ``` python

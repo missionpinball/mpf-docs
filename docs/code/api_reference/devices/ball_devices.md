@@ -1,5 +1,9 @@
 # ball_devices API Reference
 
+Config Reference:
+
+* [ball_devices:](../../../config/ball_devices.md)
+
 `self.machine.ball_devices.*`
 
 ``` python

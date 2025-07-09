@@ -1,5 +1,9 @@
 # sequences API Reference
 
+Config Reference:
+
+* [sequences:](../../../config/sequences.md)
+
 `self.machine.sequences.*`
 
 ``` python

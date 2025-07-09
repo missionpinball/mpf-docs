@@ -1,1 +1,0 @@
-# Timers API Reference

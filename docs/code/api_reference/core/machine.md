@@ -1,5 +1,9 @@
 # machine API Reference
 
+Config Reference:
+
+* [machine:](../../../config/machine.md)
+
 `self.machine`
 
 ``` python

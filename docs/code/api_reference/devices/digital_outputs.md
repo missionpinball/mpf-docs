@@ -1,5 +1,9 @@
 # digital_outputs API Reference
 
+Config Reference:
+
+* [digital_outputs:](../../../config/digital_outputs.md)
+
 `self.machine.digital_outputs.*`
 
 ``` python

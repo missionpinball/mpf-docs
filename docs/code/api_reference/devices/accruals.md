@@ -1,5 +1,9 @@
 # accruals API Reference
 
+Config Reference:
+
+* [accruals:](../../../config/accruals.md)
+
 `self.machine.accruals.*`
 
 ``` python

@@ -1,5 +1,9 @@
 # dual_wound_coils API Reference
 
+Config Reference:
+
+* [dual_wound_coils:](../../../config/dual_wound_coils.md)
+
 `self.machine.dual_wound_coils.*`
 
 ``` python

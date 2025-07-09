@@ -1,5 +1,9 @@
 # score_reels API Reference
 
+Config Reference:
+
+* [score_reels:](../../../config/score_reels.md)
+
 `self.machine.score_reels.*`
 
 ``` python

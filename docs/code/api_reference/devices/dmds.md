@@ -1,5 +1,9 @@
 # dmds API Reference
 
+Config Reference:
+
+* [dmds:](../../../config/dmds.md)
+
 `self.machine.dmds.*`
 
 ``` python

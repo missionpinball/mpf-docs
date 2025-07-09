@@ -1,5 +1,9 @@
 # shot_profiles API Reference
 
+Config Reference:
+
+* [shot_profiles:](../../../config/shot_profiles.md)
+
 `self.machine.shot_profiles.*`
 
 ``` python

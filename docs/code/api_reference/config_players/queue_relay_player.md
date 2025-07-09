@@ -1,5 +1,9 @@
 # queue_relay_player API Reference
 
+Config Reference:
+
+* [queue_relay_player:](../../../config/queue_relay_player.md)
+
 `self.machine.queue_relay_player`
 
 ``` python

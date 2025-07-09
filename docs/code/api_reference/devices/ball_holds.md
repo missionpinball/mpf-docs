@@ -1,5 +1,9 @@
 # ball_holds API Reference
 
+Config Reference:
+
+* [ball_holds:](../../../config/ball_holds.md)
+
 `self.machine.ball_holds.*`
 
 ``` python

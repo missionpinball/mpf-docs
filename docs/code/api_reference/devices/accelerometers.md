@@ -1,5 +1,9 @@
 # accelerometers API Reference
 
+Config Reference:
+
+* [accelerometers:](../../../config/accelerometers.md)
+
 `self.machine.accelerometers.*`
 
 ``` python

@@ -1,5 +1,9 @@
 # diverters API Reference
 
+Config Reference:
+
+* [diverters:](../../../config/diverters.md)
+
 `self.machine.diverters.*`
 
 ``` python

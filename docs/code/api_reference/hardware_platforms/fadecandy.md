@@ -1,5 +1,9 @@
 # fadecandy API Reference
 
+Config Reference:
+
+* [fadecandy:](../../../config/fadecandy.md)
+
 `self.machine.hardware_platforms['fadecandy']`
 
 ``` python

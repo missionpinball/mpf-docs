@@ -1,5 +1,9 @@
 # hardware_sound_player API Reference
 
+Config Reference:
+
+* [hardware_sound_player:](../../../config/hardware_sound_player.md)
+
 `self.machine.hardware_sound_player`
 
 ``` python

@@ -1,5 +1,9 @@
 # switch_player API Reference
 
+Config Reference:
+
+* [switch_player:](../../../config/switch_player.md)
+
 `self.machine.switch_player`
 
 ``` python

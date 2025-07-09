@@ -1,5 +1,9 @@
 # switches API Reference
 
+Config Reference:
+
+* [switches:](../../../config/switches.md)
+
 `self.machine.switches.*`
 
 ``` python
