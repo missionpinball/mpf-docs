@@ -10,7 +10,6 @@ There are several other components and systems of MPF that don't fit into any of
 * [RGBAColor](RGBAColor.md)
 * [RGBColor](RGBColor.md)
 * [Randomizer](Randomizer.md)
-* [Timers](Timers.md)
 * [Utility Functions](UtilityFunctions.md)
 * [data_manager](DataManager.md)
 * [delay_manager](DelayManager.md)

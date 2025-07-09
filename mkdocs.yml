@@ -1477,7 +1477,6 @@ nav:
       - code/api_reference/hardware_platforms/trinamics_steprocker.md
       - code/api_reference/hardware_platforms/virtual.md
       - code/api_reference/hardware_platforms/virtual_pinball.md
-      - code/api_reference/hardware_platforms/visual_pinball_evolution.md
 
     - Config Players:
       - code/api_reference/config_players/index.md
@@ -1516,7 +1515,6 @@ nav:
       - code/api_reference/misc_components/RGBAColor.md
       - code/api_reference/misc_components/RGBColor.md
       - code/api_reference/misc_components/Randomizer.md
-      - code/api_reference/misc_components/Timers.md
       - code/api_reference/misc_components/UtilityFunctions.md
       - code/api_reference/misc_components/DataManager.md
       - code/api_reference/misc_components/DelayManager.md

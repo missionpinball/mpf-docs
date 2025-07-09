@@ -31,4 +31,3 @@ Hardware platforms are stored in a machine hardware_platforms dictionary, for ex
 * [trinamics_steprocker](trinamics_steprocker.md)
 * [virtual](virtual.md)
 * [virtual_pinball](virtual_pinball.md)
-* [visual_pinball_evolution](visual_pinball_evolution.md)
