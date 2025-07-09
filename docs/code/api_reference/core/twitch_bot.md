@@ -1,5 +1,9 @@
 # twitch_bot API Reference
 
+Config Reference:
+
+* [twitch_client:](../../../config/twitch_client.md)
+
 `self.machine.twitch_bot`
 
 ``` python

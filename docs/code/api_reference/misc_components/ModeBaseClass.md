@@ -1,5 +1,9 @@
 # Mode base class API Reference
 
+Config Reference:
+
+* [mode_settings:](../../../config/mode_settings.md)
+
 ``` python
 class mpf.core.mode.Mode(machine: MachineController, config, name: str, path, asset_paths)
 ```

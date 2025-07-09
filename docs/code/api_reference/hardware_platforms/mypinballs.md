@@ -1,5 +1,9 @@
 # mypinballs API Reference
 
+Config Reference:
+
+* [mypinballs:](../../../config/mypinballs.md)
+
 `self.machine.hardware_platforms['mypinballs']`
 
 ``` python

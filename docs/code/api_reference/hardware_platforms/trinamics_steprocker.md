@@ -1,5 +1,9 @@
 # trinamics_steprocker API Reference
 
+Config Reference:
+
+* [trinamics_steprocker:](../../../config/trinamics_steprocker.md)
+
 `self.machine.hardware_platforms['trinamics_steprocker']`
 
 ``` python

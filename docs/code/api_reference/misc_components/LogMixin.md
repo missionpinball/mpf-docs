@@ -1,5 +1,9 @@
 # LogMixin API Reference
 
+Config Reference:
+
+* [logging:](../../../config/logging.md)
+
 ``` python
 class mpf.core.logging.LogMixin
 ```

@@ -1,5 +1,9 @@
 # smart_virtual API Reference
 
+Config Reference:
+
+* [smart_virtual:](../../../config/smart_virtual.md)
+
 `self.machine.hardware_platforms['smart_virtual']`
 
 ``` python

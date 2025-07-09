@@ -1,5 +1,9 @@
 # rpi_dmd API Reference
 
+Config Reference:
+
+* [rpi_dmd:](../../../config/rpi_dmd.md)
+
 `self.machine.hardware_platforms['rpi_dmd']`
 
 ``` python

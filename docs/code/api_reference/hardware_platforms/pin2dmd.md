@@ -1,5 +1,9 @@
 # pin2dmd API Reference
 
+Config Reference:
+
+* [pin2dmd:](../../../config/pin2dmd.md)
+
 `self.machine.hardware_platforms['pin2dmd']`
 
 ``` python

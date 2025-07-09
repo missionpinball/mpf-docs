@@ -1,5 +1,9 @@
 # Carousel Mode API Reference
 
+Reference:
+
+* [MPFCarousel *(GMC/0.80+)*](../../../gmc/reference/mpf-carousel.md)
+
 `self.machine.modes.carousel`
 
 ``` python

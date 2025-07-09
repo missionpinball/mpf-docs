@@ -1,5 +1,9 @@
 # settings API Reference
 
+Config Reference:
+
+* [settings:](../../../config/settings.md)
+
 `self.machine.settings`
 
 ``` python

@@ -1,5 +1,9 @@
 # Player API Reference
 
+Config Reference:
+
+* [player_vars:](../../../config/player_vars.md)
+
 ``` python
 class mpf.core.player.Player(machine, index)
 ```

@@ -1,5 +1,9 @@
 # smartmatrix API Reference
 
+Config Reference:
+
+* [smartmatrix:](../../../config/smartmatrix.md)
+
 `self.machine.hardware_platforms['smartmatrix']`
 
 ``` python

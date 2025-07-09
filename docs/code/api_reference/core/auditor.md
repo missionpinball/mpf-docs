@@ -1,5 +1,9 @@
 # auditor API Reference
 
+Config Reference:
+
+* [auditor:](../../../config/auditor.md)
+
 `self.machine.auditor`
 
 ``` python

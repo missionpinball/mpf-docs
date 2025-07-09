@@ -1,5 +1,9 @@
 # openpixel API Reference
 
+Config Reference:
+
+* [open_pixel_control:](../../../config/open_pixel_control.md)
+
 `self.machine.hardware_platforms['openpixel']`
 
 ``` python

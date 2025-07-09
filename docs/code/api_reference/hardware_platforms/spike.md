@@ -1,5 +1,9 @@
 # spike API Reference
 
+Config Reference:
+
+* [spike:](../../../config/spike.md)
+
 `self.machine.hardware_platforms['spike']`
 
 ``` python

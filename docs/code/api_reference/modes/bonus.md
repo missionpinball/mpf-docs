@@ -1,5 +1,10 @@
 # Bonus Mode API Reference
 
+Config Reference:
+
+* [bonus (mode_settings:)](../../../config/bonus.md)
+* [Bonus Mode Configuration *(GMC/0.80+)*](../../../gmc/reference/bonus.md)
+
 `self.machine.modes.bonus`
 
 ``` python

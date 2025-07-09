@@ -1,5 +1,9 @@
 # Tilt Mode API Reference
 
+Config Reference:
+
+* [tilt:](../../../config/tilt.md)
+
 `self.machine.modes.tilt`
 
 ``` python

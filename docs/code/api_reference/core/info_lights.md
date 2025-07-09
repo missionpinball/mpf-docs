@@ -1,5 +1,9 @@
 # info_lights API Reference
 
+Config Reference:
+
+* [info_lights:](../../../config/info_lights.md)
+
 `self.machine.info_lights`
 
 ``` python

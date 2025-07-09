@@ -1,5 +1,9 @@
 # High Score Mode API Reference
 
+Config Reference:
+
+* [high_score:](../../../config/high_score.md)
+
 `self.machine.modes.high_score`
 
 ``` python

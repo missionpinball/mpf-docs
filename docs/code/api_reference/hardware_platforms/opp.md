@@ -1,5 +1,9 @@
 # opp API Reference
 
+Config Reference:
+
+* [opp:](../../../config/opp.md)
+
 `self.machine.hardware_platforms['opp']`
 
 ``` python

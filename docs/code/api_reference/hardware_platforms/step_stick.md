@@ -1,5 +1,9 @@
 # step_stick API Reference
 
+Config Reference:
+
+* [step_stick_stepper_settings:](../../../config/step_stick_stepper_settings.md)
+
 `self.machine.hardware_platforms['step_stick']`
 
 ``` python

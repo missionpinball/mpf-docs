@@ -1,5 +1,9 @@
 # system11 API Reference
 
+Config Reference:
+
+* [system11:](../../../config/system11.md)
+
 `self.machine.hardware_platforms['system11']`
 
 ``` python
