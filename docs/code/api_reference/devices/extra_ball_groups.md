@@ -1,5 +1,9 @@
 # extra_ball_groups API Reference
 
+Config Reference:
+
+* [extra_ball_groups:](../../../config/extra_ball_groups.md)
+
 `self.machine.extra_ball_groups.*`
 
 ``` python

@@ -1,5 +1,9 @@
 # ball_saves API Reference
 
+Config Reference:
+
+* [ball_saves:](../../../config/ball_saves.md)
+
 `self.machine.ball_saves.*`
 
 ``` python

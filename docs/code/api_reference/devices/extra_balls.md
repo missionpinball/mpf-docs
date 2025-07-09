@@ -1,5 +1,9 @@
 # extra_balls API Reference
 
+Config Reference:
+
+* [extra_balls:](../../../config/extra_balls.md)
+
 `self.machine.extra_balls.*`
 
 ``` python

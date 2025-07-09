@@ -1,5 +1,9 @@
 # autofires API Reference
 
+Config Reference:
+
+* [autofire_coils:](../../../config/autofire_coils.md)
+
 `self.machine.autofires.*`
 
 ``` python

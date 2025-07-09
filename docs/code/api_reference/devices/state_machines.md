@@ -1,5 +1,9 @@
 # state_machines API Reference
 
+Config Reference:
+
+* [state_machines:](../../../config/state_machines.md)
+
 `self.machine.state_machines.*`
 
 ``` python

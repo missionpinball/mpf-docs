@@ -1,5 +1,9 @@
 # event_player API Reference
 
+Config Reference:
+
+* [event_player:](../../../config/event_player.md)
+
 `self.machine.event_player`
 
 ``` python

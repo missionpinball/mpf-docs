@@ -1,5 +1,9 @@
 # multiballs API Reference
 
+Config Reference:
+
+* [multiballs:](../../../config/multiballs.md)
+
 `self.machine.multiballs.*`
 
 ``` python

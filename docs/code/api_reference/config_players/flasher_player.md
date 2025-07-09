@@ -1,5 +1,9 @@
 # flasher_player API Reference
 
+Config Reference:
+
+* [flasher_player:](../../../config/flasher_player.md)
+
 `self.machine.flasher_player`
 
 ``` python

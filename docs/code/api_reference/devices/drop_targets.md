@@ -1,5 +1,9 @@
 # drop_targets API Reference
 
+Config Reference:
+
+* [drop_targets:](../../../config/drop_targets.md)
+
 `self.machine.drop_targets.*`
 
 ``` python

@@ -1,5 +1,9 @@
 # playfield_transfers API Reference
 
+Config Reference:
+
+* [playfield_transfers:](../../../config/playfield_transfers.md)
+
 `self.machine.playfield_transfers.*`
 
 ``` python

@@ -1,5 +1,9 @@
 # rgb_dmds API Reference
 
+Config Reference:
+
+* [rgb_dmds:](../../../config/rgb_dmds.md)
+
 `self.machine.rgb_dmds.*`
 
 ``` python

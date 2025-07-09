@@ -1,5 +1,9 @@
 # magnets API Reference
 
+Config Reference:
+
+* [magnets:](../../../config/magnets.md)
+
 `self.machine.magnets.*`
 
 ``` python

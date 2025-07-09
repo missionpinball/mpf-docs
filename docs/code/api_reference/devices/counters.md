@@ -1,5 +1,9 @@
 # counters API Reference
 
+Config Reference:
+
+* [counters:](../../../config/counters.md)
+
 `self.machine.counters.*`
 
 ``` python

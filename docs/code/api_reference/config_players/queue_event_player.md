@@ -1,5 +1,9 @@
 # queue_event_player API Reference
 
+Config Reference:
+
+* [queue_event_player:](../../../config/queue_event_player.md)
+
 `self.machine.queue_event_player`
 
 ``` python

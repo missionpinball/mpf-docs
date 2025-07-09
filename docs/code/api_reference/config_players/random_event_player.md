@@ -1,5 +1,9 @@
 # random_event_player API Reference
 
+Config Reference:
+
+* [random_event_player:](../../../config/random_event_player.md)
+
 `self.machine.random_event_player`
 
 ``` python

@@ -1,5 +1,9 @@
 # variable_player API Reference
 
+Config Reference:
+
+* [variable_player:](../../../config/variable_player.md)
+
 `self.machine.variable_player`
 
 ``` python

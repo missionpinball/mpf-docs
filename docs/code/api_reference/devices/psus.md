@@ -1,5 +1,9 @@
 # psus API Reference
 
+Config Reference:
+
+* [psus:](../../../config/psus.md)
+
 `self.machine.psus.*`
 
 ``` python

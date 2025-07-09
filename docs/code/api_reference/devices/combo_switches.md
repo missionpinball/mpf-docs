@@ -1,5 +1,9 @@
 # combo_switches API Reference
 
+Config Reference:
+
+* [combo_switches:](../../../config/combo_switches.md)
+
 `self.machine.combo_switches.*`
 
 ``` python

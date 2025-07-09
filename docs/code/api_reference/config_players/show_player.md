@@ -1,5 +1,9 @@
 # show_player API Reference
 
+Config Reference:
+
+* [show_player:](../../../config/show_player.md)
+
 `self.machine.show_player`
 
 ``` python

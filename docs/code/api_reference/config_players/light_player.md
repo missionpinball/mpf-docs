@@ -1,5 +1,9 @@
 # light_player API Reference
 
+Config Reference:
+
+* [light_player:](../../../config/light_player.md)
+
 `self.machine.light_player`
 
 ``` python

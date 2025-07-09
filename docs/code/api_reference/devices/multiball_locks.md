@@ -1,5 +1,9 @@
 # multiball_locks API Reference
 
+Config Reference:
+
+* [multiball_locks:](../../../config/multiball_locks.md)
+
 `self.machine.multiball_locks.*`
 
 ``` python

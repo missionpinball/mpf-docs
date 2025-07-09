@@ -1,5 +1,9 @@
 # achievement_groups API reference
 
+Config Reference:
+
+* [achievement_groups:](../../../config/achievement_groups.md)
+
 `self.machine.achievement_groups.*`
 
 ``` python

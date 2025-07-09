@@ -1,5 +1,9 @@
 # lights API Reference
 
+Config Reference:
+
+* [lights:](../../../config/lights.md)
+
 `self.machine.lights.*`
 
 ``` python

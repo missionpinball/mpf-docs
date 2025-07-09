@@ -1,5 +1,9 @@
 # steppers API Reference
 
+Config Reference:
+
+* [steppers:](../../../config/steppers.md)
+
 `self.machine.steppers.*`
 
 ``` python

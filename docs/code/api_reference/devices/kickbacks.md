@@ -1,5 +1,9 @@
 # kickbacks API Reference
 
+Config Reference:
+
+* [kickbacks:](../../../config/kickbacks.md)
+
 `self.machine.kickbacks.*`
 
 ``` python

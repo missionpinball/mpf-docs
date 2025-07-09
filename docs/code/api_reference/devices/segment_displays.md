@@ -1,5 +1,9 @@
 # segment_displays API Reference
 
+Config Reference:
+
+* [segment_displays:](../../../config/segment_displays.md)
+
 `self.machine.segment_displays.*`
 
 ``` python

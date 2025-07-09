@@ -1,5 +1,9 @@
 # light_rings API Reference
 
+Config Reference:
+
+* [light_rings:](../../../config/light_rings.md)
+
 `self.machine.light_rings.*`
 
 ``` python
