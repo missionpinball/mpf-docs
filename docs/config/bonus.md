@@ -91,9 +91,7 @@ Controls whether the bonus_multiplier player variable should be reset
 keep the bonus. (e.g. default is to reset it). Conditional values are
 supported.
 
-Also note that you can use
-[dynamic values](instructions/dynamic_values.md) here if you want to do math or use settings to make this
-configurable.
+--8<-- "template_setting.md"
 
 ## bonus_entries:
 

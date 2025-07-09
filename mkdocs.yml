@@ -881,7 +881,6 @@ nav:
     - "switch_player:": config/switch_player.md
     - "switches:": config/switches.md
     - "system11:": config/system11.md
-    - "template_setting:": config/template_setting.md
     - "text_strings:": config/text_strings.md
     - "text_ui:": config/text_ui.md
     - "tic_stepper_settings:": config/tic_stepper_settings.md

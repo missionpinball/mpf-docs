@@ -72,9 +72,7 @@ Single value, type: `integer` or `template`
 How many balls the game is. Typically it's 3 or 5 but it can be
 anything. MPF doesn't care.
 
-Also note that you can use
-[dynamic values](instructions/dynamic_values.md) here if you want to do math or use settings to make this
-configurable.
+--8<-- "template_setting.md"
 
 ### end_ball_event:
 
@@ -100,14 +98,11 @@ Single value, type: `integer` or `template`
 
 Controls the maximum number of players that can play a game.
 
-Also note that you can use
-[dynamic values](instructions/dynamic_values.md) here if you want to do math or use settings to make this
-configurable.
+--8<-- "template_setting.md"
 
 ### start_game_event:
 
-Single event. The device will add an handler for this event. Defaults to
-empty.
+Single event. The device will add an handler for this event. Defaults to empty.
 
 Event to request to start a game. Same as `start_game_switch_tag` but
 using an event instead of a switch tag (see below for details).

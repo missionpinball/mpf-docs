@@ -116,9 +116,7 @@ Single value, type: `integer` or `template`
 
 Number of warnings until the machine tilts.
 
-Also note that you can use
-[dynamic values](instructions/dynamic_values.md) here if you want to do math or use settings to make this
-configurable.
+--8<-- "template_setting.md"
 
 ## Related How To guides
 

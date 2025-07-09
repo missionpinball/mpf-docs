@@ -154,6 +154,8 @@ value of zero (or omitting this setting) means this diverter does not
 timeout, and it will stay active until it's disabled or you manually
 deactivate it.
 
+--8<-- "template_setting.md"
+
 ### allow_multiple_concurrent_ejects_to_same_side:
 
 Single value, type: `boolean` (`true`/`false`). Default: `true`
