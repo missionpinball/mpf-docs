@@ -1,9 +1,5 @@
 # coil_player API Reference
 
-Config Reference:
-
-* [coil_player:](../../../config/coil_player.md)
-
 `self.machine.coil_player`
 
 ``` python
@@ -33,3 +29,9 @@ Parse short config version.
 ` play(settings, context: str, calling_context: str, priority: int = 0, **kwargs)`
 
 Enable, Pulse or disable coils.
+
+## Related Pages:
+
+* [Coils (Solenoids)](../../../mechs/coils/index.md)
+* [coil_player: Config Reference](../../../config/coil_player.md)
+* [Coil player Config Player Reference](../../../config_players/coil_player.md)
