@@ -242,7 +242,8 @@ show_player:
 In most cases simple syntax is sufficient. Extended syntax is easier to
 use with placeholders.
 
-## Config Options
+## Related Pages:
 
-See [light_player:](../config/light_player.md) for config
-details.
+* [Lights](../mechs/lights/index.md)
+* [light_player: Config Reference](../config/light_player.md)
+* [light_player API Reference](../code/api_reference/config_players/light_player.md)

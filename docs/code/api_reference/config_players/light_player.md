@@ -1,9 +1,5 @@
 # light_player API Reference
 
-Config Reference:
-
-* [light_player:](../../../config/light_player.md)
-
 `self.machine.light_player`
 
 ``` python
@@ -37,3 +33,8 @@ Handle subscriptions.
 `play(settings, context, calling_context, priority=0, **kwargs)`
 
 Set light color based on config.
+
+## Related Pages:
+
+* [light_player: Config Reference](../../../config/light_player.md)
+* [Light player Config Player Reference](../../../config_players/light_player.md)
