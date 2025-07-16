@@ -45,6 +45,8 @@ Single value, type: `ms_or_token`. Default: `100ms`
 
 Configures how long should that flasher be enabled.
 
-## Related How To guides
+## Related Pages:
 
 * [Flashers](../mechs/lights/flashers.md)
+* [Flasher player Config Player Reference](../config_players/flasher_player.md)
+* [flasher_player API Reference](../code/api_reference/config_players/flasher_player.md)
