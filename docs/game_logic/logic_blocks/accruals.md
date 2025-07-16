@@ -5,12 +5,10 @@ title: Accrual Logic Blocks
 # Accrual Logic Blocks
 
 
-Related Config File Sections:
+## Related Pages:
 
-* [accruals:](../../config/accruals.md)
-
-Related How To Guides
-
+* [accruals: Config Reference](../../config/accruals.md)
+* [accruals API Reference](../../code/api_reference/devices/accruals.md)
 * [Integrating Logic Blocks and Shows](integrating_logic_blocks_and_shows.md)
 * [Scoring Based on Logic Blocks](scoring_based_on_logic_blocks.md)
 * [Integrating Logic_Blocks and Lights](integrating_logic_blocks_and_lights.md)
