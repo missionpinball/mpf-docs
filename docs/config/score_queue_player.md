@@ -47,6 +47,7 @@ Single value, type: `integer` or `template`
 
 Score value to add to the queue.
 
-## Related How To guides
+## Related Pages:
 
-* [How to implement solid state game style score queues in MPF](../game_logic/scoring/ss_style_score_queues.md)
+* [How to implement solid state game style score queues](../game_logic/scoring/ss_style_score_queues.md)
+* [score_queue_player API Reference](../code/api_reference/config_players/score_queue_player.md)

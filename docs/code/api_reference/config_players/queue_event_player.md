@@ -30,7 +30,7 @@ Post queue events.
 
 Validate one entry of this player.
 
-## Config Reference:
+## Related Pages:
 
 * [Queue Events](../../../events/overview/event_types.md#queue-events)
 * [queue_event_player: Config Reference](../../../config/queue_event_player.md)

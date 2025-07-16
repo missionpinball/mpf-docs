@@ -1,9 +1,5 @@
 # segment_display_player API Reference
 
-Config Reference:
-
-* [segment_display_player:](../../../config/segment_display_player.md)
-
 `self.machine.segment_display_player`
 
 ``` python
@@ -33,3 +29,8 @@ Parse express config.
 `play(settings, context, calling_context, priority=0, **kwargs)`
 
 Show text on display.
+
+## Related Pages:
+
+* [segment_display_player: Config Reference](../../../config/segment_display_player.md)
+* [Segment Display player Config Player Reference](../../../config_players/segment_display_player.md)

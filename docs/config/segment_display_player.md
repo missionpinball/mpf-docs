@@ -172,7 +172,9 @@ There can only be one transition between text entries, so if outgoing
 text has a `transition_out` set, and an incoming text entry has a
 `transition` set, then the incoming transition will take precedence.
 
-## Related How To guides
+## Related Pages:
 
 * [Alpha-Numeric / Segment Displays](../mc/displays/alpha_numeric.md)
 * [Segment Display Platforms in MPF](../hardware/segment_display_platforms.md)
+* [segment_display_player API Reference](../code/api_reference/config_players/segment_display_player.md)
+* [Segment Display player Config Player Reference](../config_players/segment_display_player.md)
