@@ -18,15 +18,15 @@ The coil_player is available via `self.machine.coil_player`.
 
 The coil_player has the following methods & attributes available. Note that methods & attributes inherited from the base class are not included here.
 
-` clear_context(context)`
+`clear_context(context)`
 
 Disable enabled coils.
 
-` get_express_config(value: str)`
+`get_express_config(value: str)`
 
 Parse short config version.
 
-` play(settings, context: str, calling_context: str, priority: int = 0, **kwargs)`
+`play(settings, context: str, calling_context: str, priority: int = 0, **kwargs)`
 
 Enable, Pulse or disable coils.
 
