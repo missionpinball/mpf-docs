@@ -21,3 +21,7 @@ The placeholder_manager has the following methods & attributes available. Note t
 `get_global_parameters(name)`
 
 Return global params.
+
+## Related Pages:
+
+* [Using dynamic runtime values in config files](../../../config/instructions/dynamic_values.md)

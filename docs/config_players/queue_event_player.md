@@ -24,7 +24,7 @@ section.
 
 None. (It's not valid in shows since it doesn't make sense in shows.)
 
-## Config Options
+## Related Pages:
 
-See [queue_event_player:](../config/queue_event_player.md) for
-config details.
+* [queue_event_player: Config Reference](../config/queue_event_player.md)
+* [Queue Event player API Reference](../code/api_reference/config_players/queue_event_player.md)

@@ -1,9 +1,5 @@
 # queue_event_player API Reference
 
-Config Reference:
-
-* [queue_event_player:](../../../config/queue_event_player.md)
-
 `self.machine.queue_event_player`
 
 ``` python
@@ -33,3 +29,9 @@ Post queue events.
 `validate_config_entry(settings, name)`
 
 Validate one entry of this player.
+
+## Related Pages:
+
+* [Queue Events](../../../events/overview/event_types.md#queue-events)
+* [queue_event_player: Config Reference](../../../config/queue_event_player.md)
+* [Queue Event player Config Player Reference](../../../config/queue_event_player.md)

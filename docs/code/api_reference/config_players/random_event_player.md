@@ -1,9 +1,5 @@
 # random_event_player API Reference
 
-Config Reference:
-
-* [random_event_player:](../../../config/random_event_player.md)
-
 `self.machine.random_event_player`
 
 ``` python
@@ -41,3 +37,8 @@ Play a random event from list based on config.
 `validate_config_entry(settings, name)`
 
 Validate one entry of this player.
+
+## Related Pages:
+
+* [random_event_player: Config Reference](../../../config/random_event_player.md)
+* [Random Event player Config Player Reference](../../../config_players/random_event_player.md)

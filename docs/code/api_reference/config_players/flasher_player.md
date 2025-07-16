@@ -1,9 +1,5 @@
 # flasher_player API Reference
 
-Config Reference:
-
-* [flasher_player:](../../../config/flasher_player.md)
-
 `self.machine.flasher_player`
 
 ``` python
@@ -29,3 +25,9 @@ Parse express config.
 `play(settings, context, calling_context, priority=0, **kwargs)`
 
 Flash flashers.
+
+## Related Pages:
+
+* [Flashers (Lights)](../../../mechs/lights/flashers.md)
+* [flasher_player: Config Reference](../../../config/flasher_player.md)
+* [flasher_player API Reference](../../../code/api_reference/config_players/flasher_player.md)

@@ -1,9 +1,5 @@
 # info_lights API Reference
 
-Config Reference:
-
-* [info_lights:](../../../config/info_lights.md)
-
 `self.machine.info_lights`
 
 ``` python
@@ -21,3 +17,7 @@ There is only one instance of the info_lights in MPF, and it's accessible via `s
 ## Methods & Attributes
 
 The `info_lights` has the following methods & attributes available. Note that methods & attributes inherited from base classes are not included here.
+
+## Related Pages:
+
+* [info_lights: Config Reference](../../../config/info_lights.md)

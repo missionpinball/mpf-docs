@@ -79,7 +79,9 @@ Single value, type: `string`. Defaults to empty.
 
 The number of your sound.
 
-## Related How To guides
+## Related Pages:
 
 * [Arduino Pinball Controller](../hardware/apc/index.md)
 * [How to use MPF with the LISY platform](../hardware/lisy/index.md)
+* [Hardware sound player Config Player Reference](../config_players/hardware_sound_player.md)
+* [hardware_sound_player API Reference](../code/api_reference/config_players/hardware_sound_player.md)

@@ -1,9 +1,5 @@
 # event_player API Reference
 
-Config Reference:
-
-* [event_player:](../../../config/event_player.md)
-
 `self.machine.event_player`
 
 ``` python
@@ -33,3 +29,8 @@ Parse list.
 `play(settings, context, calling_context, priority=0, **kwargs)`
 
 Post (delayed) events.
+
+## Related Pages:
+
+* [event_player: Config Reference](../../../config/event_player.md)
+* [Event player Config Player Reference](../../../config_players/event_player.md)

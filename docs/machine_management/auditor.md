@@ -124,3 +124,8 @@ Note that in the 'Player' section, the auditor will track the average,
 the Top 10, and the total numbers of each item. You can configure all
 this (including how many of each item it records) in the `auditor:`
 section of the configuration file\`.
+
+## Related Pages:
+
+* [auditor: Config Reference](../config/auditor.md)
+* [auditor API Reference](../code/api_reference/core/auditor.md)

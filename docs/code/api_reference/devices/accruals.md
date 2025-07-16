@@ -1,9 +1,5 @@
 # accruals API Reference
 
-Config Reference:
-
-* [accruals:](../../../config/accruals.md)
-
 `self.machine.accruals.*`
 
 ``` python
@@ -101,3 +97,8 @@ Subscribe to an attribute.
 `value`
 
 Return value or None if that is currently not possible.
+
+## Related Pages:
+
+* [Accrual Logic Blocks](../../../game_logic/logic_blocks/accruals.md)
+* [accruals: Config Reference](../../../config/accruals.md)

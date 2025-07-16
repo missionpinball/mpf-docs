@@ -221,6 +221,7 @@ In config files, the event player is used via the `event_player:` section.
 
 In shows, the event player is used via the `events:` section of a step.
 
-## Config Options
+## Related Pages:
 
-See [event_player:](../config/event_player.md) for config details.
+* [event_player: Config Reference](../config/event_player.md)
+* [event_player API Reference](../code/api_reference/config_players/event_player.md)

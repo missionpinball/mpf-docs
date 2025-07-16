@@ -22,15 +22,15 @@ The device collection which contains the rgb_dmds in your machine is available v
 
 Rgb_dmds have the following methods & attributes available. Note that methods & attributes inherited from base classes are not included here.
 
-` format_log_line(msg, context, error_no) → str`
+`format_log_line(msg, context, error_no) → str`
 
 Return a formatted log line with log link and context.
 
-` raise_config_error(msg, error_no, *, context=None) → NoReturn`
+`raise_config_error(msg, error_no, *, context=None) → NoReturn`
 
 Raise a ConfigFileError exception.
 
-` update(data: bytes)`
+`update(data: bytes)`
 
 Update data on the dmd.
 

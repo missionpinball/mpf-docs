@@ -98,6 +98,6 @@ This is the machine variable name that contains the user that will
 connect to Twitch. You may want to create a separate bot account on
 Twitch to use for this purpose.
 
-## Related How To guides
+## Related Pages:
 
---8<-- "todo.md"
+* [twitch_bot API Reference](../code/api_reference/core/twitch_bot.md)

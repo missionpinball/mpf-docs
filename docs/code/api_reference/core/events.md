@@ -174,3 +174,7 @@ Wait for any event from event_names.
 `wait_for_event(event_name: str) → _asyncio.Future`
 
 Wait for event.
+
+## Related Pages:
+
+* [Events Overview](../../../events/overview/index.md)

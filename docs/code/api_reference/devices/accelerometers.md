@@ -1,9 +1,5 @@
 # accelerometers API Reference
 
-Config Reference:
-
-* [accelerometers:](../../../config/accelerometers.md)
-
 `self.machine.accelerometers.*`
 
 ``` python
@@ -53,3 +49,8 @@ Subscribe to an attribute.
 `update_acceleration(x: float, y: float, z: float) → None`
 
 Calculate acceleration based on readings from hardware.
+
+## Related Pages:
+
+* [Accelerometers](../../../mechs/accelerometers.md)
+* [accelerometers: Config Reference](../../../config/accelerometers.md)

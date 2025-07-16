@@ -1208,7 +1208,8 @@ nav:
       - game_will_start: events/game_will_start.md
       - request_to_start_game: events/request_to_start_game.md
       - shutdown: events/shutdown.md
-    - Logicblock Events (Counters, Accruals, Sequences):
+    - Logic Block Events (Counters, Accruals, Sequences):
+      - events/logic_blocks/index.md
       - logicblock_(name)_complete: events/logicblock_name_complete.md
       - logicblock_(name)_hit: events/logicblock_name_hit.md
       - logicblock_(name)_updated: events/logicblock_name_updated.md

@@ -19,7 +19,7 @@ In config files, the segment display player is used via the
 In shows, the segment display player is used via the `segment_displays:`
 section of a step.
 
-## Config Options
+## Related Pages:
 
-See [segment_display_player:](../config/segment_display_player.md) for
-config details.
+* [segment_display_player: Config Reference](../config/segment_display_player.md)
+* [segment_display_player API Reference](../code/api_reference/config_players/segment_display_player.md)

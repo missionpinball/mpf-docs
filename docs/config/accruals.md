@@ -274,7 +274,8 @@ start disabled. If you omit this the device will start enabled unless
 you specify `enable_events` in which case the device will start
 disabled.
 
-## Related How To guides
+## Related Pages:
 
 * [Accrual Logic Blocks](../game_logic/logic_blocks/accruals.md)
 * [Integrating Logic_Blocks and Shows](../game_logic/logic_blocks/integrating_logic_blocks_and_shows.md)
+* [accruals API Reference](../code/api_reference/devices/accruals.md)

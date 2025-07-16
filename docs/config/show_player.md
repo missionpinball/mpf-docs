@@ -351,4 +351,5 @@ details.
 
 * [Shows](../shows/index.md)
 * [Tutorial step 16: Create an attract mode display show](../tutorial/16_attract_mode_show.md)
-* [Show player](../config_players/show_player.md)
+* [Show player Config Player Reference](../config_players/show_player.md)
+* [Show player API Reference](../code/api_reference/config_players/show_player.md)

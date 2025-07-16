@@ -45,3 +45,9 @@ Start service mode.
 `stop_service()`
 
 Stop service mode.
+
+## Related Pages:
+
+* [service Mode API Reference](../modes/service.md)
+* [Game Logic: Service Mode](../../../game_logic/service_mode.md)
+* [Machine Management: Service Mode](../../../machine_management/service_mode.md)

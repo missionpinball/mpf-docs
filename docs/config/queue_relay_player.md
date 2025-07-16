@@ -88,9 +88,10 @@ Single value, type: `boolean` (`true`/`false`). Default: `false`
 If `True` pass on the arguments from the event in `wait_for` to the
 event posted in `post`.
 
-## Related How To guides
+## Related Pages:
 
-* [Queue Relay player](../config_players/queue_relay_player.md)
+* [Queue Relay player Config Player Reference](../config_players/queue_relay_player.md)
+* [queue_relay_player API Reference](../code/api_reference/config_players/queue_relay_player.md)
 * [Mode Selection](../game_design/mode_selection.md)
 * [Game End Modes](../game_design/game_end_modes.md)
 * [How to Drain All Balls on the Playfield and Serve One Back](../cookbook/fake_ball_save.md)

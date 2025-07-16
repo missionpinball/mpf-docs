@@ -4,9 +4,7 @@ title: Queue Relay player
 
 # Queue Relay player
 
-
-The *queue relay player* is a
-[config player](index.md)
+The *queue relay player* is a [config player](index.md)
 that's used to block queue events.
 
 Video about events in MPF:
@@ -24,7 +22,7 @@ section.
 
 None. (It's not valid in shows since it doesn't make sense in shows.)
 
-## Config Options
+## Related Pages:
 
-See [queue_relay_player:](../config/queue_relay_player.md) for
-config details.
+* [queue_relay_player: Config Reference](../config/queue_relay_player.md)
+* [queue_relay_player API Reference](../code/api_reference/config_players/queue_relay_player.md)

@@ -1,9 +1,5 @@
 # hardware_sound_player API Reference
 
-Config Reference:
-
-* [hardware_sound_player:](../../../config/hardware_sound_player.md)
-
 `self.machine.hardware_sound_player`
 
 ``` python
@@ -33,3 +29,8 @@ Parse string config.
 `play(settings, context, calling_context, priority=0, **kwargs)`
 
 Play sound on external card.
+
+## Related Pages:
+
+* [hardware_sound_player: Config Reference](../../../config/hardware_sound_player.md)
+* [Hardware Sound player Config Player Reference](../../../config_players/hardware_sound_player.md)

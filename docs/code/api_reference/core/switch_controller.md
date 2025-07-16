@@ -174,3 +174,7 @@ Parameters:
 * **state** – The state to wait for. 0 = inactive, 1 = active, 2 = opposite to current.
 * **only_on_change** – Bool which controls whether this wait will be triggered now if the switch is already in the state, or whether it will wait until the switch changes into that state.
 * **ms** – How long the switch needs to be in the new state to trigger the wait.
+
+## Related Pages:
+
+* [How MPF handles switches: The Switch Controller](../../../mechs/switches/switch_controller.md)

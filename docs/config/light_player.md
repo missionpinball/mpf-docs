@@ -86,6 +86,7 @@ Single value, type: `int_or_token`. Default: `0`
 
 Relative priority of this entry in the light stack.
 
-## Related How To guides
+## Related Pages:
 
-* [Light player](../config_players/light_player.md)
+* [Light player Config Player Reference](../config_players/light_player.md)
+* [light_player API Reference](../config_players/light_player.md)

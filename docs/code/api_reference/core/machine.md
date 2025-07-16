@@ -1,9 +1,5 @@
 # machine API Reference
 
-Config Reference:
-
-* [machine:](../../../config/machine.md)
-
 `self.machine`
 
 ``` python
@@ -114,3 +110,7 @@ Validate a config section.
 `verify_system_info()`
 
 Dump information about the Python installation to the log. Information includes Python version, Python executable, platform, and core architecture.
+
+## Related Pages:
+
+* [machine: Config Reference](../../../config/machine.md)

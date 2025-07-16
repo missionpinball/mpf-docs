@@ -1,9 +1,5 @@
 # variable_player API Reference
 
-Config Reference:
-
-* [variable_player:](../../../config/variable_player.md)
-
 `self.machine.variable_player`
 
 ``` python
@@ -49,3 +45,8 @@ Variable name.
 `validate_config_entry(settings: dict, name: str) → dict`
 
 Validate one entry of this player.
+
+## Related Pages:
+
+* [variable_player: Config Reference](../../../config/variable_player.md)
+* [Variable player Config Player Reference](../../../config_players/variable_player.md)

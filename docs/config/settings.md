@@ -85,9 +85,9 @@ name of this setting as machine variable.
 
 Single value, type: `string`. Default: `standard`
 
---8<-- "todo.md"
 
-## Related How To guides
+## Related Pages:
 
 * [Machine Management - Service Mode](../machine_management/service_mode.md)
 * [Game Logic - Service Mode](../game_logic/service_mode.md)
+* [settings API Reference](../code/api_reference/core/settings.md)

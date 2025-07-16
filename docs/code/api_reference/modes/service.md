@@ -132,3 +132,9 @@ Returns true if the mode is running. Otherwise false.
 Log a message at the warning level.
 
 These messages will always be shown in the console and the log file.
+
+## Related Pages:
+
+* [service API Reference](../core/service.md)
+* [Game Logic: Service Mode](../../../game_logic/service_mode.md)
+* [Machine Management: Service Mode](../../../machine_management/service_mode.md)
