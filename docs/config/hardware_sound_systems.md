@@ -71,3 +71,4 @@ Not used.
 
 * [Arduino Pinball Controller](../hardware/apc/index.md)
 * [How to use MPF with the LISY platform](../hardware/lisy/index.md)
+* [hardware_sound_systems API Reference](../code/api_reference/devices/hardware_sound_systems.md)

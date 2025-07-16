@@ -1,9 +1,5 @@
 # hardware_sound_systems API Reference
 
-Config Reference:
-
-* [hardware_sound_systems:](../../../config/hardware_sound_systems.md)
-
 `self.machine.hardware_sound_systems.*`
 
 ``` python
@@ -57,3 +53,7 @@ Stop all sounds on track.
 `text_to_speech(text: str, platform_options, track: int = 1)`
 
 Text to speech output.
+
+## Related Pages:
+
+* [hardware_sound_systems: Config Reference](../../../config/hardware_sound_systems.md)
