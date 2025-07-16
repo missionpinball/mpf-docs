@@ -157,8 +157,9 @@ Name of this device in service mode.
 List of one (or more) values, each is a type: `string`. Defaults to
 empty.
 
---8<-- "todo.md"
-
-## Related How To guides
+## Related Pages:
 
 * [Accelerometers](../mechs/accelerometers.md)
+* [accelerometers API Reference](../code/api_reference/devices/accelerometers.md)
+* [How to configure the accelerometer (P3-ROC)](../hardware/multimorphic/accelerometer.md)
+* [MMA8451-based I2C accelerometers](../hardware/mma8451.md)

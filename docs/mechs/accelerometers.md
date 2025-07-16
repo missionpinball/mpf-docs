@@ -4,11 +4,6 @@ title: Accelerometers
 
 # Accelerometers
 
-
-Related Config File Sections:
-
-* [accelerometers:](../config/accelerometers.md)
-
 An accelerometer is a device that measures proper acceleration; proper
 acceleration is not the same as coordinate acceleration (rate of change
 of velocity). For example, an accelerometer at rest on the surface of
@@ -46,3 +41,10 @@ A three-item tuple (x, y, z) of the current accelerometer values.
 
 Varies based on the configured (you can configure events to be
 emitted when certain G-force thresholds are exceeded).
+
+## Related Pages:
+
+* [accelerometers: Config Reference](../config/accelerometers.md)
+* [accelerometers API Reference](../code/api_reference/devices/accelerometers.md)
+* [How to configure the accelerometer (P3-ROC)](../hardware/multimorphic/accelerometer.md)
+* [MMA8451-based I2C accelerometers](../hardware/mma8451.md)
