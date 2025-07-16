@@ -107,7 +107,8 @@ The scope of the random selection for `force_different` and `force_all`.
 When setting to `player` this is enforced per player and persisted
 between balls.
 
-## Related How To guides
+## Related Pages:
 
-* [Random event player](../config_players/random_event_player.md)
+* [Random Event player Config Player Reference](../config_players/random_event_player.md)
+* [random_event_player API Reference](../config_players/random_event_player.md)
 * [Mystery Awards](../cookbook/mystery_award.md)
