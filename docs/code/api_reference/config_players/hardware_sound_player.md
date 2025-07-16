@@ -33,4 +33,4 @@ Play sound on external card.
 ## Related Pages:
 
 * [hardware_sound_player: Config Reference](../../../config/hardware_sound_player.md)
-* [Hardware sound player Config Player Reference](../../../config_players/hardware_sound_player.md)
+* [Hardware Sound player Config Player Reference](../../../config_players/hardware_sound_player.md)
