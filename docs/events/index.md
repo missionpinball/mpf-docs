@@ -310,7 +310,7 @@ will posted an event called *switch_s_left_slingshot_active*.
     * [shutdown](shutdown.md)
     * See flowchart: [Game Start Sequence](../flowcharts/game_start.md)
 
-* Logicblock Events (Counters, Accruals, Sequences)
+* [Logic Block Events (Counters, Accruals, Sequences)](logic_blocks/index.md)
     * [logicblock_(name)_complete](logicblock_name_complete.md)
     * [logicblock_(name)_hit](logicblock_name_hit.md)
     * [logicblock_(name)_updated](logicblock_name_updated.md)
