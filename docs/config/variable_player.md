@@ -263,12 +263,14 @@ we can use in slides and widgets which matches the value of the album,
 and it's automatically updated whenever the player var "album_value"
 changes.
 
-## Related How To guides
+## Related Pages:
 
 * [Tutorial step 15: Add scoring](../tutorial/15_scoring.md)
-* [Variable player](../config_players/variable_player.md)
 * [Player Variables](../game_logic/players.md)
 * [Player Variables Reference](../player_vars/index.md)
 * [Machine Variables Reference](../machine_vars/index.md)
 * [Scoring](../game_logic/scoring/index.md)
 * [Persisting the State of a Logic Block in a Player Variable](../game_logic/logic_blocks/persisting_state_in_a_player_variable.md)
+
+* [Variable player Config Player Reference](../config_players/variable_player.md)
+* [variable_player API Reference](../code/api_reference/config_players/variable_player.md)

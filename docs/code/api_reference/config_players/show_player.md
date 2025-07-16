@@ -1,9 +1,5 @@
 # show_player API Reference
 
-Config Reference:
-
-* [show_player:](../../../config/show_player.md)
-
 `self.machine.show_player`
 
 ``` python
@@ -37,3 +33,8 @@ Handle subscriptions.
 `play(settings, context, calling_context, priority=0, **kwargs)`
 
 Play, start, stop, pause, resume or advance show based on config.
+
+## Related Pages:
+
+* [show_player: Config Reference](../../../config/show_player.md)
+* [Show player Config Player Reference](../../../config_players/show_player.md)
