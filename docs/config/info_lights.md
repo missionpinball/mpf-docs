@@ -139,3 +139,7 @@ Turns this light on when the machine tilts.
 
 Flashes this light when a game is not in progress at a rate of 1/2 sec
 on, 1/2 sec off.
+
+## Related Pages:
+
+* [info_lights API Reference](../code/api_reference/core/info_lights.md)

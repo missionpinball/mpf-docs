@@ -1,9 +1,5 @@
 # text_ui API Reference
 
-Config Reference:
-
-* [text_ui:](../../../config/text_ui.md)
-
 `self.machine.text_ui`
 
 ``` python
@@ -25,3 +21,7 @@ The text_ui has the following methods & attributes available. Note that methods 
 `stop(**kwargs)`
 
 Stop the Text UI and restore the original console screen.
+
+## Related Pages:
+
+* [text_ui: Config Reference](../../../config/text_ui.md)

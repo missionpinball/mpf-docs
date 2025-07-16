@@ -1,9 +1,5 @@
 # switch_player API Reference
 
-Config Reference:
-
-* [switch_player:](../../../config/switch_player.md)
-
 `self.machine.switch_player`
 
 ``` python
@@ -21,3 +17,7 @@ There is only one instance of the `switch_player` in MPF, and it's accessible vi
 ## Methods & Attributes
 
 The `switch_player` has the following methods & attributes available. Note that methods & attributes inherited from base classes are not included here.
+
+## Related Pages:
+
+* [switch_player: Config Reference](../../../config/switch_player.md)

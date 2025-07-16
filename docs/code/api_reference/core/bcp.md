@@ -1,9 +1,5 @@
 # bcp API Reference
 
-Config Reference:
-
-* [bcp:](../../../config/bcp.md)
-
 `self.machine.bcp`
 
 ``` python
@@ -29,3 +25,7 @@ Emulate legacy send.
 Parameters:
 
 * **bcp_command** – Commmand to send
+
+## Related Pages:
+
+* [bcp: Config Reference](../../../config/bcp.md)

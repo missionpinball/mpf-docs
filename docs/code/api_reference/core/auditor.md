@@ -1,9 +1,5 @@
 # auditor API Reference
 
-Config Reference:
-
-* [auditor:](../../../config/auditor.md)
-
 `self.machine.auditor`
 
 ``` python
@@ -70,3 +66,8 @@ Parameters:
 `enabled`
 
 Attribute that's viewed by other core components to let them know they should send auditing events. Set this via the enable() and disable() methods.
+
+## Related Pages:
+
+* [auditor: Config Reference](../../../config/auditor.md)
+* [Machine Management: Auditor](../../../machine_management/auditor.md)

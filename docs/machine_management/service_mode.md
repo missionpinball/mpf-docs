@@ -72,3 +72,9 @@ MPF provides a **Diagnostics** function that allows the user to test
 hardware elements of the game such as switches, lights and coils. This
 menu option is available from the `service_menu_selected` event with the
 label `Diagnostics Menu`.
+
+## Related Pages:
+
+* [service API Reference](../code/api_reference/core/service.md)
+* [service_mode API Reference](../code/api_reference/modes/service.md)
+* [Game Logic: Service Mode](../game_logic/service_mode.md)

@@ -1,9 +1,5 @@
 # settings API Reference
 
-Config Reference:
-
-* [settings:](../../../config/settings.md)
-
 `self.machine.settings`
 
 ``` python
@@ -45,3 +41,7 @@ Return all available settings.
 `set_setting_value(setting_name, value)`
 
 Set the value of a setting.
+
+## Config Reference:
+
+* [settings: Config Reference](../../../config/settings.md)

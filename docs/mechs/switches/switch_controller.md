@@ -53,3 +53,7 @@ reasons:
     All this is done by interfacing to the switch controller----your
     actual game code doesn't know (or care) where the original switch
     events came from.
+
+## Related Pages:
+
+* [switch_controller API Reference](../../code/api_reference/core/switch_controller.md)

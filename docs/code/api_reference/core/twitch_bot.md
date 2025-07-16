@@ -1,9 +1,5 @@
 # twitch_bot API Reference
 
-Config Reference:
-
-* [twitch_client:](../../../config/twitch_client.md)
-
 `self.machine.twitch_bot`
 
 ``` python
@@ -21,3 +17,7 @@ There is only one instance of the `twitch_bot` in MPF, and it's accessible via `
 ## Methods & Attributes
 
 The `twitch_bot` has the following methods & attributes available. Note that methods & attributes inherited from base classes are not included here.
+
+## Related Pages:
+
+* [twitch_client: Config Reference](../../../config/twitch_client.md)

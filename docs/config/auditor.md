@@ -93,6 +93,7 @@ Default: `ball_ended`
 Events in this list, when posted, trigger the auditor to save its audits
 to disk.
 
-## Related How To guides
+## Related Pages:
 
 * [Auditor](../machine_management/auditor.md)
+* [auditor API Reference](../code/api_reference/core/auditor.md)
