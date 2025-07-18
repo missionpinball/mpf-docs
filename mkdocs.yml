@@ -50,15 +50,21 @@ theme:
     edit: fontawesome/solid/wand-magic-sparkles
   custom_dir: overrides     # https://squidfunk.github.io/mkdocs-material/customization/#extending-the-theme
 
+  # Feature flags from mkdocs-material, see:
+  # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation
+  # https://squidfunk.github.io/mkdocs-material/upgrade
+  # https://squidfunk.github.io/mkdocs-material/reference/code-blocks
   features:
-    - navigation.instant    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#instant-loading
-    - navigation.footer     # https://squidfunk.github.io/mkdocs-material/upgrade/#navigationfooter
-    - navigation.tabs       # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#navigation-tabs
-    - navigation.indexes    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#section-index-pages
-    - navigation.top        # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#back-to-top-button
-    - content.action.edit   # https://squidfunk.github.io/mkdocs-material/upgrade/#contentaction
-    - toc.follow            # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#anchor-following
-    - content.code.annotate # https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#code-annotations
+    - navigation.instant      # setting-up-navigation/#instant-loading        # Use XHR instead of page reloads on browsing links
+    - navigation.footer       # upgrade/#navigationfooter                     # Enable Next and Previous buttons in footer
+    - navigation.tabs         # setting-up-navigation/#navigation-tabs        # Enables the header tab navigation on large screens
+    - navigation.tabs.sticky  # setting-up-navigation/#sticky-navigation-tabs # Keep section headers visible instead of collapsing on scroll
+    - navigation.indexes      # setting-up-navigation/#section-index-pages    # Allows section headers to be standalone pages
+    - navigation.top          # setting-up-navigation/#back-to-top-button     # Button appears when user scrolls down then up
+    - navigation.tracking     # setting-up-navigation/#anchor-tracking        # Update url bar #anchor as you scroll
+    - content.action.edit     # upgrade/#contentaction                        # Enables link to edit on github
+    - toc.follow              # setting-up-navigation/#anchor-following       # Sidebar automatically scrolls with content
+    - content.code.annotate   # reference/code-blocks/#code-annotations       # Allows + button annotations
 
   palette:                  # https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#color-palette-toggle
     # Palette toggle for light mode
