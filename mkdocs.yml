@@ -60,6 +60,7 @@ theme:
     - navigation.tabs       # setting-up-navigation/#navigation-tabs      -- Enables the header tab navigation on large screens
     - navigation.indexes    # setting-up-navigation/#section-index-pages  -- Allows section headers to be standalone pages
     - navigation.top        # setting-up-navigation/#back-to-top-button   -- Button appears when user scrolls down then up
+    - navigation.tracking   # setting-up-navigation/#anchor-tracking      -- Update url bar #anchor as you scroll
     - content.action.edit   # upgrade/#contentaction                      -- Enables link to edit on github
     - toc.follow            # setting-up-navigation/#anchor-following     -- Sidebar automatically scrolls with content
     - content.code.annotate # reference/code-blocks/#code-annotations     -- Allows + button annotations
