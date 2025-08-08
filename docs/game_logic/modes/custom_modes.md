@@ -11,7 +11,7 @@ don't read the list of built-in modes and think that's all MPF can do.
 :)
 
 Also if you haven't read the overview of
-[how modes work in MPF](../../index.md), do that
+[how modes work in MPF](../index.md), do that
 now. We documented the general approach to design a game in the
 [Game Design](../../game_design/index.md)
 section.
