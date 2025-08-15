@@ -43,7 +43,7 @@ python3 -m unittest discover <path to test directory>
 ```
 Where `<path to test directory>` is the path to the directory where you tests are stored. If you have followed the steps above you are already in that directory and you just omit this value.
 
-You should see a bunch of dots on the screen (one for each test that’s run), and then when it’s done, you should see a message showing how many tests were run and that they were successful. The whole process should take less a minute or so.
+You should see a bunch of dots on the screen (one for each test that's run), and then when it's done, you should see a message showing how many tests were run and that they were successful. The whole process should take less a minute or so.
 
 (If you see any messages about some tests taking more than 0.5s, that's ok.)
 
@@ -79,7 +79,7 @@ python -m unittest <file name without py extension>.<Class name within file>.<na
 ```
 
 ## Testing the MPF media controller
-Remember though that MPF is actually two separate parts, the MPF game engine and the MPF media controller. The command you run just tested the game engine, so now let’s test the media controller. To do this, run the following command (basically the same thing as last time but with an “mc” added to the end, like this):
+Remember though that MPF is actually two separate parts, the MPF game engine and the MPF media controller. The command you run just tested the game engine, so now let's test the media controller. To do this, run the following command (basically the same thing as last time but with an “mc” added to the end, like this):
 
 ``` console
 python3 -m unittest discover mpfmc/tests
