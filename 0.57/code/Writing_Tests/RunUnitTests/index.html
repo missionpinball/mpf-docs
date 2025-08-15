@@ -39781,7 +39781,7 @@ Now you have different options on how to run the tests. You can either run all t
 <p><div class="highlight"><pre><span></span><code><span class="go">python3 -m unittest discover &lt;path to test directory&gt;</span>
 </code></pre></div>
 Where <code>&lt;path to test directory&gt;</code> is the path to the directory where you tests are stored. If you have followed the steps above you are already in that directory and you just omit this value.</p>
-<p>You should see a bunch of dots on the screen (one for each test that’s run), and then when it’s done, you should see a message showing how many tests were run and that they were successful. The whole process should take less a minute or so.</p>
+<p>You should see a bunch of dots on the screen (one for each test that's run), and then when it's done, you should see a message showing how many tests were run and that they were successful. The whole process should take less a minute or so.</p>
 <p>(If you see any messages about some tests taking more than 0.5s, that's ok.)</p>
 <p>The important thing is that when the tests are done, you should have a message like this:</p>
 <div class="highlight"><pre><span></span><code><span class="go">Ran 587 tests in 27.121s</span>
@@ -39805,7 +39805,7 @@ where the syntax has the following format
 <div class="highlight"><pre><span></span><code><span class="go">python -m unittest &lt;file name without py extension&gt;.&lt;Class name within file&gt;.&lt;name of test&gt;</span>
 </code></pre></div></p>
 <h2 id="testing-the-mpf-media-controller">Testing the MPF media controller</h2>
-<p>Remember though that MPF is actually two separate parts, the MPF game engine and the MPF media controller. The command you run just tested the game engine, so now let’s test the media controller. To do this, run the following command (basically the same thing as last time but with an “mc” added to the end, like this):</p>
+<p>Remember though that MPF is actually two separate parts, the MPF game engine and the MPF media controller. The command you run just tested the game engine, so now let's test the media controller. To do this, run the following command (basically the same thing as last time but with an “mc” added to the end, like this):</p>
 <div class="highlight"><pre><span></span><code><span class="go">python3 -m unittest discover mpfmc/tests</span>
 </code></pre></div>
 <p>(Note that mpfmc does not have a dash in it, like it did when you installed it via pip.)</p>
