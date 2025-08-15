@@ -50,3 +50,8 @@ flasher_player:
       color: green
       ms: 250ms
 ```
+
+## Related Pages:
+
+* [flasher_player: Config Reference](../config/flasher_player.md)
+* [flasher_player API Reference](../code/api_reference/config_players/flasher_player.md)

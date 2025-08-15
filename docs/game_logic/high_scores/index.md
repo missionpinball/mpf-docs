@@ -7,7 +7,7 @@ title: High Scores
 
 Related Config File Sections:
 
-* [high_scores_in_ems](../../config/high_score.md)
+* [high_score:](../../config/high_score.md)
 
 MPF includes support for high scores which is where players can enter
 their names (or initials) when they've achieved a high score. Features
@@ -258,10 +258,10 @@ loops_award_display:
 
 High score mode will also create a few machine variables for you:
 
-* [high_scores](../../machine_vars/high_score_categoryposition_label.md) - `score1_label` = GRAND CHAMPION
-* [high_scores](../../machine_vars/high_score_categoryposition_name.md) - `score1_name` = MPF
-* [high_scores](../../machine_vars/high_score_categoryposition_value.md) - `score1_value` = 1000000
-* [high_scores](../../machine_vars/high_score_categoryposition_variabletype_variable.md) - `score1_player_character` = Squid
+* [high_scores - score1_label](../../machine_vars/high_score_categoryposition_label.md) = GRAND CHAMPION
+* [high_scores - score1_name](../../machine_vars/high_score_categoryposition_name.md) = MPF
+* [high_scores - score1_value](../../machine_vars/high_score_categoryposition_value.md) = 1000000
+* [high_scores - score1_player_character](../../machine_vars/high_score_categoryposition_variabletype_variable.md) = Squid
 
 In this case this will be `score1_value`, `score1_name` and
 `score1_label` (till `score9_value`, `score9_name` and `score9_label`).
@@ -369,14 +369,22 @@ widget_styles:
 #! assert_mode_running attract
 ```
 
-Related How To guides:
+Generically, these machine variables are:
 
-* [high_scores_in_ems](../scoring/index.md)
-* [high_scores_in_ems](../../game_design/index.md)
-* [High Scores in EM Machines](high_scores_in_ems.md)--
+* [(high_score_category)(position)\_label](../../machine_vars/high_score_categoryposition_label.md)
+* [(high_score_category)(position)\_name](../../machine_vars/high_score_categoryposition_name.md)
+* [(high_score_category)(position)\_value](../../machine_vars/high_score_categoryposition_value.md)
+* [(high_score_category)(position)\_(variable_type)\_(variable)](../../machine_vars/high_score_categoryposition_variabletype_variable.md)
 
-Related Events
 
-* [mode_high_score_started](../../events/mode_name_started.md)
-* [mode_high_score_stopped](../../events/mode_name_stopped.md)--
+## Related How To guides:
+
+* [Scoring](../scoring/index.md)
+* [How to design a game in MPF using Modes](../../game_design/index.md)
 * [High Scores in EM Machines](high_scores_in_ems.md)
+
+## Related Events
+
+* [High Score Events](../../events/high_score/index.md)
+* [mode_high_score_started](../../events/mode_name_started.md)
+* [mode_high_score_stopped](../../events/mode_name_stopped.md)

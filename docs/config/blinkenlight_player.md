@@ -1,9 +1,8 @@
 ---
-title: "blinkenlight_player:"
+title: "blinkenlight_player: Config Reference"
 ---
 
-# blinkenlight_player:
-
+# blinkenlight_player: Config Reference
 
 --8<-- "config_section.md"
 

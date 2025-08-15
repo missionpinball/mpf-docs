@@ -1,9 +1,8 @@
 ---
-title: "shot_profiles:"
+title: "shot_profiles: Config Reference"
 ---
 
-# shot_profiles:
-
+# shot_profiles: Config Reference
 
 --8<-- "config_section.md"
 
@@ -14,7 +13,7 @@ title: "shot_profiles:"
 
 The `shot_profiles:` section of your config is where you configure the
 settings for various *shot profiles* that you can then apply to your
-shots.
+[shots](shots.md), using the [*profile*](shots.md#profile) property.
 
 Here's an example:
 
@@ -28,6 +27,9 @@ shot_profiles:
       - name: lit
         show: "on"
 ```
+
+This is actually the same as the default profile that all shots will use unless
+another is explicitly set.
 
 ## \(name\):
 
@@ -268,4 +270,5 @@ The sync_ms value of the show.
 
 ## Related How To guides
 
+* [Shots](../game_logic/shots/index.md)
 * [Shot Profiles](../game_logic/shots/shot_profiles.md)

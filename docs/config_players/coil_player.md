@@ -52,7 +52,8 @@ In config files, the coil player is used via the `coil_player:` section.
 
 In shows, the coil player is used via the `coils:` section of a step.
 
-## Config Options
+## Related Pages
 
-See [coil_player:](../config/coil_player.md) for config
-details.
+* [Coils (Solenoids)](../mechs/coils/index.md)
+* [coil_player: Config Reference](../config/coil_player.md)
+* [coil_player Api Reference](../code/api_reference/config_players/coil_player.md)

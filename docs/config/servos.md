@@ -1,9 +1,8 @@
 ---
-title: "servos:"
+title: "servos: Config Reference"
 ---
 
-# servos:
-
+# servos: Config Reference
 
 --8<-- "config_section.md"
 
@@ -118,7 +117,7 @@ details.
 
 ### platform_settings:
 
-Single value, type: dict. Defaults to empty.
+Single value, type: `dict`. Defaults to empty.
 
 --8<-- "todo.md"
 

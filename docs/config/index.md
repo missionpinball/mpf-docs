@@ -1,9 +1,8 @@
 ---
-title: Config file reference
+title: Config File Reference Index
 ---
 
-# Config file reference
-
+# Config File Reference Index
 
 This section contains details about every possible entry you can use in
 your YAML config files. Each entry also has information about whether

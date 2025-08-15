@@ -1,9 +1,8 @@
 ---
-title: "plugins:"
+title: "plugins: Config Reference"
 ---
 
-# plugins:
-
+# plugins: Config Reference
 
 --8<-- "config_section.md"
 

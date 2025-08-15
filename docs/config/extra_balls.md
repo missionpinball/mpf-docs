@@ -1,9 +1,8 @@
 ---
-title: "extra_balls:"
+title: "extra_balls: Config Reference"
 ---
 
-# extra_balls:
-
+# extra_balls: Config Reference
 
 --8<-- "config_section.md"
 
@@ -59,7 +58,7 @@ Whether the device starts enabled or disabled.
 
 ### group:
 
-Single value, type: string name of a
+Single value, type: `string` name of a
 [extra_ball_groups:](extra_ball_groups.md)
 device. Defaults to empty.
 

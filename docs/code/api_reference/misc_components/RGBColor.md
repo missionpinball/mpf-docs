@@ -1,9 +1,10 @@
+# RGBColor API Reference
 
-# RGBColor
+``` python
+class mpf.core.rgb_color.RGBColor(color: Union[RGBColor, str, List[int], Tuple[int, int, int]] = None)
+```
 
-`class mpf.core.rgb_color.RGBColor(color: Union[RGBColor, str, List[int], Tuple[int, int, int]] = None)`
-
-Bases: object
+Bases: `object`
 
 One RGB Color.
 
@@ -15,7 +16,7 @@ The RGBColor has the following methods & attributes available. Note that methods
 
 Add (or updates if it already exists) a color.
 
-Note that this is not permanent, the list is reset when MPF restarts (though you can define your own custom colors in your config file’s colors: section). You can use this function to dynamically change the values of colors in shows (they take place the next time an LED switches to that color).
+Note that this is not permanent, the list is reset when MPF restarts (though you can define your own custom colors in your config file's colors: section). You can use this function to dynamically change the values of colors in shows (they take place the next time an LED switches to that color).
 
 Parameters:
 
@@ -105,4 +106,3 @@ Return type:	str
 Convert a string which could be either a standard color name or a hex value to an RGB value (tuple).
 
 If the name is not found and the supplied value is not a valid hex string it raises an error. :param value: A standard color name or hex value. :param default: The default value to return if the color name is not found and the supplied value is not a valid hex color string. :return: RGB representation of the named color. :rtype: tuple
-

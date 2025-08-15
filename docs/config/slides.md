@@ -1,9 +1,8 @@
 ---
-title: "slides:"
+title: "slides: Config Reference"
 ---
 
-# slides:
-
+# slides: Config Reference
 
 --8<-- "config_section.md"
 

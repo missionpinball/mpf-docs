@@ -1,9 +1,8 @@
 ---
-title: "bcp:"
+title: "bcp: Config Reference"
 ---
 
-# bcp:
-
+# bcp: Config Reference
 
 --8<-- "config_section.md"
 
@@ -71,7 +70,8 @@ this is used for the
 MPF supports connecting to multiple servers simultaneously which is why
 you can add multiple entries here.
 
-## Related How To guides
+## Related Pages:
 
 * [The MPF Unity BCP Server](../mc/unity_bcp_server.md)
 * [Creating your own Media Controller](../mc/creating_your_own.md)
+* [bcp API Reference](../code/api_reference/core/bcp.md)

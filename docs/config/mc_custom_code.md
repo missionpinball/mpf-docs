@@ -1,9 +1,8 @@
 ---
-title: "mc_custom_code:"
+title: "mc_custom_code: Config Reference"
 ---
 
-# mc_custom_code:
-
+# mc_custom_code: Config Reference
 
 --8<-- "config_section.md"
 

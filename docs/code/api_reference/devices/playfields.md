@@ -1,9 +1,16 @@
+# playfields API Reference
 
-self.machine.playfields.*
+Config Reference:
 
+* [playfields:](../../../config/playfields.md)
+
+`self.machine.playfields.*`
+
+``` python
 class mpf.devices.playfield.Playfield(*args, **kwargs)
+```
 
-Bases: mpf.core.system_wide_device.SystemWideDevice
+Bases: `mpf.core.system_wide_device.SystemWideDevice`
 
 One playfield in a pinball machine.
 
@@ -21,15 +28,15 @@ Add live ball(s) to the playfield.
 
 Parameters:
 
-* **balls** – Integer of the number of balls you’d like to add.
-* **source_device** – Optional ball device object you’d like to add the ball(s) from.
+* **balls** – Integer of the number of balls you'd like to add.
+* **source_device** – Optional ball device object you'd like to add the ball(s) from.
 * **player_controlled** – Boolean which specifies whether this event is player controlled. (See not below for details)
 
-Returns True if it’s able to process the add_ball() request, False if it cannot.
+Returns True if it's able to process the add_ball() request, False if it cannot.
 
-The source_device arg is included to give you an options for specifying the source of the ball(s) to be added. This argument is optional, so if you don’t supply them then MPF will use the default_source_device of this playfield.
+The source_device arg is included to give you an options for specifying the source of the ball(s) to be added. This argument is optional, so if you don't supply them then MPF will use the default_source_device of this playfield.
 
-This method does not increase the game controller’s count of the number of balls in play. So if you want to add balls (like in a multiball scenario), you need to call this method along with self.machine.game.add_balls_in_play().)
+This method does not increase the game controller's count of the number of balls in play. So if you want to add balls (like in a multiball scenario), you need to call this method along with self.machine.game.add_balls_in_play().)
 
 MPF tracks the number of balls in play separately from the actual balls on the playfield because there are numerous situations where the two counts are not the same. For example, if a ball is in a VUK while some animation is playing, there are no balls on the playfield but still one ball in play, or if the player has a two-ball multiball and they shoot them both into locks, there are still two balls in play even though there are no balls on the playfield. The opposite can also be true, like when the player tilts then there are still balls on the playfield but no balls in play.
 
@@ -37,11 +44,11 @@ Explanation of the player_controlled parameter:
 
 Set player_controlled to True to indicate that MPF should wait for the player to eject the ball from the source_device rather than firing a coil. The logic works like this:
 
-If the source_device does not have an eject_coil defined, then it’s assumed that player_controlled is the only option. (e.g. this is a traditional plunger.) If the source_device does have an eject_coil defined, then there are two ways the eject could work. (1) there could be a “launch” button of some kind that’s used to fire the eject coil, or (2) the device could be the auto/manual combo style where there’s a mechanical plunger but also a coil which can eject the ball.
+If the source_device does not have an eject_coil defined, then it's assumed that player_controlled is the only option. (e.g. this is a traditional plunger.) If the source_device does have an eject_coil defined, then there are two ways the eject could work. (1) there could be a “launch” button of some kind that's used to fire the eject coil, or (2) the device could be the auto/manual combo style where there's a mechanical plunger but also a coil which can eject the ball.
 
 If player_controlled is true and the device has an eject_coil, MPF will look for the player_controlled_eject_tag and eject the ball when a switch with that tag is activated.
 
-If there is no player_controlled_eject_tag, MPF assumes it’s a manual plunger and will wait for the ball to disappear from the device based on the device’s ball count decreasing.
+If there is no player_controlled_eject_tag, MPF assumes it's a manual plunger and will wait for the ball to disappear from the device based on the device's ball count decreasing.
 
 `add_incoming_ball(incoming_ball: mpf.devices.ball_device.incoming_balls_handler.IncomingBall)`
 
@@ -71,7 +78,7 @@ An instance of mpf.core.delays.DelayManager which handles delays for this playfi
 
 Block ball search for this playfield.
 
-Blocking will disable ball search if it’s enabled or running, and will prevent ball search from enabling if it’s disabled until ball_search_resume() is called.
+Blocking will disable ball search if it's enabled or running, and will prevent ball search from enabling if it's disabled until ball_search_resume() is called.
 
 `event_ball_search_disable(**kwargs)`
 
@@ -138,4 +145,3 @@ Handle an unexpected ball.
 `static wait_for_ready_to_receive(source)`
 
 Playfield is always ready to receive.
-

@@ -1,9 +1,8 @@
 ---
-title: "event_player:"
+title: "event_player: Config Reference"
 ---
 
-# event_player:
-
+# event_player: Config Reference
 
 --8<-- "config_section.md"
 
@@ -39,9 +38,9 @@ event_player:
     - play_drain_sound
 ```
 
-See [Event player](../config_players/event_player.md) for
-details.
+See [Event player](../config_players/event_player.md) for details.
 
-## Related How To guides
+## Related Pages
 
-* [Event player](../config_players/event_player.md)
+* [Event player Config Player Reference](../config_players/event_player.md)
+* [event_player API Reference](../code/api_reference/config_players/event_player.md)

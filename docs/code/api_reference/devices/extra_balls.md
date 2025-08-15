@@ -1,9 +1,16 @@
+# extra_balls API Reference
 
-# self.machine.extra_balls.*
+Config Reference:
 
-`class mpf.devices.extra_ball.ExtraBall(*args, **kwargs)`
+* [extra_balls:](../../../config/extra_balls.md)
 
-Bases: mpf.core.mode_device.ModeDevice
+`self.machine.extra_balls.*`
+
+``` python
+class mpf.devices.extra_ball.ExtraBall(*args, **kwargs)
+```
+
+Bases: `mpf.core.mode_device.ModeDevice`
 
 An extra ball which can be awarded once per player.
 
@@ -61,7 +68,7 @@ Check whether this extra ball can be lit. This method takes into consideration w
 
 `light()`
 
-Light an extra ball for potential collection by the player. Lighting an extra ball will immediately increase count against the max_per_game setting, even if the extra ball is a member of a group that’s disabled or if the player never actually collects the extra ball. Note that this only really does anything if this extra ball is a member of a group.
+Light an extra ball for potential collection by the player. Lighting an extra ball will immediately increase count against the max_per_game setting, even if the extra ball is a member of a group that's disabled or if the player never actually collects the extra ball. Note that this only really does anything if this extra ball is a member of a group.
 
 `player`
 
@@ -74,4 +81,3 @@ Raise a ConfigFileError exception.
 `subscribe_attribute(item, machine)`
 
 Subscribe to an attribute.
-

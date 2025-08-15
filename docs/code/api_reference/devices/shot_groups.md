@@ -1,9 +1,16 @@
+# shot_groups API Reference
 
-# self.machine.shot_groups.*
+Config Reference:
 
-`class mpf.devices.shot_group.ShotGroup(*args, **kwargs)`
+* [shot_groups:](../../../config/shot_groups.md)
 
-Bases: mpf.core.mode_device.ModeDevice
+`self.machine.shot_groups.*`
+
+``` python
+class mpf.devices.shot_group.ShotGroup(*args, **kwargs)
+```
+
+Bases: `mpf.core.mode_device.ModeDevice`
 
 Represents a group of shots in a pinball machine by grouping together multiple Shot class devices.
 
@@ -111,7 +118,7 @@ This method actually transfers the current state of each shot profile to the lef
 
 Parameters:
 
-* **direction** – String that specifies whether the rotation direction is to the left or right. Values are ‘right’ or ‘left’. Default of None will cause the shot group to rotate in the direction as specified by the rotation_pattern.
+* **direction** – String that specifies whether the rotation direction is to the left or right. Values are 'right' or 'left'. Default of None will cause the shot group to rotate in the direction as specified by the rotation_pattern.
 
 Note that this shot group must, and rotation_events for this shot group, must both be enabled for the rotation events to work.
 
@@ -119,15 +126,14 @@ Note that this shot group must, and rotation_events for this shot group, must bo
 
 Rotate the state of the shots to the left.
 
-This method is the same as calling rotate(‘left’)
+This method is the same as calling rotate('left')
 
 `rotate_right()`
 
 Rotate the state of the shots to the right.
 
-This method is the same as calling rotate(‘right’)
+This method is the same as calling rotate('right')
 
 `subscribe_attribute(item, machine)`
 
 Subscribe to an attribute.
-

@@ -1,9 +1,16 @@
+# ball_holds API Reference
 
-# self.machine.ball_holds.*
+Config Reference:
 
-`class mpf.devices.ball_hold.BallHold(*args, **kwargs)`
+* [ball_holds:](../../../config/ball_holds.md)
 
-Bases: mpf.core.enable_disable_mixin.EnableDisableMixin, mpf.core.system_wide_device.SystemWideDevice, mpf.core.mode_device.ModeDevice
+`self.machine.ball_holds.*`
+
+``` python
+class mpf.devices.ball_hold.BallHold(*args, **kwargs)
+```
+
+Bases: `mpf.core.enable_disable_mixin.EnableDisableMixin`, `mpf.core.system_wide_device.SystemWideDevice`, `mpf.core.mode_device.ModeDevice`
 
 Ball hold device which can be used to keep balls in ball devices and control their eject later on.
 
@@ -102,4 +109,3 @@ Reset the hold. Will release held balls. Device status will stay the same (enabl
 `subscribe_attribute(item, machine)`
 
 Subscribe to an attribute.
-

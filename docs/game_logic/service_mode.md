@@ -4,11 +4,6 @@ title: Service Mode
 
 # Service Mode
 
-
-Related Config File Sections:
-
-* [settings:](../config/settings.md)
-
 MPF has a build in service mode which can be extended using settings (or
 in code). Usually you map your
 [service switches and door switches](../mechs/switches/service_and_door_switches.md) to control service mode. Additionally, you might want to add
@@ -88,6 +83,11 @@ widget_styles:
     adjust_bottom: 3
 ```
 
-Related How To guides:
+## Related Pages:
 
 * [How to design a game in MPF using Modes](../game_design/index.md)
+* [settings: Config Reference](../config/settings.md)
+
+* [service API Reference](../code/api_reference/core/service.md)
+* [service_mode API Reference](../code/api_reference/modes/service.md)
+* [Machine Management: Service Mode](../machine_management/service_mode.md)

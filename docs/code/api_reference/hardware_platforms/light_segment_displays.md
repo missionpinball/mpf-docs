@@ -1,9 +1,16 @@
+# light_segment_displays API Reference
 
-# self.machine.hardware_platforms[‘light_segment_displays’]
+Config Reference:
 
-`class mpf.platforms.light_segment_displays.LightSegmentDisplaysPlatform(machine)`
+* [light_segment_displays:](../../../config/light_segment_displays.md)
 
-Bases: mpf.core.platform.SegmentDisplayPlatform
+`self.machine.hardware_platforms['light_segment_displays']`
+
+``` python
+class mpf.platforms.light_segment_displays.LightSegmentDisplaysPlatform(machine)
+```
+
+Bases: `mpf.core.platform.SegmentDisplayPlatform`
 
 Platform which drives segment displays on lights of another platform.
 
@@ -18,4 +25,3 @@ The light_segment_displays platform has the following methods & attributes avail
 `configure_segment_display(number: str, platform_settings) → mpf.platforms.light_segment_displays.LightSegmentDisplay`
 
 Configure light segment display.
-

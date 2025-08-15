@@ -1,9 +1,8 @@
 ---
-title: "lisy:"
+title: "lisy: Config Reference"
 ---
 
-# lisy:
-
+# lisy: Config Reference
 
 --8<-- "config_section.md"
 

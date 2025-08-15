@@ -1,9 +1,16 @@
+# fadecandy API Reference
 
-# self.machine.hardware_platforms[‘fadecandy’]
+Config Reference:
 
-`class mpf.platforms.fadecandy.FadecandyHardwarePlatform(machine: MachineController)`
+* [fadecandy:](../../../config/fadecandy.md)
 
-Bases: mpf.platforms.openpixel.OpenpixelHardwarePlatform
+`self.machine.hardware_platforms['fadecandy']`
+
+``` python
+class mpf.platforms.fadecandy.FadecandyHardwarePlatform(machine: MachineController)
+```
+
+Bases: `mpf.platforms.openpixel.OpenpixelHardwarePlatform`
 
 Base class for the FadeCandy hardware platform.
 
@@ -14,4 +21,3 @@ Hardware platforms are stored in the `self.machine.hardware_platforms` dictionar
 ## Methods & Attributes
 
 The fadecandy platform has the following methods & attributes available. Note that methods & attributes inherited from base classes are not included here.
-

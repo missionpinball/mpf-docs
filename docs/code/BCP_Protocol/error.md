@@ -1,4 +1,3 @@
-
 # error (BCP command)
 This is a command used to convey error messages back to the origin of a command.
 

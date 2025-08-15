@@ -1,15 +1,18 @@
+# events API Reference
 
-# self.machine.events
+`self.machine.events`
 
-`class mpf.core.events.EventManager(machine: MachineController)`
+``` python
+class mpf.core.events.EventManager(machine: MachineController)
+```
 
-Bases: mpf.core.mpf_controller.MpfController
+Bases: `mpf.core.mpf_controller.MpfController`
 
 Handles all the events and manages the handlers in MPF.
 
 ## Accessing the events in code
 
-There is only one instance of the events in MPF, and it’s accessible via self.machine.events.
+There is only one instance of the events in MPF, and it's accessible via self.machine.events.
 
 ## Methods & Attributes
 
@@ -25,11 +28,11 @@ Register an event handler to respond to an event.
 
 Parameters:
 
-* **event** – String name of the event you’re adding a handler for. Since events are text strings, they don’t have to be pre-defined.
-* **handler** – The callable method that will be called when the event is fired. Since it’s possible for events to have kwargs attached to them, the handler method must include **kwargs in its signature.
-* **priority** – An arbitrary integer value that defines what order the handlers will be called in. The default is 1, so if you have a handler that you want to be called first, add it here with a priority of 2. (Or 3 or 10 or 100000.) The numbers don’t matter. They’re called from highest to lowest. (i.e. priority 100 is called before priority 1.)
+* **event** – String name of the event you're adding a handler for. Since events are text strings, they don't have to be pre-defined.
+* **handler** – The callable method that will be called when the event is fired. Since it's possible for events to have kwargs attached to them, the handler method must include **kwargs in its signature.
+* **priority** – An arbitrary integer value that defines what order the handlers will be called in. The default is 1, so if you have a handler that you want to be called first, add it here with a priority of 2. (Or 3 or 10 or 100000.) The numbers don't matter. They're called from highest to lowest. (i.e. priority 100 is called before priority 1.)
 * **blocking_facility** – Facility which can block this event.
-* ****kwargs** – Any any additional keyword/argument pairs entered here will be attached to the handler and called whenever that handler is called. Note these are in addition to kwargs that could be passed as part of the event post. If there’s a conflict, the event-level ones will win.
+* ****kwargs** – Any any additional keyword/argument pairs entered here will be attached to the handler and called whenever that handler is called. Note these are in addition to kwargs that could be passed as part of the event post. If there's a conflict, the event-level ones will win.
 
 Returns EventHandlerKey to the handler which you can use to later remove the handler via remove_handler_by_key. For example: `my_handler = self.machine.events.add_handler('ev', self.test))` Then later to remove all the handlers that a module added, you could: for handler in handler_list: `events.remove_handler(my_handler)`
 
@@ -50,7 +53,7 @@ Parse an event string to divide the event name from a possible placeholder / con
 Parameters:
 
 * **event_string** – String to parse
-Returns 2-item tuple- First item is the event name. Second item is the condition (A BoolTemplate instance) if it exists, or None if it doesn’t.
+Returns 2-item tuple- First item is the event name. Second item is the condition (A BoolTemplate instance) if it exists, or None if it doesn't.
 
 `post(event: str, callback=None, **kwargs) → None`
 
@@ -58,9 +61,9 @@ Post an event which causes all the registered handlers to be called. Events are 
 
 Parameters:
 
-* **event** – A string name of the event you’re posting. Note that you can post whatever event you want. You don’t have to set up anything ahead of time, and if no handlers are registered for the event you post, so be it.
+* **event** – A string name of the event you're posting. Note that you can post whatever event you want. You don't have to set up anything ahead of time, and if no handlers are registered for the event you post, so be it.
 * **callback** – An optional method which will be called when the final handler is done processing this event. Default is None.
-* ****kwargs** – One or more options keyword/value pairs that will be passed to each handler. (The event manager will enforce that handlers have **kwargs in their signatures when they’re registered to prevent run-time crashes from unexpected kwargs that were included in post() calls.
+* **`**kwargs`** – One or more options keyword/value pairs that will be passed to each handler. (The event manager will enforce that handlers have `**kwargs` in their signatures when they're registered to prevent run-time crashes from unexpected kwargs that were included in post() calls.
 
 `post_async(event: str, **kwargs) → _asyncio.Future`
 
@@ -72,7 +75,7 @@ Post an boolean event which causes all the registered handlers to be called one-
 
 Parameters:
 
-* **event** – A string name of the event you’re posting. Note that you can post whatever event you want. You don’t have to set up anything ahead of time, and if no handlers are registered for the event you post, so be it.
+* **event** – A string name of the event you're posting. Note that you can post whatever event you want. You don't have to set up anything ahead of time, and if no handlers are registered for the event you post, so be it.
 * **callback** – An optional method which will be called when the final handler is done processing this event. Default is None. If any handler returns False and cancels this boolean event, the callback will still be called, but a new kwarg ev_result=False will be passed to it.
 * ****kwargs** – One or more options keyword/value pairs that will be passed to each handler.
 
@@ -82,9 +85,9 @@ Post a queue event which causes all the registered handlers to be called. Queue 
 
 Parameters:
 
-* **event** - A string name of the event you’re posting. Note that you can post whatever event you want. You don’t have to set up anything ahead of time, and if no handlers are registered for the event you post, so be it.
+* **event** - A string name of the event you're posting. Note that you can post whatever event you want. You don't have to set up anything ahead of time, and if no handlers are registered for the event you post, so be it.
 * **callback** - The method which will be called when the final handler is done processing this event and any handlers that registered waits have cleared their waits.
-* ****kwargs** - One or more options keyword/value pairs that will be passed to each handler. (Just make sure your handlers are expecting them. You can add **kwargs to your handler methods if certain ones don’t need them.)
+* **`**kwargs`** - One or more options keyword/value pairs that will be passed to each handler. (Just make sure your handlers are expecting them. You can add `**kwargs` to your handler methods if certain ones don't need them.)
 
 Post the queue event called `pizza_time`, and then call `self.pizza_done` when done: `self.machine.events.post_queue('pizza_time', self.pizza_done)`
 
@@ -98,9 +101,9 @@ Post a relay event which causes all the registered handlers to be called. A dict
 
 Parameters:
 
-* **event** – A string name of the event you’re posting. Note that you can post whatever event you want. You don’t have to set up anything ahead of time, and if no handlers are registered for the event you post, so be it.
+* **event** – A string name of the event you're posting. Note that you can post whatever event you want. You don't have to set up anything ahead of time, and if no handlers are registered for the event you post, so be it.
 * **callback** – The method which will be called when the final handler is done processing this event. Default is None.
-* ****kwargs** – One or more options keyword/value pairs that will be passed to each handler. (Just make sure your handlers are expecting them. You can add **kwargs to your handler methods if certain ones don’t need them.)
+* **`**kwargs`** – One or more options keyword/value pairs that will be passed to each handler. (Just make sure your handlers are expecting them. You can add `**kwargs` to your handler methods if certain ones don't need them.)
 
 Events are processed serially (e.g. one at a time), so if the event core is in the process of handling another event, this event is added to a queue and processed after the current event is done. You can control the order the handlers will be called by optionally specifying a priority when the handlers were registered. (Higher priority values will be processed first.) Relay events differ from standard events in that the resulting kwargs from one handler are passed to the next handler. (In other words, standard events mean that all the handlers get the same initial kwargs, whereas relay events “relay” the resulting kwargs from one handler to the next.)
 
@@ -162,7 +165,7 @@ Parameters:
 * **priority** – Optional priority of the new handler that will be registered.
 * ****kwargs** – The kwargs you want to check and the kwargs that will be registered with the new handler.
 
-If you don’t pass kwargs, this method will just look for the handler and event combination. If you do pass kwargs, it will make sure they match before replacing the existing entry. If this method doesn’t find a match, it will still add the new handler.
+If you don't pass kwargs, this method will just look for the handler and event combination. If you do pass kwargs, it will make sure they match before replacing the existing entry. If this method doesn't find a match, it will still add the new handler.
 
 `wait_for_any_event(event_names: List[str]) → _asyncio.Future`
 
@@ -172,3 +175,6 @@ Wait for any event from event_names.
 
 Wait for event.
 
+## Related Pages:
+
+* [Events Overview](../../../events/overview/index.md)

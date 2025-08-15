@@ -1,9 +1,8 @@
 ---
-title: "playlist_player:"
+title: "playlist_player: Config Reference"
 ---
 
-# playlist_player:
-
+# playlist_player: Config Reference
 
 --8<-- "config_section.md"
 
@@ -62,8 +61,6 @@ your config. (If you don't include them, the default will be used).
 Single value, type: one of the following options: play, stop, advance,
 set_repeat. Default: `play`
 
---8<-- "todo.md"
+## Related Pages:
 
-## Related How To guides
-
---8<-- "todo.md"
+* [Playlist player Config Player Reference](../config_players/playlist_player.md)

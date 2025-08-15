@@ -1,9 +1,8 @@
 ---
-title: "segment_display_player:"
+title: "segment_display_player: Config Reference"
 ---
 
-# segment_display_player:
-
+# segment_display_player: Config Reference
 
 --8<-- "config_section.md"
 
@@ -60,7 +59,7 @@ information on specifying colors in config files.
 
 ### expire:
 
-Single value, type: ms_or_token. Defaults to empty.
+Single value, type: `ms_or_token`. Defaults to empty.
 
 Only used with `action` `add`. Text will be removed after `expire` ms.
 
@@ -101,7 +100,7 @@ used if `replace` is used.
 
 ### priority:
 
-Single value, type: int_or_token. Default: `0`
+Single value, type: `int_or_token`. Default: `0`
 
 Priority of this text. The segment display will maintain a stack and
 show the text on top (highest priority). Only relevant if [segment_displays](segment_displays.md) `update_method` is `stack`, not being
@@ -173,7 +172,9 @@ There can only be one transition between text entries, so if outgoing
 text has a `transition_out` set, and an incoming text entry has a
 `transition` set, then the incoming transition will take precedence.
 
-## Related How To guides
+## Related Pages:
 
 * [Alpha-Numeric / Segment Displays](../mc/displays/alpha_numeric.md)
 * [Segment Display Platforms in MPF](../hardware/segment_display_platforms.md)
+* [segment_display_player API Reference](../code/api_reference/config_players/segment_display_player.md)
+* [Segment Display player Config Player Reference](../config_players/segment_display_player.md)

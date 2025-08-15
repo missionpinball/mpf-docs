@@ -1,9 +1,8 @@
 ---
-title: "diverters:"
+title: "diverters: Config Reference"
 ---
 
-# diverters:
-
+# diverters: Config Reference
 
 --8<-- "config_section.md"
 
@@ -126,7 +125,7 @@ Events in this list, when posted, cause this diverter to activate.
 
 ### activation_coil:
 
-Single value, type: string name of a [coils:](coils.md) device. Defaults to empty.
+Single value, type: `string` name of a [coils:](coils.md) device. Defaults to empty.
 
 The name of the coil that is used to activate your diverter.
 
@@ -154,6 +153,8 @@ This is how long the diverter stays active once it's been activated. A
 value of zero (or omitting this setting) means this diverter does not
 timeout, and it will stay active until it's disabled or you manually
 deactivate it.
+
+--8<-- "template_setting.md"
 
 ### allow_multiple_concurrent_ejects_to_same_side:
 
@@ -196,7 +197,7 @@ Events in this list, when posted, cause this diverter to deactivate.
 
 ### deactivation_coil:
 
-Single value, type: string name of a [coils:](coils.md) device. Defaults to empty.
+Single value, type: `string` name of a [coils:](coils.md) device. Defaults to empty.
 
 The name of the coil that's used to deactivate your diverter. You only
 need to specify this coil if it's a different coil from from
@@ -279,7 +280,7 @@ itself to make sure the balls gets to where it needs to go.
 
 ### playfield:
 
-Single value, type: string name of a
+Single value, type: `string` name of a
 [playfields:](playfields.md) device. Default:
 `playfield`
 

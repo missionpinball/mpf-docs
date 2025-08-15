@@ -1,9 +1,8 @@
 ---
-title: "combo_switches:"
+title: "combo_switches: Config Reference"
 ---
 
-# combo_switches:
-
+# combo_switches: Config Reference
 
 --8<-- "config_section.md"
 

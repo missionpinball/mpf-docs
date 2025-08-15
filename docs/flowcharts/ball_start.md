@@ -74,3 +74,19 @@ the first ball of the first player in a new game:
         event that will launch the ball.
 
 The ball is now in play.
+
+## Related Guides:
+
+Flowchart: [Ball End Sequence](ball_end.md)
+
+## Related Events:
+
+* [Ball Lifecycle Events](../events/ball_lifecycle/index.md)
+    * [ball_will_start](../events/ball_will_start.md)
+    * [ball_starting](../events/ball_starting.md) *Queue Event*
+    * [ball_started](../events/ball_started.md)
+
+    * [ball_start_target](../events/ball_start_target.md)
+    * [balls_in_play](../events/balls_in_play.md)
+    * [multi_player_ball_started](../events/multi_player_ball_started.md)
+    * [single_player_ball_started](../events/single_player_ball_started.md)

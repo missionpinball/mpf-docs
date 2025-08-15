@@ -165,7 +165,7 @@ The name of the slide method to call when `action: method` is used. Additional p
 
 ### priority:
 
-Single value, type: int_or_token. Defaults to empty.
+Single value, type: `int_or_token`. Defaults to empty.
 
 An adjustment to the priority of the slide that will be shown.
 
@@ -209,4 +209,3 @@ name of a slide_frame where you want this slide to be displayed.
 One or more sub-entries. Each in the format of `string` : `string`
 
 Tokens can be passed to the slide with additional information that might affect the slide's content or behavior. Token values are parsed by the GMC slide when calculating variable values, and can be passed to custom methods on the slide.
-

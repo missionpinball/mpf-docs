@@ -1,9 +1,8 @@
 ---
-title: "speedometers:"
+title: "speedometers: Config Reference"
 ---
 
-# speedometers:
-
+# speedometers: Config Reference
 
 --8<-- "config_section.md"
 

@@ -1,9 +1,8 @@
 ---
-title: "switches:"
+title: "switches: Config Reference"
 ---
 
-# switches:
-
+# switches: Config Reference
 
 --8<-- "config_section.md"
 
@@ -176,7 +175,7 @@ details.
 
 ### platform_settings:
 
-Single value, type: dict. Defaults to empty.
+Single value, type: `dict`. Defaults to empty.
 
 Dict of platform specific settings. See your
 [platform documentation](../hardware/index.md)
@@ -269,6 +268,8 @@ consumed by something, e.g. `light_player` or if `debug:true` is defined
 for them. They will be posted regardless of the `debug` setting, it is
 only a question of visibility in the `mpf monitor`.
 
+#### Built-in Tags
+
 Special-purpose tags for switches include:
 
 * `playfield_active` - This tag should be used for all switches on the
@@ -285,15 +286,52 @@ Special-purpose tags for switches include:
     (Note that in MPF, the game start process is kicked off when this
     switch is released, not pressed, which allows the "time held down"
     to be sent to MPF to perform alternate game start actions.) See: [Start Button](../tutorial/9_start_button.md).
+    With MPF 0.80, the `start` tag is used by the high_score mode to select a letter or submit the name text.
 * `left_flipper` and `right_flipper` - MPF will provide automatic [flipper_cradle](../events/flipper_cradle.md)
     and [flipper_cancel](../events/flipper_cancel.md) events if your cabinet flipper buttons are tagged with
-    their respective flippers.
+    their respective flippers. With MPF 0.80, the built-in high_score mode and slide hook onto these two flipper tags
+    to control character selection and submission.
+
+#### Tags for optional built-in modes
+
+Some of the default modes included with MPF include switch tag hooks so that it is easy for you to incorporate features into your game.
+
+##### Tilt Mode
+
+MPF's default tilt mode supports both slam tilt and plumb-bob tilt detection, either or both tags may be used.
+See: [Tilt](../game_logic/tilt/index.md)
+
+* `tilt_warning` - This is added to a plumb-bob style tilt switch.
+* `slam_tilt` - This is added to a slam tilt type switch. 
+
+##### High Score Mode
+
+(*tag support new in MPF 0.80*)
+
+The built-in [high_score mode](../game_logic/high_scores/index.md) in MPF 0.80 and high_score slide in GMC allow players
+to select letters and submit their high score via use of an [MPFTextInput](../gmc/reference/mpf-text-input.md) in Godot.
+
+* `left_flipper` and `right_flipper` - These tags are reused by the high score text input to move
+    the highlighted item left or right
+* `start` - The start tag is reused by the high score mode to select the highlighted item
+
+##### Service Mode
+
+The Service Mode code included with MPF is intended for four-button service doors
+and has support for coin door detection and other features. The way this works is
+through a variety of tags, including the re-use of some existing tags.
+See: [Service Mode](../game_logic/service_mode.md)
+
 * `service_esc`, `service_down`, `service_up`, and `service_enter` - When using the builtin
     Service Mode, you will want to tag four different switches with these tags so the
-    operator can use the interface without keyboard or mouse access. See: [Service Mode](../game_logic/service_mode.md)
-* `service_door_open` - This is used for the coin door switch to manage the service mode. See: [Service Mode](../game_logic/service_mode.md)
-* `tilt_warning` - This is added to a plumb-bob style tilt switch. See: [Tilt](../game_logic/tilt/index.md)
-* `slam_tilt` - This is added to a slam tilt type switch. See: [Tilt](../game_logic/tilt/index.md)
+    operator can use the interface without keyboard or mouse access.
+* `service_door_open` or `service_door_closed` - Service mode will hook into
+    the open or closed detection behavior of your coin door switch if you include
+    one of these tags. Only one is necessary, but both are available depending on
+    whether your switch is normally open or normally closed.
+* `start`, `left_flipper`, and `right_flipper` - Service mode will reuse these three tags
+    that you likely already had defined for other machine features. (See section above.)
+
 
 ## Monitorable Properties
 

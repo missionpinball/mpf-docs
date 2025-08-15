@@ -1,9 +1,12 @@
+# light_player API Reference
 
-# self.machine.light_player
+`self.machine.light_player`
 
-`class mpf.config_players.light_player.LightPlayer(machine)`
+``` python
+class mpf.config_players.light_player.LightPlayer(machine)
+```
 
-Bases: mpf.config_players.device_config_player.DeviceConfigPlayer
+Bases: `mpf.config_players.device_config_player.DeviceConfigPlayer`
 
 Sets lights based on config.
 
@@ -31,3 +34,7 @@ Handle subscriptions.
 
 Set light color based on config.
 
+## Related Pages:
+
+* [light_player: Config Reference](../../../config/light_player.md)
+* [Light player Config Player Reference](../../../config_players/light_player.md)

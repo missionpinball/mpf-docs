@@ -1,11 +1,18 @@
+# ball_devices API Reference
 
-self.machine.ball_devices.*
+Config Reference:
 
-`class mpf.devices.ball_device.ball_device.BallDevice(*args, **kwargs)`
+* [ball_devices:](../../../config/ball_devices.md)
 
-Bases: mpf.core.system_wide_device.SystemWideDevice
+`self.machine.ball_devices.*`
 
-Base class for a ‘Ball Device’ in a pinball machine. A ball device is anything that can hold one or more balls, such as a trough, an eject hole, a VUK, a catapult, etc.
+``` python
+class mpf.devices.ball_device.ball_device.BallDevice(*args, **kwargs)
+```
+
+Bases: `mpf.core.system_wide_device.SystemWideDevice`
+
+Base class for a 'Ball Device' in a pinball machine. A ball device is anything that can hold one or more balls, such as a trough, an eject hole, a VUK, a catapult, etc.
 
 Args: Same as Device.
 
@@ -23,7 +30,7 @@ Notify this device that there is a ball heading its way.
 
 `available_balls`
 
-Number of balls that are available to be ejected. This differs from balls since it’s possible that this device could have balls that are being used for some other eject, and thus not available.
+Number of balls that are available to be ejected. This differs from balls since it's possible that this device could have balls that are being used for some other eject, and thus not available.
 
 `balls`
 
@@ -102,7 +109,7 @@ Handle mechanical eject.
 
 `classmethod is_playfield()`
 
-Return True if this ball device is a Playfield-type device, False if it’s a regular ball device.
+Return True if this ball device is a Playfield-type device, False if it's a regular ball device.
 
 `lost_ejected_ball(target)`
 
@@ -181,4 +188,3 @@ Handle an unexpected ball.
 `wait_for_ready_to_receive(source)`
 
 Wait until this device is ready to receive a ball.
-

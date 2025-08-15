@@ -1,9 +1,16 @@
+# snux API Reference
 
-# self.machine.hardware_platforms[‘snux’]
+Config Reference:
 
-`class mpf.platforms.snux.SnuxHardwarePlatform(machine: mpf.core.machine.MachineController)`
+* [snux:](../../../config/snux.md)
 
-Bases: mpf.platforms.system11.System11OverlayPlatform
+`self.machine.hardware_platforms['snux']`
+
+``` python
+class mpf.platforms.snux.SnuxHardwarePlatform(machine: mpf.core.machine.MachineController)
+```
+
+Bases: `mpf.platforms.system11.System11OverlayPlatform`
 
 Overlay platform for the snux hardware board.
 
@@ -14,4 +21,3 @@ Hardware platforms are stored in the `self.machine.hardware_platforms` dictionar
 ## Methods & Attributes
 
 The snux platform has the following methods & attributes available. Note that methods & attributes inherited from base classes are not included here.
-

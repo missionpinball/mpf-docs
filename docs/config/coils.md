@@ -1,9 +1,8 @@
 ---
-title: "coils:"
+title: "coils: Config Reference"
 ---
 
-# coils:
-
+# coils: Config Reference
 
 --8<-- "config_section.md"
 
@@ -91,7 +90,7 @@ your log file.
 
 ### default_hold_power:
 
-Single value, type: float(0,1). Defaults to empty.
+Single value, type: `float(0,1)`. Defaults to empty.
 
 This setting lets you control how much power is sent to the coil when
 it's "held" in the on position. This is an float value from 0-1 (i.e.
@@ -123,7 +122,7 @@ weak, but set low for safety purposes.
 
 ### default_pulse_power:
 
-Single value, type: float(0,1). Defaults to empty.
+Single value, type: `float(0,1)`. Defaults to empty.
 
 The power factor which controls how much power is applied during the
 initial pulse phase of the coil's activation. (Note that not all
@@ -176,7 +175,7 @@ Single value, type: `time string (secs)`
 
 ### max_hold_power:
 
-Single value, type: float(0,1). Defaults to empty.
+Single value, type: `float(0,1)`. Defaults to empty.
 
 This controlls the maximum allowed hold power for this this coil. While
 *default_hold_power* sets the default for all enable calls on the coil
@@ -193,7 +192,7 @@ error if any code tries to pulse the coil for more than `max_pulse_ms`.
 
 ### max_pulse_power:
 
-Single value, type: float(0,1). Default: `1.0`
+Single value, type: `float(0,1)`. Default: `1.0`
 
 Set the maxium pulse power. If pulse is called on the coil without any
 parameters *default_pulse_power* is used.
@@ -212,14 +211,14 @@ details.
 
 ### platform_settings:
 
-Single value, type: dict. Defaults to empty.
+Single value, type: `dict`. Defaults to empty.
 
 Dict of platform specific settings. Consult your platform documentation
 for those settings.
 
 ### psu:
 
-Single value, type: string name of a [psus:](psus.md) device. Default: `default`
+Single value, type: `string` name of a [psus:](psus.md) device. Default: `default`
 
 Specify to which [power supply unit](psus.md) this coil is connected. This is used for power management.
 In some cases, MPF can deliberately delay coil pulses to prevent too

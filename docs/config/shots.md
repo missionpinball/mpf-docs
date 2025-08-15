@@ -1,9 +1,8 @@
 ---
-title: "shots:"
+title: "shots: Config Reference"
 ---
 
-# shots:
-
+# shots: Config Reference
 
 --8<-- "config_section.md"
 
@@ -19,7 +18,7 @@ be hit in order, or an event or series of events.
 Shots are used for things like standup targets, rollover lanes, drop
 targets, ramps, loops, orbits, etc.
 
-Each shot can have a *shot profile* applied to it which defines what
+Each shot can have a [*shot profile*](shot_profiles.md) applied to it which defines what
 happens when its hit. For example the shot profile might specify that
 the shot starts unlit, then when it's hit it becomes complete. Or a
 shot profile might specify that it's flashing slowly, and each hit
@@ -225,7 +224,7 @@ the same player.
 
 ### playfield:
 
-Single value, type: string name of a
+Single value, type: `string` name of a
 [playfields:](playfields.md) device. Default:
 `playfield`
 
@@ -234,7 +233,7 @@ multiple playfields. It is used mostly for ball search.
 
 ### profile:
 
-Single value, type: string name of a
+Single value, type: `string` name of a
 [shot_profiles:](shot_profiles.md) device.
 Default: `default`
 
@@ -423,3 +422,4 @@ access groups of devices by tag name.
 ## Related How To guides
 
 * [Shots](../game_logic/shots/index.md)
+* [Shot Profiles](../game_logic/shots/shot_profiles.md)

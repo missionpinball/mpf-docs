@@ -38,7 +38,7 @@ Tells MPF that this is an image widget
 
 ### image:
 
-Single value, type: string name of a
+Single value, type: `string` name of a
 [image](../../assets/images.md).
 
 The name of the image asset this widget will show. Details on image

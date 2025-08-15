@@ -1,9 +1,8 @@
 ---
-title: "blinkenlights:"
+title: "blinkenlights: Config Reference"
 ---
 
-# blinkenlights:
-
+# blinkenlights: Config Reference
 
 --8<-- "config_section.md"
 
@@ -107,7 +106,7 @@ number of colors, then use `color_duration` instead (see above).
 
 ### light:
 
-Single value, type: string name of a [lights:](lights.md) device. Defaults to empty.
+Single value, type: `string` name of a [lights:](lights.md) device. Defaults to empty.
 
 This is the name of the light which this blinkenlight controls.
 

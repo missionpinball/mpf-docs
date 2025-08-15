@@ -1,15 +1,18 @@
+# settings API Reference
 
-# self.machine.settings
+`self.machine.settings`
 
-`class mpf.core.settings_controller.SettingsController(machine)`
+``` python
+class mpf.core.settings_controller.SettingsController(machine)
+```
 
-Bases: mpf.core.mpf_controller.MpfController
+Bases: `mpf.core.mpf_controller.MpfController`
 
 Manages operator controllable settings.
 
 ## Accessing the settings in code
 
-There is only one instance of the settings in MPF, and it’s accessible via `self.machine.settings`.
+There is only one instance of the settings in MPF, and it's accessible via `self.machine.settings`.
 
 ## Methods & Attributes
 
@@ -39,3 +42,6 @@ Return all available settings.
 
 Set the value of a setting.
 
+## Config Reference:
+
+* [settings: Config Reference](../../../config/settings.md)

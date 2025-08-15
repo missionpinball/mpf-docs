@@ -1,8 +1,16 @@
-# self.machine.rgb_dmds.*
+# rgb_dmds API Reference
 
-`class mpf.devices.rgb_dmd.RgbDmd(machine, name)`
+Config Reference:
 
-Bases: mpf.core.system_wide_device.SystemWideDevice
+* [rgb_dmds:](../../../config/rgb_dmds.md)
+
+`self.machine.rgb_dmds.*`
+
+``` python
+class mpf.devices.rgb_dmd.RgbDmd(machine, name)
+```
+
+Bases: `mpf.core.system_wide_device.SystemWideDevice`
 
 A physical DMD.
 
@@ -14,15 +22,15 @@ The device collection which contains the rgb_dmds in your machine is available v
 
 Rgb_dmds have the following methods & attributes available. Note that methods & attributes inherited from base classes are not included here.
 
-` format_log_line(msg, context, error_no) → str`
+`format_log_line(msg, context, error_no) → str`
 
 Return a formatted log line with log link and context.
 
-` raise_config_error(msg, error_no, *, context=None) → NoReturn`
+`raise_config_error(msg, error_no, *, context=None) → NoReturn`
 
 Raise a ConfigFileError exception.
 
-` update(data: bytes)`
+`update(data: bytes)`
 
 Update data on the dmd.
 

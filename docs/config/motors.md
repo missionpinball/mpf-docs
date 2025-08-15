@@ -1,9 +1,8 @@
 ---
-title: "motors:"
+title: "motors: Config Reference"
 ---
 
-# motors:
-
+# motors: Config Reference
 
 --8<-- "config_section.md"
 
@@ -216,7 +215,7 @@ Whether the motor should be included in ball search.
 
 ### motor_left_output:
 
-Single value, type: string name of a
+Single value, type: `string` name of a
 [digital_outputs:](digital_outputs.md)
 device. Defaults to empty.
 
@@ -227,7 +226,7 @@ in one direction or both if it can move in both directions.
 
 ### motor_right_output:
 
-Single value, type: string name of a
+Single value, type: `string` name of a
 [digital_outputs:](digital_outputs.md)
 device. Defaults to empty.
 

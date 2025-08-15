@@ -1,9 +1,16 @@
+# score_queues API Reference
 
-# self.machine.score_queues.*
+Config Reference:
 
-`class mpf.devices.score_queue.ScoreQueue(machine, name)`
+* [score_queues:](../../../config/score_queues.md)
 
-Bases: mpf.core.system_wide_device.SystemWideDevice
+`self.machine.score_queues.*`
+
+``` python
+class mpf.devices.score_queue.ScoreQueue(machine, name)
+```
+
+Bases: `mpf.core.system_wide_device.SystemWideDevice`
 
 Score queues for SS games.
 
@@ -31,4 +38,3 @@ Score a value via the queue.
 
 `stop_device()`
 Stop queue.
-

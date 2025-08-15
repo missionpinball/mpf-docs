@@ -1,9 +1,8 @@
 ---
-title: "multiball_locks:"
+title: "multiball_locks: Config Reference"
 ---
 
-# multiball_locks:
-
+# multiball_locks: Config Reference
 
 --8<-- "config_section.md"
 
@@ -201,7 +200,7 @@ the default playfield source device.
 
 ### source_playfield:
 
-Single value, type: string name of a
+Single value, type: `string` name of a
 [ball_devices:](ball_devices.md) device.
 Default: `playfield`
 

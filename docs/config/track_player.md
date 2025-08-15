@@ -1,9 +1,8 @@
 ---
-title: "track_player:"
+title: "track_player: Config Reference"
 ---
 
-# track_player:
-
+# track_player: Config Reference
 
 --8<-- "config_section.md"
 

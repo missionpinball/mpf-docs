@@ -1,9 +1,16 @@
+# counters API Reference
 
-# self.machine.counters.*
+Config Reference:
 
-`class mpf.devices.logic_blocks.Counter(machine: mpf.core.machine.MachineController, name: str)`
+* [counters:](../../../config/counters.md)
 
-Bases: mpf.devices.logic_blocks.LogicBlock
+`self.machine.counters.*`
+
+``` python
+class mpf.devices.logic_blocks.Counter(machine: mpf.core.machine.MachineController, name: str)
+```
+
+Bases: `mpf.devices.logic_blocks.LogicBlock`
 
 A type of LogicBlock that tracks multiple hits of a single event. This counter can be configured to track hits towards a specific end-goal (like number of tilt hits to tilt), or it can be an open-ended count (like total number of ramp shots). It can also be configured to count up or to count down, and can have a configurable counting interval.
 
@@ -21,7 +28,7 @@ Check if counter is completed. Return true if the counter has reached or surpass
 
 `complete()`
 
-Mark this logic block as complete. Posts the`events_when_complete` events and optionally restarts this logic block or disables it, depending on this block’s configuration settings.
+Mark this logic block as complete. Posts the`events_when_complete` events and optionally restarts this logic block or disables it, depending on this block's configuration settings.
 
 `completed`
 
@@ -116,7 +123,7 @@ Restart this logic block by calling reset() and enable(). Automatically called w
 
 `stop_ignoring_hits(**kwargs)`
 
-Cause the Counter to stop ignoring subsequent hits that occur within the ‘multiple_hit_window’. Automatically called when the window time expires. Can safely be manually called.
+Cause the Counter to stop ignoring subsequent hits that occur within the 'multiple_hit_window'. Automatically called when the window time expires. Can safely be manually called.
 
 `subscribe_attribute(item, machine)`
 
@@ -125,4 +132,3 @@ Subscribe to an attribute.
 `value`
 
 Return value or None if that is currently not possible.
-

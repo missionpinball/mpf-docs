@@ -1,9 +1,8 @@
 ---
-title: "credits:"
+title: "credits: Config Reference"
 ---
 
-# credits:
-
+# credits: Config Reference
 
 --8<-- "config_section.md"
 
@@ -122,9 +121,7 @@ The maximum number of credits you want to allow on the machine. Note
 that pinball machines can't prevent players from adding money to
 machines, so be careful with this.
 
-Also note that you can use
-[dynamic values](instructions/dynamic_values.md) here if you want to do math or use settings to make this
-configurable.
+--8<-- "template_setting.md"
 
 ### persist_credits_while_off_time:
 
@@ -168,7 +165,7 @@ config. (If you don't include them, the default will be used).
 
 #### switch:
 
-Single value, type: string name of a `switches:` device. Default: `None`
+Single value, type: `string` name of a `switches:` device. Default: `None`
 
 The name of the switch (from your machine-wide *switches:* section) for
 the credit switch.
@@ -193,9 +190,7 @@ are no currency symbols here or anything. A value of .25 could be 0.25
 dollars or 0.25 Euros or 0.25 Francs---it really doesn't matter. The
 key is that it's 0.25 of whatever monetary system you have.
 
-Also note that you can use
-[dynamic values](instructions/dynamic_values.md) here if you want to do math or use settings to make this
-configurable.
+--8<-- "template_setting.md"
 
 ### price_tier_template
 
@@ -241,9 +236,7 @@ credits:
 
 Price for number of `credits`.
 
-Also note that you can use
-[dynamic values](instructions/dynamic_values.md) here if you want to do math or use settings to make this
-configurable.
+--8<-- "template_setting.md"
 
 ### Optional settings
 

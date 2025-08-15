@@ -85,17 +85,22 @@ If no settings are provided, the `character_appearance` will be applied to the s
 
 ## Events and MPF Integration
 
-To control the on-screen keyboard from the pinball machine, an `event_player` must be setup that sends the event *"text_input"* with an appropriate `action` value (one of "left", "right", or "select").
+The MPFTextInput included in the default [high_score mode](../../game_logic/modes/high_score.md) has event controls already defined.
+These included event_player bindings use the standard flipper and start tags to control the input. If you are adding an MPFTextInput on your own
+to some other slide, or if you want to add more buttons to control the selected items on the high score slide,
+you will need to create a way to post *`text_input`* events with the appropriate `action` value.
+
+For example, to allow more switches to control the on-screen keyboard, you could define an `event_player` that sends the event *"text_input"* with one of the three supported `action` values ("left", "right", or "select").
 
 ``` yaml
 event_player:
-  s_flipper_left_active:
+  s_my_additional_left_control_active:
     text_input:
       action: left
-  s_flipper_right_active:
+  s_my_additional_right_control_active:
     text_input:
       action: right
-  s_start_button_active:
+  s_another_select_button_active:
     text_input:
       action: select
 ```

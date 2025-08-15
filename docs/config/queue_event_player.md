@@ -1,9 +1,8 @@
 ---
-title: "queue_event_player:"
+title: "queue_event_player: Config Reference"
 ---
 
-# queue_event_player:
-
+# queue_event_player: Config Reference
 
 --8<-- "config_section.md"
 
@@ -72,7 +71,8 @@ empty.
 The event name that will be posted when all the handlers of this queue
 event are done processing it. This setting is optional.
 
-## Related How To guides
+## Related Pages:
 
 * [How to Drain All Balls on the Playfield and Serve One Back](../cookbook/fake_ball_save.md)
-* [Queue Event player](../config_players/queue_event_player.md)
+* [Queue Event player Config Player Reference](../config_players/queue_event_player.md)
+* [queue_event_player API Reference](../code/api_reference/config_players/queue_event_player.md)

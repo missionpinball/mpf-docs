@@ -1,9 +1,8 @@
 ---
-title: "rgb_dmds:"
+title: "rgb_dmds: Config Reference"
 ---
 
-# rgb_dmds:
-
+# rgb_dmds: Config Reference
 
 --8<-- "config_section.md"
 
@@ -107,9 +106,7 @@ A brightness multiplier for the DMD (because RGB DMDs are crazy bright).
 Note that brightness is closely related to gamma (see above). You'll
 probably want to adjust both of them together.
 
-Also note that you can use
-[dynamic values](instructions/dynamic_values.md) here if you want to do math or use settings to make this
-configurable.
+--8<-- "template_setting.md"
 
 ### only_send_changes:
 

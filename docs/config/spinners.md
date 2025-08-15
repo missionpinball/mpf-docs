@@ -1,9 +1,8 @@
 ---
-title: "spinners:"
+title: "spinners: Config Reference"
 ---
 
-# spinners:
-
+# spinners: Config Reference
 
 --8<-- "config_section.md"
 
@@ -126,7 +125,7 @@ more times.
 
 ### playfield:
 
-Single value, type: string name of a
+Single value, type: `string` name of a
 [playfields:](playfields.md) device. Default:
 `playfield`
 

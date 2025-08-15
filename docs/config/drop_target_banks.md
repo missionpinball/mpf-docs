@@ -1,9 +1,8 @@
 ---
-title: "drop_target_banks:"
+title: "drop_target_banks: Config Reference"
 ---
 
-# drop_target_banks:
-
+# drop_target_banks: Config Reference
 
 --8<-- "config_section.md"
 
@@ -112,7 +111,7 @@ Single value, type: `integer`. Defaults to empty.
 
 ### reset_coil:
 
-Single value, type: string name of a [coils:](coils.md) device. Defaults to empty.
+Single value, type: `string` name of a [coils:](coils.md) device. Defaults to empty.
 
 The name of the coil that is fired to reset this bank of drop targets.
 

@@ -263,22 +263,22 @@ priority mode is running.)
 
 ## Using modes as game logic
 
-Related How To Guides
+### Related How To Guides
 
 * [Creating your first game mode](../../tutorial/14_add_a_mode.md)
 * [Game Design](../../game_design/index.md)
 
-Related Events
+### Related Events
 
-* [mode_(name)_will_start](../../events/mode_name_will_start.md)
+* [mode_(name)\_will_start](../../events/mode_name_will_start.md)
 * [mode_(name)_starting](../../events/mode_name_starting.md)
 * [mode_(name)_started](../../events/mode_name_started.md)
-* [mode_(name)_will_stop](../../events/mode_name_will_stop.md)
+* [mode_(name)\_will_stop](../../events/mode_name_will_stop.md)
 * [mode_(name)_stopping](../../events/mode_name_stopping.md)
 * [mode_(name)_stopped](../../events/mode_name_stopped.md)
 * [clear](../../events/clear.md)
 
-## Built-in Modes
+### Built-in Modes
 
 MPF includes several "built-in" modes which are ready to use in your
 game. Some of them are used automatically, and some require that you add

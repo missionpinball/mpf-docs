@@ -1,9 +1,10 @@
+# RGBAColor API Reference
 
-# RGBAColor
+``` python
+class mpf.core.rgba_color.RGBAColor(color: Union[mpf.core.rgb_color.RGBColor, str, Tuple[int, int, int], Tuple[int, int, int, int], List[int]])
+```
 
-`class mpf.core.rgba_color.RGBAColor(color: Union[mpf.core.rgb_color.RGBColor, str, Tuple[int, int, int], Tuple[int, int, int, int], List[int]])`
-
-Bases: mpf.core.rgb_color.RGBColor
+Bases: `mpf.core.rgb_color.RGBColor`
 
 RGB Color with alpha channel.
 
@@ -15,7 +16,7 @@ The RGBAColor has the following methods & attributes available. Note that method
 
 Add (or updates if it already exists) a color.
 
-Note that this is not permanent, the list is reset when MPF restarts (though you can define your own custom colors in your config file’s colors: section). You can use this function to dynamically change the values of colors in shows (they take place the next time an LED switches to that color).
+Note that this is not permanent, the list is reset when MPF restarts (though you can define your own custom colors in your config file's colors: section). You can use this function to dynamically change the values of colors in shows (they take place the next time an LED switches to that color).
 
 Parameters:
 
@@ -109,4 +110,3 @@ Return an RGB representation of the color.
 Convert a string which could be either a standard color name or a hex value to an RGB value (tuple).
 
 If the name is not found and the supplied value is not a valid hex string it raises an error. :param value: A standard color name or hex value. :param default: The default value to return if the color name is not found and the supplied value is not a valid hex color string. :return: RGB representation of the named color. :rtype: tuple
-

@@ -1,9 +1,12 @@
+# flasher_player API Reference
 
-# self.machine.flasher_player
+`self.machine.flasher_player`
 
-`class mpf.config_players.flasher_player.FlasherPlayer(machine)`
+``` python
+class mpf.config_players.flasher_player.FlasherPlayer(machine)
+```
 
-Bases: mpf.config_players.device_config_player.DeviceConfigPlayer
+Bases: `mpf.config_players.device_config_player.DeviceConfigPlayer`
 
 Triggers flashers based on config.
 
@@ -23,3 +26,8 @@ Parse express config.
 
 Flash flashers.
 
+## Related Pages:
+
+* [Flashers (Lights)](../../../mechs/lights/flashers.md)
+* [flasher_player: Config Reference](../../../config/flasher_player.md)
+* [flasher_player API Reference](../../../code/api_reference/config_players/flasher_player.md)

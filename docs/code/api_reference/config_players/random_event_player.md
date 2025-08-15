@@ -1,9 +1,12 @@
+# random_event_player API Reference
 
-# self.machine.random_event_player
+`self.machine.random_event_player`
 
-`class mpf.config_players.random_event_player.RandomEventPlayer(machine)`
+``` python
+class mpf.config_players.random_event_player.RandomEventPlayer(machine)
+```
 
-Bases: mpf.core.config_player.ConfigPlayer
+Bases: `mpf.core.config_player.ConfigPlayer`
 
 Plays a random event based on config.
 
@@ -35,3 +38,7 @@ Play a random event from list based on config.
 
 Validate one entry of this player.
 
+## Related Pages:
+
+* [random_event_player: Config Reference](../../../config/random_event_player.md)
+* [Random Event player Config Player Reference](../../../config_players/random_event_player.md)

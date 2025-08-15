@@ -1,9 +1,16 @@
+# smart_virtual API Reference
 
-# self.machine.hardware_platforms[‘smart_virtual’]
+Config Reference:
 
-`class mpf.platforms.smart_virtual.SmartVirtualHardwarePlatform(machine)`
+* [smart_virtual:](../../../config/smart_virtual.md)
 
-Bases: mpf.platforms.virtual.VirtualHardwarePlatform
+`self.machine.hardware_platforms['smart_virtual']`
+
+``` python
+class mpf.platforms.smart_virtual.SmartVirtualHardwarePlatform(machine)
+```
+
+Bases: `mpf.platforms.virtual.VirtualHardwarePlatform`
 
 Base class for the smart_virtual hardware platform.
 
@@ -26,4 +33,3 @@ Configure driver.
 `start()`
 
 Initialise platform when all devices are ready.
-

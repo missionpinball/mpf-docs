@@ -1,21 +1,23 @@
 ---
-title: "variable_player:"
+title: "variable_player: Config Reference"
 ---
 
-# variable_player:
-
+# variable_player: Config Reference
 
 --8<-- "config_section.md"
 
 | Valid in | |
 |-----|:----:|
-|[machine](instructions/machine_config.md) config files |**YES** :white_check_mark:|
+|[machine](instructions/machine_config.md) config files |**YES(NOTE)** :white_check_mark:|
 |[mode](instructions/mode_config.md) config files|**YES** :white_check_mark:|
 
-The `variable_player:` section of your mode config lets you add,
-subtract, or replace player and machine variables based on events that are posted. When using a `variable_player:` you need strictly distinguish 
-between player and machine variables. The first thing to pay attention to is that a variable_player for player variables can only be used inside mode config files, a variable player for machine
-variables can be as well specified in the global config file.
+The `variable_player:` section of your mode config lets you add, subtract, or replace
+[player variables](../game_logic/players.md) and [machine variables](../machine_vars/index.md)
+based on events that are posted. When using a `variable_player:` you need strictly distinguish
+between player and machine variables.
+
+*NOTE*: The first thing to pay attention to is that a `variable_player` for player variables can only be used inside mode config files,
+but a `variable_player` for machine variables can be as well specified in the global config file.
 
 At the most basic level, you can use this to add to a player's score
 (which is technically adding a value to the player variable called
@@ -225,7 +227,7 @@ will default to the current player.
 
 ### string:
 
-Single value, type: template_str. Defaults to empty.
+Single value, type: `template_str`. Defaults to empty.
 
 Here's an example from *Brooks 'n Dunn* where there is a player
 variable (set via a counter) which tracks the player's current album
@@ -261,9 +263,14 @@ we can use in slides and widgets which matches the value of the album,
 and it's automatically updated whenever the player var "album_value"
 changes.
 
-## Related How To guides
+## Related Pages:
 
-* [Variable player](../config_players/variable_player.md)
-* [Scoring](../game_logic/scoring/index.md)
 * [Tutorial step 15: Add scoring](../tutorial/15_scoring.md)
+* [Player Variables](../game_logic/players.md)
+* [Player Variables Reference](../player_vars/index.md)
+* [Machine Variables Reference](../machine_vars/index.md)
+* [Scoring](../game_logic/scoring/index.md)
 * [Persisting the State of a Logic Block in a Player Variable](../game_logic/logic_blocks/persisting_state_in_a_player_variable.md)
+
+* [Variable player Config Player Reference](../config_players/variable_player.md)
+* [variable_player API Reference](../code/api_reference/config_players/variable_player.md)

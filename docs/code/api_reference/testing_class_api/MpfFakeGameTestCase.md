@@ -1,9 +1,10 @@
-
 # MpfFakeGameTestCase
 
-`class mpf.tests.MpfFakeGameTestCase.MpfFakeGameTestCase(methodName)`
+``` python
+class mpf.tests.MpfFakeGameTestCase.MpfFakeGameTestCase(methodName)
+```
 
-Bases: mpf.tests.MpfGameTestCase.MpfGameTestCase
+Bases: `mpf.tests.MpfGameTestCase.MpfGameTestCase`
 
 Test case for a game that does not require ball devices & start switches.
 
@@ -118,7 +119,7 @@ Checks whether dictionary is a superset of subset.
 
 `assertEqual(first, second, msg=None)`
 
-Fail if the two objects are unequal as determined by the ‘==’ operator.
+Fail if the two objects are unequal as determined by the '==' operator.
 
 `assertEventCalled(event_name, times=None)`
 
@@ -317,7 +318,7 @@ Objects that are equal automatically fail.
 
 `assertNotEqual(first, second, msg=None)`
 
-Fail if the two objects are equal as determined by the ‘!=’ operator.
+Fail if the two objects are equal as determined by the '!=' operator.
 
 `assertNotIn(member, container, msg=None)`
 
@@ -385,9 +386,9 @@ with self.assertRaises(SomeException):
 do_something()
 ```
 
-An optional keyword argument ‘msg’ can be provided when assertRaises is used as a context object.
+An optional keyword argument 'msg' can be provided when assertRaises is used as a context object.
 
-The context manager keeps a reference to the exception as the ‘exception’ attribute. This allows you to inspect the exception after the assertion:
+The context manager keeps a reference to the exception as the 'exception' attribute. This allows you to inspect the exception after the assertion:
 
 ``` python
 with self.assertRaises(SomeException) as cm:
@@ -466,9 +467,9 @@ with self.assertWarns(SomeWarning):
 do_something()
 ```
 
-An optional keyword argument ‘msg’ can be provided when assertWarns is used as a context object.
+An optional keyword argument 'msg' can be provided when assertWarns is used as a context object.
 
-The context manager keeps a reference to the first matching warning as the ‘warning’ attribute; similarly, the ‘filename’ and ‘lineno’ attributes give you information about the line of Python code from which the warning was triggered. This allows you to inspect the warning after the assertion:
+The context manager keeps a reference to the first matching warning as the 'warning' attribute; similarly, the 'filename' and 'lineno' attributes give you information about the line of Python code from which the warning was triggered. This allows you to inspect the warning after the assertion:
 
 ``` python
 with self.assertWarns(SomeWarning) as cm:
@@ -569,7 +570,7 @@ Return options for the machine controller.
 Force this test class to use a certain platform.
 Returns:	String name of the platform this test class will use.
 
-If you don’t include this method in your test class, the platform will be set to virtual. If you want to use the smart virtual platform, you would add the following to your test class:
+If you don't include this method in your test class, the platform will be set to virtual. If you want to use the smart virtual platform, you would add the following to your test class:
 
 ``` python
 def get_platform(self):
@@ -635,7 +636,7 @@ Parameters:	event_name – String name of the event to mock.
 
 Mocking an event is an easy way to check if an event was called without configuring some kind of callback action in your tests.
 
-Note that an event must be mocked here before it’s posted in order for assertEventNotCalled() and assertEventCalled() to work.
+Note that an event must be mocked here before it's posted in order for assertEventNotCalled() and assertEventCalled() to work.
 
 Mocking an event will not “break” it. In other words, any other registered handlers for this event will also be called even if the event has been mocked.
 
@@ -713,9 +714,9 @@ Setup test.
 
 `set_num_balls_known(balls)`
 
-Set the ball controller’s num_balls_known attribute.
+Set the ball controller's num_balls_known attribute.
 
-This is needed for tests where you don’t have any ball devices and other situations where you need the ball controller to think the machine has a certain amount of balls to run a test.
+This is needed for tests where you don't have any ball devices and other situations where you need the ball controller to think the machine has a certain amount of balls to run a test.
 
 Example:
 
@@ -727,7 +728,7 @@ self.set_num_balls_known(3)
 
 Returns a one-line description of the test, or None if no description has been provided.
 
-The default implementation of this method returns the first line of the specified test method’s docstring.
+The default implementation of this method returns the first line of the specified test method's docstring.
 
 `skipTest(reason)`
 
@@ -751,7 +752,7 @@ Start two player game.
 
 Stop the current game.
 
-This method asserts that a game is running, then call’s the game mode’s end_game() method, then asserts that the game has successfully stopped.
+This method asserts that a game is running, then call's the game mode's end_game() method, then asserts that the game has successfully stopped.
 
 Example:
 
@@ -772,4 +773,3 @@ Tear down test.
 Return the verbosity setting of the currently running unittest program, or 0 if none is running.
 
 Returns: An integer value of the current verbosity setting.
-

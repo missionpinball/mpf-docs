@@ -1,9 +1,8 @@
 ---
-title: "light_player:"
+title: "light_player: Config Reference"
 ---
 
-# light_player:
-
+# light_player: Config Reference
 
 --8<-- "config_section.md"
 
@@ -76,17 +75,18 @@ to underlying shows as if the light has never been used in this show.
 
 ### fade:
 
-Single value, type: ms_or_token. Defaults to empty.
+Single value, type: `ms_or_token`. Defaults to empty.
 
 Time to fade this light in ms. Use this to achieve smooth transitions
 between colors.
 
 ### priority:
 
-Single value, type: int_or_token. Default: `0`
+Single value, type: `int_or_token`. Default: `0`
 
 Relative priority of this entry in the light stack.
 
-## Related How To guides
+## Related Pages:
 
-* [Light player](../config_players/light_player.md)
+* [Light player Config Player Reference](../config_players/light_player.md)
+* [light_player API Reference](../config_players/light_player.md)

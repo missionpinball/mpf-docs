@@ -4,7 +4,6 @@ title: (combo_switch_name)_both
 
 # (combo_switch_name)\_both
 
-
 --8<-- "event.md"
 
 Event is posted by [combo_switches:](../config/combo_switches.md)
@@ -19,4 +18,3 @@ The event name can be changed by using the `events_when_both:`
 attribute.
 
 --8<-- "event_no_keywords_notice.md"
-

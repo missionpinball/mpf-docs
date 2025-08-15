@@ -1,9 +1,8 @@
 ---
-title: "show_pools:"
+title: "show_pools: Config Reference"
 ---
 
-# show_pools:
-
+# show_pools: Config Reference
 
 --8<-- "config_section.md"
 

@@ -1,9 +1,16 @@
+# achievements API Reference
 
-# self.machine.achievements.*
+Config Reference:
 
-`class mpf.devices.achievement.Achievement(*args, **kwargs)`
+* [achievements:](../../../config/achievements.md)
 
-Bases: mpf.core.mode_device.ModeDevice
+`self.machine.achievements.*`
+
+``` python
+class mpf.devices.achievement.Achievement(*args, **kwargs)
+```
+
+Bases: `mpf.core.mode_device.ModeDevice`
 
 An achievement in a pinball machine. It is tracked per player and can automatically restore state on the next ball.
 
@@ -106,4 +113,3 @@ Subscribe to an attribute.
 `unselect()`
 
 Remove highlight (unselect) this achievement.
-

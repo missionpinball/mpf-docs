@@ -1,9 +1,8 @@
 ---
-title: "score_queues:"
+title: "score_queues: Config Reference"
 ---
 
-# score_queues:
-
+# score_queues: Config Reference
 
 --8<-- "config_section.md"
 

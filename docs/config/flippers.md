@@ -1,9 +1,8 @@
 ---
-title: "flippers:"
+title: "flippers: Config Reference"
 ---
 
-# flippers:
-
+# flippers: Config Reference
 
 --8<-- "config_section.md"
 
@@ -104,7 +103,7 @@ config:
 
 ### main_coil:
 
-Single value, type: string name of a [coils:](coils.md) device. Defaults to empty.
+Single value, type: `string` name of a [coils:](coils.md) device. Defaults to empty.
 
 The name of the main flipper coil. For flippers that only have
 single-wound coils, this is where you specify that coil. In that case
@@ -119,7 +118,7 @@ config. (If you don't include them, the default will be used).
 
 ### activation_switch:
 
-Single value, type: string name of a
+Single value, type: `string` name of a
 [switches:](switches.md) device. Defaults to
 empty.
 
@@ -177,7 +176,7 @@ hold coil break we do not want to continuously pulse the coil.
 
 ### eos_switch:
 
-Single value, type: string name of a
+Single value, type: `string` name of a
 [switches:](switches.md) device. Defaults to
 empty.
 
@@ -193,7 +192,7 @@ switch name here.
 
 ### hold_coil:
 
-Single value, type: string name of a [coils:](coils.md) device. Defaults to empty.
+Single value, type: `string` name of a [coils:](coils.md) device. Defaults to empty.
 
 The name of the hold coil winding for dual-wound flipper coils.
 
@@ -235,7 +234,7 @@ Overwrites settings on the main_coil. See
 
 ### playfield:
 
-Single value, type: string name of a
+Single value, type: `string` name of a
 [playfields:](playfields.md) device. Default:
 `playfield`
 

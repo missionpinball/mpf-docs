@@ -1,9 +1,8 @@
 ---
-title: "bonus (mode_settings:)"
+title: "bonus (mode_settings:) Config Reference"
 ---
 
-# bonus (mode_settings:)
-
+# bonus (mode_settings:) Config Reference
 
 --8<-- "config_section.md"
 
@@ -92,9 +91,7 @@ Controls whether the bonus_multiplier player variable should be reset
 keep the bonus. (e.g. default is to reset it). Conditional values are
 supported.
 
-Also note that you can use
-[dynamic values](instructions/dynamic_values.md) here if you want to do math or use settings to make this
-configurable.
+--8<-- "template_setting.md"
 
 ## bonus_entries:
 
@@ -132,7 +129,7 @@ Let's look at each option you can use in each bonus entry:
 ### event: (required)
 
 The name of the event that is posted by the bonus mode. You should use a
-`slide_player:` in your bonus mode with slide entries based on these
+[slide_player:](slide_player.md) in your bonus mode with slide entries based on these
 names, so when the bonus mode posts that event, you can show a slide
 with the relevant information for that bonus entry.
 
@@ -154,7 +151,7 @@ variable times 25000.
 
 Note that the bonus mode doesn't care what player variable you use, and
 it would be up to you to make sure that the player variable you choose
-is updated throughout your game (either through a `variable_player:`
+is updated throughout your game (either through a [variable_player:](variable_player.md)
 section or a logic block or something like that).
 
 Also if you choose not to include this entry, that's fine. In that case

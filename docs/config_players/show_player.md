@@ -4,7 +4,6 @@ title: Show player
 
 # Show player
 
-
 The *show player* is a
 [config player](index.md)
 that's used to start, stop, pause, resume, advance, and/or update
@@ -133,7 +132,7 @@ In shows, the show player is used via the `shows:` section of a step.
 parent show like a playlist, or as a controller that starts and stops
 other shows.)
 
-## Config Options
+## Related Pages:
 
-See [show_player:](../config/show_player.md) for config
-details.
+* [show_player: Config Reference](../config/show_player.md)
+* [show_player API Reference](../code/api_reference/config_players/show_player.md)

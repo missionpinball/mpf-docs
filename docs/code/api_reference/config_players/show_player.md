@@ -1,9 +1,12 @@
+# show_player API Reference
 
-# self.machine.show_player
+`self.machine.show_player`
 
-`class mpf.config_players.show_player.ShowPlayer(machine)`
+``` python
+class mpf.config_players.show_player.ShowPlayer(machine)
+```
 
-Bases: mpf.config_players.device_config_player.DeviceConfigPlayer
+Bases: `mpf.config_players.device_config_player.DeviceConfigPlayer`
 
 Plays, starts, stops, pauses, resumes or advances shows based on config.
 
@@ -31,3 +34,7 @@ Handle subscriptions.
 
 Play, start, stop, pause, resume or advance show based on config.
 
+## Related Pages:
+
+* [show_player: Config Reference](../../../config/show_player.md)
+* [Show player Config Player Reference](../../../config_players/show_player.md)

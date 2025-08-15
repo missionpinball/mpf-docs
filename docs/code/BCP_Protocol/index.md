@@ -1,4 +1,3 @@
-
 # BCP Protocol Specification
 
 This document describes the Backbox Control Protocol, (or “BCP”), a simple, fast protocol for communications between an implementation of a pinball game controller and a multimedia controller.
@@ -7,11 +6,11 @@ This document describes the Backbox Control Protocol, (or “BCP”), a simple, 
 
     BCP is how the MPF core engine and the MPF media controller communicate.
 
-BCP transmits semantically relevant information and attempts to isolate specific behaviors and identifiers on both sides. i.e., the pin controller is responsible for telling the media controller “start multiball mode”. The pin controller doesn’t care what the media controller does with that information, and the media controller doesn’t care what happened on the pin controller that caused the multiball mode to start.
+BCP transmits semantically relevant information and attempts to isolate specific behaviors and identifiers on both sides. i.e., the pin controller is responsible for telling the media controller “start multiball mode”. The pin controller doesn't care what the media controller does with that information, and the media controller doesn't care what happened on the pin controller that caused the multiball mode to start.
 
 BCP is versioned to prevent conflicts. Future versions of the BCP will be designed to be backward compatible to every degree possible. The reference implementation uses a raw TCP socket for communication. On localhost the latency is usually sub-millisecond and on LANs it is under 10 milliseconds. That means that the effect of messages is generally under 1/100th of a second, which should be considered instantaneous from the perspective of human perception.
 
-It is important to note that this document specifies the details of the protocol itself, not necessarily the behaviors of any specific implementations it connects. Thus, there won’t be details about fonts or sounds or images or videos or shaders here; those are up to specific implementation being driven.
+It is important to note that this document specifies the details of the protocol itself, not necessarily the behaviors of any specific implementations it connects. Thus, there won't be details about fonts or sounds or images or videos or shaders here; those are up to specific implementation being driven.
 
 !!! warning "Infinite Loops Possible"
 
@@ -94,5 +93,3 @@ The following BCP commands have been defined (and implemented) in MPF:
 * [reset_complete](reset_complete.md)
 * [switch](switch.md)
 * [trigger](trigger.md)
-
-

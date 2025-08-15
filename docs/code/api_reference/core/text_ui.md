@@ -1,15 +1,18 @@
+# text_ui API Reference
 
-# self.machine.text_ui
+`self.machine.text_ui`
 
-`class mpf.core.text_ui.TextUi(machine: MachineController)`
+``` python
+class mpf.core.text_ui.TextUi(machine: MachineController)
+```
 
-Bases: mpf.core.mpf_controller.MpfController
+Bases: `mpf.core.mpf_controller.MpfController`
 
 Handles the text-based UI.
 
 ## Accessing the text_ui in code
 
-There is only one instance of the `text_ui` in MPF, and it’s accessible via `self.machine.text_ui`.
+There is only one instance of the `text_ui` in MPF, and it's accessible via `self.machine.text_ui`.
 
 ## Methods & Attributes
 
@@ -19,3 +22,6 @@ The text_ui has the following methods & attributes available. Note that methods 
 
 Stop the Text UI and restore the original console screen.
 
+## Related Pages:
+
+* [text_ui: Config Reference](../../../config/text_ui.md)

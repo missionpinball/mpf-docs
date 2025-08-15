@@ -1,9 +1,8 @@
 ---
-title: "ball_routings:"
+title: "ball_routings: Config Reference"
 ---
 
-# ball_routings:
-
+# ball_routings: Config Reference
 
 --8<-- "config_section.md"
 
@@ -31,7 +30,7 @@ Defaults to empty.
 
 ### target_device:
 
-Single value, type: string name of a
+Single value, type: `string` name of a
 [ball_devices:](ball_devices.md) device.
 Defaults to empty.
 

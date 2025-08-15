@@ -1,9 +1,8 @@
 ---
-title: "magnets:"
+title: "magnets: Config Reference"
 ---
 
-# magnets:
-
+# magnets: Config Reference
 
 --8<-- "config_section.md"
 
@@ -23,7 +22,7 @@ config:
 
 ### magnet_coil:
 
-Single value, type: string name of a [coils:](coils.md) device. Defaults to empty.
+Single value, type: `string` name of a [coils:](coils.md) device. Defaults to empty.
 
 Note that is any of the magnet activation times are longer than 255ms
 and the magnet pulse power is 100%, then you will need to add
@@ -84,7 +83,7 @@ magnet will be activated for the `grab_time:`.
 
 ### grab_switch:
 
-Single value, type: string name of a
+Single value, type: `string` name of a
 [switches:](switches.md) device. Defaults to
 empty.
 
@@ -99,7 +98,7 @@ How long the magnet will be energized when attempting to grab a ball.
 
 ### playfield:
 
-Single value, type: string name of a
+Single value, type: `string` name of a
 [playfields:](playfields.md) device. Default:
 `playfield`
 

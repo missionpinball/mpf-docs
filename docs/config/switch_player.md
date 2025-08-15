@@ -1,9 +1,8 @@
 ---
-title: "switch_player:"
+title: "switch_player: Config Reference"
 ---
 
-# switch_player:
-
+# switch_player: Config Reference
 
 --8<-- "config_section.md"
 
@@ -78,6 +77,7 @@ Unknown type. See description below.
 
 The steps of the switch_player. See the example above.
 
-## Related How To guides
+## Related Pages:
 
 * [plugins:](plugins.md)
+* [switch_player API Reference](../code/api_reference/core/switch_player.md)

@@ -1,16 +1,23 @@
+# flippers API Reference
 
-# self.machine.flippers.*
+Config Reference:
 
-`class mpf.devices.flipper.Flipper(*args, **kwargs)`
+* [flippers:](../../../config/flippers.md)
 
-Bases: mpf.core.system_wide_device.SystemWideDevice
+`self.machine.flippers.*`
+
+``` python
+class mpf.devices.flipper.Flipper(*args, **kwargs)
+```
+
+Bases: `mpf.core.system_wide_device.SystemWideDevice`
 
 Represents a flipper in a pinball machine. Subclass of Device. Contains several methods for actions that can be performed on this flipper, like enable(), disable(), etc. Flippers have several options, including player buttons, EOS swtiches, multiple coil options (pulsing, hold coils, etc.)
 
 Parameters:
 
 * **machine** – A reference to the machine controller instance.
-* **name** – A string of the name you’ll refer to this flipper object as.
+* **name** – A string of the name you'll refer to this flipper object as.
 
 ## Accessing flippers in code
 
@@ -26,7 +33,7 @@ Disable the flipper.  This method makes it so the cabinet flipper buttons no lon
 
 `enable()`
 
-Enable the flipper by writing the necessary hardware rules to the hardware controller.  The hardware rules for coils can be kind of complex given all the options, so we’ve mapped all the options out here. We literally have methods to enable the various rules based on the rule letters here, which we’ve implemented below. Keeps it easy to understand. Note there’s a platform feature saved at: `self.machine.config['platform']['hw_enable_auto_disable']`. If True, it means that the platform hardware rules will automatically disable a coil that has been enabled when the trigger switch is disabled. If False, it means the hardware platform needs its own rule to disable the coil when the switch is disabled. Methods F and G below check for that feature setting and will not be applied to the hardware if it’s True.
+Enable the flipper by writing the necessary hardware rules to the hardware controller.  The hardware rules for coils can be kind of complex given all the options, so we've mapped all the options out here. We literally have methods to enable the various rules based on the rule letters here, which we've implemented below. Keeps it easy to understand. Note there's a platform feature saved at: `self.machine.config['platform']['hw_enable_auto_disable']`. If True, it means that the platform hardware rules will automatically disable a coil that has been enabled when the trigger switch is disabled. If False, it means the hardware platform needs its own rule to disable the coil when the switch is disabled. Methods F and G below check for that feature setting and will not be applied to the hardware if it's True.
 
 Two coils, using EOS switch to indicate the end of the power stroke: Rule Type Coil Switch Action A. Enable Main Button active D. Enable Hold Button active E. Disable Main EOS active
 
@@ -77,4 +84,3 @@ Activate the flipper via software as if the flipper button was pushed. This is n
 `sw_release()`
 
 Deactivate the flipper via software as if the flipper button was released. See the documentation for sw_flip() for details.
-

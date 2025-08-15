@@ -1,9 +1,14 @@
+# Ball Search API Reference
 
-# Ball Search
+Config Reference:
 
-`class mpf.core.ball_search.BallSearch(machine: mpf.core.machine.MachineController, playfield: Playfield)`
+* [playfields:enable_ball_search](../../../config/playfields.md#enable_ball_search)
 
-Bases: mpf.core.mpf_controller.MpfController
+``` python
+class mpf.core.ball_search.BallSearch(machine: mpf.core.machine.MachineController, playfield: Playfield)
+```
+
+Bases: `mpf.core.mpf_controller.MpfController`
 
 Implements Ball search for a playfield device.
 
@@ -17,7 +22,7 @@ The Ball Search has the following methods & attributes available. Note that meth
 
 Block ball search for this playfield.
 
-Blocking will disable ball search if it’s enabled or running, and will prevent ball search from enabling if it’s disabled until ball_search_unblock() is called.
+Blocking will disable ball search if it's enabled or running, and will prevent ball search from enabling if it's disabled until ball_search_unblock() is called.
 
 `blocked = None`
 
@@ -156,4 +161,3 @@ This will check to see if there are balls on the playfield, and if so, enable ba
 Log a message at the warning level.
 
 These messages will always be shown in the console and the log file.
-

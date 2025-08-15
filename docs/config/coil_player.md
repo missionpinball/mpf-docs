@@ -1,9 +1,8 @@
 ---
-title: "coil_player:"
+title: "coil_player: Config Reference"
 ---
 
-# coil_player:
-
+# coil_player: Config Reference
 
 --8<-- "config_section.md"
 
@@ -113,8 +112,9 @@ hardware platforms support variable pulse power.)
 If not set it will use `default_pulse_power` of the
 [coils:](coils.md).
 
-## Related How To guides
+## Related Pages
 
-* [Coil player](../config_players/coil_player.md)
 * [Coils (Solenoids)](../mechs/coils/index.md)
 * [Shakers](../mechs/shaker.md)
+* [Coil player Config Player Reference](../config_players/coil_player.md)
+* [coil_player API Reference](../code/api_reference/config_players/coil_player.md)

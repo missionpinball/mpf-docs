@@ -1,9 +1,16 @@
+# spike API Reference
 
-# self.machine.hardware_platforms[‘spike’]
+Config Reference:
 
+* [spike:](../../../config/spike.md)
+
+`self.machine.hardware_platforms['spike']`
+
+``` python
 class mpf.platforms.spike.spike.SpikePlatform(machine)
+```
 
-Bases: mpf.core.platform.SwitchPlatform, mpf.core.platform.LightsPlatform, mpf.core.platform.DriverPlatform, mpf.core.platform.DmdPlatform, mpf.core.platform.StepperPlatform
+Bases: `mpf.core.platform.SwitchPlatform`, `mpf.core.platform.LightsPlatform`, `mpf.core.platform.DriverPlatform`, `mpf.core.platform.DmdPlatform`, `mpf.core.platform.StepperPlatform`
 
 Stern Spike Platform.
 
@@ -116,4 +123,3 @@ This is mostly used for popbumpers. Example from WWE: Type: 8 Cmd: 65 Node: 9 Ms
 `stop()`
 
 Stop hardware and close connections.
-

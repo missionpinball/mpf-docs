@@ -1,9 +1,16 @@
+# achievement_groups API reference
 
-# self.machine.achievement_groups.*
+Config Reference:
 
-`class mpf.devices.achievement_group.AchievementGroup(*args, **kwargs)`
+* [achievement_groups:](../../../config/achievement_groups.md)
 
-Bases: mpf.core.mode_device.ModeDevice
+`self.machine.achievement_groups.*`
+
+``` python
+class mpf.devices.achievement_group.AchievementGroup(*args, **kwargs)
+```
+
+Bases: `mpf.core.mode_device.ModeDevice`
 
 An achievement group in a pinball machine. It is tracked per player and can automatically restore state on the next ball.
 
@@ -86,4 +93,3 @@ Start the currently selected achievement.
 `subscribe_attribute(item, machine)`
 
 Subscribe to an attribute.
-

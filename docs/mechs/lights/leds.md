@@ -288,6 +288,6 @@ For
 * *color*
 * *corrected_color*
 
-Related How To guides:
+## Related How To guides:
 
 * [Tutorial step 17: Add lights (or LEDs)](../../tutorial/17_add_lights_leds.md)

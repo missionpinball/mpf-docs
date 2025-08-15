@@ -1,9 +1,8 @@
 ---
-title: "system11:"
+title: "system11: Config Reference"
 ---
 
-# system11:
-
+# system11: Config Reference
 
 --8<-- "config_section.md"
 
@@ -24,7 +23,7 @@ config:
 
 ### ac_relay_driver:
 
-Single value, type: string name of a [coils:](coils.md) device. Defaults to empty.
+Single value, type: `string` name of a [coils:](coils.md) device. Defaults to empty.
 
 The driver to use to drive the AC relay which switches between A and C
 side drivers.
@@ -50,7 +49,7 @@ Delay when switching between A and C side.
 
 ### ac_relay_switch:
 
-Single value, type: string name of a
+Single value, type: `string` name of a
 [switches:](switches.md) device. Defaults to
 empty.
 

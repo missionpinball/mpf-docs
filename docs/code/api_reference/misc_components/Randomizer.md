@@ -1,6 +1,8 @@
-# Randomizer
+# Randomizer API Reference
 
-`class mpf.core.randomizer.Randomizer(items)`
+``` python
+class mpf.core.randomizer.Randomizer(items)
+```
 
 Bases: `object`
 

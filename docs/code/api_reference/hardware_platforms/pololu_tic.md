@@ -1,9 +1,16 @@
+# pololu_tic API Reference
 
-# self.machine.hardware_platforms[‘pololu_tic’]
+Config Reference:
 
-`class mpf.platforms.pololu.pololu_tic.PololuTICHardwarePlatform(machine)`
+* [pololu_tic:](../../../config/pololu_tic.md)
 
-Bases: mpf.core.platform.StepperPlatform
+`self.machine.hardware_platforms['pololu_tic']`
+
+``` python
+class mpf.platforms.pololu.pololu_tic.PololuTICHardwarePlatform(machine)
+```
+
+Bases: `mpf.core.platform.StepperPlatform`
 
 Supports the Pololu TIC stepper drivers via ticcmd command line.
 
@@ -31,4 +38,3 @@ Return config validator name.
 `stop()`
 
 De-energize the stepper and stop sending the command timeout refresh.
-

@@ -1,9 +1,16 @@
+# mypinballs API Reference
 
-# self.machine.hardware_platforms[‘mypinballs’]
+Config Reference:
 
-`class mpf.platforms.mypinballs.mypinballs.MyPinballsHardwarePlatform(machine)`
+* [mypinballs:](../../../config/mypinballs.md)
 
-Bases: mpf.core.platform.SegmentDisplayPlatform
+`self.machine.hardware_platforms['mypinballs']`
+
+``` python
+class mpf.platforms.mypinballs.mypinballs.MyPinballsHardwarePlatform(machine)
+```
+
+Bases: `mpf.core.platform.SegmentDisplayPlatform`
 
 Hardware platform for MyPinballs 7-segment controller.
 
@@ -30,4 +37,3 @@ Send a byte command.
 `stop()`
 
 Stop platform.
-

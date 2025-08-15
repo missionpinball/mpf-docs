@@ -55,6 +55,6 @@ diverters:
     type: pulse
 ```
 
-Related How To guides:
+## Related How To guides:
 
 * [Diverters](../../index.md)

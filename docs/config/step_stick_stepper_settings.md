@@ -1,9 +1,8 @@
 ---
-title: "step_stick_stepper_settings:"
+title: "step_stick_stepper_settings: Config Reference"
 ---
 
-# step_stick_stepper_settings:
-
+# step_stick_stepper_settings: Config Reference
 
 --8<-- "config_section.md"
 

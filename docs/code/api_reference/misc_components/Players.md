@@ -1,9 +1,14 @@
+# Player API Reference
 
-# Players
+Config Reference:
 
-`class mpf.core.player.Player(machine, index)`
+* [player_vars:](../../../config/player_vars.md)
 
-Bases: object
+``` python
+class mpf.core.player.Player(machine, index)
+```
+
+Bases: `object`
 
 Base class for a player in a game.
 
@@ -21,7 +26,7 @@ First, player variables can be accessed as attributes of the player object direc
 self.machine.player.foo = 0
 ```
 
-If that variable didn’t exist, it will be automatically created.
+If that variable didn't exist, it will be automatically created.
 
 You can get the value of player variables by accessing them directly. For example:
 
@@ -29,7 +34,7 @@ You can get the value of player variables by accessing them directly. For exampl
 print(self.machine.player.foo)  # prints 0
 ```
 
-If you attempt to access a player variable that doesn’t exist, it will automatically be created with a value of 0.
+If you attempt to access a player variable that doesn't exist, it will automatically be created with a value of 0.
 
 Every time a player variable is created or changed, an MPF event is posted in the form player_ plus the variable name. For example, creating or changing the foo variable will cause an event called player_foo to be posted.
 
@@ -40,7 +45,7 @@ The player variable event will have four parameters posted along with it:
 * `change` (the change in the value)
 * `player_num` (the player number the variable belongs to)
 
-For the change parameter, it will attempt to subtract the old value from the new value. If that works, it will return the result as the change. If it doesn’t work (like if you’re not storing numbers in this variable), then the change parameter will be True if the new value is different and False if the value didn’t change.
+For the change parameter, it will attempt to subtract the old value from the new value. If that works, it will return the result as the change. If it doesn't work (like if you're not storing numbers in this variable), then the change parameter will be True if the new value is different and False if the value didn't change.
 
 For examples, the following three lines:
 
@@ -56,7 +61,7 @@ player_score with Args: value=0, change=0, prev_value=0 player_score with Args: 
 
 ## Methods & Attributes
 
-The Players has the following methods & attributes available. Note that methods & attributes inherited from the base class are not included here.
+The Player has the following methods & attributes available. Note that methods & attributes inherited from the base class are not included here.
 
 `enable_events(enable=True, send_all_variables=True)`
 
@@ -84,4 +89,3 @@ Class attribute which specifies whether any monitors have been registered to tra
 `send_all_variable_events()`
 
 Send a player variable event for the current value of all player variables.
-

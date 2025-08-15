@@ -1,15 +1,18 @@
+# device_manager API Reference
 
-# self.machine.device_manager
+`self.machine.device_manager`
 
-`class mpf.core.device_manager.DeviceManager(machine)`
+``` python
+class mpf.core.device_manager.DeviceManager(machine)
+```
 
-Bases: mpf.core.mpf_controller.MpfController
+Bases: `mpf.core.mpf_controller.MpfController`
 
 Manages all the devices in MPF.
 
 ## Accessing the device_manager in code
 
-There is only one instance of the device_manager in MPF, and it’s accessible via self.machine.device_manager.
+There is only one instance of the device_manager in MPF, and it's accessible via self.machine.device_manager.
 
 ## Methods & Attributes
 
@@ -70,4 +73,3 @@ Parameters:
 `stop_devices()`
 
 Stop all devices in the machine.
-

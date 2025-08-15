@@ -1,11 +1,18 @@
+# extra_ball_groups API Reference
 
-# self.machine.extra_ball_groups.*
+Config Reference:
 
+* [extra_ball_groups:](../../../config/extra_ball_groups.md)
+
+`self.machine.extra_ball_groups.*`
+
+``` python
 class mpf.devices.extra_ball_group.ExtraBallGroup(*args, **kwargs)
+```
 
-    Bases: mpf.core.system_wide_device.SystemWideDevice
+Bases: `mpf.core.system_wide_device.SystemWideDevice`
 
-    Tracks and manages groups of extra balls devices.
+Tracks and manages groups of extra balls devices.
 
 ## Accessing extra_ball_groups in code
 
@@ -53,7 +60,7 @@ Get the value of a placeholder.
 
 `is_ok_to_light() → bool`
 
-Check if it’s possible to light an extra ball. Returns True or False. This method checks to see if the group is enabled and whether the max_lit setting has been exceeded.
+Check if it's possible to light an extra ball. Returns True or False. This method checks to see if the group is enabled and whether the max_lit setting has been exceeded.
 
 `light()`
 
@@ -66,4 +73,3 @@ Raise a ConfigFileError exception.
 `subscribe_attribute(item, machine)`
 
 Subscribe to an attribute.
-

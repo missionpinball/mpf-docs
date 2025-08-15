@@ -1,9 +1,8 @@
 ---
-title: "multiballs:"
+title: "multiballs: Config Reference"
 ---
 
-# multiballs:
-
+# multiballs: Config Reference
 
 --8<-- "config_section.md"
 
@@ -254,7 +253,7 @@ play.
 
 ### source_playfield:
 
-Single value, type: string name of a
+Single value, type: `string` name of a
 [ball_devices:](ball_devices.md) device.
 Default: `playfield`
 

@@ -1,9 +1,8 @@
 ---
-title: "ball_locks:"
+title: "ball_locks: Config Reference"
 ---
 
-# ball_locks:
-
+# ball_locks: Config Reference
 
 !!! note
 

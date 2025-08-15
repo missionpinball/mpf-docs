@@ -188,6 +188,6 @@ variable_player:
 #! stop_game
 ```
 
-Related How To guides:
+## Related How To guides:
 
 * [Scoring](../scoring/index.md)

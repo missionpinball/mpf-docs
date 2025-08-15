@@ -1,9 +1,8 @@
 ---
-title: "hardware_sound_systems:"
+title: "hardware_sound_systems: Config Reference"
 ---
 
-# hardware_sound_systems:
-
+# hardware_sound_systems: Config Reference
 
 --8<-- "config_section.md"
 
@@ -30,7 +29,7 @@ Overwrite the default platform.
 
 ### platform_settings:
 
-Single value, type: dict. Defaults to empty.
+Single value, type: `dict`. Defaults to empty.
 
 --8<-- "todo.md"
 
@@ -72,3 +71,4 @@ Not used.
 
 * [Arduino Pinball Controller](../hardware/apc/index.md)
 * [How to use MPF with the LISY platform](../hardware/lisy/index.md)
+* [hardware_sound_systems API Reference](../code/api_reference/devices/hardware_sound_systems.md)

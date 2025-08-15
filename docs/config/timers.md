@@ -1,9 +1,8 @@
 ---
-title: "timers:"
+title: "timers: Config Reference"
 ---
 
-# timers:
-
+# timers: Config Reference
 
 --8<-- "config_section.md"
 
@@ -196,8 +195,7 @@ tick down ten times a second.
 
 #### Using dynamic value templates:
 
-Also note that you can use [dynamic values](instructions/dynamic_values.md)
-here if you want to do math or use settings to make this configurable.
+--8<-- "template_setting.md"
 
 Even though the other option is to use a time string, when using a dynamic value
 you must resolve the value to a floating point value representing the number of seconds.

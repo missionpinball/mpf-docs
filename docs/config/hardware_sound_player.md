@@ -1,9 +1,8 @@
 ---
-title: "hardware_sound_player:"
+title: "hardware_sound_player: Config Reference"
 ---
 
-# hardware_sound_player:
-
+# hardware_sound_player: Config Reference
 
 --8<-- "config_section.md"
 
@@ -55,13 +54,13 @@ be different per sound.
 
 ### platform_options:
 
-Single value, type: dict. Defaults to empty.
+Single value, type: `dict`. Defaults to empty.
 
 --8<-- "todo.md"
 
 ### sound_system:
 
-Single value, type: string name of a
+Single value, type: `string` name of a
 [hardware_sound_systems:](hardware_sound_systems.md) device. Default: `default`
 
 In case you got multiple hardware_sound platforms you can expliticly
@@ -80,7 +79,9 @@ Single value, type: `string`. Defaults to empty.
 
 The number of your sound.
 
-## Related How To guides
+## Related Pages:
 
 * [Arduino Pinball Controller](../hardware/apc/index.md)
 * [How to use MPF with the LISY platform](../hardware/lisy/index.md)
+* [Hardware sound player Config Player Reference](../config_players/hardware_sound_player.md)
+* [hardware_sound_player API Reference](../code/api_reference/config_players/hardware_sound_player.md)

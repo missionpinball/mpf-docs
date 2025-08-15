@@ -1,9 +1,16 @@
+# segment_displays API Reference
 
-self.machine.segment_displays.*
+Config Reference:
 
-`class mpf.devices.segment_display.SegmentDisplay(*args, **kwargs)`
+* [segment_displays:](../../../config/segment_displays.md)
 
-Bases: mpf.core.system_wide_device.SystemWideDevice
+`self.machine.segment_displays.*`
+
+``` python
+class mpf.devices.segment_display.SegmentDisplay(*args, **kwargs)
+```
+
+Bases: `mpf.core.system_wide_device.SystemWideDevice`
 
 A physical segment display in a pinball machine.
 
@@ -46,4 +53,3 @@ Enable/Disable flashing.
 `subscribe_attribute(item, machine)`
 
 Subscribe to an attribute.
-

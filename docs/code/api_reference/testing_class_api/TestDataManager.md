@@ -1,13 +1,14 @@
-
 # TestDataManager
 
-`class mpf.tests.TestDataManager.TestDataManager(data)`
+``` python
+class mpf.tests.TestDataManager.TestDataManager(data)
+```
 
-Bases: mpf.core.data_manager.DataManager
+Bases: `mpf.core.data_manager.DataManager`
 
 A patched version of the DataManager which is used in unit tests.
 
-The main change is that the `save_all()` method doesn’t actually write anything to disk so the tests don’t fill up the disk with unneeded data.
+The main change is that the `save_all()` method doesn't actually write anything to disk so the tests don't fill up the disk with unneeded data.
 
 ## Methods & Attributes
 
@@ -19,7 +20,7 @@ Return a formatted log line with log link and context.
 
 `get_data(section=None)`
 
-Return the value of this DataManager’s data.
+Return the value of this DataManager's data.
 
 Parameters:
 
@@ -44,4 +45,3 @@ Update all data.
 Log a message at the warning level.
 
 These messages will always be shown in the console and the log file.
-

@@ -1,15 +1,18 @@
+# service API Reference
 
-# self.machine.service
+`self.machine.service`
 
-`class mpf.core.service_controller.ServiceController(machine)`
+``` python
+class mpf.core.service_controller.ServiceController(machine)
+```
 
-Bases: mpf.core.mpf_controller.MpfController
+Bases: `mpf.core.mpf_controller.MpfController`
 
 Provides all service information and can perform service tasks.
 
 ## Accessing the service in code
 
-There is only one instance of the service in MPF, and it’s accessible via `self.machine.service`.
+There is only one instance of the service in MPF, and it's accessible via `self.machine.service`.
 
 ## Methods & Attributes
 
@@ -43,3 +46,8 @@ Start service mode.
 
 Stop service mode.
 
+## Related Pages:
+
+* [service Mode API Reference](../modes/service.md)
+* [Game Logic: Service Mode](../../../game_logic/service_mode.md)
+* [Machine Management: Service Mode](../../../machine_management/service_mode.md)

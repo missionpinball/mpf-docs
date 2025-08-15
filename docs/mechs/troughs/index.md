@@ -188,12 +188,12 @@ If you have something weird that you can't figure out, we're happy to
 help! Just post a photo of it to [community forum](../../community/index.md) and we'll go
 from there.
 
-Related How To guides:
+## Related How To guides:
 
 * [Tutorial step 7: Add your trough](../../tutorial/7_trough.md)
 * [Troubleshooting P-Roc/P3-Roc](../ball_devices/troubleshooting.md)
 
-Related Events
+## Related Events
 
 * [ball_drain](../../events/ball_drain.md)
 * [balldevice_ball_missing](../../events/balldevice_ball_missing.md)

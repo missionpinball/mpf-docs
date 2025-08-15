@@ -1,9 +1,16 @@
+# servos API Reference
 
-# self.machine.servos.*
+Config Reference:
 
-`class mpf.devices.servo.Servo(*args, **kwargs)`
+* [servos:](../../../config/servos.md)
 
-Bases: mpf.core.system_wide_device.SystemWideDevice
+`self.machine.servos.*`
+
+``` python
+class mpf.devices.servo.Servo(*args, **kwargs)
+```
+
+Bases: `mpf.core.system_wide_device.SystemWideDevice`
 
 Represents a servo in a pinball machine.
 
@@ -54,4 +61,3 @@ Set speed parameter.
 `subscribe_attribute(item, machine)`
 
 Subscribe to an attribute.
-

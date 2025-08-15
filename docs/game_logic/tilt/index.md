@@ -126,7 +126,7 @@ Milliseconds until the tilt bob is considered settled.
 
 Remaining warnings until the game is tilted.
 
-Related How To guides:
+## Related How To guides:
 
 * [overwrite_tilt_slides](../../game_design/index.md)
 * [Overwriting Tilt Slides](overwrite_tilt_slides.md)

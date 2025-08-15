@@ -1,7 +1,10 @@
+# segment_display_player API Reference
 
-# self.machine.segment_display_player
+`self.machine.segment_display_player`
 
-`class mpf.config_players.segment_display_player.SegmentDisplayPlayer(machine)`
+``` python
+class mpf.config_players.segment_display_player.SegmentDisplayPlayer(machine)
+```
 
 Bases: `mpf.config_players.device_config_player.DeviceConfigPlayer`
 
@@ -27,3 +30,7 @@ Parse express config.
 
 Show text on display.
 
+## Related Pages:
+
+* [segment_display_player: Config Reference](../../../config/segment_display_player.md)
+* [Segment Display player Config Player Reference](../../../config_players/segment_display_player.md)

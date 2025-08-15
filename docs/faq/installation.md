@@ -22,7 +22,7 @@ need to pick a pinball control system. (We have a list of supported
 control systems [here](../hardware/index.md).)
 If you want to get started as cheaply as possible, the Open Pinball
 Project hardware is open source which you can build yourself. You can
-probably build all the hardware you need for under \$100.
+probably build all the hardware you need for under $100.
 
 ## What computer hardware do I need?
 
@@ -34,11 +34,17 @@ Pi) in their machine to run MPF.
 
 ## What Python version can I use with MPF?
 
-The stable version (0.56) of MPF uses Python 3.7 - 3.9. We walk
-you through getting Python installed in our
+The stable version (0.57, currently on 0.57.3) of MPF can be used with
+Python versions 3.8-3.11 (with 3.12+ being tested with minor issues).
+We walk you through getting Python installed in our
 [installation documentation](../install/index.md).
 
-The dev branch (0.57) of MPF supports Python 3.8 - 3.11.
+The previous version of MPF, 0.56. is only compatible with Python from
+version 3.7 through 3.9.
+
+The next revision (0.80.x) of MPF supports Python 3.8 - 3.11, but does
+not support the legacy Media Controller. The media controller for 0.80
+is called GMC, and is in active development.
 
 ## Should I use the stable version or development version?
 
@@ -53,4 +59,4 @@ If you want information about an older version of MPF, we have
 
 You can install older versions of MPF with pip, like this:
 
-    pip install mpf-mc==0.31
+    pip install mpf==0.56.0.dev33

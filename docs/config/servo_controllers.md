@@ -1,9 +1,8 @@
 ---
-title: "servo_controllers:"
+title: "servo_controllers: Config Reference"
 ---
 
-# servo_controllers:
-
+# servo_controllers: Config Reference
 
 --8<-- "config_section.md"
 

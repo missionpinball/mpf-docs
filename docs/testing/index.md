@@ -28,7 +28,7 @@ Test Driven Developer / TDD which says you should write your tests *before* you 
 I can 100% guarantee that writing good tests will save you time in the long run AND it will make your game more stable.
 2:36
 
-Bonus: there are “fuzz” tests too which are just automated tests that hit all the switches randomly and make sure MPF doesn’t crash or hang. Good for beefing up your machine before you’re done, and something you should set up EARLY and run OFTEN so you don’t have surprises 2 days before a show
+Bonus: there are “fuzz” tests too which are just automated tests that hit all the switches randomly and make sure MPF doesn't crash or hang. Good for beefing up your machine before you're done, and something you should set up EARLY and run OFTEN so you don't have surprises 2 days before a show
 
 Consolidate this content to here:
 

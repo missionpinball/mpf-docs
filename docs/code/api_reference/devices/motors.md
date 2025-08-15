@@ -1,9 +1,16 @@
+# motors API Reference
 
-# self.machine.motors.*
+Config Reference:
 
-`class mpf.devices.motor.Motor(*args, **kwargs)`
+* [motors:](../../../config/motors.md)
 
-Bases: mpf.core.system_wide_device.SystemWideDevice
+`self.machine.motors.*`
+
+``` python
+class mpf.devices.motor.Motor(*args, **kwargs)
+```
+
+Bases: `mpf.core.system_wide_device.SystemWideDevice`
 
 A motor which can be controlled using drivers.
 
@@ -46,4 +53,3 @@ Go to reset position.
 `subscribe_attribute(item, machine)`
 
 Subscribe to an attribute.
-

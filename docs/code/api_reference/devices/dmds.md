@@ -1,8 +1,16 @@
-# self.machine.dmds.*
+# dmds API Reference
 
-`class mpf.devices.dmd.Dmd(machine, name)`
+Config Reference:
 
-Bases: mpf.core.system_wide_device.SystemWideDevice
+* [dmds:](../../../config/dmds.md)
+
+`self.machine.dmds.*`
+
+``` python
+class mpf.devices.dmd.Dmd(machine, name)
+```
+
+Bases: `mpf.core.system_wide_device.SystemWideDevice`
 
 A physical DMD.
 

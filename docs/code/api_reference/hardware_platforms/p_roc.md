@@ -1,9 +1,16 @@
+# p_roc API Reference
 
-# self.machine.hardware_platforms[‘p_roc’]
+Config Reference:
 
-`class mpf.platforms.p_roc.PRocHardwarePlatform(machine)`
+* [p_roc:](../../../config/p_roc.md)
 
-Bases: mpf.platforms.p_roc_common.PROCBasePlatform, mpf.core.platform.DmdPlatform, mpf.core.platform.SegmentDisplayPlatform
+`self.machine.hardware_platforms['p_roc']`
+
+``` python
+class mpf.platforms.p_roc.PRocHardwarePlatform(machine)
+```
+
+Bases: `mpf.platforms.p_roc_common.PROCBasePlatform`, `mpf.core.platform.DmdPlatform`, `mpf.core.platform.SegmentDisplayPlatform`
 
 Platform class for the P-ROC hardware controller.
 
@@ -70,4 +77,3 @@ Dump infos about boards.
 `process_events(events)`
 
 Process events from the P-Roc.
-

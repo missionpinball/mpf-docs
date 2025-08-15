@@ -1,9 +1,8 @@
 ---
-title: "timed_switches:"
+title: "timed_switches: Config Reference"
 ---
 
-# timed_switches:
-
+# timed_switches: Config Reference
 
 --8<-- "config_section.md"
 

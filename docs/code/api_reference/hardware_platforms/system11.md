@@ -1,9 +1,16 @@
+# system11 API Reference
 
-# self.machine.hardware_platforms[‘system11’]
+Config Reference:
 
-`class mpf.platforms.system11.System11OverlayPlatform(machine: mpf.core.machine.MachineController)`
+* [system11:](../../../config/system11.md)
 
-Bases: mpf.core.platform.DriverPlatform, mpf.core.platform.SwitchPlatform
+`self.machine.hardware_platforms['system11']`
+
+``` python
+class mpf.platforms.system11.System11OverlayPlatform(machine: mpf.core.machine.MachineController)
+```
+
+Bases: `mpf.core.platform.DriverPlatform, mpf.core.platform.SwitchPlatform`
 
 Overlay platform to drive system11 machines using a WPC controller.
 
@@ -113,4 +120,3 @@ Called based on the timer_tick event.
 `validate_coil_section(driver, config)`
 
 Validate coil config for platform.
-

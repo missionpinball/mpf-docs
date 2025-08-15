@@ -1,9 +1,16 @@
+# smartmatrix API Reference
 
-# self.machine.hardware_platforms[‘smartmatrix’]
+Config Reference:
 
-`class mpf.platforms.smartmatrix.SmartMatrixHardwarePlatform(machine)`
+* [smartmatrix:](../../../config/smartmatrix.md)
 
-Bases: mpf.core.platform.RgbDmdPlatform
+`self.machine.hardware_platforms['smartmatrix']`
+
+``` python
+class mpf.platforms.smartmatrix.SmartMatrixHardwarePlatform(machine)
+```
+
+Bases: `mpf.core.platform.RgbDmdPlatform`
 
 SmartMatrix RGB DMD.
 
@@ -26,4 +33,3 @@ Initialise platform.
 `stop()`
 
 Stop platform.
-

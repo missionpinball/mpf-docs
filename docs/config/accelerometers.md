@@ -1,19 +1,15 @@
 ---
-title: "accelerometers:"
+title: "accelerometers: Config Reference"
 ---
 
-# accelerometers:
-
+# accelerometers: Config Reference
 
 --8<-- "config_section.md"
-
 
 | Valid in | |
 |-----|:----:|
 |[machine](instructions/machine_config.md) config files |**YES** :white_check_mark:|
 |[mode](instructions/mode_config.md) config files|**NO** :no_entry_sign:|
-
-
 
 Hardware platforms which support accelerometers
 
@@ -161,8 +157,9 @@ Name of this device in service mode.
 List of one (or more) values, each is a type: `string`. Defaults to
 empty.
 
---8<-- "todo.md"
-
-## Related How To guides
+## Related Pages:
 
 * [Accelerometers](../mechs/accelerometers.md)
+* [accelerometers API Reference](../code/api_reference/devices/accelerometers.md)
+* [How to configure the accelerometer (P3-ROC)](../hardware/multimorphic/accelerometer.md)
+* [MMA8451-based I2C accelerometers](../hardware/mma8451.md)

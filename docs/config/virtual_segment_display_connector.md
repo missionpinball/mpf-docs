@@ -1,9 +1,8 @@
 ---
-title: "virtual_segment_display_connector:"
+title: "virtual_segment_display_connector: Config Reference"
 ---
 
-# virtual_segment_display_connector:
-
+# virtual_segment_display_connector: Config Reference
 
 --8<-- "config_section.md"
 

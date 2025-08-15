@@ -1,9 +1,8 @@
 ---
-title: "color_correction_profile:"
+title: "color_correction_profile: Config Reference"
 ---
 
-# color_correction_profile:
-
+# color_correction_profile: Config Reference
 
 --8<-- "config_section.md"
 

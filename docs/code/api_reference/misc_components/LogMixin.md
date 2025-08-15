@@ -1,9 +1,14 @@
+# LogMixin API Reference
 
-# LogMixin
+Config Reference:
 
-`class mpf.core.logging.LogMixin`
+* [logging:](../../../config/logging.md)
 
-Bases: object
+``` python
+class mpf.core.logging.LogMixin
+```
+
+Bases: `object`
 
 Mixin class to add smart logging functionality to modules.
 
@@ -59,4 +64,3 @@ Raise a ConfigFileError exception.
 Log a message at the warning level.
 
 These messages will always be shown in the console and the log file.
-

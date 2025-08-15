@@ -50,7 +50,7 @@ In config files, the random event player is used via the
 In shows, the random event player is used via the `random_events:`
 section of a step.
 
-## Config Options
+## Related Pages:
 
-See [random_event_player:](../config/random_event_player.md) for
-config details.
+* [random_event_player: Config Reference](../config/random_event_player.md)
+* [random_event_player API Reference](../code/api_reference/config_players/random_event_player.md)

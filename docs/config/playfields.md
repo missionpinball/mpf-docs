@@ -1,9 +1,8 @@
 ---
-title: "playfields:"
+title: "playfields: Config Reference"
 ---
 
-# playfields:
-
+# playfields: Config Reference
 
 --8<-- "config_section.md"
 
@@ -25,7 +24,7 @@ config:
 
 ### default_source_device:
 
-Single value, type: string name of a
+Single value, type: `string` name of a
 [ball_devices:](ball_devices.md) device.
 Defaults to empty.
 
@@ -131,9 +130,7 @@ Single value, type: `boolean` (`true`/`false`). Defaults to empty.
 Enable ball_search by default. Use with care during development since
 coils may hurt you. Should be enabled in any production machine.
 
-Also note that you can use
-[dynamic values](instructions/dynamic_values.md) here if you want to do math or use settings to make this
-configurable.
+--8<-- "template_setting.md"
 
 ### console_log:
 

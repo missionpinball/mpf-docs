@@ -1,9 +1,8 @@
 ---
-title: "ball_holds:"
+title: "ball_holds: Config Reference"
 ---
 
-# ball_holds:
-
+# ball_holds: Config Reference
 
 --8<-- "config_section.md"
 
@@ -133,7 +132,7 @@ Event(s) which cause this ball hold to reset its held ball count.
 
 ### source_playfield:
 
-Single value, type: string name of a
+Single value, type: `string` name of a
 [ball_devices:](ball_devices.md) device.
 Default: `playfield`
 

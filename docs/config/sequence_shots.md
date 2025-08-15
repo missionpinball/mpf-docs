@@ -1,9 +1,8 @@
 ---
-title: "sequence_shots:"
+title: "sequence_shots: Config Reference"
 ---
 
-# sequence_shots:
-
+# sequence_shots: Config Reference
 
 --8<-- "config_section.md"
 
@@ -154,7 +153,7 @@ A sequence of events which will complete the sequence.
 
 ### playfield:
 
-Single value, type: string name of a
+Single value, type: `string` name of a
 [playfields:](playfields.md) device. Default:
 `playfield`
 

@@ -1,8 +1,16 @@
-# self.machine.hardware_platforms[‘opp’]
+# opp API Reference
 
-`class mpf.platforms.opp.opp.OppHardwarePlatform(machine)`
+Config Reference:
 
-Bases: mpf.core.platform.LightsPlatform, mpf.core.platform.SwitchPlatform, mpf.core.platform.DriverPlatform
+* [opp:](../../../config/opp.md)
+
+`self.machine.hardware_platforms['opp']`
+
+``` python
+class mpf.platforms.opp.opp.OppHardwarePlatform(machine)
+```
+
+Bases: `mpf.core.platform.LightsPlatform`, `mpf.core.platform.SwitchPlatform`, `mpf.core.platform.DriverPlatform`
 
 Platform class for the OPP hardware.
 
@@ -22,7 +30,7 @@ The opp platform has the following methods & attributes available. Note that met
 
 Clear a hardware rule.
 
-This is used if you want to remove the linkage between a switch and some driver activity. For example, if you wanted to disable your flippers (so that a player pushing the flipper buttons wouldn’t cause the flippers to flip), you’d call this method with your flipper button as the sw_num.
+This is used if you want to remove the linkage between a switch and some driver activity. For example, if you wanted to disable your flippers (so that a player pushing the flipper buttons wouldn't cause the flippers to flip), you'd call this method with your flipper button as the sw_num.
 
 `configure_driver(config: mpf.core.platform.DriverConfig, number: str, platform_settings: dict)`
 

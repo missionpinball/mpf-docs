@@ -1,9 +1,8 @@
 ---
-title: "steppers:"
+title: "steppers: Config Reference"
 ---
 
-# steppers:
-
+# steppers: Config Reference
 
 --8<-- "config_section.md"
 
@@ -119,7 +118,7 @@ determine whether the stepper is at the home position.
 
 ### homing_switch:
 
-Single value, type: string name of a
+Single value, type: `string` name of a
 [switches:](switches.md) device. Defaults to
 empty.
 
@@ -169,7 +168,7 @@ details.
 
 ### platform_settings:
 
-Single value, type: dict. Defaults to empty.
+Single value, type: `dict`. Defaults to empty.
 
 Platform specific stepper settings for this stepper. Check the
 [documentation of your platform](../hardware/platform.md) for details.

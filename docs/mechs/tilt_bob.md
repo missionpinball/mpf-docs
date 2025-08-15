@@ -37,6 +37,6 @@ Part numbers:
 * A-205-1 (Chicago Coin/early Stern)
 * 95-0328-00 or PLABS (Bally/Capcom)
 
-Related How To guides
+## Related How To guides
 
 * [Tilt](../game_logic/tilt/index.md)

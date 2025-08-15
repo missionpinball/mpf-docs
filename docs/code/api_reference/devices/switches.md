@@ -1,9 +1,16 @@
+# switches API Reference
 
-# self.machine.switches.*
+Config Reference:
 
-`class mpf.devices.switch.Switch(*args, **kwargs)`
+* [switches:](../../../config/switches.md)
 
-Bases: mpf.core.system_wide_device.SystemWideDevice, mpf.devices.device_mixins.DevicePositionMixin
+`self.machine.switches.*`
+
+``` python
+class mpf.devices.switch.Switch(*args, **kwargs)
+```
+
+Bases: `mpf.core.system_wide_device.SystemWideDevice`, `mpf.devices.device_mixins.DevicePositionMixin`
 
 A switch in a pinball machine.
 
@@ -21,7 +28,7 @@ Switches have the following methods & attributes available. Note that methods & 
 
 Add switch handler (callback) for this switch which is called when this switch state changes.
 
-Note that this method just calls the Switch Controller’s add_switch_handler() method behind the scenes.
+Note that this method just calls the Switch Controller's add_switch_handler() method behind the scenes.
 
 Parameters:
 
@@ -82,4 +89,3 @@ Returns the devices y position from config
 Get the Z value from the config.
 
 Returns the devices z position from config
-

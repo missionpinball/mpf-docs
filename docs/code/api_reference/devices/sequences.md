@@ -1,9 +1,16 @@
+# sequences API Reference
 
-# self.machine.sequences.*
+Config Reference:
 
-`class mpf.devices.logic_blocks.Sequence(*args, **kwargs)`
+* [sequences:](../../../config/sequences.md)
 
-Bases: mpf.devices.logic_blocks.LogicBlock
+`self.machine.sequences.*`
+
+``` python
+class mpf.devices.logic_blocks.Sequence(*args, **kwargs)
+```
+
+Bases: `mpf.devices.logic_blocks.LogicBlock`
 
 A type of LogicBlock which tracks many different events (steps) towards a goal.
 
@@ -23,7 +30,7 @@ Sequences have the following methods & attributes available. Note that methods &
 
 Mark this logic block as complete.
 
-Posts the ‘events_when_complete’ events and optionally restarts this logic block or disables it, depending on this block’s configuration settings.
+Posts the 'events_when_complete' events and optionally restarts this logic block or disables it, depending on this block's configuration settings.
 
 `completed`
 
@@ -102,4 +109,3 @@ Subscribe to an attribute.
 `value`
 
 Return value or None if that is currently not possible.
-

@@ -1,9 +1,16 @@
+# step_stick API Reference
 
-# self.machine.hardware_platforms[‘step_stick’]
+Config Reference:
 
-`class mpf.platforms.step_stick.StepStickDigitalOutputPlatform(machine)`
+* [step_stick_stepper_settings:](../../../config/step_stick_stepper_settings.md)
 
-Bases: mpf.core.platform.StepperPlatform
+`self.machine.hardware_platforms['step_stick']`
+
+``` python
+class mpf.platforms.step_stick.StepStickDigitalOutputPlatform(machine)
+```
+
+Bases: `mpf.core.platform.StepperPlatform`
 
 Drive a stepper using a StepStick controller on a digital output.
 
@@ -22,4 +29,3 @@ Configure a stepper driven by StepStick on a digital output.
 `classmethod get_stepper_config_section()`
 
 Return config section.
-

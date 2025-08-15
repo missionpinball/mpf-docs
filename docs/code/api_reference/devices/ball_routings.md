@@ -1,9 +1,16 @@
+# ball_routings API Reference
 
-# self.machine.ball_routings.*
+Config Reference:
 
-`class mpf.devices.ball_routing.BallRouting(*args, **kwargs)`
+* [ball_routings:](../../../config/ball_routings.md)
 
-Bases: mpf.core.enable_disable_mixin.EnableDisableMixin, mpf.core.mode_device.ModeDevice
+`self.machine.ball_routings.*`
+
+``` python
+class mpf.devices.ball_routing.BallRouting(*args, **kwargs)
+```
+
+Bases: `mpf.core.enable_disable_mixin.EnableDisableMixin`, `mpf.core.mode_device.ModeDevice`
 
 Route balls from one device to another when captured.
 
@@ -54,4 +61,3 @@ Raise a ConfigFileError exception.
 `subscribe_attribute(item, machine)`
 
 Subscribe to an attribute.
-

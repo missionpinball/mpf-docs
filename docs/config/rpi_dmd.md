@@ -1,9 +1,8 @@
 ---
-title: "rpi_dmd:"
+title: "rpi_dmd: Config Reference"
 ---
 
-# rpi_dmd:
-
+# rpi_dmd: Config Reference
 
 --8<-- "config_section.md"
 

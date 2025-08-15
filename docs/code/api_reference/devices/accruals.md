@@ -1,9 +1,12 @@
+# accruals API Reference
 
-# self.machine.accruals.*
+`self.machine.accruals.*`
 
-`class mpf.devices.logic_blocks.Accrual(*args, **kwargs)`
+``` python
+class mpf.devices.logic_blocks.Accrual(*args, **kwargs)
+```
 
-Bases: mpf.devices.logic_blocks.LogicBlock
+Bases: `mpf.devices.logic_blocks.LogicBlock`
 
 A type of LogicBlock which tracks many different events (steps) towards a goal. The steps are able to happen in any order.
 
@@ -17,7 +20,7 @@ Accruals have the following methods & attributes available. Note that methods & 
 
 `complete()`
 
-Mark this logic block as complete. Posts the ‘events_when_complete’ events and optionally restarts this logic block or disables it, depending on this block’s configuration settings.
+Mark this logic block as complete. Posts the 'events_when_complete' events and optionally restarts this logic block or disables it, depending on this block's configuration settings.
 
 `completed`
 
@@ -95,3 +98,7 @@ Subscribe to an attribute.
 
 Return value or None if that is currently not possible.
 
+## Related Pages:
+
+* [Accrual Logic Blocks](../../../game_logic/logic_blocks/accruals.md)
+* [accruals: Config Reference](../../../config/accruals.md)

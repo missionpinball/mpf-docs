@@ -139,6 +139,12 @@ This setting does not change the play/stop state.
 
 #### `position`:
 
+!!! warning
+
+    With Kivy 2.2.1 this feature might be a little buggy as in the kivy config, video duration is hard coded to 1.
+    Because MPF-MC uses the built in seek() with the position property divided by the duration (so 1), this effectively functions
+    as the normal seek. This is an error on Kivy's side and may not affect other versions.
+
 Moves the video to a certain position based on the time, (in
 seconds). In other words `value: 4.2` here would move the video to
 the 4.2 second mark. (This is similar to `seek:` except it's based

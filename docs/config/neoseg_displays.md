@@ -1,9 +1,8 @@
 ---
-title: "neoseg_displays:"
+title: "neoseg_displays: Config Reference"
 ---
 
-# neoseg_displays:
-
+# neoseg_displays: Config Reference
 
 --8<-- "config_section.md"
 
@@ -55,7 +54,7 @@ Single value, type: `string`. Defaults to empty.
 
 ### previous:
 
-Single value, type: string name of a [lights:](lights.md) device. Defaults to empty.
+Single value, type: `string` name of a [lights:](lights.md) device. Defaults to empty.
 
 --8<-- "todo.md"
 

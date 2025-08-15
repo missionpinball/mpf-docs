@@ -1,9 +1,16 @@
+# score_reels API Reference
 
-# self.machine.score_reels.*
+Config Reference:
 
-`class mpf.devices.score_reel.ScoreReel(machine, name)`
+* [score_reels:](../../../config/score_reels.md)
 
-Bases: mpf.core.system_wide_device.SystemWideDevice
+`self.machine.score_reels.*`
+
+``` python
+class mpf.devices.score_reel.ScoreReel(machine, name)
+```
+
+Bases: `mpf.core.system_wide_device.SystemWideDevice`
 
 Represents an individual electro-mechanical score reel in a pinball machine.
 
@@ -27,7 +34,7 @@ This check only happens if self.ready is True. If the reel is not ready, it mean
 
 If this method finds an active switch, it sets self.physical_value to that. Otherwise it sets it to -999. It will also update self.assumed_value if it finds an active switch. Otherwise it leaves that value unchanged.
 
-This method is automatically called (via a delay) after the reel advances. The delay is based on the config value self.config[‘hw_confirm_time’].
+This method is automatically called (via a delay) after the reel advances. The delay is based on the config value self.config['hw_confirm_time'].
 
 TODO: What happens if there are multiple active switches? Currently it will return the highest one. Is that ok?
 
@@ -48,7 +55,7 @@ Parameters:
 * **value** – Destination value which this reel should try to reach.
 
 Returns: The value of the destination. If the current
-`self.assumed_value` is -999, this method will always return -999 since it doesn’t know where the reel is and therefore doesn’t know what the destination value would be.
+`self.assumed_value` is -999, this method will always return -999 since it doesn't know where the reel is and therefore doesn't know what the destination value would be.
 
 `stop(**kwargs)`
 
@@ -57,4 +64,3 @@ Stop device.
 `wait_for_ready()`
 
 Return a future for ready.
-

@@ -1,9 +1,16 @@
+# dual_wound_coils API Reference
 
-# self.machine.dual_wound_coils.*
+Config Reference:
 
-`class mpf.devices.dual_wound_coil.DualWoundCoil(machine, name)`
+* [dual_wound_coils:](../../../config/dual_wound_coils.md)
 
-Bases: mpf.core.system_wide_device.SystemWideDevice
+`self.machine.dual_wound_coils.*`
+
+``` python
+class mpf.devices.dual_wound_coil.DualWoundCoil(machine, name)
+```
+
+Bases: `mpf.core.system_wide_device.SystemWideDevice`
 
 An instance of a dual wound coil which consists of two coils.
 
@@ -51,4 +58,3 @@ Parameters:
 `raise_config_error(msg, error_no, *, context=None) → NoReturn`
 
 Raise a ConfigFileError exception.
-

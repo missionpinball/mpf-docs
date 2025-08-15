@@ -1,4 +1,4 @@
-## Connecting your computer to the Stern SPIKE CPU node
+# Connecting your computer to the Stern SPIKE CPU node
 
 Related Config File Sections:
 

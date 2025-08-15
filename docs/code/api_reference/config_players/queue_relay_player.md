@@ -1,9 +1,12 @@
+# queue_relay_player API Reference
 
-# self.machine.queue_relay_player
+`self.machine.queue_relay_player`
 
-`class mpf.config_players.queue_relay_player.QueueRelayPlayer(machine)`
+``` python
+class mpf.config_players.queue_relay_player.QueueRelayPlayer(machine)
+```
 
-Bases: mpf.core.config_player.ConfigPlayer
+Bases: `mpf.core.config_player.ConfigPlayer`
 
 Blocks queue events and converts them to normal events.
 
@@ -31,3 +34,7 @@ Block queue event.
 
 Validate one entry of this player.
 
+## Related Pages:
+
+* [queue_relay_player: Config Reference](../../../config/queue_relay_player.md)
+* [Queue Relay player Config Player Reference](../../../config_players/queue_relay_player.md)

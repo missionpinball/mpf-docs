@@ -1,9 +1,12 @@
+# queue_event_player API Reference
 
-# self.machine.queue_event_player
+`self.machine.queue_event_player`
 
-`class mpf.config_players.queue_event_player.QueueEventPlayer(machine)`
+``` python
+class mpf.config_players.queue_event_player.QueueEventPlayer(machine)
+```
 
-Bases: mpf.core.config_player.ConfigPlayer
+Bases: `mpf.core.config_player.ConfigPlayer`
 
 Posts queue events based on config.
 
@@ -27,3 +30,8 @@ Post queue events.
 
 Validate one entry of this player.
 
+## Related Pages:
+
+* [Queue Events](../../../events/overview/event_types.md#queue-events)
+* [queue_event_player: Config Reference](../../../config/queue_event_player.md)
+* [Queue Event player Config Player Reference](../../../config/queue_event_player.md)

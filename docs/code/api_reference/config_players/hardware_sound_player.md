@@ -1,7 +1,10 @@
+# hardware_sound_player API Reference
 
-# self.machine.hardware_sound_player
+`self.machine.hardware_sound_player`
 
-`class mpf.config_players.hardware_sound_player.HardwareSoundPlayer(machine)`
+``` python
+class mpf.config_players.hardware_sound_player.HardwareSoundPlayer(machine)
+```
 
 Bases: `mpf.config_players.device_config_player.DeviceConfigPlayer`
 
@@ -27,3 +30,7 @@ Parse string config.
 
 Play sound on external card.
 
+## Related Pages:
+
+* [hardware_sound_player: Config Reference](../../../config/hardware_sound_player.md)
+* [Hardware Sound player Config Player Reference](../../../config_players/hardware_sound_player.md)

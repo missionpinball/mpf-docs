@@ -1,7 +1,8 @@
-
 # TestMachineController
 
-`class mpf.tests.MpfTestCase.TestMachineController(options, config, config_patches, config_defaults, clock, mock_data, enable_plugins=False)`
+``` python
+class mpf.tests.MpfTestCase.TestMachineController(options, config, config_patches, config_defaults, clock, mock_data, enable_plugins=False)
+```
 
 Bases: `mpf.core.machine.MachineController`
 
@@ -87,14 +88,14 @@ Register a monitor.
 
 Parameters:
 
-* **monitor_class** – String name of the monitor class for this monitor that’s being registered.
+* **monitor_class** – String name of the monitor class for this monitor that's being registered.
 * **monitor** – Callback to notify
 
 MPF uses monitors to allow components to monitor certain internal elements of MPF.
 
 For example, a player variable monitor could be setup to be notified of any changes to a player variable, or a switch monitor could be used to allow a plugin to be notified of any changes to any switches.
 
-The MachineController’s list of registered monitors doesn’t actually do anything. Rather it’s a dictionary of sets which the monitors themselves can reference when they need to do something. We just needed a central registry of monitors.
+The MachineController's list of registered monitors doesn't actually do anything. Rather it's a dictionary of sets which the monitors themselves can reference when they need to do something. We just needed a central registry of monitors.
 
 `reset() → None`
 
@@ -139,4 +140,3 @@ Information includes Python version, Python executable, platform, and core archi
 Log a message at the warning level.
 
 These messages will always be shown in the console and the log file.
-

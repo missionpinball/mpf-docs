@@ -1,9 +1,8 @@
 ---
-title: "segment_displays:"
+title: "segment_displays: Config Reference"
 ---
 
-# segment_displays:
-
+# segment_displays: Config Reference
 
 --8<-- "config_section.md"
 
@@ -46,7 +45,7 @@ colors than the `size` of your display the other digitis will have `white` as de
 
 ### default_transition_update_hz:
 
-Single value, type: float_or_token. Default: `30`
+Single value, type: `float_or_token`. Default: `30`
 
 The speed (steps per second) at which text transition effects will be
 updated in the display.
@@ -80,7 +79,7 @@ This can be used to overwrite the platform which is defined in the
 
 ### platform_settings:
 
-Single value, type: dict. Defaults to empty.
+Single value, type: `dict`. Defaults to empty.
 
 Platform specific settings. See your
 [segment platform documentation](../hardware/segment_display_platforms.md).

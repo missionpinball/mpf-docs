@@ -1,6 +1,10 @@
-# self.machine.bcp
+# bcp API Reference
 
-`class mpf.core.bcp.bcp.Bcp(machine: MachineController)`
+`self.machine.bcp`
+
+``` python
+class mpf.core.bcp.bcp.Bcp(machine: MachineController)
+```
 
 Bases: `mpf.core.mpf_controller.MpfController`
 
@@ -8,7 +12,7 @@ BCP Module.
 
 ## Accessing the bcp in code
 
-There is only one instance of the bcp in MPF, and it’s accessible via self.machine.bcp.
+There is only one instance of the bcp in MPF, and it's accessible via self.machine.bcp.
 
 ## Methods & Attributes
 
@@ -21,3 +25,7 @@ Emulate legacy send.
 Parameters:
 
 * **bcp_command** – Commmand to send
+
+## Related Pages:
+
+* [bcp: Config Reference](../../../config/bcp.md)

@@ -7,7 +7,7 @@ title: Scoring
 
 Related Config File Sections:
 
-* [ss_style_score_queues](../../config/variable_player.md)
+* [variable_player](../../config/variable_player.md)
 
 The variable_player is commonly used to score points for the current
 player when a certain event is posted. This event could be a switch hit
@@ -228,9 +228,9 @@ variable_player:
 #! assert_player_variable 1000400 score
 ```
 
-Related How To Guides
+## Related How To Guides
 
-* [ss_style_score_queues](../high_scores/index.md)
-* [ss_style_score_queues](../logic_blocks/scoring_based_on_logic_blocks.md)
-* [ss_style_score_queues](../../cookbook/top_lanes_with_multiplier.md)
-* [How to implement solid state game style score queues in MPF](ss_style_score_queues.md)-----
+* [High Scores](../high_scores/index.md)
+* [Scoring Based on Logic Blocks](../logic_blocks/scoring_based_on_logic_blocks.md)
+* [Implementing a Mode for Top Lanes with Multiplier and Scoring](../../cookbook/top_lanes_with_multiplier.md)
+* [How to implement solid state game style score queues in MPF](ss_style_score_queues.md)

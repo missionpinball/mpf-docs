@@ -1,9 +1,8 @@
 ---
-title: "sound_system_tracks:"
+title: "sound_system_tracks: Config Reference"
 ---
 
-# sound_system_tracks:
-
+# sound_system_tracks: Config Reference
 
 --8<-- "config_section.md"
 

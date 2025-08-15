@@ -1,9 +1,8 @@
 ---
-title: "keyboard:"
+title: "keyboard: Config Reference"
 ---
 
-# keyboard:
-
+# keyboard: Config Reference
 
 --8<-- "config_section.md"
 
@@ -89,7 +88,7 @@ and *direction=1*.
 
 ### switch:
 
-Single value, type: string name of a
+Single value, type: `string` name of a
 [switches:](switches.md) device. Defaults to
 empty.
 

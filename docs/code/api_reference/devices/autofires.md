@@ -1,9 +1,16 @@
+# autofires API Reference
 
-# self.machine.autofires.*
+Config Reference:
 
-`class mpf.devices.autofire.AutofireCoil(*args, **kwargs)`
+* [autofire_coils:](../../../config/autofire_coils.md)
 
-Bases: mpf.core.system_wide_device.SystemWideDevice
+`self.machine.autofires.*`
+
+``` python
+class mpf.devices.autofire.AutofireCoil(*args, **kwargs)
+```
+
+Bases: `mpf.core.system_wide_device.SystemWideDevice`
 
 Autofire coils which fire based on switch hits with a hardware rule. Coils in the pinball machine which should fire automatically based on switch hits using defined hardware switch rules. Autofire coils work with rules written to the hardware pinball controller that allow them to respond “instantly” to switch hits versus waiting for the lag of USB and the host computer. Examples of Autofire Coils are pop bumpers, slingshots, and kicking targets. (Flippers use the same autofire rules under the hood, but flipper devices have their own device type in MPF.
 
@@ -54,4 +61,3 @@ Raise a ConfigFileError exception.
 `subscribe_attribute(item, machine)`
 
 Subscribe to an attribute.
-

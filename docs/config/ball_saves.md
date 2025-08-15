@@ -1,9 +1,8 @@
 ---
-title: "ball_saves:"
+title: "ball_saves: Config Reference"
 ---
 
-# ball_saves:
-
+# ball_saves: Config Reference
 
 --8<-- "config_section.md"
 
@@ -143,7 +142,7 @@ drains it will not be saved.
 
 ### source_playfield:
 
-Single value, type: string name of a
+Single value, type: `string` name of a
 [ball_devices:](ball_devices.md) device.
 Default: `playfield`
 

@@ -1,13 +1,20 @@
+# trinamics_steprocker API Reference
 
-# self.machine.hardware_platforms[‘trinamics_steprocker’]
+Config Reference:
 
-`class mpf.platforms.trinamics_steprocker.TrinamicsStepRocker(machine)`
+* [trinamics_steprocker:](../../../config/trinamics_steprocker.md)
 
-Bases: mpf.core.platform.StepperPlatform
+`self.machine.hardware_platforms['trinamics_steprocker']`
+
+``` python
+class mpf.platforms.trinamics_steprocker.TrinamicsStepRocker(machine)
+```
+
+Bases: `mpf.core.platform.StepperPlatform`
 
 Supports the Trinamics Step Rocker via PySerial.
 
-Works with Trinamics Step Rocker. TBD other ‘TMCL’ based steppers eval boards
+Works with Trinamics Step Rocker. TBD other 'TMCL' based steppers eval boards
 
 ## Accessing the trinamics_steprocker platform via code
 

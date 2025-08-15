@@ -1,9 +1,12 @@
+# variable_player API Reference
 
-# self.machine.variable_player
+`self.machine.variable_player`
 
-`class mpf.config_players.variable_player.VariablePlayer(machine: mpf.core.machine.MachineController)`
+``` python
+class mpf.config_players.variable_player.VariablePlayer(machine: mpf.core.machine.MachineController)
+```
 
-Bases: mpf.core.config_player.ConfigPlayer
+Bases: `mpf.core.config_player.ConfigPlayer`
 
 Posts events based on config.
 
@@ -43,3 +46,7 @@ Variable name.
 
 Validate one entry of this player.
 
+## Related Pages:
+
+* [variable_player: Config Reference](../../../config/variable_player.md)
+* [Variable player Config Player Reference](../../../config_players/variable_player.md)

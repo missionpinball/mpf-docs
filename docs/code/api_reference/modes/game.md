@@ -1,9 +1,16 @@
+# Game Mode API Reference
 
-# self.machine.modes.game
+Config Reference:
 
-`class mpf.modes.game.code.game.Game(*args, **kwargs)`
+* [game:](../../../config/game.md)
 
-Bases: mpf.core.async_mode.AsyncMode
+`self.machine.modes.game`
+
+``` python
+class mpf.modes.game.code.game.Game(*args, **kwargs)
+```
+
+Bases: `mpf.core.async_mode.AsyncMode`
 
 Base mode that runs an active game on a pinball machine.
 
@@ -25,18 +32,18 @@ Return True if this mode is active.
 
 Register an event handler which is automatically removed when this mode stops.
 
-This method is similar to the Event Manager’s add_handler() method, except this method automatically unregisters the handlers when the mode ends.
+This method is similar to the Event Manager's add_handler() method, except this method automatically unregisters the handlers when the mode ends.
 
 Parameters:
 
-* **event** – String name of the event you’re adding a handler for. Since events are text strings, they don’t have to be pre-defined.
+* **event** – String name of the event you're adding a handler for. Since events are text strings, they don't have to be pre-defined.
 * **handler** – The method that will be called when the event is fired.
-* **priority** – An arbitrary integer value that defines what order the handlers will be called in. The default is 1, so if you have a handler that you want to be called first, add it here with a priority of 2. (Or 3 or 10 or 100000.) The numbers don’t matter. They’re called from highest to lowest. (i.e. priority 100 is called before priority 1.)
-* ****kwargs** – Any any additional keyword/argument pairs entered here will be attached to the handler and called whenever that handler is called. Note these are in addition to kwargs that could be passed as part of the event post. If there’s a conflict, the event-level ones will win.
+* **priority** – An arbitrary integer value that defines what order the handlers will be called in. The default is 1, so if you have a handler that you want to be called first, add it here with a priority of 2. (Or 3 or 10 or 100000.) The numbers don't matter. They're called from highest to lowest. (i.e. priority 100 is called before priority 1.)
+* ****kwargs** – Any any additional keyword/argument pairs entered here will be attached to the handler and called whenever that handler is called. Note these are in addition to kwargs that could be passed as part of the event post. If there's a conflict, the event-level ones will win.
 
-Returns a EventHandlerKey to the handler which you can use to later remove the handler via remove_handler_by_key. Though you don’t need to remove the handler since the whole point of this method is they’re automatically removed when the mode stops.
+Returns a EventHandlerKey to the handler which you can use to later remove the handler via remove_handler_by_key. Though you don't need to remove the handler since the whole point of this method is they're automatically removed when the mode stops.
 
-Note that if you do add a handler via this method and then remove it manually, that’s ok too.
+Note that if you do add a handler via this method and then remove it manually, that's ok too.
 
 `ball_drained(balls=0, **kwargs)`
 
@@ -62,7 +69,7 @@ Property which holds the current number of balls in play.
 
 Note that the number of balls in play is not necessarily the same as the number of balls that are active on the playfield. (For example, a ball could be held in a device while a show is playing, etc.)
 
-You can set this property to change it, or get it’s value.
+You can set this property to change it, or get it's value.
 
 If you set this value to 0, the ball ending process will be started.
 
@@ -79,7 +86,7 @@ Parameters:
 
 `create_mode_devices() → None`
 
-Create new devices that are specified in a mode config that haven’t been created in the machine-wide.
+Create new devices that are specified in a mode config that haven't been created in the machine-wide.
 
 `debug_log(msg: str, *args, context=None, error_no=None, **kwargs) → None`
 
@@ -159,9 +166,9 @@ Raise a ConfigFileError exception.
 
 Request to add a player to an active game.
 
-This method contains the logic to verify whether it’s ok to add a player. For example, the game must be on Ball 1 and the current number of players must be less than the max number allowed.
+This method contains the logic to verify whether it's ok to add a player. For example, the game must be on Ball 1 and the current number of players must be less than the max number allowed.
 
-Assuming this method believes it’s ok to add a player, it posts the boolean event player_add_request to give other modules the opportunity to deny it. For example, a credits module might deny the request if there are not enough credits in the machine.
+Assuming this method believes it's ok to add a player, it posts the boolean event player_add_request to give other modules the opportunity to deny it. For example, a credits module might deny the request if there are not enough credits in the machine.
 
 If player_add_request comes back True, the event player_added is posted with a reference to the new player object as a player kwarg.
 
@@ -171,7 +178,7 @@ Start this mode.
 
 Parameters:
 
-* **mode_priority** – Integer value of what you want this mode to run at. If you don’t specify one, it will use the “Mode: priority” setting from this mode’s configuration file.
+* **mode_priority** – Integer value of what you want this mode to run at. If you don't specify one, it will use the “Mode: priority” setting from this mode's configuration file.
 * **callback** – Callback to call when this mode has been started.
 * ****kwargs** – Catch-all since this mode might start from events with who-knows-what keyword arguments.
 
@@ -195,4 +202,3 @@ Returns true if the mode is running. Otherwise false.
 Log a message at the warning level.
 
 These messages will always be shown in the console and the log file.
-

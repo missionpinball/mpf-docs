@@ -1,9 +1,8 @@
 ---
-title: "sequences:"
+title: "sequences: Config Reference"
 ---
 
-# sequences:
-
+# sequences: Config Reference
 
 --8<-- "config_section.md"
 

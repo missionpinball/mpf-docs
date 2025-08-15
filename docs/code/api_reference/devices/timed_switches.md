@@ -1,9 +1,16 @@
+# timed_switches API Reference
 
-# self.machine.timed_switches.*
+Config Reference:
 
-`class mpf.devices.timed_switch.TimedSwitch(*args, **kwargs)`
+* [timed_switches:](../../../config/timed_switches.md)
 
-Bases: mpf.core.system_wide_device.SystemWideDevice, mpf.core.mode_device.ModeDevice
+`self.machine.timed_switches.*`
+
+``` python
+class mpf.devices.timed_switch.TimedSwitch(*args, **kwargs)
+```
+
+Bases: `mpf.core.system_wide_device.SystemWideDevice`, `mpf.core.mode_device.ModeDevice`
 
 Timed Switch device.
 
@@ -40,4 +47,3 @@ Raise a ConfigFileError exception.
 `subscribe_attribute(item, machine)`
 
 Subscribe to an attribute.
-

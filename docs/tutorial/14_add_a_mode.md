@@ -94,10 +94,9 @@ four spaces and type `priority: 100`. Your `base.yaml` file should now
 look like this:
 
 ``` yaml
-##! mode: my_mode
 #config_version=5
 mode:
-  start_events: ball_started
+  start_events: ball_starting
   priority: 100
 ```
 

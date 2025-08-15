@@ -1,9 +1,8 @@
 ---
-title: "hardware:"
+title: "hardware: Config Reference"
 ---
 
-# hardware:
-
+# hardware: Config Reference
 
 --8<-- "config_section.md"
 

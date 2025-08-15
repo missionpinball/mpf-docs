@@ -1,9 +1,8 @@
 ---
-title: "digital_outputs:"
+title: "digital_outputs: Config Reference"
 ---
 
-# digital_outputs:
-
+# digital_outputs: Config Reference
 
 --8<-- "config_section.md"
 
@@ -81,7 +80,7 @@ In case you want to overwrite the default platform (as defined in
 
 ### platform_settings:
 
-Single value, type: dict. Defaults to empty.
+Single value, type: `dict`. Defaults to empty.
 
 Dict of platform specific settings. Consult your platform documentation
 for those settings.

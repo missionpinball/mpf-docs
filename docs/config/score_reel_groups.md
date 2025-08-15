@@ -1,9 +1,8 @@
 ---
-title: "score_reel_groups:"
+title: "score_reel_groups: Config Reference"
 ---
 
-# score_reel_groups:
-
+# score_reel_groups: Config Reference
 
 --8<-- "config_section.md"
 

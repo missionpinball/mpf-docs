@@ -1,9 +1,12 @@
+# blocking_player API Reference
 
-# self.machine.blocking_player
+`self.machine.blocking_player`
 
-`class mpf.config_players.block_event_player.BlockEventPlayer(machine)`
+``` python
+class mpf.config_players.block_event_player.BlockEventPlayer(machine)
+```
 
-Bases: mpf.core.config_player.ConfigPlayer
+Bases: `mpf.core.config_player.ConfigPlayer`
 
 Posts events based on config.
 
@@ -26,4 +29,3 @@ Block event.
 `validate_config_entry(settings: dict, name: str) → dict`
 
 Validate one entry of this player.
-

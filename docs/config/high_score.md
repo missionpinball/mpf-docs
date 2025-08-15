@@ -1,9 +1,8 @@
 ---
-title: "high_score:"
+title: "high_score: Config Reference"
 ---
 
-# high_score:
-
+# high_score: Config Reference
 
 --8<-- "config_section.md"
 

@@ -1,9 +1,8 @@
 ---
-title: "text_ui:"
+title: "text_ui: Config Reference"
 ---
 
-# text_ui:
-
+# text_ui: Config Reference
 
 --8<-- "config_section.md"
 
@@ -56,6 +55,7 @@ Text UI.
 If the `player_vars:` setting is not included in your config, *all*
 player variables will be displayed.
 
-## Related How To guides
+## Related Pages:
 
 * [Dynamically Updating Text](../mc/widgets/text/text_dynamic.md)
+* [text_ui API Reference](../code/api_reference/core/text_ui.md)
