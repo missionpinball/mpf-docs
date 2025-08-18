@@ -291,6 +291,8 @@ Special-purpose tags for switches include:
     and [flipper_cancel](../events/flipper_cancel.md) events if your cabinet flipper buttons are tagged with
     their respective flippers. With MPF 0.80, the built-in high_score mode and slide hook onto these two flipper tags
     to control character selection and submission.
+* `no_audit` and `no_audit_free` - The MPF switch auditor will not create audits for switches using these tags.
+    The `no_audit` will exclude the switch in all cases, and `no_audit_free` will only exclude the switch while in free play.
 
 #### Tags for optional built-in modes
 
