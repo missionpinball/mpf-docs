@@ -622,7 +622,7 @@ Special-purpose tags for ball devices include:
     device receiving balls from the playfield which it then immediately
     kicks over to a "trough" device which holds the balls that are not
     in play.
-    \+ `no-eject-on-ballsearch` - Specifies that this device should
+* `no-eject-on-ballsearch` - Specifies that this device should
     never attempt to eject a ball as a result of ball search, even when
     idle and containing no balls.
 

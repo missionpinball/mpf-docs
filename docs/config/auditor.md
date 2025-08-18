@@ -23,11 +23,22 @@ file.)
 
 ``` yaml
 auditor:
-  save_events: ball_ended game_ended
-  audit: shots switches events player
-  events: ball_search_begin machine_init_phase_1 game_started game_ended machine_reset
-  player: score
-  num_player_top_records: 10
+    save_events:
+      -  game_started
+      -  ball_ended
+      -  game_ended
+    num_player_top_records: 10
+    audit:
+      -  shots
+      -  switches
+      -  events
+      -  player
+    events:
+      -  game_started
+      -  game_ended
+    player:
+      -  score
+
 ```
 
 ## Optional settings
