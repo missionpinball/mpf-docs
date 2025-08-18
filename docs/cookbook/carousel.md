@@ -281,4 +281,4 @@ mode:
 
 ## Related How To guides:
 
-* [How to design a game in MPF using Modes](../index.md)
+* [How to design a game in MPF using Modes](../game_design/index.md)
