@@ -39867,11 +39867,21 @@ its audits to <code>/audits/audits.yaml</code> in the folder for each machine.
 (Check out the documentation on the Auditor to see a sample audit log
 file.)</p>
 <div class="highlight"><pre><span></span><code><span class="nt">auditor</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">save_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ball_ended game_ended</span>
-<span class="w">  </span><span class="nt">audit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">shots switches events player</span>
-<span class="w">  </span><span class="nt">events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ball_search_begin machine_init_phase_1 game_started game_ended machine_reset</span>
-<span class="w">  </span><span class="nt">player</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">score</span>
-<span class="w">  </span><span class="nt">num_player_top_records</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="w">    </span><span class="nt">save_events</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">game_started</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">ball_ended</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">game_ended</span>
+<span class="w">    </span><span class="nt">num_player_top_records</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="w">    </span><span class="nt">audit</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">shots</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">switches</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">events</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">player</span>
+<span class="w">    </span><span class="nt">events</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">game_started</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">game_ended</span>
+<span class="w">    </span><span class="nt">player</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">score</span>
 </code></pre></div>
 <h2 id="optional-settings">Optional settings</h2>
 <p>The following sections are optional in the <code>auditor:</code> section of your
