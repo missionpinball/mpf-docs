@@ -40,3 +40,7 @@ The structure look like this:
 All test assertions are defined in
 [MpfDocTestCase](https://github.com/missionpinball/mpf/blob/dev/mpf/tests/MpfDocTestCase.py).
 Just remove the `command_` prefix and you are good to go.
+
+## Related Pages
+
+* [How to run MPF unittests](../code/Writing_Tests/RunUnitTests.md)
