@@ -77,7 +77,8 @@ config. (If you don't include them, the default will be used).
 Single value, type: `time string (ms)`
 ([Instructions for entering time strings](instructions/time_strings.md)). Default: `4s`
 
-How long should the award slide be displayed?
+How long should the award slide be displayed? If you are not using an award slide,
+you should set this to 0.
 
 ### defaults:
 
