@@ -24,7 +24,7 @@ icons & this code generated via https://realfavicongenerator.net
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.17">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
     
     
       
@@ -40212,12 +40212,13 @@ below.</p>
 <p>Single value, type: <code>boolean</code> (Yes/No or True/False). Default: <code>False</code></p>
 <p>Controls whether the lights or LEDs for shots which have this profile
 applied will be active when this shot is disabled. By default this is
-<em>true</em>, so if the shot profile associated with this shot has the light
-turning on, then when you disable the shot the light will stay on. Set
-it to <em>false</em> if you want the lights or LEDs to turn off when the shot
-is disabled. (Note that even when this is false, the lights or LEDs can
-still be controlled by other light scripts, light shows, manual
+<em>False</em>, so when the shot is disabled, the show it was running will be
+turned off, and thus the lights turned off. (Of course, the lights or
+LEDs can still be controlled by other light scripts, light shows, manual
 commands, etc.)</p>
+<p>If you change this to <em>True</em>, and the shot profile associated with this
+shot has a light turned on in its show, then when you disable the shot,
+the light will stay lit.</p>
 <h3 id="state_names_to_not_rotate">state_names_to_not_rotate:</h3>
 <p>List of one (or more) values, each is a type: <code>string</code>. Default: <code>None</code></p>
 <p>This is a list of state names that will be used to determine which shots
@@ -40387,7 +40388,8 @@ Is something wrong or missing? Is something out of date, or can you explain it b
   
 </div>
       
-        <div class="md-social">
+        
+<div class="md-social">
   
     
     
