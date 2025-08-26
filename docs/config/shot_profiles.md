@@ -172,12 +172,14 @@ Single value, type: `boolean` (Yes/No or True/False). Default: `False`
 
 Controls whether the lights or LEDs for shots which have this profile
 applied will be active when this shot is disabled. By default this is
-*true*, so if the shot profile associated with this shot has the light
-turning on, then when you disable the shot the light will stay on. Set
-it to *false* if you want the lights or LEDs to turn off when the shot
-is disabled. (Note that even when this is false, the lights or LEDs can
-still be controlled by other light scripts, light shows, manual
+*False*, so when the shot is disabled, the show it was running will be
+turned off, and thus the lights turned off. (Of course, the lights or
+LEDs can still be controlled by other light scripts, light shows, manual
 commands, etc.)
+
+If you change this to *True*, and the shot profile associated with this
+shot has a light turned on in its show, then when you disable the shot,
+the light will stay lit.
 
 ### state_names_to_not_rotate:
 
