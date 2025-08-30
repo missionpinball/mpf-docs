@@ -148,6 +148,7 @@ blinkenlight has. Now, let's say you use a blinkenlight_player to add
 the color red to the blinkenlight. Now the blinkenlight's cycle would
 look like this:
 
+```
 +-------+-------+-------+-------+-------+-------+-------+-------+
 | 1     |       | 1     |       | 1     |       | 1     |       |
 | s     |       | s     |       | s     |       | s     |       |
@@ -166,7 +167,7 @@ this:
 +-------+-------+-------+-------+-------+-------+-------+-------+
 | > red | green | > red | green | > red | green | > red | green |
 +-------+-------+-------+-------+-------+-------+-------+-------+
-
+```
 Now let's say a third color (blue) is added:
 
 <table style="width:86%;">

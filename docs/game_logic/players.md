@@ -59,6 +59,7 @@ piece of text, you'll need to create a player variable of type "str"
 to denote a string of characters. Here are the data types available in
 MPF.
 
+```
   ------------------------------------------
   Datatype     Description
   ------------ -----------------------------
@@ -72,6 +73,7 @@ MPF.
                precise number with decimal
                point
   ------------------------------------------
+```
 
 **Examples:**
 
