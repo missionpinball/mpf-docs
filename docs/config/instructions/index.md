@@ -27,3 +27,9 @@ This section contains instructions for how to do various things in config files.
 
 * [Gamma correction in MPF](gamma_correction.md)
 * [How to enter gain values in config files](gain_values.md)
+
+## Additional Resources:
+
+* [Config Players in Machine/Mode files and Show files](../config_players/index.md)
+* [Show Configuration Format](../../shows/format.md)
+* [Creating Shows in Config Files](../../shows/config_shows.md)
