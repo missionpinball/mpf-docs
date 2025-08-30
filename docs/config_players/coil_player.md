@@ -5,8 +5,7 @@ title: Coil player
 # Coil player
 
 
-The *coil player* is a
-[config player](index.md)
+The *coil player* is a [config player](index.md)
 that's used pulse, enable, or disable coils and drivers.
 
 This is an example:

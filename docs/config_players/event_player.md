@@ -5,9 +5,7 @@ title: Event player
 # Event player
 
 
-The *event player* is a
-[config player](index.md)
-that's used to post events.
+The *event player* is a [config player](index.md) that's used to post events.
 
 Video about events in MPF:
 

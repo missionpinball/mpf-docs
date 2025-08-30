@@ -5,15 +5,13 @@ title: Slide player
 # Slide player
 
 
-The *slide player* is a
-[config player](index.md) in
+The *slide player* is a [config player](index.md) in
 the MPF media controller that is used to play slide content, including
 showing slides, hiding slides, and removing slides. (This player is part
 of the MPF media controller and only available if you're using MPF-MC
 for your media controller.)
 
-Note that the slide player is a
-[config_player](index.md),
+Note that the slide player is a [config_player](index.md),
 so everything mentioned below is valid in the `slide_player:` section of
 a config file *and* in the `slides:` section of a show step. You can
 test slides and widgets interactively using
@@ -176,5 +174,4 @@ of how to use the slide player in both config and show files.
 
 ## Config Options
 
-See [slide_player:](../config/slide_player.md) for config
-details.
+See [slide_player:](../config/slide_player.md) for config details.

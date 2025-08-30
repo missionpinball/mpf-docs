@@ -5,8 +5,7 @@ title: Light player
 # Light player
 
 
-The *light player* is a
-[config player](index.md)
+The *light player* is a [config player](index.md)
 that's used to set the brightness and color of lights (including
 turning them on and off).
 

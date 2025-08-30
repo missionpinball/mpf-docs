@@ -5,8 +5,7 @@ title: Queue Event player
 # Queue Event player
 
 
-The *queue event player* is a
-[config player](index.md)
+The *queue event player* is a [config player](index.md)
 that's used to play queue events.
 
 Video about events in MPF:

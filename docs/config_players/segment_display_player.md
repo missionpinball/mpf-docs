@@ -5,8 +5,7 @@ title: Segment Display player
 # Segment Display player
 
 
-The *segment display player* is a
-[config player](index.md)
+The *segment display player* is a [config player](index.md)
 that's used to show text or numbers on segment displays.
 
 ## Usage in config files

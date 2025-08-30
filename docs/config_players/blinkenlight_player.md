@@ -5,8 +5,7 @@ title: Blinkenlight player
 # Blinkenlight player
 
 
-The *blinkenlight player* is a
-[config player](index.md)
+The *blinkenlight player* is a [config player](index.md)
 that's used add or remove colors from a blinkenlight.
 
 !!! note

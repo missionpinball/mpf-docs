@@ -5,8 +5,7 @@ title: Sound Loop player
 # Sound Loop player
 
 
-The *sound loop player* is a
-[config player](index.md)
+The *sound loop player* is a [config player](index.md)
 that's used to control sound loop sets (used by sound loop audio
 tracks). (This player is part of the MPF media controller and only
 available if you're using MPF-MC for your media controller.)

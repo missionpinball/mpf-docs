@@ -5,14 +5,12 @@ title: Widget player
 # Widget player
 
 
-The *widget player* is a
-[config player](index.md)
+The *widget player* is a [config player](index.md)
 that's used to add or remove widgets to existing slides on a display.
 (This player is part of the MPF media controller and only available if
 you're using MPF-MC for your media controller.)
 
-Note that the widget player is a
-[config_player](index.md),
+Note that the widget player is a [config_player](index.md),
 so everything mentioned below is valid in the `widget_player:` section
 of a config file *and* in the `widgets:` section of a
 [show step](../shows/content.md).
@@ -88,5 +86,4 @@ step.
 
 ## Config Options
 
-See [widget_player:](../config/widget_player.md) for config
-details.
+See [widget_player:](../config/widget_player.md) for config details.

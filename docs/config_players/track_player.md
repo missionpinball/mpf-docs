@@ -5,8 +5,7 @@ title: Track player
 # Track player
 
 
-The *track player* is a
-[config player](index.md)
+The *track player* is a [config player](index.md)
 that's used to control audio tracks when MPF events are received.
 Tracks can be stopped, paused, or played with an optional fade time. The
 volume of a track can also be changed with an optional fade time.
@@ -65,6 +64,5 @@ shows:
 
 ## Config Options
 
-Additional information may be found in the
-[track_player](../config/track_player.md)
+Additional information may be found in the [track_player](../config/track_player.md)
 configuration reference documentation.

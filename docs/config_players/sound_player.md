@@ -5,8 +5,7 @@ title: Sound player
 # Sound player
 
 
-The *sound player* is a
-[config player](index.md)
+The *sound player* is a [config player](index.md)
 that's used to control sounds. (This player is part of the MPF media
 controller and only available if you're using MPF-MC for your media
 controller.)
@@ -27,6 +26,5 @@ In shows, the sound player is used via the `sounds:` section of a step.
 
 ## Optional settings
 
-Additional information may be found in the
-[sound_player](../config/sound_player.md)
+Additional information may be found in the [sound_player](../config/sound_player.md)
 configuration reference documentation.

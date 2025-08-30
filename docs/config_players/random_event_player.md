@@ -5,8 +5,7 @@ title: Random event player
 # Random event player
 
 
-The *random event player* is a
-[config player](index.md)
+The *random event player* is a [config player](index.md)
 that's used to post random events from a list of events.
 
 This is an example:
