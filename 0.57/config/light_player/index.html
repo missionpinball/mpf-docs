@@ -17,7 +17,7 @@ icons & this code generated via https://realfavicongenerator.net
         <link rel="canonical" href="https://missionpinball.org/latest/config/light_player/">
       
       
-        <link rel="prev" href="../hardware_sound_player/">
+        <link rel="prev" href="../flasher_player/">
       
       
         <link rel="next" href="../queue_event_player/">
@@ -17214,8 +17214,6 @@ icons & this code generated via https://realfavicongenerator.net
       
         
       
-        
-      
     
     
     
@@ -17369,29 +17367,6 @@ icons & this code generated via https://realfavicongenerator.net
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../hardware_sound_player/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    hardware_sound_player:
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -17462,6 +17437,54 @@ icons & this code generated via https://realfavicongenerator.net
       color:
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="color:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#special-color-directives-on-off-and-stop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Special color directives: on, off, and stop
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Special color directives: on, off, and stop">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#on" class="md-nav__link">
+    <span class="md-ellipsis">
+      on
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#off" class="md-nav__link">
+    <span class="md-ellipsis">
+      off
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stop" class="md-nav__link">
+    <span class="md-ellipsis">
+      stop
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -20352,6 +20375,8 @@ icons & this code generated via https://realfavicongenerator.net
       
         
       
+        
+      
     
     
     
@@ -20514,6 +20539,29 @@ icons & this code generated via https://realfavicongenerator.net
   
   <span class="md-ellipsis">
     hardware_benchmark:
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hardware_sound_player/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    hardware_sound_player:
     
   </span>
   
@@ -40041,6 +40089,54 @@ icons & this code generated via https://realfavicongenerator.net
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="color:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#special-color-directives-on-off-and-stop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Special color directives: on, off, and stop
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Special color directives: on, off, and stop">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#on" class="md-nav__link">
+    <span class="md-ellipsis">
+      on
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#off" class="md-nav__link">
+    <span class="md-ellipsis">
+      off
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stop" class="md-nav__link">
+    <span class="md-ellipsis">
+      stop
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -40142,17 +40238,23 @@ lights in config or shows. Example in config:</p>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><span class="nt">shows</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">rainbow</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<span class="w">      </span><span class="nt">lights</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">(leds)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<span class="w">      </span><span class="nt">lights</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">(leds)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">orange</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<span class="w">      </span><span class="nt">lights</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">(leds)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yellow</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<span class="w">      </span><span class="nt">lights</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">(leds)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">green</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<span class="w">      </span><span class="nt">lights</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">(leds)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">blue</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<span class="w">      </span><span class="nt">lights</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">(leds)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">purple</span>
 </code></pre></div>
 <h2 id="optional-settings">Optional settings</h2>
@@ -40172,9 +40274,25 @@ section of your config. The colors MPF knows can be easily checked by reading:
 If you use brightness on an RGB light MPF will
 use the brightness for every channel. For instance brigness <code>AA</code> will
 result in color <code>AAAAAA</code>.</p>
-<p>There is a special color <code>stop</code> which will remove the current light
-entry from the light stack and the current show will become transparent
-to underlying shows as if the light has never been used in this show.</p>
+<h4 id="special-color-directives-on-off-and-stop">Special color directives: <code>on</code>, <code>off</code>, and <code>stop</code></h4>
+<p>MPF supports a few special terms that may be used instead of a color value.</p>
+<h5 id="on"><code>on</code></h5>
+<p>If your light has a <a href="../lights/#default_on_color">default_on_color</a> set, then instead of having
+to name that color in particular, you can just use <code>on</code>. If you do not have one set, the light will
+instead turn white (or its native color if single-channel.)</p>
+<h5 id="off"><code>off</code></h5>
+<p>When you turn a light on to a certain color in a show, it will remain on throughout the show unless
+directed otherwise. If you want your light to turn on for only a specific time, you will need to
+explicitly set it to <code>off</code>. Another use case for <code>off</code> is when a lower-priority show has a light turned on,
+but another show at a higher prority wants to override this -- you can set a light to <code>off</code> in a show without
+having turned it on in that show first, just to ensure it is truly off.</p>
+<h5 id="stop"><code>stop</code></h5>
+<p>The <code>off</code>directive tells the light controller to specifically hold a light to no power, but does <em>not</em>
+release the light from control. If you instead have a show that <em>no longer needs control</em> over a light
+that it has already set at least once, you can use <code>stop</code> to remove the show's priority level hold on
+the light's color. Imagine having something like a lightning strike show, where lights from all over
+your machine flash yellow, but then immediately return to their previous color setting -- you would use
+<code>stop</code> the step after each light flash to allow the previously-set color to show through again.</p>
 <h3 id="fade">fade:</h3>
 <p>Single value, type: <code>ms_or_token</code>. Defaults to empty.</p>
 <p>Time to fade this light in ms. Use this to achieve smooth transitions
@@ -40249,7 +40367,7 @@ Is something wrong or missing? Is something out of date, or can you explain it b
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../hardware_sound_player/" class="md-footer__link md-footer__link--prev" aria-label="Previous: hardware_sound_player:">
+          <a href="../flasher_player/" class="md-footer__link md-footer__link--prev" aria-label="Previous: flasher_player:">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -40259,7 +40377,7 @@ Is something wrong or missing? Is something out of date, or can you explain it b
                 Previous
               </span>
               <div class="md-ellipsis">
-                hardware_sound_player:
+                flasher_player:
               </div>
             </div>
           </a>
