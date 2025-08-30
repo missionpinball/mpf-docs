@@ -4,6 +4,7 @@ title: Slide player
 
 # Slide player
 
+* [slide_player: Config Reference](../config/slide_player.md)
 
 The *slide player* is a [config player](index.md) in
 the MPF media controller that is used to play slide content, including
@@ -171,7 +172,3 @@ In shows, the slide player is used via the `slides:` section of a step.
 
 Refer to the [slide_player](../config/slide_player.md) section of the config file reference for a full explanation
 of how to use the slide player in both config and show files.
-
-## Config Options
-
-See [slide_player:](../config/slide_player.md) for config details.

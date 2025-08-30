@@ -44,6 +44,7 @@ Let us know if you hit any of those and we can develop a plan forward.
 
 ## Protocol reference (v0.08)-
 
+```
   Byte           Length         Description
   -------------- -------------- ------------------------------------------
   0              1              Command Byte (see table below
@@ -59,6 +60,7 @@ Let us know if you hit any of those and we can develop a plan forward.
 
   n              1              Null byte
   ------------------------------------------------------------------------
+```
 
   : String format (in both payload and response)
 
@@ -68,12 +70,14 @@ Get the name of the connected hardware. Does not have any payload.
 
 Example:
 
+```
   -----------------------------------------------------------------------
   Byte        Length      Example     Comment
   ----------- ----------- ----------- -----------------------------------
   0           1           0           Command 0 - Get Connected Hardware
 
   -----------------------------------------------------------------------
+```
 
   : Command 0x00 - Get Connected Hardware
 
@@ -92,12 +96,14 @@ Get firmware version of the hardware board. Does not have any payload.
 
 Example:
 
+```
   -----------------------------------------------------------------------
   Byte        Length      Example     Comment
   ----------- ----------- ----------- -----------------------------------
   0           1           1           Command 1 - Get Firmware Version
 
   -----------------------------------------------------------------------
+```
 
   : Example Command 0x01 - Get Firmware Version
 
@@ -115,12 +121,14 @@ Get the API version. Does not have any payload.
 
 Example:
 
+```
   -----------------------------------------------------------------------
   Byte        Length      Example     Comment
   ----------- ----------- ----------- -----------------------------------
   0           1           2           Command 2 - Get API Version
 
   -----------------------------------------------------------------------
+```
 
   : Example Command 0x02 - Get API Version
 
@@ -139,17 +147,20 @@ payload.
 
 Example:
 
+```
   -----------------------------------------------------------------------
   Byte        Length      Example     Comment
   ----------- ----------- ----------- -----------------------------------
   0           1           3           Command 3 - Get Simple Lamp Count
 
   -----------------------------------------------------------------------
+```
 
   : Example Command 0x03 - Get Simple Lamp Count
 
 Returns one byte:
 
+```
   ------------------------------------------------------------------------
   Byte           Length         Description
   -------------- -------------- ------------------------------------------
@@ -157,11 +168,13 @@ Returns one byte:
                                 simple lamps exist.
 
   ------------------------------------------------------------------------
+```
 
   : Response to 0x03 - Get Simple Lamp Count
 
 Example:
 
+```
   -----------------------------------------------------------------------
   Byte        Length      Example     Comment
   ----------- ----------- ----------- -----------------------------------
@@ -169,6 +182,7 @@ Example:
                                       with numbers 0 to 63.
 
   -----------------------------------------------------------------------
+```
 
   : Example Response to 0x03 - Get Simple Lamp Count
 
@@ -184,17 +198,20 @@ any payload.
 
 Example:
 
+```
   -----------------------------------------------------------------------
   Byte        Length      Example     Comment
   ----------- ----------- ----------- -----------------------------------
   0           1           4           Command 4 - Get Solenoid Count
 
   -----------------------------------------------------------------------
+```
 
   : Example Command 0x04 - Get Solenoid Count
 
 Returns one byte:
 
+```
   ------------------------------------------------------------------------
   Byte           Length         Description
   -------------- -------------- ------------------------------------------
@@ -202,11 +219,13 @@ Returns one byte:
                                 solenoids exist.
 
   ------------------------------------------------------------------------
+```
 
   : Response to 0x04 - Get Solenoid Count
 
 Example:
 
+```
   -----------------------------------------------------------------------
   Byte        Length      Example     Comment
   ----------- ----------- ----------- -----------------------------------
@@ -214,6 +233,7 @@ Example:
                                       numbers 0 to 63.
 
   -----------------------------------------------------------------------
+```
 
   : Example Response to 0x04 - Get Solenoid Count
 
@@ -226,17 +246,20 @@ Get count of sounds available. Does not have any payload.
 
 Example:
 
+```
   -----------------------------------------------------------------------
   Byte        Length      Example     Comment
   ----------- ----------- ----------- -----------------------------------
   0           1           5           Command 5 - Get Sound Count
 
   -----------------------------------------------------------------------
+```
 
   : Example Command 0x05 - Get Sound Count
 
 Returns one byte:
 
+```
   ------------------------------------------------------------------------
   Byte           Length         Description
   -------------- -------------- ------------------------------------------
@@ -244,11 +267,13 @@ Returns one byte:
                                 exist.
 
   ------------------------------------------------------------------------
+```
 
   : Response to 0x05 - Get Sound Count
 
 Example:
 
+```
   -----------------------------------------------------------------------
   Byte        Length      Example     Comment
   ----------- ----------- ----------- -----------------------------------
@@ -256,6 +281,7 @@ Example:
                                       numbers 0 to 127.
 
   -----------------------------------------------------------------------
+```
 
   : Example Response to 0x05 - Get Sound Count
 
@@ -271,6 +297,7 @@ Get count of segment displays available. Does not have any payload.
 
 Example:
 
+```
   -----------------------------------------------------------------------
   Byte        Length      Example     Comment
   ----------- ----------- ----------- -----------------------------------
@@ -278,11 +305,13 @@ Example:
                                       Count
 
   -----------------------------------------------------------------------
+```
 
   : Example Command 0x06 - Get Segment Display Count
 
 Returns one byte:
 
+```
   ------------------------------------------------------------------------
   Byte           Length         Description
   -------------- -------------- ------------------------------------------
@@ -290,11 +319,13 @@ Returns one byte:
                                 if no sounds exist.
 
   ------------------------------------------------------------------------
+```
 
   : Response to 0x06 - Get Segment Display Count
 
 Example:
 
+```
   -----------------------------------------------------------------------
   Byte        Length      Example     Comment
   ----------- ----------- ----------- -----------------------------------
@@ -302,6 +333,7 @@ Example:
                                       displays with numbers 0 to 5.
 
   -----------------------------------------------------------------------
+```
 
   : Example Response to 0x06 - Get Segment Display Count
 
@@ -313,17 +345,20 @@ platform.
 
 Get type of segment displays.
 
+```
   ------------------------------------------------------------------------
   Byte           Length         Description
   -------------- -------------- ------------------------------------------
   1              1              Index `sd` of the segment display to query
 
   ------------------------------------------------------------------------
+```
 
   : Payload of Command 0x07 - Get Segment Display Details
 
 Example:
 
+```
   -----------------------------------------------------------------------
   Byte        Length      Example     Comment
   ----------- ----------- ----------- -----------------------------------
@@ -332,17 +367,20 @@ Example:
 
   1           1           0           Query the first display
   -----------------------------------------------------------------------
+```
 
   : Example Command 0x07 - Get Segment Display Details
 
 Returns two bytes:
 
+```
   ------------------------------------------------------------------------
   Byte           Length         Description
   -------------- -------------- ------------------------------------------
   0              1              Type of segment display (see list below)
 
   1              1              Number of segments `sw(sd)` (0-255)-
+```
 
   : Response to 0x07 - Get Segment Display Details
 
@@ -350,6 +388,7 @@ Returns two bytes:
 
 Example:
 
+```
   -----------------------------------------------------------------------
   Byte        Length      Example     Comment
   ----------- ----------- ----------- -----------------------------------
@@ -357,11 +396,13 @@ Example:
 
   1           1           12          Segment display is 12 segments wide
   -----------------------------------------------------------------------
+```
 
   : Example Response to 0x07 - Get Segment Display Details
 
 Options are:
 
+```
 +-----------+-----------+-----------+-----------------------------------+
 | Byte of   | Name      | De        | Bytes per Segment `bs(st)`        |
 | segment   |           | scription |                                   |
@@ -421,6 +462,7 @@ Options are:
 |           |           | dditional |                                   |
 |           |           | comma)    |                                   |
 +-----------+-----------+-----------+-----------------------------------+
+```
 
 : Types in Response of 0x07 - Get Segment Display Details
 
@@ -432,12 +474,14 @@ Get the game number. Does not have any payload.
 
 Example:
 
+```
   -----------------------------------------------------------------------
   Byte        Length      Example     Comment
   ----------- ----------- ----------- -----------------------------------
   0           1           8           Command 8 - Get Game Info
 
   -----------------------------------------------------------------------
+```
 
   : Example Command 0x08 - Get Game Info
 
@@ -451,26 +495,31 @@ Get count of switches available. Does not have any payload.
 
 Example:
 
+```
   -----------------------------------------------------------------------
   Byte        Length      Example     Comment
   ----------- ----------- ----------- -----------------------------------
   0           1           9           Command 9 - Get Switch Count
 
   -----------------------------------------------------------------------
+```
 
   : Example Command 0x09 - Get Switch Count
 
 Returns one byte:
 
+```
   ------------------------------------------------------------------------
   Byte           Length         Description
   -------------- -------------- ------------------------------------------
   0              1              Switch count `s` (0 to 127)-
+```
 
   : Response to 0x09 - Get Switch Count
 
 Example:
 
+```
   -----------------------------------------------------------------------
   Byte        Length      Example     Comment
   ----------- ----------- ----------- -----------------------------------
@@ -478,6 +527,7 @@ Example:
                                       numbers 0 to 69.
 
   -----------------------------------------------------------------------
+```
 
   : Example Response to 0x09 - Get Switch Count
 
@@ -490,17 +540,20 @@ in commands.
 
 Get the status of a simple lamp. Payload is the lamp index:
 
+```
   ------------------------------------------------------------------------
   Byte           Length         Description
   -------------- -------------- ------------------------------------------
   1              1              Index `l` of the lamp to query
 
   ------------------------------------------------------------------------
+```
 
   : Payload of Command 0x0A - Get Status of Simple Lamp
 
 Example:
 
+```
   -----------------------------------------------------------------------
   Byte        Length      Example     Comment
   ----------- ----------- ----------- -----------------------------------
@@ -509,28 +562,33 @@ Example:
 
   1           1           25          Query status of lamp 25
   -----------------------------------------------------------------------
+```
 
   : Example Command 0x0A - Get Status of Simple Lamp
 
 Returns one byte:
 
+```
   ------------------------------------------------------------------------
   Byte           Length         Description
   -------------- -------------- ------------------------------------------
   0              1              0=Off, 1=On, 2=Lamp not existing
 
   ------------------------------------------------------------------------
+```
 
   : Response to 0x0A - Get Status of Simple Lamp
 
 Example:
 
+```
   -----------------------------------------------------------------------
   Byte        Length      Example     Comment
   ----------- ----------- ----------- -----------------------------------
   0           1           0           Status of lamp is off
 
   -----------------------------------------------------------------------
+```
 
   : Example Response to 0x0A - Get Status of Simple Lamp
 
@@ -541,17 +599,20 @@ state off.
 
 Set simple lamp to on. Payload is the lamp index:
 
+```
   ------------------------------------------------------------------------
   Byte           Length         Description
   -------------- -------------- ------------------------------------------
   1              1              Index `l` of the lamp to set to on
 
   ------------------------------------------------------------------------
+```
 
   : Payload of Command 0x0B - Set Status of Simple Lamp to On
 
 Example:
 
+```
   -----------------------------------------------------------------------
   Byte        Length      Example     Comment
   ----------- ----------- ----------- -----------------------------------
@@ -560,6 +621,7 @@ Example:
 
   1           1           25          Set lamp 25 to on
   -----------------------------------------------------------------------
+```
 
   : Example Command 0x0B - Set Status of Simple Lamp to On
 
@@ -569,17 +631,20 @@ No response is expected.
 
 Set simple lamp to off. Payload is the lamp index:
 
+```
   ------------------------------------------------------------------------
   Byte           Length         Description
   -------------- -------------- ------------------------------------------
   1              1              Index `l` of the lamp to set to off
 
   ------------------------------------------------------------------------
+```
 
   : Payload of Command 0x0C - Set Status of Simple Lamp to Off
 
 Example:
 
+```
   -----------------------------------------------------------------------
   Byte        Length      Example     Comment
   ----------- ----------- ----------- -----------------------------------
@@ -588,6 +653,7 @@ Example:
 
   1           1           25          Set lamp 25 to off
   -----------------------------------------------------------------------
+```
 
   : Example Command 0x0C - Set Status of Simple Lamp to Off
 
@@ -597,17 +663,20 @@ No response is expected.
 
 Get the status of a solenoid. Payload is the solenoid index:
 
+```
   ------------------------------------------------------------------------
   Byte           Length         Description
   -------------- -------------- ------------------------------------------
   1              1              Index `c` of the solenoid to query
 
   ------------------------------------------------------------------------
+```
 
   : Payload of Command 0x14 - Get Status of Solenoid
 
 Example:
 
+```
   -----------------------------------------------------------------------
   Byte        Length      Example     Comment
   ----------- ----------- ----------- -----------------------------------
@@ -615,28 +684,33 @@ Example:
 
   1           1           25          Query status of solenoid 25
   -----------------------------------------------------------------------
+```
 
   : Example Command 0x14 - Get Status of Solenoid
 
 Returns one byte:
 
+```
   ------------------------------------------------------------------------
   Byte           Length         Description
   -------------- -------------- ------------------------------------------
   0              1              0=Off, 1=On, 2=Solenoid not existing
 
   ------------------------------------------------------------------------
+```
 
   : Response to 0x14 - Get Status of Solenoid
 
 Example:
 
+```
   -----------------------------------------------------------------------
   Byte        Length      Example     Comment
   ----------- ----------- ----------- -----------------------------------
   0           1           0           Status of solenoid is off
 
   -----------------------------------------------------------------------
+```
 
   : Example Response to 0x14 - Get Status of Solenoid
 
@@ -647,17 +721,20 @@ in state disabled.
 
 Enable solenoid at full power. Payload is the solenoid index:
 
+```
   ------------------------------------------------------------------------
   Byte           Length         Description
   -------------- -------------- ------------------------------------------
   1              1              Index `c` of the solenoid to enable
 
   ------------------------------------------------------------------------
+```
 
   : Payload of Command 0x15 - Enable Solenoid at Full Power
 
 Example:
 
+```
   -----------------------------------------------------------------------
   Byte        Length      Example     Comment
   ----------- ----------- ----------- -----------------------------------
@@ -666,6 +743,7 @@ Example:
 
   1           1           25          Enable solenoid 25 at full power
   -----------------------------------------------------------------------
+```
 
   : Example Command 0x15 - Enable Solenoid at Full Power
 
@@ -676,17 +754,20 @@ solenoids could be enabled without PWM.
 
 Disable solenoid. Payload is the solenoid index:
 
+```
   ------------------------------------------------------------------------
   Byte           Length         Description
   -------------- -------------- ------------------------------------------
   1              1              Index `c` of the solenoid to disable
 
   ------------------------------------------------------------------------
+```
 
   : Payload of Command 0x16 - Disable Solenoid
 
 Example:
 
+```
   -----------------------------------------------------------------------
   Byte        Length      Example     Comment
   ----------- ----------- ----------- -----------------------------------
@@ -694,6 +775,7 @@ Example:
 
   1           1           25          Disable solenoid 25
   -----------------------------------------------------------------------
+```
 
   : Example Command 0x16 - Disable Solenoid
 
@@ -704,17 +786,20 @@ No response is expected.
 Pulse solenoid with it's configured pulse time. Payload is the solenoid
 index:
 
+```
   ------------------------------------------------------------------------
   Byte           Length         Description
   -------------- -------------- ------------------------------------------
   1              1              Index `c` of the solenoid to pulse
 
   ------------------------------------------------------------------------
+```
 
   : Payload of Command 0x17 - Pulse Solenoid
 
 Example:
 
+```
   -----------------------------------------------------------------------
   Byte        Length      Example     Comment
   ----------- ----------- ----------- -----------------------------------
@@ -722,6 +807,7 @@ Example:
 
   1           1           25          Pulse solenoid 25
   -----------------------------------------------------------------------
+```
 
   : Example Command 0x17 - Pulse Solenoid
 
@@ -732,17 +818,20 @@ No response is expected. Use command 0x18 to configure the pulse time.
 Configure the pulse time of a solenoid in milliseconds. Payload is the
 solenoid index and pulse time.
 
+```
   ------------------------------------------------------------------------
   Byte           Length         Description
   -------------- -------------- ------------------------------------------
   1              1              Index `c` of the solenoid to configure
 
   2              1              Pulse time in ms (0-255)-
+```
 
   : Payload of Command 0x18 - Set Solenoid Pulse Time
 
 Example:
 
+```
   -----------------------------------------------------------------------
   Byte        Length      Example     Comment
   ----------- ----------- ----------- -----------------------------------
@@ -753,6 +842,7 @@ Example:
 
   2           1           50          Set pulse time to 50ms
   -----------------------------------------------------------------------
+```
 
   : Example Command 0x18 - Set Solenoid Pulse Time
 
@@ -764,6 +854,7 @@ Set content of segment display `d` 0-6. Payload is a null terminated
 string. Content encoding depends on the type of the display (from
 command 0x7).
 
+```
   ---------------------------------------------------------------------------------------
   Byte        Length              Value               Comment
   ----------- ------------------- ------------------- -----------------------------------
@@ -781,11 +872,13 @@ command 0x7).
                                   segment for this
                                   display (1 or 2
                                   bytes)----------------
+```
 
   : Command 0x1E - 0x24 - Set Segment Display `d`
 
 Example:
 
+```
   -----------------------------------------------------------------------
   Byte        Length      Example     Comment
   ----------- ----------- ----------- -----------------------------------
@@ -795,6 +888,7 @@ Example:
 
   2           12          Hello       Set display1 to hello world (ASCII
                           World!      type display)
+```
 
   : Example Command 0x1E - 0x24 - Set Segment Display `d`
 
@@ -804,17 +898,20 @@ No response is expected.
 
 Get the status of a switch. Payload is the switch index:
 
+```
   ------------------------------------------------------------------------
   Byte           Length         Description
   -------------- -------------- ------------------------------------------
   1              1              Index `s` of the switch to query
 
   ------------------------------------------------------------------------
+```
 
   : Payload of Command 0x28 - Get Status of Switch
 
 Example:
 
+```
   -----------------------------------------------------------------------
   Byte        Length      Example     Comment
   ----------- ----------- ----------- -----------------------------------
@@ -822,28 +919,33 @@ Example:
 
   1           1           25          Query status of switch 25
   -----------------------------------------------------------------------
+```
 
   : Example Command 0x28 - Get Status of Switch
 
 Returns one byte:
 
+```
   ------------------------------------------------------------------------
   Byte           Length         Description
   -------------- -------------- ------------------------------------------
   0              1              0=Off, 1=On, 2=Switch not existing
 
   ------------------------------------------------------------------------
+```
 
   : Response to 0x28 - Get Status of Switch
 
 Example:
 
+```
   -----------------------------------------------------------------------
   Byte        Length      Example     Comment
   ----------- ----------- ----------- -----------------------------------
   0           1           0           Status of switch is off
 
   -----------------------------------------------------------------------
+```
 
   : Example Response to 0x28 - Get Status of Switch
 
@@ -855,17 +957,20 @@ Check is switches changed. Does not have any payload.
 
 Example:
 
+```
   -----------------------------------------------------------------------
   Byte        Length      Example     Comment
   ----------- ----------- ----------- -----------------------------------
   0           1           41          Command 41 - Get Changed Switches
 
   -----------------------------------------------------------------------
+```
 
   : Example Command 0x29 - Get Changed Switches
 
 Returns one byte:
 
+```
   ------------------------------------------------------------------------
   Byte           Length         Description
   -------------- -------------- ------------------------------------------
@@ -874,17 +979,20 @@ Returns one byte:
                                 that switch.
 
   ------------------------------------------------------------------------
+```
 
   : Response to 0x29 - Get Changed Switches
 
 Example:
 
+```
   -----------------------------------------------------------------------
   Byte        Length      Example     Comment
   ----------- ----------- ----------- -----------------------------------
   0           1           10          Switch 10 turned off
 
   -----------------------------------------------------------------------
+```
 
   : Example Response to 0x29 - Get Changed Switches
 
@@ -899,6 +1007,7 @@ etc) and cannot be influenced by the CPU.
 
 Payload is the sound number.
 
+```
   ------------------------------------------------------------------------
   Byte           Length         Description
   -------------- -------------- ------------------------------------------
@@ -906,11 +1015,13 @@ Payload is the sound number.
 
   2              1              Index of sound to play
   ------------------------------------------------------------------------
+```
 
   : Payload of Command 0x32 - Play Sound
 
 Example:
 
+```
   -----------------------------------------------------------------------
   Byte        Length      Example     Comment
   ----------- ----------- ----------- -----------------------------------
@@ -920,6 +1031,7 @@ Example:
 
   2           1           42          Play sound 42
   -----------------------------------------------------------------------
+```
 
   : Example Command 0x32 - Play Sound
 
@@ -931,15 +1043,18 @@ Stop the current playing sound.
 
 Payload is the sound number.
 
+```
   ------------------------------------------------------------------------
   Byte           Length         Description
   -------------- -------------- ------------------------------------------
   1              1              Track to stop (default track is 1)-
+```
 
   : Payload of Command 0x33 - Stop Sound
 
 Example:
 
+```
   -----------------------------------------------------------------------
   Byte        Length      Example     Comment
   ----------- ----------- ----------- -----------------------------------
@@ -947,6 +1062,7 @@ Example:
 
   1           1           1           Stop all sounds on track 1
   -----------------------------------------------------------------------
+```
 
   : Example Command 0x33 - Stop Sound
 
@@ -961,6 +1077,7 @@ MPF sound system.
 Payload is a null terminated string containing track, flags and the
 filename of the sound.
 
+```
   ------------------------------------------------------------------------
   Byte           Length         Description
   -------------- -------------- ------------------------------------------
@@ -972,11 +1089,13 @@ filename of the sound.
 
   3 + `n`        1              Null terminator
   ------------------------------------------------------------------------
+```
 
   : Payload of Command 0x34 - Play Sound File
 
 Example:
 
+```
   -----------------------------------------------------------------------
   Byte        Length      Example     Comment
   ----------- ----------- ----------- -----------------------------------
@@ -989,6 +1108,7 @@ Example:
   3           9           test.mp3    Play sound test.mp3. Last character
                                       is null byte.
   -----------------------------------------------------------------------
+```
 
   : Example Command 0x34 - Play Sound File
 
@@ -1001,6 +1121,7 @@ This is used to extend sound capabilities on older machines in LISY.
 Payload is a null terminated string containing track, flags and the text
 to play.
 
+```
   ------------------------------------------------------------------------
   Byte           Length         Description
   -------------- -------------- ------------------------------------------
@@ -1012,11 +1133,13 @@ to play.
 
   3 + `n`        1              Null terminator
   ------------------------------------------------------------------------
+```
 
   : Payload of Command 0x35 - Text to speech
 
 Example:
 
+```
   -----------------------------------------------------------------------
   Byte        Length      Example     Comment
   ----------- ----------- ----------- -----------------------------------
@@ -1032,6 +1155,7 @@ Example:
   3           6           Hello       Play text 'hello'. Last character
                                       is null byte.
   -----------------------------------------------------------------------
+```
 
   : Example Command 0x35 - Text to speech
 
@@ -1044,17 +1168,20 @@ soundcard or to the output of the MPF sound system.
 
 Payload is the sound number.
 
+```
   ------------------------------------------------------------------------
   Byte           Length         Description
   -------------- -------------- ------------------------------------------
   1              1              Volume in percent (0-100)
 
   2              1              Track to change (default track is 1)-
+```
 
   : Payload of Command 0x36 - Set Sound Volume
 
 Example:
 
+```
   -----------------------------------------------------------------------
   Byte        Length      Example     Comment
   ----------- ----------- ----------- -----------------------------------
@@ -1065,6 +1192,7 @@ Example:
 
   2           1           50          Set volume to 50%
   -----------------------------------------------------------------------
+```
 
   : Example Command 0x36 - Set Sound Volume
 
@@ -1078,17 +1206,20 @@ payload.
 
 Example:
 
+```
   -----------------------------------------------------------------------
   Byte        Length      Example     Comment
   ----------- ----------- ----------- -----------------------------------
   0           1           100         Command 100 - Init/Reset
 
   -----------------------------------------------------------------------
+```
 
   : Example Command 0x64 - Init/Reset
 
 Returns one byte:
 
+```
   ------------------------------------------------------------------------
   Byte           Length         Description
   -------------- -------------- ------------------------------------------
@@ -1096,17 +1227,20 @@ Returns one byte:
                                 retry on error.
 
   ------------------------------------------------------------------------
+```
 
   : Response to 0x64 - Init/Reset
 
 Example:
 
+```
   -----------------------------------------------------------------------
   Byte        Length      Example     Comment
   ----------- ----------- ----------- -----------------------------------
   0           1           0           Reset ok.
 
   -----------------------------------------------------------------------
+```
 
   : Example Response to 0x64 - Init/Reset
 
@@ -1120,34 +1254,40 @@ any payload.
 
 Example:
 
+```
   -----------------------------------------------------------------------
   Byte        Length      Example     Comment
   ----------- ----------- ----------- -----------------------------------
   0           1           101         Command 101 - Watchdog
 
   -----------------------------------------------------------------------
+```
 
   : Example Command 0x65 - Watchdog
 
 Returns one byte:
 
+```
   ------------------------------------------------------------------------
   Byte           Length         Description
   -------------- -------------- ------------------------------------------
   0              1              0=OK. Otherwise an error code
 
   ------------------------------------------------------------------------
+```
 
   : Response to 0x65 - Watchdog
 
 Example:
 
+```
   -----------------------------------------------------------------------
   Byte        Length      Example     Comment
   ----------- ----------- ----------- -----------------------------------
   0           1           0           Watchdog ok.
 
   -----------------------------------------------------------------------
+```
 
   : Example Response to 0x65 - Watchdog
 
@@ -1166,6 +1306,7 @@ Get count of modern lights available. Does not have any payload.
 
 Example:
 
+```
   -----------------------------------------------------------------------
   Byte        Length      Example     Comment
   ----------- ----------- ----------- -----------------------------------
@@ -1173,11 +1314,13 @@ Example:
                                       Lights
 
   -----------------------------------------------------------------------
+```
 
   : Example Command 0x13 - Get Count of Modern Lights
 
 Returns one byte:
 
+```
   ------------------------------------------------------------------------
   Byte           Length         Description
   -------------- -------------- ------------------------------------------
@@ -1185,11 +1328,13 @@ Returns one byte:
                                 lights exist.
 
   ------------------------------------------------------------------------
+```
 
   : Response to 0x13 - Get Count of Modern Lights
 
 Example:
 
+```
   -----------------------------------------------------------------------
   Byte        Length      Example     Comment
   ----------- ----------- ----------- -----------------------------------
@@ -1197,6 +1342,7 @@ Example:
                                       with numbers 0 to 127.
 
   -----------------------------------------------------------------------
+```
 
   : Example Response to 0x13 - Get Count of Modern Lights
 
@@ -1208,6 +1354,7 @@ lights in your platform.
 
 Fade a group of modern lights.
 
+```
   ------------------------------------------------------------------------
   Byte           Length         Description
   -------------- -------------- ------------------------------------------
@@ -1222,11 +1369,13 @@ Fade a group of modern lights.
   5              `n`            One byte of brightness per light (0-255).
                                 `n` bytes in total
   ------------------------------------------------------------------------
+```
 
   : Payload of Command 0x0d - Fade Modern Light
 
 Example:
 
+```
   -----------------------------------------------------------------------
   Byte        Length      Example     Comment
   ----------- ----------- ----------- -----------------------------------
@@ -1245,6 +1394,7 @@ Example:
 
   7           1           255         Fade light 44 to 100% brightness
   -----------------------------------------------------------------------
+```
 
   : Example Command 0x0d - Fade Modern Light
 
@@ -1261,17 +1411,20 @@ be changed.
 
 Payload is the solenoid index and recycle time.
 
+```
   ------------------------------------------------------------------------
   Byte           Length         Description
   -------------- -------------- ------------------------------------------
   1              1              Index `c` of the solenoid to configure
 
   2              1              Recycle time in ms (0-255)-
+```
 
   : Payload of Command 0x19 - Set Solenoid Recycle Time
 
 Example:
 
+```
   -----------------------------------------------------------------------
   Byte        Length      Example     Comment
   ----------- ----------- ----------- -----------------------------------
@@ -1282,6 +1435,7 @@ Example:
 
   2           1           50          Set recycle time to 100ms
   -----------------------------------------------------------------------
+```
 
   : Example Command 0x19 - Set Solenoid Recycle Time
 
@@ -1293,6 +1447,7 @@ hardware rules.
 Pulse solenoid and then enable solenoid with PWM. Payload is the
 solenoid index, pulse time, pulse power and hold power:
 
+```
   ------------------------------------------------------------------------
   Byte           Length         Description
   -------------- -------------- ------------------------------------------
@@ -1306,11 +1461,13 @@ solenoid index, pulse time, pulse power and hold power:
   4              1              Hold PWM power (0-255). 0=0% power.
                                 255=100% power
   ------------------------------------------------------------------------
+```
 
   : Payload of Command 0x1A - Pulse and Enable Solenoid with PWM
 
 Example:
 
+```
   -----------------------------------------------------------------------
   Byte        Length      Example     Comment
   ----------- ----------- ----------- -----------------------------------
@@ -1325,6 +1482,7 @@ Example:
 
   4           1           64          25% hold power
   -----------------------------------------------------------------------
+```
 
   : Example Command 0x15 - Pulse and Enable Solenoid with PWM
 
@@ -1342,6 +1500,7 @@ solenoid.
 
 Flags decide what the three switches do:
 
+```
   -----------------------------------------------------------------------
   Bit               Description
   ----------------- -----------------------------------------------------
@@ -1366,12 +1525,14 @@ Flags decide what the three switches do:
 
   7                 reserved
   -----------------------------------------------------------------------
+```
 
   : Flags for Command 0x3C - Configure Hardware Rule for Solenoid
 
 Payload is the solenoid index, one to three switches, pulse time, pulse
 power, hold power and some flags:
 
+```
   ------------------------------------------------------------------------
   Byte           Length         Description
   -------------- -------------- ------------------------------------------
@@ -1400,11 +1561,13 @@ power, hold power and some flags:
 
   10             1              Flag for `sw3`
   ------------------------------------------------------------------------
+```
 
   : Payload of Command 0x3C - Configure Hardware Rule for Solenoid
 
 Example:
 
+```
   -----------------------------------------------------------------------
   Byte        Length      Example     Comment
   ----------- ----------- ----------- -----------------------------------
@@ -1433,6 +1596,7 @@ Example:
 
   10          1           0           Do not use `sw3`
   -----------------------------------------------------------------------
+```
 
   : Example Command 0x3C - Configure Hardware Rule for Solenoid
 

@@ -4,6 +4,7 @@ title: Playlist player
 
 # Playlist player
 
+* [playlist_player: Config Reference](../config/playlist_player.md)
 
 The *playlist player* is a [config player](index.md)
 that's used to control playlists. (This player is part of the MPF media
@@ -24,10 +25,5 @@ step.
 
 ## Optional settings
 
-Additional information may be found in the
-[sound_player](../config/playlist_player.md)
+Additional information may be found in the [sound_player](../config/playlist_player.md)
 configuration reference documentation.
-
-## Related Pages:
-
-* [playlist_player: Config Reference](../config/playlist_player.md)

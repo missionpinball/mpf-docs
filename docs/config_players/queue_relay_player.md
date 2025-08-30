@@ -4,6 +4,8 @@ title: Queue Relay player
 
 # Queue Relay player
 
+* [queue_relay_player: Config Reference](../config/queue_relay_player.md)
+
 The *queue relay player* is a [config player](index.md)
 that's used to block queue events.
 
@@ -24,5 +26,4 @@ None. (It's not valid in shows since it doesn't make sense in shows.)
 
 ## Related Pages:
 
-* [queue_relay_player: Config Reference](../config/queue_relay_player.md)
 * [queue_relay_player API Reference](../code/api_reference/config_players/queue_relay_player.md)

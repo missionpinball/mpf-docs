@@ -723,6 +723,7 @@ nav:
       - How to enter gain values in config files: config/instructions/gain_values.md
 
     - '"Config Player" Config Reference':
+      - config/config_players/index.md
       - "blinkenlight_player:": config/blinkenlight_player.md
       - "coil_player:": config/coil_player.md
       - "display_light_player:": config/display_light_player.md
@@ -777,6 +778,7 @@ nav:
       - "extra_balls:": config/extra_balls.md
       - "flippers:": config/flippers.md
       - "game:": config/game.md
+      - "hardware:": config/hardware.md
       - "info_lights:": config/info_lights.md
       - "kickbacks:": config/kickbacks.md
       - "light_rings:": config/light_rings.md
@@ -846,7 +848,6 @@ nav:
       - "fast:": config/fast.md
       - "fast_coils:": config/fast_coils.md
       - "fast_switches:": config/fast_switches.md
-      - "hardware:": config/hardware.md
       - "hardware_benchmark:": config/hardware_benchmark.md
       - "hardware_sound_player:": config/hardware_sound_player.md
       - "hardware_sound_systems:": config/hardware_sound_systems.md

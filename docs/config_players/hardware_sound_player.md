@@ -4,6 +4,8 @@ title: Hardware Sound player
 
 # Hardware Sound player
 
+* [hardware_sound_player: Config Reference](../config/hardware_sound_player.md)
+
 The *hardware sound player* is a [config player](index.md)
 that's used to control sounds. (This player is part of the MPF media
 controller and only available if you're using MPF-MC for your media
@@ -28,5 +30,4 @@ Additional information may be found in the
 
 ## Related Pages:
 
-* [hardware_sound_player: Config Reference](../config/hardware_sound_player.md)
 * [hardware_sound_player API Reference](../code/api_reference/config_players/hardware_sound_player.md)

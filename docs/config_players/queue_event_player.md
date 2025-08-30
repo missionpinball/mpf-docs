@@ -4,6 +4,7 @@ title: Queue Event player
 
 # Queue Event player
 
+* [queue_event_player: Config Reference](../config/queue_event_player.md)
 
 The *queue event player* is a [config player](index.md)
 that's used to play queue events.
@@ -25,5 +26,4 @@ None. (It's not valid in shows since it doesn't make sense in shows.)
 
 ## Related Pages:
 
-* [queue_event_player: Config Reference](../config/queue_event_player.md)
 * [Queue Event player API Reference](../code/api_reference/config_players/queue_event_player.md)
