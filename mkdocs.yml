@@ -723,6 +723,7 @@ nav:
       - How to enter gain values in config files: config/instructions/gain_values.md
 
     - '"Config Player" Config Reference':
+      - config/config_players/index.md
       - "blinkenlight_player:": config/blinkenlight_player.md
       - "coil_player:": config/coil_player.md
       - "display_light_player:": config/display_light_player.md
