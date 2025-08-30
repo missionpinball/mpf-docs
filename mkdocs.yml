@@ -728,7 +728,6 @@ nav:
       - "display_light_player:": config/display_light_player.md
       - "event_player:": config/event_player.md
       - "flasher_player:": config/flasher_player.md
-      - "hardware_sound_player:": config/hardware_sound_player.md
       - "light_player:": config/light_player.md
       - "queue_event_player:": config/queue_event_player.md
       - "queue_relay_player:": config/queue_relay_player.md
@@ -849,6 +848,7 @@ nav:
       - "fast_switches:": config/fast_switches.md
       - "hardware:": config/hardware.md
       - "hardware_benchmark:": config/hardware_benchmark.md
+      - "hardware_sound_player:": config/hardware_sound_player.md
       - "hardware_sound_systems:": config/hardware_sound_systems.md
       - "kivy_config:": config/kivy_config.md
       - "lisy:": config/lisy.md
