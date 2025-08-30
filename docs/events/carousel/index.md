@@ -10,7 +10,9 @@ See: [Carousel Mode Selection](../../cookbook/carousel.md) for pre-0.80 carousel
 
 See: [MPFCarousel](../../gmc/reference/mpf-carousel.md) for 0.80+ carousel configuration.
 
-* [item_highlighted](../item_highlighted.md) *Note: 0.80+ only*
-* [(carousel_name)\_items_empty](../carousel_name_items_empty.md)
-* [(carousel_name)\_(item_name)\_selected](../carousel_name_item_name_selected.md)
-* [(carousel_name)\_item_selected](../carousel_name_item_selected.md)
+The following events are as of MPF `0.80.0.dev10`.
+Previously, the word "carousel" was replaced with the actual carousel name, along with other differences.
+
+* [carousel_item_highlighted](../carousel_item_highlighted.md)
+* [carousel\_items_empty](../carousel_items_empty.md)
+* [carousel\_item_selected](../carousel_item_selected.md)

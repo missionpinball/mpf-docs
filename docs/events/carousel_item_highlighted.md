@@ -1,8 +1,8 @@
 ---
-title: item_highlighted
+title: carousel_item_highlighted
 ---
 
-# item_highlighted
+# carousel_item_highlighted
 
 
 --8<-- "event.md"
