@@ -33,17 +33,23 @@ light_player:
 ``` yaml
 shows:
   rainbow:
-    - lights:
+    - duration: 1s
+      lights:
         (leds): red
-    - lights:
+    - duration: 1s
+      lights:
         (leds): orange
-    - lights:
+    - duration: 1s
+      lights:
         (leds): yellow
-    - lights:
+    - duration: 1s
+      lights:
         (leds): green
-    - lights:
+    - duration: 1s
+      lights:
         (leds): blue
-    - lights:
+    - duration: 1s
+      lights:
         (leds): purple
 ```
 
@@ -69,9 +75,33 @@ If you use brightness on an RGB light MPF will
 use the brightness for every channel. For instance brigness `AA` will
 result in color `AAAAAA`.
 
-There is a special color `stop` which will remove the current light
-entry from the light stack and the current show will become transparent
-to underlying shows as if the light has never been used in this show.
+#### Special color directives: `on`, `off`, and `stop`
+
+MPF supports a few special terms that may be used instead of a color value.
+
+##### `on`
+
+If your light has a [default_on_color](lights.md#default_on_color) set, then instead of having
+to name that color in particular, you can just use `on`. If you do not have one set, the light will
+instead turn white (or its native color if single-channel.)
+
+##### `off`
+
+When you turn a light on to a certain color in a show, it will remain on throughout the show unless
+directed otherwise. If you want your light to turn on for only a specific time, you will need to
+explicitly set it to `off`. Another use case for `off` is when a lower-priority show has a light turned on,
+but another show at a higher prority wants to override this -- you can set a light to `off` in a show without
+having turned it on in that show first, just to ensure it is truly off.
+
+##### `stop`
+
+The `off`directive tells the light controller to specifically hold a light to no power, but does *not*
+release the light from control. If you instead have a show that *no longer needs control* over a light
+that it has already set at least once, you can use `stop` to remove the show's priority level hold on
+the light's color. Imagine having something like a lightning strike show, where lights from all over
+your machine flash yellow, but then immediately return to their previous color setting -- you would use
+`stop` the step after each light flash to allow the previously-set color to show through again.
+
 
 ### fade:
 
