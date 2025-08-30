@@ -1214,10 +1214,9 @@ nav:
       - bonus_subtotal: events/bonus_subtotal.md
     - Carousel Events:
       - events/carousel/index.md
-      - carousel_name_items_empty: events/carousel_name_items_empty.md
-      - carousel_name_item_name_selected: events/carousel_name_item_name_selected.md
-      - carousel_name_item_selected: events/carousel_name_item_selected.md
-      - item_highlighted: events/item_highlighted.md
+      - carousel_name_items_empty: events/carousel_items_empty.md
+      - carousel_name_item_selected: events/carousel_item_selected.md
+      - carousel_item_highlighted: events/carousel_item_highlighted.md
     - Config Player Events:
       - clear: events/clear.md
     - Credit Events:

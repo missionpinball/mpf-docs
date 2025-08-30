@@ -74,7 +74,7 @@ start the mode that was selected by the player.
 #config_version=5
 mode:
   start_events: ball_starting
-  stop_events: my_carousel_item_selected
+  stop_events: carousel_item_selected{carousel=my_carousel}
   code: mpf.modes.carousel.code.carousel.Carousel
   use_wait_queue: true
 mode_settings:
