@@ -4,6 +4,8 @@ title: Show player
 
 # Show player
 
+* [show_player: Config Reference](../config/show_player.md)
+
 The *show player* is a [config player](index.md)
 that's used to start, stop, pause, resume, advance, and/or update shows.
 
@@ -132,5 +134,4 @@ other shows.)
 
 ## Related Pages:
 
-* [show_player: Config Reference](../config/show_player.md)
 * [show_player API Reference](../code/api_reference/config_players/show_player.md)

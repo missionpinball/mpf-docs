@@ -4,6 +4,7 @@ title: Widget player
 
 # Widget player
 
+* [widget_player: Config Reference](../config/widget_player.md)
 
 The *widget player* is a [config player](index.md)
 that's used to add or remove widgets to existing slides on a display.
@@ -83,7 +84,3 @@ section.
 
 In shows, the widget player is used via the `widgets:` section of a
 step.
-
-## Config Options
-
-See [widget_player:](../config/widget_player.md) for config details.

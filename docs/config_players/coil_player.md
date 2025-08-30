@@ -4,6 +4,7 @@ title: Coil player
 
 # Coil player
 
+* [coil_player: Config Reference](../config/coil_player.md)
 
 The *coil player* is a [config player](index.md)
 that's used pulse, enable, or disable coils and drivers.
@@ -54,5 +55,4 @@ In shows, the coil player is used via the `coils:` section of a step.
 ## Related Pages
 
 * [Coils (Solenoids)](../mechs/coils/index.md)
-* [coil_player: Config Reference](../config/coil_player.md)
 * [coil_player Api Reference](../code/api_reference/config_players/coil_player.md)

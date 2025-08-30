@@ -4,6 +4,8 @@ title: Using LEDs as display (display_light_player)
 
 # Using LEDs as display (display_light_player)
 
+[display_light_player: Config Reference](../config/display_light_player.md)
+
 
 You can map any display to your playfield LEDs or any LEDs (e.g. a LED
 matrix) in your machine. This enables you to leverage any MC features
@@ -61,8 +63,3 @@ In config files, the display light player is used via the
 
 In shows, the display light player is used via the `display_lights:`
 section of a step.
-
-## Config Options
-
-See [display_light_player:](../config/display_light_player.md) for
-config details.

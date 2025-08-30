@@ -4,6 +4,7 @@ title: Config Players
 
 # Config Players
 
+* ["Config Players" Config Reference Index](../config/config_players/index.md)
 
 An important concept to using the YAML-based configuration files is
 something we call *config players*.

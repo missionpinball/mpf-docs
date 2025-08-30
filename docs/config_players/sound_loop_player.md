@@ -4,6 +4,7 @@ title: Sound Loop player
 
 # Sound Loop player
 
+* [sound_loop_player: Config Reference](../config/sound_loop_player.md)
 
 The *sound loop player* is a [config player](index.md)
 that's used to control sound loop sets (used by sound loop audio
@@ -66,8 +67,3 @@ sub-headings below that.
 
 In shows, the sound player is used via the `sounds_loop_sets:` section
 of a step.
-
-## Optional settings
-
-Additional information may be found in the
-[sound_loop_player](../config/sound_loop_player.md) configuration reference documentation.

@@ -4,6 +4,8 @@ title: Variable player
 
 # Variable player
 
+* [variable_player: Config Reference](../config/variable_player.md)
+
 The `variable_player` is a [config player](index.md) that's used to set
 the value of player and machine variables. This is commonly used for
 scoring in your machine.
@@ -26,5 +28,4 @@ In shows, the variable player is used via the `variables:` section of a step.
 
 ## Related Pages:
 
-* [variable_player: Config Reference](../config/variable_player.md)
 * [variable_player API Reference](../code/api_reference/config_players/variable_player.md)

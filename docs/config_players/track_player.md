@@ -4,6 +4,7 @@ title: Track player
 
 # Track player
 
+* [track_player: Config Reference](../config/track_player.md)
 
 The *track player* is a [config player](index.md)
 that's used to control audio tracks when MPF events are received.
@@ -61,8 +62,3 @@ shows:
           volume: 0.5
           fade: 0.25 sec
 ```
-
-## Config Options
-
-Additional information may be found in the [track_player](../config/track_player.md)
-configuration reference documentation.

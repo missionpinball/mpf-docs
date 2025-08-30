@@ -4,6 +4,7 @@ title: Event player
 
 # Event player
 
+* [event_player: Config Reference](../config/event_player.md)
 
 The *event player* is a [config player](index.md) that's used to post events.
 
@@ -221,5 +222,4 @@ In shows, the event player is used via the `events:` section of a step.
 
 ## Related Pages:
 
-* [event_player: Config Reference](../config/event_player.md)
 * [event_player API Reference](../code/api_reference/config_players/event_player.md)

@@ -4,6 +4,7 @@ title: Flasher player
 
 # Flasher player
 
+* [flasher_player: Config Reference](../config/flasher_player.md)
 
 The *flasher player* is a [config player](index.md) that's used to flash lights.
 
@@ -53,5 +54,4 @@ flasher_player:
 
 ## Related Pages:
 
-* [flasher_player: Config Reference](../config/flasher_player.md)
 * [flasher_player API Reference](../code/api_reference/config_players/flasher_player.md)

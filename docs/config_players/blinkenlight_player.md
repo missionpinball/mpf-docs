@@ -4,6 +4,7 @@ title: Blinkenlight player
 
 # Blinkenlight player
 
+* [blinkenlight_player: Config Reference](../config/blinkenlight_player.md)
 
 The *blinkenlight player* is a [config player](index.md)
 that's used add or remove colors from a blinkenlight.
@@ -384,8 +385,3 @@ blinkenlight_player:
 In this case, the red color is added to the blinkenlight when
 `some_event` is posted, and then removed when `some_other_event` is
 posted.
-
-## Config Options
-
-See [blinkenlight_player:](../config/blinkenlight_player.md) for
-config details.

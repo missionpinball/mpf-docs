@@ -4,6 +4,7 @@ title: Light player
 
 # Light player
 
+* [light_player: Config Reference](../config/light_player.md)
 
 The *light player* is a [config player](index.md)
 that's used to set the brightness and color of lights (including
@@ -244,5 +245,4 @@ use with placeholders.
 ## Related Pages:
 
 * [Lights](../mechs/lights/index.md)
-* [light_player: Config Reference](../config/light_player.md)
 * [light_player API Reference](../code/api_reference/config_players/light_player.md)

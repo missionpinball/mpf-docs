@@ -4,6 +4,7 @@ title: Random event player
 
 # Random event player
 
+* [random_event_player: Config Reference](../config/random_event_player.md)
 
 The *random event player* is a [config player](index.md)
 that's used to post random events from a list of events.
@@ -51,5 +52,4 @@ section of a step.
 
 ## Related Pages:
 
-* [random_event_player: Config Reference](../config/random_event_player.md)
 * [random_event_player API Reference](../code/api_reference/config_players/random_event_player.md)
