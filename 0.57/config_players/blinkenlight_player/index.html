@@ -17177,6 +17177,10 @@ icons & this code generated via https://realfavicongenerator.net
     
       
         
+          
+        
+      
+        
       
         
       
@@ -17224,8 +17228,9 @@ icons & this code generated via https://realfavicongenerator.net
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2_3" >
         
           
-          <label class="md-nav__link" for="__nav_6_2_3" id="__nav_6_2_3_label" tabindex="0">
-            
+          <div class="md-nav__link md-nav__container">
+            <a href="../../config/config_players/" class="md-nav__link ">
+              
   
   
   <span class="md-ellipsis">
@@ -17234,8 +17239,14 @@ icons & this code generated via https://realfavicongenerator.net
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_2_3" id="__nav_6_2_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_2_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_2_3">
@@ -17243,6 +17254,8 @@ icons & this code generated via https://realfavicongenerator.net
             "Config Player" Config Reference
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
             
               
                 
@@ -17651,6 +17664,8 @@ icons & this code generated via https://realfavicongenerator.net
   
     
     
+      
+        
       
         
       
@@ -18657,6 +18672,29 @@ icons & this code generated via https://realfavicongenerator.net
   
   <span class="md-ellipsis">
     game:
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../config/hardware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    hardware:
     
   </span>
   
@@ -20228,8 +20266,6 @@ icons & this code generated via https://realfavicongenerator.net
       
         
       
-        
-      
     
     
     
@@ -20346,29 +20382,6 @@ icons & this code generated via https://realfavicongenerator.net
   
   <span class="md-ellipsis">
     fast_switches:
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../config/hardware/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    hardware:
     
   </span>
   
@@ -32641,15 +32654,6 @@ icons & this code generated via https://realfavicongenerator.net
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#config-options" class="md-nav__link">
-    <span class="md-ellipsis">
-      Config Options
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -40088,15 +40092,6 @@ icons & this code generated via https://realfavicongenerator.net
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#config-options" class="md-nav__link">
-    <span class="md-ellipsis">
-      Config Options
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -40122,6 +40117,9 @@ icons & this code generated via https://realfavicongenerator.net
 
 
 <h1 id="blinkenlight-player">Blinkenlight player</h1>
+<ul>
+<li><a href="../../config/blinkenlight_player/">blinkenlight_player: Config Reference</a></li>
+</ul>
 <p>The <em>blinkenlight player</em> is a <a href="../">config player</a>
 that's used add or remove colors from a blinkenlight.</p>
 <div class="admonition note">
@@ -40244,23 +40242,26 @@ That is, each cycle lasts 1 second, regardless of how many colors the
 blinkenlight has. Now, let's say you use a blinkenlight_player to add
 the color red to the blinkenlight. Now the blinkenlight's cycle would
 look like this:</p>
-<p>+-------+-------+-------+-------+-------+-------+-------+-------+
+<p><div class="highlight"><pre><span></span><code>+-------+-------+-------+-------+-------+-------+-------+-------+
 | 1     |       | 1     |       | 1     |       | 1     |       |
 | s     |       | s     |       | s     |       | s     |       |
 | econd |       | econd |       | econd |       | econd |       |
 +-------+-------+-------+-------+-------+-------+-------+-------+
 | &gt; red | &gt; off | &gt; red | &gt; off | &gt; red | &gt; off | &gt; red | &gt; off |
-+-------+-------+-------+-------+-------+-------+-------+-------+</p>
-<p>If green color is added to the blinkenlight, the cycle would change to
-this:</p>
-<p>+-------+-------+-------+-------+-------+-------+-------+-------+
++-------+-------+-------+-------+-------+-------+-------+-------+
+
+If green color is added to the blinkenlight, the cycle would change to
+this:
+
++-------+-------+-------+-------+-------+-------+-------+-------+
 | 1     |       | 1     |       | 1     |       | 1     |       |
 | s     |       | s     |       | s     |       | s     |       |
 | econd |       | econd |       | econd |       | econd |       |
 +-------+-------+-------+-------+-------+-------+-------+-------+
 | &gt; red | green | &gt; red | green | &gt; red | green | &gt; red | green |
-+-------+-------+-------+-------+-------+-------+-------+-------+</p>
-<p>Now let's say a third color (blue) is added:</p>
++-------+-------+-------+-------+-------+-------+-------+-------+
+</code></pre></div>
+Now let's say a third color (blue) is added:</p>
 <table style="width:86%;">
 <colgroup>
 <col style="width: 6%" />
@@ -40455,9 +40456,6 @@ equivalent to the example above:</p>
 <p>In this case, the red color is added to the blinkenlight when
 <code>some_event</code> is posted, and then removed when <code>some_other_event</code> is
 posted.</p>
-<h2 id="config-options">Config Options</h2>
-<p>See <a href="../../config/blinkenlight_player/">blinkenlight_player:</a> for
-config details.</p>
 <hr />
 <div class="admonition question">
 <p class="admonition-title">Something missing or wrong? You can fix it!</p>

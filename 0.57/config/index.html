@@ -17179,6 +17179,10 @@ icons & this code generated via https://realfavicongenerator.net
     
       
         
+          
+        
+      
+        
       
         
       
@@ -17226,8 +17230,9 @@ icons & this code generated via https://realfavicongenerator.net
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2_3" >
         
           
-          <label class="md-nav__link" for="__nav_6_2_3" id="__nav_6_2_3_label" tabindex="0">
-            
+          <div class="md-nav__link md-nav__container">
+            <a href="config_players/" class="md-nav__link ">
+              
   
   
   <span class="md-ellipsis">
@@ -17236,8 +17241,14 @@ icons & this code generated via https://realfavicongenerator.net
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_2_3" id="__nav_6_2_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_2_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_2_3">
@@ -17245,6 +17256,8 @@ icons & this code generated via https://realfavicongenerator.net
             "Config Player" Config Reference
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
             
               
                 
@@ -17653,6 +17666,8 @@ icons & this code generated via https://realfavicongenerator.net
   
     
     
+      
+        
       
         
       
@@ -18659,6 +18674,29 @@ icons & this code generated via https://realfavicongenerator.net
   
   <span class="md-ellipsis">
     game:
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="hardware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    hardware:
     
   </span>
   
@@ -20230,8 +20268,6 @@ icons & this code generated via https://realfavicongenerator.net
       
         
       
-        
-      
     
     
     
@@ -20348,29 +20384,6 @@ icons & this code generated via https://realfavicongenerator.net
   
   <span class="md-ellipsis">
     fast_switches:
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="hardware/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    hardware:
     
   </span>
   
@@ -39943,6 +39956,66 @@ icons & this code generated via https://realfavicongenerator.net
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Index of config sections">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#config-players" class="md-nav__link">
+    <span class="md-ellipsis">
+      Config Players:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#devices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Devices:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mpf-built-in-configs" class="md-nav__link">
+    <span class="md-ellipsis">
+      MPF Built-in configs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#platform-specific-configs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Platform-specific Configs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#legacy-mpf-mc-configs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Legacy MPF-MC Configs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deprecated-config-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deprecated Config Reference
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -39987,14 +40060,38 @@ MPF-MC. Some of these are valid only in machine-wide configs, and others
 only work in mode config files. (And some are valid in both.) The detail
 page for each setting indicated which type of config file it's valid
 in.</p>
+<h3 id="config-players">Config Players:</h3>
+<p>For more info, see: <a href="config_players/">"Config Players" Reference Index</a></p>
+<p>These are a special type of MPF device that allow you to listen for events
+and perform actions in response. Each config player is named for the type
+of device that you control with it. For example, <code>light_player</code> is a config
+player that lets you set light colors in response to events.</p>
+<ul>
+<li><a href="blinkenlight_player/">blinkenlight_player:</a></li>
+<li><a href="coil_player/">coil_player:</a></li>
+<li><a href="display_light_player/">display_light_player:</a></li>
+<li><a href="event_player/">event_player:</a></li>
+<li><a href="flasher_player/">flasher_player:</a></li>
+<li><a href="light_player/">light_player:</a></li>
+<li><a href="queue_event_player/">queue_event_player:</a></li>
+<li><a href="queue_relay_player/">queue_relay_player:</a></li>
+<li><a href="random_event_player/">random_event_player:</a></li>
+<li><a href="score_queue_player/">score_queue_player:</a></li>
+<li><a href="segment_display_player/">segment_display_player:</a></li>
+<li><a href="show_player/">show_player:</a></li>
+<li><a href="slide_player/">slide_player:</a></li>
+<li><a href="sound_player/">sound_player:</a></li>
+<li><a href="variable_player/">variable_player:</a></li>
+<li><a href="widget_player/">widget_player:</a></li>
+</ul>
+<h3 id="devices">Devices:</h3>
+<p>These are generally MPF device configs, or other very general settings.</p>
 <ul>
 <li><a href="accelerometers/">accelerometers:</a></li>
 <li><a href="accruals/">accruals:</a></li>
 <li><a href="achievements/">achievements:</a></li>
 <li><a href="achievement_groups/">achievement_groups:</a></li>
-<li><a href="animations/">animations:</a></li>
-<li><a href="../assets/">assets:</a></li>
-<li><a href="auditor/">auditor:</a></li>
+<li><a href="assets/">assets:</a></li>
 <li><a href="autofire_coils/">autofire_coils:</a></li>
 <li><a href="ball_devices/">ball_devices:</a></li>
 <li><a href="ball_holds/">ball_holds:</a></li>
@@ -40003,78 +40100,104 @@ in.</p>
 <li><a href="bcp/">bcp:</a></li>
 <li><a href="bcp_connection/">bcp_connection:</a></li>
 <li><a href="bcp_server/">bcp_server:</a></li>
-<li><a href="bitmap_fonts/">bitmap_fonts:</a></li>
-<li><a href="blinkenlight_player/">blinkenlight_player:</a></li>
 <li><a href="blinkenlights/">blinkenlights:</a></li>
-<li><a href="bonus/">bonus (mode_settings:)</a></li>
 <li><a href="coil_overwrites/">coil_overwrites:</a></li>
-<li><a href="coil_player/">coil_player:</a></li>
 <li><a href="coils/">coils:</a></li>
 <li><a href="color_correction_profile/">color_correction_profile:</a></li>
 <li><a href="combo_switches/">combo_switches:</a></li>
-<li><a href="./">config:</a></li>
+<li><a href="config/">config:</a></li>
 <li><a href="counters/">counters:</a></li>
 <li><a href="counter_control_events/">counter_control_events:</a></li>
-<li><a href="credits/">credits:</a></li>
 <li><a href="custom_code/">custom_code:</a></li>
-<li><a href="display_light_player/">display_light_player:</a></li>
-<li><a href="../mc/displays/">displays:</a></li>
+<li><a href="displays/">displays:</a></li>
 <li><a href="digital_outputs/">digital_outputs:</a></li>
 <li><a href="diverters/">diverters:</a></li>
 <li><a href="dmds/">dmds:</a></li>
 <li><a href="drop_target_banks/">drop_target_banks:</a></li>
 <li><a href="drop_targets/">drop_targets:</a></li>
 <li><a href="dual_wound_coils/">dual_wound_coils:</a></li>
-<li><a href="event_player/">event_player:</a></li>
 <li><a href="extra_balls/">extra_balls:</a></li>
 <li><a href="extra_ball_groups/">extra_ball_groups:</a></li>
-<li><a href="fadecandy/">fadecandy:</a></li>
-<li><a href="fast/">fast:</a></li>
-<li><a href="fast_coils/">fast_coils:</a></li>
-<li><a href="fast_switches/">fast_switches:</a></li>
-<li><a href="flasher_player/">flasher_player:</a></li>
-<li><a href="flashers/">flashers:</a></li>
 <li><a href="flippers/">flippers:</a></li>
-<li><a href="../game/">game:</a></li>
-<li><a href="gi_player/">gi_player:</a></li>
-<li><a href="gis/">gis:</a></li>
-<li><a href="../hardware/">hardware:</a></li>
-<li><a href="hardware_sound_player/">hardware_sound_player:</a></li>
-<li><a href="hardware_sound_systems/">hardware_sound_systems:</a></li>
-<li><a href="high_score/">high_score:</a></li>
-<li><a href="image_pools/">image_pools:</a></li>
-<li><a href="images/">images:</a></li>
+<li><a href="game/">game:</a></li>
+<li><a href="hardware/">hardware:</a></li>
 <li><a href="info_lights/">info_lights:</a></li>
-<li><a href="keyboard/">keyboard:</a></li>
 <li><a href="kickbacks/">kickbacks:</a></li>
-<li><a href="kivy_config/">kivy_config:</a></li>
-<li><a href="led_player/">led_player:</a></li>
 <li><a href="light_stripes/">light_stripes:</a></li>
 <li><a href="light_rings/">light_rings:</a></li>
-<li><a href="lisy/">lisy:</a></li>
-<li><a href="leds/">leds:</a></li>
 <li><a href="lights/">lights:</a></li>
 <li><a href="light_segment_displays/">light_segment_displays:</a></li>
 <li><a href="light_settings/">light_settings:</a></li>
-<li><a href="light_player/">light_player:</a></li>
 <li><a href="logic_blocks/">logic_blocks:</a></li>
-<li><a href="logging/">logging:</a></li>
 <li><a href="machine/">machine:</a></li>
-<li><a href="../machine_vars/">machine_vars:</a></li>
+<li><a href="machine_vars/">machine_vars:</a></li>
 <li><a href="magnets/">magnets:</a></li>
-<li><a href="matrix_lights/">matrix_lights:</a></li>
-<li><a href="mc_custom_code/">mc_custom_code:</a></li>
-<li><a href="mc_scriptlets/">mc_scriptlets:</a></li>
 <li><a href="mode/">mode:</a></li>
 <li><a href="mode_settings/">mode_settings:</a></li>
 <li><a href="modes/">modes:</a></li>
 <li><a href="motors/">motors:</a></li>
-<li><a href="mpf/">mpf:</a></li>
-<li><a href="mpf-mc/">mpf-mc:</a></li>
 <li><a href="multiball_locks/">multiball_locks:</a></li>
 <li><a href="multiballs/">multiballs:</a></li>
-<li><a href="mypinballs/">mypinballs:</a></li>
+<li><a href="mpf/">mpf:</a></li>
 <li><a href="named_colors/">named_colors:</a></li>
+<li><a href="player_vars/">player_vars:</a></li>
+<li><a href="playfield_transfers/">playfield_transfers:</a></li>
+<li><a href="playfields/">playfields:</a></li>
+<li><a href="plugins/">plugins:</a></li>
+<li><a href="psus/">psus:</a></li>
+<li><a href="rgb_dmds/">rgb_dmds:</a></li>
+<li><a href="score_queues/">score_queues:</a></li>
+<li><a href="score_reel_groups/">score_reel_groups:</a></li>
+<li><a href="score_reels/">score_reels:</a></li>
+<li><a href="segment_displays/">segment_displays:</a></li>
+<li><a href="servos/">servos:</a></li>
+<li><a href="sequences/">sequences:</a></li>
+<li><a href="sequence_shots/">sequence_shots:</a></li>
+<li><a href="shot_control_events/">shot_control_events:</a></li>
+<li><a href="shot_groups/">shot_groups:</a></li>
+<li><a href="shot_profiles/">shot_profiles:</a></li>
+<li><a href="shots/">shots:</a></li>
+<li><a href="show_pools/">show_pools:</a></li>
+<li><a href="shows/">shows:</a></li>
+<li><a href="spinners/">spinners:</a></li>
+<li><a href="speedometers/">speedometers:</a></li>
+<li><a href="state_machines/">state_machines:</a></li>
+<li><a href="steppers/">steppers:</a></li>
+<li><a href="switch_overwrites/">switch_overwrites:</a></li>
+<li><a href="switches/">switches:</a></li>
+<li><a href="text_ui/">text_ui:</a></li>
+<li><a href="timed_switches/">timed_switches:</a></li>
+<li><a href="timers/">timers:</a></li>
+</ul>
+<h3 id="mpf-built-in-configs">MPF Built-in configs</h3>
+<p>These configs relate to the optional modes that MPF provides that allow you to
+have standard features you would expect from a pinball machine with minimal configuration,
+such as attract mode, tilt handling, and credit management. Many of these features
+depend on <code>tags</code> set on related devices, such as <code>start</code> on the start button switch.</p>
+<ul>
+<li><a href="auditor/">auditor:</a></li>
+<li><a href="bonus/">bonus (mode_settings:)</a></li>
+<li><a href="credits/">credits:</a></li>
+<li><a href="high_score/">high_score:</a></li>
+<li><a href="logging/">logging:</a></li>
+<li><a href="settings/">settings:</a></li>
+<li><a href="switch_player/">switch_player:</a></li>
+<li><a href="tilt/">tilt:</a></li>
+</ul>
+<h3 id="platform-specific-configs">Platform-specific Configs</h3>
+<p>While the previous configs listed are generic across the many platforms
+provided by MPF, all of these platforms need their own configurations,
+and some offer additional features on top of the standard devices already listed.</p>
+<ul>
+<li><a href="fadecandy/">fadecandy:</a></li>
+<li><a href="fast/">fast:</a></li>
+<li><a href="fast_coils/">fast_coils:</a></li>
+<li><a href="fast_switches/">fast_switches:</a></li>
+<li><a href="hardware_sound_player/">hardware_sound_player:</a></li>
+<li><a href="hardware_sound_systems/">hardware_sound_systems:</a></li>
+<li><a href="kivy_config/">kivy_config:</a></li>
+<li><a href="lisy/">lisy:</a></li>
+<li><a href="mypinballs/">mypinballs:</a></li>
 <li><a href="open_pixel_control/">open_pixel_control:</a></li>
 <li><a href="opp/">opp:</a></li>
 <li><a href="opp_coils/">opp_coils:</a></li>
@@ -40083,84 +40206,74 @@ in.</p>
 <li><a href="pd_led_boards/">pd_led_boards:</a></li>
 <li><a href="pin2dmd/">pin2dmd:</a></li>
 <li><a href="pkone/">pkone:</a></li>
-<li><a href="../player_vars/">player_vars:</a></li>
-<li><a href="playfield_transfers/">playfield_transfers:</a></li>
-<li><a href="playfields/">playfields:</a></li>
-<li><a href="playlist_player/">playlist_player:</a></li>
-<li><a href="playlists/">playlists:</a></li>
-<li><a href="plugins/">plugins:</a></li>
 <li><a href="pololu_maestro/">pololu_maestro:</a></li>
 <li><a href="pololu_tic/">pololu_tic:</a></li>
-<li><a href="psus/">psus:</a></li>
-<li><a href="queue_event_player/">queue_event_player:</a></li>
-<li><a href="queue_relay_player/">queue_relay_player:</a></li>
-<li><a href="random_event_player/">random_event_player:</a></li>
 <li><a href="raspberry_pi/">raspberry_pi:</a></li>
-<li><a href="rgb_dmds/">rgb_dmds:</a></li>
 <li><a href="rpi_dmd/">rpi_dmd:</a></li>
-<li><a href="score_queue_player/">score_queue_player:</a></li>
-<li><a href="score_queues/">score_queues:</a></li>
-<li><a href="score_reel_groups/">score_reel_groups:</a></li>
-<li><a href="score_reels/">score_reels:</a></li>
-<li><a href="scriptlets/">scriptlets:</a></li>
-<li><a href="segment_display_player/">segment_display_player:</a></li>
-<li><a href="segment_displays/">segment_displays:</a></li>
 <li><a href="servo_controllers/">servo_controllers:</a></li>
-<li><a href="servos/">servos:</a></li>
-<li><a href="settings/">settings:</a></li>
-<li><a href="sequences/">sequences:</a></li>
-<li><a href="sequence_shots/">sequence_shots:</a></li>
-<li><a href="shot_control_events/">shot_control_events:</a></li>
-<li><a href="shot_groups/">shot_groups:</a></li>
-<li><a href="shot_profiles/">shot_profiles:</a></li>
-<li><a href="shots/">shots:</a></li>
-<li><a href="show_player/">show_player:</a></li>
-<li><a href="show_pools/">show_pools:</a></li>
-<li><a href="../shows/">shows:</a></li>
-<li><a href="slide_player/">slide_player:</a></li>
-<li><a href="slides/">slides:</a></li>
-<li><a href="spinners/">spinners:</a></li>
 <li><a href="smart_virtual/">smart_virtual:</a></li>
 <li><a href="smartmatrix/">smartmatrix:</a></li>
 <li><a href="snux/">snux:</a></li>
+<li><a href="spi_bit_bang/">spi_bit_bang:</a></li>
+<li><a href="spike/">spike:</a></li>
+<li><a href="spike_node/">spike_node:</a></li>
+<li><a href="step_stick_stepper_settings/">step_stick_stepper_settings:</a></li>
+<li><a href="system11/">system11:</a></li>
+<li><a href="tic_stepper_settings/">tic_stepper_settings:</a></li>
+<li><a href="trinamics_steprocker/">trinamics_steprocker:</a></li>
+<li><a href="twitch_client/">twitch_client:</a></li>
+<li><a href="virtual_platform_start_active_switches/">virtual_platform_start_active_switches:</a></li>
+<li><a href="virtual_segment_display_connector/">virtual_segment_display_connector:</a></li>
+</ul>
+<h3 id="legacy-mpf-mc-configs">Legacy MPF-MC Configs</h3>
+<p>Prior to MPF 0.80, the standard media controller was "mpf-mc". The
+MPF config files were used to configure the various audio and video
+effects played on the machine alongside the pinball device and mode
+configs listed above. Developers upgrading from pre-0.80 to GMC will
+need to replace the features implemented in these configs with
+equivalents in Godot or a custom media controller.</p>
+<p><code>slide_player</code>, <code>sound_player</code>, and <code>widget_player</code> are listed in the
+"Config Players" section above, and they are very similar between pre-GMC
+and GMC eras of media controller.</p>
+<ul>
+<li><a href="animations/">animations:</a></li>
+<li><a href="bitmap_fonts/">bitmap_fonts:</a></li>
+<li><a href="image_pools/">image_pools:</a></li>
+<li><a href="images/">images:</a></li>
+<li><a href="keyboard/">keyboard:</a></li>
+<li><a href="mc_custom_code/">mc_custom_code:</a></li>
+<li><a href="mc_scriptlets/">mc_scriptlets:</a></li>
+<li><a href="mpf-mc/">mpf-mc:</a></li>
+<li><a href="playlist_player/">playlist_player:</a></li>
+<li><a href="playlists/">playlists:</a></li>
+<li><a href="slides/">slides:</a></li>
 <li><a href="sound_ducking/">sound_ducking:</a></li>
 <li><a href="sound_loop_player/">sound_loop_player:</a></li>
 <li><a href="sound_loop_sets/">sound_loop_sets:</a></li>
 <li><a href="sound_marker/">sound_marker:</a></li>
-<li><a href="sound_player/">sound_player:</a></li>
 <li><a href="sound_pools/">sound_pools:</a></li>
 <li><a href="sound_system_tracks/">sound_system_tracks:</a></li>
 <li><a href="sound_system/">sound_system:</a></li>
 <li><a href="sounds/">sounds:</a></li>
-<li><a href="speedometers/">speedometers:</a></li>
-<li><a href="spi_bit_bang/">spi_bit_bang:</a></li>
-<li><a href="spike/">spike:</a></li>
-<li><a href="spike_node/">spike_node:</a></li>
-<li><a href="state_machines/">state_machines:</a></li>
-<li><a href="steppers/">steppers:</a></li>
-<li><a href="step_stick_stepper_settings/">step_stick_stepper_settings:</a></li>
-<li><a href="switch_overwrites/">switch_overwrites:</a></li>
-<li><a href="switch_player/">switch_player:</a></li>
-<li><a href="switches/">switches:</a></li>
-<li><a href="system11/">system11:</a></li>
 <li><a href="text_strings/">text_strings:</a></li>
-<li><a href="text_ui/">text_ui:</a></li>
-<li><a href="tic_stepper_settings/">tic_stepper_settings:</a></li>
-<li><a href="tilt/">tilt:</a></li>
-<li><a href="timed_switches/">timed_switches:</a></li>
-<li><a href="timers/">timers:</a></li>
 <li><a href="track_player/">track_player:</a></li>
-<li><a href="trinamics_steprocker/">trinamics_steprocker:</a></li>
-<li><a href="twitch_client/">twitch_client:</a></li>
-<li><a href="variable_player/">variable_player:</a></li>
-<li><a href="video_pools/">video_pools:</a></li>
 <li><a href="videos/">videos:</a></li>
-<li><a href="virtual_platform_start_active_switches/">virtual_platform_start_active_switches:</a></li>
-<li><a href="virtual_segment_display_connector/">virtual_segment_display_connector:</a></li>
-<li><a href="widget_player/">widget_player:</a></li>
+<li><a href="video_pools/">video_pools:</a></li>
 <li><a href="widget_styles/">widget_styles:</a></li>
 <li><a href="widgets/">widgets:</a></li>
 <li><a href="window/">window:</a></li>
+</ul>
+<h3 id="deprecated-config-reference">Deprecated Config Reference</h3>
+<p>These configs were available in earlier versions of MPF (generally pre-0.56), but are no longer supported.
+See the individual pages for information on their replacements.</p>
+<ul>
+<li><a href="flashers/">flashers:</a></li>
+<li><a href="gi_player/">gi_player:</a></li>
+<li><a href="gis/">gis:</a></li>
+<li><a href="led_player/">led_player:</a></li>
+<li><a href="leds/">leds:</a></li>
+<li><a href="matrix_lights/">matrix_lights:</a></li>
+<li><a href="scriptlets/">scriptlets:</a></li>
 </ul>
 <hr />
 <div class="admonition question">
