@@ -4,18 +4,22 @@ title: Player Variables Reference
 
 # Player Variables Reference
 
-
 Here's a list of all the different "built in"
 [player variables](../game_logic/players.md) that MPF uses.
 
 You can use these in your config files to trigger game logic or to
 display as text on your display.
 
-Video about player and machine variables:
+### Video about player and [machine variables](../machine_vars/index.md):
 
 <div class="video-wrapper">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/PUxEsNUGXPY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+
+## Related Configs
+
+* [player_vars: Config Reference](../config/player_vars.md)
+* [variable_player: Config Reference](../config/variable_player.md)
 
 Note that you can also create your own player variables in your configs,
 and most likely your machine will have several orders of magnitude more
