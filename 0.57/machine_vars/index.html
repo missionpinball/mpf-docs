@@ -39941,6 +39941,93 @@ icons & this code generated via https://realfavicongenerator.net
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#video-about-machine-and-player-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Video about machine and player variables:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-configs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Related Configs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#built-in-machine-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Built-in Machine Variables
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Built-in Machine Variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mpf-general-info" class="md-nav__link">
+    <span class="md-ellipsis">
+      MPF general info
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#previous-game-scores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Previous game scores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#high-scores" class="md-nav__link">
+    <span class="md-ellipsis">
+      High scores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#credit-management-if-not-on-free-play" class="md-nav__link">
+    <span class="md-ellipsis">
+      Credit management (if not on free play)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mpf-mc-version-information-pre-mpf-080" class="md-nav__link">
+    <span class="md-ellipsis">
+      MPF-MC version information (pre-MPF 0.80)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#platform-specific-machine-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Platform-specific machine variables
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#related-events" class="md-nav__link">
     <span class="md-ellipsis">
       Related Events
@@ -40007,15 +40094,44 @@ it similarly to normal variables, you need to use the syntax
 with your variable name. If you want to access the machine variable in a player, e.g. segment player you need to use this syntax
 <code>{machine.my_var_name}</code>. In other words, when using the the first notation with the pipe symbol you access the value of the variable
 as a string, in the latter case using the dot notation you access the value itself.</p>
-<p>Video about player and machine variables:</p>
+<h3 id="video-about-machine-and-player-variables">Video about machine and <a href="../player_vars/">player variables</a>:</h3>
 <div class="video-wrapper">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/PUxEsNUGXPY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
+<h2 id="related-configs">Related Configs</h2>
+<ul>
+<li><a href="../config/machine_vars/">machine_vars: Config Reference</a></li>
+<li><a href="../config/variable_player/">variable_player: Config Reference</a></li>
+</ul>
+<h2 id="built-in-machine-variables">Built-in Machine Variables</h2>
 <p>You can create your own machine variables in your configs. There are
 also several machine variables that are automatically created. Here's a
 list of the machine variables that are "built in" and available for
-use in your configs:</p>
+use in your configs, grouped by feature set:</p>
+<h4 id="mpf-general-info">MPF general info</h4>
+<ul>
+<li><a href="mpf_extended_version/">mpf_extended_version</a></li>
+<li><a href="mpf_version/">mpf_version</a></li>
+<li><a href="python_version/">python_version</a></li>
+<li><a href="platform/">platform</a></li>
+<li><a href="platform_machine/">platform_machine</a></li>
+<li><a href="platform_release/">platform_release</a></li>
+<li><a href="platform_system/">platform_system</a></li>
+<li><a href="platform_version/">platform_version</a></li>
+</ul>
+<h4 id="previous-game-scores">Previous game scores</h4>
+<ul>
+<li><a href="playerx_score/">player(x)_score</a></li>
+</ul>
+<h4 id="high-scores">High scores</h4>
+<ul>
+<li><a href="high_score_categoryposition_label/">(high_score_category)(position)_label</a></li>
+<li><a href="high_score_categoryposition_name/">(high_score_category)(position)_name</a></li>
+<li><a href="high_score_categoryposition_value/">(high_score_category)(position)_value</a></li>
+<li><a href="high_score_categoryposition_variabletype_variable/">(high_score_category)(position)_(variable_type)_(variable)</a></li>
+</ul>
+<h4 id="credit-management-if-not-on-free-play">Credit management (if not on free play)</h4>
 <ul>
 <li><a href="credit_units/">credit_units</a></li>
 <li><a href="credits_denominator/">credits_denominator</a></li>
@@ -40023,31 +40139,26 @@ use in your configs:</p>
 <li><a href="credits_string/">credits_string</a></li>
 <li><a href="credits_value/">credits_value</a></li>
 <li><a href="credits_whole_num/">credits_whole_num</a></li>
+</ul>
+<h4 id="mpf-mc-version-information-pre-mpf-080">MPF-MC version information (pre-MPF 0.80)</h4>
+<ul>
+<li><a href="mc_extended_version/">mc_extended_version</a></li>
+<li><a href="mc_version/">mc_version</a></li>
+</ul>
+<h2 id="platform-specific-machine-variables">Platform-specific machine variables</h2>
+<p>Some platforms will also add additional machine variables based on
+how they are set up. Some examples:</p>
+<ul>
 <li><a href="fast_x_firmware/">fast_(x)_firmware</a></li>
 <li><a href="fast_x_model/">fast_(x)_model</a></li>
-<li><a href="high_score_categoryposition_label/">(high_score_category)(position)_label</a></li>
-<li><a href="high_score_categoryposition_name/">(high_score_category)(position)_name</a></li>
-<li><a href="high_score_categoryposition_value/">(high_score_category)(position)_value</a></li>
-<li><a href="high_score_categoryposition_variabletype_variable/">(high_score_category)(position)_(variable_type)_(variable)</a></li>
 <li><a href="lisy_api_version/">lisy_api_version</a></li>
 <li><a href="lisy_hardware/">lisy_hardware</a></li>
 <li><a href="lisy_version/">lisy_version</a></li>
-<li><a href="mc_extended_version/">mc_extended_version</a></li>
-<li><a href="mc_version/">mc_version</a></li>
-<li><a href="mpf_extended_version/">mpf_extended_version</a></li>
-<li><a href="mpf_version/">mpf_version</a></li>
 <li><a href="p_roc_hardware_version/">p_roc_hardware_version</a></li>
 <li><a href="p_roc_revision/">p_roc_revision</a></li>
 <li><a href="p_roc_version/">p_roc_version</a></li>
 <li><a href="pkone_firmware/">pkone_firmware</a></li>
 <li><a href="pkone_hardware/">pkone_hardware</a></li>
-<li><a href="platform/">platform</a></li>
-<li><a href="platform_machine/">platform_machine</a></li>
-<li><a href="platform_release/">platform_release</a></li>
-<li><a href="platform_system/">platform_system</a></li>
-<li><a href="platform_version/">platform_version</a></li>
-<li><a href="playerx_score/">player(x)_score</a></li>
-<li><a href="python_version/">python_version</a></li>
 </ul>
 <h2 id="related-events">Related Events</h2>
 <ul>
