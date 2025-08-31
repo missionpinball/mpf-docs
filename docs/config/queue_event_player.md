@@ -69,7 +69,12 @@ Single event. This device will be posted by the device. Defaults to
 empty.
 
 The event name that will be posted when all the handlers of this queue
-event are done processing it. This setting is optional.
+event are done processing it. This setting is optional. If no value is
+given, a default event will be posted when complete, [queue_event_complete](../events/queue_event_complete.md).
+
+With either the generic `queue_event_complete` or your custom `events_when_finished`,
+the custom parameters defined in the `args` option will be included, as well as
+the parameter *queue_event*, which will have the value of the queue_event from the config.
 
 ## Related Pages:
 
