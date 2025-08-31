@@ -4,7 +4,6 @@ title: Machine Variables
 
 # Machine Variables
 
-
 MPF uses the concept of *machine variables* to track dynamically-created
 variables that apply on a machine-wide basis. Machine variables are
 similar in concept to
@@ -41,11 +40,16 @@ with your variable name. If you want to access the machine variable in a player,
 `{machine.my_var_name}`. In other words, when using the the first notation with the pipe symbol you access the value of the variable
 as a string, in the latter case using the dot notation you access the value itself.
 
-Video about player and machine variables:
+### Video about machine and [player variables](../player_vars/index.md):
 
 <div class="video-wrapper">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/PUxEsNUGXPY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+
+## Related Configs
+
+* [machine_vars: Config Reference](../config/machine_vars.md)
+* [variable_player: Config Reference](../config/variable_player.md)
 
 You can create your own machine variables in your configs. There are
 also several machine variables that are automatically created. Here's a
