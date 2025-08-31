@@ -51,10 +51,36 @@ as a string, in the latter case using the dot notation you access the value itse
 * [machine_vars: Config Reference](../config/machine_vars.md)
 * [variable_player: Config Reference](../config/variable_player.md)
 
+## Built-in Machine Variables
+
 You can create your own machine variables in your configs. There are
 also several machine variables that are automatically created. Here's a
 list of the machine variables that are "built in" and available for
-use in your configs:
+use in your configs, grouped by feature set:
+
+#### MPF general info
+
+* [mpf_extended_version](mpf_extended_version.md)
+* [mpf_version](mpf_version.md)
+* [python_version](python_version.md)
+* [platform](platform.md)
+* [platform_machine](platform_machine.md)
+* [platform_release](platform_release.md)
+* [platform_system](platform_system.md)
+* [platform_version](platform_version.md)
+
+#### Previous game scores
+
+* [player(x)_score](playerx_score.md)
+
+#### High scores
+
+* [(high_score_category)(position)_label](high_score_categoryposition_label.md)
+* [(high_score_category)(position)_name](high_score_categoryposition_name.md)
+* [(high_score_category)(position)_value](high_score_categoryposition_value.md)
+* [(high_score_category)(position)\_(variable_type)_(variable)](high_score_categoryposition_variabletype_variable.md)
+
+#### Credit management (if not on free play)
 
 * [credit_units](credit_units.md)
 * [credits_denominator](credits_denominator.md)
@@ -62,31 +88,27 @@ use in your configs:
 * [credits_string](credits_string.md)
 * [credits_value](credits_value.md)
 * [credits_whole_num](credits_whole_num.md)
+
+#### MPF-MC version information (pre-MPF 0.80)
+
+* [mc_extended_version](mc_extended_version.md)
+* [mc_version](mc_version.md)
+
+## Platform-specific machine variables
+
+Some platforms will also add additional machine variables based on
+how they are set up. Some examples:
+
 * [fast_(x)_firmware](fast_x_firmware.md)
 * [fast_(x)_model](fast_x_model.md)
-* [(high_score_category)(position)_label](high_score_categoryposition_label.md)
-* [(high_score_category)(position)_name](high_score_categoryposition_name.md)
-* [(high_score_category)(position)_value](high_score_categoryposition_value.md)
-* [(high_score_category)(position)\_(variable_type)_(variable)](high_score_categoryposition_variabletype_variable.md)
 * [lisy_api_version](lisy_api_version.md)
 * [lisy_hardware](lisy_hardware.md)
 * [lisy_version](lisy_version.md)
-* [mc_extended_version](mc_extended_version.md)
-* [mc_version](mc_version.md)
-* [mpf_extended_version](mpf_extended_version.md)
-* [mpf_version](mpf_version.md)
 * [p_roc_hardware_version](p_roc_hardware_version.md)
 * [p_roc_revision](p_roc_revision.md)
 * [p_roc_version](p_roc_version.md)
 * [pkone_firmware](pkone_firmware.md)
 * [pkone_hardware](pkone_hardware.md)
-* [platform](platform.md)
-* [platform_machine](platform_machine.md)
-* [platform_release](platform_release.md)
-* [platform_system](platform_system.md)
-* [platform_version](platform_version.md)
-* [player(x)_score](playerx_score.md)
-* [python_version](python_version.md)
 
 ## Related Events
 
