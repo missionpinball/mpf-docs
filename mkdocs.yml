@@ -1176,7 +1176,8 @@ nav:
       - mode_(name)_starting: events/mode_name_starting.md
       - mode_(name)_stopping: events/mode_name_stopping.md
       - balldevice_(name)_ball_eject_attempt: events/queue_events/balldevice_ball_device_ball_eject_attempt.md
-
+    - Queue Event Player Events:
+      - queue_event_complete: events/queue_event_complete.md
     - Audio Management Events:
       - master_volume_decrease: events/master_volume_decrease.md
       - master_volume_increase: events/master_volume_increase.md
