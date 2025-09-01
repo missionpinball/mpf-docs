@@ -11,9 +11,40 @@ Event is posted by [counters:](../config/counters.md), [accruals:](../config/acc
 
 The logic block (name) was just hit.
 
-Note that this is the default hit event for logic blocks, but this can
-be changed in a logic block's "events_when_hit:" setting, so this
-might not be the actual event that's posted for all logic blocks in
-your machine.
+## Keyword arguments
 
---8<-- "event_no_keywords_notice.md"
+(See the [Conditional Events](overview/conditional.md)
+guide for details for how to create entries in your config file that
+only respond to certain combinations of the arguments below.)
+
+Accruals, Counters, and Sequences each have different keyword arguments.
+
+### Accrual Keyword arguments
+
+#### `step`:
+
+The 0-based integer number of the step that was just hit.
+
+### Counter Keyword arguments
+
+If the counter has a config setting for `count_complete_value`,
+`count`, `hits` and `remaining` towards that goal will be included as arguments.
+If `count_complete_value` is `None`, then only `count` will be included.
+
+#### `count`:
+
+The current value of the counter.
+
+#### `hits`:
+
+The numbers of hits made on this counter.
+
+#### `remaining`:
+
+The numbers of hits remaining before completing this counter.
+
+### Sequence Keyword arguments
+
+#### `step`:
+
+The 0-based integer number of the step that was just hit.
