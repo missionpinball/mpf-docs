@@ -11,6 +11,13 @@ Event is posted by [counters:](../config/counters.md), [accruals:](../config/acc
 
 The logic block (name) was just hit.
 
+## Deprecation warning:
+
+In previous versions of MPF, the event `counter_(name)_hit` was used for counters instead of this event, `logicblock_(name)_hit`.
+Currently, both events are posted together (if you have not provided a custom [`events_when_hit`](../config/counters.md#events_when_hit) value for the counter),
+but `counter_(name)_hit` is considered deprecated and may be removed in future versions of MPF.
+
+
 ## Keyword arguments
 
 (See the [Conditional Events](overview/conditional.md)

@@ -210,11 +210,17 @@ List of one (or more) events.
 
 Events that will be posted when this device is completed.
 
+If you do not provide a value for this config, the default
+[`logicblock_(name)_complete`](../events/logicblock_name_complete.md) will be used.
+
 ### events_when_hit:
 
 List of one (or more) events.
 
 Events that will be posted when this device is hit or advanced.
+
+If you do not provide a value for this config, the default
+[`logicblock_(name)_hit`](../events/logicblock_name_hit.md) will be used.
 
 ### persist_state:
 
