@@ -93,7 +93,8 @@ your config. (If you don't include them, the default will be used).
 
 ### balls_to_replace:
 
-Single value, type: `integer`. Default: `-1`
+Single value, type: `integer` or `template`
+([Instructions for entering templates](instructions/dynamic_values.md)). Default: `-1`
 
 By default a multiball lock will immediately replace every ball it locks
 with a new ball from the default device (i.e. the trough). With this
