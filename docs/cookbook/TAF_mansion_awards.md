@@ -531,7 +531,7 @@ for the achievement group, so hitting either one of those will start the
 selected achievement (if the group is enabled) and also stop this mode.
 
 You may be wondering why we have both of those ball enter events listed
-here? Why not just use an "events_when_started" setting in the
+here? Why not just use an `events_when_started:` setting in the
 achievement group to stop this mode? The reason is for this rule here:
 
 * Accumulating 15, 25, 35, 45, 55, 65, 75, 85, 95 bear kicks (center
