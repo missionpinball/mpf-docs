@@ -11,7 +11,12 @@ Event is posted by [counters:](../config/counters.md), [accruals:](../config/acc
 
 The logic block (name) was just hit.
 
-## Deprecation warning:
+Note that this is the default completion event for logic blocks, but
+this can be changed in a logic block's `events_when_hit:`
+setting, so this might not be the actual event that's posted for all
+logic blocks in your machine.
+
+#### Deprecation warning:
 
 In previous versions of MPF, the event `counter_(name)_hit` was used for counters instead of this event, `logicblock_(name)_hit`.
 Currently, both events are posted together (if you have not provided a custom [`events_when_hit`](../config/counters.md#events_when_hit) value for the counter),
