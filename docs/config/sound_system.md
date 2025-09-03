@@ -6,9 +6,9 @@ title: "sound_system: Config Reference"
 
 --8<-- "config_section.md"
 
-!!! warning "Deprecated in MPF 0.80
+!!! warning "Deprecated in MPF 0.80"
 
-    The GMC used by MPF 0.80 manages audio outside of YAML configuration files. See the [GMC Setup Guide](../gmc/setup.md) for instructions on configuring the audio system in GMC. The `sound_system:` configuration should be removed for projects upgrading to MPF 0.80 and Godot.
+    MPF 0.80 uses GMC, which manages audio outside of YAML configuration files. See the [GMC Setup Guide](../gmc/setup.md) for instructions on configuring the audio system in GMC. The `sound_system:` configuration should be removed for projects upgrading to MPF 0.80 and Godot.
 
 
 | Valid in | |
