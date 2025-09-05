@@ -288,6 +288,11 @@ will posted an event called *switch_s_left_slingshot_active*.
     * [bonus_start](bonus_start.md)
     * [bonus_subtotal](bonus_subtotal.md)
 
+* [Carousel Events](carousel/index.md)
+    * [carousel_item_highlighted](carousel_item_highlighted.md)
+    * [carousel\_items_empty](carousel_items_empty.md)
+    * [carousel\_item_selected](carousel_item_selected.md)
+
 * Config Player Events
     * [clear](clear.md)
 

@@ -115,7 +115,7 @@ Emitted during the Bonus mode. See [bonus mode settings](bonus.md) for details.
 
 Emitted when a mode ends.
 
-#### `item_highlighted(payload)`
+#### `carousel_item_highlighted(payload)`
 
 Emitted during a carousel event.
 
