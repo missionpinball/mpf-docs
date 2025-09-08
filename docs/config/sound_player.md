@@ -70,7 +70,11 @@ your config. (If you don't include them, the default will be used).
 Single value, type: `time string (secs)`
 ([Instructions for entering time strings](instructions/time_strings.md)). Default: `-1`
 
---8<-- "todo.md"
+!!! warning ""
+
+    `about_to_finish_time` is not implemented in MPF 0.80
+
+See: [`sounds:about_to_finish_time`](sounds.md#about_to_finish_time)
 
 ### action:
 
@@ -99,6 +103,8 @@ specified sound. Options for `action:` are:
     All instances of the sound or sound pool will be immediately
     stopped. The request is ignored if the sound is not currently
     loaded.
+* `replace` - *new in MPF 0.80* - All sounds currently playing on the
+    specified bus are stopped, and the replacing sound is played.
 
 ### block:
 
@@ -151,7 +157,11 @@ before playing the sound.
 List of one (or more) events. Those will be posted by the device.
 Default: `use_sound_setting`
 
-Please refer to the [sounds:](sounds.md) documentation for details about this setting as it just
+!!! warning ""
+
+    `events_when_about_to_finish` is not implemented in MPF 0.80
+
+Please refer to the [sounds:events_when_about_to_finish](sounds.md#events_when_about_to_finish) documentation for details about this setting as it just
 overwrites the setting in your sound.
 
 ### events_when_looping:
@@ -159,7 +169,7 @@ overwrites the setting in your sound.
 List of one (or more) events. Those will be posted by the device.
 Default: `use_sound_setting`
 
-Please refer to the [sounds:](sounds.md) documentation for details about this setting as it just
+Please refer to the [sounds:events_when_looping](sounds.md#events_when_looping) documentation for details about this setting as it just
 overwrites the setting in your sound.
 
 ### events_when_played:
@@ -167,7 +177,7 @@ overwrites the setting in your sound.
 List of one (or more) events. Those will be posted by the device.
 Default: `use_sound_setting`
 
-Please refer to the [sounds:](sounds.md) documentation for details about this setting as it just
+Please refer to the [sounds:events_when_played](sounds.md#events_when_played) documentation for details about this setting as it just
 overwrites the setting in your sound.
 
 ### events_when_stopped:
@@ -175,7 +185,7 @@ overwrites the setting in your sound.
 List of one (or more) events. Those will be posted by the device.
 Default: `use_sound_setting`
 
-Please refer to the [sounds:](sounds.md) documentation for details about this setting as it just
+Please refer to the [sounds:events_when_stopped](sounds.md#events_when_stopped) documentation for details about this setting as it just
 overwrites the setting in your sound.
 
 ### fade_in:
@@ -183,7 +193,7 @@ overwrites the setting in your sound.
 Single value, type: `time string (secs)`
 ([Instructions for entering time strings](instructions/time_strings.md)). Defaults to empty.
 
-Please refer to the [sounds:](sounds.md) documentation for details about this setting as it just
+Please refer to the [sounds:fade_in](sounds.md#fade_in) documentation for details about this setting as it just
 overwrites the setting in your sound.
 
 ### fade_out:
@@ -191,7 +201,7 @@ overwrites the setting in your sound.
 Single value, type: `time string (secs)`
 ([Instructions for entering time strings](instructions/time_strings.md)). Defaults to empty.
 
-Please refer to the [sounds:](sounds.md) documentation for details about this setting as it just
+Please refer to the [sounds:fade_out](sounds.md#fade_out) documentation for details about this setting as it just
 overwrites the setting in your sound.
 
 ### key:
@@ -204,7 +214,7 @@ Used to reference this sound entry when stopping/pausing/resuming it.
 
 Single value, type: `int_or_token`. Defaults to empty.
 
-Please refer to the [sounds:](sounds.md) documentation for details about this setting as it just
+Please refer to the [sounds:loops](sounds.md#loops) documentation for details about this setting as it just
 overwrites the setting in your sound.
 
 ### max_queue_time:
@@ -212,7 +222,7 @@ overwrites the setting in your sound.
 Single value, type: `time string (secs)`
 ([Instructions for entering time strings](instructions/time_strings.md)). Default: `-1`
 
-Please refer to the [sounds:](sounds.md) documentation for details about this setting as it just
+Please refer to the [sounds:max_queue_time](sounds.md#max_queue_time) documentation for details about this setting as it just
 overwrites the setting in your sound.
 
 ### mode_end_action:
@@ -220,21 +230,25 @@ overwrites the setting in your sound.
 Single value, type: one of the following options: stop, stop_looping,
 use_sound_setting. Default: `use_sound_setting`
 
-Please refer to the [sounds:](sounds.md) documentation for details about this setting as it just
+!!! warning ""
+
+    `mode_end_action` is not implemented in MPF 0.80
+
+Please refer to the [sounds:mode_end_action](sounds.md#mode_end_action) documentation for details about this setting as it just
 overwrites the setting in your sound.
 
 ### pan:
 
 Single value, type: `float_or_token`. Defaults to empty.
 
-Please refer to the [sounds:](sounds.md) documentation for details about this setting as it just
+Please refer to the [sounds:pan](sounds.md#pan) documentation for details about this setting as it just
 overwrites the setting in your sound.
 
 ### priority:
 
 Single value, type: `int_or_token`. Defaults to empty.
 
-Please refer to the [sounds:](sounds.md) documentation for details about this setting as it just
+Please refer to the [sounds:priority](sounds.md#priority) documentation for details about this setting as it just
 overwrites the setting in your sound.
 
 ### start_at:
@@ -242,7 +256,7 @@ overwrites the setting in your sound.
 Single value, type: `time string (secs)`
 ([Instructions for entering time strings](instructions/time_strings.md)). Defaults to empty.
 
-Please refer to the [sounds:](sounds.md) documentation for details about this setting as it just
+Please refer to the [sounds:start_at](sounds.md#start_at) documentation for details about this setting as it just
 overwrites the setting in your sound.
 
 ### track:
@@ -253,7 +267,7 @@ overwrites the setting in your sound.
 
 Single value, type: `string`. Defaults to empty.
 
-Please refer to the [sounds:](sounds.md) documentation for details about this setting as it just
+Please refer to the [sounds:track](sounds.md#track) documentation for details about this setting as it just
 overwrites the setting in your sound.
 
 ### volume:
@@ -261,7 +275,7 @@ overwrites the setting in your sound.
 Single value, type: `gain setting` (-inf, db, or float between 0.0 and
 1.0). Defaults to empty.
 
-Please refer to the [sounds:](sounds.md) documentation for details about this setting as it just
+Please refer to the [sounds:volume](sounds.md#volume) documentation for details about this setting as it just
 overwrites the setting in your sound.
 
 ## Related How To guides
