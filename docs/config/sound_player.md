@@ -70,7 +70,11 @@ your config. (If you don't include them, the default will be used).
 Single value, type: `time string (secs)`
 ([Instructions for entering time strings](instructions/time_strings.md)). Default: `-1`
 
---8<-- "todo.md"
+!!! warning ""
+
+    `about_to_finish_time` is not implemented in MPF 0.80
+
+See: [`sounds:about_to_finish_time`](sounds.md#about_to_finish_time)
 
 ### action:
 
@@ -99,6 +103,8 @@ specified sound. Options for `action:` are:
     All instances of the sound or sound pool will be immediately
     stopped. The request is ignored if the sound is not currently
     loaded.
+* `replace` - *new in MPF 0.80* - All sounds currently playing on the
+    specified bus are stopped, and the replacing sound is played.
 
 ### block:
 
@@ -151,7 +157,11 @@ before playing the sound.
 List of one (or more) events. Those will be posted by the device.
 Default: `use_sound_setting`
 
-Please refer to the [sounds:](sounds.md) documentation for details about this setting as it just
+!!! warning ""
+
+    `events_when_about_to_finish` is not implemented in MPF 0.80
+
+Please refer to the [sounds:events_when_about_to_finish](sounds.md#events_when_about_to_finish) documentation for details about this setting as it just
 overwrites the setting in your sound.
 
 ### events_when_looping:
@@ -220,7 +230,11 @@ overwrites the setting in your sound.
 Single value, type: one of the following options: stop, stop_looping,
 use_sound_setting. Default: `use_sound_setting`
 
-Please refer to the [sounds:](sounds.md) documentation for details about this setting as it just
+!!! warning ""
+
+    `mode_end_action` is not implemented in MPF 0.80
+
+Please refer to the [sounds:mode_end_action](sounds.md#mode_end_action) documentation for details about this setting as it just
 overwrites the setting in your sound.
 
 ### pan:
