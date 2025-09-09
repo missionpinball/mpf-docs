@@ -247,6 +247,8 @@ will posted an event called *switch_s_left_slingshot_active*.
     * [machine_reset_phase_2](machine_reset_phase_2.md) *Queue Event*
     * [machine_reset_phase_3](machine_reset_phase_3.md) *Queue Event*
 
+* [Queue Event Player Events]
+    * [queue_event_complete](queue_event_complete.md)
 
 * Audio Management Events
     * [master_volume_decrease](master_volume_decrease.md)
