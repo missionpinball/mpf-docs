@@ -237,6 +237,8 @@ Added in MPF 0.56.1.
 
 The color of the text outline. Default is black, but also the default outline width is 0, so you won't see it unless you set the outline width to something greater than 0.
 
+This feature does not work the way you think, please see [mpf-mc issue outline_color bug or something else?](https://github.com/missionpinball/mpf-mc/issues/456)
+
 ### outline_width:
 
 Added in MPF 0.56.1.
