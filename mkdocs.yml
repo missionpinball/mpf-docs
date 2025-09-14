@@ -1131,6 +1131,7 @@ nav:
       - events/slides/index.md
       - slide_(name)_active: events/slide_slide_active.md
       - slide_(name)_created: events/slide_slide_created.md
+      - slide_(name)_inactive: events/slide_slide_inactive.md
       - slide_(name)_removed: events/slide_slide_removed.md
     - spinner Events:
       - events/spinners/index.md
