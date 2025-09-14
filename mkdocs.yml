@@ -1060,6 +1060,7 @@ nav:
       - high_score_enter_initials: events/high_score_enter_initials.md
       - high_score_award_display: events/high_score_award_display.md
       - text_input_high_score_complete: events/text_input_high_score_complete.md
+      - text_input_(name)_complete: events/text_input_name_complete.md
       - score_award_display: events/score_award_display.md
       - (award_name)_award_display: events/award_name_award_display.md
       - (category_name)_award_display: events/category_name_award_display.md

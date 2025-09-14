@@ -118,9 +118,11 @@ will posted an event called *switch_s_left_slingshot_active*.
     * [high_score_enter_initials](high_score_enter_initials.md)
     * [high_score_award_display](high_score_award_display.md)
     * [text_input_high_score_complete](text_input_high_score_complete.md)
-    * [score_award_display](score_award_display.md)
-    * [(award_name)\_award_display](award_name_award_display.md)
-    * [(category_name)\_award_display](category_name_award_display.md)
+    * [text_input_(name)_complete](text_input_name_complete.md) *added in MPF 0.80, see [MPFTextInput](../gmc/reference/mpf-text-input.md)*
+    * The following were removed in MPF 0.80:
+        * [score_award_display](score_award_display.md)
+        * [(award_name)\_award_display](award_name_award_display.md)
+        * [(category_name)\_award_display](category_name_award_display.md)
 
 * [Kickback Events](kickbacks/index.md)
     * [kickback_(name)_fired](kickback_kickback_fired.md)
@@ -376,7 +378,7 @@ will posted an event called *switch_s_left_slingshot_active*.
     * [player_turn_will_start](player_turn_will_start.md)
     * [player_will_add](player_will_add.md)
 
-* Text Input Events
+* Text Input Events *Note: MPF-MC only*
     * [text_input_(key)_abort](text_input_key_abort.md)
     * [text_input_(key)_complete](text_input_key_complete.md)
 
