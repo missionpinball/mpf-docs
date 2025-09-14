@@ -187,7 +187,6 @@ will posted an event called *switch_s_left_slingshot_active*.
     * [(name)\_(state)_complete](shot_group_state_complete.md)
     * [(name)\_(state)_hit](shot_group_state_hit.md)
 
-
 * [Slide Events](slides/index.md)
     * [slide_(name)_active](slide_slide_active.md)
     * [slide_(name)_created](slide_slide_created.md)
@@ -223,6 +222,10 @@ will posted an event called *switch_s_left_slingshot_active*.
     * [timer_(name)_tick](timer_timer_tick.md)
     * [timer_(name)\_time_added](timer_timer_time_added.md)
     * [timer_(name)\_time_subtracted](timer_timer_time_subtracted.md)
+
+* Widget Events
+    * [widget_(name)_active](widget_name_active.md)
+    * [widget_(name)_removed](widget_name_removed.md)
 
 ## Other Event Groups
 

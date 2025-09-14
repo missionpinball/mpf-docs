@@ -1165,6 +1165,9 @@ nav:
       - timer_(name)_tick: events/timer_timer_tick.md
       - timer_(name)_time_added: events/timer_timer_time_added.md
       - timer_(name)_time_subtracted: events/timer_timer_time_subtracted.md
+    - widget Events:
+      - widget_(name)_active: events/widget_name_active.md
+      - widget_(name)_removed: events/widget_name_removed.md
 
     - Queue Events:
       - events/queue_events/index.md
