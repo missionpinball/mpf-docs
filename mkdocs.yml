@@ -16,6 +16,9 @@ plugins:
       version_selector: true
       css_dir: css
       javascript_dir: js
+  - glightbox:
+      manual: true # enable manual mode, all images will not be added to the lightbox effectextra_css:
+
 extra_css:
   - stylesheets/mpf.css     # Sets our custom colors
 
