@@ -1291,6 +1291,8 @@ nav:
       - player_turn_will_end: events/player_turn_will_end.md
       - player_turn_will_start: events/player_turn_will_start.md
       - player_will_add: events/player_will_add.md
+    - Service Mode Events:
+      - service_trigger: events/service_trigger.md
     - Text Input Events:
       - text_input_(key)_abort: events/text_input_key_abort.md
       - text_input_(key)_complete: events/text_input_key_complete.md

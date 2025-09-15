@@ -382,6 +382,9 @@ will posted an event called *switch_s_left_slingshot_active*.
     * [player_turn_will_start](player_turn_will_start.md)
     * [player_will_add](player_will_add.md)
 
+* Service Mode Events:
+    * [service_trigger](service_trigger.md)
+
 * Text Input Events *Note: MPF-MC only*
     * [text_input_(key)_abort](text_input_key_abort.md)
     * [text_input_(key)_complete](text_input_key_complete.md)
