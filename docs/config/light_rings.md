@@ -34,7 +34,7 @@ Single value, type: [lights:](lights.md).
 Defaults to empty.
 
 This is a list of sub-settings (indented) that are regular settings from
-the [../about/help_us_to_write_it](lights.md) section of your machine
+the [lights](lights.md) section of your machine
 config. Any settings that are valid there are valid here, and they're
 applied to all the LEDs in the ring.
 
@@ -87,8 +87,6 @@ of 200 and a count of 5 will create 5 LEDs with the numbers 7-200,
 
 Single value, type: `string` name of a [lights:](lights.md) device. Defaults to empty.
 
---8<-- "todo.md"
-
 ### radius:
 
 Single value, type: `number` (will be converted to floating point).
@@ -110,7 +108,7 @@ used for the calculation of x/y positions of individual LEDs only.
 
 Single value, type: `string`. Defaults to empty.
 
---8<-- "todo.md"
+This setting can be used to override the start channel if necessary.
 
 ### console_log:
 
@@ -145,7 +143,3 @@ List of one (or more) values, each is a type: `string`. Defaults to
 empty.
 
 Not used.
-
-## Related How To guides
-
---8<-- "todo.md"
