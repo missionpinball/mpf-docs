@@ -19,7 +19,7 @@ applied to all LEDs. The only difference between
 [light_rings](light_rings.md) is how
 the x/y coordinates are computed.
 
-In order to access single light in your strip you can use the following syntax schema `(light_strip_name)_light_(light_number)`. Where `(light_strip_name)` is the name you have choosen for your light strip and `(light_number)` is the number of the light in the stip, keep in mind the numbering starts with 0 and not 1.
+In order to access single light in your stripe you can use the following syntax schema `(light_stripe_name)_light_(light_number)`. Where `(light_stripe_name)` is the name you have choosen for your light stripe and `(light_number)` is the number of the light in the stripe, keep in mind the numbering starts with 0 and not 1.
 
 ## Required settings
 
@@ -38,7 +38,7 @@ Single value, type: [lights:](lights.md).
 Defaults to empty.
 
 This is a list of sub-settings (indented) that are regular settings from
-the [../about/help_us_to_write_it](lights.md) section of your machine
+the [lights](lights.md) section of your machine
 config. Any settings that are valid there are valid here, and they're
 applied to all the LEDs in the stripe.
 
@@ -94,13 +94,14 @@ of 200 and a count of 5 will create 5 LEDs with the numbers 7-200,
 
 Single value, type: `string` name of a [lights:](lights.md) device. Defaults to empty.
 
---8<-- "todo.md"
+This can be used instead of a number in order to automatically determine
+the number of the first light in the stripe.
 
 ### start_channel:
 
 Single value, type: `string`. Defaults to empty.
 
---8<-- "todo.md"
+This setting can be used to set a custom start channel if necessary.
 
 ### start_x:
 
@@ -147,8 +148,3 @@ Name of this device in service mode.
 
 List of one (or more) values, each is a type: `string`. Defaults to
 empty.
-
-
-## Related How To guides
-
---8<-- "todo.md"
