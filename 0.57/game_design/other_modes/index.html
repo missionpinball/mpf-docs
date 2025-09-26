@@ -40153,27 +40153,32 @@ icons & this code generated via https://realfavicongenerator.net
 
 
 <h1 id="other-game-modes">Other Game Modes</h1>
-<p>There are a few very typical modes in almost all machines. Those either
-run at start or all the time.</p>
+<p>There are a few very typical modes in almost all machines. These can either
+run at start or all the time. There are also some common modes (with simple
+implementations provided by MPF for your convenience) that run either after
+a ball ends, or after a game ends.</p>
 <h2 id="all-the-timebefore-ball-start">All the time/Before ball start</h2>
-<p>Those modes run all the time or before ball start.</p>
+<p>These modes run all the time or before ball start.</p>
 <h3 id="credits-mode">Credits Mode</h3>
 <p>Count coins and denies game start on insufficient credits. See
-<a href="../../game_logic/credits/">game_end_modes</a> for details.</p>
+<a href="../../game_logic/credits/">Coins &amp; Credits</a> for details. Credits must run
+before a game so that credits may be managed, but also during a game because
+credits may be carried between games, or award for various reasons during play.</p>
 <h3 id="attract-mode">Attract Mode</h3>
-<p>Attract mode stop on game start. See
-<a href="../../game_logic/modes/attract/">game_end_modes</a>.</p>
+<p>Attract mode stops on game start, and is started again when a game ends and no further followups are running.
+See <a href="../../game_logic/modes/attract/">Attract (mode)</a>.</p>
 <h3 id="tilt-mode">Tilt Mode</h3>
-<p>Tilt usually run the whole time. It will end the game on tilt and might
-remove credits on slam tilt outside of a game. See
-<a href="../../game_logic/tilt/">game_end_modes</a> for details.</p>
+<p>Tilt usually run the whole time. It will end the game on tilt and could be configured to
+remove credits on slam tilt outside of a game. See <a href="../../game_logic/tilt/">Tilt</a> for details.</p>
 <h3 id="service-mode">Service Mode</h3>
-<p>See <a href="../../game_logic/service_mode/">game_end_modes</a> for
-details.</p>
+<p>See <a href="../../game_logic/service_mode/">Service Mode</a> for details. If you use the standard MPF service mode,
+it is actually running all the time in preparation for service inputs, so that it can pause play and
+take over control.</p>
 <h2 id="ball-end-modes">Ball End Modes</h2>
-<p>See <a href="../ball_end_modes/">game_end_modes</a>.</p>
+<p>See <a href="../ball_end_modes/">Ball End Modes</a> for information about modes that run after each ball end, such as Bonus.</p>
 <h2 id="game-end-modes">Game End Modes</h2>
-<p>See <a href="../game_end_modes/">Game End Modes</a>.</p>
+<p>See <a href="../game_end_modes/">Game End Modes</a> for information about modes that run after the game is over,
+such as <a href="../../game_logic/high_scores/">High Score Mode</a> and <a href="../../game_logic/match_mode/">Match Mode</a>.</p>
 <hr>
 <div class="admonition question">
 <p class="admonition-title">Something missing or wrong? You can fix it!</p>
