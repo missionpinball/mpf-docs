@@ -1,14 +1,14 @@
 ---
-title: text_input_high_score_complete
+title: text_input_(name)_complete
 ---
 
-# text_input_high_score_complete
+# text_input_(name)_complete
 
 
 --8<-- "event.md"
 
-Event is posted by the BCP integration for the [high_score](../config/high_score.md) built-in mode.
-The built-in logic of the mode will save the text to the player variable "initials" for later use.
+Event is posted by the BCP integration for a [text input](../gmc/reference/mpf-text-input.md)
+(such as in the [high score](../config/high_score.md) built-in mode.
 
 ## Keyword arguments
 

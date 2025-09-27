@@ -9,6 +9,10 @@ title: slide_(name)_removed
 
 Event is posted by [slides:](../config/slides.md)
 
+*MPF-GMC Event*
+
+Event is posted by [GMC slides](../gmc/reference/mpf-slide.md)
+
 A slide called (name) has just been removed.
 
 This event is posted whenever a slide is removed, regardless of whether

@@ -27,3 +27,7 @@ The name of the award the player earned.
 #### `value`:
 
 The number value of the record. This may be score or the custom value used to rank the performance.
+
+#### `category_name`:
+
+The name of the overall category of the award.

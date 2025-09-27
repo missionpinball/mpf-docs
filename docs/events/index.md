@@ -118,9 +118,11 @@ will posted an event called *switch_s_left_slingshot_active*.
     * [high_score_enter_initials](high_score_enter_initials.md)
     * [high_score_award_display](high_score_award_display.md)
     * [text_input_high_score_complete](text_input_high_score_complete.md)
-    * [score_award_display](score_award_display.md)
-    * [(award_name)\_award_display](award_name_award_display.md)
-    * [(category_name)\_award_display](category_name_award_display.md)
+    * [text_input_(name)_complete](text_input_name_complete.md) *added in MPF 0.80, see [MPFTextInput](../gmc/reference/mpf-text-input.md)*
+    * The following were removed in MPF 0.80:
+        * [score_award_display](score_award_display.md)
+        * [(award_name)\_award_display](award_name_award_display.md)
+        * [(category_name)\_award_display](category_name_award_display.md)
 
 * [Kickback Events](kickbacks/index.md)
     * [kickback_(name)_fired](kickback_kickback_fired.md)
@@ -185,10 +187,10 @@ will posted an event called *switch_s_left_slingshot_active*.
     * [(name)\_(state)_complete](shot_group_state_complete.md)
     * [(name)\_(state)_hit](shot_group_state_hit.md)
 
-
 * [Slide Events](slides/index.md)
     * [slide_(name)_active](slide_slide_active.md)
     * [slide_(name)_created](slide_slide_created.md)
+    * [slide_(name)_inactive](slide_slide_inactive.md) *added in MPF 0.80 by GMC*
     * [slide_(name)_removed](slide_slide_removed.md)
 
 * [Spinner Events](spinners/index.md)
@@ -220,6 +222,10 @@ will posted an event called *switch_s_left_slingshot_active*.
     * [timer_(name)_tick](timer_timer_tick.md)
     * [timer_(name)\_time_added](timer_timer_time_added.md)
     * [timer_(name)\_time_subtracted](timer_timer_time_subtracted.md)
+
+* Widget Events
+    * [widget_(name)_active](widget_name_active.md)
+    * [widget_(name)_removed](widget_name_removed.md)
 
 ## Other Event Groups
 
@@ -287,6 +293,11 @@ will posted an event called *switch_s_left_slingshot_active*.
     * [bonus_multiplier](bonus_multiplier.md)
     * [bonus_start](bonus_start.md)
     * [bonus_subtotal](bonus_subtotal.md)
+
+* [Carousel Events](carousel/index.md)
+    * [carousel_item_highlighted](carousel_item_highlighted.md)
+    * [carousel\_items_empty](carousel_items_empty.md)
+    * [carousel\_item_selected](carousel_item_selected.md)
 
 * Config Player Events
     * [clear](clear.md)
@@ -371,7 +382,10 @@ will posted an event called *switch_s_left_slingshot_active*.
     * [player_turn_will_start](player_turn_will_start.md)
     * [player_will_add](player_will_add.md)
 
-* Text Input Events
+* Service Mode Events:
+    * [service_trigger](service_trigger.md)
+
+* Text Input Events *Note: MPF-MC only*
     * [text_input_(key)_abort](text_input_key_abort.md)
     * [text_input_(key)_complete](text_input_key_complete.md)
 

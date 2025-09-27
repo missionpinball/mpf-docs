@@ -10,10 +10,9 @@ title: (award_name)\_award_display
 Event is posted by [high_score](../config/high_score.md) built-in mode
 when a player has entered their name for an award.
 
-This event will be posted along with [(category_name)\_award_display](category_name_award_display.md)
-and [high_score_award_display](high_score_award_display.md),
-so you can pick whichever name and level of specificity you prefer to hook
-on to, and do not need to check for all three.
+!!! warning "removed in MPF 0.80"
+
+    As of MPF 0.80, this event has been merged into [high_score_award_display](high_score_award_display.md) and is no longer available by default. Use [conditional events](overview/conditional.md) to attach specific behaviors to the various categories or awards if needed.
 
 ## Keyword arguments
 

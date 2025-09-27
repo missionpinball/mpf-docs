@@ -9,6 +9,11 @@ title: slide_(name)_active
 
 Event is posted by [slides:](../config/slides.md)
 
+*MPF-GMC Event*
+
+Event is posted by [GMC slides](../gmc/reference/mpf-slide.md)
+
+
 A slide called (name) has just become active, meaning that it's now
 showing as the current slide. This is useful for things like the
 widget_player where you want to target a widget for a specific slide,
