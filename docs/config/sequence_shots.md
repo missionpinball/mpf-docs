@@ -114,8 +114,7 @@ but with events.
 ### cancel_switches:
 
 List of one (or more) values, each is a type: string name of a
-[switches:](switches.md) device. Defaults to
-empty.
+[switches:](switches.md) device. Defaults to empty.
 
 A switch (or list of switches) that will cause any in-progress switch
 sequence tracking to be canceled. (Think of it like a cancel "abort"
@@ -135,8 +134,8 @@ as `delay_switch_list` but with events.
 ### delay_switch_list:
 
 One or more sub-entries. Each in the format of string name of a
-[switches:](switches.md) device :
-`time string (ms)`
+`switch_device:time string (ms)`. Example: `s_delay_detector: 500ms`
+
 ([Instructions for entering time strings](instructions/time_strings.md))
 
 Switches which will temporarily prevent new sequences from starting.
@@ -154,8 +153,7 @@ A sequence of events which will complete the sequence.
 ### playfield:
 
 Single value, type: `string` name of a
-[playfields:](playfields.md) device. Default:
-`playfield`
+[playfields:](playfields.md) device. Default: `playfield`
 
 The playfield this sequence is on.
 
@@ -177,8 +175,7 @@ activations and the shot would count.)
 ### switch_sequence:
 
 List of one (or more) values, each is a type: string name of a
-[switches:](switches.md) device. Defaults to
-empty.
+[switches:](switches.md) device. Defaults to empty.
 
 A sequence of switches which will complete the sequence.
 
@@ -211,8 +208,7 @@ Name of this device in service mode.
 
 ### tags:
 
-List of one (or more) values, each is a type: `string`. Defaults to
-empty.
+List of one (or more) values, each is a type: `string`. Defaults to empty.
 
 Not used.
 
