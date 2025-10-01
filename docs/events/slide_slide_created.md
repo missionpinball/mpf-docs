@@ -9,6 +9,11 @@ title: slide_(name)_created
 
 Event is posted by [slides:](../config/slides.md)
 
+*MPF-GMC Event*
+
+Event is posted by [GMC slides](../gmc/reference/mpf-slide.md)
+
+
 A slide called (name) has just been created.
 
 This means that this slide now exists, but it's not necessarily the
