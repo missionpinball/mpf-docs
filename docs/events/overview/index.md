@@ -63,7 +63,7 @@ events:
 
 We actually have a giant list of all the events that are posted by
 everything in MPF. This is called the
-[event_reference](../index.md). (It's
+[Event Reference](../index.md). (It's
 also linked from the "Reference" section in the menu on the left of
 every page in the docs website since it's so important.)
 
