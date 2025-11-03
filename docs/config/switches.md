@@ -161,6 +161,20 @@ ignored. The timer is set based on the last switch hit that *activated*
 the switch, so if another switch hit came in 105ms after the first
 (which would be 55ms after the second), it will also count.
 
+### ignore_during_ball_search:
+
+Single value, type: `boolean` (`true`/`false`). Default: `false`
+
+Specifies whether this switch should be ignored during [Ball Search](../game_logic/ball_search/index.md).
+Keep in mind that this works together with the `playfield_active` tag.
+
+So just a practical example. If you set this value to `true`, Ball Search will ignore the switch's active state and will continue on searching.
+USE WITH CAUTION!
+Setting this value to `true` will cause the switch to be completely ignored by the Ball Search, meaning it won't reset the Ball Search timer when hit.
+This behavior can start unwanted Ball Searches.
+
+You can find further info here on [How to configure Ball Search](../game_logic/ball_search/configuring_ball_search.md).
+
 ### platform:
 
 Single value, type: `string`. Defaults to empty.
