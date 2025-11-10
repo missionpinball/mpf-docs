@@ -129,9 +129,8 @@ shots:
 
 ### delay_switch:
 
-One or more sub-entries. Each in the format of string name of a
-[switches:](switches.md) device :
-`time string (ms)`
+One or more sub-entries. Each in the format `switch_device: time string (ms)`.
+Example: `s_delay_detector: 500ms`
 ([Instructions for entering time strings](instructions/time_strings.md))
 
 A dictionary of switches and times which prevent hits for a certain
@@ -172,6 +171,13 @@ shots:
 
 In this example an activation of `s_other_lane` will prevent the shot
 from being hit for two seconds.
+
+### delay_event_list:
+
+List of one (or more) device control events
+([Instructions for entering device control events](instructions/device_control_events.md)). Defaults to empty.
+
+Events which will temporarily prevent new sequences from starting. This is the same behavior as `delay_switch` but with events.
 
 ### disable_events:
 
