@@ -11,8 +11,7 @@ title: "ball_saves: Config Reference"
 |[machine](instructions/machine_config.md) config files |**YES** :white_check_mark:|
 |[mode](instructions/mode_config.md) config files|**YES** :white_check_mark:|
 
-The `ball_saves:` section of your config is where you create [ball save
-devices](#). Here's an example:
+The `ball_saves:` section of your config is where you create [ball save devices](../game_logic/ball_saves/index.md). Here's an example:
 
 ``` yaml
 ball_saves:
