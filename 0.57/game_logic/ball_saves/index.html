@@ -47724,25 +47724,27 @@ icons & this code generated via https://realfavicongenerator.net
 (Essentially this means the ball drain doesn't count.)</p>
 <p>Ball saves are typically used in several scenarios:</p>
 <ul>
-<li>Give the player their ball back if they drain right after their ball
-    starts.</li>
+<li>Give the player their ball back if they drain right after their ball starts.</li>
 <li>Give the player their ball back if there's a particularly wicked
     shot that tends to drain which the game designers feel bad about.
     (You should avoid this if possible, and instead, as Lyman Sheets
     would say, "Fix your f-ing game layout!")</li>
 <li>Use to make a timed mode where the player has unlimited drains.</li>
-<li>Etc.</li>
 </ul>
 <p>You can configure ball saves to have various start and stop events and
 timers, and you can configure multiple ones in different modes that do
 different things.</p>
 <p>This is an example:</p>
-<p>``` yaml
-ball_saves:
-  random_ball_save:
-    active_time](5s
-    hurry_up_time)
-center_post</p>
+<div class="highlight"><pre><span></span><code><span class="nt">ball_saves</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">unlimited</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">active_time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10s</span>
+<span class="w">        </span><span class="nt">hurry_up_time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3s</span>
+<span class="w">        </span><span class="nt">grace_period</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<span class="w">        </span><span class="nt">enable_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">enable_unlimited_ball_save</span>
+<span class="w">        </span><span class="nt">early_ball_save_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_left_outlane_active, s_right_outlane_active</span><span class="w"> </span><span class="c1">#count outlanes as drains to speed up handling</span>
+<span class="w">        </span><span class="nt">auto_launch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yes</span>
+<span class="w">        </span><span class="nt">balls_to_save</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-1</span><span class="w"> </span><span class="c1">#unlimited saves</span>
+</code></pre></div>
 <h2 id="related-events">Related Events</h2>
 <ul>
 <li><a href="../../events/ball_save_ball_save_enabled/">ball_save_(name)_enabled</a></li>
