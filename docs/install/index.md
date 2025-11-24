@@ -24,9 +24,17 @@ MPF works with following platforms:
 
 ## Python Version Matching
 
-MPF 0.57 works with Python 3.8 - 3.12.
+MPF 0.57 works with Python 3.8 - 3.12. There is no planned support for Python 3.13+.
 
-MPF 0.80 works with Python 3.10-3.13, with upcoming support for 3.14.
+MPF 0.80 works with Python 3.10 - 3.13, with upcoming support for 3.14.
+
+## Video Tutorial
+
+The following video shows, on Windows, how to install Python, Godot Engine, VS Code, and Sourcetree/Git, use Github to create a repo, and how to manage your Python Virtual Environment (venv) and install MPF.
+
+<div class="video-wrapper">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rQqKG2Ie6KM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 
 <!-- TODO(Bosh) Disabled because dev1 is not a good choice given the myriad of changes on the way to dev11
