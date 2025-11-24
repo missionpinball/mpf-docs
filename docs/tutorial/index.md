@@ -1,5 +1,5 @@
 ---
-title: MPF Tutorial"
+title: MPF Tutorial
 ---
 
 # MPF Tutorial

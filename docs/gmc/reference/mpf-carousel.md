@@ -10,6 +10,14 @@ The `MPFCarousel` node works in tandem with the MPF Carousel mode to support dyn
 
     The MPF 0.80 events that drive the `MPFCarousel` are changed from those in MPF 0.57. If you have an existing MPF 0.5 carousel you may need to update your event handlers.
 
+## Video Tutorial
+
+In Part II of the following video, it shows how to configure your Godot MPFCarousel node and items.
+
+<div class="video-wrapper">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NYUuHQVveFY&t=418s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 ## Node Configuration
 
 Add an `MPFCarousel` node to your slide and create child nodes for each carousel item you wish to render. You can use the eyeball icon in the *Scene* panel to preview what each carousel item will look like. Each child node needs to have a name that corresponds to one of the `selectable_items:` in your MPF config file.

@@ -40,6 +40,15 @@ Finally, in your Godot game project folder create a new folder called *addons* (
     However, note that Godot only has access to files in its project folder and subfolders. If you choose to make a "gmc" subfolder for your Godot project, all slides, widgets, sound files, and video files will need to be in those respective subfolders in the gmc folder (e.g. */gmc/slides/*), NOT in the MPF mode subfolders (e.g. */modes/attract/slides/*).
 
 
+## Video Tutorial
+
+The following video shows on Windows how to create your Godot project, install MPF-GMC, configure three audio busses, use Git LFS for large files in git, use gmc.cfg, and set up the basics in your Godot project. Not every part of setup is represented, such as Indentation Setup.
+
+<div class="video-wrapper">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/IO3U1SMZ5-A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+
 ## Setup Godot Editor
 
 The Godot Editor includes some default configuration options that may cause headaches for users, so the following tweaks are recommended:

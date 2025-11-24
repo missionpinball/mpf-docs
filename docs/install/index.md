@@ -2,14 +2,15 @@
 title: Downloading & Installing MPF
 ---
 
-# Installing MPF 0.80 or 0.57
-
-
-The current stable version of MPF is `0.57.3`, and the upcoming release is `0.80.0` along with a long-term support release of `0.57.4`.
-
 !!! note "New MPF Coming Soon!"
 
     The next major release of MPF will be 0.80 and is coming soon! This exciting advancement offers a brand-new media controller based on the powerful Godot game engine. If you are just getting started with MPF, consider giving 0.80 a try!
+
+# Installing MPF 0.80 or 0.57
+
+The current stable version of MPF is `0.57.3`, and the upcoming release is `0.80.0` along with a long-term support release of `0.57.4`.
+
+The current beta version of MPF 0.80 is `0.80.0.dev11`, which corresponds with MPF-GMC `0.1.6`, which is necessary to use the latest Godot - `4.5.1`.
 
 --8<-- "latest_versions.md"
 
@@ -28,14 +29,17 @@ MPF 0.57 works with Python 3.8 - 3.12. There is no planned support for Python 3.
 
 MPF 0.80 works with Python 3.10 - 3.13, with upcoming support for 3.14.
 
+## Migrating MPF 0.57 to MPF 0.80
+
+If you have an existing MPF 0.57 project and would like to use MPF 0.80 and the GMC, there are just a few config changes needed. See the [MPF 0.80 Migration Guide](./0.80.md) for instructions.
+
 ## Video Tutorial
 
-The following video shows, on Windows, how to install Python, Godot Engine, VS Code, and Sourcetree/Git, use Github to create a repo, and how to manage your Python Virtual Environment (venv) and install MPF.
+The following video shows on Windows how to install Python, Godot Engine, VS Code, and Sourcetree/Git, use Github to create a repo, and how to manage your Python Virtual Environment (venv) and install MPF.
 
 <div class="video-wrapper">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/rQqKG2Ie6KM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
-
 
 <!-- TODO(Bosh) Disabled because dev1 is not a good choice given the myriad of changes on the way to dev11
 
@@ -95,7 +99,7 @@ Now when inside your virtual environment, you can run MPF simply by typing `mpf`
 
 ***Disadvantages of Standard Installation:***
 
-  * Requires a local Python 3.8+ installation
+  * Requires a local Python 3.10+ installation
   * Requires setting up a virtual environment
   * Mistakes can pollute Pip environments and cause dependency conflicts
   * No option to customize MPF or use bleeding-edge features
@@ -141,11 +145,8 @@ If you are installing MPF 0.57 to continue work on an existing MC-based project,
 * [Windows](windows.md)
 * [Linux](linux/index.md)
 
-## Migrating MPF 0.57 to MPF 0.80
-
-If you have an existing MPF 0.57 project and would like to use MPF 0.80 and the GMC, there are just a few config changes needed. See the [MPF 0.80 Migration Guide](0.80.md) for instructions.
 
 ## Next step: The Tutorial!
 
 We have a tutorial which walks you through the first few steps of getting
-your project started at [missionpinball.org/latest/tutorial](../tutorial/index.md)
+your project started at [MPF Tutorial](../tutorial/index.md).
