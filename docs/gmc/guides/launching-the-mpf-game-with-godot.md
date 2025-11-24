@@ -19,8 +19,7 @@ problems with this, the most important thing to know is how you normally run you
 The options seen in this UI are assembled together to make a single shell command to run your game, with the following pattern:
 
 ``` shell
-
-    <executable_path> <executable_args> <machine_path> <mpf_args>
+<executable_path> <executable_args> <machine_path> <mpf_args>
 ```
 
 The UI menu for editing each of these options is discussed below, and your configuration in that UI is saved to gmc.cfg automatically.

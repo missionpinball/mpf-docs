@@ -17,19 +17,18 @@ To insert your own code into the core GMC scripts, create a new GDScript file th
 You can then create your own logic for virtual methods, extend existing methods with `super()`, or overwrite them entirely.
 
 ``` code
+# /custom_code/my_custom_bcp.gd
 
-    # /custom_code/my_custom_bcp.gd
+extends GMCServer
 
-    extends GMCServer
+# Override a virtual method
+func on_connect():
+    print("Connection established, running custom startup flow.")
 
-    # Override a virtual method
-    func on_connect():
-      print("Connection established, running custom startup flow.")
-
-    # Extend an existing method by calling super() and adding custom logic
-    func set_machine_var(name: String, value) -> void:
-      super()
-      print("Machine var %s updated to value: %s" % [name, value])
+# Extend an existing method by calling super() and adding custom logic
+func set_machine_var(name: String, value) -> void:
+    super()
+    print("Machine var %s updated to value: %s" % [name, value])
 ```
 
 ### Inject Custom Script into GMC
@@ -39,9 +38,8 @@ Now that your script is written, you can instruct GMC to use your script instead
 In your *gmc.cfg* file, create a new section named `[gmc]` and enter a key of the class name you're overriding and a value of the path to your custom script.
 
 ``` ini
-
-    [gmc]
-    GMCServer="custom_code/my_custom_bcp.gd"
+[gmc]
+GMCServer="custom_code/my_custom_bcp.gd"
 ```
 
 The available core scripts to override are:

@@ -89,8 +89,7 @@ Extract the downloaded ZIP file and go to the *addons* folder, where you'll see 
 For complete control, you can clone the MPF-GMC repository to your computer and run it directly. First, open a terminal window to the directory where you keep your Git repositories, and then clone:
 
 ``` shell
-
-    git clone https://github.com/missionpinball/mpf-gmc
+git clone https://github.com/missionpinball/mpf-gmc
 ```
 
 You now have a copy of the MPF-GMC source code on your machine, and you need to share it with your Godot project. To update GMC, go to the repository folder in your terminal and type `git fetch` and `git pull`.
@@ -106,18 +105,19 @@ You will create a symbolic link *mpf-gmc* in your project */addons* folder that 
 The syntax is `sudo ln -s <path to GMC repository/addons/mpf-gmc> <path to project folder/addons/mpf-gmc>`, and will look something like this:
 
 ``` shell
-  (mpf080) $> sudo ln -s /Users/tommy/git/mpf-gmc/addons/mpf-gmc /Users/tommy/pinballgame/addons/mpf-gmc
+(mpf080) $> sudo ln -s /Users/tommy/git/mpf-gmc/addons/mpf-gmc /Users/tommy/pinballgame/addons/mpf-gmc
 ```
 
 When successful, you should see a new *mpf-gmc* folder in the *addons* folder you just created. You can confirm that the folder is a symbolic link with the `ls -la` command, which will show the path that the symbolic link points to.
 
 ``` shell
-  (mpf080) pinballgame $> ls -la addons
+(mpf080) pinballgame $> ls -la addons
+(mpf080) pinballgame $> ls -la addons
 
-  total 0
-  drwxr-xr-x    96 Apr  8 19:09 .
-  drwxr-xr-x  1024 May  6 12:30 ..
-  lrwxr-xr-x    41 Apr  8 19:09 mpf-gmc -> /Users/tommy/git/mpf-gmc/addons/mpf-gmc
+total 0
+drwxr-xr-x    96 Apr  8 19:09 .
+drwxr-xr-x  1024 May  6 12:30 ..
+lrwxr-xr-x    41 Apr  8 19:09 mpf-gmc -> /Users/tommy/git/mpf-gmc/addons/mpf-gmc
 ```
 
 **Windows**
@@ -125,7 +125,8 @@ When successful, you should see a new *mpf-gmc* folder in the *addons* folder yo
 The syntax is `mklink /d <path to project folder/addons/mpf-gmc> <path to GMC repository/addons/mpf-gmc>` and will look something like this:
 
 ``` shell
-  (mpf080) $> mklink /d "C:\repos\pinballgame\addons\mpf-gmc" "C:\repos\mpf-gmc\addons\mpf-gmc"
+(mpf080) $> mklink /d "C:\repos\pinballgame\addons\mpf-gmc" "C:\repos\mpf-gmc\addons\mpf-gmc"
+>>>>>>> e6e7384f8 (reformat more code sample blocks)
 ```
 
 
@@ -143,9 +144,9 @@ If you downloaded MPF-GMC as a ZIP file from GitHub, follow those steps again an
 If you cloned the MPF-GMC repository, you need to fetch and pull:
 
 ``` shell
-  (mpf080) ~/git $> cd mpf-gmc
-  (mpf080) ~/git/mpf-gmc $> git fetch
-  (mpf080) ~/git/mpf-gmc $> git pull
+(mpf080) ~/git $> cd mpf-gmc
+(mpf080) ~/git/mpf-gmc $> git fetch
+(mpf080) ~/git/mpf-gmc $> git pull
 ```
 
 **Symlink Users:** If you are using a symlink to mirror the *mpf-gmc* folder in your project *addons* folder, the above steps are enough.
