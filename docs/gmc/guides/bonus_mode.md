@@ -23,19 +23,18 @@ For instructions on configuring your bonus entries, see the [bonus mode_settings
 Next you need to set up your slide player to (1) play the bonus slide when bonus starts, (2) display some initial text before the entry calculations are shown, and (3) update the text with each entry.
 
 ``` yaml
+# bonus.yaml
 
-    # bonus.yaml
-
-    slide_player:
-      mode_bonus_started: bonus
-      bonus_start:
-          bonus:
+slide_player:
+    mode_bonus_started: bonus
+    bonus_start:
+        bonus:
             action: update
             tokens:
-              entry: initial
-      bonus_entry:
+                entry: initial
+    bonus_entry:
         bonus:
-          action: update
+            action: update
 ```
 
 ## Creating a Bonus Slide

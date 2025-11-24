@@ -20,12 +20,11 @@ You can name your slides scenes whatever you'd like, except spaces are not allow
 For example, if you had a slide file `/slides/base.tscn` and another file `/modes/skillshot/slides/skillshot_overlay.tscn`, your MPF configs might look like this:
 
 ``` yaml
-
-    slide_player:
-        mode_base_started: base
-        skillshot_hit:
-            skillshot_overlay:
-                action: remove
+slide_player:
+    mode_base_started: base
+    skillshot_hit:
+        skillshot_overlay:
+            action: remove
 ```
 
 For this reason, it's important that every slide has a unique name, regardless of which folder its in.
@@ -85,23 +84,22 @@ On the first line of the script, set the line to be `extends MPFSlide` so that t
 In this example, we have a scene *multiball_base_slide.tscn* and a matching script *multiball_base_slide.gd*. We've created an `AnimationPlayer` node and given it an animation named "explode", and we'll make a method that plays this animation. Our script file looks like this:
 
 ``` gd
-    ## multiball_base_slide.gd
+## multiball_base_slide.gd
 
-    extends MPFSlide
+extends MPFSlide
 
-    func explode(_settings, _kwargs):
-        $AnimationPlayer.play("explode")
+func explode(_settings, _kwargs):
+    $AnimationPlayer.play("explode")
 ```
 
 We can then trigger this method from MPF with the slide player's `action: method` configuration.
 
 ``` yaml
-
-    slide_player:
-        jackpot_counter_complete:
-            multiball_base_slide:
-                action: method
-                method: explode
+slide_player:
+    jackpot_counter_complete:
+        multiball_base_slide:
+            action: method
+            method: explode
 ```
 
 This config tells GMC to call the method named "explode" on the `multiball_base_slide` when the *jackpot_counter_complete* event occurs.

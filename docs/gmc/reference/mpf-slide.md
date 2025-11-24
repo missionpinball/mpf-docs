@@ -45,9 +45,8 @@ This value will be added to the calling mode's priority to determine the overall
 When a custom function is called, two parameters are passed in: *settings*, the configuration settings from the slide player config, and *kwargs*, the arguments from the event that triggered the slide player. If you declared any `tokens:` in your config for the slide player, those will be available as `settings.tokens`.
 
 ``` code
-
-    func my_custom_method(settings, kwargs):
-        # Function does stuff here
+func my_custom_method(settings, kwargs):
+    # Function does stuff here
 ```
 
 
@@ -74,12 +73,11 @@ The *kwargs* parameter passed to the custom method is the list of event argument
 For example, the *player_score* event includes arguments for `value`, `prev_value`, `change`, and `player_num`. If your slide player is triggered by the *player_score* event, like so:
 
 ``` yaml
-
-    slide_player:
-        player_score:
-            main_slide:
-                action: method
-                method: my_method
+slide_player:
+    player_score:
+        main_slide:
+            action: method
+            method: my_method
 ```
 
 Then in the `func my_method(settings, kwargs):` method of *main_slide.gd* you would have access to `kwargs.value`, `kwargs.prev_value`, `kwargs.change`, and `kwargs.player_num`.
