@@ -49,7 +49,7 @@ This value will be added to the calling mode's priority to determine the overall
 
 When a custom function is called, two parameters are passed in: *settings*, the configuration settings from the widget player config, and *kwargs*, the arguments from the event that triggered the widget player. If you declared any `tokens:` in your config for the widget player, those will be available as `settings.tokens`.
 
-``` code
+``` go
 func my_custom_method(settings, kwargs):
     # Function does stuff here
 ```

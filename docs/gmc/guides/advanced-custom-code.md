@@ -16,7 +16,7 @@ To insert your own code into the core GMC scripts, create a new GDScript file th
 
 You can then create your own logic for virtual methods, extend existing methods with `super()`, or overwrite them entirely.
 
-``` code
+``` go
 # /custom_code/my_custom_bcp.gd
 
 extends GMCServer
