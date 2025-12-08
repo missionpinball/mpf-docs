@@ -16,3 +16,8 @@ Where should you start? If you want to create a custom layout read our
 
 * [Layout Considerations](layout_considerations.md)
 * [Planning Layout with CAD](planning_layout_with_cad.md)
+
+## CAD Models
+
+Have a look at the [CAD Models section of hardware.missionpinball.org](https://hardware.missionpinball.org/cad-models.html)
+for models of many common pinball components.
