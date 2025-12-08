@@ -253,3 +253,8 @@ and hardware that MPF supports:
 * [Open Sound Control (OSC)](osc.md)
 * [Virtual Hardware](virtual/index.md)
 * [Voltages and Power](voltages_and_power/index.md)
+
+## CAD Models
+
+Have a look at the [CAD Models section of hardware.missionpinball.org](https://hardware.missionpinball.org/cad-models.html)
+for models of many common pinball components.

@@ -5,6 +5,11 @@ title: Planning Layout with CAD
 # Planning Layout with CAD
 
 
+## CAD Models
+
+Have a look at the [CAD Models section of hardware.missionpinball.org](https://hardware.missionpinball.org/cad-models.html)
+for models of many common pinball components.
+
 ## Borrowing Shots With CAD
 
 If you have planned shot in an area that matches an existing machine,
