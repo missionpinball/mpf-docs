@@ -93,6 +93,10 @@ The widget or widget group is removed from the slide or display target.
 
 One or more of the widget or widget group's properties is updated.
 
+#### `preload`:
+
+Preload the widget for faster playback on first play of the widget
+
 ### key:
 
 Single value, type: `string`. Defaults to empty.
