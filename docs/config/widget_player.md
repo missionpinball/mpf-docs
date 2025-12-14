@@ -78,7 +78,7 @@ your config. (If you don't include them, the default will be used).
 
 ### action:
 
-Single value, type: one of the following options: add, remove, update.
+Single value, type: one of the following options: add, remove, update
 Default: `add`
 
 #### `add`:
@@ -92,6 +92,36 @@ The widget or widget group is removed from the slide or display target.
 #### `update`:
 
 One or more of the widget or widget group's properties is updated.
+
+### action (available in MPF v0.80):
+
+Single value, type: one of the following options: play, remove, update, preload, animation, method
+Default: `play`
+
+#### `play`:
+
+The widget is played on top of the current slide or display target.
+
+#### `remove`:
+
+The widget is removed from the slide or display target.
+
+#### `update`:
+
+Tells Godot that the widget needs to be redrawn during the next idle frame. 
+
+#### `preload`:
+
+Preload the widget for faster playback on first play of the widget
+
+#### `animation`:
+
+Used in conjunction with AnimationPlayer node, will call play on the animation.
+If "from_start" is specified, the animation still start at the beginning.
+
+#### `method`:
+
+If the widget has child and the child has a method, call the method
 
 ### key:
 
