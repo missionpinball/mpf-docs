@@ -11,6 +11,10 @@ title: "fast: Config Reference"
 |[machine](instructions/machine_config.md) config files|**YES** :white_check_mark:|
 |[mode](instructions/mode_config.md) config files|**NO** :no_entry_sign:|
 
+## Pre-2024 Documentation
+
+The following documentation was current in mid 2023, some settings and structures may have changed since then:
+
 The `fast:` section of your machine-wide config is where you configure
 hardware options that are specific to the FAST Pinball Controller. Note
 that we have a how to guide which includes
@@ -21,11 +25,6 @@ if you have FAST hardware.
 fast:
   ports: com3, com4, com5
 ```
-
-## Required settings
-
-The following sections are required in the `fast:` section of your
-config:
 
 ### default_normal_debounce_close:
 

@@ -6,6 +6,10 @@ title: How to configure MPF for FAST Pinball hardware
 
 --8<-- "hardware_platform.md"
 
+# Pre-2024 Documentation
+
+The documentation in this section was current in mid 2023, some settings and structures may have changed since then:
+
 ## FAST Neuron Controller with MPF 0.57.0 and newer
 
 FAST Pinball maintains [their own documentation on fastpinball.com](https://fastpinball.com/mpf)
