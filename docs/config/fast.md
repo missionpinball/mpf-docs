@@ -27,6 +27,7 @@ You do not need to include any section that is not present in your machine.
 ### net:
 
 This contains the configuration for the NET IO boards, which handle switches and drivers.
+See [fast:net: config reference](fast/fast_net.md) for details.
 
 ### exp:
 
