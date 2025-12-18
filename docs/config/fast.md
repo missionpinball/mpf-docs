@@ -17,7 +17,7 @@ title: "fast: Config Reference"
 The following config documentation is relevant for MPF 0.57.4 and 0.80.0. Last updated Dec 18, 2025.
 
 The `fast:` section of your machine-wide config is where you configure hardware options that are specific to the FAST Pinball Controller.
-There is [a guide in "Hardware"](../hardware/fast/index.md) which includes FAST-specific settings and device configuration examples.
+The [FAST website](https://fastpinball.com/mpf/config/) also has thorough documentation and examples for MPF 0.57 and 0.80 compatible configurations.
 
 ## fast: config reference
 
