@@ -11,9 +11,44 @@ title: "fast: Config Reference"
 |[machine](instructions/machine_config.md) config files|**YES** :white_check_mark:|
 |[mode](instructions/mode_config.md) config files|**NO** :no_entry_sign:|
 
-## Pre-2024 Documentation
+
+# 2026 Documentation Update
+
+The following config documentation is relevant for MPF 0.57.4 and 0.80.0. Last updated Dec 18, 2025.
+
+The `fast:` section of your machine-wide config is where you configure hardware options that are specific to the FAST Pinball Controller.
+There is [a guide in "Hardware"](../hardware/fast/index.md) which includes FAST-specific settings and device configuration examples.
+
+## fast: config reference
+
+The top-level `fast:` key contains subsections for each of the various component networks available with FAST.
+You do not need to include any section that is not present in your machine.
+
+### net:
+
+This contains the configuration for the NET IO boards, which handle switches and drivers.
+
+### exp:
+
+This contains the configuration for the EXP boards, which handle lights and various motors and accessories.
+
+### exp_int:
+
+When using the Raspberry PI directly connected to a Neuron board, the Neuron's LED ports are not accesible on the normal `exp` bus.
+To enable use of these headers, define the `FP-EXP-2000` model board in the `exp_int` instead of `exp` configuration.
+If using other EXP boards, you still define those on the normal `exp` configuration.
+For an example, see this [pull request](https://github.com/missionpinball/mpf/pull/1895) on Github.
+
+### aud:
+
+This contains the configuration for sounds played through the FAST Audio board.
+
+
+# Pre-2024 Documentation
 
 The following documentation was current in mid 2023, some settings and structures may have changed since then:
+
+## fast: config settings
 
 The `fast:` section of your machine-wide config is where you configure
 hardware options that are specific to the FAST Pinball Controller. Note
