@@ -79,7 +79,7 @@ On Mac or Linux, it's easiest to find the port numbers via the terminal
 window (or console window). To do that, open a new window and run the
 following command:
 
-    ls /dev/tty*
+`ls /dev/tty*`
 
 This will list all the devices whose names begin with "tty".
 
@@ -90,17 +90,21 @@ first port, the "B" is the second, etc.
 
 For example, the four FAST ports might be something like on MAC:
 
-    /dev/tty.usbserial-141A
-    /dev/tty.usbserial-141B
-    /dev/tty.usbserial-141C
-    /dev/tty.usbserial-141D
+```shell
+/dev/tty.usbserial-141A
+/dev/tty.usbserial-141B
+/dev/tty.usbserial-141C
+/dev/tty.usbserial-141D
+```
 
 On linux it would look like this:
 
-    /dev/ttyUSB0
-    /dev/ttyUSB1
-    /dev/ttyUSB2
-    /dev/ttyUSB3
+```shell
+/dev/ttyUSB0
+/dev/ttyUSB1
+/dev/ttyUSB2
+/dev/ttyUSB3
+```
 
 If you have multiple FAST devices they will enumerate more or less
 randomly dependent on the order they are plugged in. Unfortunately, the
@@ -108,14 +112,14 @@ USB devices do not contain any serial number. However, we can pin them
 based on the USB port they are plugged into. On linux this can be
 achieved using a UDEV rules such as this:
 
-    SUBSYSTEM=="tty", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6011", ENV{ID_PATH_TAG}=="pci-0000_00_14_0-usb-0_12_1_0", SYMLINK+="ttyDMD1"
+`SUBSYSTEM=="tty", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6011", ENV{ID_PATH_TAG}=="pci-0000_00_14_0-usb-0_12_1_0", SYMLINK+="ttyDMD1"`
 
 The device will then be available as /dev/ttyDMD1. You can run the
 following command while plugging in the device to get the relevand
 ID_PATH_TAG (and also idVendor and idProduct in case they changed with
 other revisions):
 
-    udevadm monitor --property
+`udevadm monitor --property`
 
 ## 3. Add the ports to your config file
 
@@ -130,13 +134,17 @@ used on a Nano).
 
 So an example for Windows might look like this:
 
-    fast:
-        ports: com3, com4, com5
+```yaml
+fast:
+    ports: com3, com4, com5
+```
 
 And an example for Mac or Linux might look like this:
 
-    fast:
-       ports: /dev/tty.usbserial-141B, /dev/tty.usbserial-141C
+```yaml
+fast:
+   ports: /dev/tty.usbserial-141B, /dev/tty.usbserial-141C
+```
 
 Note that if you have a FAST Core controller but you're not actually
 using the hardware DMD, then you don't have to enter the first port in
@@ -160,12 +168,13 @@ default with a timeout of 1 second. If you would like to disable this,
 or you'd like to change the timeout, you can do so in the `fast:`
 section of your machine-wide config.
 
-    fast:
-       ports: com3, com4, com5  # or whatever your ports are
-       watchdog: 1000
+```yaml
+fast:
+   ports: com3, com4, com5  # or whatever your ports are
+   watchdog: 1000
+```
 
-The `watchdog:` setting is the timeout in milliseconds. Use 0 to disable
-it.
+The `watchdog:` setting is the timeout in milliseconds. Use 0 to disable it.
 
 Note that at this time, FAST Pinball controllers only use the watch dog
 for the NET processor (which controls stuff on the IO boards, like
@@ -173,5 +182,4 @@ coils). The watch dog is not used for the DMD or LEDs.
 
 ## What if it did not work?
 
-Have a look at our
-[FAST troubleshooting guide](../../troubleshooting/index.md).
+Have a look at our [FAST troubleshooting guide](../../troubleshooting/index.md).
