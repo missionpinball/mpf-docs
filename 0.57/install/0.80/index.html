@@ -13,25 +13,25 @@ icons & this code generated via https://realfavicongenerator.net
         <link rel="canonical" href="https://missionpinball.org/latest/install/0.80/">
       
       
-        <link rel="prev" href="../../start/quickstart/">
+        <link rel="prev" href="../../gmc/reference/mpf-gmc/">
       
       
-        <link rel="next" href="../0.57/">
+        <link rel="next" href="../../gmc/guides/base-slide-with-score/">
       
       
         
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>Notes for upgrading to MPF 0.80 - The Mission Pinball Framework</title>
+        <title>Migrating to MPF 0.80 and Godot GMC - The Mission Pinball Framework</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -102,7 +102,7 @@ icons & this code generated via https://realfavicongenerator.net
     <div data-md-component="skip">
       
         
-        <a href="#mpf-080-changes-gmc-pre-release" class="md-skip">
+        <a href="#migrating-to-mpf-080-and-godot-gmc-gmc-pre-release" class="md-skip">
           Skip to content
         </a>
       
@@ -137,7 +137,7 @@ icons & this code generated via https://realfavicongenerator.net
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Notes for upgrading to MPF 0.80
+              Migrating to MPF 0.80 and Godot GMC
             
           </span>
         </div>
@@ -240,12 +240,10 @@ icons & this code generated via https://realfavicongenerator.net
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
+      <li class="md-tabs__item">
         <a href="../../start/" class="md-tabs__link">
           
   
@@ -308,10 +306,12 @@ icons & this code generated via https://realfavicongenerator.net
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../../mc/" class="md-tabs__link">
           
   
@@ -490,8 +490,6 @@ icons & this code generated via https://realfavicongenerator.net
       
   
   
-    
-  
   
   
     
@@ -519,17 +517,14 @@ icons & this code generated via https://realfavicongenerator.net
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1">
         
           
           <div class="md-nav__link md-nav__container">
@@ -551,13 +546,13 @@ icons & this code generated via https://realfavicongenerator.net
             </a>
             
               
-              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="">
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -686,8 +681,6 @@ icons & this code generated via https://realfavicongenerator.net
                 
   
   
-    
-  
   
   
     
@@ -720,11 +713,11 @@ icons & this code generated via https://realfavicongenerator.net
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_6">
         
           
           <div class="md-nav__link md-nav__container">
@@ -752,7 +745,7 @@ icons & this code generated via https://realfavicongenerator.net
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1_6">
             <span class="md-nav__icon md-icon"></span>
             
@@ -15506,6 +15499,8 @@ icons & this code generated via https://realfavicongenerator.net
       
   
   
+    
+  
   
   
     
@@ -15529,14 +15524,17 @@ icons & this code generated via https://realfavicongenerator.net
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           <div class="md-nav__link md-nav__container">
@@ -15558,13 +15556,13 @@ icons & this code generated via https://realfavicongenerator.net
             </a>
             
               
-              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
@@ -17962,6 +17960,8 @@ icons & this code generated via https://realfavicongenerator.net
                 
   
   
+    
+  
   
   
     
@@ -17992,11 +17992,11 @@ icons & this code generated via https://realfavicongenerator.net
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" checked>
         
           
           <div class="md-nav__link md-nav__container">
@@ -18024,7 +18024,7 @@ icons & this code generated via https://realfavicongenerator.net
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_6">
             <span class="md-nav__icon md-icon"></span>
             
@@ -18794,8 +18794,10 @@ icons & this code generated via https://realfavicongenerator.net
                 
   
   
+    
   
   
+  
     
     
       
@@ -18819,6 +18821,8 @@ icons & this code generated via https://realfavicongenerator.net
       
         
       
+        
+      
     
     
     
@@ -18826,11 +18830,11 @@ icons & this code generated via https://realfavicongenerator.net
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6_8">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6_8" checked>
         
           
           <label class="md-nav__link" for="__nav_4_6_8" id="__nav_4_6_8_label" tabindex="0">
@@ -18851,7 +18855,7 @@ icons & this code generated via https://realfavicongenerator.net
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_6_8_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_6_8_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_6_8">
             <span class="md-nav__icon md-icon"></span>
             
@@ -18861,6 +18865,261 @@ icons & this code generated via https://realfavicongenerator.net
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Migrating to 0.80
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Migrating to 0.80
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#list-of-required-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        List of Required Changes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="List of Required Changes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mpf-and-gmc-version-compatibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MPF and GMC version compatibility
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slides-and-widgets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slides and Widgets
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sound-player" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sound Player
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sound-pools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sound Pools
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changes-to-default-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Changes to default modes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Changes to default modes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bonus-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bonus Mode
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bonus Mode">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bonus-default-slide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bonus default slide
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#carousel-modes-updated-in-0800dev10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Carousel Modes (updated in 0.80.0.dev10)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#high-score-entryaward-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        High Score Entry/Award Mode
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="High Score Entry/Award Mode">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#default-controls-for-high-score-name-entry-slide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Default controls for high score name entry slide
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#high-score-event-changes-updated-in-0800dev10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        High score event changes (updated in 0.80.0.dev10)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#high-score-default-slides" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        High score default slides
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tilt-mode-slides" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tilt mode slides
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
             
               
                 
@@ -48107,7 +48366,7 @@ icons & this code generated via https://realfavicongenerator.net
   
 
 
-<h1 id="mpf-080-changes-gmc-pre-release">MPF 0.80 changes (GMC pre-release)</h1>
+<h1 id="migrating-to-mpf-080-and-godot-gmc-gmc-pre-release">Migrating to MPF 0.80 and Godot GMC (GMC pre-release)</h1>
 <p><em>Last updated May 25, 2024</em></p>
 <p>The upcoming release of MPF is 0.80, which includes support for the Godot Media Controller (GMC) and drops support for the 0.57 Kivy-based Media Controller (MC).</p>
 <p>While there are not many functional changes in MPF between 0.57 and 0.80, there are some config file migrations necessary and this document will help you through that.</p>
@@ -48234,7 +48493,7 @@ Is something wrong or missing? Is something out of date, or can you explain it b
       <nav class="md-footer__inner md-grid" aria-label="Footer">
         
           
-          <a href="../../start/quickstart/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Quickstart">
+          <a href="../../gmc/reference/mpf-gmc/" class="md-footer__link md-footer__link--prev" aria-label="Previous: MPF-GMC Singleton">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
@@ -48244,20 +48503,20 @@ Is something wrong or missing? Is something out of date, or can you explain it b
                 Previous
               </span>
               <div class="md-ellipsis">
-                Quickstart
+                MPF-GMC Singleton
               </div>
             </div>
           </a>
         
         
           
-          <a href="../0.57/" class="md-footer__link md-footer__link--next" aria-label="Next: Big changes in 0.57">
+          <a href="../../gmc/guides/base-slide-with-score/" class="md-footer__link md-footer__link--next" aria-label="Next: Base Slide and Player Vars">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Big changes in 0.57
+                Base Slide and Player Vars
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -48310,10 +48569,10 @@ Is something wrong or missing? Is something out of date, or can you explain it b
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.footer", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.top", "navigation.tracking", "content.action.edit", "toc.follow", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.footer", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.top", "navigation.tracking", "content.action.edit", "toc.follow", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   
