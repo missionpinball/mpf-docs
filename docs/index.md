@@ -81,6 +81,7 @@ Pinball machines, control systems, and pinball mechs.
   * [Slides](mc/slides/index.md)
   * [Widgets](mc/widgets/index.md)
   * [Sound & Audio](mc/sound/index.md)
+  * [Godot MC (GMC)](gmc/index.md)
 
 ## Tools
 

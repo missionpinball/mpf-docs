@@ -17,3 +17,8 @@ Why use Godot?
 Ready to give GMC a try? Visit the [GMC Installation Instructions](installation.md) to get started!
 
 Or use the navigation menu on the left to discover the various setup guides and reference documents for GMC.
+
+# Upgrading a Legacy MPF-MC project to GMC
+
+For details regarding updating an existing project built on the pre-0.80 Media Controller (MPF-MC), see the
+[Migrating to MPF 0.80 and Godot GMC](../install/0.80.md).
