@@ -24058,6 +24058,12 @@ icons & this code generated via https://realfavicongenerator.net
       
         
       
+        
+      
+        
+      
+        
+      
     
     
     
@@ -24144,6 +24150,90 @@ icons & this code generated via https://realfavicongenerator.net
     
   
     fast:
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../config/fast/fast_exp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    fast:exp:
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../config/fast/fast_net/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    fast:net:
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../config/fast/fast_aud/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    fast:aud:
   
 
     
@@ -48009,38 +48099,35 @@ will be four consecutive numbers to represent the four FAST ports.</p>
 <p>On Mac or Linux, it's easiest to find the port numbers via the terminal
 window (or console window). To do that, open a new window and run the
 following command:</p>
-<pre><code>ls /dev/tty*
-</code></pre>
+<p><code>ls /dev/tty*</code></p>
 <p>This will list all the devices whose names begin with "tty".</p>
 <p>The four FAST ports will have the name that starts with
 "tty.usbserial-", then a number, then a letter A-D. (The number will
 be different on every system.) The port ending with the "A" is the
 first port, the "B" is the second, etc.</p>
 <p>For example, the four FAST ports might be something like on MAC:</p>
-<pre><code>/dev/tty.usbserial-141A
+<div class="highlight"><pre><span></span><code>/dev/tty.usbserial-141A
 /dev/tty.usbserial-141B
 /dev/tty.usbserial-141C
 /dev/tty.usbserial-141D
-</code></pre>
+</code></pre></div>
 <p>On linux it would look like this:</p>
-<pre><code>/dev/ttyUSB0
+<div class="highlight"><pre><span></span><code>/dev/ttyUSB0
 /dev/ttyUSB1
 /dev/ttyUSB2
 /dev/ttyUSB3
-</code></pre>
+</code></pre></div>
 <p>If you have multiple FAST devices they will enumerate more or less
 randomly dependent on the order they are plugged in. Unfortunately, the
 USB devices do not contain any serial number. However, we can pin them
 based on the USB port they are plugged into. On linux this can be
 achieved using a UDEV rules such as this:</p>
-<pre><code>SUBSYSTEM=="tty", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6011", ENV{ID_PATH_TAG}=="pci-0000_00_14_0-usb-0_12_1_0", SYMLINK+="ttyDMD1"
-</code></pre>
+<p><code>SUBSYSTEM=="tty", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6011", ENV{ID_PATH_TAG}=="pci-0000_00_14_0-usb-0_12_1_0", SYMLINK+="ttyDMD1"</code></p>
 <p>The device will then be available as /dev/ttyDMD1. You can run the
 following command while plugging in the device to get the relevand
 ID_PATH_TAG (and also idVendor and idProduct in case they changed with
 other revisions):</p>
-<pre><code>udevadm monitor --property
-</code></pre>
+<p><code>udevadm monitor --property</code></p>
 <h2 id="3-add-the-ports-to-your-config-file">3. Add the ports to your config file</h2>
 <p>Next you need to add the ports to your machine config file. To do this,
 create a new section called <code>fast:</code>, and then add a <code>ports:</code> setting
@@ -48050,13 +48137,13 @@ first three ports. If you have a FAST Nano controller, enter the names
 of the middle two ports (the second and third, since the first isn't
 used on a Nano).</p>
 <p>So an example for Windows might look like this:</p>
-<pre><code>fast:
-    ports: com3, com4, com5
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nt">fast</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">com3, com4, com5</span>
+</code></pre></div>
 <p>And an example for Mac or Linux might look like this:</p>
-<pre><code>fast:
-   ports: /dev/tty.usbserial-141B, /dev/tty.usbserial-141C
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nt">fast</span><span class="p">:</span>
+<span class="w">   </span><span class="nt">ports</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/dev/tty.usbserial-141B, /dev/tty.usbserial-141C</span>
+</code></pre></div>
 <p>Note that if you have a FAST Core controller but you're not actually
 using the hardware DMD, then you don't have to enter the first port in
 your config. (Same is true if you're not using the LED controller.) MPF
@@ -48074,18 +48161,16 @@ but the ports are the bare minimum you need to get up and running.</p>
 default with a timeout of 1 second. If you would like to disable this,
 or you'd like to change the timeout, you can do so in the <code>fast:</code>
 section of your machine-wide config.</p>
-<pre><code>fast:
-   ports: com3, com4, com5  # or whatever your ports are
-   watchdog: 1000
-</code></pre>
-<p>The <code>watchdog:</code> setting is the timeout in milliseconds. Use 0 to disable
-it.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">fast</span><span class="p">:</span>
+<span class="w">   </span><span class="nt">ports</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">com3, com4, com5</span><span class="w">  </span><span class="c1"># or whatever your ports are</span>
+<span class="w">   </span><span class="nt">watchdog</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+</code></pre></div>
+<p>The <code>watchdog:</code> setting is the timeout in milliseconds. Use 0 to disable it.</p>
 <p>Note that at this time, FAST Pinball controllers only use the watch dog
 for the NET processor (which controls stuff on the IO boards, like
 coils). The watch dog is not used for the DMD or LEDs.</p>
 <h2 id="what-if-it-did-not-work">What if it did not work?</h2>
-<p>Have a look at our
-<a href="../../../troubleshooting/">FAST troubleshooting guide</a>.</p>
+<p>Have a look at our <a href="../../../troubleshooting/">FAST troubleshooting guide</a>.</p>
 <hr>
 <div class="admonition question">
 <p class="admonition-title">Something missing or wrong? You can fix it!</p>
