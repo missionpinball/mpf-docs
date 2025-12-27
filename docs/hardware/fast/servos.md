@@ -51,6 +51,7 @@ then figure out the number based on the list above.
 By default, standalone numbers like this have to be entered in hex
 format, so once you find your number, enter it as the hex equivalent:
 
+```
   Regular   Hex
   --------- -----
   0         0
@@ -77,6 +78,7 @@ format, so once you find your number, enter it as the hex equivalent:
   21        15
   22        16
   23        17
+```
 
 If you don't want to mess with all this hex stuff, you can set the
 config number format to "int" via the `fast: config_number_format:`

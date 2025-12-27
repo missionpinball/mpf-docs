@@ -11,81 +11,52 @@ title: "fast: Config Reference"
 |[machine](instructions/machine_config.md) config files|**YES** :white_check_mark:|
 |[mode](instructions/mode_config.md) config files|**NO** :no_entry_sign:|
 
+
+# 2026 Documentation Update
+
+The following config documentation is relevant for MPF 0.57.4 and 0.80.0. Last updated Dec 18, 2025.
+
+The `fast:` section of your machine-wide config is where you configure hardware options that are specific to the FAST Pinball Controller.
+The [FAST website](https://fastpinball.com/mpf/config/) also has thorough documentation and examples for MPF 0.57 and 0.80 compatible configurations.
+
+## fast: config reference
+
+The top-level `fast:` key contains subsections for each of the various component networks available with FAST.
+You do not need to include any section that is not present in your machine.
+
+### net:
+
+This contains the configuration for the NET IO boards, which handle switches and drivers.
+See [fast:net: config reference](fast/fast_net.md) for details.
+
+### exp:
+
+This contains the configuration for the EXP boards, which handle lights and various motors and accessories.
+
+### exp_int:
+
+When using the Raspberry PI directly connected to a Neuron board, the Neuron's LED ports are not accesible on the normal `exp` bus.
+To enable use of these headers, define the `FP-EXP-2000` model board in the `exp_int` instead of `exp` configuration.
+If using other EXP boards, you still define those on the normal `exp` configuration.
+For an example, see this [pull request](https://github.com/missionpinball/mpf/pull/1895) on Github.
+
+### aud:
+
+This contains the configuration for sounds played through the FAST Audio board.
+
+
+# Pre-2024 Documentation
+
+The following documentation was current in mid 2023, some settings and structures may have changed since then:
+
+## fast: config settings
+
 The `fast:` section of your machine-wide config is where you configure
 hardware options that are specific to the FAST Pinball Controller. Note
 that we have a how to guide which includes
 [all the FAST-specific settings](../hardware/fast/index.md) throughout your entire config file, so be sure to read that
 if you have FAST hardware.
 
-``` yaml
-fast:
-  ports: com3, com4, com5
-```
-
-## Required settings
-
-The following sections are required in the `fast:` section of your
-config:
-
-### default_normal_debounce_close:
-
-Single value, type: `time string (ms)`
-[Instructions for entering time strings](instructions/time_strings.md). Defaults to empty.
-
-Specifies the default value for the debounce time for switches that are
-configured with `debounce: normal` when they close.
-
-Even though this is listed as a required setting, this entry is in the
-`mpfconfig.yaml` file, (with a value of `10ms`), so you don\'t have to
-enter it here unless you want to override that.
-
-Also, keep in mind that this setting is only a default. You can override
-it for any switch in that switch\'s config.
-
-### default_normal_debounce_open:
-
-Single value, type: `time string (ms)`
-[Instructions for entering time strings](instructions/time_strings.md). Defaults to empty.
-
-Specifies the default value for the debounce time for switches that are
-configured with `debounce: normal` when they open.
-
-Even though this is listed as a required setting, this entry is in the
-`mpfconfig.yaml` file, (with a value of `10ms`), so you don\'t have to
-enter it here unless you want to override that.
-
-Also, keep in mind that this setting is only a default. You can override
-it for any switch in that switch\'s config.
-
-### default_quick_debounce_close:
-
-Single value, type: `time string (ms)`
-[Instructions for entering time strings](instructions/time_strings.md). Defaults to empty.
-
-Specifies the default value for the debounce time for switches that are
-configured with `debounce: quick` when they close.
-
-Even though this is listed as a required setting, this entry is in the
-`mpfconfig.yaml` file, (with a value of `2ms`), so you don\'t have to
-enter it here unless you want to override that.
-
-Also, keep in mind that this setting is only a default. You can override
-it for any switch in that switch\'s config.
-
-### default_quick_debounce_open:
-
-Single value, type: `time string (ms)`
-[Instructions for entering time strings](instructions/time_strings.md). Defaults to empty.
-
-Specifies the default value for the debounce time for switches that are
-configured with `debounce: quick` when they open.
-
-Even though this is listed as a required setting, this entry is in the
-`mpfconfig.yaml` file, (with a value of `2ms`), so you don\'t have to
-enter it here unless you want to override that.
-
-Also, keep in mind that this setting is only a default. You can override
-it for any switch in that switch\'s config.
 
 ### ports:
 
@@ -94,6 +65,11 @@ empty.
 
 A comma-separated list of the serial port names your FAST controller
 uses.
+
+``` yaml
+fast:
+  ports: com3, com4, com5
+```
 
 ## Optional settings
 
@@ -181,29 +157,6 @@ Single value, type: `integer`. Default: `3`
 
 Max backlog for the RGB port to prevent overflows in the FAST CPU.
 
-### watchdog:
-
-Single value, type: `time string (ms)`
-[Instructions for entering time strings](instructions/time_strings.md). Default: `1000`
-
-The FAST controllers include a "watchdog" timer. A watchdog is a timer
-that is continuously counting down towards zero, and if it ever hits
-zero, the controller shuts off all the power to the drivers. The idea is
-that every time MPF runs a game loop (so, 30 times a second or
-whatever), MPF tells the FAST controller to reset the watchdog timer. So
-this timer is constantly getting reset and never hits zero.
-
-But if MPF crashes or loses communication with the FAST controller, then
-this watchdog timer won\'t be reset. When it hits zero, the FAST
-controller will kill the power to the drivers. This should prevent an
-MPF crash from burning up driver or somehow damaging your hardware in
-another way.
-
-You can set the watchdog timer to whatever you want. (This is
-essentially the max time a driver could be stuck "on" if MPF crashes.)
-The default is 1 second which is probably fine for almost everyone, and
-you don\'t have to include this section in your config if you want to
-use the default.
 
 ## Related How To guides
 
