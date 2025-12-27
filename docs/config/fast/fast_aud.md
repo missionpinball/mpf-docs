@@ -11,9 +11,7 @@ title: "fast:aud: Config Reference"
 |[machine](../instructions/machine_config.md) config files|**YES** :white_check_mark:|
 |[mode](../instructions/mode_config.md) config files|**NO** :no_entry_sign:|
 
-## aud: config reference
-
-Within the `fast:` section of your machine-wide config, you configure the audio board processor in the subsection `aud:`.
+Within the [`fast:`](../fast.md) section of your machine-wide config, you configure the audio board processor in the subsection `aud:`.
 
 ### Sample config:
 

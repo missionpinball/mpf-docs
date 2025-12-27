@@ -11,9 +11,7 @@ title: "fast:net: Config Reference"
 |[machine](../instructions/machine_config.md) config files|**YES** :white_check_mark:|
 |[mode](../instructions/mode_config.md) config files|**NO** :no_entry_sign:|
 
-## net: config reference
-
-Within the `fast:` section of your machine-wide config, you configure the IO network in the subsection `net:`.
+Within the [`fast:`](../fast.md) section of your machine-wide config, you configure the IO network in the subsection `net:`.
 
 ### port:
 
@@ -91,7 +89,7 @@ use the default.
 ### default_quick_debounce_open:
 
 Single value, type: `time string (ms)`
-[Instructions for entering time strings](instructions/time_strings.md). Defaults to empty.
+[Instructions for entering time strings](../instructions/time_strings.md). Defaults to empty.
 
 Specifies the default value for the debounce time for switches that are
 configured with `debounce: quick` when they open.
@@ -106,7 +104,7 @@ it for any switch in that switch\'s config.
 ### default_quick_debounce_close:
 
 Single value, type: `time string (ms)`
-[Instructions for entering time strings](instructions/time_strings.md). Defaults to empty.
+[Instructions for entering time strings](../instructions/time_strings.md). Defaults to empty.
 
 Specifies the default value for the debounce time for switches that are
 configured with `debounce: quick` when they close.
@@ -121,7 +119,7 @@ it for any switch in that switch\'s config.
 ### default_normal_debounce_open:
 
 Single value, type: `time string (ms)`
-[Instructions for entering time strings](instructions/time_strings.md). Defaults to empty.
+[Instructions for entering time strings](../instructions/time_strings.md). Defaults to empty.
 
 Specifies the default value for the debounce time for switches that are
 configured with `debounce: normal` when they open.
@@ -136,7 +134,7 @@ it for any switch in that switch\'s config.
 ### default_normal_debounce_close:
 
 Single value, type: `time string (ms)`
-[Instructions for entering time strings](instructions/time_strings.md). Defaults to empty.
+[Instructions for entering time strings](../instructions/time_strings.md). Defaults to empty.
 
 Specifies the default value for the debounce time for switches that are
 configured with `debounce: normal` when they close.
@@ -150,7 +148,7 @@ it for any switch in that switch\'s config.
 
 ### mute_unconfigured_switches:
 
-* available MPF 0.57.4/0.80.0.dev12 * #TODO
+* available MPF 0.57.4/0.80.0.dev12 *
 
 Single value, boolean, default: `false`
 
