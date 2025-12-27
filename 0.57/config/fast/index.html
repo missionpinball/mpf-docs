@@ -47852,7 +47852,8 @@ to <a href="../../examples/">config file examples</a> for more examples of real 
 </tbody>
 </table>
 <h1 id="2026-documentation-update">2026 Documentation Update</h1>
-<p>The following config documentation is relevant for MPF 0.57.4 and 0.80.0. Last updated Dec 18, 2025.</p>
+<p>The following config documentation is relevant for MPF 0.57.4 and 0.80.0.</p>
+<p>Last updated: Dec 18, 2025.</p>
 <p>The <code>fast:</code> section of your machine-wide config is where you configure hardware options that are specific to the FAST Pinball Controller.
 The <a href="https://fastpinball.com/mpf/config/">FAST website</a> also has thorough documentation and examples for MPF 0.57 and 0.80 compatible configurations.</p>
 <h2 id="fast-config-reference_1">fast: config reference</h2>
@@ -47860,16 +47861,18 @@ The <a href="https://fastpinball.com/mpf/config/">FAST website</a> also has thor
 You do not need to include any section that is not present in your machine.</p>
 <h3 id="net">net:</h3>
 <p>This contains the configuration for the NET IO boards, which handle switches and drivers.
-See <a href="fast_net/">fast:net: config reference</a> for details.</p>
+See <a href="fast_net/">fast:net: config reference</a> for more details.</p>
 <h3 id="exp">exp:</h3>
 <p>This contains the configuration for the EXP boards, which handle lights and various motors and accessories.</p>
 <h3 id="exp_int">exp_int:</h3>
 <p>When using the Raspberry PI directly connected to a Neuron board, the Neuron's LED ports are not accesible on the normal <code>exp</code> bus.
 To enable use of these headers, define the <code>FP-EXP-2000</code> model board in the <code>exp_int</code> instead of <code>exp</code> configuration.
 If using other EXP boards, you still define those on the normal <code>exp</code> configuration.
-For an example, see this <a href="https://github.com/missionpinball/mpf/pull/1895">pull request</a> on Github.</p>
+For an example, see this <a href="https://github.com/missionpinball/mpf/pull/1895">pull request</a> on Github.
+See <a href="fast_exp/">fast:exp: config reference</a> for more details.</p>
 <h3 id="aud">aud:</h3>
-<p>This contains the configuration for sounds played through the FAST Audio board.</p>
+<p>This contains the configuration for sounds played through the FAST Audio board.
+See <a href="fast_aud/">fast:aud: config reference</a> for more details.</p>
 <h1 id="pre-2024-documentation">Pre-2024 Documentation</h1>
 <p>The following documentation was current in mid 2023, some settings and structures may have changed since then:</p>
 <h2 id="fast-config-settings">fast: config settings</h2>
