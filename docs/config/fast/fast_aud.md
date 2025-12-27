@@ -60,6 +60,6 @@ Single value, int, default: `230400`
 
 The connection baud rate.
 
-### FAST Docs:
+## FAST Docs:
 
 For the other properties, see the [FAST Audio Interface MPF Config page](https://fastpinball.com/mpf/config/audio/).

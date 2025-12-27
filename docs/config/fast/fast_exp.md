@@ -71,3 +71,7 @@ fast:
       neuron:
         model: FP-EXP-2000
 ```
+
+## FAST Docs:
+
+For more information, see the [FAST EXP Interface MPF Config page](https://fastpinball.com/mpf/config/exp/).

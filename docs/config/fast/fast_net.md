@@ -167,3 +167,7 @@ Lights using the light subtype `gi` will use this for their hz setting if unspec
 Single value, int, default: `30`
 
 Lights using the light subtype `matrix` will use this for their hz setting if unspecified.
+
+## FAST Docs:
+
+For more information, see the [FAST Net Interface MPF Config page](https://fastpinball.com/mpf/config/net/).
