@@ -16,8 +16,34 @@ title: "light_player: Config Reference"
     This section can also be used in a show file in the `lights:` section of
     a step.
 
-The `light_player:` section of your config is where you can control
-lights in config or shows. Example in config:
+The `light_player:` section of your config is where you can control lights in standalone config files or in show steps.
+
+
+## Structure
+
+The most common place you will put light players is in your shows, where it uses the config name `lights`.
+
+``` yaml
+shows:
+  stoplight:
+    - duration: 1s
+      lights:
+        (leds): green
+    - duration: 1s
+      lights:
+        (leds): yellow
+    - duration: 1s
+      lights:
+        (leds): red
+    - duration: 300ms
+      lights:
+        (leds): off
+
+```
+
+The example above shows a four-step show that cycles through green, yellow, red, and off states for lights passed to the show via the [show_token](show_player.md#show_tokens) "leds".
+
+Less commonly you might also define standalone `light_player` entries consists of an event trigger and one or more lights that will have their colors set.
 
 ``` yaml
 light_player:
@@ -25,32 +51,23 @@ light_player:
     led1:
       color: red
       fade: 200ms
-    led2:
-      color: ff0000
-      fade: 2000ms
+    led2: off
+    my_light_tag: 0000ff
 ```
 
-``` yaml
-shows:
-  rainbow:
-    - duration: 1s
-      lights:
-        (leds): red
-    - duration: 1s
-      lights:
-        (leds): orange
-    - duration: 1s
-      lights:
-        (leds): yellow
-    - duration: 1s
-      lights:
-        (leds): green
-    - duration: 1s
-      lights:
-        (leds): blue
-    - duration: 1s
-      lights:
-        (leds): purple
+In the above example, `some_event` is a trigger event which sets the light `led1` to red (via named color, with expanded options including fade), turns `led2` off, and lights tagged with "my_light_tag" will be set to blue (via the hex color code for blue in the shorthand format).
+You can mix and match tags and light device names, but if a light is both listed by name and also matches one or more tags within the same triggering event handler, whichever value is set to the named light _last_ will win.
+
+#### Wildcard light tag
+
+There is also a special wildcard / catch-all that can be used to address ALL lights in the machine configuration at once.
+Using the asterisk (or star) instead of a tag name will make the setting apply to every light.
+This is **not** a true wildcard matcher like you can use with filesystem searches (e.g. where "file_12*.txt" might match "file_123.txt" and also "file_12345.txt").
+
+```yaml
+light_player:
+  turn_everything_on_event:
+    "*": on
 ```
 
 ## Optional settings
