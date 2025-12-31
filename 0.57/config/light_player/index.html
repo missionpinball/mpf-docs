@@ -20538,6 +20538,34 @@ icons & this code generated via https://realfavicongenerator.net
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Structure
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wildcard-light-tag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wildcard light tag
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#optional-settings" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -47966,6 +47994,34 @@ icons & this code generated via https://realfavicongenerator.net
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Structure
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wildcard-light-tag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wildcard light tag
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#optional-settings" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -48137,37 +48193,43 @@ to <a href="../../examples/">config file examples</a> for more examples of real 
 <p>This section can also be used in a show file in the <code>lights:</code> section of
 a step.</p>
 </div>
-<p>The <code>light_player:</code> section of your config is where you can control
-lights in config or shows. Example in config:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">light_player</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">some_event</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">led1</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
-<span class="w">      </span><span class="nt">fade</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">200ms</span>
-<span class="w">    </span><span class="nt">led2</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ff0000</span>
-<span class="w">      </span><span class="nt">fade</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2000ms</span>
-</code></pre></div>
+<p>The <code>light_player:</code> section of your config is where you can control lights in standalone config files or in show steps.</p>
+<h2 id="structure">Structure</h2>
+<p>The most common place you will put light players is in your shows, where it uses the config name <code>lights</code>.</p>
 <div class="highlight"><pre><span></span><code><span class="nt">shows</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">rainbow</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
-<span class="w">      </span><span class="nt">lights</span><span class="p">:</span>
-<span class="w">        </span><span class="nt">(leds)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
-<span class="w">      </span><span class="nt">lights</span><span class="p">:</span>
-<span class="w">        </span><span class="nt">(leds)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">orange</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
-<span class="w">      </span><span class="nt">lights</span><span class="p">:</span>
-<span class="w">        </span><span class="nt">(leds)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yellow</span>
+<span class="w">  </span><span class="nt">stoplight</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
 <span class="w">      </span><span class="nt">lights</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">(leds)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">green</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
 <span class="w">      </span><span class="nt">lights</span><span class="p">:</span>
-<span class="w">        </span><span class="nt">(leds)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">blue</span>
+<span class="w">        </span><span class="nt">(leds)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yellow</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
 <span class="w">      </span><span class="nt">lights</span><span class="p">:</span>
-<span class="w">        </span><span class="nt">(leds)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">purple</span>
+<span class="w">        </span><span class="nt">(leds)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">300ms</span>
+<span class="w">      </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">(leds)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">off</span>
+</code></pre></div>
+<p>The example above shows a four-step show that cycles through green, yellow, red, and off states for lights passed to the show via the <a href="../show_player/#show_tokens">show_token</a> "leds".</p>
+<p>Less commonly you might also define standalone <code>light_player</code> entries consists of an event trigger and one or more lights that will have their colors set.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">light_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">some_event</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">led1</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
+<span class="w">      </span><span class="nt">fade</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">200ms</span>
+<span class="w">    </span><span class="nt">led2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">off</span>
+<span class="w">    </span><span class="nt">my_light_tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0000ff</span>
+</code></pre></div>
+<p>In the above example, <code>some_event</code> is a trigger event which sets the light <code>led1</code> to red (via named color, with expanded options including fade), turns <code>led2</code> off, and lights tagged with "my_light_tag" will be set to blue (via the hex color code for blue in the shorthand format).
+You can mix and match tags and light device names, but if a light is both listed by name and also matches one or more tags within the same triggering event handler, whichever value is set to the named light <em>last</em> will win.</p>
+<h4 id="wildcard-light-tag">Wildcard light tag</h4>
+<p>There is also a special wildcard / catch-all that can be used to address ALL lights in the machine configuration at once.
+Using the asterisk (or star) instead of a tag name will make the setting apply to every light.
+This is <strong>not</strong> a true wildcard matcher like you can use with filesystem searches (e.g. where "file_12*.txt" might match "file_123.txt" and also "file_12345.txt").</p>
+<div class="highlight"><pre><span></span><code><span class="nt">light_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">turn_everything_on_event</span><span class="p">:</span>
+<span class="w">    </span><span class="s">"*"</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">on</span>
 </code></pre></div>
 <h2 id="optional-settings">Optional settings</h2>
 <p>The following sections are optional in the <code>light_player:</code> section of
