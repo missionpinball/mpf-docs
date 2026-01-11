@@ -48,8 +48,7 @@ your pinball machine. For now just install it on your laptop.
 MPF runs on Windows, Mac, and Linux. You can find the installation
 instructions [here](../install/index.md).
 
-Go do that now, and make sure that you get both MPF and the MPF-MC
-installed.
+Go do that now, and make sure that you get both MPF and the MPF-MC installed.
 
 ## 3a. What if you already installed MPF?
 

@@ -13,18 +13,19 @@ title: Installing GMC
 For details regarding updating an existing project built on the 0.57 and earlier Media Controller (MPF-MC), see the
 [Migrating to MPF 0.80 and Godot GMC](../install/0.80.md).
 
+--8<-- "latest_versions.md"
+
 ## Install MPF 0.80
 
 Before you get working with GMC, you need to install MPF 0.80 by following the [MPF Installation Guide](../install/index.md).
-
 
 !!! note "Upgrade is available"
 
     If you already have a working MPF 0.57 installation, you can upgrade to MPF 0.80 with the command `pip install --upgrade --pre mpf`. However, to maintain the option of reverting back to 0.57 it's recommended to create a new, separate virtual enviroment for MPF 0.80 and install it there.
 
-## Download Godot 4
+## Download Godot 4.5+
 
-The Godot Media Controller is built on the Godot game engine. Visit [https://godotengine.org](https://godotengine.org) to download the latest version of the Godot Editor (4.2 or later) and place it wherever you typically keep applications on your machine (not in your game project folder).
+The Godot Media Controller is built on the Godot game engine. Visit [https://godotengine.org](https://godotengine.org) to download the latest version of the Godot Editor (4.5 or later) and place it wherever you typically keep applications on your machine (not in your game project folder).
 
 After Godot is installed, open the editor and create a New Project. Select your MPF game project folder as the project path, and choose an appropriate render engine.
 
@@ -62,9 +63,12 @@ Also in the *Editor Settings > Text Editor > Behavior* menu:
 
 ## Install the GMC Plugin
 
-### Simplest Installation: Godot Asset Library
+### Simplest Installation: Godot Asset Library (coming soon!)
 
-The Godot editor features a built-in library of plugins that you can download and install with a single click.
+The latest development release of MPF (0.80.0.dev11) requires GMC plugin version 0.1.6, which is not yet available on the Asset Library.
+While we prepare for official release of MPF 0.80.0, we recommend the Standard or Expert installations, seen below.
+
+The Godot editor features the Asset Library, a built-in library of plugins that you can download and install with a click.
 
 In the Godot editor, select **AssetLib** from the top center selector. You may need to enable online access to the asset library when prompted. Search for "GMC" and click on the GMC asset to download and install.
 

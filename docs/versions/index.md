@@ -4,6 +4,9 @@ title: MPF Versions
 
 # MPF Versions
 
+--8<-- "latest_versions.md"
+
+# Always Changing!
 
 MPF is a work-in-progress. New versions are released every so often. You
 can find your MPF version by running `mpf --version` from

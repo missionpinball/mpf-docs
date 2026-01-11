@@ -1,5 +1,5 @@
 ---
-title: Installing MPF 0.56 on Windows
+title: Installing MPF 0.57 on Windows
 ---
 
 # Installing MPF on Windows
@@ -50,10 +50,15 @@ you don't need to uninstall anything, just create a new one.
 
 ## Windows System Requirements
 
-MPF 0.57 requires Python 3.9, 3.10, or 3.11.
+MPF 0.57 requires Python 3.9, 3.10, 3.11, or 3.12.
 
 MPF can run on 3.8, but the MPF-MC audio doesn't work on Windows in
 those versions. So you should use Python 3.9.
+
+MPF 0.80 requires Python 3.10 - 3.13, with 3.14 support planned.
+If you plan on upgrading your MPF 0.57 project to 0.80, you should
+pick a Python version that will be able to carry forward during
+the upgrade.
 
 ## Install Python
 

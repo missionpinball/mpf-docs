@@ -2,14 +2,16 @@
 title: Downloading & Installing MPF
 ---
 
-# Installing MPF
+# Installing MPF 0.80 or 0.57
 
 
-The current stable version of MPF is `0.57.3`, and the upcoming release is `0.80.0`.
+The current stable version of MPF is `0.57.3`, and the upcoming release is `0.80.0` along with a long-term support release of `0.57.4`.
 
 !!! note "New MPF Coming Soon!"
 
     The next major release of MPF will be 0.80 and is coming soon! This exciting advancement offers a brand-new media controller based on the powerful Godot game engine. If you are just getting started with MPF, consider giving 0.80 a try!
+
+--8<-- "latest_versions.md"
 
 MPF works with following platforms:
 
@@ -18,9 +20,13 @@ MPF works with following platforms:
 * Linux (64-bit, lots of distros including Debian and Ubuntu)
 * Raspberry Pi
 
-MPF works with Python 3.8 - 3.11. It runs on 3.12 but has not been extensively tested, so your mileage may vary.
+MPF 0.57 works with Python 3.8 - 3.12.
 
-## Simplest Installation: Precompiled Binary (MPF 0.80)
+MPF 0.80 works with Python 3.10-3.13, with upcoming support for 3.14.
+
+<!-- TODO(Bosh) Disabled because dev1 is not a good choice given the myriad of changes on the way to dev11
+
+ ## Simplest Installation: Precompiled Binary (MPF 0.80)
 
 As of MPF 0.80 we are providing precompiled binaries for new users to get up and running as easily as possible. You can see all the latest binaries at the [MPF Precompiled Binaries](https://github.com/missionpinball/prepackaged-mpf-binaries/tree/main/latest) repository, but here are some links:
 
@@ -46,7 +52,7 @@ As of MPF 0.80 we are providing precompiled binaries for new users to get up and
 
     Okay, it's not technically "pre-compiled". MPF is written in Python, which is an interpreted language, and therefore cannot be truly "compiled" into a binary. The provided binaries are special applications that bundle a copy of Python, the MPF framework modules, and all dependency packages into a single file.
 
-    The point is, you can download a single file and run it and have a working copy of MPF!
+    The point is, you can download a single file and run it and have a working copy of MPF! -->
 
 ## Standard Installation: Pip Install (MPF 0.80)
 
@@ -60,11 +66,10 @@ strongly recommended when working with MPF unless you are using a precompiled bi
     will prevent MPF from running. Troubleshooting and manually cleaning up packages is a pain—do your future
     self a favor and setup an MPF virtual environment now!
 
-After creating your Python 3.8-3.12 virtual environment and activating it, install MPF 0.80.
+After creating your Python 3.10-3.13 virtual environment and activating it, install MPF 0.80.
 
 ``` console
-
-    pip install mpf --pre
+pip install mpf --pre
 ```
 
 Now when inside your virtual environment, you can run MPF simply by typing `mpf` while in your machine folder. To update MPF, type `pip install --upgrade mpf`.
@@ -90,14 +95,13 @@ Now when inside your virtual environment, you can run MPF simply by typing `mpf`
 
 For complete control, you can clone the MPF repository to your computer and run it directly from the source code.
 
-After creating your Python 3.8+ [virtual environment](virtual-environments.md), go to the folder where you wish to clone the MPF repository and type:
+After creating your Python 3.10+ [virtual environment](virtual-environments.md), go to the folder where you wish to clone the MPF repository and type:
 
 ``` console
-
-    git clone https://github.com/missionpinball/mpf
-    cd mpf
-    git checkout 0.80.x
-    pip install -e .
+git clone https://github.com/missionpinball/mpf
+cd mpf
+git checkout 0.80.x
+pip install -e .
 ```
 
 Now when inside your virtual environment, you can run MPF simply by typing `mpf` while in your machine folder. Typing `pip list` will reveal that the MPF module is being run directly from the repo folder on your computer. To update MPF, navigate inside the MPF repo folder and type `git fetch` and `git pull`.
@@ -105,13 +109,13 @@ Now when inside your virtual environment, you can run MPF simply by typing `mpf`
 
 ***Advantages of Expert Installation:***
 
-  * Fast startup times (compared to precompiled binaries)
+  * Faster startup times
   * Access to any version of MPF, including feature branches and forks
   * Edit the MPF source code and see the effects immediately
 
 ***Disadvantages of Expert Installation:***
 
-  * Requires a local Python 3.8+ installation
+  * Requires a local Python 3.10+ installation
   * Requires setting up a virtual environment
   * Requires knowledge of Git mechanics
   * Updates require a manual fetch and pull of the repository
@@ -126,7 +130,7 @@ If you are installing MPF 0.57 to continue work on an existing MC-based project,
 
 ## Migrating MPF 0.57 to MPF 0.80
 
-If you have an existing MPF 0.57 project and would like to use MPF 0.80 and the GMC, there are just a few config changes needed. See the [MPF 0.80 Migration Guide](./0.80.md) for instructions.
+If you have an existing MPF 0.57 project and would like to use MPF 0.80 and the GMC, there are just a few config changes needed. See the [MPF 0.80 Migration Guide](0.80.md) for instructions.
 
 ## Next step: The Tutorial!
 

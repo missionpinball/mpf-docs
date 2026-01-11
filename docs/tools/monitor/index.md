@@ -19,6 +19,8 @@ The MPF Monitor can run on Windows, Mac, and Linux. It uses
 [PyQt6](https://www.riverbankcomputing.com/software/pyqt/intro) (Python
 bindings for Qt6) for its visual framework.
 
+The current version of Monitor is 0.57.2, which works with MPF 0.57 and 0.80.
+
 Here's a screen shot of it in action:
 
 !!! note
@@ -101,17 +103,13 @@ proof-of-concept.) We plan to add more features, including:
     the right shape). Allow configurable "off" colors which can
     include opacity and "glow" so inserts look like real lights.
 * Allow all devices to be added to the playfield image, with custom
-    representation (diverters that animate, flippers that animate,
-    etc.).
-* Device state change history that shows what properties changed and
-    when.
-* Default (mostly blank) playfield image if no playfield image is
-    specified
-* Configurable default options (folder location, playfield image name,
-    etc.)
+    representation (diverters that animate, flippers that animate, etc.).
+* Device state change history that shows what properties changed and when.
+* Default (mostly blank) playfield image if no playfield image is specified
+* Configurable default options (folder location, playfield image name, etc.)
 
 ## Next Steps
 
-[installation](installation.md)
-[running](running.md)
-[devices-and-using](devices-and-using.md)
+* [Installing MPF Monitor](installation.md)
+* [Running the MPF Monitor](running.md)
+* [Monitor: Playfield Devices](devices-and-using.md)

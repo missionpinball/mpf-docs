@@ -27,7 +27,7 @@ a copy of Python and keep the enviroment's packages. For this example, we'll
 call the environment "mpfenv" and put it in our home directory (known as "~").
 
 ``` console
-  python3 -m venv ~/mpfenv
+python3 -m venv ~/mpfenv
 ```
 
 Or if you want to explicitly define a directory, like this example of an "mpf" virtual environment in a common venvs directory (because remember you can have as many virtual environments as you like):
@@ -87,7 +87,7 @@ For users on Mac OSX, you will use the `source` command with the path to your ve
 
 Linux users can enable the virtual environment with the dot command from the terminal:
 ``` console
-  . ~/mpfenv/bin/activate
+. ~/mpfenv/bin/activate
 ```
 
 Note that the first character is a period, followed by a space, then the path
@@ -101,12 +101,12 @@ After you run the activation, you'll know you're in the virtual environment
 because the console prompt will include the name of your venv in parenthesis.
 
 ``` console
-  My-Mac:~ python --version
-  Python 2.7.10
-  My-Mac:~ source ~/mpfenv/bin/activate
-  (mpfenv) My-Mac:~ python --version
-  Python 3.9.13
-  (mpfenv) My-Mac:~
+My-Mac:~ python --version
+Python 2.7.10
+My-Mac:~ source ~/mpfenv/bin/activate
+(mpfenv) My-Mac:~ python --version
+Python 3.9.13
+(mpfenv) My-Mac:~
 ```
 
 !!! note  "Virtual environments set a default python"

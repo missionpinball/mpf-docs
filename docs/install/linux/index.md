@@ -10,12 +10,13 @@ title: Installing MPF on Linux
     This installation guide is for MPF 0.57 and the legacy MC, which is being replaced in the upcoming MPF 0.80 with the Godot MC. If you are just getting started with MPF, we recommend you [install MPF 0.80](../index.md) instead.
 
 ## OS Preparation
+
 In order to communicate with your pinball hardware over USB you need to add your user to the user group `dialout`. This is necessary regardless of the version of MPF (thus including the upcoming 0.80).
 
 
 ## May 2023 Update
 
-We need to update this page (we no longer suggest pipx, btw), but if you
+We need to update this page (for instance, we no longer suggest pipx), but if you
 want the "real" linux install instructions, read through the GitHub
 Actions job scripts in the [build_wheels](https://github.com/missionpinball/mpf/blob/dev/.github/workflows/build_wheels.yml) file.
 You'll see the exact steps we use to build MPF-MC (MPF is simple to
@@ -42,9 +43,12 @@ other platforms). Consult the README for more information.
 Current version these instructions are for v0.57, which is the current
 "main" branch of MPF.
 
-MPF 0.57 requires Python 3.8, 3.9, 3.10, or 3.11. Various Linux distributions
-offer to install multiple versions of Python in parallel. First check
-what version of Python you might have already running on your computer.
+MPF 0.57 requires Python 3.8, 3.9, 3.10, 3.11, or 3.12.
+Various Linux distributions offer to install multiple versions of Python in parallel.
+First check what version of Python you might have already running on your computer.
+
+MPF 0.80 requires Python 3.10+, so you may wish to start with a Python that can be
+used in either version, if you less hassle when upgrading in the future.
 
 ``` doscon
 python3 --version
