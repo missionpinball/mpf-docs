@@ -14,7 +14,7 @@ and how to selectively enable debugging.
 The text ui which is shown by default may hide some errors and make
 troubleshooting more difficult. To disable text ui run mpf using:
 
-``` console
+``` shell
 $ mpf both -t
 ```
 
@@ -25,13 +25,13 @@ might reveal them as the text ui sometimes hides them.
 
 If MPF and MPF-MC logs mix up too much you can start them separately:
 
-``` console
+``` shell
 $ mpf game -t
 ```
 
 And in another console:
 
-``` console
+``` shell
 $ mpf mc
 ```
 
@@ -42,13 +42,13 @@ from.
 
 If you experience problems you should increase verbosity:
 
-``` console
+``` shell
 $ mpf game -t -v -V
 ```
 
 Start MPF-MC in a separate console:
 
-``` console
+``` shell
 $ mpf mc -v -V
 ```
 

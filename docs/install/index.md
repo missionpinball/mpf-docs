@@ -73,7 +73,7 @@ strongly recommended when working with MPF unless you are using a precompiled bi
 
 After creating your Python 3.10-3.13 virtual environment and activating it, install MPF 0.80.
 
-``` console
+``` shell
 pip install mpf --pre
 ```
 
@@ -102,7 +102,7 @@ For complete control, you can clone the MPF repository to your computer and run 
 
 After creating your Python 3.10+ [virtual environment](virtual-environments.md), go to the folder where you wish to clone the MPF repository and type:
 
-``` console
+``` shell
 git clone https://github.com/missionpinball/mpf
 cd mpf
 git checkout 0.80.x

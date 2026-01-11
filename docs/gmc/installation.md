@@ -88,7 +88,7 @@ Extract the downloaded ZIP file and go to the *addons* folder, where you'll see 
 
 For complete control, you can clone the MPF-GMC repository to your computer and run it directly. First, open a terminal window to the directory where you keep your Git repositories, and then clone:
 
-``` console
+``` shell
 
     git clone https://github.com/missionpinball/mpf-gmc
 ```
@@ -105,13 +105,13 @@ You will create a symbolic link *mpf-gmc* in your project */addons* folder that 
 
 The syntax is `sudo ln -s <path to GMC repository/addons/mpf-gmc> <path to project folder/addons/mpf-gmc>`, and will look something like this:
 
-``` console
+``` shell
   (mpf080) $> sudo ln -s /Users/tommy/git/mpf-gmc/addons/mpf-gmc /Users/tommy/pinballgame/addons/mpf-gmc
 ```
 
 When successful, you should see a new *mpf-gmc* folder in the *addons* folder you just created. You can confirm that the folder is a symbolic link with the `ls -la` command, which will show the path that the symbolic link points to.
 
-``` console
+``` shell
   (mpf080) pinballgame $> ls -la addons
 
   total 0
@@ -124,7 +124,7 @@ When successful, you should see a new *mpf-gmc* folder in the *addons* folder yo
 
 The syntax is `mklink /d <path to project folder/addons/mpf-gmc> <path to GMC repository/addons/mpf-gmc>` and will look something like this:
 
-``` console
+``` shell
   (mpf080) $> mklink /d "C:\repos\pinballgame\addons\mpf-gmc" "C:\repos\mpf-gmc\addons\mpf-gmc"
 ```
 
@@ -142,7 +142,7 @@ If you downloaded MPF-GMC as a ZIP file from GitHub, follow those steps again an
 
 If you cloned the MPF-GMC repository, you need to fetch and pull:
 
-``` console
+``` shell
   (mpf080) ~/git $> cd mpf-gmc
   (mpf080) ~/git/mpf-gmc $> git fetch
   (mpf080) ~/git/mpf-gmc $> git pull

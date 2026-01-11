@@ -10,7 +10,7 @@ The command line `mpf format` can reformat your MPF configs.
 Run it using `mpf format path/to/your_file.yaml`. It will show you a
 preview of the changes it your make:
 
-``` console
+``` shell
 $ mpf format config/config.yaml
 Parsing single test config/config.yaml.
 Config is not linted.

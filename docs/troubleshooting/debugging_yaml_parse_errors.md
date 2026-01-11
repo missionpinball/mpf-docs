@@ -7,7 +7,7 @@ title: Debugging YAML Parse Errors
 
 In case something goes wrong and you get errors like this:
 
-``` console
+``` shell
 ValueError: YAML error found in file config/config.yaml. Line 22,Position 10: mapping values are not allowed here
   in "config/config.yaml", line 22, column 10
 ```
@@ -28,7 +28,7 @@ If you are struggling to find the problem you can reformat your file
 using `ruamel.yaml`. To do that you first need to install the
 `ruamel.yaml.cmd` extension:
 
-``` console
+``` shell
 pip3 install ruamel.yaml.cmd==0.2
 ```
 
@@ -43,13 +43,13 @@ After that you can reformat single files using the `round-trip` command.
 For example if you want to reformat `your_file.yaml` first check the
 changes it would make:
 
-``` console
+``` shell
 yaml round-trip your_file.yaml
 ```
 
 If that looks alright perform them by adding the `--save` flag:
 
-``` console
+``` shell
 yaml round-trip --save your_file.yaml
 ```
 

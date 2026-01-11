@@ -135,7 +135,7 @@ Without explicit priorities (or some logic in the device) the order of
 the three handlers would be random and you might see the following entry
 in the log:
 
-``` console
+``` shell
 Duplicate handler for class MyDevice on event ball_started with priority 1. Handlers: x
 ```
 

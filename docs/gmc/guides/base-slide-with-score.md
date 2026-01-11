@@ -11,9 +11,8 @@ In this GMC tutorial we'll create a base slide for our game that includes the pl
 In your MPF config for your base mode, set the following:
 
 ``` yaml
-
-    slide_player:
-        mode_base_started: base
+slide_player:
+    mode_base_started: base
 ```
 
 This will trigger the slide with a file name *base.tscn* when the base mode starts.

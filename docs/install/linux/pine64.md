@@ -44,7 +44,7 @@ to fix it.
 
 Assuming you want US English, substitute your preferred language if not:
 
-``` console
+``` shell
 $ sudo locale-gen "en_US.UTF-8"
 Generating locales...
   en_US.UTF-8... done
@@ -61,13 +61,13 @@ choose "ALL" and only select the one or a few languages you want
 (generating them all takes a long time). Then reboot, then do the above
 reconfigure step AGAIN, then reboot, then run:
 
-``` console
+``` shell
 $ locale
 ```
 
 And make sure it looks good. Mine says:
 
-``` console
+``` shell
 LANG=en_US.UTF-8
 LANGUAGE=en
 LC_CTYPE="en_US.UTF-8"
@@ -93,7 +93,7 @@ reboot, if your results here are wrong.
 This arrives broken, too. Oddly, running the Mate Welcome as root and
 clicking a button partly fixes it.
 
-``` console
+``` shell
 $ sudo ubuntu-mate-welcome
 ```
 
@@ -109,20 +109,20 @@ everything up to date. You will need to reboot again after that.
 
 ## Install Missing pip3
 
-``` console
+``` shell
 $ apt-get install python3-pip
 ```
 
 The path where `pip` puts executables is not in the system default path,
 so edit `~/.bashrc` to add the following path:
 
-``` console
+``` shell
 $ sudo nano ~/.bashrc
 ```
 
 At the bottom of the file add the following:
 
-``` console
+``` shell
 export PATH=~/.local/bin:$PATH
 ```
 
@@ -142,13 +142,13 @@ downloaded files.
 
 Unzip the file:
 
-``` console
+``` shell
 $ unzip dev.zip .
 ```
 
 If this does not run you may need to install unzip:
 
-``` console
+``` shell
 $ sudo apt-get install unzip
 ```
 

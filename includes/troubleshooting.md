@@ -15,7 +15,7 @@ On Linux you might want to run the command `lsusb` which should show
 both of your micro controllers connected. You should see two lines
 similar to
 
-``` console
+``` shell
 Bus 002 Device 014: ID 0483:5740 STMicroelectronics Virtual COM Port
 Bus 002 Device 015: ID 0483:5740 STMicroelectronics Virtual COM Port
 ```

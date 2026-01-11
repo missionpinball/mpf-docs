@@ -155,7 +155,7 @@ with Multimorphic P-ROC/P3-ROC boards with Python 3.8.
 
 Example Error:
 
-``` console
+``` shell
 Failed to initialize MPF
 Traceback (most recent call last):
 File “/usr/local/lib/python3.8/dist-packages/mpf/platforms/p_roc_common.py”, line 31, in <module>
@@ -172,14 +172,14 @@ Try Changing `Edit install-proc:`
 
 From:
 
-``` console
+``` shell
 cd pypinproc
 sudo python3 setup.py install
 ```
 
 To:
 
-``` console
+``` shell
 cd pypinproc
 python3 setup.py install --user
 ```
@@ -189,7 +189,7 @@ python3 setup.py install --user
 To upgrade MPF just re-run the installer which will make sure that you
 will also get updated dependencies:
 
-``` console
+``` shell
 sudo ./install
 ```
 
@@ -200,13 +200,13 @@ you used to install MPF and MPF-MC.
 To install the latest dev release (not generally recommended) which
 allows you to try bleeding-edge features run:
 
-``` console
+``` shell
 pip3 install mpf[all] mpf-mc --pre --upgrade
 ```
 
 To downgrade (or install a specific release x.yy.z) run:
 
-``` console
+``` shell
 pip3 install mpf[all]==x.yy.z
 pip3 install mpf-mc==x.yy.z
 ```
@@ -216,7 +216,7 @@ pip3 install mpf-mc==x.yy.z
 To remove MPF either because it is no longer needed or to perform a
 clean install run:
 
-``` console
+``` shell
 sudo pip3 uninstall mpf-mc mpf
 ```
 

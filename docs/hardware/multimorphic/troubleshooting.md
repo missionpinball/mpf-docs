@@ -23,7 +23,7 @@ your power supply.
 
 If you see something along this in your log:
 
-``` console
+``` shell
 in <module>
    from mpf.platform.pinproc.x86.python36 import pinproc
 
@@ -40,7 +40,7 @@ the correct version. Have a look a the
 
 If you see this repeatedly in the log of MPF:
 
-``` console
+``` shell
 Failed to reset P/P3-Roc: OSError: Error in WriteData: wrote 0 of 8 bytes. Is your P/P3-Roc connected and powered up?
 Will retry creating PinPROC and resetting it in 1s.
 ```
@@ -53,7 +53,7 @@ connected.
 You might see errors such as the following (usually in
 `p_roc_common.py`):
 
-``` console
+``` shell
 OSError: Error in WriteData: wrote 0 of 8 bytes
 ```
 
@@ -69,7 +69,7 @@ Using `mpf hardware scan` you can find out if your P/P3-Roc is talking
 properly to MPF using USB. Additionally, it will show you which `SW-16`
 are connected:
 
-``` console
+``` shell
 $ mpf hardware scan
 
 Firmware Version: 2 Firmware Revision: 6 Hardware Board ID: 1

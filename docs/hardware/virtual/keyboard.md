@@ -179,7 +179,7 @@ laptop that does not have dedicated numlock key and running Windows).
 
 You might see something like this:
 
-``` console
+``` shell
 Keyboard : Processing key stroke for key s-numlock
 Keyboard : Processing key stroke for key s-numlock
 ```

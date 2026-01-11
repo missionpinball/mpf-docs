@@ -41,7 +41,7 @@ If your game won't run, let's make sure MPF is ok. This will also tell
 use which MPF and MPF-MC version you are using. Run `mpf diagnosis` from
 within your machine folder to see if your installation is fine:
 
-``` console
+``` shell
 $ mpf diagnosis
 
 

@@ -234,7 +234,7 @@ In the above explainations the token values, e.g. led_02 were objects you have d
 
 Let's assume the following event is posted
 
-``` console
+``` shell
 INFO : EventManager : Event: ======'player_turn_started'====== Args={'player': <Player 1>, 'number': 1}
 ```
 

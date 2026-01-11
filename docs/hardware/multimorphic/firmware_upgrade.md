@@ -16,7 +16,7 @@ do not know.
 You can find out your current firmware version using
 `mpf hardware scan`:
 
-``` console
+``` shell
 $ mpf hardware scan
 
 Firmware Version: 2 Firmware Revision: 6 Hardware Board ID: 1

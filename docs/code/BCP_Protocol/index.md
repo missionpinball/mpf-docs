@@ -50,19 +50,19 @@ In all commands referenced below, the `\n` terminator is implicit. Some characte
 
 When a connection is initially established, the pinball controller transmits the following command:
 
-``` console
+``` shell
 hello?version=1.0
 ```
 
 …where 1.0 is the version of the Backbox protocol it wants to speak. The media controller may reply with one of two responses:
 
-``` console
+``` shell
 hello?version=1.0
 ```
 
 …indicating that it can speak the protocol version named, and reporting the version it speaks, or
 
-``` console
+``` shell
 error?message=unknown protocol version
 ```
 

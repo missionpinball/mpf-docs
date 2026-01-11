@@ -134,7 +134,7 @@ new serial device. This is usually `COMX` on windows:
 
 Or `/dev/ttyACMX` on Linux:
 
-``` console
+``` shell
 dmesg
 
 usb 1-3: new high-speed USB device number 11 using ehci-pci

@@ -139,7 +139,7 @@ In your terminal, in your project folder with your virtual environment activated
 
     For Mac users, you'll need to symlink the godot binary from the Godot.app to a path-executable. It might look like this:
 
-    ``` console
+    ``` shell
     sudo ln -s /Applications/Godot.app/Contents/MacOS/Godot /usr/local/bin/godot
     ```
 

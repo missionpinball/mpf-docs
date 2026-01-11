@@ -14,7 +14,7 @@ chain. You can connect multiple chains.
 You can run
 [mpf hardware scan](../../running/commands/hardware.md) to see all connected node boards:
 
-``` console
+``` shell
 $ mpf hardware scan
 
 Connected CPUs:

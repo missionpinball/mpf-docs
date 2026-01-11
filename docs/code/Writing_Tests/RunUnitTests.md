@@ -4,31 +4,31 @@ Once MPF is installed, you can run some automated tests to make sure that everyt
 Let's assume your mpf virtual folder is `mpfenv` and stored here
 
 Windows:
-``` console
+``` shell
 C:\Users\myname\mpfenv
 ```
 Linux:
-``` console
+``` shell
 /home/myname/mpfenv
 ```
 Note that you need to activate your virtual environment to run tests the same way you do to run your game. Assuming you are in your users home directory, run:
 
 Windows:
-``` console
+``` shell
 mpfenv\Scripts\activate.bat
 ```
 Linux:
-``` console
+``` shell
 mpfenv/bin/activate
 ```
 Now change into the directory where the tests are stored in your console, which is:
 
 Windows:
-``` console
+``` shell
 C:\Users\myname\mpfenv\Lib\site-packages\mpf\tests
 ```
 Linux:
-``` console
+``` shell
 /home/myname/mpfenv/lib/python3.11/site-packages/mpf/tests
 ```
 You might have a different version of python and your path might differ slightly.
@@ -38,7 +38,7 @@ Now you have different options on how to run the tests. You can either run all t
 
 To do this, open a command prompt, and then type the following command and then press `<enter>`:
 
-``` console
+``` shell
 python3 -m unittest discover <path to test directory>
 ```
 Where `<path to test directory>` is the path to the directory where you tests are stored. If you have followed the steps above you are already in that directory and you just omit this value.
@@ -49,7 +49,7 @@ You should see a bunch of dots on the screen (one for each test that's run), and
 
 The important thing is that when the tests are done, you should have a message like this:
 
-``` console
+``` shell
 Ran 587 tests in 27.121s
 
 OK
@@ -63,25 +63,25 @@ These tests are the actual tests that the developers of MPF use to test MPF itse
 
 ## Running all test of a single test file
 If you have the need only to test all tests in a single test file you can specify the test file in your directory
-``` console
+``` shell
 python -m unittest test_SegmentDisplay.py
 ```
 That obviously runs all tests in the file called `test_SegmentDisplay.py`, which makes sense to save time if your code changes only took place in that part of the code.
 
 ## Running a single test
 If only one test fails and you need to execute it more often you can even specify only that one single test
-``` console
+``` shell
 python -m unittest test_SegmentDisplay.TestSegmentDisplay.test_transitions_with_player
 ```
 where the syntax has the following format
-``` console
+``` shell
 python -m unittest <file name without py extension>.<Class name within file>.<name of test>
 ```
 
 ## Testing the MPF media controller
 Remember though that MPF is actually two separate parts, the MPF game engine and the MPF media controller. The command you run just tested the game engine, so now let's test the media controller. To do this, run the following command (basically the same thing as last time but with an “mc” added to the end, like this):
 
-``` console
+``` shell
 python3 -m unittest discover mpfmc/tests
 ```
 

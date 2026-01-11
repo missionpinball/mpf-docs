@@ -62,7 +62,7 @@ You can run your tests via the command prompt from your machine folder. (In othe
 
 The exact command to run is `python -m unittest`. This should produce output similar to the following:
 
-``` console
+``` shell
 C:\pinball\your_machine>python -m unittest
 C:\Python34\lib\imp.py:32: PendingDeprecationWarning: the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
   PendingDeprecationWarning)
@@ -87,7 +87,7 @@ self.assertModeRunning('foo')
 
 Save the file and rerun the tests and you should see results like this:
 
-``` console
+``` shell
 C:\pinball\your_machine>python -m unittest
 C:\Python34\lib\imp.py:32: PendingDeprecationWarning: the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
   PendingDeprecationWarning)

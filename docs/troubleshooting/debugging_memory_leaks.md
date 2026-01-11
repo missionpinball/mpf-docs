@@ -22,7 +22,7 @@ keyboard:
 
 The MPF log will contain something like this:
 
-``` console
+``` shell
 2018-12-10 21:35:55,682 : INFO : EventManager : Event: ======'debug_dump_stats'====== Args={'_from_bcp': True}
 2018-12-10 21:35:55,683 : INFO : EventManager : --- DEBUG DUMP EVENTS ---
 2018-12-10 21:35:55,683 : INFO : EventManager : Total registered_handlers: 265. Total event_queue: 0. Total callback_queue: 0. Total _queue_tasks: 0
@@ -36,7 +36,7 @@ The MPF log will contain something like this:
 
 MPF-MC will contain even more information:
 
-``` console
+``` shell
 2018-12-10 21:35:55,682 : EventManager : Event: ======'debug_dump_stats'====== Args={}
 2018-12-10 21:35:55,702 : EventManager : --- DEBUG DUMP EVENTS ---
 2018-12-10 21:35:55,703 : EventManager : Total registered_handlers: 42. Total event_queue: 0. Total callback_queue: 0. Total _queue_tasks: 0

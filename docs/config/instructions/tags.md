@@ -30,7 +30,7 @@ switches:
 In this case, whenever the start switch is activated, there will be two
 events fired. You will see something like this in the log:
 
-``` console
+``` shell
 2018-09-26 20:32:14,215 : INFO : EventManager : Event: ======'sw_start'====== Args={}
 2018-09-26 20:32:14,215 : INFO : EventManager : Event: ======'sw_start_active'====== Args={}
 2018-09-26 20:32:14,215 : INFO : EventManager : Event: ======'sw_skyfall'====== Args={}

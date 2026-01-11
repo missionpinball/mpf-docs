@@ -52,7 +52,7 @@ to configure those boards.
 You can list all SW-16 using
 [mpf hardware scan](../../running/commands/hardware.md):
 
-``` console
+``` shell
 $ mpf hardware scan
 
 Firmware Version: 2 Firmware Revision: 6 Hardware Board ID: 1

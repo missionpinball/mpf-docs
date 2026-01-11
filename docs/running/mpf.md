@@ -25,7 +25,7 @@ command line options, is
 
 Prints the version of MPF and exits:
 
-``` console
+``` shell
 $ mpf --version
 MPF v0.xx.yy
 ```

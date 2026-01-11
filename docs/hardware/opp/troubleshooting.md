@@ -14,7 +14,7 @@ read our
 Using `mpf hardware scan` you can find out if your OPP boards are
 talking properly to MPF using USB:
 
-``` console
+``` shell
 $ mpf hardware scan
 
 Connected CPUs:

@@ -33,20 +33,20 @@ Stick some USB drive to a USB port on Spike and mount it to `/mnt/`.
 
 If you USB drive contains a partition use:
 
-``` console
+``` shell
 mount /dev/sda1 /mnt
 ```
 
 Alternatively use:
 
-``` console
+``` shell
 mount /dev/sda /mnt
 ```
 
 If you did not get an error your operation succeeded. You can have a
 look at the content of your stick using:
 
-``` console
+``` shell
 ls /mnt
 ```
 
@@ -66,7 +66,7 @@ incorrect commands or responses.
 
 To safely unmount your drive stop MPF, open the console again and type:
 
-``` console
+``` shell
 umount /mnt
 sync
 ```
@@ -93,14 +93,14 @@ following command:
 
 ### Spike 1
 
-``` console
+``` shell
 cd /mnt && chmod +x interceptty-arm
 mv /dev/ttyS4 /dev/ttyS4_real; interceptty-arm -s 'ispeed 460800 ospeed 460800' -l /dev/ttyS4_real /dev/ttyS4 > /mnt/serial_dump &
 ```
 
 ### Spike 2
 
-``` console
+``` shell
 cd /mnt && chmod +x interceptty-arm
 mv /dev/ttymxc1 /dev/ttymxc1_real; interceptty-arm -s 'ispeed 460800 ospeed 460800' -l /dev/ttymxc1_real /dev/ttymxc1 > /mnt/serial_dump &
 ```
@@ -108,7 +108,7 @@ mv /dev/ttymxc1 /dev/ttymxc1_real; interceptty-arm -s 'ispeed 460800 ospeed 4608
 This command should return instantly and run in the background. Now
 start the game binary in the foreground:
 
-``` console
+``` shell
 /games/game
 ```
 
@@ -124,13 +124,13 @@ Restore the serial:
 
 ### Spike 1
 
-``` console
+``` shell
 mv /dev/ttyS4_real /dev/ttyS4
 ```
 
 ### Spike 2
 
-``` console
+``` shell
 mv /dev/ttymxc1_real /dev/ttymxc1
 ```
 

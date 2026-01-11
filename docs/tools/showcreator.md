@@ -153,7 +153,7 @@ is correct until here, but it is not compulsory to do so.
 Now you need the source code from the showcreator project, you need to clone the complete project
 
 
-``` console
+``` shell
 git clone https://github.com/missionpinball/showcreator.git
 ```
 
@@ -163,7 +163,7 @@ dependencies. After the build is done, you find in the same folder where your so
 
 Afterwards you can run the showcreator using (from within your install folder):
 
-``` console
+``` shell
 ./led
 ```
 

@@ -51,7 +51,7 @@ password then follow these steps:
             `/etc/lightdm/lightdm.conf.d/12-autologin.conf` and edit it
             to contain:
 
-``` console
+``` shell
 [Seat:*]
 autologin-user=your_username
 autologin-user-timeout=0
@@ -75,7 +75,7 @@ The existing Debian install script works perfectly on Ubuntu. The
 following commands will install the current versions of MPF and MPF-MC
 as well as each of their dependencies.
 
-``` console
+``` shell
 cd ~
 wget https://github.com/missionpinball/mpf-debian-installer/archive/0.55.x.zip
 unzip dev.zip
@@ -86,14 +86,14 @@ rm ~/dev.zip && rm -Rf ~/mpf-debian-installer-dev
 
 If you want to make sure that MPF was installed, you can run:
 
-``` console
+``` shell
 mpf --version
 ```
 
 This command can be run from anywhere and should produce output
 something like this:
 
-``` console
+``` shell
 username@host:~$ mpf --version
 MPF v0.33.13
 ```
@@ -110,7 +110,7 @@ whatever version is the latest.)
 
     * Edit the file to contain:
 
-        ``` console
+        ``` shell
         #!/bin/bash
         xterm -e "cd /home/your_username/your_machine_folder && mpf both -c config"
         ```
@@ -131,7 +131,7 @@ just added to our machine config.
 * Create the file `~/.config/autostart/mpf.desktop` and edit it to
     contain:
 
-``` console
+``` shell
 [Desktop Entry]
 Version=1.0
 Name=MPF
@@ -156,7 +156,7 @@ to your machine config.
 If using the SmartMatrix RGB DMD with this setup, you need to add the
 system user running your game to the `dialout` group.
 
-``` console
+``` shell
 sudo usermod -a -G dialout your_username
 ```
 

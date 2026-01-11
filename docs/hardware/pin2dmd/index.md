@@ -50,7 +50,7 @@ firmware).
 MPF uses libusb via pyusb to drive your PIN2DMD. To use your PIN2DMD you
 need to install pyusb using pip:
 
-``` console
+``` shell
 pip3 install pyusb
 ```
 

@@ -26,7 +26,7 @@ Video about the Raspberry PI and MPF:
 
 You need to install the `apigpio` extension via pip to use it:
 
-``` console
+``` shell
 pip3 install apigpio_mpf
 ```
 
@@ -34,7 +34,7 @@ The [pigpiod](http://abyz.me.uk/rpi/pigpio/pigpiod.html) service needs
 to be running (in this example on localhost port 8888, which is the
 default setting). To install it and enable is (on debian based systems):
 
-``` console
+``` shell
 apt install pigpiod
 systemctl enable pigpiod.service
 systemctl start pigpiod.service

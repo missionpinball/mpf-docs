@@ -109,6 +109,6 @@ When the END key on the on-screen keyboard is selected, GMC will post an event *
 
 This event will include an argument `text` with the text string entered by the user.
 
-``` console
+``` shell
 ==='text_input_high_score_complete'=== Args={'text': 'MY NAME'}
 ```

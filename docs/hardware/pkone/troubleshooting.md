@@ -14,7 +14,7 @@ read our
 Using `mpf hardware scan` you can find out if your PKONE boards are
 talking properly to MPF using USB:
 
-``` console
+``` shell
 $ mpf hardware scan
 
 ## Penny K Pinball Hardware

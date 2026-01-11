@@ -60,7 +60,7 @@ This tutorial is written for MPF versions .
 To see what version you have, open a command prompt (like you did when
 you installed MPF) and run the following command:
 
-``` console
+``` shell
 mpf --version
 ```
 

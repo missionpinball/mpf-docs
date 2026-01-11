@@ -75,24 +75,24 @@ To fix this:
 
 1.  Open a new terminal window
 2.  First change into the root user:
-    * ``` console
+    * ``` shell
         su -
         ```
 
     * The `-` is required to reset \$PATH (`usermod` may not work
         without it)
 3.  As root, add your username to the sudo group
-    * ``` console
+    * ``` shell
         usermod -aG sudo [your-user]
         ```
 
 4.  Exit the root user shell
-    * ``` console
+    * ``` shell
         exit
         ```
 
 5.  Verify your username was granted sudo access
-    * ``` console
+    * ``` shell
         sudo echo
         ```
 
@@ -112,19 +112,19 @@ be found
 here](https://linuxize.com/post/how-to-install-virtualbox-guest-additions-on-debian-10/).
 An abbreviated version is listed below:
 
-1.  ``` console
+1.  ``` shell
     sudo apt update
     sudo apt install build-essential dkms linux-headers-$(uname -r)
     ```
 
 2.  (Host Window) Devices -> "Insert Guest Additions CD Image"
 
-3.  ``` console
+3.  ``` shell
     sudo mkdir -p /mnt/cdrom
     sudo mount /dev/cdrom /mnt/cdrom
     ```
 
-4.  ``` console
+4.  ``` shell
     cd /mnt/cdrom
     sudo sh ./VBoxLinuxAdditions.run --nox11
     ```
@@ -133,7 +133,7 @@ An abbreviated version is listed below:
 
 6.  If necessary, confirm module is running after reboot:
 
-    ``` console
+    ``` shell
     lsmod | grep vboxguest
     ```
 
@@ -157,11 +157,11 @@ virtual machine.
 3.  In the *host* OS, verify the VirtualBox virtual network adapter is connected
     * The following is for macOS. Your command and output may look different
 
-    * ``` console
+    * ``` shell
         ifconfig vboxnet0
         ```
 
-    * ``` console
+    * ``` shell
         vboxnet0: flags=8943<UP,BROADCAST,RUNNING,PROMISC,SIMPLEX,MULTICAST> mtu 1500
                ether 0a:00:27:00:00:00
                inet 192.168.56.1 netmask 0xffffff00 broadcast 192.168.56.255
@@ -171,11 +171,11 @@ virtual machine.
     adapter is connected
     * The following is for my installation. Your command and output may look different
 
-    * ``` console
+    * ``` shell
         ip addr
         ```
 
-    * ``` console
+    * ``` shell
         [...]
         3: enp0s8: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
             link/ether 08:00:27:d8:b5:e6 brd ff:ff:ff:ff:ff:ff
@@ -190,7 +190,7 @@ virtual machine.
         in the same subnet as the host's IP address found earlier
         (`192.168.56.1`)
 5.  Verify you can SSH into the VM:
-    * ``` console
+    * ``` shell
         ssh [your-user]@192.168.56.101
         ```
 
@@ -201,7 +201,7 @@ environment tools you are accustomed with.
 
 Verify that python is installed and using a version you expect:
 
-``` console
+``` shell
 python3 -V
 ```
 
@@ -209,7 +209,7 @@ python3 -V
 
 Install pip3 and pkg-config (which MPF needs for mpf-mc):
 
-``` console
+``` shell
 sudo apt-get install python3-pip pkg-config
 ```
 
@@ -219,12 +219,12 @@ Follow the [installation guide](../linux/index.md) for MPF on Linux.
 
 Basic installation:
 
-``` console
+``` shell
 pip3 install pip setuptools --upgrade
 ```
 
 1.  Clone the Debian installer
-    * ``` console
+    * ``` shell
         cd ~
         git clone https://github.com/missionpinball/mpf-debian-installer/
         cd mpf-debian-installer/
@@ -232,7 +232,7 @@ pip3 install pip setuptools --upgrade
         ```
 
 2.  Setup the mpf directory and clone examples
-    * ``` console
+    * ``` shell
         cd ~
         mkdir mpf
         cd mpf
@@ -240,7 +240,7 @@ pip3 install pip setuptools --upgrade
         ```
 
 3.  Run the Demo Man example. In the VBox Desktop, open terminal and execute:
-    * ``` console
+    * ``` shell
         cd ~/mpf/mpf-examples/demo_man
         mpf both -X
         ```
@@ -268,21 +268,21 @@ pip3 install pip setuptools --upgrade
 The full installation guide for setting up MPF-Monitor [can be found here](../../tools/monitor/installation.md).
 
 1.  Install PyQt6 (may already be installed):
-    * ``` console
+    * ``` shell
         sudo apt-get install python3-pyqt6
         ```
 
 2.  Install mpf-monitor:
-    * ``` console
+    * ``` shell
         pip install mpf-monitor
         ```
 
 3.  Start mpf (with mc) and mpf monitor (in separate terminal tabs):
-    * ``` console
+    * ``` shell
         mpf both -X
         ```
 
-    * ``` console
+    * ``` shell
         mpf monitor
         ```
 

@@ -13,7 +13,7 @@ error and all errors above will be more specific.
 For instance a Switch might be unable to initialize because your
 hardware platform cannot connect to the relevant node board:
 
-``` console
+``` shell
 INFO : EventManager : Event: ======'shutdown'====== Args={}
 Shutdown because of an exception:
 ERROR : Machine : Runtime Exception

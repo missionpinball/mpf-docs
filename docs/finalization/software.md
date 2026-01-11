@@ -53,7 +53,7 @@ When running MPF on linux install `uvloop` will reduce latency and
 increase throughput for I/O operations. This will keep your game
 responsive:
 
-``` console
+``` shell
 pip3 install uvloop
 ```
 
@@ -70,7 +70,7 @@ on low-end hardware. Download PyPy and install it. Since PyPy is a
 separate Python environment you need to install pip and reinstall all
 pip packages for PyPy.
 
-``` console
+``` shell
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 pypy get-pip.py
 pypy -m pip install mpf
@@ -78,7 +78,7 @@ pypy -m pip install mpf
 
 Afterward, you can start MPF within your game folder using:
 
-``` console
+``` shell
 pypy -m mpf game
 ```
 

@@ -25,7 +25,7 @@ library](https://github.com/hzeller/rpi-rgb-led-matrix).
 You need to install the `rgbmatrix` extension on your RPi using the
 following command:
 
-``` console
+``` shell
 git clone https://github.com/hzeller/rpi-rgb-led-matrix.git
 cd rpi-rgb-led-matrix
 sudo apt-get update && sudo apt-get install python3-dev python3-pillow -y
@@ -106,7 +106,7 @@ machine config.
 
 For this library to work you need to start MPF as root like this:
 
-``` console
+``` shell
 sudo mpf game
 ```
 

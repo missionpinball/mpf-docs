@@ -22,13 +22,13 @@ If you're on Windows or Mac, the easiest way to get a git client installed is to
 
 Clone the mpf repository and its submodules :
 
-``` console
+``` shell
 git clone --recursive https://github.com/missionpinball/mpf.git
 ```
 
 Same thing for the mpf-mc repository :
 
-``` console
+``` shell
 git clone --recursive https://github.com/missionpinball/mpf-mc.git
 ```
 
@@ -44,13 +44,13 @@ Using virtualenv lets you keep all the other Python packages MPF needs (pyserial
 
 Create a new virtualenv called “mpf-venv” (or whatever you want to name it) like this:
 
-``` console
+``` shell
 virtualenv -p python3 mpf-venv
 ```
 
 Then enter the newly-created virtualenv:
 
-``` console
+``` shell
 source mpf-venv/bin/activate
 ```
 
@@ -61,7 +61,7 @@ On Macs, you will need to uninstall and reinstall kivy in the the virtual envirm
 
 Each time you'll work with your MPF development version you'll have to switch to this environment.
 
-``` console
+``` shell
 source mpf-venv/bin/activate
 ```
 
@@ -71,14 +71,14 @@ Next you'll install MPF and MPF-MC. This is pretty much like a regular install, 
 
 Install mpf and mpf-mc like this:
 
-``` console
+``` shell
 pip install -e mpf
 pip install -e mpf-mc
 ```
 
 You should now be done, and you can verify that everyething is installed properly via:
 
-``` console
+``` shell
 mpf --version
 ```
 

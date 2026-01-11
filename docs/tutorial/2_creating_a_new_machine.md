@@ -283,7 +283,7 @@ you probably started mpf with mc (i.e. by omitting the `-b`
 switch). This can be fixed by either running `mpf -b` or by
 making sure that the media controller is running.
 
-``` console
+``` shell
 BCPClientSocket.local_display : Connecting BCP to 'local_display' at localhost:5050...
 ```
 
@@ -321,7 +321,7 @@ operable program or batch file.
 
 Or on Mac or Linux:
 
-``` console
+``` shell
 $ mpf
 -bash: mpf: command not found
 ```

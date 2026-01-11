@@ -122,7 +122,7 @@ Search (or filter) the log for the name of your trough or drain device,
 and you should see all sorts of interesting things. Here's a small
 snippet:
 
-``` console
+``` shell
 2016-11-18 03:54:06,103 : DEBUG : ball_device.bd_trough : Counting balls by checking switches
 2016-11-18 03:54:06,103 : DEBUG : ball_device.bd_trough : Confirmed active switch: s_trough1
 2016-11-18 03:54:06,103 : DEBUG : ball_device.bd_trough : Confirmed active switch: s_trough2
@@ -156,7 +156,7 @@ devices doesn't match how many balls you actually have, that could be:
     your log should show that the switch is active (*State:1*), like
     this:
 
-``` console
+``` shell
 2014-10-27 20:05:29,891 : SwitchController : <<<<< switch: trough1, State:1 >>>>>
 ```
 

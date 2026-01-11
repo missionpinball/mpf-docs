@@ -38,7 +38,7 @@ machine folder. This is the folder that contains your machine's
 
 Then run:
 
-``` console
+``` shell
 mpf both <enter>
 ```
 
@@ -50,7 +50,7 @@ of the time.
 Alternately you can choose to run just the media controller by itself
 (still from within your machine folder) like this:
 
-``` console
+``` shell
 mpf mc <enter>
 ```
 
@@ -61,7 +61,7 @@ console.
 
 You can run the MPF game engine by itself (no media controller) by running:
 
-``` console
+``` shell
 mpf <enter>
 ```
 
@@ -76,7 +76,7 @@ There are several command-like options you can use when you run MPF. To
 use them, add them *after* the name of the MPF command you're running,
 like:
 
-``` console
+``` shell
 mpf -x -v
 
 mpf mc -xvV

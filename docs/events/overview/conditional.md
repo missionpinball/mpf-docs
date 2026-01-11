@@ -27,7 +27,7 @@ This means that the "ball_started" event isn't just MPF saying,
 a ball just started for player 2, ball 3.". You can also see that in
 your mpf log:
 
-``` console
+``` shell
 INFO : EventManager : Event: ======'ball_started'====== Args={'player': 2, 'ball': 3}
 ```
 

@@ -237,7 +237,7 @@ show_player:
 If you try to run MPF with the config above, MPF will halt with the
 following error (scroll to the right to see it all):
 
-``` console
+``` shell
 ValueError: YAML error found in file /mpf-examples/tutorial_step_17/modes/attract/config/attract.yaml. Line 6, Position 10
 ```
 

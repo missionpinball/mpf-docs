@@ -29,7 +29,7 @@ should not contain any game logic.
 Copy the file `register_vpcom.py` to your local machine folder. To
 register the bridge run a CMD shell as Administrator, then
 
-``` console
+``` shell
 python register_vpcom.py --register
 ```
 
@@ -47,7 +47,7 @@ hardware:
 or if you already have physical hardware configured start MPF with the
 `--vpx` commandline option (similar to `-X`):
 
-``` console
+``` shell
 mpf both --vpx
 ```
 

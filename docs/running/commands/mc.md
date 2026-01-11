@@ -27,13 +27,13 @@ Examples:
 
 Run MPF MC and load the config file `config/config.yaml`:
 
-``` console
+``` shell
 $ mpf mc
 ```
 
 Run MPF and load the config file `config/nodisplay.yaml`:
 
-``` console
+``` shell
 $ mpf mc -c nodisplay
 ```
 
@@ -42,14 +42,14 @@ comma-separated list (no spaces). For example, to load
 `config/config.yaml` first, and then once that's loaded, merge in
 changes from `config/fast.yaml`, run:
 
-``` console
+``` shell
 $ mpf mc -c config,fast
 ```
 
 To load a machine folder from some other location, such as
 `/home/brian/pinball/demo_man/config/config.yaml`:
 
-``` console
+``` shell
 $ mpf mc -c /home/brian/pinball/demo_man/config/config.yaml
 ```
 

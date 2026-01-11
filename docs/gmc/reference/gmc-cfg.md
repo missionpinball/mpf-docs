@@ -111,7 +111,7 @@ Full documentation can be found on the [Keyboard Setup guide](../keyboard.md).
 If you have configured [Godot to launch the MPF game](../guides/launching-the-mpf-game-with-godot.md) for you, this section contains the values you set in that menu.
 These options are assembled together into the following shell command and run when you play the Godot project:
 
-``` console
+``` shell
 
     <executable_path> <executable_args> <machine_path> <mpf_args>
 ```

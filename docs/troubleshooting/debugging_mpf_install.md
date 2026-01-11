@@ -12,7 +12,7 @@ game. Make sure that you select the same version as your MPF version
 Additionally, you can run the MPF and MPF-MC unit tests (the number of
 tests may be different).
 
-``` console
+``` shell
 $ python3 -m unittest discover -s mpf.tests
 [...]
 ----------------------------------------------------------------------
@@ -24,7 +24,7 @@ OK
 Similarly, you can run MPF-MC unit tests (they will take a bit longer
 and might show some deprecation warnings from kivy):
 
-``` console
+``` shell
 $ python3 -m unittest discover -s mpfmc.tests
 [...]
 Ran 182 tests in 193.610s

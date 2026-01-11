@@ -15,7 +15,7 @@ Using `mpf hardware scan` you can find out if your LISY based platform
 is talking properly to MPF. Additionally, it will show you details about
 the hardware:
 
-``` console
+``` shell
 $ mpf hardware scan
 
 LISY connected via network at localhost:1234

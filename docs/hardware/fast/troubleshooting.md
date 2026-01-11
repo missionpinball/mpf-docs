@@ -18,7 +18,7 @@ Using `mpf hardware scan` you can find out if your Nano is talking
 properly to MPF using USB. Additionally, it will show you which node
 boards are connected:
 
-``` console
+``` shell
 $ mpf hardware scan
 
 NET CPU: NET FP-CPU-002-1 01.03
@@ -47,7 +47,7 @@ See the section about
 
 If you see an error such as:
 
-``` console
+``` shell
 serial.serialutil.SerialException: [Errno 13] could not open port /dev/ttyUSB1: [Errno 13] Permission denied: '/dev/ttyUSB1'
 ```
 
@@ -55,7 +55,7 @@ Your user does not have sufficient permissions to access that port. You
 could run MPF as root but we do not recommend that. Alternatively, you
 can create a udev rule or add your user to the dialout group:
 
-``` console
+``` shell
 sudo usermod -a -G dialout $USER
 ```
 
