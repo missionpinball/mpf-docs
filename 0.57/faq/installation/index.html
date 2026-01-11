@@ -47437,6 +47437,17 @@ icons & this code generated via https://realfavicongenerator.net
 </li>
       
         <li class="md-nav__item">
+  <a href="#latest-versions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Latest Versions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#what-python-version-can-i-use-with-mpf" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -47946,6 +47957,17 @@ icons & this code generated via https://realfavicongenerator.net
 </li>
       
         <li class="md-nav__item">
+  <a href="#latest-versions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Latest Versions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#what-python-version-can-i-use-with-mpf" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -48005,8 +48027,8 @@ icons & this code generated via https://realfavicongenerator.net
 
 <h1 id="faq-installation">FAQ: Installation</h1>
 <h2 id="how-do-i-get-started">How do I get started?</h2>
-<p>Start with the <a href="../../start/">Start Here</a>
-link in the menu. That will explain an overview of how MPF works and then lead you through the features, the tutorial, and so on.</p>
+<p>Start with the <a href="../../start/">Start Here</a> link in the menu.
+That will explain an overview of how MPF works and then lead you through the features, the tutorial, and so on.</p>
 <h2 id="what-are-the-prerequisites">What are the prerequisites?</h2>
 <p>If you just want to start playing with MPF, you do not need a physical
 pinball machine. In fact we have a graphical tool (the <a href="../../tools/monitor/">MPF Monitor</a>) which simulates
@@ -48024,26 +48046,31 @@ fine. Most people do their development of MPF on whatever computer they
 use in their daily lives, then when they're getting close to done with
 their machine, they install a dedicated computer (or even a Raspberry
 Pi) in their machine to run MPF.</p>
+<h2 id="latest-versions">Latest Versions</h2>
+<p>If you are creating a new game and are installing all of the MPF tools from scratch, you should start with the most up-to-date versions of everything you can. This will ensure you have the latest features and bug fixes, and are the easiest for the community to support.
+The most updated full installation (known-working on Windows and Linux) as of January 2026 is:</p>
+<ul>
+<li>Python 3.13</li>
+<li>MPF 0.80.0.dev11 *(via pip --pre option)</li>
+<li>MPF-GMC 0.1.6 *(via manual copy or repository symlink)</li>
+<li>Godot Editor 4.5 *(and no mpf-mc install!)</li>
+<li>MPF Monitor 0.57.2</li>
+</ul>
 <h2 id="what-python-version-can-i-use-with-mpf">What Python version can I use with MPF?</h2>
-<p>The stable version (0.57, currently on 0.57.3) of MPF can be used with
-Python versions 3.8-3.11 (with 3.12+ being tested with minor issues).
-We walk you through getting Python installed in our
-<a href="../../install/">installation documentation</a>.</p>
-<p>The previous version of MPF, 0.56. is only compatible with Python from
-version 3.7 through 3.9.</p>
-<p>The next revision (0.80.x) of MPF supports Python 3.8 - 3.11, but does
-not support the legacy Media Controller. The media controller for 0.80
-is called GMC, and is in active development.</p>
+<p>The stable version (0.57, currently on 0.57.3) of MPF can be used with Python versions 3.8-3.12.
+We walk you through getting Python installed in our <a href="../../install/">installation documentation</a>.</p>
+<p>The previous version of MPF, 0.56. is only compatible with Python from version 3.7 through 3.9.</p>
+<p>The next revision (0.80.0) of MPF supports Python 3.10 - 3.13, and does not support the legacy Media Controller.
+The new media controller for 0.80 is called GMC, and is in active development.</p>
 <h2 id="should-i-use-the-stable-version-or-development-version">Should I use the stable version or development version?</h2>
 <p>We recommend that people use the latest "stable" (or "release")
-version of MPF unless you need specific features from the "dev" (next)
-version.</p>
+version of MPF unless you need specific features from the "dev" (next) version.</p>
 <h2 id="where-do-i-find-information-on-older-versions-of-mpf">Where do I find information on older versions of MPF?</h2>
 <p>If you want information about an older version of MPF, we have
 <a href="../../versions/docs/">prior version documentation bundles</a>.</p>
-<p>You can install older versions of MPF with pip, like this:</p>
-<pre><code>pip install mpf==0.56.0.dev33
-</code></pre>
+<p>You can install older versions of MPF by specifying them with pip, like this:</p>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span><span class="nv">mpf</span><span class="o">==</span><span class="m">0</span>.56.0.dev33
+</code></pre></div>
 <hr>
 <div class="admonition question">
 <p class="admonition-title">Something missing or wrong? You can fix it!</p>

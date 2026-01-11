@@ -48116,45 +48116,45 @@ following this.</p>
 <p>Locale arrives broken and this wreaks all kinds of havoc, so here's how
 to fix it.</p>
 <p>Assuming you want US English, substitute your preferred language if not:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>sudo<span class="w"> </span>locale-gen<span class="w"> </span><span class="s2">"en_US.UTF-8"</span>
-<span class="go">Generating locales...</span>
-<span class="go">  en_US.UTF-8... done</span>
-<span class="go">Generation complete.</span>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>sudo<span class="w"> </span>locale-gen<span class="w"> </span><span class="s2">"en_US.UTF-8"</span>
+Generating<span class="w"> </span>locales...
+<span class="w">  </span>en_US.UTF-8...<span class="w"> </span><span class="k">done</span>
+Generation<span class="w"> </span>complete.
 
-<span class="gp">$ </span>sudo<span class="w"> </span>dpkg-reconfigure<span class="w"> </span>locales
-<span class="go">Generating locales...</span>
-<span class="go">  en_US.UTF-8... up-to-date</span>
-<span class="go">Generation complete.</span>
+$<span class="w"> </span>sudo<span class="w"> </span>dpkg-reconfigure<span class="w"> </span>locales
+Generating<span class="w"> </span>locales...
+<span class="w">  </span>en_US.UTF-8...<span class="w"> </span>up-to-date
+Generation<span class="w"> </span>complete.
 </code></pre></div>
 <p>That command will open a text-based dialog, we recommend that you don't
 choose "ALL" and only select the one or a few languages you want
 (generating them all takes a long time). Then reboot, then do the above
 reconfigure step AGAIN, then reboot, then run:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>locale
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>locale
 </code></pre></div>
 <p>And make sure it looks good. Mine says:</p>
-<div class="highlight"><pre><span></span><code><span class="go">LANG=en_US.UTF-8</span>
-<span class="go">LANGUAGE=en</span>
-<span class="go">LC_CTYPE="en_US.UTF-8"</span>
-<span class="go">LC_NUMERIC=en_US.UTF-8</span>
-<span class="go">LC_TIME=en_US.UTF-8</span>
-<span class="go">LC_COLLATE="en_US.UTF-8"</span>
-<span class="go">LC_MONETARY=en_US.UTF-8</span>
-<span class="go">LC_MESSAGES="en_US.UTF-8"</span>
-<span class="go">LC_PAPER=en_US.UTF-8</span>
-<span class="go">LC_NAME=en_US.UTF-8</span>
-<span class="go">LC_ADDRESS=en_US.UTF-8</span>
-<span class="go">LC_TELEPHONE=en_US.UTF-8</span>
-<span class="go">LC_MEASUREMENT=en_US.UTF-8</span>
-<span class="go">LC_IDENTIFICATION=en_US.UTF-8</span>
-<span class="go">LC_ALL=</span>
+<div class="highlight"><pre><span></span><code><span class="nv">LANG</span><span class="o">=</span>en_US.UTF-8
+<span class="nv">LANGUAGE</span><span class="o">=</span>en
+<span class="nv">LC_CTYPE</span><span class="o">=</span><span class="s2">"en_US.UTF-8"</span>
+<span class="nv">LC_NUMERIC</span><span class="o">=</span>en_US.UTF-8
+<span class="nv">LC_TIME</span><span class="o">=</span>en_US.UTF-8
+<span class="nv">LC_COLLATE</span><span class="o">=</span><span class="s2">"en_US.UTF-8"</span>
+<span class="nv">LC_MONETARY</span><span class="o">=</span>en_US.UTF-8
+<span class="nv">LC_MESSAGES</span><span class="o">=</span><span class="s2">"en_US.UTF-8"</span>
+<span class="nv">LC_PAPER</span><span class="o">=</span>en_US.UTF-8
+<span class="nv">LC_NAME</span><span class="o">=</span>en_US.UTF-8
+<span class="nv">LC_ADDRESS</span><span class="o">=</span>en_US.UTF-8
+<span class="nv">LC_TELEPHONE</span><span class="o">=</span>en_US.UTF-8
+<span class="nv">LC_MEASUREMENT</span><span class="o">=</span>en_US.UTF-8
+<span class="nv">LC_IDENTIFICATION</span><span class="o">=</span>en_US.UTF-8
+<span class="nv">LC_ALL</span><span class="o">=</span>
 </code></pre></div>
 <p>It took a few tries for this to stick for me, so do it again, including
 reboot, if your results here are wrong.</p>
 <h2 id="fix-the-software-boutique">Fix the Software Boutique</h2>
 <p>This arrives broken, too. Oddly, running the Mate Welcome as root and
 clicking a button partly fixes it.</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>sudo<span class="w"> </span>ubuntu-mate-welcome
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>sudo<span class="w"> </span>ubuntu-mate-welcome
 </code></pre></div>
 <p>When it comes up, click on the "Subscribe to updates" button, then
 quit it.</p>
@@ -48164,14 +48164,14 @@ say it has finished).</p>
 <p>Now go to System -&gt; Administration -&gt; Software Updater and get
 everything up to date. You will need to reboot again after that.</p>
 <h2 id="install-missing-pip3">Install Missing pip3</h2>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>apt-get<span class="w"> </span>install<span class="w"> </span>python3-pip
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>python3-pip
 </code></pre></div>
 <p>The path where <code>pip</code> puts executables is not in the system default path,
 so edit <code>~/.bashrc</code> to add the following path:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>sudo<span class="w"> </span>nano<span class="w"> </span>~/.bashrc
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>sudo<span class="w"> </span>nano<span class="w"> </span>~/.bashrc
 </code></pre></div>
 <p>At the bottom of the file add the following:</p>
-<div class="highlight"><pre><span></span><code><span class="go">export PATH=~/.local/bin:$PATH</span>
+<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span>~/.local/bin:<span class="nv">$PATH</span>
 </code></pre></div>
 <p>Hit "control + x" to save and "y" then "return" to save the file
 as the same name.</p>
@@ -48183,10 +48183,10 @@ current environment. Then:</p>
 <p>To unzip the file navigate in your terminal to the location of the
 downloaded files.</p>
 <p>Unzip the file:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>unzip<span class="w"> </span>dev.zip<span class="w"> </span>.
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>unzip<span class="w"> </span>dev.zip<span class="w"> </span>.
 </code></pre></div>
 <p>If this does not run you may need to install unzip:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>unzip
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>unzip
 </code></pre></div>
 <p>After unzip, run ./dev/install from the folder you unzipped the files
 to. Consult the README for more information.</p>

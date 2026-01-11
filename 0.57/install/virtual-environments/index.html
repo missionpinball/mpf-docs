@@ -47841,10 +47841,10 @@ a virtual environment is required.</p>
 <p>To create a virtual enviroment, choose a folder where you want to install
 a copy of Python and keep the enviroment's packages. For this example, we'll
 call the environment "mpfenv" and put it in our home directory (known as "~").</p>
-<div class="highlight"><pre><span></span><code><span class="go">  python3 -m venv ~/mpfenv</span>
+<div class="highlight"><pre><span></span><code>python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>~/mpfenv
 </code></pre></div>
 <p>Or if you want to explicitly define a directory, like this example of an "mpf" virtual environment in a common venvs directory (because remember you can have as many virtual environments as you like):</p>
-<div class="highlight"><pre><span></span><code><span class="go">  python3 -m venv C:\Users\Rudy\venvs\mpf</span>
+<div class="highlight"><pre><span></span><code><span class="w">  </span>python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>C:<span class="se">\U</span>sers<span class="se">\R</span>udy<span class="se">\v</span>envs<span class="se">\m</span>pf
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -47871,19 +47871,19 @@ could add this line to your bash/zsh profile to automatically run it at login.</
 For Windows users, you will activate with a bat/ps1 script depending on whether
 you're using the Command Prompt or the PowerShell. The script lives in the "Scripts"
 folder under where you created your virtual environment.</p>
-<div class="highlight"><pre><span></span><code><span class="gp"># </span>Command<span class="w"> </span>Prompt:
-<span class="go">&gt; mpfenv/Scripts/activate.bat</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Command Prompt:</span>
+&gt;<span class="w"> </span>mpfenv/Scripts/activate.bat
 
-<span class="gp"># </span>PowerShell:
-<span class="go">PS &gt; mpfenv/Scripts/Activate.ps1</span>
+<span class="c1"># PowerShell:</span>
+PS<span class="w"> </span>&gt;<span class="w"> </span>mpfenv/Scripts/Activate.ps1
 </code></pre></div>
 <p><strong>Mac:</strong></p>
 <p>For users on Mac OSX, you will use the <code>source</code> command with the path to your venv:</p>
-<div class="highlight"><pre><span></span><code><span class="go">  source ~/mpfenv/bin/activate</span>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="nb">source</span><span class="w"> </span>~/mpfenv/bin/activate
 </code></pre></div>
 <p><strong>Linux:</strong></p>
 <p>Linux users can enable the virtual environment with the dot command from the terminal:
-</p><div class="highlight"><pre><span></span><code><span class="go">  . ~/mpfenv/bin/activate</span>
+</p><div class="highlight"><pre><span></span><code>.<span class="w"> </span>~/mpfenv/bin/activate
 </code></pre></div><p></p>
 <p>Note that the first character is a period, followed by a space, then the path
 to your virtual environment and "/bin/activate". The period performs the same function as
@@ -47891,12 +47891,12 @@ the <code>source</code> command, and is POSIX compliant.</p>
 <p><strong>All Platforms:</strong></p>
 <p>After you run the activation, you'll know you're in the virtual environment
 because the console prompt will include the name of your venv in parenthesis.</p>
-<div class="highlight"><pre><span></span><code><span class="go">  My-Mac:~ python --version</span>
-<span class="go">  Python 2.7.10</span>
-<span class="go">  My-Mac:~ source ~/mpfenv/bin/activate</span>
-<span class="go">  (mpfenv) My-Mac:~ python --version</span>
-<span class="go">  Python 3.9.13</span>
-<span class="go">  (mpfenv) My-Mac:~</span>
+<div class="highlight"><pre><span></span><code>My-Mac:~<span class="w"> </span>python<span class="w"> </span>--version
+Python<span class="w"> </span><span class="m">2</span>.7.10
+My-Mac:~<span class="w"> </span><span class="nb">source</span><span class="w"> </span>~/mpfenv/bin/activate
+<span class="o">(</span>mpfenv<span class="o">)</span><span class="w"> </span>My-Mac:~<span class="w"> </span>python<span class="w"> </span>--version
+Python<span class="w"> </span><span class="m">3</span>.9.13
+<span class="o">(</span>mpfenv<span class="o">)</span><span class="w"> </span>My-Mac:~
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Virtual environments set a default python</p>

@@ -47829,18 +47829,18 @@ icons & this code generated via https://realfavicongenerator.net
 run <a href="https://wiki.python.org/moin/DebuggingWithGdb">gdb on python</a> to
 find the crash or hang. You can attach a debugger to the running mc
 process like this:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>ps<span class="w"> </span>aux<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>mpf
-<span class="go">jan       9678 12.4  0.3 1082068 127304 pts/2  SNl+ 23:17   0:06 /usr/bin/python3 /usr/local/bin/mpf mc</span>
-<span class="go">jan       9760 37.0  0.1 571368 56660 pts/3    Sl+  23:17   0:01 /usr/bin/python3 /usr/local/bin/mpf game -X</span>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>ps<span class="w"> </span>aux<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>mpf
+jan<span class="w">       </span><span class="m">9678</span><span class="w"> </span><span class="m">12</span>.4<span class="w">  </span><span class="m">0</span>.3<span class="w"> </span><span class="m">1082068</span><span class="w"> </span><span class="m">127304</span><span class="w"> </span>pts/2<span class="w">  </span>SNl+<span class="w"> </span><span class="m">23</span>:17<span class="w">   </span><span class="m">0</span>:06<span class="w"> </span>/usr/bin/python3<span class="w"> </span>/usr/local/bin/mpf<span class="w"> </span>mc
+jan<span class="w">       </span><span class="m">9760</span><span class="w"> </span><span class="m">37</span>.0<span class="w">  </span><span class="m">0</span>.1<span class="w"> </span><span class="m">571368</span><span class="w"> </span><span class="m">56660</span><span class="w"> </span>pts/3<span class="w">    </span>Sl+<span class="w">  </span><span class="m">23</span>:17<span class="w">   </span><span class="m">0</span>:01<span class="w"> </span>/usr/bin/python3<span class="w"> </span>/usr/local/bin/mpf<span class="w"> </span>game<span class="w"> </span>-X
 </code></pre></div>
 <p>In this example <code>9678</code> is the pid of MC and <code>9760</code> is the pid of MPF.
 You can then attach gdb:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>sudo<span class="w"> </span>gdb<span class="w"> </span>python3<span class="w"> </span><span class="m">9678</span>
-<span class="go">[...]</span>
-<span class="gp gp-VirtualEnv">(gdb)</span> <span class="go">thread apply all bt</span>
-<span class="go">[...]</span>
-<span class="gp gp-VirtualEnv">(gdb)</span> <span class="go">thread apply all py-bt</span>
-<span class="go">[...]</span>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>sudo<span class="w"> </span>gdb<span class="w"> </span>python3<span class="w"> </span><span class="m">9678</span>
+<span class="o">[</span>...<span class="o">]</span>
+<span class="o">(</span>gdb<span class="o">)</span><span class="w"> </span>thread<span class="w"> </span>apply<span class="w"> </span>all<span class="w"> </span>bt
+<span class="o">[</span>...<span class="o">]</span>
+<span class="o">(</span>gdb<span class="o">)</span><span class="w"> </span>thread<span class="w"> </span>apply<span class="w"> </span>all<span class="w"> </span>py-bt
+<span class="o">[</span>...<span class="o">]</span>
 </code></pre></div>
 <p>Please send us the complete output of gdb. That will help us to figure
 out the problem.</p>

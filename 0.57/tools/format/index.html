@@ -47826,49 +47826,49 @@ icons & this code generated via https://realfavicongenerator.net
 <p>The command line <code>mpf format</code> can reformat your MPF configs.</p>
 <p>Run it using <code>mpf format path/to/your_file.yaml</code>. It will show you a
 preview of the changes it your make:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>mpf<span class="w"> </span>format<span class="w"> </span>config/config.yaml
-<span class="go">Parsing single test config/config.yaml.</span>
-<span class="go">Config is not linted.</span>
-<span class="go">---</span>
-<span class="go">+++</span>
-<span class="go">@@ -1,13 +1,13 @@</span>
-<span class="gp"> #</span><span class="nv">config_version</span><span class="o">=</span><span class="m">5</span>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>mpf<span class="w"> </span>format<span class="w"> </span>config/config.yaml
+Parsing<span class="w"> </span>single<span class="w"> </span><span class="nb">test</span><span class="w"> </span>config/config.yaml.
+Config<span class="w"> </span>is<span class="w"> </span>not<span class="w"> </span>linted.
+---
++++
+@@<span class="w"> </span>-1,13<span class="w"> </span>+1,13<span class="w"> </span>@@
+<span class="w"> </span><span class="c1">#config_version=5</span>
 
-<span class="go"> config:</span>
-<span class="go">-- shots.yaml</span>
-<span class="go">-- switches.yaml</span>
-<span class="go">-- coils.yaml</span>
-<span class="go">-- devices.yaml</span>
-<span class="go">-- leds.yaml</span>
-<span class="go">-- slides.yaml</span>
-<span class="go">-- sound.yaml</span>
-<span class="go">+  - shots.yaml</span>
-<span class="go">+  - switches.yaml</span>
-<span class="go">+  - coils.yaml</span>
-<span class="go">+  - devices.yaml</span>
-<span class="go">+  - leds.yaml</span>
-<span class="go">+  - slides.yaml</span>
-<span class="go">+  - sound.yaml</span>
+<span class="w"> </span>config:
+--<span class="w"> </span>shots.yaml
+--<span class="w"> </span>switches.yaml
+--<span class="w"> </span>coils.yaml
+--<span class="w"> </span>devices.yaml
+--<span class="w"> </span>leds.yaml
+--<span class="w"> </span>slides.yaml
+--<span class="w"> </span>sound.yaml
++<span class="w">  </span>-<span class="w"> </span>shots.yaml
++<span class="w">  </span>-<span class="w"> </span>switches.yaml
++<span class="w">  </span>-<span class="w"> </span>coils.yaml
++<span class="w">  </span>-<span class="w"> </span>devices.yaml
++<span class="w">  </span>-<span class="w"> </span>leds.yaml
++<span class="w">  </span>-<span class="w"> </span>slides.yaml
++<span class="w">  </span>-<span class="w"> </span>sound.yaml
 
-<span class="go"> mpf:</span>
-<span class="go">   device_modules:</span>
-<span class="go">@@ -203,7 +203,7 @@</span>
-<span class="go">       0.54: servo_pos2</span>
-<span class="go">     ball_search_min: 0.35</span>
-<span class="go">     ball_search_max: 0.55</span>
-<span class="go">*  debug: True</span>
-<span class="go">+    debug: true</span>
-<span class="go">   servo_figure_back:</span>
-<span class="go">     number: servo_back-64-0</span>
-<span class="go">     reset_events: machine_reset_phase_3</span>
-<span class="go">@@ -217,8 +217,7 @@</span>
-<span class="go">       0.31: servo_pos2</span>
-<span class="go">     ball_search_min: 0.1</span>
-<span class="go">     ball_search_max: 0.3</span>
-<span class="go">*  debug: True</span>
-<span class="go">+    debug: true</span>
+<span class="w"> </span>mpf:
+<span class="w">   </span>device_modules:
+@@<span class="w"> </span>-203,7<span class="w"> </span>+203,7<span class="w"> </span>@@
+<span class="w">       </span><span class="m">0</span>.54:<span class="w"> </span>servo_pos2
+<span class="w">     </span>ball_search_min:<span class="w"> </span><span class="m">0</span>.35
+<span class="w">     </span>ball_search_max:<span class="w"> </span><span class="m">0</span>.55
+*<span class="w">  </span>debug:<span class="w"> </span>True
++<span class="w">    </span>debug:<span class="w"> </span><span class="nb">true</span>
+<span class="w">   </span>servo_figure_back:
+<span class="w">     </span>number:<span class="w"> </span>servo_back-64-0
+<span class="w">     </span>reset_events:<span class="w"> </span>machine_reset_phase_3
+@@<span class="w"> </span>-217,8<span class="w"> </span>+217,7<span class="w"> </span>@@
+<span class="w">       </span><span class="m">0</span>.31:<span class="w"> </span>servo_pos2
+<span class="w">     </span>ball_search_min:<span class="w"> </span><span class="m">0</span>.1
+<span class="w">     </span>ball_search_max:<span class="w"> </span><span class="m">0</span>.3
+*<span class="w">  </span>debug:<span class="w"> </span>True
++<span class="w">    </span>debug:<span class="w"> </span><span class="nb">true</span>
 
-<span class="go">Not writing back changes. Use --yes to do this.</span>
+Not<span class="w"> </span>writing<span class="w"> </span>back<span class="w"> </span>changes.<span class="w"> </span>Use<span class="w"> </span>--yes<span class="w"> </span>to<span class="w"> </span><span class="k">do</span><span class="w"> </span>this.
 </code></pre></div>
 <p>You can add <code>--yes</code> to the commandline to apply the changes.</p>
 <hr>

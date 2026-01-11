@@ -48017,10 +48017,10 @@ of MPF 0.80, see <a href="../../../install/">here</a>. Do not install the precom
 <p>If you're on Windows or Mac, the easiest way to get a git client installed is to use the GitHub Desktop app. This app will also install the git command line tools.</p>
 <h2 id="2-clone-the-mpf-andor-mpf-mc-repos">2. Clone the MPF and/or MPF-MC repo(s)</h2>
 <p>Clone the mpf repository and its submodules :</p>
-<div class="highlight"><pre><span></span><code><span class="go">git clone --recursive https://github.com/missionpinball/mpf.git</span>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>--recursive<span class="w"> </span>https://github.com/missionpinball/mpf.git
 </code></pre></div>
 <p>Same thing for the mpf-mc repository :</p>
-<div class="highlight"><pre><span></span><code><span class="go">git clone --recursive https://github.com/missionpinball/mpf-mc.git</span>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>--recursive<span class="w"> </span>https://github.com/missionpinball/mpf-mc.git
 </code></pre></div>
 <p>If you're using the GitHub Desktop app, you can also browse to the repos on GitHub and click the green “Clone or Download” button, and then click the “Open in Desktop” link. That will pop up a box that prompts you to pick a folder for the local codebase.</p>
 <p>Then inside that folder, you'll end up with an mpf folder for MPF and mpf-mc folder for MPF-MC.</p>
@@ -48028,25 +48028,25 @@ of MPF 0.80, see <a href="../../../install/">here</a>. Do not install the precom
 <p>Create a “virtualenv” for your MPF development in a mpf-env directory (Note : if you don't have virtualenv installed, you can get it via pip by running pip3 install virtualenv.</p>
 <p>Using virtualenv lets you keep all the other Python packages MPF needs (pyserial, pyyaml, kivy, etc.) together in a “virtual” environment that you'll use for MPF and helps keep everything in your Python environment cleaner in general.</p>
 <p>Create a new virtualenv called “mpf-venv” (or whatever you want to name it) like this:</p>
-<div class="highlight"><pre><span></span><code><span class="go">virtualenv -p python3 mpf-venv</span>
+<div class="highlight"><pre><span></span><code>virtualenv<span class="w"> </span>-p<span class="w"> </span>python3<span class="w"> </span>mpf-venv
 </code></pre></div>
 <p>Then enter the newly-created virtualenv:</p>
-<div class="highlight"><pre><span></span><code><span class="go">source mpf-venv/bin/activate</span>
+<div class="highlight"><pre><span></span><code><span class="nb">source</span><span class="w"> </span>mpf-venv/bin/activate
 </code></pre></div>
 <p>On Macs, you will need to uninstall and reinstall kivy in the the virtual envirment to avoid ambiguous kivy library errors.</p>
 <p>1) pip uninstall kivy
 2) pip install kivy -no-binary :all:</p>
 <p>Each time you'll work with your MPF development version you'll have to switch to this environment.</p>
-<div class="highlight"><pre><span></span><code><span class="go">source mpf-venv/bin/activate</span>
+<div class="highlight"><pre><span></span><code><span class="nb">source</span><span class="w"> </span>mpf-venv/bin/activate
 </code></pre></div>
 <p>Note: in this environment, thanks to the “-p python3” option of virtualenv, the version of Python and pip is 3.x automatically.</p>
 <p>Next you'll install MPF and MPF-MC. This is pretty much like a regular install, except that you'll also use the -e command line option which means these packages will be installed in “editable” mode.</p>
 <p>Install mpf and mpf-mc like this:</p>
-<div class="highlight"><pre><span></span><code><span class="go">pip install -e mpf</span>
-<span class="go">pip install -e mpf-mc</span>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>mpf
+pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>mpf-mc
 </code></pre></div>
 <p>You should now be done, and you can verify that everyething is installed properly via:</p>
-<div class="highlight"><pre><span></span><code><span class="go">mpf --version</span>
+<div class="highlight"><pre><span></span><code>mpf<span class="w"> </span>--version
 </code></pre></div>
 <p>Note : you could also install mpf and mpf-mc in your global environment using sudo pip3 install -e mpf and sudo pip3 install -e mpf-mc, or in your user environment using pip3 install --user -e mpf and pip3 install --user -e mpf-mc.</p>
 <h2 id="4-make-your-changes">4. Make your changes</h2>

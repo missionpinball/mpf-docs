@@ -48041,7 +48041,7 @@ releases. You might not need this if you are using PyPy.</p>
 <p>When running MPF on linux install <code>uvloop</code> will reduce latency and
 increase throughput for I/O operations. This will keep your game
 responsive:</p>
-<div class="highlight"><pre><span></span><code><span class="go">pip3 install uvloop</span>
+<div class="highlight"><pre><span></span><code>pip3<span class="w"> </span>install<span class="w"> </span>uvloop
 </code></pre></div>
 <p>MPF will use uvloop once it is available.</p>
 <h2 id="run-mpf-with-pypy">Run MPF with PyPy</h2>
@@ -48053,12 +48053,12 @@ improvements are around 10x in our benchmarks so this might be essential
 on low-end hardware. Download PyPy and install it. Since PyPy is a
 separate Python environment you need to install pip and reinstall all
 pip packages for PyPy.</p>
-<div class="highlight"><pre><span></span><code><span class="go">curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py</span>
-<span class="go">pypy get-pip.py</span>
-<span class="go">pypy -m pip install mpf</span>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>https://bootstrap.pypa.io/get-pip.py<span class="w"> </span>-o<span class="w"> </span>get-pip.py
+pypy<span class="w"> </span>get-pip.py
+pypy<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>mpf
 </code></pre></div>
 <p>Afterward, you can start MPF within your game folder using:</p>
-<div class="highlight"><pre><span></span><code><span class="go">pypy -m mpf game</span>
+<div class="highlight"><pre><span></span><code>pypy<span class="w"> </span>-m<span class="w"> </span>mpf<span class="w"> </span>game
 </code></pre></div>
 <p>Instead of the <code>mpf</code> command just use <code>pypy -m mpf</code>. For <code>pip</code> use
 <code>pypy -m pip</code>.</p>

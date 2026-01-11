@@ -48156,13 +48156,13 @@ the instructions for some common Linux distros.</p>
 see an executable called <code>MaxIDE</code>, that is the development IDE you need to start. You could follow this <a href="https://blitzmax.org/docs/en/setup/get_started/#hello-world-with-maxide">Hello World Guide</a> to verify if the installation 
 is correct until here, but it is not compulsory to do so.</p>
 <p>Now you need the source code from the showcreator project, you need to clone the complete project</p>
-<div class="highlight"><pre><span></span><code><span class="go">git clone https://github.com/missionpinball/showcreator.git</span>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/missionpinball/showcreator.git
 </code></pre></div>
 <p>It is not sufficient just to download the led.bmx source file, though the build will succeed, the execution of the showcreator will fail earlier or later due to missing dependencies. Open the led.bmx source file in the <code>MaxIDE</code>. In the MaxIDE in the menu <code>Program --&gt; Build Options --&gt; Debug Build</code> you can switch off 
 the debug build that is not really needed. Now compile (build) the source code by selection <code>Program --&gt; Build</code>. When building the first time, it might run some time since Blitzmax needs to compile all kind of
 dependencies. After the build is done, you find in the same folder where your source file is located an executable called <code>led</code>.</p>
 <p>Afterwards you can run the showcreator using (from within your install folder):</p>
-<div class="highlight"><pre><span></span><code><span class="go">./led</span>
+<div class="highlight"><pre><span></span><code>./led
 </code></pre></div>
 <p>Note, that on the console, which might be hidden by the showcreator window, you are being asked for the monitor.yaml file. Enter the file location to load your light data.</p>
 <h3 id="key-bindings">Key bindings</h3>

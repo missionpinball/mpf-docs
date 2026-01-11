@@ -48015,17 +48015,17 @@ read our <a href="../../../troubleshooting/">troubleshooting guide</a>. Here are
 <p>Using <code>mpf hardware scan</code> you can find out if your Nano is talking
 properly to MPF using USB. Additionally, it will show you which node
 boards are connected:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>mpf<span class="w"> </span>hardware<span class="w"> </span>scan
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>mpf<span class="w"> </span>hardware<span class="w"> </span>scan
 
-<span class="go">NET CPU: NET FP-CPU-002-1 01.03</span>
-<span class="go">RGB CPU: RGB FP-CPU-002-1 00.89</span>
-<span class="go">DMD CPU: DMD FP-CPU-002-1 00.88</span>
+NET<span class="w"> </span>CPU:<span class="w"> </span>NET<span class="w"> </span>FP-CPU-002-1<span class="w"> </span><span class="m">01</span>.03
+RGB<span class="w"> </span>CPU:<span class="w"> </span>RGB<span class="w"> </span>FP-CPU-002-1<span class="w"> </span><span class="m">00</span>.89
+DMD<span class="w"> </span>CPU:<span class="w"> </span>DMD<span class="w"> </span>FP-CPU-002-1<span class="w"> </span><span class="m">00</span>.88
 
-<span class="go">Boards:</span>
-<span class="go">Board 0 - Model: FP-I/O-3208-2    Firmware: 01.00 Switches: 32 Drivers: 8</span>
-<span class="go">Board 1 - Model: FP-I/O-0804-1    Firmware: 01.00 Switches: 8 Drivers: 4</span>
-<span class="go">Board 2 - Model: FP-I/O-1616-2    Firmware: 01.00 Switches: 16 Drivers: 16</span>
-<span class="go">Board 3 - Model: FP-I/O-1616-2    Firmware: 01.00 Switches: 16 Drivers: 16</span>
+Boards:
+Board<span class="w"> </span><span class="m">0</span><span class="w"> </span>-<span class="w"> </span>Model:<span class="w"> </span>FP-I/O-3208-2<span class="w">    </span>Firmware:<span class="w"> </span><span class="m">01</span>.00<span class="w"> </span>Switches:<span class="w"> </span><span class="m">32</span><span class="w"> </span>Drivers:<span class="w"> </span><span class="m">8</span>
+Board<span class="w"> </span><span class="m">1</span><span class="w"> </span>-<span class="w"> </span>Model:<span class="w"> </span>FP-I/O-0804-1<span class="w">    </span>Firmware:<span class="w"> </span><span class="m">01</span>.00<span class="w"> </span>Switches:<span class="w"> </span><span class="m">8</span><span class="w"> </span>Drivers:<span class="w"> </span><span class="m">4</span>
+Board<span class="w"> </span><span class="m">2</span><span class="w"> </span>-<span class="w"> </span>Model:<span class="w"> </span>FP-I/O-1616-2<span class="w">    </span>Firmware:<span class="w"> </span><span class="m">01</span>.00<span class="w"> </span>Switches:<span class="w"> </span><span class="m">16</span><span class="w"> </span>Drivers:<span class="w"> </span><span class="m">16</span>
+Board<span class="w"> </span><span class="m">3</span><span class="w"> </span>-<span class="w"> </span>Model:<span class="w"> </span>FP-I/O-1616-2<span class="w">    </span>Firmware:<span class="w"> </span><span class="m">01</span>.00<span class="w"> </span>Switches:<span class="w"> </span><span class="m">16</span><span class="w"> </span>Drivers:<span class="w"> </span><span class="m">16</span>
 </code></pre></div>
 <p>If you are missing boards here check your wiring. Also verify that
 firmware versions match. In the example above the NET CPU has firmware
@@ -48037,12 +48037,12 @@ about the command.</p>
 <a href="../drivers/">Replacing FETs on FAST Driver Boards</a> if you suspect burned FETs.</p>
 <h2 id="permission-denied-on-linux">Permission Denied on Linux</h2>
 <p>If you see an error such as:</p>
-<div class="highlight"><pre><span></span><code><span class="go">serial.serialutil.SerialException: [Errno 13] could not open port /dev/ttyUSB1: [Errno 13] Permission denied: '/dev/ttyUSB1'</span>
+<div class="highlight"><pre><span></span><code>serial.serialutil.SerialException:<span class="w"> </span><span class="o">[</span>Errno<span class="w"> </span><span class="m">13</span><span class="o">]</span><span class="w"> </span>could<span class="w"> </span>not<span class="w"> </span>open<span class="w"> </span>port<span class="w"> </span>/dev/ttyUSB1:<span class="w"> </span><span class="o">[</span>Errno<span class="w"> </span><span class="m">13</span><span class="o">]</span><span class="w"> </span>Permission<span class="w"> </span>denied:<span class="w"> </span><span class="s1">'/dev/ttyUSB1'</span>
 </code></pre></div>
 <p>Your user does not have sufficient permissions to access that port. You
 could run MPF as root but we do not recommend that. Alternatively, you
 can create a udev rule or add your user to the dialout group:</p>
-<div class="highlight"><pre><span></span><code><span class="go">sudo usermod -a -G dialout $USER</span>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>usermod<span class="w"> </span>-a<span class="w"> </span>-G<span class="w"> </span>dialout<span class="w"> </span><span class="nv">$USER</span>
 </code></pre></div>
 <p>After a restart of your PC MPF should be able to access that serial
 port.</p>
@@ -48120,8 +48120,8 @@ know it is stupid but a loose USB connector has happened to most of us.</p>
 <p>On Linux you might want to run the command <code>lsusb</code> which should show
 both of your micro controllers connected. You should see two lines
 similar to</p>
-<div class="highlight"><pre><span></span><code><span class="go">Bus 002 Device 014: ID 0483:5740 STMicroelectronics Virtual COM Port</span>
-<span class="go">Bus 002 Device 015: ID 0483:5740 STMicroelectronics Virtual COM Port</span>
+<div class="highlight"><pre><span></span><code>Bus<span class="w"> </span><span class="m">002</span><span class="w"> </span>Device<span class="w"> </span><span class="m">014</span>:<span class="w"> </span>ID<span class="w"> </span><span class="m">0483</span>:5740<span class="w"> </span>STMicroelectronics<span class="w"> </span>Virtual<span class="w"> </span>COM<span class="w"> </span>Port
+Bus<span class="w"> </span><span class="m">002</span><span class="w"> </span>Device<span class="w"> </span><span class="m">015</span>:<span class="w"> </span>ID<span class="w"> </span><span class="m">0483</span>:5740<span class="w"> </span>STMicroelectronics<span class="w"> </span>Virtual<span class="w"> </span>COM<span class="w"> </span>Port
 </code></pre></div>
 <p>If you are unsure about the output, run the command once with your
 controllers connected and once without. If there is no difference, then

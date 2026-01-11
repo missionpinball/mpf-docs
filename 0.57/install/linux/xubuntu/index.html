@@ -48141,9 +48141,9 @@ password then follow these steps:</p>
 </code></pre>
 </li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="go">[Seat:*]</span>
-<span class="go">autologin-user=your_username</span>
-<span class="go">autologin-user-timeout=0</span>
+<div class="highlight"><pre><span></span><code><span class="o">[</span>Seat:*<span class="o">]</span>
+autologin-user<span class="o">=</span>your_username
+autologin-user-timeout<span class="o">=</span><span class="m">0</span>
 </code></pre></div>
 <ul>
 <li>
@@ -48165,20 +48165,20 @@ password then follow these steps:</p>
 <p>The existing Debian install script works perfectly on Ubuntu. The
 following commands will install the current versions of MPF and MPF-MC
 as well as each of their dependencies.</p>
-<div class="highlight"><pre><span></span><code><span class="go">cd ~</span>
-<span class="go">wget https://github.com/missionpinball/mpf-debian-installer/archive/0.55.x.zip</span>
-<span class="go">unzip dev.zip</span>
-<span class="go">cd mpf-debian-installer-dev</span>
-<span class="go">sudo -H ./install</span>
-<span class="go">rm ~/dev.zip &amp;&amp; rm -Rf ~/mpf-debian-installer-dev</span>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>~
+wget<span class="w"> </span>https://github.com/missionpinball/mpf-debian-installer/archive/0.55.x.zip
+unzip<span class="w"> </span>dev.zip
+<span class="nb">cd</span><span class="w"> </span>mpf-debian-installer-dev
+sudo<span class="w"> </span>-H<span class="w"> </span>./install
+rm<span class="w"> </span>~/dev.zip<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>rm<span class="w"> </span>-Rf<span class="w"> </span>~/mpf-debian-installer-dev
 </code></pre></div>
 <p>If you want to make sure that MPF was installed, you can run:</p>
-<div class="highlight"><pre><span></span><code><span class="go">mpf --version</span>
+<div class="highlight"><pre><span></span><code>mpf<span class="w"> </span>--version
 </code></pre></div>
 <p>This command can be run from anywhere and should produce output
 something like this:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">username@host:~$ </span>mpf<span class="w"> </span>--version
-<span class="go">MPF v0.33.13</span>
+<div class="highlight"><pre><span></span><code>username@host:~$<span class="w"> </span>mpf<span class="w"> </span>--version
+MPF<span class="w"> </span>v0.33.13
 </code></pre></div>
 <p>(Note that the actual version number of your MPF installation will be
 whatever version is the latest.)</p>
@@ -48193,8 +48193,8 @@ whatever version is the latest.)</p>
 <ul>
 <li>
 <p>Edit the file to contain:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">#</span>!/bin/bash
-<span class="go">xterm -e "cd /home/your_username/your_machine_folder &amp;&amp; mpf both -c config"</span>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+xterm<span class="w"> </span>-e<span class="w"> </span><span class="s2">"cd /home/your_username/your_machine_folder &amp;&amp; mpf both -c config"</span>
 </code></pre></div>
 </li>
 </ul>
@@ -48216,14 +48216,14 @@ just added to our machine config.</p>
 <li>Create the file <code>~/.config/autostart/mpf.desktop</code> and edit it to
     contain:</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="go">[Desktop Entry]</span>
-<span class="go">Version=1.0</span>
-<span class="go">Name=MPF</span>
-<span class="go">Comment=Mission Pinball</span>
-<span class="go">Exec=/home/your_username/your_machine_folder/run.sh</span>
-<span class="go">Path=/home/your_username/your_machine_folder/</span>
-<span class="go">Terminal=false</span>
-<span class="go">Type=Application</span>
+<div class="highlight"><pre><span></span><code><span class="o">[</span>Desktop<span class="w"> </span>Entry<span class="o">]</span>
+<span class="nv">Version</span><span class="o">=</span><span class="m">1</span>.0
+<span class="nv">Name</span><span class="o">=</span>MPF
+<span class="nv">Comment</span><span class="o">=</span>Mission<span class="w"> </span>Pinball
+<span class="nv">Exec</span><span class="o">=</span>/home/your_username/your_machine_folder/run.sh
+<span class="nv">Path</span><span class="o">=</span>/home/your_username/your_machine_folder/
+<span class="nv">Terminal</span><span class="o">=</span><span class="nb">false</span>
+<span class="nv">Type</span><span class="o">=</span>Application
 </code></pre></div>
 <ul>
 <li>Change <code>your_username</code> to the username you created during
@@ -48237,7 +48237,7 @@ to your machine config.</p>
 <h2 id="other-considerations">Other Considerations</h2>
 <p>If using the SmartMatrix RGB DMD with this setup, you need to add the
 system user running your game to the <code>dialout</code> group.</p>
-<div class="highlight"><pre><span></span><code><span class="go">sudo usermod -a -G dialout your_username</span>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>usermod<span class="w"> </span>-a<span class="w"> </span>-G<span class="w"> </span>dialout<span class="w"> </span>your_username
 </code></pre></div>
 <p>What if it did not work? ------------------------</p>
 <p>In the following we list some common problems and solutions. If you got

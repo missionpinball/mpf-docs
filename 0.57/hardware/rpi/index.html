@@ -48043,14 +48043,14 @@ icons & this code generated via https://realfavicongenerator.net
 
 <h2 id="installation">Installation</h2>
 <p>You need to install the <code>apigpio</code> extension via pip to use it:</p>
-<div class="highlight"><pre><span></span><code><span class="go">pip3 install apigpio_mpf</span>
+<div class="highlight"><pre><span></span><code>pip3<span class="w"> </span>install<span class="w"> </span>apigpio_mpf
 </code></pre></div>
 <p>The <a href="http://abyz.me.uk/rpi/pigpio/pigpiod.html">pigpiod</a> service needs
 to be running (in this example on localhost port 8888, which is the
 default setting). To install it and enable is (on debian based systems):</p>
-<div class="highlight"><pre><span></span><code><span class="go">apt install pigpiod</span>
-<span class="go">systemctl enable pigpiod.service</span>
-<span class="go">systemctl start pigpiod.service</span>
+<div class="highlight"><pre><span></span><code>apt<span class="w"> </span>install<span class="w"> </span>pigpiod
+systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>pigpiod.service
+systemctl<span class="w"> </span>start<span class="w"> </span>pigpiod.service
 </code></pre></div>
 <p>The <code>enable</code> step gets the service running at startup, thus
 it is optional.</p>

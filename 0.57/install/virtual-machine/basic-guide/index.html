@@ -48177,7 +48177,7 @@ try to use sudo:</p>
 <p>First change into the root user:</p>
 <ul>
 <li>
-<p><code>console
+<p><code>shell
     su -</code></p>
 </li>
 <li>
@@ -48185,14 +48185,14 @@ try to use sudo:</p>
     without it)</p>
 </li>
 <li>As root, add your username to the sudo group</li>
-<li><code>console
+<li><code>shell
     usermod -aG sudo [your-user]</code></li>
 </ul>
 </li>
 <li>
 <p>Exit the root user shell</p>
 <ul>
-<li><code>console
+<li><code>shell
     exit</code></li>
 </ul>
 </li>
@@ -48200,7 +48200,7 @@ try to use sudo:</p>
 <p>Verify your username was granted sudo access</p>
 <ul>
 <li>
-<p><code>console
+<p><code>shell
     sudo echo</code></p>
 </li>
 <li>
@@ -48223,7 +48223,7 @@ here</a>.
 An abbreviated version is listed below:</p>
 <ol>
 <li>
-<p><code>console
+<p><code>shell
     sudo apt update
     sudo apt install build-essential dkms linux-headers-$(uname -r)</code></p>
 </li>
@@ -48231,12 +48231,12 @@ An abbreviated version is listed below:</p>
 <p>(Host Window) Devices -&gt; "Insert Guest Additions CD Image"</p>
 </li>
 <li>
-<p><code>console
+<p><code>shell
     sudo mkdir -p /mnt/cdrom
     sudo mount /dev/cdrom /mnt/cdrom</code></p>
 </li>
 <li>
-<p><code>console
+<p><code>shell
     cd /mnt/cdrom
     sudo sh ./VBoxLinuxAdditions.run --nox11</code></p>
 </li>
@@ -48245,7 +48245,7 @@ An abbreviated version is listed below:</p>
 </li>
 <li>
 <p>If necessary, confirm module is running after reboot:</p>
-<div class="highlight"><pre><span></span><code><span class="go">lsmod | grep vboxguest</span>
+<div class="highlight"><pre><span></span><code>lsmod<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>vboxguest
 </code></pre></div>
 </li>
 </ol>
@@ -48276,11 +48276,11 @@ virtual machine.</p>
 <p>The following is for macOS. Your command and output may look different</p>
 </li>
 <li>
-<p><code>console
+<p><code>shell
     ifconfig vboxnet0</code></p>
 </li>
 <li>
-<p><code>console
+<p><code>shell
     vboxnet0: flags=8943&lt;UP,BROADCAST,RUNNING,PROMISC,SIMPLEX,MULTICAST&gt; mtu 1500
            ether 0a:00:27:00:00:00
            inet 192.168.56.1 netmask 0xffffff00 broadcast 192.168.56.255</code></p>
@@ -48295,11 +48295,11 @@ virtual machine.</p>
 <p>The following is for my installation. Your command and output may look different</p>
 </li>
 <li>
-<p><code>console
+<p><code>shell
     ip addr</code></p>
 </li>
 <li>
-<p><code>console
+<p><code>shell
     [...]
     3: enp0s8: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
         link/ether 08:00:27:d8:b5:e6 brd ff:ff:ff:ff:ff:ff
@@ -48315,7 +48315,7 @@ virtual machine.</p>
     (<code>192.168.56.1</code>)</p>
 </li>
 <li>Verify you can SSH into the VM:</li>
-<li><code>console
+<li><code>shell
     ssh [your-user]@192.168.56.101</code></li>
 </ul>
 </li>
@@ -48324,22 +48324,22 @@ virtual machine.</p>
 <p>Now is a good time to install tools such as <code>git</code> and any other
 environment tools you are accustomed with.</p>
 <p>Verify that python is installed and using a version you expect:</p>
-<div class="highlight"><pre><span></span><code><span class="go">python3 -V</span>
+<div class="highlight"><pre><span></span><code>python3<span class="w"> </span>-V
 </code></pre></div>
 <p><code>Python 3.7.3</code></p>
 <p>Install pip3 and pkg-config (which MPF needs for mpf-mc):</p>
-<div class="highlight"><pre><span></span><code><span class="go">sudo apt-get install python3-pip pkg-config</span>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>python3-pip<span class="w"> </span>pkg-config
 </code></pre></div>
 <h2 id="installing-mission-pinball-framework">Installing Mission Pinball Framework</h2>
 <p>Follow the <a href="../../linux/">installation guide</a> for MPF on Linux.</p>
 <p>Basic installation:</p>
-<div class="highlight"><pre><span></span><code><span class="go">pip3 install pip setuptools --upgrade</span>
+<div class="highlight"><pre><span></span><code>pip3<span class="w"> </span>install<span class="w"> </span>pip<span class="w"> </span>setuptools<span class="w"> </span>--upgrade
 </code></pre></div>
 <ol>
 <li>
 <p>Clone the Debian installer</p>
 <ul>
-<li><code>console
+<li><code>shell
     cd ~
     git clone https://github.com/missionpinball/mpf-debian-installer/
     cd mpf-debian-installer/
@@ -48349,7 +48349,7 @@ environment tools you are accustomed with.</p>
 <li>
 <p>Setup the mpf directory and clone examples</p>
 <ul>
-<li><code>console
+<li><code>shell
     cd ~
     mkdir mpf
     cd mpf
@@ -48360,7 +48360,7 @@ environment tools you are accustomed with.</p>
 <p>Run the Demo Man example. In the VBox Desktop, open terminal and execute:</p>
 <ul>
 <li>
-<p><code>console
+<p><code>shell
     cd ~/mpf/mpf-examples/demo_man
     mpf both -X</code></p>
 </li>
@@ -48395,14 +48395,14 @@ environment tools you are accustomed with.</p>
 <li>
 <p>Install PyQt6 (may already be installed):</p>
 <ul>
-<li><code>console
+<li><code>shell
     sudo apt-get install python3-pyqt6</code></li>
 </ul>
 </li>
 <li>
 <p>Install mpf-monitor:</p>
 <ul>
-<li><code>console
+<li><code>shell
     pip install mpf-monitor</code></li>
 </ul>
 </li>
@@ -48410,11 +48410,11 @@ environment tools you are accustomed with.</p>
 <p>Start mpf (with mc) and mpf monitor (in separate terminal tabs):</p>
 <ul>
 <li>
-<p><code>console
+<p><code>shell
     mpf both -X</code></p>
 </li>
 <li>
-<p><code>console
+<p><code>shell
     mpf monitor</code></p>
 </li>
 </ul>

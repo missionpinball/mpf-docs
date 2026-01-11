@@ -47990,26 +47990,26 @@ chain. You can connect multiple chains.</p>
 <h2 id="verify-connected-boards-via-mpf-hardware-scan">Verify Connected Boards via mpf hardware scan</h2>
 <p>You can run
 <a href="../../../running/commands/hardware/">mpf hardware scan</a> to see all connected node boards:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>mpf<span class="w"> </span>hardware<span class="w"> </span>scan
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>mpf<span class="w"> </span>hardware<span class="w"> </span>scan
 
-<span class="go">Connected CPUs:</span>
-<span class="go"> - Port: com1 at 115200 baud</span>
-<span class="go"> -&gt; Board: 0x20 Firmware: 0x10100</span>
-<span class="go"> -&gt; Board: 0x21 Firmware: 0x10100</span>
+Connected<span class="w"> </span>CPUs:
+<span class="w"> </span>-<span class="w"> </span>Port:<span class="w"> </span>com1<span class="w"> </span>at<span class="w"> </span><span class="m">115200</span><span class="w"> </span>baud
+<span class="w"> </span>-&gt;<span class="w"> </span>Board:<span class="w"> </span>0x20<span class="w"> </span>Firmware:<span class="w"> </span>0x10100
+<span class="w"> </span>-&gt;<span class="w"> </span>Board:<span class="w"> </span>0x21<span class="w"> </span>Firmware:<span class="w"> </span>0x10100
 
-<span class="go">Incand cards:</span>
-<span class="go"> - CPU: com1 Board: 0x20 Card: 0 Numbers: [16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31]</span>
+Incand<span class="w"> </span>cards:
+<span class="w"> </span>-<span class="w"> </span>CPU:<span class="w"> </span>com1<span class="w"> </span>Board:<span class="w"> </span>0x20<span class="w"> </span>Card:<span class="w"> </span><span class="m">0</span><span class="w"> </span>Numbers:<span class="w"> </span><span class="o">[</span><span class="m">16</span>,<span class="w"> </span><span class="m">17</span>,<span class="w"> </span><span class="m">18</span>,<span class="w"> </span><span class="m">19</span>,<span class="w"> </span><span class="m">20</span>,<span class="w"> </span><span class="m">21</span>,<span class="w"> </span><span class="m">22</span>,<span class="w"> </span><span class="m">23</span>,<span class="w"> </span><span class="m">24</span>,<span class="w"> </span><span class="m">25</span>,<span class="w"> </span><span class="m">26</span>,<span class="w"> </span><span class="m">27</span>,<span class="w"> </span><span class="m">28</span>,<span class="w"> </span><span class="m">29</span>,<span class="w"> </span><span class="m">30</span>,<span class="w"> </span><span class="m">31</span><span class="o">]</span>
 
-<span class="go">Input cards:</span>
-<span class="go"> - CPU: com1 Board: 0x20 Card: 0 Numbers: [0, 1, 2, 3, 8, 9, 10, 11, 12, 13, 14, 15]</span>
-<span class="go"> - CPU: com1 Board: 0x21 Card: 1 Numbers: [0, 1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27]</span>
+Input<span class="w"> </span>cards:
+<span class="w"> </span>-<span class="w"> </span>CPU:<span class="w"> </span>com1<span class="w"> </span>Board:<span class="w"> </span>0x20<span class="w"> </span>Card:<span class="w"> </span><span class="m">0</span><span class="w"> </span>Numbers:<span class="w"> </span><span class="o">[</span><span class="m">0</span>,<span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="m">2</span>,<span class="w"> </span><span class="m">3</span>,<span class="w"> </span><span class="m">8</span>,<span class="w"> </span><span class="m">9</span>,<span class="w"> </span><span class="m">10</span>,<span class="w"> </span><span class="m">11</span>,<span class="w"> </span><span class="m">12</span>,<span class="w"> </span><span class="m">13</span>,<span class="w"> </span><span class="m">14</span>,<span class="w"> </span><span class="m">15</span><span class="o">]</span>
+<span class="w"> </span>-<span class="w"> </span>CPU:<span class="w"> </span>com1<span class="w"> </span>Board:<span class="w"> </span>0x21<span class="w"> </span>Card:<span class="w"> </span><span class="m">1</span><span class="w"> </span>Numbers:<span class="w"> </span><span class="o">[</span><span class="m">0</span>,<span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="m">2</span>,<span class="w"> </span><span class="m">3</span>,<span class="w"> </span><span class="m">5</span>,<span class="w"> </span><span class="m">6</span>,<span class="w"> </span><span class="m">7</span>,<span class="w"> </span><span class="m">8</span>,<span class="w"> </span><span class="m">9</span>,<span class="w"> </span><span class="m">10</span>,<span class="w"> </span><span class="m">11</span>,<span class="w"> </span><span class="m">12</span>,<span class="w"> </span><span class="m">13</span>,<span class="w"> </span><span class="m">14</span>,<span class="w"> </span><span class="m">15</span>,<span class="w"> </span><span class="m">16</span>,<span class="w"> </span><span class="m">17</span>,<span class="w"> </span><span class="m">18</span>,<span class="w"> </span><span class="m">19</span>,<span class="w"> </span><span class="m">20</span>,<span class="w"> </span><span class="m">21</span>,<span class="w"> </span><span class="m">22</span>,<span class="w"> </span><span class="m">23</span>,<span class="w"> </span><span class="m">24</span>,<span class="w"> </span><span class="m">25</span>,<span class="w"> </span><span class="m">26</span>,<span class="w"> </span><span class="m">27</span><span class="o">]</span>
 
-<span class="go">Solenoid cards:</span>
-<span class="go"> - CPU: com1 Board: 0x20 Card: 0 Numbers: [0, 1, 2, 3]</span>
-<span class="go"> - CPU: com1 Board: 0x21 Card: 1 Numbers: [12, 13, 14, 15]</span>
+Solenoid<span class="w"> </span>cards:
+<span class="w"> </span>-<span class="w"> </span>CPU:<span class="w"> </span>com1<span class="w"> </span>Board:<span class="w"> </span>0x20<span class="w"> </span>Card:<span class="w"> </span><span class="m">0</span><span class="w"> </span>Numbers:<span class="w"> </span><span class="o">[</span><span class="m">0</span>,<span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="m">2</span>,<span class="w"> </span><span class="m">3</span><span class="o">]</span>
+<span class="w"> </span>-<span class="w"> </span>CPU:<span class="w"> </span>com1<span class="w"> </span>Board:<span class="w"> </span>0x21<span class="w"> </span>Card:<span class="w"> </span><span class="m">1</span><span class="w"> </span>Numbers:<span class="w"> </span><span class="o">[</span><span class="m">12</span>,<span class="w"> </span><span class="m">13</span>,<span class="w"> </span><span class="m">14</span>,<span class="w"> </span><span class="m">15</span><span class="o">]</span>
 
-<span class="go">LEDs:</span>
-<span class="go"> - CPU: com1 Board: 0x21 Card: 1</span>
+LEDs:
+<span class="w"> </span>-<span class="w"> </span>CPU:<span class="w"> </span>com1<span class="w"> </span>Board:<span class="w"> </span>0x21<span class="w"> </span>Card:<span class="w"> </span><span class="m">1</span>
 </code></pre></div>
 <p>If your boards do not show up checkout our
 <a href="../../../troubleshooting/">OPP troubleshooting guide</a>.</p>

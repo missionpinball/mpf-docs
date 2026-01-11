@@ -48071,16 +48071,16 @@ icons & this code generated via https://realfavicongenerator.net
 <h3 id="4-run-your-test">4. Run your test</h3>
 <p>You can run your tests via the command prompt from your machine folder. (In other words, the same place where you run mpf to run your machine.)</p>
 <p>The exact command to run is <code>python -m unittest</code>. This should produce output similar to the following:</p>
-<div class="highlight"><pre><span></span><code><span class="go">C:\pinball\your_machine&gt;python -m unittest</span>
-<span class="go">C:\Python34\lib\imp.py:32: PendingDeprecationWarning: the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses</span>
-<span class="go">  PendingDeprecationWarning)</span>
-<span class="go">.</span>
-<span class="go">----------------------------------------------------------------------</span>
-<span class="go">Ran 1 test in 0.734s</span>
+<div class="highlight"><pre><span></span><code>C:<span class="se">\p</span>inball<span class="se">\y</span>our_machine&gt;python<span class="w"> </span>-m<span class="w"> </span>unittest
+C:<span class="se">\P</span>ython34<span class="se">\l</span>ib<span class="se">\i</span>mp.py:32:<span class="w"> </span>PendingDeprecationWarning:<span class="w"> </span>the<span class="w"> </span>imp<span class="w"> </span>module<span class="w"> </span>is<span class="w"> </span>deprecated<span class="w"> </span><span class="k">in</span><span class="w"> </span>favour<span class="w"> </span>of<span class="w"> </span>importlib<span class="p">;</span><span class="w"> </span>see<span class="w"> </span>the<span class="w"> </span>module<span class="err">'</span>s<span class="w"> </span>documentation<span class="w"> </span><span class="k">for</span><span class="w"> </span>alternative<span class="w"> </span>uses
+<span class="w">  </span>PendingDeprecationWarning<span class="o">)</span>
+.
+----------------------------------------------------------------------
+Ran<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="nb">test</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">0</span>.734s
 
-<span class="go">OK</span>
+OK
 
-<span class="go">C:\pinball\your_machine&gt;</span>
+C:<span class="se">\p</span>inball<span class="se">\y</span>our_machine&gt;
 </code></pre></div>
 <p>That warning about the deprecation can be ignored (if you even have it.. you might not). The important thing is the message towards the bottom: “Ran 1 test in 0.734s” and the “OK” below it. That means your test passed!</p>
 <h3 id="5-check-out-a-failed-test">5. Check out a failed test</h3>
@@ -48088,27 +48088,27 @@ icons & this code generated via https://realfavicongenerator.net
 <div class="highlight"><pre><span></span><code><span class="bp">self</span><span class="o">.</span><span class="n">assertModeRunning</span><span class="p">(</span><span class="s1">'foo'</span><span class="p">)</span>
 </code></pre></div>
 <p>Save the file and rerun the tests and you should see results like this:</p>
-<div class="highlight"><pre><span></span><code><span class="go">C:\pinball\your_machine&gt;python -m unittest</span>
-<span class="go">C:\Python34\lib\imp.py:32: PendingDeprecationWarning: the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses</span>
-<span class="go">  PendingDeprecationWarning)</span>
-<span class="go">F</span>
-<span class="go">======================================================================</span>
-<span class="go">FAIL: test_mpf_starts (tests.test_step_2.TestTutorialMachine)</span>
-<span class="go">Tests Step 2 of the tutorial</span>
-<span class="go">----------------------------------------------------------------------</span>
-<span class="go">Traceback (most recent call last):</span>
-<span class="go">  File "C:\pinball\your_machine\tests\test_step_2.py", line 18, in test_mpf_starts</span>
-<span class="go">    self.assertModeRunning('foo')</span>
-<span class="go">  File "C:\Python34\lib\site-packages\mpf\tests\MpfTestCase.py", line 576, in assertModeRunning</span>
-<span class="go">    raise AssertionError("Mode {} not known.".format(mode_name))</span>
-<span class="go">AssertionError: Mode foo not known.</span>
+<div class="highlight"><pre><span></span><code>C:<span class="se">\p</span>inball<span class="se">\y</span>our_machine&gt;python<span class="w"> </span>-m<span class="w"> </span>unittest
+C:<span class="se">\P</span>ython34<span class="se">\l</span>ib<span class="se">\i</span>mp.py:32:<span class="w"> </span>PendingDeprecationWarning:<span class="w"> </span>the<span class="w"> </span>imp<span class="w"> </span>module<span class="w"> </span>is<span class="w"> </span>deprecated<span class="w"> </span><span class="k">in</span><span class="w"> </span>favour<span class="w"> </span>of<span class="w"> </span>importlib<span class="p">;</span><span class="w"> </span>see<span class="w"> </span>the<span class="w"> </span>module<span class="s1">'s documentation for alternative uses</span>
+<span class="s1">  PendingDeprecationWarning)</span>
+<span class="s1">F</span>
+<span class="s1">======================================================================</span>
+<span class="s1">FAIL: test_mpf_starts (tests.test_step_2.TestTutorialMachine)</span>
+<span class="s1">Tests Step 2 of the tutorial</span>
+<span class="s1">----------------------------------------------------------------------</span>
+<span class="s1">Traceback (most recent call last):</span>
+<span class="s1">  File "C:\pinball\your_machine\tests\test_step_2.py", line 18, in test_mpf_starts</span>
+<span class="s1">    self.assertModeRunning('</span>foo<span class="err">'</span><span class="o">)</span>
+<span class="w">  </span>File<span class="w"> </span><span class="s2">"C:\Python34\lib\site-packages\mpf\tests\MpfTestCase.py"</span>,<span class="w"> </span>line<span class="w"> </span><span class="m">576</span>,<span class="w"> </span><span class="k">in</span><span class="w"> </span>assertModeRunning
+<span class="w">    </span>raise<span class="w"> </span>AssertionError<span class="o">(</span><span class="s2">"Mode {} not known."</span>.format<span class="o">(</span>mode_name<span class="o">))</span>
+AssertionError:<span class="w"> </span>Mode<span class="w"> </span>foo<span class="w"> </span>not<span class="w"> </span>known.
 
-<span class="go">----------------------------------------------------------------------</span>
-<span class="go">Ran 1 test in 0.594s</span>
+----------------------------------------------------------------------
+Ran<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="nb">test</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">0</span>.594s
 
-<span class="go">FAILED (failures=1)</span>
+FAILED<span class="w"> </span><span class="o">(</span><span class="nv">failures</span><span class="o">=</span><span class="m">1</span><span class="o">)</span>
 
-<span class="go">C:\pinball\your_machine&gt;</span>
+C:<span class="se">\p</span>inball<span class="se">\y</span>our_machine&gt;
 </code></pre></div>
 <p>Note that we see the test run failed, with one failure, and that we can scroll up and see the specific name of the test that failed along with the line that failed, and information about the failure. (In this case it tells us that the mode “foo” is not known.)</p>
 <p>So to get this test to work, you either need to change your MPF config to start a mode called “foo”, or you need to change the test back to looking for a mode called “attract”. :)</p>

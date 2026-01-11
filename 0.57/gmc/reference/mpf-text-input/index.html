@@ -48244,7 +48244,7 @@ you will need to create a way to post <em><code>text_input</code></em> events wi
 </code></pre></div>
 <p>When the END key on the on-screen keyboard is selected, GMC will post an event <em>text_input_&lt;input_name&gt;_complete</em> where input_name is the <code>input_name</code> value of the MPFTextInput node.</p>
 <p>This event will include an argument <code>text</code> with the text string entered by the user.</p>
-<div class="highlight"><pre><span></span><code><span class="go">==='text_input_high_score_complete'=== Args={'text': 'MY NAME'}</span>
+<div class="highlight"><pre><span></span><code><span class="o">===</span><span class="s1">'text_input_high_score_complete'</span><span class="o">===</span><span class="w"> </span><span class="nv">Args</span><span class="o">={</span><span class="s1">'text'</span>:<span class="w"> </span><span class="s1">'MY NAME'</span><span class="o">}</span>
 </code></pre></div>
 <hr>
 <div class="admonition question">

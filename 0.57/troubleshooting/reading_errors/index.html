@@ -47831,33 +47831,33 @@ from the bottom to the top. On the bottom there will be the most general
 error and all errors above will be more specific.</p>
 <p>For instance a Switch might be unable to initialize because your
 hardware platform cannot connect to the relevant node board:</p>
-<div class="highlight"><pre><span></span><code><span class="go">INFO : EventManager : Event: ======'shutdown'====== Args={}</span>
-<span class="go">Shutdown because of an exception:</span>
-<span class="go">ERROR : Machine : Runtime Exception</span>
-<span class="go">Traceback (most recent call last):</span>
-<span class="go">  File "/mpf/mpf/devices/switch.py", line 135, in _initialize</span>
-<span class="go">    self.config['number'], config, self.config['platform_settings'])</span>
-<span class="go">  File "/mpf/mpf/platforms/virtual.py", line 94, in configure_switch</span>
-<span class="go">    raise AssertionError("Cannot find board for switch {}".format(number))</span>
-<span class="go">AssertionError: Cannot find board for switch 0-7</span>
+<div class="highlight"><pre><span></span><code>INFO<span class="w"> </span>:<span class="w"> </span>EventManager<span class="w"> </span>:<span class="w"> </span>Event:<span class="w"> </span><span class="o">======</span><span class="s1">'shutdown'</span><span class="o">======</span><span class="w"> </span><span class="nv">Args</span><span class="o">={}</span>
+Shutdown<span class="w"> </span>because<span class="w"> </span>of<span class="w"> </span>an<span class="w"> </span>exception:
+ERROR<span class="w"> </span>:<span class="w"> </span>Machine<span class="w"> </span>:<span class="w"> </span>Runtime<span class="w"> </span>Exception
+Traceback<span class="w"> </span><span class="o">(</span>most<span class="w"> </span>recent<span class="w"> </span>call<span class="w"> </span>last<span class="o">)</span>:
+<span class="w">  </span>File<span class="w"> </span><span class="s2">"/mpf/mpf/devices/switch.py"</span>,<span class="w"> </span>line<span class="w"> </span><span class="m">135</span>,<span class="w"> </span><span class="k">in</span><span class="w"> </span>_initialize
+<span class="w">    </span>self.config<span class="o">[</span><span class="s1">'number'</span><span class="o">]</span>,<span class="w"> </span>config,<span class="w"> </span>self.config<span class="o">[</span><span class="s1">'platform_settings'</span><span class="o">])</span>
+<span class="w">  </span>File<span class="w"> </span><span class="s2">"/mpf/mpf/platforms/virtual.py"</span>,<span class="w"> </span>line<span class="w"> </span><span class="m">94</span>,<span class="w"> </span><span class="k">in</span><span class="w"> </span>configure_switch
+<span class="w">    </span>raise<span class="w"> </span>AssertionError<span class="o">(</span><span class="s2">"Cannot find board for switch {}"</span>.format<span class="o">(</span>number<span class="o">))</span>
+AssertionError:<span class="w"> </span>Cannot<span class="w"> </span>find<span class="w"> </span>board<span class="w"> </span><span class="k">for</span><span class="w"> </span>switch<span class="w"> </span><span class="m">0</span>-7
 
-<span class="go">The above exception was the direct cause of the following exception:</span>
+The<span class="w"> </span>above<span class="w"> </span>exception<span class="w"> </span>was<span class="w"> </span>the<span class="w"> </span>direct<span class="w"> </span>cause<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>following<span class="w"> </span>exception:
 
-<span class="go">Traceback (most recent call last):</span>
-<span class="go">  File "/mpf/mpf/core/machine.py", line 741, in _run_loop</span>
-<span class="go">    raise self._exception['exception']</span>
-<span class="go">  File "uvloop/cbhandles.pyx", line 70, in uvloop.loop.Handle._run</span>
-<span class="go">  File "/mpf/mpf/core/events.py", line 114, in _async_handler_done</span>
-<span class="go">    future.result()</span>
-<span class="go">  File "/mpf/mpf/core/device_manager.py", line 103, in _load_device_modules</span>
-<span class="go">    await self.initialize_devices()</span>
-<span class="go">  File "/mpf/mpf/core/device_manager.py", line 199, in initialize_devices</span>
-<span class="go">    await collection[device_name].device_added_system_wide()</span>
-<span class="go">  File "/mpf/mpf/core/system_wide_device.py", line 15, in device_added_system_wide</span>
-<span class="go">    await self._initialize()</span>
-<span class="go">  File "/mpf/mpf/devices/switch.py", line 137, in _initialize</span>
-<span class="go">    raise AssertionError("Failed to configure switch {} in platform. See error above".format(self.name)) from e</span>
-<span class="go">AssertionError: Failed to configure switch s_door_back in platform. See error above</span>
+Traceback<span class="w"> </span><span class="o">(</span>most<span class="w"> </span>recent<span class="w"> </span>call<span class="w"> </span>last<span class="o">)</span>:
+<span class="w">  </span>File<span class="w"> </span><span class="s2">"/mpf/mpf/core/machine.py"</span>,<span class="w"> </span>line<span class="w"> </span><span class="m">741</span>,<span class="w"> </span><span class="k">in</span><span class="w"> </span>_run_loop
+<span class="w">    </span>raise<span class="w"> </span>self._exception<span class="o">[</span><span class="s1">'exception'</span><span class="o">]</span>
+<span class="w">  </span>File<span class="w"> </span><span class="s2">"uvloop/cbhandles.pyx"</span>,<span class="w"> </span>line<span class="w"> </span><span class="m">70</span>,<span class="w"> </span><span class="k">in</span><span class="w"> </span>uvloop.loop.Handle._run
+<span class="w">  </span>File<span class="w"> </span><span class="s2">"/mpf/mpf/core/events.py"</span>,<span class="w"> </span>line<span class="w"> </span><span class="m">114</span>,<span class="w"> </span><span class="k">in</span><span class="w"> </span>_async_handler_done
+<span class="w">    </span>future.result<span class="o">()</span>
+<span class="w">  </span>File<span class="w"> </span><span class="s2">"/mpf/mpf/core/device_manager.py"</span>,<span class="w"> </span>line<span class="w"> </span><span class="m">103</span>,<span class="w"> </span><span class="k">in</span><span class="w"> </span>_load_device_modules
+<span class="w">    </span>await<span class="w"> </span>self.initialize_devices<span class="o">()</span>
+<span class="w">  </span>File<span class="w"> </span><span class="s2">"/mpf/mpf/core/device_manager.py"</span>,<span class="w"> </span>line<span class="w"> </span><span class="m">199</span>,<span class="w"> </span><span class="k">in</span><span class="w"> </span>initialize_devices
+<span class="w">    </span>await<span class="w"> </span>collection<span class="o">[</span>device_name<span class="o">]</span>.device_added_system_wide<span class="o">()</span>
+<span class="w">  </span>File<span class="w"> </span><span class="s2">"/mpf/mpf/core/system_wide_device.py"</span>,<span class="w"> </span>line<span class="w"> </span><span class="m">15</span>,<span class="w"> </span><span class="k">in</span><span class="w"> </span>device_added_system_wide
+<span class="w">    </span>await<span class="w"> </span>self._initialize<span class="o">()</span>
+<span class="w">  </span>File<span class="w"> </span><span class="s2">"/mpf/mpf/devices/switch.py"</span>,<span class="w"> </span>line<span class="w"> </span><span class="m">137</span>,<span class="w"> </span><span class="k">in</span><span class="w"> </span>_initialize
+<span class="w">    </span>raise<span class="w"> </span>AssertionError<span class="o">(</span><span class="s2">"Failed to configure switch {} in platform. See error above"</span>.format<span class="o">(</span>self.name<span class="o">))</span><span class="w"> </span>from<span class="w"> </span>e
+AssertionError:<span class="w"> </span>Failed<span class="w"> </span>to<span class="w"> </span>configure<span class="w"> </span>switch<span class="w"> </span>s_door_back<span class="w"> </span><span class="k">in</span><span class="w"> </span>platform.<span class="w"> </span>See<span class="w"> </span>error<span class="w"> </span>above
 </code></pre></div>
 <p>So in this case the door switch could not be configured because the node
 board was missing at the hardware.</p>

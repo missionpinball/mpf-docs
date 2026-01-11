@@ -48005,8 +48005,8 @@ icons & this code generated via https://realfavicongenerator.net
 
 <h1 id="debugging-yaml-parse-errors">Debugging YAML Parse Errors</h1>
 <p>In case something goes wrong and you get errors like this:</p>
-<div class="highlight"><pre><span></span><code><span class="go">ValueError: YAML error found in file config/config.yaml. Line 22,Position 10: mapping values are not allowed here</span>
-<span class="go">  in "config/config.yaml", line 22, column 10</span>
+<div class="highlight"><pre><span></span><code>ValueError:<span class="w"> </span>YAML<span class="w"> </span>error<span class="w"> </span>found<span class="w"> </span><span class="k">in</span><span class="w"> </span>file<span class="w"> </span>config/config.yaml.<span class="w"> </span>Line<span class="w"> </span><span class="m">22</span>,Position<span class="w"> </span><span class="m">10</span>:<span class="w"> </span>mapping<span class="w"> </span>values<span class="w"> </span>are<span class="w"> </span>not<span class="w"> </span>allowed<span class="w"> </span>here
+<span class="w">  </span><span class="k">in</span><span class="w"> </span><span class="s2">"config/config.yaml"</span>,<span class="w"> </span>line<span class="w"> </span><span class="m">22</span>,<span class="w"> </span>column<span class="w"> </span><span class="m">10</span>
 </code></pre></div>
 <p>This means that the error might be at line 22, just before it or shortly
 after it. Sometimes it is tricky to tell whats wrong when one space is
@@ -48019,7 +48019,7 @@ exact point.</p>
 <p>If you are struggling to find the problem you can reformat your file
 using <code>ruamel.yaml</code>. To do that you first need to install the
 <code>ruamel.yaml.cmd</code> extension:</p>
-<div class="highlight"><pre><span></span><code><span class="go">pip3 install ruamel.yaml.cmd==0.2</span>
+<div class="highlight"><pre><span></span><code>pip3<span class="w"> </span>install<span class="w"> </span>ruamel.yaml.cmd<span class="o">==</span><span class="m">0</span>.2
 </code></pre></div>
 <h2 id="make-a-backup">Make a backup</h2>
 <p>Before you continue: Make a backup of your machine config. Seriously, do
@@ -48028,10 +48028,10 @@ it! Even better, use git and commit right now!</p>
 <p>After that you can reformat single files using the <code>round-trip</code> command.
 For example if you want to reformat <code>your_file.yaml</code> first check the
 changes it would make:</p>
-<div class="highlight"><pre><span></span><code><span class="go">yaml round-trip your_file.yaml</span>
+<div class="highlight"><pre><span></span><code>yaml<span class="w"> </span>round-trip<span class="w"> </span>your_file.yaml
 </code></pre></div>
 <p>If that looks alright perform them by adding the <code>--save</code> flag:</p>
-<div class="highlight"><pre><span></span><code><span class="go">yaml round-trip --save your_file.yaml</span>
+<div class="highlight"><pre><span></span><code>yaml<span class="w"> </span>round-trip<span class="w"> </span>--save<span class="w"> </span>your_file.yaml
 </code></pre></div>
 <p>This will keep comments but reformat all your indents to two spaces per
 level. It should be easier now to spot the problem.</p>

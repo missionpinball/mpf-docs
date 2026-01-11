@@ -47965,58 +47965,58 @@ icons & this code generated via https://realfavicongenerator.net
 <p>Once MPF is installed, you can run some automated tests to make sure that everything is working.
 Let's assume your mpf virtual folder is <code>mpfenv</code> and stored here</p>
 <p>Windows:
-</p><div class="highlight"><pre><span></span><code><span class="go">C:\Users\myname\mpfenv</span>
+</p><div class="highlight"><pre><span></span><code>C:<span class="se">\U</span>sers<span class="se">\m</span>yname<span class="se">\m</span>pfenv
 </code></pre></div>
 Linux:
-<div class="highlight"><pre><span></span><code><span class="go">/home/myname/mpfenv</span>
+<div class="highlight"><pre><span></span><code>/home/myname/mpfenv
 </code></pre></div>
 Note that you need to activate your virtual environment to run tests the same way you do to run your game. Assuming you are in your users home directory, run:<p></p>
 <p>Windows:
-</p><div class="highlight"><pre><span></span><code><span class="go">mpfenv\Scripts\activate.bat</span>
+</p><div class="highlight"><pre><span></span><code>mpfenv<span class="se">\S</span>cripts<span class="se">\a</span>ctivate.bat
 </code></pre></div>
 Linux:
-<div class="highlight"><pre><span></span><code><span class="go">mpfenv/bin/activate</span>
+<div class="highlight"><pre><span></span><code>mpfenv/bin/activate
 </code></pre></div>
 Now change into the directory where the tests are stored in your console, which is:<p></p>
 <p>Windows:
-</p><div class="highlight"><pre><span></span><code><span class="go">C:\Users\myname\mpfenv\Lib\site-packages\mpf\tests</span>
+</p><div class="highlight"><pre><span></span><code>C:<span class="se">\U</span>sers<span class="se">\m</span>yname<span class="se">\m</span>pfenv<span class="se">\L</span>ib<span class="se">\s</span>ite-packages<span class="se">\m</span>pf<span class="se">\t</span>ests
 </code></pre></div>
 Linux:
-<div class="highlight"><pre><span></span><code><span class="go">/home/myname/mpfenv/lib/python3.11/site-packages/mpf/tests</span>
+<div class="highlight"><pre><span></span><code>/home/myname/mpfenv/lib/python3.11/site-packages/mpf/tests
 </code></pre></div>
 You might have a different version of python and your path might differ slightly.
 Now you have different options on how to run the tests. You can either run all tests at once, or only all tests in one test file or only one single test. Which option is best for you depends on your needs.<p></p>
 <h2 id="running-all-tests-at-once">Running all tests at once</h2>
 <p>To do this, open a command prompt, and then type the following command and then press <code>&lt;enter&gt;</code>:</p>
-<p></p><div class="highlight"><pre><span></span><code><span class="go">python3 -m unittest discover &lt;path to test directory&gt;</span>
+<p></p><div class="highlight"><pre><span></span><code>python3<span class="w"> </span>-m<span class="w"> </span>unittest<span class="w"> </span>discover<span class="w"> </span>&lt;path<span class="w"> </span>to<span class="w"> </span><span class="nb">test</span><span class="w"> </span>directory&gt;
 </code></pre></div>
 Where <code>&lt;path to test directory&gt;</code> is the path to the directory where you tests are stored. If you have followed the steps above you are already in that directory and you just omit this value.<p></p>
 <p>You should see a bunch of dots on the screen (one for each test that's run), and then when it's done, you should see a message showing how many tests were run and that they were successful. The whole process should take less a minute or so.</p>
 <p>(If you see any messages about some tests taking more than 0.5s, that's ok.)</p>
 <p>The important thing is that when the tests are done, you should have a message like this:</p>
-<div class="highlight"><pre><span></span><code><span class="go">Ran 587 tests in 27.121s</span>
+<div class="highlight"><pre><span></span><code>Ran<span class="w"> </span><span class="m">587</span><span class="w"> </span>tests<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">27</span>.121s
 
-<span class="go">OK</span>
+OK
 
-<span class="go">C:\&gt;</span>
+C:<span class="se">\&gt;</span>
 </code></pre></div>
 <p>Note that the number of tests is changing all the time, so it probably won't be exactly 587. And also the time they took to run will be different depending on how fast your computer is.</p>
 <p>These tests are the actual tests that the developers of MPF use to test MPF itself. We wrote all these tests to make sure that updates and changes we add to MPF don't break things. :) So if these tests pass, you know your MPF installation is solid.</p>
 <h2 id="running-all-test-of-a-single-test-file">Running all test of a single test file</h2>
 <p>If you have the need only to test all tests in a single test file you can specify the test file in your directory
-</p><div class="highlight"><pre><span></span><code><span class="go">python -m unittest test_SegmentDisplay.py</span>
+</p><div class="highlight"><pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>unittest<span class="w"> </span>test_SegmentDisplay.py
 </code></pre></div>
 That obviously runs all tests in the file called <code>test_SegmentDisplay.py</code>, which makes sense to save time if your code changes only took place in that part of the code.<p></p>
 <h2 id="running-a-single-test">Running a single test</h2>
 <p>If only one test fails and you need to execute it more often you can even specify only that one single test
-</p><div class="highlight"><pre><span></span><code><span class="go">python -m unittest test_SegmentDisplay.TestSegmentDisplay.test_transitions_with_player</span>
+</p><div class="highlight"><pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>unittest<span class="w"> </span>test_SegmentDisplay.TestSegmentDisplay.test_transitions_with_player
 </code></pre></div>
 where the syntax has the following format
-<div class="highlight"><pre><span></span><code><span class="go">python -m unittest &lt;file name without py extension&gt;.&lt;Class name within file&gt;.&lt;name of test&gt;</span>
+<div class="highlight"><pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>unittest<span class="w"> </span>&lt;file<span class="w"> </span>name<span class="w"> </span>without<span class="w"> </span>py<span class="w"> </span>extension&gt;.&lt;Class<span class="w"> </span>name<span class="w"> </span>within<span class="w"> </span>file&gt;.&lt;name<span class="w"> </span>of<span class="w"> </span>test&gt;
 </code></pre></div><p></p>
 <h2 id="testing-the-mpf-media-controller">Testing the MPF media controller</h2>
 <p>Remember though that MPF is actually two separate parts, the MPF game engine and the MPF media controller. The command you run just tested the game engine, so now let's test the media controller. To do this, run the following command (basically the same thing as last time but with an “mc” added to the end, like this):</p>
-<div class="highlight"><pre><span></span><code><span class="go">python3 -m unittest discover mpfmc/tests</span>
+<div class="highlight"><pre><span></span><code>python3<span class="w"> </span>-m<span class="w"> </span>unittest<span class="w"> </span>discover<span class="w"> </span>mpfmc/tests
 </code></pre></div>
 <p>(Note that mpfmc does not have a dash in it, like it did when you installed it via pip.)</p>
 <p>When you run the MPF-MC tests, you should see a graphical window pop up on the screen, and many of the tests will put graphics and words in that window. Also, some of the tests include audio, so if your speakers are on you should hear some sounds at some point.</p>

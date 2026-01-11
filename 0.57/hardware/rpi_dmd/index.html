@@ -48019,11 +48019,11 @@ library</a>.</p>
 <h2 id="2-install-the-extension">2. Install the extension</h2>
 <p>You need to install the <code>rgbmatrix</code> extension on your RPi using the
 following command:</p>
-<div class="highlight"><pre><span></span><code><span class="go">git clone https://github.com/hzeller/rpi-rgb-led-matrix.git</span>
-<span class="go">cd rpi-rgb-led-matrix</span>
-<span class="go">sudo apt-get update &amp;&amp; sudo apt-get install python3-dev python3-pillow -y</span>
-<span class="go">make build-python PYTHON=$(which python3)</span>
-<span class="go">sudo make install-python PYTHON=$(which python3)</span>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/hzeller/rpi-rgb-led-matrix.git
+<span class="nb">cd</span><span class="w"> </span>rpi-rgb-led-matrix
+sudo<span class="w"> </span>apt-get<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>python3-dev<span class="w"> </span>python3-pillow<span class="w"> </span>-y
+make<span class="w"> </span>build-python<span class="w"> </span><span class="nv">PYTHON</span><span class="o">=</span><span class="k">$(</span>which<span class="w"> </span>python3<span class="k">)</span>
+sudo<span class="w"> </span>make<span class="w"> </span>install-python<span class="w"> </span><span class="nv">PYTHON</span><span class="o">=</span><span class="k">$(</span>which<span class="w"> </span>python3<span class="k">)</span>
 </code></pre></div>
 <h2 id="3-configure-your-dmd">3. Configure your DMD</h2>
 <p>This is an example config:</p>
@@ -48090,7 +48090,7 @@ guide has more details on the window and slide settings used in this
 machine config.</p>
 <h2 id="4-start-mpf-as-root">4. Start MPF as root</h2>
 <p>For this library to work you need to start MPF as root like this:</p>
-<div class="highlight"><pre><span></span><code><span class="go">sudo mpf game</span>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>mpf<span class="w"> </span>game
 </code></pre></div>
 <p>This is needed for the matrix to access the hardware and it will drop
 privileges after it started.</p>

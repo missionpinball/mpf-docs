@@ -47927,20 +47927,20 @@ that MPF has a "real" installer, the MPF package folder is hidden deep
 inside your system.</p>
 </div>
 <p>Then run:</p>
-<div class="highlight"><pre><span></span><code><span class="go">mpf both &lt;enter&gt;</span>
+<div class="highlight"><pre><span></span><code>mpf<span class="w"> </span>both<span class="w"> </span>&lt;enter&gt;
 </code></pre></div>
 <p>The <code>mpf both</code> command is what we use and probably what you'll use 99%
 of the time.</p>
 <h2 id="starting-the-mpf-media-controller">Starting the MPF media controller</h2>
 <p>Alternately you can choose to run just the media controller by itself
 (still from within your machine folder) like this:</p>
-<div class="highlight"><pre><span></span><code><span class="go">mpf mc &lt;enter&gt;</span>
+<div class="highlight"><pre><span></span><code>mpf<span class="w"> </span>mc<span class="w"> </span>&lt;enter&gt;
 </code></pre></div>
 <p>You should see a popup window and a bunch of stuff scroll by in the
 console.</p>
 <h2 id="starting-the-mpf-game-engine">Starting the MPF game engine</h2>
 <p>You can run the MPF game engine by itself (no media controller) by running:</p>
-<div class="highlight"><pre><span></span><code><span class="go">mpf &lt;enter&gt;</span>
+<div class="highlight"><pre><span></span><code>mpf<span class="w"> </span>&lt;enter&gt;
 </code></pre></div>
 <p>Note that if you do not have a media controller running, the game engine
 won't start fully because it will get stuck trying to connect to the
@@ -47950,11 +47950,11 @@ by itself, add the <code>-b</code> command line option. (Details below)</p>
 <p>There are several command-like options you can use when you run MPF. To
 use them, add them <em>after</em> the name of the MPF command you're running,
 like:</p>
-<div class="highlight"><pre><span></span><code><span class="go">mpf -x -v</span>
+<div class="highlight"><pre><span></span><code>mpf<span class="w"> </span>-x<span class="w"> </span>-v
 
-<span class="go">mpf mc -xvV</span>
+mpf<span class="w"> </span>mc<span class="w"> </span>-xvV
 
-<span class="go">mpf both -v -b</span>
+mpf<span class="w"> </span>both<span class="w"> </span>-v<span class="w"> </span>-b
 </code></pre></div>
 <p>The full list of available commands is covered in the documentation for
 each command (discussed below). For a list of all the 'mpf game' command-line options, see <a href="commands/game/">C</a>.</p>

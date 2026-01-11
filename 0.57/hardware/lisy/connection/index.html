@@ -48206,16 +48206,16 @@ job. Once connected to the host computer, it will (hopefully) identify a
 new serial device. This is usually <code>COMX</code> on windows:</p>
 <p><img alt="image" src="../../images/lisy_windows_com_port.png"></p>
 <p>Or <code>/dev/ttyACMX</code> on Linux:</p>
-<div class="highlight"><pre><span></span><code><span class="go">dmesg</span>
+<div class="highlight"><pre><span></span><code>dmesg
 
-<span class="go">usb 1-3: new high-speed USB device number 11 using ehci-pci</span>
-<span class="go">usb 1-3: New USB device found, idVendor=0525, idProduct=a4a7</span>
-<span class="go">usb 1-3: New USB device strings: Mfr=1, Product=2, SerialNumber=0</span>
-<span class="go">usb 1-3: Product: Gadget Serial v2.4</span>
-<span class="go">usb 1-3: Manufacturer: Linux 4.4.50+ with 20980000.usb</span>
-<span class="go">cdc_acm 1-3:2.0: ttyACM0: USB ACM device</span>
-<span class="go">usbcore: registered new interface driver cdc_acm</span>
-<span class="go">cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters</span>
+usb<span class="w"> </span><span class="m">1</span>-3:<span class="w"> </span>new<span class="w"> </span>high-speed<span class="w"> </span>USB<span class="w"> </span>device<span class="w"> </span>number<span class="w"> </span><span class="m">11</span><span class="w"> </span>using<span class="w"> </span>ehci-pci
+usb<span class="w"> </span><span class="m">1</span>-3:<span class="w"> </span>New<span class="w"> </span>USB<span class="w"> </span>device<span class="w"> </span>found,<span class="w"> </span><span class="nv">idVendor</span><span class="o">=</span><span class="m">0525</span>,<span class="w"> </span><span class="nv">idProduct</span><span class="o">=</span>a4a7
+usb<span class="w"> </span><span class="m">1</span>-3:<span class="w"> </span>New<span class="w"> </span>USB<span class="w"> </span>device<span class="w"> </span>strings:<span class="w"> </span><span class="nv">Mfr</span><span class="o">=</span><span class="m">1</span>,<span class="w"> </span><span class="nv">Product</span><span class="o">=</span><span class="m">2</span>,<span class="w"> </span><span class="nv">SerialNumber</span><span class="o">=</span><span class="m">0</span>
+usb<span class="w"> </span><span class="m">1</span>-3:<span class="w"> </span>Product:<span class="w"> </span>Gadget<span class="w"> </span>Serial<span class="w"> </span>v2.4
+usb<span class="w"> </span><span class="m">1</span>-3:<span class="w"> </span>Manufacturer:<span class="w"> </span>Linux<span class="w"> </span><span class="m">4</span>.4.50+<span class="w"> </span>with<span class="w"> </span><span class="m">20980000</span>.usb
+cdc_acm<span class="w"> </span><span class="m">1</span>-3:2.0:<span class="w"> </span>ttyACM0:<span class="w"> </span>USB<span class="w"> </span>ACM<span class="w"> </span>device
+usbcore:<span class="w"> </span>registered<span class="w"> </span>new<span class="w"> </span>interface<span class="w"> </span>driver<span class="w"> </span>cdc_acm
+cdc_acm:<span class="w"> </span>USB<span class="w"> </span>Abstract<span class="w"> </span>Control<span class="w"> </span>Model<span class="w"> </span>driver<span class="w"> </span><span class="k">for</span><span class="w"> </span>USB<span class="w"> </span>modems<span class="w"> </span>and<span class="w"> </span>ISDN<span class="w"> </span>adapters
 </code></pre></div>
 <h3 id="network-mode">Network mode</h3>
 <p>Alternatively, if you want to connect using WiFi or Ethernet, add/update

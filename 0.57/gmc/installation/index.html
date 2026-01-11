@@ -17890,6 +17890,17 @@ icons & this code generated via https://realfavicongenerator.net
 </li>
       
         <li class="md-nav__item">
+  <a href="#latest-versions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Latest Versions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#install-mpf-080" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -17901,10 +17912,10 @@ icons & this code generated via https://realfavicongenerator.net
 </li>
       
         <li class="md-nav__item">
-  <a href="#download-godot-4" class="md-nav__link">
+  <a href="#download-godot-45" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Download Godot 4
+        Download Godot 4.5+
       
     </span>
   </a>
@@ -17963,10 +17974,10 @@ icons & this code generated via https://realfavicongenerator.net
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#simplest-installation-godot-asset-library" class="md-nav__link">
+  <a href="#simplest-installation-godot-asset-library-coming-soon" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Simplest Installation: Godot Asset Library
+        Simplest Installation: Godot Asset Library (coming soon!)
       
     </span>
   </a>
@@ -48030,6 +48041,17 @@ icons & this code generated via https://realfavicongenerator.net
 </li>
       
         <li class="md-nav__item">
+  <a href="#latest-versions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Latest Versions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#install-mpf-080" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -48041,10 +48063,10 @@ icons & this code generated via https://realfavicongenerator.net
 </li>
       
         <li class="md-nav__item">
-  <a href="#download-godot-4" class="md-nav__link">
+  <a href="#download-godot-45" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Download Godot 4
+        Download Godot 4.5+
       
     </span>
   </a>
@@ -48103,10 +48125,10 @@ icons & this code generated via https://realfavicongenerator.net
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#simplest-installation-godot-asset-library" class="md-nav__link">
+  <a href="#simplest-installation-godot-asset-library-coming-soon" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Simplest Installation: Godot Asset Library
+        Simplest Installation: Godot Asset Library (coming soon!)
       
     </span>
   </a>
@@ -48223,14 +48245,24 @@ icons & this code generated via https://realfavicongenerator.net
 <h2 id="upgrading-a-legacy-mpf-mc-project-on-0573-to-gmc">Upgrading a Legacy MPF-MC project (on 0.57.3) to GMC</h2>
 <p>For details regarding updating an existing project built on the 0.57 and earlier Media Controller (MPF-MC), see the
 <a href="../../install/0.80/">Migrating to MPF 0.80 and Godot GMC</a>.</p>
+<h2 id="latest-versions">Latest Versions</h2>
+<p>If you are creating a new game and are installing all of the MPF tools from scratch, you should start with the most up-to-date versions of everything you can. This will ensure you have the latest features and bug fixes, and are the easiest for the community to support.
+The most updated full installation (known-working on Windows and Linux) as of January 2026 is:</p>
+<ul>
+<li>Python 3.13</li>
+<li>MPF 0.80.0.dev11 *(via pip --pre option)</li>
+<li>MPF-GMC 0.1.6 *(via manual copy or repository symlink)</li>
+<li>Godot Editor 4.5 *(and no mpf-mc install!)</li>
+<li>MPF Monitor 0.57.2</li>
+</ul>
 <h2 id="install-mpf-080">Install MPF 0.80</h2>
 <p>Before you get working with GMC, you need to install MPF 0.80 by following the <a href="../../install/">MPF Installation Guide</a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Upgrade is available</p>
 <p>If you already have a working MPF 0.57 installation, you can upgrade to MPF 0.80 with the command <code>pip install --upgrade --pre mpf</code>. However, to maintain the option of reverting back to 0.57 it's recommended to create a new, separate virtual enviroment for MPF 0.80 and install it there.</p>
 </div>
-<h2 id="download-godot-4">Download Godot 4</h2>
-<p>The Godot Media Controller is built on the Godot game engine. Visit <a href="https://godotengine.org">https://godotengine.org</a> to download the latest version of the Godot Editor (4.2 or later) and place it wherever you typically keep applications on your machine (not in your game project folder).</p>
+<h2 id="download-godot-45">Download Godot 4.5+</h2>
+<p>The Godot Media Controller is built on the Godot game engine. Visit <a href="https://godotengine.org">https://godotengine.org</a> to download the latest version of the Godot Editor (4.5 or later) and place it wherever you typically keep applications on your machine (not in your game project folder).</p>
 <p>After Godot is installed, open the editor and create a New Project. Select your MPF game project folder as the project path, and choose an appropriate render engine.</p>
 <p>For most pinball games, <em>Mobile</em> rendering is the recommended balance between performance and featureset. If you plan to do advanced 3D graphics and complex rendering, choose <em>Forward+</em>. If you want to optimize your game to run on very low-powered hardware with limited rendering features, choose <em>Compatibility</em>. Note that you can change this setting at any time, so don't stress about it :)</p>
 <p>Finally, in your Godot game project folder create a new folder called <em>addons</em> (Note that if your Godot project folder is not your MPF project folder, the addons should be in the Godot folder).</p>
@@ -48254,8 +48286,10 @@ icons & this code generated via https://realfavicongenerator.net
 <li>If you use an external text editor like VS Code or Atom, in the <em>Files</em> section <strong>enable</strong> the option <code>Auto Reload Scripts on External Change</code>.</li>
 </ul>
 <h2 id="install-the-gmc-plugin">Install the GMC Plugin</h2>
-<h3 id="simplest-installation-godot-asset-library">Simplest Installation: Godot Asset Library</h3>
-<p>The Godot editor features a built-in library of plugins that you can download and install with a single click.</p>
+<h3 id="simplest-installation-godot-asset-library-coming-soon">Simplest Installation: Godot Asset Library (coming soon!)</h3>
+<p>The latest development release of MPF (0.80.0.dev11) requires GMC plugin version 0.1.6, which is not yet available on the Asset Library.
+While we prepare for official release of MPF 0.80.0, we recommend the Standard or Expert installations, seen below.</p>
+<p>The Godot editor features the Asset Library, a built-in library of plugins that you can download and install with a click.</p>
 <p>In the Godot editor, select <strong>AssetLib</strong> from the top center selector. You may need to enable online access to the asset library when prompted. Search for "GMC" and click on the GMC asset to download and install.</p>
 <h3 id="standard-installation-download-copy">Standard Installation: Download &amp; Copy</h3>
 <p>You can download the GMC plugin from the MPF-GMC repository on GitHub. Visit https://github.com/missionpinball/mpf-gmc and click on the green <strong>Code</strong> button to show the Code dropdown, and select <em>Download ZIP</em> to download the plugin.</p>
@@ -48267,7 +48301,7 @@ icons & this code generated via https://realfavicongenerator.net
 </div>
 <h3 id="expert-installation-local-repository-mpf-gmc">Expert Installation: Local Repository (MPF-GMC)</h3>
 <p>For complete control, you can clone the MPF-GMC repository to your computer and run it directly. First, open a terminal window to the directory where you keep your Git repositories, and then clone:</p>
-<div class="highlight"><pre><span></span><code><span class="go">    git clone https://github.com/missionpinball/mpf-gmc</span>
+<div class="highlight"><pre><span></span><code><span class="w">    </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/missionpinball/mpf-gmc
 </code></pre></div>
 <p>You now have a copy of the MPF-GMC source code on your machine, and you need to share it with your Godot project. To update GMC, go to the repository folder in your terminal and type <code>git fetch</code> and <code>git pull</code>.</p>
 <h4 id="option-1-symbolic-links">Option 1: Symbolic Links</h4>
@@ -48275,19 +48309,19 @@ icons & this code generated via https://realfavicongenerator.net
 <p>You will create a symbolic link <em>mpf-gmc</em> in your project <em>/addons</em> folder that points to the <em>mpf-gmc</em> folder in the GMC repository.</p>
 <p><strong>Mac &amp; Linux</strong></p>
 <p>The syntax is <code>sudo ln -s &lt;path to GMC repository/addons/mpf-gmc&gt; &lt;path to project folder/addons/mpf-gmc&gt;</code>, and will look something like this:</p>
-<div class="highlight"><pre><span></span><code><span class="go">  (mpf080) $&gt; sudo ln -s /Users/tommy/git/mpf-gmc/addons/mpf-gmc /Users/tommy/pinballgame/addons/mpf-gmc</span>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="o">(</span>mpf080<span class="o">)</span><span class="w"> </span>$&gt;<span class="w"> </span>sudo<span class="w"> </span>ln<span class="w"> </span>-s<span class="w"> </span>/Users/tommy/git/mpf-gmc/addons/mpf-gmc<span class="w"> </span>/Users/tommy/pinballgame/addons/mpf-gmc
 </code></pre></div>
 <p>When successful, you should see a new <em>mpf-gmc</em> folder in the <em>addons</em> folder you just created. You can confirm that the folder is a symbolic link with the <code>ls -la</code> command, which will show the path that the symbolic link points to.</p>
-<div class="highlight"><pre><span></span><code><span class="go">  (mpf080) pinballgame $&gt; ls -la addons</span>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="o">(</span>mpf080<span class="o">)</span><span class="w"> </span>pinballgame<span class="w"> </span>$&gt;<span class="w"> </span>ls<span class="w"> </span>-la<span class="w"> </span>addons
 
-<span class="go">  total 0</span>
-<span class="go">  drwxr-xr-x    96 Apr  8 19:09 .</span>
-<span class="go">  drwxr-xr-x  1024 May  6 12:30 ..</span>
-<span class="go">  lrwxr-xr-x    41 Apr  8 19:09 mpf-gmc -&gt; /Users/tommy/git/mpf-gmc/addons/mpf-gmc</span>
+<span class="w">  </span>total<span class="w"> </span><span class="m">0</span>
+<span class="w">  </span>drwxr-xr-x<span class="w">    </span><span class="m">96</span><span class="w"> </span>Apr<span class="w">  </span><span class="m">8</span><span class="w"> </span><span class="m">19</span>:09<span class="w"> </span>.
+<span class="w">  </span>drwxr-xr-x<span class="w">  </span><span class="m">1024</span><span class="w"> </span>May<span class="w">  </span><span class="m">6</span><span class="w"> </span><span class="m">12</span>:30<span class="w"> </span>..
+<span class="w">  </span>lrwxr-xr-x<span class="w">    </span><span class="m">41</span><span class="w"> </span>Apr<span class="w">  </span><span class="m">8</span><span class="w"> </span><span class="m">19</span>:09<span class="w"> </span>mpf-gmc<span class="w"> </span>-&gt;<span class="w"> </span>/Users/tommy/git/mpf-gmc/addons/mpf-gmc
 </code></pre></div>
 <p><strong>Windows</strong></p>
 <p>The syntax is <code>mklink /d &lt;path to project folder/addons/mpf-gmc&gt; &lt;path to GMC repository/addons/mpf-gmc&gt;</code> and will look something like this:</p>
-<div class="highlight"><pre><span></span><code><span class="go">  (mpf080) $&gt; mklink /d "C:\repos\pinballgame\addons\mpf-gmc" "C:\repos\mpf-gmc\addons\mpf-gmc"</span>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="o">(</span>mpf080<span class="o">)</span><span class="w"> </span>$&gt;<span class="w"> </span>mklink<span class="w"> </span>/d<span class="w"> </span><span class="s2">"C:\repos\pinballgame\addons\mpf-gmc"</span><span class="w"> </span><span class="s2">"C:\repos\mpf-gmc\addons\mpf-gmc"</span>
 </code></pre></div>
 <h4 id="option-2-copy-the-mpf-gmc-folder">Option 2: Copy the MPF-GMC Folder</h4>
 <p>If you do not create a symbolic link, you can manually copy the <em>mpf-gmc</em> folder from the GMC repository <em>/addons</em> folder to your Godot project <em>addons</em> folder. You'll know it's in the right place if your Godot project root (in this example, "pinballgame") has the file path <code>/pinballgame/addons/mpf-gmc/plugin.cfg</code>.</p>
@@ -48296,9 +48330,9 @@ icons & this code generated via https://realfavicongenerator.net
 <p>MPF-GMC is in active development and changes frequently, including new features, fixes, and other changes. In order to ensure that you are experiencing the latest and greatest, please ensure that you periodically run the following commands to get the changes to both projects. Once they are pulled into your local copy, you will immediately have access to the new features in building your game.</p>
 <p>If you downloaded MPF-GMC as a ZIP file from GitHub, follow those steps again and replace the old <em>addons/mpf-gmc</em> folder with the newly downloaded one.</p>
 <p>If you cloned the MPF-GMC repository, you need to fetch and pull:</p>
-<div class="highlight"><pre><span></span><code><span class="go">  (mpf080) ~/git $&gt; cd mpf-gmc</span>
-<span class="go">  (mpf080) ~/git/mpf-gmc $&gt; git fetch</span>
-<span class="go">  (mpf080) ~/git/mpf-gmc $&gt; git pull</span>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="o">(</span>mpf080<span class="o">)</span><span class="w"> </span>~/git<span class="w"> </span>$&gt;<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>mpf-gmc
+<span class="w">  </span><span class="o">(</span>mpf080<span class="o">)</span><span class="w"> </span>~/git/mpf-gmc<span class="w"> </span>$&gt;<span class="w"> </span>git<span class="w"> </span>fetch
+<span class="w">  </span><span class="o">(</span>mpf080<span class="o">)</span><span class="w"> </span>~/git/mpf-gmc<span class="w"> </span>$&gt;<span class="w"> </span>git<span class="w"> </span>pull
 </code></pre></div>
 <p><strong>Symlink Users:</strong> If you are using a symlink to mirror the <em>mpf-gmc</em> folder in your project <em>addons</em> folder, the above steps are enough.</p>
 <p><strong>Copy+Paste Users:</strong> If you have copy+pasted the <em>mpf-gmc</em> folder from the GMC repository to your project <em>addons</em> folder, you will need to re-copy+paste the folder after you fetch and pull.</p>

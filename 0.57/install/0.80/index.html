@@ -855,6 +855,17 @@ icons & this code generated via https://realfavicongenerator.net
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#latest-versions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Latest Versions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#list-of-required-changes" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -18933,6 +18944,17 @@ icons & this code generated via https://realfavicongenerator.net
       On this page
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#latest-versions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Latest Versions
+      
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#list-of-required-changes" class="md-nav__link">
@@ -48254,6 +48276,17 @@ icons & this code generated via https://realfavicongenerator.net
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#latest-versions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Latest Versions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#list-of-required-changes" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -48457,10 +48490,20 @@ icons & this code generated via https://realfavicongenerator.net
 
 
 <h1 id="migrating-to-mpf-080-and-godot-gmc-gmc-pre-release">Migrating to MPF 0.80 and Godot GMC (GMC pre-release)</h1>
-<p><em>Last updated Sept 22, 2025</em></p>
-<p>The upcoming release of MPF is 0.80, which includes support for the Godot Media Controller (GMC) and drops support for the 0.57 Kivy-based Media Controller (MC).</p>
+<p><em>Last updated Jan 11, 2026</em></p>
+<p>The upcoming release of MPF is 0.80, which includes support for the Godot Media Controller (GMC) and drops support for the 0.57 Kivy-based Media Controller (MC). In preparation for full release, we recommend upgrading existing 0.80 projects to the latest dev version, <code>0.80.0.dev11</code>.</p>
 <p>While there are not many functional changes in MPF between 0.57 and 0.80, there are some config file migrations necessary and this document will help you through that.</p>
 <p><em>See also: <a href="../../gmc/installation/">Installing MPF 0.80 and the GMC</a></em></p>
+<h2 id="latest-versions">Latest Versions</h2>
+<p>If you are creating a new game and are installing all of the MPF tools from scratch, you should start with the most up-to-date versions of everything you can. This will ensure you have the latest features and bug fixes, and are the easiest for the community to support.
+The most updated full installation (known-working on Windows and Linux) as of January 2026 is:</p>
+<ul>
+<li>Python 3.13</li>
+<li>MPF 0.80.0.dev11 *(via pip --pre option)</li>
+<li>MPF-GMC 0.1.6 *(via manual copy or repository symlink)</li>
+<li>Godot Editor 4.5 *(and no mpf-mc install!)</li>
+<li>MPF Monitor 0.57.2</li>
+</ul>
 <h2 id="list-of-required-changes">List of Required Changes</h2>
 <h3 id="mpf-and-gmc-version-compatibility">MPF and GMC version compatibility</h3>
 <p>MPF (as of <code>0.80.0.dev9</code>) contains code to check whether the installed GMC version is compatible. 0.80.0.dev9 is the first version to check this, and it requires GMC version 0.1.5 or greater.</p>
@@ -48484,10 +48527,10 @@ icons & this code generated via https://realfavicongenerator.net
 <p>In your bonus.yaml config section, change each entry from <code>event: bonus_item_name</code> to <code>entry: bonus_item_name</code>.</p>
 <p>With this change, given a bonus entry named "completed_ramps" that was hit 3 times for a score of 3000:</p>
 <p><strong>MPF 0.57 Event:</strong>
-</p><div class="highlight"><pre><span></span><code><span class="go">completed_ramps{hits=3, score=3000}</span>
+</p><div class="highlight"><pre><span></span><code>completed_ramps<span class="o">{</span><span class="nv">hits</span><span class="o">=</span><span class="m">3</span>,<span class="w"> </span><span class="nv">score</span><span class="o">=</span><span class="m">3000</span><span class="o">}</span>
 </code></pre></div><p></p>
 <p><strong>MPF 0.80 Event:</strong>
-</p><div class="highlight"><pre><span></span><code><span class="go">bonus_entry{entry="completed_ramps", hits=3, score=3000}</span>
+</p><div class="highlight"><pre><span></span><code>bonus_entry<span class="o">{</span><span class="nv">entry</span><span class="o">=</span><span class="s2">"completed_ramps"</span>,<span class="w"> </span><span class="nv">hits</span><span class="o">=</span><span class="m">3</span>,<span class="w"> </span><span class="nv">score</span><span class="o">=</span><span class="m">3000</span><span class="o">}</span>
 </code></pre></div><p></p>
 <h4 id="bonus-default-slide">Bonus default slide</h4>
 <p>A default Godot slide for the bonus mode has been provided. You may duplicate this slide to your own slides folder to use as a base for
@@ -48496,10 +48539,10 @@ your own layout and customization.</p>
 <p>Carousel events have changed to use a consolidated <em>carousel_item_highlighted</em> and <em>carousel_item_selected</em> event instead of unique events for each item.</p>
 <p>Given a carousel mode "missionselect" and an item "garrus":</p>
 <p><strong>MPF 0.57 Event:</strong>
-</p><div class="highlight"><pre><span></span><code><span class="go">missionselect_garrus_highlighted{direction="forwards"}</span>
+</p><div class="highlight"><pre><span></span><code>missionselect_garrus_highlighted<span class="o">{</span><span class="nv">direction</span><span class="o">=</span><span class="s2">"forwards"</span><span class="o">}</span>
 </code></pre></div><p></p>
 <p><strong>MPF 0.80 Event:</strong>
-</p><div class="highlight"><pre><span></span><code><span class="go">carousel_item_highlighted{carousel="missionselect", item="garrus", direction="forwards"}</span>
+</p><div class="highlight"><pre><span></span><code>carousel_item_highlighted<span class="o">{</span><span class="nv">carousel</span><span class="o">=</span><span class="s2">"missionselect"</span>,<span class="w"> </span><span class="nv">item</span><span class="o">=</span><span class="s2">"garrus"</span>,<span class="w"> </span><span class="nv">direction</span><span class="o">=</span><span class="s2">"forwards"</span><span class="o">}</span>
 </code></pre></div><p></p>
 <p>The new <em>carousel_item_highlighted</em> event is incorporated into GMC, but if you have other custom event handlers for carousel item selection those will need to be updated.</p>
 <h3 id="high-score-entryaward-mode">High Score Entry/Award Mode</h3>

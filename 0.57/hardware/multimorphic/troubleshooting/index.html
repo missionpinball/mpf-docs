@@ -48340,10 +48340,10 @@ cables). Try removing USB hubs.</p>
 your power supply.</p>
 <h2 id="importerror-in-mpf-log">ImportError in MPF Log</h2>
 <p>If you see something along this in your log:</p>
-<div class="highlight"><pre><span></span><code><span class="go">in &lt;module&gt;</span>
-<span class="go">   from mpf.platform.pinproc.x86.python36 import pinproc</span>
+<div class="highlight"><pre><span></span><code><span class="k">in</span><span class="w"> </span>&lt;module&gt;
+<span class="w">   </span>from<span class="w"> </span>mpf.platform.pinproc.x86.python36<span class="w"> </span>import<span class="w"> </span>pinproc
 
-<span class="go">ImportError: DLL load failed: The specified module could not be found</span>
+ImportError:<span class="w"> </span>DLL<span class="w"> </span>load<span class="w"> </span>failed:<span class="w"> </span>The<span class="w"> </span>specified<span class="w"> </span>module<span class="w"> </span>could<span class="w"> </span>not<span class="w"> </span>be<span class="w"> </span>found
 </code></pre></div>
 <p>This usually means that the FTDI libs are not installed in the correct
 version. On Linux pinproc might not be installed at all. On Windows
@@ -48352,15 +48352,15 @@ the correct version. Have a look a the
 <a href="../hardware_drivers/">install instructions for your OS</a> to find and install the correct requirements.</p>
 <h2 id="failed-to-reset-pp3-roc">Failed to reset P/P3-Roc</h2>
 <p>If you see this repeatedly in the log of MPF:</p>
-<div class="highlight"><pre><span></span><code><span class="go">Failed to reset P/P3-Roc: OSError: Error in WriteData: wrote 0 of 8 bytes. Is your P/P3-Roc connected and powered up?</span>
-<span class="go">Will retry creating PinPROC and resetting it in 1s.</span>
+<div class="highlight"><pre><span></span><code>Failed<span class="w"> </span>to<span class="w"> </span>reset<span class="w"> </span>P/P3-Roc:<span class="w"> </span>OSError:<span class="w"> </span>Error<span class="w"> </span><span class="k">in</span><span class="w"> </span>WriteData:<span class="w"> </span>wrote<span class="w"> </span><span class="m">0</span><span class="w"> </span>of<span class="w"> </span><span class="m">8</span><span class="w"> </span>bytes.<span class="w"> </span>Is<span class="w"> </span>your<span class="w"> </span>P/P3-Roc<span class="w"> </span>connected<span class="w"> </span>and<span class="w"> </span>powered<span class="w"> </span>up?
+Will<span class="w"> </span>retry<span class="w"> </span>creating<span class="w"> </span>PinPROC<span class="w"> </span>and<span class="w"> </span>resetting<span class="w"> </span>it<span class="w"> </span><span class="k">in</span><span class="w"> </span>1s.
 </code></pre></div>
 <p>This usually means that the P/P3-Roc is either not powered up or not
 connected.</p>
 <h2 id="random-crashes-of-mpf">Random Crashes of MPF</h2>
 <p>You might see errors such as the following (usually in
 <code>p_roc_common.py</code>):</p>
-<div class="highlight"><pre><span></span><code><span class="go">OSError: Error in WriteData: wrote 0 of 8 bytes</span>
+<div class="highlight"><pre><span></span><code>OSError:<span class="w"> </span>Error<span class="w"> </span><span class="k">in</span><span class="w"> </span>WriteData:<span class="w"> </span>wrote<span class="w"> </span><span class="m">0</span><span class="w"> </span>of<span class="w"> </span><span class="m">8</span><span class="w"> </span>bytes
 </code></pre></div>
 <p>This error is triggered by communication issues with the P/P3-Roc. Often
 this is caused by an unreliable power supply or overload on the 5V rail
@@ -48371,13 +48371,13 @@ system which might give you further clues.</p>
 <p>Using <code>mpf hardware scan</code> you can find out if your P/P3-Roc is talking
 properly to MPF using USB. Additionally, it will show you which <code>SW-16</code>
 are connected:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>mpf<span class="w"> </span>hardware<span class="w"> </span>scan
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>mpf<span class="w"> </span>hardware<span class="w"> </span>scan
 
-<span class="go">Firmware Version: 2 Firmware Revision: 6 Hardware Board ID: 1</span>
-<span class="go">SW-16 boards found:</span>
-<span class="go"> - Board: 0 Switches: 16 Device Type: A3 Board ID: 0</span>
-<span class="go"> - Board: 1 Switches: 16 Device Type: A3 Board ID: 1</span>
-<span class="go"> - Board: 2 Switches: 16 Device Type: A4 Board ID: 2</span>
+Firmware<span class="w"> </span>Version:<span class="w"> </span><span class="m">2</span><span class="w"> </span>Firmware<span class="w"> </span>Revision:<span class="w"> </span><span class="m">6</span><span class="w"> </span>Hardware<span class="w"> </span>Board<span class="w"> </span>ID:<span class="w"> </span><span class="m">1</span>
+SW-16<span class="w"> </span>boards<span class="w"> </span>found:
+<span class="w"> </span>-<span class="w"> </span>Board:<span class="w"> </span><span class="m">0</span><span class="w"> </span>Switches:<span class="w"> </span><span class="m">16</span><span class="w"> </span>Device<span class="w"> </span>Type:<span class="w"> </span>A3<span class="w"> </span>Board<span class="w"> </span>ID:<span class="w"> </span><span class="m">0</span>
+<span class="w"> </span>-<span class="w"> </span>Board:<span class="w"> </span><span class="m">1</span><span class="w"> </span>Switches:<span class="w"> </span><span class="m">16</span><span class="w"> </span>Device<span class="w"> </span>Type:<span class="w"> </span>A3<span class="w"> </span>Board<span class="w"> </span>ID:<span class="w"> </span><span class="m">1</span>
+<span class="w"> </span>-<span class="w"> </span>Board:<span class="w"> </span><span class="m">2</span><span class="w"> </span>Switches:<span class="w"> </span><span class="m">16</span><span class="w"> </span>Device<span class="w"> </span>Type:<span class="w"> </span>A4<span class="w"> </span>Board<span class="w"> </span>ID:<span class="w"> </span><span class="m">2</span>
 </code></pre></div>
 <p>Unfortunately, MPF cannot know which <code>PD-16</code> or <code>PD-LED</code> are connected
 as this information is not available. See
@@ -48569,8 +48569,8 @@ know it is stupid but a loose USB connector has happened to most of us.</p>
 <p>On Linux you might want to run the command <code>lsusb</code> which should show
 both of your micro controllers connected. You should see two lines
 similar to</p>
-<div class="highlight"><pre><span></span><code><span class="go">Bus 002 Device 014: ID 0483:5740 STMicroelectronics Virtual COM Port</span>
-<span class="go">Bus 002 Device 015: ID 0483:5740 STMicroelectronics Virtual COM Port</span>
+<div class="highlight"><pre><span></span><code>Bus<span class="w"> </span><span class="m">002</span><span class="w"> </span>Device<span class="w"> </span><span class="m">014</span>:<span class="w"> </span>ID<span class="w"> </span><span class="m">0483</span>:5740<span class="w"> </span>STMicroelectronics<span class="w"> </span>Virtual<span class="w"> </span>COM<span class="w"> </span>Port
+Bus<span class="w"> </span><span class="m">002</span><span class="w"> </span>Device<span class="w"> </span><span class="m">015</span>:<span class="w"> </span>ID<span class="w"> </span><span class="m">0483</span>:5740<span class="w"> </span>STMicroelectronics<span class="w"> </span>Virtual<span class="w"> </span>COM<span class="w"> </span>Port
 </code></pre></div>
 <p>If you are unsure about the output, run the command once with your
 controllers connected and once without. If there is no difference, then

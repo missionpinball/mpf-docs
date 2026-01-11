@@ -48135,10 +48135,10 @@ up logic which fires when any device with a certain tag is activated, for exampl
 </code></pre></div>
 <p>In this case, whenever the start switch is activated, there will be two
 events fired. You will see something like this in the log:</p>
-<div class="highlight"><pre><span></span><code><span class="go">2018-09-26 20:32:14,215 : INFO : EventManager : Event: ======'sw_start'====== Args={}</span>
-<span class="go">2018-09-26 20:32:14,215 : INFO : EventManager : Event: ======'sw_start_active'====== Args={}</span>
-<span class="go">2018-09-26 20:32:14,215 : INFO : EventManager : Event: ======'sw_skyfall'====== Args={}</span>
-<span class="go">2018-09-26 20:32:14,215 : INFO : EventManager : Event: ======'sw_skyfall_active'====== Args={}</span>
+<div class="highlight"><pre><span></span><code><span class="m">2018</span>-09-26<span class="w"> </span><span class="m">20</span>:32:14,215<span class="w"> </span>:<span class="w"> </span>INFO<span class="w"> </span>:<span class="w"> </span>EventManager<span class="w"> </span>:<span class="w"> </span>Event:<span class="w"> </span><span class="o">======</span><span class="s1">'sw_start'</span><span class="o">======</span><span class="w"> </span><span class="nv">Args</span><span class="o">={}</span>
+<span class="m">2018</span>-09-26<span class="w"> </span><span class="m">20</span>:32:14,215<span class="w"> </span>:<span class="w"> </span>INFO<span class="w"> </span>:<span class="w"> </span>EventManager<span class="w"> </span>:<span class="w"> </span>Event:<span class="w"> </span><span class="o">======</span><span class="s1">'sw_start_active'</span><span class="o">======</span><span class="w"> </span><span class="nv">Args</span><span class="o">={}</span>
+<span class="m">2018</span>-09-26<span class="w"> </span><span class="m">20</span>:32:14,215<span class="w"> </span>:<span class="w"> </span>INFO<span class="w"> </span>:<span class="w"> </span>EventManager<span class="w"> </span>:<span class="w"> </span>Event:<span class="w"> </span><span class="o">======</span><span class="s1">'sw_skyfall'</span><span class="o">======</span><span class="w"> </span><span class="nv">Args</span><span class="o">={}</span>
+<span class="m">2018</span>-09-26<span class="w"> </span><span class="m">20</span>:32:14,215<span class="w"> </span>:<span class="w"> </span>INFO<span class="w"> </span>:<span class="w"> </span>EventManager<span class="w"> </span>:<span class="w"> </span>Event:<span class="w"> </span><span class="o">======</span><span class="s1">'sw_skyfall_active'</span><span class="o">======</span><span class="w"> </span><span class="nv">Args</span><span class="o">={}</span>
 </code></pre></div>
 <p>Both events are prefixed with <code>sw_</code> as a default. You can override this
 with the <a href="../../mpf/">mpf:</a> section.</p>

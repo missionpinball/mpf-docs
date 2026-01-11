@@ -47988,25 +47988,25 @@ and how to selectively enable debugging.</p>
 <h2 id="1-run-mpf-without-text-ui">1. Run MPF without text ui</h2>
 <p>The text ui which is shown by default may hide some errors and make
 troubleshooting more difficult. To disable text ui run mpf using:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>mpf<span class="w"> </span>both<span class="w"> </span>-t
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>mpf<span class="w"> </span>both<span class="w"> </span>-t
 </code></pre></div>
 <p>This will just show the log on the console. If some crashes occur this
 might reveal them as the text ui sometimes hides them.</p>
 <h2 id="2-start-mpf-and-mpf-mc-separately">2. Start MPF and MPF-MC separately</h2>
 <p>If MPF and MPF-MC logs mix up too much you can start them separately:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>mpf<span class="w"> </span>game<span class="w"> </span>-t
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>mpf<span class="w"> </span>game<span class="w"> </span>-t
 </code></pre></div>
 <p>And in another console:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>mpf<span class="w"> </span>mc
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>mpf<span class="w"> </span>mc
 </code></pre></div>
 <p>This might help you to find out where a crash or error is originating
 from.</p>
 <h2 id="3-increase-log-verbosity">3. Increase Log Verbosity</h2>
 <p>If you experience problems you should increase verbosity:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>mpf<span class="w"> </span>game<span class="w"> </span>-t<span class="w"> </span>-v<span class="w"> </span>-V
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>mpf<span class="w"> </span>game<span class="w"> </span>-t<span class="w"> </span>-v<span class="w"> </span>-V
 </code></pre></div>
 <p>Start MPF-MC in a separate console:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>mpf<span class="w"> </span>mc<span class="w"> </span>-v<span class="w"> </span>-V
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>mpf<span class="w"> </span>mc<span class="w"> </span>-v<span class="w"> </span>-V
 </code></pre></div>
 <p>(This will also work with <code>mpf both -t -v -V</code>).</p>
 <p>Scroll up in the console to find the error which was emitted.</p>

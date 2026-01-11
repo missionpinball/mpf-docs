@@ -48081,14 +48081,14 @@ recommend to disable/remove it after finishing debugging.</p>
 open a shell to your serial port (the one connected to your Spike).
 Stick some USB drive to a USB port on Spike and mount it to <code>/mnt/</code>.</p>
 <p>If you USB drive contains a partition use:</p>
-<div class="highlight"><pre><span></span><code><span class="go">mount /dev/sda1 /mnt</span>
+<div class="highlight"><pre><span></span><code>mount<span class="w"> </span>/dev/sda1<span class="w"> </span>/mnt
 </code></pre></div>
 <p>Alternatively use:</p>
-<div class="highlight"><pre><span></span><code><span class="go">mount /dev/sda /mnt</span>
+<div class="highlight"><pre><span></span><code>mount<span class="w"> </span>/dev/sda<span class="w"> </span>/mnt
 </code></pre></div>
 <p>If you did not get an error your operation succeeded. You can have a
 look at the content of your stick using:</p>
-<div class="highlight"><pre><span></span><code><span class="go">ls /mnt</span>
+<div class="highlight"><pre><span></span><code>ls<span class="w"> </span>/mnt
 </code></pre></div>
 <p>Afterwards, add the following options to your spike config:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">spike</span><span class="p">:</span>
@@ -48101,8 +48101,8 @@ create a log file on your USB drive with more debug information about
 the nodebus and other things. This will be helpful to find issues with
 incorrect commands or responses.</p>
 <p>To safely unmount your drive stop MPF, open the console again and type:</p>
-<div class="highlight"><pre><span></span><code><span class="go">umount /mnt</span>
-<span class="go">sync</span>
+<div class="highlight"><pre><span></span><code>umount<span class="w"> </span>/mnt
+sync
 </code></pre></div>
 <p>You can now safely remove the USB drive and download the file on your
 PC.</p>
@@ -48120,16 +48120,16 @@ binary</a>
 and put it on your USB drive. Mount the USB drive as above and run the
 following command:</p>
 <h3 id="spike-1">Spike 1</h3>
-<div class="highlight"><pre><span></span><code><span class="go">cd /mnt &amp;&amp; chmod +x interceptty-arm</span>
-<span class="go">mv /dev/ttyS4 /dev/ttyS4_real; interceptty-arm -s 'ispeed 460800 ospeed 460800' -l /dev/ttyS4_real /dev/ttyS4 &gt; /mnt/serial_dump &amp;</span>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>/mnt<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>chmod<span class="w"> </span>+x<span class="w"> </span>interceptty-arm
+mv<span class="w"> </span>/dev/ttyS4<span class="w"> </span>/dev/ttyS4_real<span class="p">;</span><span class="w"> </span>interceptty-arm<span class="w"> </span>-s<span class="w"> </span><span class="s1">'ispeed 460800 ospeed 460800'</span><span class="w"> </span>-l<span class="w"> </span>/dev/ttyS4_real<span class="w"> </span>/dev/ttyS4<span class="w"> </span>&gt;<span class="w"> </span>/mnt/serial_dump<span class="w"> </span><span class="p">&amp;</span>
 </code></pre></div>
 <h3 id="spike-2">Spike 2</h3>
-<div class="highlight"><pre><span></span><code><span class="go">cd /mnt &amp;&amp; chmod +x interceptty-arm</span>
-<span class="go">mv /dev/ttymxc1 /dev/ttymxc1_real; interceptty-arm -s 'ispeed 460800 ospeed 460800' -l /dev/ttymxc1_real /dev/ttymxc1 &gt; /mnt/serial_dump &amp;</span>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>/mnt<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>chmod<span class="w"> </span>+x<span class="w"> </span>interceptty-arm
+mv<span class="w"> </span>/dev/ttymxc1<span class="w"> </span>/dev/ttymxc1_real<span class="p">;</span><span class="w"> </span>interceptty-arm<span class="w"> </span>-s<span class="w"> </span><span class="s1">'ispeed 460800 ospeed 460800'</span><span class="w"> </span>-l<span class="w"> </span>/dev/ttymxc1_real<span class="w"> </span>/dev/ttymxc1<span class="w"> </span>&gt;<span class="w"> </span>/mnt/serial_dump<span class="w"> </span><span class="p">&amp;</span>
 </code></pre></div>
 <p>This command should return instantly and run in the background. Now
 start the game binary in the foreground:</p>
-<div class="highlight"><pre><span></span><code><span class="go">/games/game</span>
+<div class="highlight"><pre><span></span><code>/games/game
 </code></pre></div>
 <p>Some versions of some games give you a nice service CLI here. Play the
 game and make sure you activate all relevant features. Flippers might
@@ -48139,10 +48139,10 @@ messes up timings.</p>
 <code>fg</code> to get interceptty in the foreground and stop it using <code>ctrl+c</code>.</p>
 <p>Restore the serial:</p>
 <h3 id="spike-1_1">Spike 1</h3>
-<div class="highlight"><pre><span></span><code><span class="go">mv /dev/ttyS4_real /dev/ttyS4</span>
+<div class="highlight"><pre><span></span><code>mv<span class="w"> </span>/dev/ttyS4_real<span class="w"> </span>/dev/ttyS4
 </code></pre></div>
 <h3 id="spike-2_1">Spike 2</h3>
-<div class="highlight"><pre><span></span><code><span class="go">mv /dev/ttymxc1_real /dev/ttymxc1</span>
+<div class="highlight"><pre><span></span><code>mv<span class="w"> </span>/dev/ttymxc1_real<span class="w"> </span>/dev/ttymxc1
 </code></pre></div>
 <p>Now unmount the USB drive as above and you are done. Please share the
 capture on the MPF user forum.</p>
@@ -48203,8 +48203,8 @@ know it is stupid but a loose USB connector has happened to most of us.</p>
 <p>On Linux you might want to run the command <code>lsusb</code> which should show
 both of your micro controllers connected. You should see two lines
 similar to</p>
-<div class="highlight"><pre><span></span><code><span class="go">Bus 002 Device 014: ID 0483:5740 STMicroelectronics Virtual COM Port</span>
-<span class="go">Bus 002 Device 015: ID 0483:5740 STMicroelectronics Virtual COM Port</span>
+<div class="highlight"><pre><span></span><code>Bus<span class="w"> </span><span class="m">002</span><span class="w"> </span>Device<span class="w"> </span><span class="m">014</span>:<span class="w"> </span>ID<span class="w"> </span><span class="m">0483</span>:5740<span class="w"> </span>STMicroelectronics<span class="w"> </span>Virtual<span class="w"> </span>COM<span class="w"> </span>Port
+Bus<span class="w"> </span><span class="m">002</span><span class="w"> </span>Device<span class="w"> </span><span class="m">015</span>:<span class="w"> </span>ID<span class="w"> </span><span class="m">0483</span>:5740<span class="w"> </span>STMicroelectronics<span class="w"> </span>Virtual<span class="w"> </span>COM<span class="w"> </span>Port
 </code></pre></div>
 <p>If you are unsure about the output, run the command once with your
 controllers connected and once without. If there is no difference, then

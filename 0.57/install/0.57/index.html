@@ -918,15 +918,15 @@ icons & this code generated via https://realfavicongenerator.net
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-to-install-mpf-dev-057" class="md-nav__link">
+  <a href="#how-to-install-mpf-057" class="md-nav__link">
     <span class="md-ellipsis">
       
-        How to install MPF dev / 0.57
+        How to install MPF 0.57
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="How to install MPF dev / 0.57">
+    <nav class="md-nav" aria-label="How to install MPF 0.57">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -47964,15 +47964,15 @@ icons & this code generated via https://realfavicongenerator.net
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-to-install-mpf-dev-057" class="md-nav__link">
+  <a href="#how-to-install-mpf-057" class="md-nav__link">
     <span class="md-ellipsis">
       
-        How to install MPF dev / 0.57
+        How to install MPF 0.57
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="How to install MPF dev / 0.57">
+    <nav class="md-nav" aria-label="How to install MPF 0.57">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -48050,11 +48050,16 @@ icons & this code generated via https://realfavicongenerator.net
 
 
 <h1 id="mpf-057-changes-current-release">MPF 0.57 changes (current release)</h1>
+<div class="admonition warning">
+<p class="admonition-title">MPF 0.80 is Coming Soon</p>
+<p>This installation guide is for MPF 0.57 and the legacy MC, which is being replaced in the upcoming MPF 0.80 with the Godot MC. If you are just getting started with MPF, we recommend you <a href="../">install MPF 0.80</a> instead.</p>
+</div>
 <p><em>Last updated October 14, 2023</em></p>
-<p>The latest official release of MPF is v0.57.1, which has substantial changes from 0.56. If you are upgrading a 0.56 project, this page will provide guidance on how to do that.</p>
+<p>The latest official release of MPF is <code>v0.57.3</code>, which has substantial changes from 0.56. If you are upgrading a 0.56 project, this page will provide guidance on how to do that.</p>
+<p>Update 2026: MPF <code>0.80.0</code> is pending release, replacing 0.57 as the modern way to develop with MPF. The instructions on this page are presented for reference, see <a href="../../gmc/installation/">Installing MPF 0.80 and the GMC</a> and <a href="../0.80/">Migrating to MPF 0.80 and Godot GMC</a> for more up-to-date information.</p>
 <h2 id="big-changes-in-057">Big changes in 0.57</h2>
 <ul>
-<li>Adds support for Python 3.10 and 3.11 (3.8 and 3.9 are still supported. 3.7 might work but is no longer being tested)</li>
+<li>Adds support for Python 3.10 and 3.11 in 0.57.1 (3.8 and 3.9 are still supported. 3.7 might work but is no longer being tested). Python 3.12 is supported by 0.57.4.</li>
 <li>Changes the YAML interface to remove "hacks" we added years ago. Now MPF supports the pure YAML spec.</li>
 <li>This requires <a href="../../config/instructions/config_v6/">some changes</a> (not too bad) to your config files.</li>
 <li>Config files are now <code>config_version=6</code></li>
@@ -48066,18 +48071,18 @@ icons & this code generated via https://realfavicongenerator.net
 <li>Improved the algorithm for how RGB colors are mapped to RGBW LEDs.</li>
 <li>Removed the config file migrator (hasn't been used in years)</li>
 </ul>
-<h2 id="how-to-install-mpf-dev-057">How to install MPF dev / 0.57</h2>
-<p>The installation packages have been published, so you can install via <code>pip</code> just like how you install MPF. Just add the <code>--pre</code> flag to install the pre-release version:</p>
-<div class="copy highlight"><pre><span></span><code>pip3<span class="w"> </span>install<span class="w"> </span>mpf<span class="w"> </span>--pre
+<h2 id="how-to-install-mpf-057">How to install MPF 0.57</h2>
+<p>The installation packages have been published, so you can install via <code>pip</code> just like how you install MPF.</p>
+<div class="highlight"><pre><span></span><code>pip3<span class="w"> </span>install<span class="w"> </span>mpf
 </code></pre></div>
-<p>If you want to install a new version of Python (like 3.11), you can, and run it side-by-side your existing version. Then you can access Python 3.11 and pip for Python 3.11 via <code>pip3.11 install mpf --pre</code></p>
+<p>If you want to install a new version of Python (like 3.11), you can, and run it side-by-side your existing version. Then you can access Python 3.11 and pip for Python 3.11 via <code>pip3.11 install mpf</code></p>
 <h3 id="mpf-monitor-057">MPF Monitor 0.57</h3>
-<p>The dev branch of MPF Monitor is now 0.57.0.devXX as well. You can install it via <code>pip</code> with the <code>--pre</code> flag as well.</p>
-<div class="copy highlight"><pre><span></span><code>pip3<span class="w"> </span>install<span class="w"> </span>mpf-monitor<span class="w"> </span>--pre
+<p>MPF Monitor was upgraded with 0.57. The current Monitor version is 0.57.2. You can install it via <code>pip</code> as well.</p>
+<div class="highlight"><pre><span></span><code>pip3<span class="w"> </span>install<span class="w"> </span>mpf-monitor<span class="w"> </span>--pre
 </code></pre></div>
 <h2 id="mpf-mc-057">MPF-MC 0.57</h2>
 <p>You can install the latest version of MPF-MC from the dev branch as well. (It's also 0.57.0.devXX.)</p>
-<div class="copy highlight"><pre><span></span><code>pip3<span class="w"> </span>install<span class="w"> </span>mpf-mc<span class="w"> </span>--pre
+<div class="highlight"><pre><span></span><code>pip3<span class="w"> </span>install<span class="w"> </span>mpf-mc<span class="w"> </span>--pre
 </code></pre></div>
 <p>We had some issues with audio in earlier builds of MPF-MC 0.57, but we think those are resolved? Open an Issue on
 GitHub if you have any issues with sound not working.</p>
