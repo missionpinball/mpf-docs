@@ -8,6 +8,17 @@ This is for people who know what they're doing. If you're lost, check out our fu
 [installation guides](../install/index.md).
 
 
+## Quick links and git remotes
+
+Updated: January 2026
+
+* [Python 3.13](https://www.python.org/downloads/release/python-31311/)
+* [MPF 0.80](https://github.com/missionpinball/mpf/tree/0.80.x) `0.80.0.dev11` - `git@github.com:missionpinball/mpf.git` branch `0.80.x`
+* [MPF-GMC](https://github.com/missionpinball/mpf-gmc) `0.1.6` - `git@github.com:missionpinball/mpf-gmc.git` branch `main`
+* [Godot Editor 4.5](https://godotengine.org/download)
+* [MPF Monitor](https://github.com/missionpinball/mpf-monitor) `0.57.2` - `git@github.com:missionpinball/mpf-gmc.git` branch `dev`
+
+
 ## Quickstart for GMC
 
 For full guide see: [GMC Installation](../gmc/installation.md)
@@ -28,7 +39,7 @@ For full guide see: [GMC Installation](../gmc/installation.md)
 
 ## Quickstart for MPF
 
-1. MPF requires Python 3.8 - 3.12. Validate that you have a supported version of Python with `python3 --version`.
+1. MPF 0.80 requires Python 3.10 - 3.13. Validate that you have a supported version of Python with `python3 --version`.
 
 1. Create a virtual environment for mpf. In your home folder (or virtual environments folder) type `python3 -m venv mpf`
 
@@ -38,7 +49,7 @@ For full guide see: [GMC Installation](../gmc/installation.md)
 
 1. In your terminal, navigate to the project folder you created and initialize an MPF config file.
 
-    ``` console
+    ``` shell
 (mpf) my_project_folder $> mkdir config
 (mpf) my_project_folder $> echo "#config_version=6" > config/config.yaml
     ```

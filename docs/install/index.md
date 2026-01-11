@@ -13,6 +13,8 @@ The current stable version of MPF is `0.57.3`, and the upcoming release is `0.80
 
 --8<-- "latest_versions.md"
 
+## Supported Operating Systems
+
 MPF works with following platforms:
 
 * Windows 10 / Windows 11 (64-bit only)
@@ -20,9 +22,12 @@ MPF works with following platforms:
 * Linux (64-bit, lots of distros including Debian and Ubuntu)
 * Raspberry Pi
 
+## Python Version Matching
+
 MPF 0.57 works with Python 3.8 - 3.12.
 
 MPF 0.80 works with Python 3.10-3.13, with upcoming support for 3.14.
+
 
 <!-- TODO(Bosh) Disabled because dev1 is not a good choice given the myriad of changes on the way to dev11
 
