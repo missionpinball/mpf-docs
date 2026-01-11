@@ -17,12 +17,9 @@ Awesome!
 
 First, you can check out the list of new features that we're tracking.
 
-* [MPF New
-    Features](https://github.com/missionpinball/mpf/issues?q=is%3Aissue+is%3Aopen+label%3A%22new+feature%22)
-* [MPF-MC New
-    Features](https://github.com/missionpinball/mpf-mc/issues?q=is%3Aissue+is%3Aopen+label%3A%22new+feature%22)
-* [MPF Monitor New
-    Features](https://github.com/missionpinball/mpf-monitor/issues?q=is%3Aissue+is%3Aopen+label%3A%22new+feature%22)
+* [MPF New Features](https://github.com/missionpinball/mpf/issues?q=is%3Aissue+is%3Aopen+label%3A%22new+feature%22)
+* [MPF-MC New Features](https://github.com/missionpinball/mpf-mc/issues?q=is%3Aissue+is%3Aopen+label%3A%22new+feature%22)
+* [MPF Monitor New Features](https://github.com/missionpinball/mpf-monitor/issues?q=is%3Aissue+is%3Aopen+label%3A%22new+feature%22)
 
 If you see your feature there, you can click on it and then click the
 "Subscribe" button to receive email notifications of progress or when

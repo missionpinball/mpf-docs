@@ -4,8 +4,8 @@ title: About the MPF Documentation
 
 # All about MPF
 
-The Mission Pinball Framework is an open source project originally
-started by Brian Madden in 2014.
+The Mission Pinball Framework is an open source project originally started by
+Brian Madden in 2014.
 ([Here's the original Pinside post announcing the project and vision](https://pinside.com/pinball/forum/topic/announcing-the-mission-pinball-framework-hw-independent-python-based-game-sw))
 
 The project has pretty much grown into exactly what the initial vision was,
@@ -13,9 +13,10 @@ supporting just about every pinball hardware platform out there, and allowing
 people to create high-quality and full-featured pinball machine software
 without having to "reinvent the wheel" to build everything from scratch.
 
-MPF is what it is today due to the efforts of many people. We owe special shout outs to Jan Kantert  who
-ran the whole project from 2017-2022, and Quinn Capen who did a lot of the
-Media Controller and wrote the custom sound engine.
+MPF is what it is today due to the efforts of many people. We owe special shout outs to
+Jan Kantert who ran the whole project from 2017-2022,
+Quinn Capen who did a lot of the Media Controller and wrote the custom sound engine,
+and Anthony van Winkle who wrote the Godot Media Controller (GMC) and is the current project maintainer.
 
 MPF has been used in hundreds of pinball machine showcase (mostly homebrew,
 though a few commercial machines run it.) See the [showcase page](../showcase/index.md)
