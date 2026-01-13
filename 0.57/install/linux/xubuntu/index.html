@@ -48194,15 +48194,18 @@ whatever version is the latest.)</p>
 <li>
 <p>Edit the file to contain:</p>
 <div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="nb">source</span><span class="w"> </span>~/your_venv_name/bin/activate
 xterm<span class="w"> </span>-e<span class="w"> </span><span class="s2">"cd /home/your_username/your_machine_folder &amp;&amp; mpf both -c config"</span>
 </code></pre></div>
 </li>
 </ul>
 </li>
 <li>
-<p>Change <code>your_username</code> to the username you created during
-    installation.</p>
+<p>Change <code>your_venv_name</code> to the name and path of the virtual environment you created during
+    installation. You did create a venv didn't you?  If not remove this line.</p>
 </li>
+<li>Change <code>your_username</code> to the username you created during
+    installation.</li>
 <li>Change <code>your_machine_folder</code> to the name of your specific machine
     folder.</li>
 <li>Change <code>config</code> part to reflect the name of your top-level config
