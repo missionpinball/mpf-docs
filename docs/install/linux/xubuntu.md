@@ -112,9 +112,12 @@ whatever version is the latest.)
 
         ``` shell
         #!/bin/bash
+        source ~/your_venv_name/bin/activate
         xterm -e "cd /home/your_username/your_machine_folder && mpf both -c config"
         ```
 
+* Change `your_venv_name` to the name and path of the virtual environment you created during
+    installation. You did create a venv didn't you?  If not remove this line.
 * Change `your_username` to the username you created during
     installation.
 * Change `your_machine_folder` to the name of your specific machine
