@@ -44,11 +44,10 @@ With GMC, any Godot resource derived from `AudioStream` can be played directly f
 You can trigger playback of the sound from MPF by using the filename of the saved resource:
 
 ``` yaml
-
-    sound_player:
-        villain_advance:
-            villain_advance_callouts:
-                bus: voice
+sound_player:
+    villain_advance:
+        villain_advance_callouts:
+            bus: voice
 ```
 
 ## Wrap the Sound Pool with MPFSoundAsset
@@ -62,7 +61,6 @@ Alternatively, you can combine the sound pool and the MPF sound asset into a sin
 With the necessary playback settings included in the `MPFSoundAsset` resource, the sound player can be called as a one-liner.
 
 ``` yaml
-
-    sound_player:
-        villain_advance: villain_advance_callouts
+sound_player:
+    villain_advance: villain_advance_callouts
 ```

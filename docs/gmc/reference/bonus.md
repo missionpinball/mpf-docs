@@ -19,9 +19,8 @@ The *bonus.yaml* config spec has changed slightly as well, but is quick to migra
 In your *bonus.yaml* config file, create a `mode_settings:` section with a subsection `bonus_entries:`. Each bonus entry will be a list item under `bonus_entries:`, like so:
 
 ``` yaml
-
-    mode_settings:
-      bonus_entries:
+mode_settings:
+    bonus_entries:
         - entry: loops_completed
           text: "Ranger Loops"
           player_score_entry: ranger_loops_count

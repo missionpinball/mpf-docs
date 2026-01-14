@@ -10,27 +10,33 @@ The `MPFCarousel` node works in tandem with the MPF Carousel mode to support dyn
 
     The MPF 0.80 events that drive the `MPFCarousel` are changed from those in MPF 0.57. If you have an existing MPF 0.5 carousel you may need to update your event handlers.
 
+## Video Tutorial
+
+In Part II of the following video, it shows how to configure your Godot MPFCarousel node and items.
+
+<div class="video-wrapper">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NYUuHQVveFY?start=815" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 ## Node Configuration
 
 Add an `MPFCarousel` node to your slide and create child nodes for each carousel item you wish to render. You can use the eyeball icon in the *Scene* panel to preview what each carousel item will look like. Each child node needs to have a name that corresponds to one of the `selectable_items:` in your MPF config file.
 
 ``` yaml
+# modes/attract/config/attract.yaml
+mode:
+    start_events: mode_attract_started
+    stop_events: mode_attract_will_stop
+    game_mode: false
+    code: mpf.modes.carousel.code.carousel.Carousel
 
-    # attract_mode.yaml
-
-    mode:
-      start_events: mode_attract_started
-      stop_events: mode_attract_will_stop
-      game_mode: false
-      code: mpf.modes.carousel.code.carousel.Carousel
-
-    mode_settings:
-      selectable_items:
+mode_settings:
+    selectable_items:
         - gameover
         - title
         - last_game_scores
-      next_item_events: s_flipper_right_active
-      previous_item_events: s_flipper_left_active
+    next_item_events: s_flipper_right_active
+    previous_item_events: s_flipper_left_active
 ```
 
 ![image](../images/carousel_children.png)

@@ -21,13 +21,12 @@ The filter section configures a shader for the GMC window, applying effects univ
 Full documentation can be found on the [Window Effects Filters guide](../guides/window-filters.md).
 
 ``` ini
-
-    [filter]
-    filter="virtual_dmd"
-    columns=120
-    rows=45
-    hardness=5
-    spacing=2
+[filter]
+filter="virtual_dmd"
+columns=120
+rows=45
+hardness=5
+spacing=2
 ```
 
 ## \[gmc\]
@@ -58,10 +57,9 @@ Logging can be specified in the `\[gmc\]` section with the following components:
   * `logging_sound_player` for the sound player specifically
 
 ``` ini
-
-    [gmc]
-    logging_global=20
-    logging_sound_player=10
+[gmc]
+logging_global=20
+logging_sound_player=10
 ```
 
 Each core component's log level can be adjusted here, and any unspecified components will use the global log level. The log levels are stored as integers with the following values:
@@ -83,9 +81,8 @@ The gmc section can override the core GMC scripts for advanced customization of 
 Full documentation can be found on the [Advanced Custom Code guide](../guides/advanced-custom-code.md).
 
 ``` ini
-
-    [gmc]
-    GMCServer="custom_code/my_custom_bcp.gd"
+[gmc]
+GMCServer="custom_code/my_custom_bcp.gd"
 ```
 
 
@@ -96,14 +93,13 @@ The keyboard section maps key inputs to switches and events for simulating MPF b
 Full documentation can be found on the [Keyboard Setup guide](../keyboard.md).
 
 ``` ini
-
-    [keyboard]
-    1=["switch", "s_switch_1"]
-    enter=["switch", "s_start_button"]
-    6=["switch", "s_drop_1", "active"]
-    shift+6=["switch", "s_drop_1", "inactive"]
-    x=["switch", "s_trough_6", "toggle"]
-    m=["event", "start_mode_multiball"]
+[keyboard]
+1=["switch", "s_switch_1"]
+enter=["switch", "s_start_button"]
+6=["switch", "s_drop_1", "active"]
+shift+6=["switch", "s_drop_1", "inactive"]
+x=["switch", "s_trough_6", "toggle"]
+m=["event", "start_mode_multiball"]
 ```
 
 ## \[mpf\]
@@ -112,8 +108,7 @@ If you have configured [Godot to launch the MPF game](../guides/launching-the-mp
 These options are assembled together into the following shell command and run when you play the Godot project:
 
 ``` shell
-
-    <executable_path> <executable_args> <machine_path> <mpf_args>
+<executable_path> <executable_args> <machine_path> <mpf_args>
 ```
 
 The Godot editor misbehaves if you edit the `gmc.cfg` values while also editing in this UI form, so take care to save changes and reload the editor if you notice odd behaviors. If the top line "Launch MPF with GMC" is enabled, the values here will be used to spawn an MPF game instance when you press the **Play** button to play your GMC project. 
@@ -171,11 +166,10 @@ If true, the MPF process will have verbose logging (i.e. `-vV` will be appended 
 The sound system section defines playback properties of the Audio Buses defined in your Godot project.
 
 ``` ini
-
-    [sound_system]
-    music={"type": "solo"}
-    effects={"type": "simultaneous", "simultaneous_sounds": 3, "default": true}
-    voice={"type": "sequential"}
+[sound_system]
+music={"type": "solo"}
+effects={"type": "simultaneous", "simultaneous_sounds": 3, "default": true}
+voice={"type": "sequential"}
 ```
 
 ### `default`

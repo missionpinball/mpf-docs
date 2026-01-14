@@ -17,13 +17,12 @@ You can enable and configure the default filters in your *gmc.cfg* file by creat
 An example configuration might look like this:
 
 ``` yaml
-
-    [filter]
-    filter="virtual_dmd"
-    columns=120
-    rows=45
-    hardness=5
-    spacing=2
+[filter]
+filter="virtual_dmd"
+columns=120
+rows=45
+hardness=5
+spacing=2
 ```
 
 ## Filter Config Reference
@@ -33,9 +32,8 @@ The following reference documents the filters included in GMC and their configur
 ### Virtual DMD
 
 ``` ini
-
-    [filter]
-    filter="virtual_dmd"
+[filter]
+filter="virtual_dmd"
 ```
 
 The most popular shader filter creates the effect of a color DMD by pixelating the screen and adding an overlay of dots.
@@ -47,8 +45,7 @@ Single value, type `Color(R,G,B,A)`. Default `1.0, 1.0, 1.0, 1.0`
 The color of the dot overlay. Must be specified as four (RGBA) floats between `0.0` and `1.0`. All four values (including opacity) are required.
 
 ``` ini
-
-    color=Color(1.0, 0.5, 0.2, 1.0)
+color=Color(1.0, 0.5, 0.2, 1.0)
 ```
 
 #### `columns`
@@ -82,9 +79,8 @@ The distance from the edge of the "pixel" to the outer edge of the circle. A val
 
 
 ``` ini
-
-    [filter]
-    filter="dmd_dots"
+[filter]
+filter="dmd_dots"
 ```
 
 This filter renders the dots of the Virtual DMD filter, but without pixelating the underlying content. You may want this if you are already using pixel art or a different method of pixelation, but still want the DMD look.
@@ -96,9 +92,8 @@ The configuration options for `dmd_dots` are the same as `virtual_dmd`,
 
 
 ``` ini
-
-    [filter]
-    filter="pixelate"
+[filter]
+filter="pixelate"
 ```
 
 This filter pixelates the display into blocks with a fixed number of rows and columns. It's similar to what's done in `virtual_dmd` but without the dot overlay.
@@ -133,11 +128,10 @@ Back in the *FileSystem* panel, find your new shader file (with the *.gdshader* 
 Once again in the *FileSystem* panel, right click on your shader file and select *Copy Path*. Open your *gmc.cfg* config file and paste that path as the `filter=` value in the `filter` section. Make sure to add quotes around the path!
 
 ``` ini
-
-    [filter]
-    filter="res://shaders/my_awesome_shader.gdshader"
-    awesomeness=9000
-    frequency=0.5
+[filter]
+filter="res://shaders/my_awesome_shader.gdshader"
+awesomeness=9000
+frequency=0.5
 ```
 
 If your shader requires any parameters (using `uniform` variables) that you want to configure in *gmc.cfg* instead of hard-coding in the shader, you can add those parameters as key/value pairs in the filter config section as well.

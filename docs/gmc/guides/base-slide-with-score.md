@@ -77,3 +77,20 @@ When these variables appear onscreen, we want them to be left aligned and the pl
 ![image](../images/hbox_container.png)
 
 And that's it! You can start the project and run MPF to see it in action: the ball number will appear initially in the upper left corner, and when another player is added the player number will appear there and the ball number will shift to the right.
+
+## Video Tutorials
+
+Two tutorial videos cover similar things as this guide:
+
+The first video covers many topics including creating a base slide, configuring GMC hotkeys, adding scoring to switches,
+displaying score on a slide, creating and running a mode, and running your game virtually.
+
+<div class="video-wrapper">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Q1c9WG0R2cQ?start=300" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+This second video covers topics including slide variables, horizontal and vertical layouts in Godot, and a hurryup mode with custom timing.
+
+<div class="video-wrapper">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MfqfefX_BZY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>

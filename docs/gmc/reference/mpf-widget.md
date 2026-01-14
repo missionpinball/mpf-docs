@@ -49,10 +49,9 @@ This value will be added to the calling mode's priority to determine the overall
 
 When a custom function is called, two parameters are passed in: *settings*, the configuration settings from the widget player config, and *kwargs*, the arguments from the event that triggered the widget player. If you declared any `tokens:` in your config for the widget player, those will be available as `settings.tokens`.
 
-``` code
-
-    func my_custom_method(settings, kwargs):
-        # Function does stuff here
+``` go
+func my_custom_method(settings, kwargs):
+    # Function does stuff here
 ```
 
 
@@ -79,12 +78,11 @@ The *kwargs* parameter passed to the custom method is the list of event argument
 For example, the *player_score* event includes arguments for `value`, `prev_value`, `change`, and `player_num`. If your widget player is triggered by the *player_score* event, like so:
 
 ``` yaml
-
-    widget_player:
-        player_score:
-            score_widget:
-                action: method
-                method: my_method
+widget_player:
+    player_score:
+        score_widget:
+            action: method
+            method: my_method
 ```
 
 Then in the `func my_method(settings, kwargs):` method of *score_widget.gd* you would have access to `kwargs.value`, `kwargs.prev_value`, `kwargs.change`, and `kwargs.player_num`.

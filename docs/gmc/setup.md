@@ -60,11 +60,10 @@ Unfortunately, Godot Audio Buses are not extensible like Nodes, so GMC cannot cr
 Create a new text file in the root of your project called *gmc.cfg* and paste in the following:
 
 ``` ini
-
-    [sound_system]
-    music={"type": "solo"}
-    effects={"type": "simultaneous", "simultaneous_sounds": 3, "default": true}
-    voice={"type": "sequential"}
+[sound_system]
+music={"type": "solo"}
+effects={"type": "simultaneous", "simultaneous_sounds": 3, "default": true}
+voice={"type": "sequential"}
 ```
 
 You may then adjust these defaults if you've customized your buses, but otherwise this configuration will take care of you for a while. Save the *gmc.cfg* file and close it.
@@ -122,9 +121,8 @@ Overall you should have a slide with a background color and text label that look
 In your `attract.yaml` mode config, add the following block:
 
 ``` yaml
-
-    slide_player:
-        mode_attract_started: attract
+slide_player:
+    mode_attract_started: attract
 ```
 
 You are now ready to run GMC and connect to MPF! Save the project and in the upper right corner of the Editor, click on the Play icon. You will see a window appear with the MPF logo, which is the default startup scene from GMC.

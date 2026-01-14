@@ -175,10 +175,10 @@ The template will append the suffix using string substitution if the `value` is 
 
 Examples:
 
-``` code
+``` go
+pluralize("Shot%s Remaining", 1)
+# > "Shot Remaining"
 
-    pluralize("Shot%s Remaining", 1)
-    # > "Shot Remaining"
-
-    pluralize("Shot%s Remaining", 3)
-    # > "Shots Remaining"
+pluralize("Shot%s Remaining", 3)
+# > "Shots Remaining"
+```

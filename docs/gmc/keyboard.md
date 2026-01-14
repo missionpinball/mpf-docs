@@ -27,10 +27,9 @@ If no action is specified, pressing the mapped key will activate the switch and 
 A basic example is having the "1" key press the switch `s_switch_1` and the "Enter" key press the switch `s_start_button`.
 
 ``` ini
-
-    [keyboard]
-    1=["switch", "s_switch_1"]
-    enter=["switch", "s_start_button"]
+[keyboard]
+1=["switch", "s_switch_1"]
+enter=["switch", "s_start_button"]
 ```
 
 #### Explicit Actions
@@ -40,11 +39,10 @@ GMC keymaps support three explicit actions: `active`, `inactive`, and `toggle`.
 When an action is set, pressing the mapped key will trigger that action. Releasing the key has no effect.
 
 ``` ini
-
-    [keyboard]
-    6=["switch", "s_drop_1", "active"]
-    shift+6=["switch", "s_drop_1", "inactive"]
-    x=["switch", "s_trough_6", "toggle"]
+[keyboard]
+6=["switch", "s_drop_1", "active"]
+shift+6=["switch", "s_drop_1", "inactive"]
+x=["switch", "s_trough_6", "toggle"]
 ```
 
 ### Add an Event Keymap
@@ -52,8 +50,7 @@ When an action is set, pressing the mapped key will trigger that action. Releasi
 Event keymaps are an array of key map type ("event") and the name of an event to pass to MPF. This can be to simulate events triggered by GMC, or simply for testing modes easily.
 
 ``` ini
-
-    [keyboard]
-    m=["event", "start_mode_multiball"]
-    d=["event", "drop_bank_left_complete"]
+[keyboard]
+m=["event", "start_mode_multiball"]
+d=["event", "drop_bank_left_complete"]
 ```

@@ -33,7 +33,7 @@ python3 -m venv ~/mpfenv
 Or if you want to explicitly define a directory, like this example of an "mpf" virtual environment in a common venvs directory (because remember you can have as many virtual environments as you like):
 
 ``` shell
-  python3 -m venv C:\Users\Rudy\venvs\mpf
+python3 -m venv C:\Users\Rudy\venvs\mpf
 ```
 
 !!! note
@@ -80,7 +80,7 @@ PS > mpfenv/Scripts/Activate.ps1
 For users on Mac OSX, you will use the `source` command with the path to your venv:
 
 ``` shell
-  source ~/mpfenv/bin/activate
+source ~/mpfenv/bin/activate
 ```
 
 **Linux:**
@@ -123,4 +123,3 @@ Python 3.9.13
     If you want to deactivate your virtual environment, you can simply enter `deactivate` at the prompt.
     The virtual environment sets this up for us, usually as an alias. The console prompt now won't include
     the name of your venv in parenthesis.
-    

@@ -19,15 +19,13 @@ If you just want to play a sound, you can reference that sound by its file name 
 For example, if you have files in your project called *frenzy_background_music.ogg* and *small_explosion_one.wav* you could trigger those sounds with the following config:
 
 ``` yaml
-
-    sound_player:
-        mode_frenzy_started:
-            frenzy_background_music:
-                bus: music
-                fade_in: 500ms
-                fade_out: 1s
-        drop_targets_complete: small_explosion_one
-
+sound_player:
+    mode_frenzy_started:
+        frenzy_background_music:
+            bus: music
+            fade_in: 500ms
+            fade_out: 1s
+    drop_targets_complete: small_explosion_one
 ```
 
 ### MPFSound Resource

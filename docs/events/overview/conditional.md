@@ -4,7 +4,6 @@ title: Conditional Events
 
 # Conditional Events
 
-
 So far we've talked about how events are just strings of text, for
 example:
 
@@ -44,6 +43,15 @@ devices in your machine. For instance, you might want to start a mode
 after a counter reached a certain value. You can reference any
 [placeholder variable](../../config/instructions/dynamic_values.md) in a condtion and also apply arbitrary logic/conditions to
 them.
+
+
+## Video Tutorial
+
+Here is a video from the community, covering conditional events:
+
+<div class="video-wrapper">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Q6SiSSW1e3M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ## Using keyword arguments in your config files
 
