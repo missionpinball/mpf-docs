@@ -15,7 +15,7 @@ The `MPFCarousel` node works in tandem with the MPF Carousel mode to support dyn
 In Part II of the following video, it shows how to configure your Godot MPFCarousel node and items.
 
 <div class="video-wrapper">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/NYUuHQVveFY&t=418s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NYUuHQVveFY?start=815" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 ## Node Configuration

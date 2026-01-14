@@ -45,7 +45,7 @@ after a counter reached a certain value. You can reference any
 them.
 
 
-## Video tutorial
+## Video Tutorial
 
 Here is a video from the community, covering conditional events:
 
