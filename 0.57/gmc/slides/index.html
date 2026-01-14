@@ -48036,11 +48036,11 @@ icons & this code generated via https://realfavicongenerator.net
 <p>Every slide you create will be a unique Godot scene file (<code>.tscn</code>) that uses the <code>MPFSlide</code> node as its root. GMC will automatically look for slide scenes in the project root's <code>/slides</code> folder (and subfolders) as well as every <code>/modes/(mode_name)/slides</code> folder (and subfolders).</p>
 <p>You can name your slides scenes whatever you'd like, except spaces are not allowed. GMC will find all scene files in the various <code>slides</code> folders and map their filenames, so that MPF <code>slide_player:</code> commands can reference the slides by their filename.</p>
 <p>For example, if you had a slide file <code>/slides/base.tscn</code> and another file <code>/modes/skillshot/slides/skillshot_overlay.tscn</code>, your MPF configs might look like this:</p>
-<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nt">slide_player</span><span class="p">:</span>
-<span class="w">        </span><span class="nt">mode_base_started</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">base</span>
-<span class="w">        </span><span class="nt">skillshot_hit</span><span class="p">:</span>
-<span class="w">            </span><span class="nt">skillshot_overlay</span><span class="p">:</span>
-<span class="w">                </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">remove</span>
+<div class="highlight"><pre><span></span><code><span class="nt">slide_player</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">mode_base_started</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">base</span>
+<span class="w">    </span><span class="nt">skillshot_hit</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">skillshot_overlay</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">remove</span>
 </code></pre></div>
 <p>For this reason, it's important that every slide has a unique name, regardless of which folder its in.</p>
 <div class="admonition tip">
@@ -48081,19 +48081,19 @@ icons & this code generated via https://realfavicongenerator.net
 <p>To give a slide custom behavior, you need to create a custom script for the slide that extends the base <code>MPFSlide</code> with new functionality. Open your scene in the Editor and in the <em>Scene</em> panel select the root node. Click on the red-x page icon to detach the <code>MPFSlide</code> script from the node, and then click the button again (with a green-plus now) to create a new script. Godot will automatically fill in the name of the scene as the name of the script, so you can just click <em>Create</em> to make the script.</p>
 <p>On the first line of the script, set the line to be <code>extends MPFSlide</code> so that this node still has all the necessary functionality of a Slide. You can then create a new function called whatever you like, and give it custom behavior.</p>
 <p>In this example, we have a scene <em>multiball_base_slide.tscn</em> and a matching script <em>multiball_base_slide.gd</em>. We've created an <code>AnimationPlayer</code> node and given it an animation named "explode", and we'll make a method that plays this animation. Our script file looks like this:</p>
-<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="c1">## multiball_base_slide.gd</span>
+<div class="highlight"><pre><span></span><code><span class="c1">## multiball_base_slide.gd</span>
 
-<span class="w">    </span><span class="k">extends</span><span class="w"> </span><span class="n">MPFSlide</span>
+<span class="k">extends</span><span class="w"> </span><span class="n">MPFSlide</span>
 
-<span class="w">    </span><span class="k">func</span><span class="w"> </span><span class="n">explode</span><span class="p">(</span><span class="n">_settings</span><span class="p">,</span><span class="w"> </span><span class="n">_kwargs</span><span class="p">):</span>
-<span class="w">        </span><span class="o">$</span><span class="n">AnimationPlayer</span><span class="o">.</span><span class="n">play</span><span class="p">(</span><span class="s2">"explode"</span><span class="p">)</span>
+<span class="k">func</span><span class="w"> </span><span class="n">explode</span><span class="p">(</span><span class="n">_settings</span><span class="p">,</span><span class="w"> </span><span class="n">_kwargs</span><span class="p">):</span>
+<span class="w">    </span><span class="o">$</span><span class="n">AnimationPlayer</span><span class="o">.</span><span class="n">play</span><span class="p">(</span><span class="s2">"explode"</span><span class="p">)</span>
 </code></pre></div>
 <p>We can then trigger this method from MPF with the slide player's <code>action: method</code> configuration.</p>
-<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nt">slide_player</span><span class="p">:</span>
-<span class="w">        </span><span class="nt">jackpot_counter_complete</span><span class="p">:</span>
-<span class="w">            </span><span class="nt">multiball_base_slide</span><span class="p">:</span>
-<span class="w">                </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">method</span>
-<span class="w">                </span><span class="nt">method</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">explode</span>
+<div class="highlight"><pre><span></span><code><span class="nt">slide_player</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">jackpot_counter_complete</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">multiball_base_slide</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">method</span>
+<span class="w">            </span><span class="nt">method</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">explode</span>
 </code></pre></div>
 <p>This config tells GMC to call the method named "explode" on the <code>multiball_base_slide</code> when the <em>jackpot_counter_complete</em> event occurs.</p>
 <p>This is a simple example of playing an animation from an AnimationPlayer, but the possibilities are endless. Godot scripting is a powerful tool that can do anything you can dream of, and with the <code>action: method</code> config option you can fully customize slide behavior based on MPF events.</p>

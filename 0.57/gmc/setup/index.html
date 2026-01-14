@@ -48109,10 +48109,10 @@ icons & this code generated via https://realfavicongenerator.net
 <h3 id="configure-the-busses-in-gmc-config-file">Configure the Busses in GMC Config File</h3>
 <p>Unfortunately, Godot Audio Buses are not extensible like Nodes, so GMC cannot create customization options directly on the buses. Instead, a GMC configuration file will be used to configure the audio system.</p>
 <p>Create a new text file in the root of your project called <em>gmc.cfg</em> and paste in the following:</p>
-<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="k">[sound_system]</span>
-<span class="w">    </span><span class="na">music={"type"</span><span class="o">:</span><span class="w"> </span><span class="s">"solo"</span><span class="na">}</span>
-<span class="w">    </span><span class="na">effects={"type"</span><span class="o">:</span><span class="w"> </span><span class="s">"simultaneous"</span><span class="na">, "simultaneous_sounds"</span><span class="o">:</span><span class="w"> </span><span class="s">3, "default": true}</span>
-<span class="w">    </span><span class="na">voice={"type"</span><span class="o">:</span><span class="w"> </span><span class="s">"sequential"</span><span class="na">}</span>
+<div class="highlight"><pre><span></span><code><span class="k">[sound_system]</span>
+<span class="na">music={"type"</span><span class="o">:</span><span class="w"> </span><span class="s">"solo"</span><span class="na">}</span>
+<span class="na">effects={"type"</span><span class="o">:</span><span class="w"> </span><span class="s">"simultaneous"</span><span class="na">, "simultaneous_sounds"</span><span class="o">:</span><span class="w"> </span><span class="s">3, "default": true}</span>
+<span class="na">voice={"type"</span><span class="o">:</span><span class="w"> </span><span class="s">"sequential"</span><span class="na">}</span>
 </code></pre></div>
 <p>You may then adjust these defaults if you've customized your buses, but otherwise this configuration will take care of you for a while. Save the <em>gmc.cfg</em> file and close it.</p>
 <h2 id="create-an-attract-mode-slide">Create an Attract Mode slide</h2>
@@ -48141,8 +48141,8 @@ icons & this code generated via https://realfavicongenerator.net
 <p><img alt="image" src="../images/attract_slide.png"></p>
 <h2 id="run-mpf">Run MPF</h2>
 <p>In your <code>attract.yaml</code> mode config, add the following block:</p>
-<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nt">slide_player</span><span class="p">:</span>
-<span class="w">        </span><span class="nt">mode_attract_started</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">attract</span>
+<div class="highlight"><pre><span></span><code><span class="nt">slide_player</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">mode_attract_started</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">attract</span>
 </code></pre></div>
 <p>You are now ready to run GMC and connect to MPF! Save the project and in the upper right corner of the Editor, click on the Play icon. You will see a window appear with the MPF logo, which is the default startup scene from GMC.</p>
 <p><img alt="image" src="../images/play_project.png"></p>

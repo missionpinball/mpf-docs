@@ -18150,6 +18150,17 @@ icons & this code generated via https://realfavicongenerator.net
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#video-tutorial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Video Tutorial
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#node-configuration" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -47877,6 +47888,17 @@ icons & this code generated via https://realfavicongenerator.net
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#video-tutorial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Video Tutorial
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#node-configuration" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -47935,23 +47957,28 @@ icons & this code generated via https://realfavicongenerator.net
 <p class="admonition-title">Requires MPF 0.80</p>
 <p>The MPF 0.80 events that drive the <code>MPFCarousel</code> are changed from those in MPF 0.57. If you have an existing MPF 0.5 carousel you may need to update your event handlers.</p>
 </div>
+<h2 id="video-tutorial">Video Tutorial</h2>
+<p>In Part II of the following video, it shows how to configure your Godot MPFCarousel node and items.</p>
+<div class="video-wrapper">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NYUuHQVveFY?start=815" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 <h2 id="node-configuration">Node Configuration</h2>
 <p>Add an <code>MPFCarousel</code> node to your slide and create child nodes for each carousel item you wish to render. You can use the eyeball icon in the <em>Scene</em> panel to preview what each carousel item will look like. Each child node needs to have a name that corresponds to one of the <code>selectable_items:</code> in your MPF config file.</p>
-<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="c1"># attract_mode.yaml</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># modes/attract/config/attract.yaml</span>
+<span class="nt">mode</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">start_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mode_attract_started</span>
+<span class="w">    </span><span class="nt">stop_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mode_attract_will_stop</span>
+<span class="w">    </span><span class="nt">game_mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">    </span><span class="nt">code</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mpf.modes.carousel.code.carousel.Carousel</span>
 
-<span class="w">    </span><span class="nt">mode</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">start_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mode_attract_started</span>
-<span class="w">      </span><span class="nt">stop_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mode_attract_will_stop</span>
-<span class="w">      </span><span class="nt">game_mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
-<span class="w">      </span><span class="nt">code</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mpf.modes.carousel.code.carousel.Carousel</span>
-
-<span class="w">    </span><span class="nt">mode_settings</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">selectable_items</span><span class="p">:</span>
+<span class="nt">mode_settings</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">selectable_items</span><span class="p">:</span>
 <span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gameover</span>
 <span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">title</span>
 <span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">last_game_scores</span>
-<span class="w">      </span><span class="nt">next_item_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_flipper_right_active</span>
-<span class="w">      </span><span class="nt">previous_item_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_flipper_left_active</span>
+<span class="w">    </span><span class="nt">next_item_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_flipper_right_active</span>
+<span class="w">    </span><span class="nt">previous_item_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_flipper_left_active</span>
 </code></pre></div>
 <p><img alt="image" src="../../images/carousel_children.png"></p>
 <p>When the MPF Carousel mode selects an item to display, it will post event with the name of the carousel mode and the name of the selected item. The <code>MPFCarousel</code> node will then iterate through its child nodes and hide all children except one with the same name as the selected item.</p>

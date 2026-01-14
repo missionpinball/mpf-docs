@@ -47831,6 +47831,28 @@ icons & this code generated via https://realfavicongenerator.net
 </li>
       
         <li class="md-nav__item">
+  <a href="#migrating-mpf-057-to-mpf-080" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Migrating MPF 0.57 to MPF 0.80
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#video-tutorial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Video Tutorial
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#standard-installation-pip-install-mpf-080" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -47857,17 +47879,6 @@ icons & this code generated via https://realfavicongenerator.net
     <span class="md-ellipsis">
       
         Installing MPF 0.57 (Legacy MC)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#migrating-mpf-057-to-mpf-080" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Migrating MPF 0.57 to MPF 0.80
       
     </span>
   </a>
@@ -47910,12 +47921,13 @@ icons & this code generated via https://realfavicongenerator.net
   
 
 
-<h1 id="installing-mpf-080-or-057">Installing MPF 0.80 or 0.57</h1>
-<p>The current stable version of MPF is <code>0.57.3</code>, and the upcoming release is <code>0.80.0</code> along with a long-term support release of <code>0.57.4</code>.</p>
 <div class="admonition note">
 <p class="admonition-title">New MPF Coming Soon!</p>
 <p>The next major release of MPF will be 0.80 and is coming soon! This exciting advancement offers a brand-new media controller based on the powerful Godot game engine. If you are just getting started with MPF, consider giving 0.80 a try!</p>
 </div>
+<h1 id="installing-mpf-080-or-057">Installing MPF 0.80 or 0.57</h1>
+<p>The current stable version of MPF is <code>0.57.3</code>, and the upcoming release is <code>0.80.0</code> along with a long-term support release of <code>0.57.4</code>.</p>
+<p>The current beta version of MPF 0.80 is <code>0.80.0.dev11</code>, which corresponds with MPF-GMC <code>0.1.6</code>, which is necessary to use the latest Godot - <code>4.5.1</code>.</p>
 <h2 id="latest-versions">Latest Versions</h2>
 <p>If you are creating a new game and are installing all of the MPF tools from scratch, you should start with the most up-to-date versions of everything you can. This will ensure you have the latest features and bug fixes, and are the easiest for the community to support.
 The most updated full installation (known-working on Windows and Linux) as of January 2026 is:</p>
@@ -47935,8 +47947,16 @@ The most updated full installation (known-working on Windows and Linux) as of Ja
 <li>Raspberry Pi</li>
 </ul>
 <h2 id="python-version-matching">Python Version Matching</h2>
-<p>MPF 0.57 works with Python 3.8 - 3.12.</p>
-<p>MPF 0.80 works with Python 3.10-3.13, with upcoming support for 3.14.</p>
+<p>MPF 0.57 works with Python 3.8 - 3.12. There is no planned support for Python 3.13+.</p>
+<p>MPF 0.80 works with Python 3.10 - 3.13, with upcoming support for 3.14.</p>
+<h2 id="migrating-mpf-057-to-mpf-080">Migrating MPF 0.57 to MPF 0.80</h2>
+<p>If you have an existing MPF 0.57 project and would like to use MPF 0.80 and the GMC, there are just a few config changes needed. See the <a href="0.80/">MPF 0.80 Migration Guide</a> for instructions.</p>
+<h2 id="video-tutorial">Video Tutorial</h2>
+<p>The following video shows on Windows how to install Python, Godot Engine, VS Code, and Sourcetree/Git, use Github to create a repo, and how to manage your Python Virtual Environment (venv) and install MPF.</p>
+<div class="video-wrapper">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rQqKG2Ie6KM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 <!-- TODO(Bosh) Disabled because dev1 is not a good choice given the myriad of changes on the way to dev11
 
  ## Simplest Installation: Precompiled Binary (MPF 0.80)
@@ -47989,7 +48009,7 @@ self a favor and setup an MPF virtual environment now!</p>
 </ul>
 <p><strong><em>Disadvantages of Standard Installation:</em></strong></p>
 <ul>
-<li>Requires a local Python 3.8+ installation</li>
+<li>Requires a local Python 3.10+ installation</li>
 <li>Requires setting up a virtual environment</li>
 <li>Mistakes can pollute Pip environments and cause dependency conflicts</li>
 <li>No option to customize MPF or use bleeding-edge features</li>
@@ -48027,11 +48047,9 @@ pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </s
 <li><a href="windows/">Windows</a></li>
 <li><a href="linux/">Linux</a></li>
 </ul>
-<h2 id="migrating-mpf-057-to-mpf-080">Migrating MPF 0.57 to MPF 0.80</h2>
-<p>If you have an existing MPF 0.57 project and would like to use MPF 0.80 and the GMC, there are just a few config changes needed. See the <a href="0.80/">MPF 0.80 Migration Guide</a> for instructions.</p>
 <h2 id="next-step-the-tutorial">Next step: The Tutorial!</h2>
 <p>We have a tutorial which walks you through the first few steps of getting
-your project started at <a href="../tutorial/">missionpinball.org/latest/tutorial</a></p>
+your project started at <a href="../tutorial/">MPF Tutorial</a>.</p>
 <hr>
 <div class="admonition question">
 <p class="admonition-title">Something missing or wrong? You can fix it!</p>

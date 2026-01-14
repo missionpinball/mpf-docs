@@ -48017,23 +48017,23 @@ icons & this code generated via https://realfavicongenerator.net
 <h4 id="default-behavior">Default Behavior</h4>
 <p>If no action is specified, pressing the mapped key will activate the switch and releasing the key will deactivate it.</p>
 <p>A basic example is having the "1" key press the switch <code>s_switch_1</code> and the "Enter" key press the switch <code>s_start_button</code>.</p>
-<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="k">[keyboard]</span>
-<span class="w">    </span><span class="na">1</span><span class="o">=</span><span class="s">["switch", "s_switch_1"]</span>
-<span class="w">    </span><span class="na">enter</span><span class="o">=</span><span class="s">["switch", "s_start_button"]</span>
+<div class="highlight"><pre><span></span><code><span class="k">[keyboard]</span>
+<span class="na">1</span><span class="o">=</span><span class="s">["switch", "s_switch_1"]</span>
+<span class="na">enter</span><span class="o">=</span><span class="s">["switch", "s_start_button"]</span>
 </code></pre></div>
 <h4 id="explicit-actions">Explicit Actions</h4>
 <p>GMC keymaps support three explicit actions: <code>active</code>, <code>inactive</code>, and <code>toggle</code>.</p>
 <p>When an action is set, pressing the mapped key will trigger that action. Releasing the key has no effect.</p>
-<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="k">[keyboard]</span>
-<span class="w">    </span><span class="na">6</span><span class="o">=</span><span class="s">["switch", "s_drop_1", "active"]</span>
-<span class="w">    </span><span class="na">shift+6</span><span class="o">=</span><span class="s">["switch", "s_drop_1", "inactive"]</span>
-<span class="w">    </span><span class="na">x</span><span class="o">=</span><span class="s">["switch", "s_trough_6", "toggle"]</span>
+<div class="highlight"><pre><span></span><code><span class="k">[keyboard]</span>
+<span class="na">6</span><span class="o">=</span><span class="s">["switch", "s_drop_1", "active"]</span>
+<span class="na">shift+6</span><span class="o">=</span><span class="s">["switch", "s_drop_1", "inactive"]</span>
+<span class="na">x</span><span class="o">=</span><span class="s">["switch", "s_trough_6", "toggle"]</span>
 </code></pre></div>
 <h3 id="add-an-event-keymap">Add an Event Keymap</h3>
 <p>Event keymaps are an array of key map type ("event") and the name of an event to pass to MPF. This can be to simulate events triggered by GMC, or simply for testing modes easily.</p>
-<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="k">[keyboard]</span>
-<span class="w">    </span><span class="na">m</span><span class="o">=</span><span class="s">["event", "start_mode_multiball"]</span>
-<span class="w">    </span><span class="na">d</span><span class="o">=</span><span class="s">["event", "drop_bank_left_complete"]</span>
+<div class="highlight"><pre><span></span><code><span class="k">[keyboard]</span>
+<span class="na">m</span><span class="o">=</span><span class="s">["event", "start_mode_multiball"]</span>
+<span class="na">d</span><span class="o">=</span><span class="s">["event", "drop_bank_left_complete"]</span>
 </code></pre></div>
 <hr>
 <div class="admonition question">

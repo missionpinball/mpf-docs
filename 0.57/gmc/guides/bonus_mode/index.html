@@ -48107,18 +48107,18 @@ icons & this code generated via https://realfavicongenerator.net
 <p>MPF includes default bonus code with lots of functionality baked in, so all you need to configure in your <em>bonus.yaml</em> is what bonuses you want and MPF will fold your config into the default bonus config.</p>
 <p>For instructions on configuring your bonus entries, see the <a href="../../reference/bonus/">bonus mode_settings reference</a></p>
 <p>Next you need to set up your slide player to (1) play the bonus slide when bonus starts, (2) display some initial text before the entry calculations are shown, and (3) update the text with each entry.</p>
-<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="c1"># bonus.yaml</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># bonus.yaml</span>
 
-<span class="w">    </span><span class="nt">slide_player</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">mode_bonus_started</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bonus</span>
-<span class="w">      </span><span class="nt">bonus_start</span><span class="p">:</span>
-<span class="w">          </span><span class="nt">bonus</span><span class="p">:</span>
+<span class="nt">slide_player</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">mode_bonus_started</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bonus</span>
+<span class="w">    </span><span class="nt">bonus_start</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">bonus</span><span class="p">:</span>
 <span class="w">            </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">update</span>
 <span class="w">            </span><span class="nt">tokens</span><span class="p">:</span>
-<span class="w">              </span><span class="nt">entry</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">initial</span>
-<span class="w">      </span><span class="nt">bonus_entry</span><span class="p">:</span>
+<span class="w">                </span><span class="nt">entry</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">initial</span>
+<span class="w">    </span><span class="nt">bonus_entry</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">bonus</span><span class="p">:</span>
-<span class="w">          </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">update</span>
+<span class="w">            </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">update</span>
 </code></pre></div>
 <h2 id="creating-a-bonus-slide">Creating a Bonus Slide</h2>
 <p>In the Godot Editor, create a new slide scene named <em>bonus.tscn</em> that uses <code>MPFSlide</code> as the root node.</p>

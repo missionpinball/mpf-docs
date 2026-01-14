@@ -48086,18 +48086,18 @@ icons & this code generated via https://realfavicongenerator.net
 <h2 id="play-the-pool-with-sound_player">Play the Pool with <code>sound_player:</code></h2>
 <p>With GMC, any Godot resource derived from <code>AudioStream</code> can be played directly from <code>sound_player</code>, and this includes <code>AudioStreamRandomizer</code>. So long as your resource file is saved in the root <em>/sounds</em> folder (or a subfolder) or a <em>/modes/(mode_name)/sounds</em> folder (or subfolder), it will be mapped by GMC as a sound name.</p>
 <p>You can trigger playback of the sound from MPF by using the filename of the saved resource:</p>
-<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nt">sound_player</span><span class="p">:</span>
-<span class="w">        </span><span class="nt">villain_advance</span><span class="p">:</span>
-<span class="w">            </span><span class="nt">villain_advance_callouts</span><span class="p">:</span>
-<span class="w">                </span><span class="nt">bus</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">voice</span>
+<div class="highlight"><pre><span></span><code><span class="nt">sound_player</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">villain_advance</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">villain_advance_callouts</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">bus</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">voice</span>
 </code></pre></div>
 <h2 id="wrap-the-sound-pool-with-mpfsoundasset">Wrap the Sound Pool with MPFSoundAsset</h2>
 <p>If you want to leverage the properties of <code>MPFSoundAsset</code> like fade times and target bus, you can create an <code>MPFSoundAsset</code> resource and select your saved <code>AudioStreamRandomizer</code> as the <em>Stream</em>.</p>
 <p>Alternatively, you can combine the sound pool and the MPF sound asset into a single resource. Create a new <code>MPFSoundAsset</code> resource and under <em>Stream</em>, instead of loading a sound file choose <em>New AudioStreamRandomizer</em>. This will create a new randomizer pool inside the <code>MPFSoundAsset</code> resource, and you can add streams and customize the pool like before. The randomizer will be saved as part of the same resource file so you don't need multiple files.</p>
 <p><img alt="image" src="../../images/sound_asset_randomizer.png"></p>
 <p>With the necessary playback settings included in the <code>MPFSoundAsset</code> resource, the sound player can be called as a one-liner.</p>
-<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nt">sound_player</span><span class="p">:</span>
-<span class="w">        </span><span class="nt">villain_advance</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">villain_advance_callouts</span>
+<div class="highlight"><pre><span></span><code><span class="nt">sound_player</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">villain_advance</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">villain_advance_callouts</span>
 </code></pre></div>
 <hr>
 <div class="admonition question">

@@ -48130,8 +48130,8 @@ icons & this code generated via https://realfavicongenerator.net
 <h2 id="methods">Methods</h2>
 <p><code>MPFWidget</code> does not have any public methods exposed, but custom methods can be added to scene scripts that extend <code>MPFWidget</code>. These methods can be triggered from MPF <code>widget_player</code> with the <code>action: method</code> option. These options are the same as for slides, so see the <a href="../slide_player/">slide_player: reference</a> for more details.</p>
 <p>When a custom function is called, two parameters are passed in: <em>settings</em>, the configuration settings from the widget player config, and <em>kwargs</em>, the arguments from the event that triggered the widget player. If you declared any <code>tokens:</code> in your config for the widget player, those will be available as <code>settings.tokens</code>.</p>
-<div class="highlight"><pre><span></span><code>    func my_custom_method(settings, kwargs):
-        # Function does stuff here
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="nx">my_custom_method</span><span class="p">(</span><span class="nx">settings</span><span class="p">,</span><span class="w"> </span><span class="nx">kwargs</span><span class="p">):</span>
+<span class="w">    </span><span class="err">#</span><span class="w"> </span><span class="nx">Function</span><span class="w"> </span><span class="nx">does</span><span class="w"> </span><span class="nx">stuff</span><span class="w"> </span><span class="nx">here</span>
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Godot requires parameters for this function</p>
@@ -48146,11 +48146,11 @@ icons & this code generated via https://realfavicongenerator.net
 <p>Single value, type <code>Dictionary</code>.</p>
 <p>The <em>kwargs</em> parameter passed to the custom method is the list of event arguments from the event that triggered the <code>widget_player</code> to be called in the first place.</p>
 <p>For example, the <em>player_score</em> event includes arguments for <code>value</code>, <code>prev_value</code>, <code>change</code>, and <code>player_num</code>. If your widget player is triggered by the <em>player_score</em> event, like so:</p>
-<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nt">widget_player</span><span class="p">:</span>
-<span class="w">        </span><span class="nt">player_score</span><span class="p">:</span>
-<span class="w">            </span><span class="nt">score_widget</span><span class="p">:</span>
-<span class="w">                </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">method</span>
-<span class="w">                </span><span class="nt">method</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my_method</span>
+<div class="highlight"><pre><span></span><code><span class="nt">widget_player</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">player_score</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">score_widget</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">method</span>
+<span class="w">            </span><span class="nt">method</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my_method</span>
 </code></pre></div>
 <p>Then in the <code>func my_method(settings, kwargs):</code> method of <em>score_widget.gd</em> you would have access to <code>kwargs.value</code>, <code>kwargs.prev_value</code>, <code>kwargs.change</code>, and <code>kwargs.player_num</code>.</p>
 <p>If you're curious what event arguments are available for a given event, look at the MPF log files. Each event is logged with all its arguments, so you can quickly see what's available.</p>

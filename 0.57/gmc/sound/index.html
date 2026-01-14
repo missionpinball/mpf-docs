@@ -47979,13 +47979,13 @@ icons & this code generated via https://realfavicongenerator.net
 <h3 id="direct-file-playback">Direct File Playback</h3>
 <p>If you just want to play a sound, you can reference that sound by its file name (without extension) in the <code>sound_player</code>.</p>
 <p>For example, if you have files in your project called <em>frenzy_background_music.ogg</em> and <em>small_explosion_one.wav</em> you could trigger those sounds with the following config:</p>
-<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nt">sound_player</span><span class="p">:</span>
-<span class="w">        </span><span class="nt">mode_frenzy_started</span><span class="p">:</span>
-<span class="w">            </span><span class="nt">frenzy_background_music</span><span class="p">:</span>
-<span class="w">                </span><span class="nt">bus</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">music</span>
-<span class="w">                </span><span class="nt">fade_in</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">500ms</span>
-<span class="w">                </span><span class="nt">fade_out</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
-<span class="w">        </span><span class="nt">drop_targets_complete</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">small_explosion_one</span>
+<div class="highlight"><pre><span></span><code><span class="nt">sound_player</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">mode_frenzy_started</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">frenzy_background_music</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">bus</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">music</span>
+<span class="w">            </span><span class="nt">fade_in</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">500ms</span>
+<span class="w">            </span><span class="nt">fade_out</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<span class="w">    </span><span class="nt">drop_targets_complete</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">small_explosion_one</span>
 </code></pre></div>
 <h3 id="mpfsound-resource">MPFSound Resource</h3>
 <p>GMC includes a custom class called <code>MPFSound</code> that provides properties that can be saved to a resource file. When this resource is played, the playback properties are read from the file and don't need to be passed as part of the <code>sound_player</code> config.</p>

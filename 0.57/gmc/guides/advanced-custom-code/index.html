@@ -47958,24 +47958,24 @@ icons & this code generated via https://realfavicongenerator.net
 <h3 id="create-a-custom-core-script">Create a Custom Core Script</h3>
 <p>To insert your own code into the core GMC scripts, create a new GDScript file that <code>extends</code> from the core script class you want.</p>
 <p>You can then create your own logic for virtual methods, extend existing methods with <code>super()</code>, or overwrite them entirely.</p>
-<div class="highlight"><pre><span></span><code>    # /custom_code/my_custom_bcp.gd
+<div class="highlight"><pre><span></span><code><span class="err">#</span><span class="w"> </span><span class="o">/</span><span class="nx">custom_code</span><span class="o">/</span><span class="nx">my_custom_bcp</span><span class="p">.</span><span class="nx">gd</span>
 
-    extends GMCServer
+<span class="nx">extends</span><span class="w"> </span><span class="nx">GMCServer</span>
 
-    # Override a virtual method
-    func on_connect():
-      print("Connection established, running custom startup flow.")
+<span class="err">#</span><span class="w"> </span><span class="nx">Override</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">virtual</span><span class="w"> </span><span class="nx">method</span>
+<span class="kd">func</span><span class="w"> </span><span class="nx">on_connect</span><span class="p">():</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s">"Connection established, running custom startup flow."</span><span class="p">)</span>
 
-    # Extend an existing method by calling super() and adding custom logic
-    func set_machine_var(name: String, value) -&gt; void:
-      super()
-      print("Machine var %s updated to value: %s" % [name, value])
+<span class="err">#</span><span class="w"> </span><span class="nx">Extend</span><span class="w"> </span><span class="nx">an</span><span class="w"> </span><span class="nx">existing</span><span class="w"> </span><span class="nx">method</span><span class="w"> </span><span class="nx">by</span><span class="w"> </span><span class="nx">calling</span><span class="w"> </span><span class="nx">super</span><span class="p">()</span><span class="w"> </span><span class="nx">and</span><span class="w"> </span><span class="nx">adding</span><span class="w"> </span><span class="nx">custom</span><span class="w"> </span><span class="nx">logic</span>
+<span class="kd">func</span><span class="w"> </span><span class="nx">set_machine_var</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span><span class="w"> </span><span class="nx">String</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="p">&gt;</span><span class="w"> </span><span class="nx">void</span><span class="p">:</span>
+<span class="w">    </span><span class="nx">super</span><span class="p">()</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s">"Machine var %s updated to value: %s"</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="p">[</span><span class="nx">name</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="p">])</span>
 </code></pre></div>
 <h3 id="inject-custom-script-into-gmc">Inject Custom Script into GMC</h3>
 <p>Now that your script is written, you can instruct GMC to use your script instead of the core script by configuring it in <em>gmc.cfg</em>.</p>
 <p>In your <em>gmc.cfg</em> file, create a new section named <code>[gmc]</code> and enter a key of the class name you're overriding and a value of the path to your custom script.</p>
-<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="k">[gmc]</span>
-<span class="w">    </span><span class="na">GMCServer</span><span class="o">=</span><span class="s">"custom_code/my_custom_bcp.gd"</span>
+<div class="highlight"><pre><span></span><code><span class="k">[gmc]</span>
+<span class="na">GMCServer</span><span class="o">=</span><span class="s">"custom_code/my_custom_bcp.gd"</span>
 </code></pre></div>
 <p>The available core scripts to override are:</p>
 <ol>

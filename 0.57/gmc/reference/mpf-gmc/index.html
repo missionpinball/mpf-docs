@@ -48918,13 +48918,12 @@ icons & this code generated via https://realfavicongenerator.net
 <p>Returns a string with a conditional pluralization suffix <code>suffix</code> of <code>template</code> based on the value <code>value</code>.</p>
 <p>The template will append the suffix using string substitution if the <code>value</code> is not equal to one, otherwise the suffix will not be appended.</p>
 <p>Examples:</p>
-<p>``` code</p>
-<pre><code>pluralize("Shot%s Remaining", 1)
-# &gt; "Shot Remaining"
+<div class="highlight"><pre><span></span><code><span class="nx">pluralize</span><span class="p">(</span><span class="s">"Shot%s Remaining"</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
+<span class="err">#</span><span class="w"> </span><span class="p">&gt;</span><span class="w"> </span><span class="s">"Shot Remaining"</span>
 
-pluralize("Shot%s Remaining", 3)
-# &gt; "Shots Remaining"
-</code></pre>
+<span class="nx">pluralize</span><span class="p">(</span><span class="s">"Shot%s Remaining"</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span>
+<span class="err">#</span><span class="w"> </span><span class="p">&gt;</span><span class="w"> </span><span class="s">"Shots Remaining"</span>
+</code></pre></div>
 <hr>
 <div class="admonition question">
 <p class="admonition-title">Something missing or wrong? You can fix it!</p>

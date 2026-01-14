@@ -48204,24 +48204,24 @@ icons & this code generated via https://realfavicongenerator.net
 <h2 id="configuring-filters">Configuring Filters</h2>
 <p>You can enable and configure the default filters in your <em>gmc.cfg</em> file by creating a <code>[filter]</code> section. You then specify the filter name and any relevant parameters in that section.</p>
 <p>An example configuration might look like this:</p>
-<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="p p-Indicator">[</span><span class="nv">filter</span><span class="p p-Indicator">]</span>
-<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">filter="virtual_dmd"</span>
-<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">columns=120</span>
-<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">rows=45</span>
-<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">hardness=5</span>
-<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">spacing=2</span>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">[</span><span class="nv">filter</span><span class="p p-Indicator">]</span>
+<span class="l l-Scalar l-Scalar-Plain">filter="virtual_dmd"</span>
+<span class="l l-Scalar l-Scalar-Plain">columns=120</span>
+<span class="l l-Scalar l-Scalar-Plain">rows=45</span>
+<span class="l l-Scalar l-Scalar-Plain">hardness=5</span>
+<span class="l l-Scalar l-Scalar-Plain">spacing=2</span>
 </code></pre></div>
 <h2 id="filter-config-reference">Filter Config Reference</h2>
 <p>The following reference documents the filters included in GMC and their configuration parameters.</p>
 <h3 id="virtual-dmd">Virtual DMD</h3>
-<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="k">[filter]</span>
-<span class="w">    </span><span class="na">filter</span><span class="o">=</span><span class="s">"virtual_dmd"</span>
+<div class="highlight"><pre><span></span><code><span class="k">[filter]</span>
+<span class="na">filter</span><span class="o">=</span><span class="s">"virtual_dmd"</span>
 </code></pre></div>
 <p>The most popular shader filter creates the effect of a color DMD by pixelating the screen and adding an overlay of dots.</p>
 <h4 id="color"><code>color</code></h4>
 <p>Single value, type <code>Color(R,G,B,A)</code>. Default <code>1.0, 1.0, 1.0, 1.0</code></p>
 <p>The color of the dot overlay. Must be specified as four (RGBA) floats between <code>0.0</code> and <code>1.0</code>. All four values (including opacity) are required.</p>
-<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="na">color</span><span class="o">=</span><span class="s">Color(1.0, 0.5, 0.2, 1.0)</span>
+<div class="highlight"><pre><span></span><code><span class="na">color</span><span class="o">=</span><span class="s">Color(1.0, 0.5, 0.2, 1.0)</span>
 </code></pre></div>
 <h4 id="columns"><code>columns</code></h4>
 <p>Single value, type <code>int</code>. Default <code>128</code></p>
@@ -48237,14 +48237,14 @@ icons & this code generated via https://realfavicongenerator.net
 <p>Single value, type <code>float</code>. Default <code>2.0</code></p>
 <p>The distance from the edge of the "pixel" to the outer edge of the circle. A value of <code>1.0</code> means no spacing, and dots will not appear. Higher values put more space between the dots (i.e. smaller dots).</p>
 <h3 id="dmd-dots">DMD Dots</h3>
-<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="k">[filter]</span>
-<span class="w">    </span><span class="na">filter</span><span class="o">=</span><span class="s">"dmd_dots"</span>
+<div class="highlight"><pre><span></span><code><span class="k">[filter]</span>
+<span class="na">filter</span><span class="o">=</span><span class="s">"dmd_dots"</span>
 </code></pre></div>
 <p>This filter renders the dots of the Virtual DMD filter, but without pixelating the underlying content. You may want this if you are already using pixel art or a different method of pixelation, but still want the DMD look.</p>
 <p>The configuration options for <code>dmd_dots</code> are the same as <code>virtual_dmd</code>,</p>
 <h3 id="pixelate">Pixelate</h3>
-<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="k">[filter]</span>
-<span class="w">    </span><span class="na">filter</span><span class="o">=</span><span class="s">"pixelate"</span>
+<div class="highlight"><pre><span></span><code><span class="k">[filter]</span>
+<span class="na">filter</span><span class="o">=</span><span class="s">"pixelate"</span>
 </code></pre></div>
 <p>This filter pixelates the display into blocks with a fixed number of rows and columns. It's similar to what's done in <code>virtual_dmd</code> but without the dot overlay.</p>
 <p>You may want this if you're making a pixel-art style game, or if you are rendering to an <em>actual</em> DMD.</p>
@@ -48263,10 +48263,10 @@ icons & this code generated via https://realfavicongenerator.net
 <p>To use a custom shader, you must first create a Shader Material file and save it in your project. In the Godot Editor <em>FileSystem</em> panel, choose where you want your shader to live and right click to <em>Create New &gt; Resource...</em>.  Select <code>Shader</code> as the resource type (just <code>Shader</code>, not any other shader-related type) and choose a good name for it.</p>
 <p>Back in the <em>FileSystem</em> panel, find your new shader file (with the <em>.gdshader</em> extension) and double-click it to bring up the <em>Shader Editor</em> panel. Put in your shader code and save.</p>
 <p>Once again in the <em>FileSystem</em> panel, right click on your shader file and select <em>Copy Path</em>. Open your <em>gmc.cfg</em> config file and paste that path as the <code>filter=</code> value in the <code>filter</code> section. Make sure to add quotes around the path!</p>
-<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="k">[filter]</span>
-<span class="w">    </span><span class="na">filter</span><span class="o">=</span><span class="s">"res://shaders/my_awesome_shader.gdshader"</span>
-<span class="w">    </span><span class="na">awesomeness</span><span class="o">=</span><span class="s">9000</span>
-<span class="w">    </span><span class="na">frequency</span><span class="o">=</span><span class="s">0.5</span>
+<div class="highlight"><pre><span></span><code><span class="k">[filter]</span>
+<span class="na">filter</span><span class="o">=</span><span class="s">"res://shaders/my_awesome_shader.gdshader"</span>
+<span class="na">awesomeness</span><span class="o">=</span><span class="s">9000</span>
+<span class="na">frequency</span><span class="o">=</span><span class="s">0.5</span>
 </code></pre></div>
 <p>If your shader requires any parameters (using <code>uniform</code> variables) that you want to configure in <em>gmc.cfg</em> instead of hard-coding in the shader, you can add those parameters as key/value pairs in the filter config section as well.</p>
 <hr>
