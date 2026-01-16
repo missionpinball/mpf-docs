@@ -17985,13 +17985,30 @@ icons & this code generated via https://realfavicongenerator.net
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#simplest-installation-godot-asset-library-coming-soon" class="md-nav__link">
+  <a href="#simplest-installation-godot-asset-library" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Simplest Installation: Godot Asset Library (coming soon!)
+        Simplest Installation: Godot Asset Library
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Simplest Installation: Godot Asset Library">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#upgrading-with-the-asset-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Upgrading with the Asset Library
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -48147,13 +48164,30 @@ icons & this code generated via https://realfavicongenerator.net
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#simplest-installation-godot-asset-library-coming-soon" class="md-nav__link">
+  <a href="#simplest-installation-godot-asset-library" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Simplest Installation: Godot Asset Library (coming soon!)
+        Simplest Installation: Godot Asset Library
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Simplest Installation: Godot Asset Library">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#upgrading-with-the-asset-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Upgrading with the Asset Library
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -48272,10 +48306,11 @@ icons & this code generated via https://realfavicongenerator.net
 The most updated full installation (known-working on Windows and Linux) as of January 2026 is:</p>
 <ul>
 <li>Python 3.13</li>
-<li>MPF 0.80.0.dev11 *(via pip --pre option)</li>
-<li>MPF-GMC 0.1.6 *(via manual copy or repository symlink)</li>
-<li>Godot Editor 4.5 *(and no mpf-mc install!)</li>
+<li>MPF 0.80.0.dev11 (via pip <code>--pre</code> option)</li>
+<li>MPF-GMC 0.1.6 (via Asset Library)</li>
+<li>Godot Editor 4.5</li>
 <li>MPF Monitor 0.57.2</li>
+<li>Note: mpf-mc is no longer supported with MPF 0.80+, use Godot and MPF-GMC instead</li>
 </ul>
 <h2 id="install-mpf-080">Install MPF 0.80</h2>
 <p>Before you get working with GMC, you need to install MPF 0.80 by following the <a href="../../install/">MPF Installation Guide</a>.</p>
@@ -48294,7 +48329,7 @@ The most updated full installation (known-working on Windows and Linux) as of Ja
 <p>However, note that Godot only has access to files in its project folder and subfolders. If you choose to make a "gmc" subfolder for your Godot project, all slides, widgets, sound files, and video files will need to be in those respective subfolders in the gmc folder (e.g. <em>/gmc/slides/</em>), NOT in the MPF mode subfolders (e.g. <em>/modes/attract/slides/</em>).</p>
 </div>
 <h2 id="video-tutorial">Video Tutorial</h2>
-<p>The following video shows on Windows how to create your Godot project, install MPF-GMC, configure three audio busses, use Git LFS for large files in git, use gmc.cfg, and set up the basics in your Godot project. Not every part of setup is represented, such as Indentation Setup.</p>
+<p>The following video shows on Windows how to create your Godot project, install MPF-GMC, configure three audio busses, use Git LFS for large files in git, use gmc.cfg, and set up the basics in your Godot project. Not every part of setup is represented, such as Indentation Setup. Note that video tutorials can not easily be updated with new version numbers, so you should check <a href="../../versions/">MPF Versions</a> for up to date information.</p>
 <div class="video-wrapper">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/IO3U1SMZ5-A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
@@ -48314,11 +48349,17 @@ The most updated full installation (known-working on Windows and Linux) as of Ja
 <li>If you use an external text editor like VS Code or Atom, in the <em>Files</em> section <strong>enable</strong> the option <code>Auto Reload Scripts on External Change</code>.</li>
 </ul>
 <h2 id="install-the-gmc-plugin">Install the GMC Plugin</h2>
-<h3 id="simplest-installation-godot-asset-library-coming-soon">Simplest Installation: Godot Asset Library (coming soon!)</h3>
-<p>The latest development release of MPF (0.80.0.dev11) requires GMC plugin version 0.1.6, which is not yet available on the Asset Library.
-While we prepare for official release of MPF 0.80.0, we recommend the Standard or Expert installations, seen below.</p>
+<p>Installing GMC is the next step, and it can be done in a variety of ways.
+Regardless of whether you use the Asset Library, use a manually downloaded copy, or use git and a symlink, you will need to follow up with the Activate step, as detailed at the end of this page.</p>
+<h3 id="simplest-installation-godot-asset-library">Simplest Installation: Godot Asset Library</h3>
 <p>The Godot editor features the Asset Library, a built-in library of plugins that you can download and install with a click.</p>
-<p>In the Godot editor, select <strong>AssetLib</strong> from the top center selector. You may need to enable online access to the asset library when prompted. Search for "GMC" and click on the GMC asset to download and install.</p>
+<p>The late 2025 development release of MPF (0.80.0.dev11) requires GMC plugin version 0.1.6, which is available on the Asset Library.</p>
+<p>In the Godot editor, select <strong>AssetLib</strong> from the top center selector. You may need to enable online access to the asset library when prompted. Search for "GMC" and click on the GMC asset and press "Download". After the download completes, press "Install" -- the default installation directory should be correct, and you can confirm by looking at the root of your Godot project for the folder <code>&lt;root&gt;addons/mpf-gmc</code>.</p>
+<h4 id="upgrading-with-the-asset-library">Upgrading with the Asset Library</h4>
+<p>If you have already installed a previous version of GMC through the Asset Library, or you see a warning message during install about files in conflict with your project, you may want to reinstall GMC.
+To do this, close the Godot editor completely. In the OS file manager find the addons folder in your project and delete the mpf-gmc/ folder completely.
+Open the Godot editor again into your project; you should get warnings about missing dependencies - press "Open Anyway".
+Then find GMC in the Asset Library as before, download, and install, and Reload the Godot project. If correctly reinstalled, the warnings should go away.</p>
 <h3 id="standard-installation-download-copy">Standard Installation: Download &amp; Copy</h3>
 <p>You can download the GMC plugin from the MPF-GMC repository on GitHub. Visit https://github.com/missionpinball/mpf-gmc and click on the green <strong>Code</strong> button to show the Code dropdown, and select <em>Download ZIP</em> to download the plugin.</p>
 <p><img alt="image" src="../images/gmc-download-zip.png"></p>
