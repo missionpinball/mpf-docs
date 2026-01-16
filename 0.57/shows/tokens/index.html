@@ -40195,6 +40195,17 @@ icons & this code generated via https://realfavicongenerator.net
 </li>
       
         <li class="md-nav__item">
+  <a href="#shot-show-tokens" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shot show tokens
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#using-mpf-variable-values-in-tokens" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -40207,10 +40218,10 @@ icons & this code generated via https://realfavicongenerator.net
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#event-parameterargument-values" class="md-nav__link">
+  <a href="#event-parameter-argument-values" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Event parameter(argument) values
+        Event parameter (argument) values
       
     </span>
   </a>
@@ -48029,6 +48040,17 @@ icons & this code generated via https://realfavicongenerator.net
 </li>
       
         <li class="md-nav__item">
+  <a href="#shot-show-tokens" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shot show tokens
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#using-mpf-variable-values-in-tokens" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -48041,10 +48063,10 @@ icons & this code generated via https://realfavicongenerator.net
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#event-parameterargument-values" class="md-nav__link">
+  <a href="#event-parameter-argument-values" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Event parameter(argument) values
+        Event parameter (argument) values
       
     </span>
   </a>
@@ -48126,11 +48148,11 @@ icons & this code generated via https://realfavicongenerator.net
 
 
 <h1 id="using-tokens-for-run-time-variable-replacement-in-shows">Using "tokens" for run-time variable replacement in shows</h1>
-<p>One of the most powerful features of MPF shows is that you can build
+<p>One of the most powerful features of shows in MPF is that you can build
 shows that contain "placeholder" tokens which are dynamically replaced
 with actual values when a show starts.</p>
 <p>This lets you build reusable shows that you can then use in lots of
-different situations with different lights, slides, sounds, etc.</p>
+different situations with different lights, slides, events, etc.</p>
 <h2 id="shows-without-tokens">Shows without tokens</h2>
 <p>To understand how tokens work, let's first look at a show that does not
 include any tokens, like this:</p>
@@ -48143,7 +48165,7 @@ include any tokens, like this:</p>
 <span class="w">    </span><span class="nt">led_01</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">off</span>
 </code></pre></div>
 <p>The example show above is simple. When it starts, it sets <em>led_01</em> to
-red, then 1 second later, it turns it off. You can run this show in a
+red, then 1 second later it turns it off. You can run this show in a
 loop to flash <em>led_01</em> between red and off.</p>
 <p>If you called this show <em>flash_red</em>, you could play it via the
 <em>show_player:</em> section of your config, like this:</p>
@@ -48294,47 +48316,95 @@ play like this:</p>
 <span class="w">        </span><span class="nt">color1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">green</span>
 <span class="w">        </span><span class="nt">color2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">blue</span>
 </code></pre></div>
+<h2 id="shot-show-tokens">Shot show tokens</h2>
+<p>Shots can take advantage of the token system to easily assign the same light across the different shows for each state of the shot profile.</p>
+<p>In the following example, the shot uses the <a href="../default_shows/">built-in shows</a> <code>flash</code> and <code>on</code>, sending the show token "led" with the value "my_led" in both.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">shot_profiles</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">blink_to_solid_profile</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">states</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">blink</span>
+<span class="w">        </span><span class="nt">show</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flash</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">solid</span>
+<span class="w">        </span><span class="nt">show</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">on</span>
+
+<span class="nt">shots</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_shot</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">profile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">blink_to_solid_profile</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my_switch</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">led</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my_led</span>
+</code></pre></div>
+<p>Shot profiles also support setting up show_tokens, allowing some settings to be configured at a more common level.
+For instance, using the default show <code>flash_color</code> we can have two shots share a color at the profile level, while each affecting a different light in the shot level.
+The following example shows a simple case, where we only save a couple lines by moving color up to the profile level, but for complex shows (say, a fireworks show where there are ten different color variables used) using the profile tokens can significantly reduce duplication.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">shot_profiles</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">different_blink_color_profile</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">states</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">purple</span>
+<span class="w">        </span><span class="nt">show</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flash_color</span>
+<span class="w">        </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ff00ff</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">green</span>
+<span class="w">        </span><span class="nt">show</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flash_color</span>
+<span class="w">        </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">00ff00</span>
+
+<span class="nt">shots</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_first_shot</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">profile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">different_blink_color_profile</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my_switch_1</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">led</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my_led_1</span>
+<span class="w">  </span><span class="nt">my_second_shot</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">profile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">different_blink_color_profile</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my_switch_2</span>
+<span class="w">    </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">led</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my_led_2</span>
+</code></pre></div>
 <h2 id="using-mpf-variable-values-in-tokens">Using mpf variable values in tokens</h2>
-<p>In the above explainations the token values, e.g. led_02 were objects you have defined in your config file. You can as well use values of variables mpf is having, e.g. machine variables, or parameter values of an event.</p>
-<h3 id="event-parameterargument-values">Event parameter(argument) values</h3>
-<p>Let's assume the following event is posted</p>
+<p>In the examples above, the token values (ex: led_02) are object names from your config files or are color values.
+Another way to provide token values is to supply variables, such as machine variables or event parameters.</p>
+<h3 id="event-parameter-argument-values">Event parameter (argument) values</h3>
+<p>Let's imagine the event <a href="../../events/player_turn_started/">player_turn_started</a> is posted.
+It automatically includes the parameter <code>number</code>, for the number of the player whose turn has started.</p>
 <div class="highlight"><pre><span></span><code>INFO<span class="w"> </span>:<span class="w"> </span>EventManager<span class="w"> </span>:<span class="w"> </span>Event:<span class="w"> </span><span class="o">======</span><span class="s1">'player_turn_started'</span><span class="o">======</span><span class="w"> </span><span class="nv">Args</span><span class="o">={</span><span class="s1">'player'</span>:<span class="w"> </span>&lt;Player<span class="w"> </span><span class="m">1</span>&gt;,<span class="w"> </span><span class="s1">'number'</span>:<span class="w"> </span><span class="m">1</span><span class="o">}</span>
 </code></pre></div>
-<p>The event <code>player_turn_started</code> has for example the argument <code>number</code> for the number of the player whose turn has started.</p>
+<p>We can define a show player on the event, to play the show "player_number_show", proving the token "txt" with the value from that param (1 in this case.)</p>
 <div class="highlight"><pre><span></span><code><span class="nt">show_player</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">player_turn_started</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">player_num</span><span class="p">:</span><span class="w"> </span><span class="c1">#The name of the show to be started upon this event</span>
+<span class="w">    </span><span class="nt">player_number_show</span><span class="p">:</span><span class="w"> </span><span class="c1">#The name of the show to be started upon this event</span>
 <span class="w">      </span><span class="nt">show_tokens</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">txt</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(number)</span>
 </code></pre></div>
-<p>The number of the player whose turn started is being displayed in the show where you have used the placeholder <code>txt</code>. The argument <code>number</code> is probably used in many events. When using event arguments as tokens, just use the argument name without any prefix or dot notation.</p>
+<p>Note: When using event arguments as tokens, just use the argument name without any prefix or dot notation.</p>
 <h3 id="variable-values">Variable values</h3>
-<p>You can use as well variable values to be used in a token. For example if you want to access a player variable you can access it with <code>current_player.&lt;variable&gt;</code></p>
+<p>You can also use variable values to populate tokens. For example if you want to access a player variable you can access it with <code>current_player.&lt;variable&gt;</code></p>
 <div class="highlight"><pre><span></span><code><span class="nt">show_player</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">player_turn_started</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">ball_num</span><span class="p">:</span><span class="w"> </span><span class="c1">#The name of the show to be started upon this event</span>
+<span class="w">    </span><span class="nt">ball_num_show</span><span class="p">:</span><span class="w"> </span><span class="c1">#The name of the show to be started upon this event</span>
 <span class="w">      </span><span class="nt">show_tokens</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">txt</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(current_player.ball)</span>
 </code></pre></div>
 <p>In this example the ball number of the player is being used in your show once the player's turn has started. In case you want to access a variable of a specific player (which is not necessarily the current player) you can use <code>players[&lt;player_number&gt;].&lt;variable&gt;</code> where <code>player_number</code> is the player starting with 0, e.g. the second player needs the value 1 in this example.</p>
-<p>You can as well access game variables, machine variables or settings. Just use the notation <code>game.&lt;variable&gt;</code> or <code>machine.&lt;variable&gt;</code> or <code>settings.&lt;variable&gt;</code>. You can learn more about using variables as tokens in the <a href="../../config/instructions/dynamic_values/">Dynamic Values</a> reference page.</p>
+<p>You can also access game variables, machine variables, or settings. Just use the notation <code>game.&lt;variable&gt;</code>, <code>machine.&lt;variable&gt;</code>, or <code>settings.&lt;variable&gt;</code>.
+You can learn more about using variables as tokens in the <a href="../../config/instructions/dynamic_values/">Dynamic Values</a> reference page.</p>
 <h3 id="formatting-of-variable-values">Formatting of variable values</h3>
-<p>mpf is being build with Python, thus you find in some config files things which are Python specific. An example is how to tell mpf how to format the variable value. In some config files you might find something like this</p>
+<p>MPF is built with Python, so it is possible to use some Python-specific features in calculating variable values.
+For instance, to format the variable value as a decimal, we can use a special Python syntax:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">show_player</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">player_turn_started</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">ball_num</span><span class="p">:</span><span class="w"> </span><span class="c1">#The name of the show to be started upon this event</span>
+<span class="w">    </span><span class="nt">ball_num_show</span><span class="p">:</span><span class="w"> </span><span class="c1">#The name of the show to be started upon this event</span>
 <span class="w">      </span><span class="nt">show_tokens</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">txt</span><span class="p">:</span><span class="w"> </span><span class="s">"{(current_player.ball):d}"</span>
 </code></pre></div>
-<p>That <code>:d</code> tells mpf to format the value as a decimal. To learn about the other Python formatting options see for example here https://docs.python.org/2/library/string.html#format-specification-mini-language</p>
+<p>The <code>:d</code> tells MPF to format the value as a decimal.
+To learn about the other Python formatting options see here https://docs.python.org/2/library/string.html#format-specification-mini-language</p>
 <h2 id="tokens-vs-tags">Tokens vs Tags</h2>
-<p>Almost all devices support tags. In
-<a href="../../config_players/">config players</a>
+<p>Almost all devices support tags. In <a href="../../config_players/">config players</a>
 such as <a href="../../config_players/light_player/">light_player</a> you can also reference multiple lights by their tags.</p>
 <h2 id="the-bottom-line">The bottom line</h2>
-<p>As you can see, tokens are very powerful. Again, keep in mind there are
-many different ways to start shows in MPF, and all of them have ways to
-pass tokens to shows.</p>
+<p>Tokens are a very powerful way to reuse shows in multiple parts of your game and reduce duplication in show definitions.
+There are many different ways to start shows in MPF, and all of them have ways to pass tokens to them.</p>
 <hr>
 <div class="admonition question">
 <p class="admonition-title">Something missing or wrong? You can fix it!</p>
