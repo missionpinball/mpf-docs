@@ -42,7 +42,7 @@ Finally, in your Godot game project folder create a new folder called *addons* (
 
 ## Video Tutorial
 
-The following video shows on Windows how to create your Godot project, install MPF-GMC, configure three audio busses, use Git LFS for large files in git, use gmc.cfg, and set up the basics in your Godot project. Not every part of setup is represented, such as Indentation Setup.
+The following video shows on Windows how to create your Godot project, install MPF-GMC, configure three audio busses, use Git LFS for large files in git, use gmc.cfg, and set up the basics in your Godot project. Not every part of setup is represented, such as Indentation Setup. Note that video tutorials can not easily be updated with new version numbers, so you should check [MPF Versions](../versions/index.md) for up to date information.
 
 <div class="video-wrapper">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/IO3U1SMZ5-A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -72,14 +72,23 @@ Also in the *Editor Settings > Text Editor > Behavior* menu:
 
 ## Install the GMC Plugin
 
-### Simplest Installation: Godot Asset Library (coming soon!)
+Installing GMC is the next step, and it can be done in a variety of ways.
+Regardless of whether you use the Asset Library, use a manually downloaded copy, or use git and a symlink, you will need to follow up with the Activate step, as detailed at the end of this page.
 
-The latest development release of MPF (0.80.0.dev11) requires GMC plugin version 0.1.6, which is not yet available on the Asset Library.
-While we prepare for official release of MPF 0.80.0, we recommend the Standard or Expert installations, seen below.
+### Simplest Installation: Godot Asset Library
 
 The Godot editor features the Asset Library, a built-in library of plugins that you can download and install with a click.
 
-In the Godot editor, select **AssetLib** from the top center selector. You may need to enable online access to the asset library when prompted. Search for "GMC" and click on the GMC asset to download and install.
+The late 2025 development release of MPF (0.80.0.dev11) requires GMC plugin version 0.1.6, which is available on the Asset Library.
+
+In the Godot editor, select **AssetLib** from the top center selector. You may need to enable online access to the asset library when prompted. Search for "GMC" and click on the GMC asset and press "Download". After the download completes, press "Install" -- the default installation directory should be correct, and you can confirm by looking at the root of your Godot project for the folder `<root>addons/mpf-gmc`.
+
+#### Upgrading with the Asset Library
+
+If you have already installed a previous version of GMC through the Asset Library, or you see a warning message during install about files in conflict with your project, you may want to reinstall GMC.
+To do this, close the Godot editor completely. In the OS file manager find the addons folder in your project and delete the mpf-gmc/ folder completely.
+Open the Godot editor again into your project; you should get warnings about missing dependencies - press "Open Anyway".
+Then find GMC in the Asset Library as before, download, and install, and Reload the Godot project. If correctly reinstalled, the warnings should go away.
 
 ### Standard Installation: Download & Copy
 
