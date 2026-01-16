@@ -4,13 +4,12 @@ title: Using "tokens" for run-time variable replacement in shows
 
 # Using "tokens" for run-time variable replacement in shows
 
-
-One of the most powerful features of MPF shows is that you can build
+One of the most powerful features of shows in MPF is that you can build
 shows that contain "placeholder" tokens which are dynamically replaced
 with actual values when a show starts.
 
 This lets you build reusable shows that you can then use in lots of
-different situations with different lights, slides, sounds, etc.
+different situations with different lights, slides, events, etc.
 
 ## Shows without tokens
 
@@ -28,7 +27,7 @@ include any tokens, like this:
 ```
 
 The example show above is simple. When it starts, it sets *led_01* to
-red, then 1 second later, it turns it off. You can run this show in a
+red, then 1 second later it turns it off. You can run this show in a
 loop to flash *led_01* between red and off.
 
 If you called this show *flash_red*, you could play it via the
@@ -227,36 +226,92 @@ show_player:
         color2: blue
 ```
 
+## Shot show tokens
+
+Shots can take advantage of the token system to easily assign the same light across the different shows for each state of the shot profile.
+
+In the following example, the shot uses the [built-in shows](../shows/default_shows.md) `flash` and `on`, sending the show token "led" with the value "my_led" in both.
+
+``` yaml
+shot_profiles:
+  blink_to_solid_profile:
+    states:
+      - name: blink
+        show: flash
+      - name: solid
+        show: on
+
+shots:
+  my_shot:
+    profile: blink_to_solid_profile
+    switch: my_switch
+    show_tokens:
+      led: my_led
+```
+
+Shot profiles also support setting up show_tokens, allowing some settings to be configured at a more common level.
+For instance, using the default show `flash_color` we can have two shots share a color at the profile level, while each affecting a different light in the shot level.
+The following example shows a simple case, where we only save a couple lines by moving color up to the profile level, but for complex shows (say, a fireworks show where there are ten different color variables used) using the profile tokens can significantly reduce duplication.
+
+``` yaml
+shot_profiles:
+  different_blink_color_profile:
+    states:
+      - name: purple
+        show: flash_color
+        show_tokens:
+          color: ff00ff
+      - name: green
+        show: flash_color
+        show_tokens:
+          color: 00ff00
+
+shots:
+  my_first_shot:
+    profile: different_blink_color_profile
+    switch: my_switch_1
+    show_tokens:
+      led: my_led_1
+  my_second_shot:
+    profile: different_blink_color_profile
+    switch: my_switch_2
+    show_tokens:
+      led: my_led_2
+```
+
 ## Using mpf variable values in tokens
-In the above explainations the token values, e.g. led_02 were objects you have defined in your config file. You can as well use values of variables mpf is having, e.g. machine variables, or parameter values of an event.
 
-### Event parameter(argument) values
+In the examples above, the token values (ex: led_02) are object names from your config files or are color values.
+Another way to provide token values is to supply variables, such as machine variables or event parameters.
 
-Let's assume the following event is posted
+### Event parameter (argument) values
+
+Let's imagine the event [player_turn_started](../events/player_turn_started.md) is posted.
+It automatically includes the parameter `number`, for the number of the player whose turn has started.
 
 ``` shell
 INFO : EventManager : Event: ======'player_turn_started'====== Args={'player': <Player 1>, 'number': 1}
 ```
 
-The event `player_turn_started` has for example the argument `number` for the number of the player whose turn has started.
+We can define a show player on the event, to play the show "player_number_show", proving the token "txt" with the value from that param (1 in this case.)
 
 ``` yaml
 show_player:
   player_turn_started:
-    player_num: #The name of the show to be started upon this event
+    player_number_show: #The name of the show to be started upon this event
       show_tokens:
         txt: (number)
 ```
 
-The number of the player whose turn started is being displayed in the show where you have used the placeholder `txt`. The argument `number` is probably used in many events. When using event arguments as tokens, just use the argument name without any prefix or dot notation.
+Note: When using event arguments as tokens, just use the argument name without any prefix or dot notation.
 
 ### Variable values
-You can use as well variable values to be used in a token. For example if you want to access a player variable you can access it with `current_player.<variable>`
+You can also use variable values to populate tokens. For example if you want to access a player variable you can access it with `current_player.<variable>`
 
 ``` yaml
 show_player:
   player_turn_started:
-    ball_num: #The name of the show to be started upon this event
+    ball_num_show: #The name of the show to be started upon this event
       show_tokens:
         txt: (current_player.ball)
 ```
@@ -264,29 +319,31 @@ show_player:
 In this example the ball number of the player is being used in your show once the player's turn has started. In case you want to access a variable of a specific player (which is not necessarily the current player) you can use `players[<player_number>].<variable>` where `player_number` is the player starting with 0, e.g. the second player needs the value 1 in this example.
 
 
-You can as well access game variables, machine variables or settings. Just use the notation `game.<variable>` or `machine.<variable>` or `settings.<variable>`. You can learn more about using variables as tokens in the [Dynamic Values](../config/instructions/dynamic_values.md) reference page.
+You can also access game variables, machine variables, or settings. Just use the notation `game.<variable>`, `machine.<variable>`, or `settings.<variable>`.
+You can learn more about using variables as tokens in the [Dynamic Values](../config/instructions/dynamic_values.md) reference page.
 
 ### Formatting of variable values
-mpf is being build with Python, thus you find in some config files things which are Python specific. An example is how to tell mpf how to format the variable value. In some config files you might find something like this
+
+MPF is built with Python, so it is possible to use some Python-specific features in calculating variable values.
+For instance, to format the variable value as a decimal, we can use a special Python syntax:
 
 ``` yaml
 show_player:
   player_turn_started:
-    ball_num: #The name of the show to be started upon this event
+    ball_num_show: #The name of the show to be started upon this event
       show_tokens:
         txt: "{(current_player.ball):d}"
 ```
 
-That `:d` tells mpf to format the value as a decimal. To learn about the other Python formatting options see for example here https://docs.python.org/2/library/string.html#format-specification-mini-language
+The `:d` tells MPF to format the value as a decimal.
+To learn about the other Python formatting options see here https://docs.python.org/2/library/string.html#format-specification-mini-language
 
 ## Tokens vs Tags
 
-Almost all devices support tags. In
-[config players](../config_players/index.md)
+Almost all devices support tags. In [config players](../config_players/index.md)
 such as [light_player](../config_players/light_player.md) you can also reference multiple lights by their tags.
 
 ## The bottom line
 
-As you can see, tokens are very powerful. Again, keep in mind there are
-many different ways to start shows in MPF, and all of them have ways to
-pass tokens to shows.
+Tokens are a very powerful way to reuse shows in multiple parts of your game and reduce duplication in show definitions.
+There are many different ways to start shows in MPF, and all of them have ways to pass tokens to them.
