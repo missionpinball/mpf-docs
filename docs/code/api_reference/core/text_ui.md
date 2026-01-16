@@ -1,3 +1,7 @@
+---
+title: API Reference - text_ui
+---
+
 # text_ui API Reference
 
 `self.machine.text_ui`

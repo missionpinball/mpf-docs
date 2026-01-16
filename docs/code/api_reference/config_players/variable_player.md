@@ -1,3 +1,7 @@
+---
+title: API Reference - variable_player
+---
+
 # variable_player API Reference
 
 `self.machine.variable_player`

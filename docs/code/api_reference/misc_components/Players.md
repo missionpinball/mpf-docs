@@ -1,3 +1,7 @@
+---
+title: API Reference - Player
+---
+
 # Player API Reference
 
 Config Reference:

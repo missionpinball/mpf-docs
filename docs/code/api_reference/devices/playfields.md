@@ -1,3 +1,7 @@
+---
+title: API Reference - playfields
+---
+
 # playfields API Reference
 
 Config Reference:

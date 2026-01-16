@@ -1,3 +1,7 @@
+---
+title: API Reference - ball_devices
+---
+
 # ball_devices API Reference
 
 Config Reference:

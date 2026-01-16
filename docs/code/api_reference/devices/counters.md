@@ -1,3 +1,7 @@
+---
+title: API Reference - counters
+---
+
 # counters API Reference
 
 Config Reference:

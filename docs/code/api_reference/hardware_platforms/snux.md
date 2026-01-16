@@ -1,3 +1,7 @@
+---
+title: API Reference - snux
+---
+
 # snux API Reference
 
 Config Reference:

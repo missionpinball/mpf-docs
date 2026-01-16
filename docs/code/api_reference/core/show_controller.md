@@ -1,3 +1,7 @@
+---
+title: API Reference - show_controller
+---
+
 # show_controller API Reference
 
 `self.machine.show_controller`

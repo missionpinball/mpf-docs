@@ -1,3 +1,7 @@
+---
+title: API Reference - rpi_dmd
+---
+
 # rpi_dmd API Reference
 
 Config Reference:

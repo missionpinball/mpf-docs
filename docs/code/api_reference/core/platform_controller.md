@@ -1,3 +1,7 @@
+---
+title: API Reference - platform_controller
+---
+
 # platform_controller API Reference
 
 `self.machine.platform_controller`

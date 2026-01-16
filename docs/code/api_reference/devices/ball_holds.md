@@ -1,3 +1,7 @@
+---
+title: API Reference - ball_holds
+---
+
 # ball_holds API Reference
 
 Config Reference:

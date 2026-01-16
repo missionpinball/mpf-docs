@@ -1,3 +1,7 @@
+---
+title: API Reference - flasher_player
+---
+
 # flasher_player API Reference
 
 `self.machine.flasher_player`

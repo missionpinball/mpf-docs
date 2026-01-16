@@ -1,3 +1,7 @@
+---
+title: API Reference - TestMachineController
+---
+
 # TestMachineController
 
 ``` python

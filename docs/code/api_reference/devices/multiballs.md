@@ -1,3 +1,7 @@
+---
+title: API Reference - multiballs
+---
+
 # multiballs API Reference
 
 Config Reference:

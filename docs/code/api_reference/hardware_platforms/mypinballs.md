@@ -1,3 +1,7 @@
+---
+title: API Reference - mypinballs
+---
+
 # mypinballs API Reference
 
 Config Reference:

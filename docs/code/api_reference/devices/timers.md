@@ -1,3 +1,7 @@
+---
+title: API Reference - timers
+---
+
 # timers API Reference
 
 Config Reference:

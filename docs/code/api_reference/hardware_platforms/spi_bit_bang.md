@@ -1,3 +1,7 @@
+---
+title: API Reference - spi_bit_bang
+---
+
 # spi_bit_bang API Reference
 
 `self.machine.hardware_platforms['spi_bit_bang']`

@@ -1,3 +1,7 @@
+---
+title: API Reference - light_controller
+---
+
 # light_controller API Reference
 
 `self.machine.light_controller`

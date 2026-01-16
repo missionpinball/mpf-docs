@@ -1,3 +1,7 @@
+---
+title: API Reference - Game Mode
+---
+
 # Game Mode API Reference
 
 Config Reference:

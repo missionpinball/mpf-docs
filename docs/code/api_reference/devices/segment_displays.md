@@ -1,3 +1,7 @@
+---
+title: API Reference - segment_displays
+---
+
 # segment_displays API Reference
 
 Config Reference:

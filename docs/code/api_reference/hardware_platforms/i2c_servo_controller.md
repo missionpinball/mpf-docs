@@ -1,3 +1,7 @@
+---
+title: API Reference - i2c_servo_controller
+---
+
 # i2c_servo_controller API Reference
 
 `self.machine.hardware_platforms['i2c_servo_controller']`

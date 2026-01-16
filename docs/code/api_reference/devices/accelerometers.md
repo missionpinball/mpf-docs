@@ -1,3 +1,7 @@
+---
+title: API Reference - accelerometers
+---
+
 # accelerometers API Reference
 
 `self.machine.accelerometers.*`

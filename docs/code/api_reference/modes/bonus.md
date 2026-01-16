@@ -1,3 +1,7 @@
+---
+title: API Reference - Bonus Mode
+---
+
 # Bonus Mode API Reference
 
 Config Reference:

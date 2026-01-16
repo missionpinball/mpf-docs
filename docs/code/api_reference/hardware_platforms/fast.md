@@ -1,3 +1,7 @@
+---
+title: API Reference - fast platform
+---
+
 # fast API Reference
 
 Config Reference:

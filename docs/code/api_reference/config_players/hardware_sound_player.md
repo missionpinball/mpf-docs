@@ -1,3 +1,7 @@
+---
+title: API Reference - hardware_sound_player
+---
+
 # hardware_sound_player API Reference
 
 `self.machine.hardware_sound_player`

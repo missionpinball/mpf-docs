@@ -1,3 +1,7 @@
+---
+title: API Reference - segment_display_player
+---
+
 # segment_display_player API Reference
 
 `self.machine.segment_display_player`

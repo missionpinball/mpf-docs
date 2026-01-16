@@ -1,3 +1,7 @@
+---
+title: API Reference - queue_event_player
+---
+
 # queue_event_player API Reference
 
 `self.machine.queue_event_player`

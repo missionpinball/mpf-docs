@@ -1,3 +1,7 @@
+---
+title: API Reference - twitch_bot
+---
+
 # twitch_bot API Reference
 
 `self.machine.twitch_bot`

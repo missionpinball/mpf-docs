@@ -1,3 +1,7 @@
+---
+title: API Reference - info_lights
+---
+
 # info_lights API Reference
 
 `self.machine.info_lights`

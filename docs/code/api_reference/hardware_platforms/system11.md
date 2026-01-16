@@ -1,3 +1,7 @@
+---
+title: API Reference - system11
+---
+
 # system11 API Reference
 
 Config Reference:

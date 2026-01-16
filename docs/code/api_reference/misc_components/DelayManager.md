@@ -1,3 +1,7 @@
+---
+title: API Reference - Delay Manager
+---
+
 # Delay Manager API Reference
 
 ``` python

@@ -1,3 +1,7 @@
+---
+title: API Reference - LogMixin
+---
+
 # LogMixin API Reference
 
 Config Reference:

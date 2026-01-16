@@ -1,3 +1,7 @@
+---
+title: API Reference - magnets
+---
+
 # magnets API Reference
 
 Config Reference:

@@ -1,3 +1,7 @@
+---
+title: API Reference - pin2dmd
+---
+
 # pin2dmd API Reference
 
 Config Reference:

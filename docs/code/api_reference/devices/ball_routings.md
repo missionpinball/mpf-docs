@@ -1,3 +1,7 @@
+---
+title: API Reference - ball_routings
+---
+
 # ball_routings API Reference
 
 Config Reference:

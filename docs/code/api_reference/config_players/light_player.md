@@ -1,3 +1,7 @@
+---
+title: API Reference - light_player
+---
+
 # light_player API Reference
 
 `self.machine.light_player`

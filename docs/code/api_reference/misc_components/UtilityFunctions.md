@@ -1,3 +1,7 @@
+---
+title: API Reference - Utility Functions
+---
+
 # Utility Functions API Reference
 
 ``` python

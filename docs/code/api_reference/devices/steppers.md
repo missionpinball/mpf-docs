@@ -1,3 +1,7 @@
+---
+title: API Reference - steppers
+---
+
 # steppers API Reference
 
 Config Reference:

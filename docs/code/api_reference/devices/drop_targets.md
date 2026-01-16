@@ -1,3 +1,7 @@
+---
+title: API Reference - drop_targets
+---
+
 # drop_targets API Reference
 
 Config Reference:

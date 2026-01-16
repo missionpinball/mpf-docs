@@ -1,3 +1,7 @@
+---
+title: API Reference - queue_relay_player
+---
+
 # queue_relay_player API Reference
 
 `self.machine.queue_relay_player`

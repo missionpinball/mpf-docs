@@ -1,3 +1,7 @@
+---
+title: API Reference - switch_player
+---
+
 # switch_player API Reference
 
 `self.machine.switch_player`

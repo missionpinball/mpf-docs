@@ -1,3 +1,7 @@
+---
+title: API Reference - virtual_pinball
+---
+
 # virtual_pinball API Reference
 
 `self.machine.hardware_platforms['virtual_pinball']`

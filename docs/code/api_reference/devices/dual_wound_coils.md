@@ -1,3 +1,7 @@
+---
+title: API Reference - dual_wound_coils
+---
+
 # dual_wound_coils API Reference
 
 Config Reference:

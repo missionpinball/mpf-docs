@@ -1,3 +1,7 @@
+---
+title: API Reference - lights
+---
+
 # lights API Reference
 
 Config Reference:

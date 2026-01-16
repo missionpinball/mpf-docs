@@ -1,3 +1,7 @@
+---
+title: API Reference - fadecandy
+---
+
 # fadecandy API Reference
 
 Config Reference:

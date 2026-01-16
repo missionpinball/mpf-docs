@@ -1,3 +1,7 @@
+---
+title: API Reference - achievement_groups
+---
+
 # achievement_groups API reference
 
 Config Reference:

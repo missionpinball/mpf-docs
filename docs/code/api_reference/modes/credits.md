@@ -1,3 +1,7 @@
+---
+title: API Reference - Credits Mode
+---
+
 # Credits Mode API Reference
 
 Config Reference:

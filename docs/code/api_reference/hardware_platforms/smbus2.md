@@ -1,3 +1,7 @@
+---
+title: API Reference - smbus2
+---
+
 # smbus2 API Reference
 
 `self.machine.hardware_platforms['smbus2']`

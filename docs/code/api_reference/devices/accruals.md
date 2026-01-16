@@ -1,3 +1,7 @@
+---
+title: API Reference - accruals
+---
+
 # accruals API Reference
 
 `self.machine.accruals.*`

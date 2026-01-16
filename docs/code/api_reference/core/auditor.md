@@ -1,3 +1,7 @@
+---
+title: API Reference - auditor
+---
+
 # auditor API Reference
 
 `self.machine.auditor`

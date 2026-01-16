@@ -1,3 +1,7 @@
+---
+title: API Reference - extra_balls
+---
+
 # extra_balls API Reference
 
 Config Reference:

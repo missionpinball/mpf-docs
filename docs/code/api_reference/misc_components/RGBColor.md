@@ -1,3 +1,7 @@
+---
+title: API Reference - RGBColor
+---
+
 # RGBColor API Reference
 
 ``` python

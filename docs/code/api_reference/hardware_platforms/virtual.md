@@ -1,3 +1,7 @@
+---
+title: API Reference - virtual
+---
+
 # virtual API Reference
 
 `self.machine.hardware_platforms['virtual']`

@@ -1,3 +1,7 @@
+---
+title: API Reference - timed_switches
+---
+
 # timed_switches API Reference
 
 Config Reference:

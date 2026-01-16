@@ -1,3 +1,7 @@
+---
+title: API Reference - openpixel
+---
+
 # openpixel API Reference
 
 Config Reference:

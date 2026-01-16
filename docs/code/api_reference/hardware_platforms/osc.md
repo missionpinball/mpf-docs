@@ -1,3 +1,7 @@
+---
+title: API Reference - osc
+---
+
 # osc API Reference
 
 Config Reference:

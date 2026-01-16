@@ -1,3 +1,7 @@
+---
+title: API Reference - Mode base class
+---
+
 # Mode base class API Reference
 
 Config Reference:

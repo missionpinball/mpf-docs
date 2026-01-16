@@ -1,3 +1,7 @@
+---
+title: API Reference - shot_groups
+---
+
 # shot_groups API Reference
 
 Config Reference:

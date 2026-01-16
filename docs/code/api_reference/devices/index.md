@@ -1,3 +1,7 @@
+---
+title: API Reference Index - Devices
+---
+
 # Devices API Reference Index
 
 Instances of MPF devices, available at `self.machine.*device_collection*.*device_name*`. For example, a flipper device called “right_flipper” is at `self.machine.flippers.right_flipper`, and a multiball called “awesome” is accessible at `self.machine.multiballs.awesome`.

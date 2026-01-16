@@ -1,3 +1,7 @@
+---
+title: API Reference - sequence_shots
+---
+
 # sequence_shots API Reference
 
 Config Reference:

@@ -1,3 +1,7 @@
+---
+title: API Reference - device_manager
+---
+
 # device_manager API Reference
 
 `self.machine.device_manager`

@@ -1,3 +1,7 @@
+---
+title: API Reference - blocking_player
+---
+
 # blocking_player API Reference
 
 `self.machine.blocking_player`

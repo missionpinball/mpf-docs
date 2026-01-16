@@ -1,3 +1,7 @@
+---
+title: API Reference - switch_controller
+---
+
 # switch_controller API Reference
 
 `self.machine.switch_controller`

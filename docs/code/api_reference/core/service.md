@@ -1,3 +1,7 @@
+---
+title: API Reference - service
+---
+
 # service API Reference
 
 `self.machine.service`

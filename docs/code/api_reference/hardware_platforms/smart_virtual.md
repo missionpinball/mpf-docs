@@ -1,3 +1,7 @@
+---
+title: API Reference - smart_virtual
+---
+
 # smart_virtual API Reference
 
 Config Reference:

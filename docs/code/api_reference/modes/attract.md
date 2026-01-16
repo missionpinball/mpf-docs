@@ -1,3 +1,7 @@
+---
+title: API Reference - Attract Mode
+---
+
 # Attract Mode API Reference
 
 `self.machine.modes.attract`

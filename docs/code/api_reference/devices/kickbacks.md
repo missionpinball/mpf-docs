@@ -1,3 +1,7 @@
+---
+title: API Reference - kickbacks
+---
+
 # kickbacks API Reference
 
 Config Reference:

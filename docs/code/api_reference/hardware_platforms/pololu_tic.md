@@ -1,3 +1,7 @@
+---
+title: API Reference - pololu_tic
+---
+
 # pololu_tic API Reference
 
 Config Reference:

@@ -1,3 +1,7 @@
+---
+title: API Reference - Data Manager
+---
+
 # Data Manager API Reference
 
 ``` python

@@ -1,3 +1,7 @@
+---
+title: API Reference Index - Modes
+---
+
 # Modes API Reference Index
 
 Covers all the “built-in” modes. They're accessible via `self.machine.modes.*name*`, for example, `self.machine.modes.game` or `self.machine.modes.base`.

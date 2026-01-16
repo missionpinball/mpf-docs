@@ -1,3 +1,7 @@
+---
+title: API Reference - digital_outputs
+---
+
 # digital_outputs API Reference
 
 Config Reference:

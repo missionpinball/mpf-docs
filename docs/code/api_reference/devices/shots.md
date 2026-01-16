@@ -1,3 +1,7 @@
+---
+title: API Reference - shots
+---
+
 # shots API Reference
 
 Config Reference:

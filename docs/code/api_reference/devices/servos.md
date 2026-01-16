@@ -1,3 +1,7 @@
+---
+title: API Reference - servos
+---
+
 # servos API Reference
 
 Config Reference:

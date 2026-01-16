@@ -1,3 +1,7 @@
+---
+title: API Reference - mode_controller
+---
+
 # mode_controller API Reference
 
 `self.machine.mode_controller`

@@ -1,3 +1,7 @@
+---
+title: API Reference - psus
+---
+
 # psus API Reference
 
 Config Reference:

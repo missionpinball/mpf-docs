@@ -1,3 +1,7 @@
+---
+title: API Reference - drivers
+---
+
 # drivers API Reference
 
 `self.machine.hardware_platforms['drivers']`

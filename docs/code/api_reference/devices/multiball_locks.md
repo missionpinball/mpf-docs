@@ -1,3 +1,7 @@
+---
+title: API Reference - multiball_locks
+---
+
 # multiball_locks API Reference
 
 Config Reference:

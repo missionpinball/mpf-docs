@@ -1,3 +1,7 @@
+---
+title: API Reference - extra_ball_groups
+---
+
 # extra_ball_groups API Reference
 
 Config Reference:

@@ -1,3 +1,7 @@
+---
+title: API Reference - light_stripes
+---
+
 # light_stripes API Reference
 
 Config Reference:

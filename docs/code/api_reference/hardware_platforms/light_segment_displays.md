@@ -1,3 +1,7 @@
+---
+title: API Reference - light_segment_displays
+---
+
 # light_segment_displays API Reference
 
 Config Reference:

@@ -1,3 +1,7 @@
+---
+title: API Reference - dmds
+---
+
 # dmds API Reference
 
 Config Reference:

@@ -1,3 +1,7 @@
+---
+title: API Reference - High Score
+---
+
 # High Score Mode API Reference
 
 Config Reference:

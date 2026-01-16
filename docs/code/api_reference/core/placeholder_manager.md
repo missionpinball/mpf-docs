@@ -1,3 +1,7 @@
+---
+title: API Reference - placeholder_manager
+---
+
 # placeholder_manager API Reference
 
 `self.machine.placeholder_manager`

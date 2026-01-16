@@ -1,3 +1,7 @@
+---
+title: API Reference - step_stick
+---
+
 # step_stick API Reference
 
 Config Reference:

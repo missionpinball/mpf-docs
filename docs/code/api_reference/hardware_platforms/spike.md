@@ -1,3 +1,7 @@
+---
+title: API Reference - spike
+---
+
 # spike API Reference
 
 Config Reference:

@@ -1,3 +1,7 @@
+---
+title: API Reference - score_queues
+---
+
 # score_queues API Reference
 
 Config Reference:

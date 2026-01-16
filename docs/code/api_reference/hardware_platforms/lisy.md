@@ -1,3 +1,7 @@
+---
+title: API Reference - lisy
+---
+
 # lisy API Reference
 
 Config Reference:

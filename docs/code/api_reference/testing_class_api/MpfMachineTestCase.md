@@ -1,3 +1,7 @@
+---
+title: API Reference - MpfMachineTestCase
+---
+
 # MpfMachineTestCase
 
 ``` python

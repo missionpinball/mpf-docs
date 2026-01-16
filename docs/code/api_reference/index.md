@@ -1,3 +1,7 @@
+---
+title: API Reference Index - Categories
+---
+
 # API Reference Index
 
 MPF's API reference is broken into several categories. All of it is presented in the way that the modules and classes are actually used in MPF.

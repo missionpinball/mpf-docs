@@ -1,3 +1,7 @@
+---
+title: API Reference - hardware_sound_systems
+---
+
 # hardware_sound_systems API Reference
 
 `self.machine.hardware_sound_systems.*`

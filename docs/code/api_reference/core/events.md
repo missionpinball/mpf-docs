@@ -1,3 +1,7 @@
+---
+title: API Reference - events
+---
+
 # events API Reference
 
 `self.machine.events`

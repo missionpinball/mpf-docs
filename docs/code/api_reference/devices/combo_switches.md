@@ -1,3 +1,7 @@
+---
+title: API Reference - combo_switches
+---
+
 # combo_switches API Reference
 
 Config Reference:

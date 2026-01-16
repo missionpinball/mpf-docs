@@ -1,3 +1,7 @@
+---
+title: API Reference - random_event_player
+---
+
 # random_event_player API Reference
 
 `self.machine.random_event_player`

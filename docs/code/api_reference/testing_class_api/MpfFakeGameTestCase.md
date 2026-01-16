@@ -1,3 +1,7 @@
+---
+title: API Reference - MpfFakeGameTestCase
+---
+
 # MpfFakeGameTestCase
 
 ``` python

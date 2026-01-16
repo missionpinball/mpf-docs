@@ -1,3 +1,7 @@
+---
+title: API Reference - Service Mode
+---
+
 # Service Mode API Reference
 
 `self.machine.modes.service`

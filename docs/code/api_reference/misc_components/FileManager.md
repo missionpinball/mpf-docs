@@ -1,3 +1,7 @@
+---
+title: API Reference - File Manager
+---
+
 # File Manager API Reference
 
 ``` python

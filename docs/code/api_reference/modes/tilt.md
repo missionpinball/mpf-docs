@@ -1,3 +1,7 @@
+---
+title: API Reference - Tilt Mode
+---
+
 # Tilt Mode API Reference
 
 Config Reference:

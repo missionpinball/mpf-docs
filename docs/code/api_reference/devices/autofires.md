@@ -1,3 +1,7 @@
+---
+title: API Reference - autofires
+---
+
 # autofires API Reference
 
 Config Reference:

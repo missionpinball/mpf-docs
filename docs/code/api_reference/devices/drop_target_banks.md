@@ -1,3 +1,7 @@
+---
+title: API Reference - drop_target_banks
+---
+
 # drop_target_banks API Reference
 
 Config Reference:

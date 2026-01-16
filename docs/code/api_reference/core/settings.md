@@ -1,3 +1,7 @@
+---
+title: API Reference - settings
+---
+
 # settings API Reference
 
 `self.machine.settings`

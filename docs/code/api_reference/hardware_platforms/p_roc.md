@@ -1,3 +1,7 @@
+---
+title: API Reference - p_roc
+---
+
 # p_roc API Reference
 
 Config Reference:

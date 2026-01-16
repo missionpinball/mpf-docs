@@ -1,3 +1,7 @@
+---
+title: API Reference - show_queues
+---
+
 # show_queues API Reference
 
 `self.machine.show_queues.*`

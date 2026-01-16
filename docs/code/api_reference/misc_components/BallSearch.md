@@ -1,3 +1,7 @@
+---
+title: API Reference - Ball Search
+---
+
 # Ball Search API Reference
 
 Config Reference:

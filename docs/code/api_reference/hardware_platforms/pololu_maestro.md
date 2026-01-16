@@ -1,3 +1,7 @@
+---
+title: API Reference - pololu_maestro
+---
+
 # pololu_maestro API Reference
 
 `self.machine.hardware_platforms['pololu_maestro']`

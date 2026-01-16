@@ -1,3 +1,7 @@
+---
+title: API Reference - flippers
+---
+
 # flippers API Reference
 
 Config Reference:

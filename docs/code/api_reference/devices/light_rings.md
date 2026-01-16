@@ -1,3 +1,7 @@
+---
+title: API Reference - light_rings
+---
+
 # light_rings API Reference
 
 Config Reference:

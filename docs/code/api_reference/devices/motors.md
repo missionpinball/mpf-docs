@@ -1,3 +1,7 @@
+---
+title: API Reference - motors
+---
+
 # motors API Reference
 
 Config Reference:

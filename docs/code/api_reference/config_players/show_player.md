@@ -1,3 +1,7 @@
+---
+title: API Reference - show_player
+---
+
 # show_player API Reference
 
 `self.machine.show_player`

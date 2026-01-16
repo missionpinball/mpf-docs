@@ -1,3 +1,7 @@
+---
+title: API Reference - event_player
+---
+
 # event_player API Reference
 
 `self.machine.event_player`

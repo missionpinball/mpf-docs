@@ -1,3 +1,7 @@
+---
+title: API Reference - rpi
+---
+
 # rpi API Reference
 
 `self.machine.hardware_platforms['rpi']`

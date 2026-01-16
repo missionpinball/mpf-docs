@@ -1,3 +1,7 @@
+---
+title: API Reference - score_reels
+---
+
 # score_reels API Reference
 
 Config Reference:

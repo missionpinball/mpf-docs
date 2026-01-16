@@ -1,3 +1,7 @@
+---
+title: API Reference - Match Mode
+---
+
 # Match Mode API Reference
 
 `self.machine.modes.match`

@@ -1,3 +1,7 @@
+---
+title: API Reference - trinamics_steprocker
+---
+
 # trinamics_steprocker API Reference
 
 Config Reference:

@@ -1,3 +1,7 @@
+---
+title: API Reference - achievements
+---
+
 # achievements API Reference
 
 Config Reference:

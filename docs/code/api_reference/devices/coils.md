@@ -1,3 +1,7 @@
+---
+title: API Reference - coils
+---
+
 # coils API Reference
 
 Config Reference:

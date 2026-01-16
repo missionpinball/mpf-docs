@@ -1,3 +1,7 @@
+---
+title: API Reference - rgb_dmds
+---
+
 # rgb_dmds API Reference
 
 Config Reference:

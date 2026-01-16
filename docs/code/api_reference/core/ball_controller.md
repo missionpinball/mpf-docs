@@ -1,3 +1,7 @@
+---
+title: API Reference - ball_controller
+---
+
 # ball_controller API Reference
 
 `self.machine.ball_controller`

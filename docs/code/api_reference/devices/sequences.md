@@ -1,3 +1,7 @@
+---
+title: API Reference - sequences
+---
+
 # sequences API Reference
 
 Config Reference:

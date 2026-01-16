@@ -1,3 +1,7 @@
+---
+title: API Reference - p3_roc
+---
+
 # p3_roc API Reference
 
 `self.machine.hardware_platforms['p3_roc']`

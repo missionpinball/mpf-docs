@@ -1,3 +1,7 @@
+---
+title: API Reference - shot_profiles
+---
+
 # shot_profiles API Reference
 
 Config Reference:

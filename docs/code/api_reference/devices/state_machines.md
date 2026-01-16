@@ -1,3 +1,7 @@
+---
+title: API Reference - state_machines
+---
+
 # state_machines API Reference
 
 Config Reference:

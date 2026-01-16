@@ -1,3 +1,7 @@
+---
+title: API Reference - Randomizer
+---
+
 # Randomizer API Reference
 
 ``` python

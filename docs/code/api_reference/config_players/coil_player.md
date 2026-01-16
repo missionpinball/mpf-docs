@@ -1,3 +1,7 @@
+---
+title: API Reference - coil_player
+---
+
 # coil_player API Reference
 
 `self.machine.coil_player`

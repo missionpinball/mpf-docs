@@ -1,3 +1,7 @@
+---
+title: API Reference - machine
+---
+
 # machine API Reference
 
 `self.machine`

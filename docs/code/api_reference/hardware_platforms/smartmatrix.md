@@ -1,3 +1,7 @@
+---
+title: API Reference - smartmatrix
+---
+
 # smartmatrix API Reference
 
 Config Reference:

@@ -1,3 +1,7 @@
+---
+title: API Reference - Carousel Mode
+---
+
 # Carousel Mode API Reference
 
 Reference:
