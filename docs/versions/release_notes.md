@@ -12,6 +12,57 @@ Note you can also click the "Assets" section at the end of the notes
 for each release to download the PDF or HTML versions of the
 documentation for that specific release.
 
+## 0.57.4
+
+Release: Jan 19, 2026
+
+### New Features
+ * New device type: Shaker
+ * Virtual platform behaviors for `virtual_platform_add_ball_to_device`, `virtual_platform_remove_ball_from_device`, and `virtual_platform_set_switch`
+ * Carousel feature and setting: `wrap_items`. Set to false to disable wrap from last to first item on rotate.
+ * Support template evaluation on diverter `activation_time` value to enable use with settings
+
+### New Platform Features
+ * Implemented FAST Stepper device
+ * Added support for FAST 1313 EXP Shaker board
+ * New FAST config option `fast_net:mute_unconfigured_switches` to silence unconfigured switches
+ * Improve FAST Audio support, including new machine vars for `fast_audio_(amp_name)_volume`
+ * Added Pin2DMD HD support (256x64)
+ * Added ZeDMD support
+
+### Improvements
+ * Include shot name as parameter in `(shot_group_name)_hit` event and `(shot_group_name)_(state)_hit` event
+ * Attract mode inherits from Carousel mode by default
+ * TextUI ignores machine vars from audits, platforms, and mpf prefix
+ * Updated github actions versions for build
+ * Updated many validation error numbers to remove duplicate numbers appearing on multiple errors
+ * Refactored high_score mode python internals
+ * Changed crash reporter feature to default `never` while collection service is indefinitely unavailable
+ * Add error log when FAST node boards not found in IO loop
+ * Remove asserting on FAST EXP board product ID matching the model, due to different production runs containing different component IDs
+ * Update light numbering for virtual, OPP, and PKONE so that lights numbered based on previous light addresses collapse the offsets into a single value (e.g. +2 instead of +1+1)
+ * Misc refactoring and test cleanup on random_event_player and randomizer, and lights and fast_exp
+
+### Bug Fixes
+ * Fixed service mode light chain parsing
+ * Refactor machine var management via BCP
+ * Fix timer control event bug where kwargs would leak from setup function into event handlers
+ * Require `setuptools` in installation to fix missing dependency
+ * Placeholder manager updates due to deprecation warnings in AST library
+ * Update docs site links with new version namespace ("latest/") in URL
+ * Service mode coil mapping will skip `dual_wound_coil` devices -- each individual coil should appear separately in the menu
+ * Stop shot control event handlers being disabled when the shot is disabled. Shot control events are intended to take effect even when the shot is disabled.
+ * Fixed counters that are defined in modes crashing when their control events occured when that mode is not running
+ * Fixed counters control events not checking whether the counter is enabled before executing
+ * Fixed audit for average value being calculated incorrectly during multiplayer games (such as with score average value, but any statistic tracking average was affected)
+ * fixed mpf documentation site links (docs site is now versioned, so use /latest)
+ * Fixed Virtual platform light numbering sorting out of order (crash would occur when using previous: config option)
+ * Fixed FAST Neuron switch management attempting to read switches from other platforms
+ * Fixed FAST port detector failing to retry on initial connection timeout
+
+### Breaking Changes
+ * Disabled tests for Spike, LISY, and PKONE platforms that had begun to fail under Python 3.12
+
 ## 0.57.3
 
 Release: September 15, 2024
