@@ -14,7 +14,7 @@ documentation for that specific release.
 
 ## 0.57.4
 
-Release: Jan X, 2026
+Release: Jan 19, 2026
 
 ### New Features
  * New device type: Shaker
