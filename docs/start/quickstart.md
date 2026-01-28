@@ -13,7 +13,7 @@ This is for people who know what they're doing. If you're lost, check out our fu
 Updated: January 2026
 
 * [Python 3.13](https://www.python.org/downloads/release/python-31311/)
-* [MPF 0.80](https://github.com/missionpinball/mpf/tree/0.80.x) `0.80.0.dev11` - `git@github.com:missionpinball/mpf.git` branch `0.80.x`
+* [MPF 0.80](https://github.com/missionpinball/mpf/tree/0.80.x) `0.80.0.dev12` - `git@github.com:missionpinball/mpf.git` branch `0.80.x`
 * [MPF-GMC](https://github.com/missionpinball/mpf-gmc) `0.1.6` - `git@github.com:missionpinball/mpf-gmc.git` branch `main`
 * [Godot Editor 4.5](https://godotengine.org/download)
 * [MPF Monitor](https://github.com/missionpinball/mpf-monitor) `0.57.2` - `git@github.com:missionpinball/mpf-gmc.git` branch `dev`
@@ -39,7 +39,7 @@ For full guide see: [GMC Installation](../gmc/installation.md)
 
 ## Quickstart for MPF
 
-1. MPF 0.80 requires Python 3.10 - 3.13. Validate that you have a supported version of Python with `python3 --version`.
+1. MPF 0.80 requires Python 3.10 - 3.14. Validate that you have a supported version of Python with `python3 --version`.
 
 1. Create a virtual environment for mpf. In your home folder (or virtual environments folder) type `python3 -m venv mpf`
 

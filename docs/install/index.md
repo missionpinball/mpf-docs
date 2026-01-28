@@ -8,9 +8,9 @@ title: Downloading & Installing MPF
 
 # Installing MPF 0.80 or 0.57
 
-The current stable version of MPF is `0.57.3`, and the upcoming release is `0.80.0` along with a long-term support release of `0.57.4`.
+The current stable version of MPF is `0.57.4`, and the upcoming large release is `0.80.0`. 0.57 will enter long-term support after `0.80.0` is released out of beta.
 
-The current beta version of MPF 0.80 is `0.80.0.dev11`, which corresponds with MPF-GMC `0.1.6`, which is necessary to use the latest Godot - `4.5.1`.
+The current beta version of MPF 0.80 is `0.80.0.dev12`, which corresponds with MPF-GMC `0.1.6`, which is necessary to use the latest Godot - `4.5.1`.
 
 --8<-- "latest_versions.md"
 
@@ -27,7 +27,7 @@ MPF works with following platforms:
 
 MPF 0.57 works with Python 3.8 - 3.12. There is no planned support for Python 3.13+.
 
-MPF 0.80 works with Python 3.10 - 3.13, with upcoming support for 3.14.
+MPF 0.80 works with Python 3.10 - 3.14 as of `0.80.0.dev12`.
 
 ## Migrating MPF 0.57 to MPF 0.80
 
@@ -83,7 +83,7 @@ strongly recommended when working with MPF unless you are using a precompiled bi
     will prevent MPF from running. Troubleshooting and manually cleaning up packages is a pain—do your future
     self a favor and setup an MPF virtual environment now!
 
-After creating your Python 3.10-3.13 virtual environment and activating it, install MPF 0.80.
+After creating your Python 3.10-3.14 virtual environment and activating it, install MPF 0.80 with the latest dev build.
 
 ``` shell
 pip install mpf --pre
