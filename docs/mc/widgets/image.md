@@ -44,6 +44,22 @@ Single value, type: `string` name of a
 The name of the image asset this widget will show. Details on image
 assets are [here](../../assets/images.md).
 
+### mag_filter:
+
+Single value, type: `string` (linear or nearesst). Default: `linear'
+
+Sets the magnification (enlarging) scaling method for the image.  
+By default linear scaling with smooth appearance. 
+nearest results in pixelated appearance.
+
+### min_filter:
+
+Single value, type: `string` (linear or nearesst). Default: `linear'
+
+Sets the minimizing (shrinking) scaling method for the image.  
+By default linear scaling with smooth appearance. 
+nearest results in pixelated appearance.
+
 ### fps:
 
 Single value, type: `integer`. Default: `10`.
