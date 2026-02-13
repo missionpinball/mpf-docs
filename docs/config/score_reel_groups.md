@@ -46,6 +46,21 @@ which are rung when the reel overflows. Start with the highest digit.
 The last entry will be the right most digit. You may use None if there
 is no chime for a digit.
 
+### enable_chimes_events:
+
+List of one (or more) device control events
+([Instructions for entering device control events](instructions/device_control_events.md)). Default: `balls_started`
+
+Event(s) that enable chimes to activate when the corresponding score_reel advances.
+
+### disable_chimes_events:
+
+List of one (or more) device control events
+([Instructions for entering device control events](instructions/device_control_events.md)). Default: `game_ended`
+
+Event(s) that disable chimes activating when the corresponding score_reel advances. Useful for something like a
+night mode for quieter gameplay.
+
 ### lights_tag:
 
 Single value, type: `string`. Defaults to empty.
