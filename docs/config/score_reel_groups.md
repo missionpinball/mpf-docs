@@ -49,7 +49,7 @@ is no chime for a digit.
 ### enable_chimes_events:
 
 List of one (or more) device control events
-([Instructions for entering device control events](instructions/device_control_events.md)). Default: `balls_started`
+([Instructions for entering device control events](instructions/device_control_events.md)). Default: `ball_started`
 
 Event(s) that enable chimes to activate when the corresponding score_reel advances.
 
