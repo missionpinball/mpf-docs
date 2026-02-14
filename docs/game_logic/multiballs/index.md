@@ -84,5 +84,7 @@ again" mode which means it's attempting to keep live.
 * [multiball_(name)\_lost_ball](../../events/multiball_multiball_lost_ball.md)
 * [multiball_(name)\_shoot_again_ended](../../events/multiball_multiball_shoot_again_ended.md)
 * [multiball_(name)\_ended](../../events/multiball_multiball_ended.md)
+* [multiball_(name)\_restart_grace_period_started](../../events/multiball_multiball_restart_grace_period_started.md)
+* [multiball_(name)\_restarted](../../events/multiball_multiball_restarted.md)
 * [ball_save_(multiball_name)\_timer_start](../../events/ball_save_multiball_timer_start.md)
 * [ball_save_(multiball_name)\_add_a_ball_timer_start](../../events/ball_save_multiball_add_a_ball_timer_start.md)

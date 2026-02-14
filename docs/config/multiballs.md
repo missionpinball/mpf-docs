@@ -240,6 +240,21 @@ List of one (or more) device control events
 Event(s) that reset this multiball, which means they disable it as well
 as disabling shoot again and resetting the ball add counts to 0.
 
+### restart_grace_period:
+
+* available MPF 0.57.5/0.80.0.dev13 *
+
+Single value, type: `time string (ms) or template`
+([Instructions for entering time strings](instructions/time_strings.md) and
+[Instructions for entering templates](instructions/dynamic_values.md)). Default: `0`
+
+Specifies a grace period for restarting an in-progress multiball.
+When the multiball no longer has multiple balls in play, if this setting is longer than 0, then a restart grace period will be started and the event
+[multiball_(name)\_restart_grace_period_started](../events/multiball_multiball_restart_grace_period_started.md) will be posted.
+
+If the add-a-ball is triggered during this period, then the multiball will restart and post the event
+[multiball_(name)\_restarted](../events/multiball_multiball_restarted.md).
+
 ### shoot_again:
 
 Single value, type: `time string (ms) or template`
