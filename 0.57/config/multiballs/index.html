@@ -22852,6 +22852,17 @@ icons & this code generated via https://realfavicongenerator.net
 </li>
         
           <li class="md-nav__item">
+  <a href="#restart_grace_period" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        restart_grace_period:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#shoot_again" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -31768,6 +31779,10 @@ icons & this code generated via https://realfavicongenerator.net
       
         
       
+        
+      
+        
+      
     
     
     
@@ -31818,6 +31833,34 @@ icons & this code generated via https://realfavicongenerator.net
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../events/multiball_multiball_started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    multiball_(name)_started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -31995,14 +32038,42 @@ icons & this code generated via https://realfavicongenerator.net
   
   
     <li class="md-nav__item">
-      <a href="../../events/multiball_multiball_started/" class="md-nav__link">
+      <a href="../../events/multiball_multiball_restart_grace_period_started/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    multiball_(name)_started
+    multiball_(name)_restart_grace_period_started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../events/multiball_multiball_restarted/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    multiball_(name)_restarted
   
 
     
@@ -48375,6 +48446,17 @@ icons & this code generated via https://realfavicongenerator.net
 </li>
         
           <li class="md-nav__item">
+  <a href="#restart_grace_period" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        restart_grace_period:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#shoot_again" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -48724,6 +48806,18 @@ populate the multiball when it starts.</p>
 (<a href="../instructions/device_control_events/">Instructions for entering device control events</a>). Default: <code>machine_reset_phase_3, ball_starting</code></p>
 <p>Event(s) that reset this multiball, which means they disable it as well
 as disabling shoot again and resetting the ball add counts to 0.</p>
+<h3 id="restart_grace_period">restart_grace_period:</h3>
+<ul>
+<li>available MPF 0.57.5/0.80.0.dev13 *</li>
+</ul>
+<p>Single value, type: <code>time string (ms) or template</code>
+(<a href="../instructions/time_strings/">Instructions for entering time strings</a> and
+<a href="../instructions/dynamic_values/">Instructions for entering templates</a>). Default: <code>0</code></p>
+<p>Specifies a grace period for restarting an in-progress multiball.
+When the multiball no longer has multiple balls in play, if this setting is longer than 0, then a restart grace period will be started and the event
+<a href="../../events/multiball_multiball_restart_grace_period_started/">multiball_(name)_restart_grace_period_started</a> will be posted.</p>
+<p>If the add-a-ball is triggered during this period, then the multiball will restart and post the event
+<a href="../../events/multiball_multiball_restarted/">multiball_(name)_restarted</a>.</p>
 <h3 id="shoot_again">shoot_again:</h3>
 <p>Single value, type: <code>time string (ms) or template</code>
 (<a href="../instructions/time_strings/">Instructions for entering time strings</a> and
