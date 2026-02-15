@@ -48,20 +48,26 @@ is no chime for a digit.
 
 ### enable_chimes_events:
 
+!!! info ""
+
+    New in MPF 0.57.5
+
 List of one (or more) device control events
 ([Instructions for entering device control events](instructions/device_control_events.md)). Default: `ball_started`
 
 Event(s) that enable chimes to activate when the corresponding score_reel advances.
-available starting with mpf 0.57.5
 
 ### disable_chimes_events:
+
+!!! info ""
+
+    New in MPF 0.57.5
 
 List of one (or more) device control events
 ([Instructions for entering device control events](instructions/device_control_events.md)). Default: `game_ended`
 
 Event(s) that disable chimes activating when the corresponding score_reel advances. Useful for something like a
 night mode for quieter gameplay.
-available starting with mpf 0.57.5
 
 ### lights_tag:
 

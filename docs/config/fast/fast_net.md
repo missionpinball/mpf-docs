@@ -148,7 +148,9 @@ it for any switch in that switch\'s config.
 
 ### mute_unconfigured_switches:
 
-* available MPF 0.57.4/0.80.0.dev12 *
+!!! info ""
+
+    New in MPF 0.57.4
 
 Single value, boolean, default: `false`
 

@@ -45,19 +45,25 @@ The name of the image asset this widget will show. Details on image
 assets are [here](../../assets/images.md).
 
 ### mag_filter: 
-    
+
+!!! info ""
+
+    New in MPF 0.57.5, requires MPF-MC 0.57.2
+
 Single value, type: `string` (linear or nearest). Default: `linear'
 
-    available starting with mc 0.57.2 AND mpf 0.57.5
 Sets the magnification (enlarging) scaling method for the image.  
 By default linear scaling with smooth appearance. 
 nearest results in pixelated appearance.
 
 ### min_filter:
 
+!!! info ""
+
+    New in MPF 0.57.5, requires MPF-MC 0.57.2
+
 Single value, type: `string` (linear or nearest). Default: `linear'
 
-    available starting with mc 0.57.2 AND mpf 0.57.5
 Sets the minimizing (shrinking) scaling method for the image.  
 By default linear scaling with smooth appearance. 
 nearest results in pixelated appearance.

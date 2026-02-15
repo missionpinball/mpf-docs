@@ -242,7 +242,9 @@ as disabling shoot again and resetting the ball add counts to 0.
 
 ### restart_grace_period:
 
-* available MPF 0.57.5/0.80.0.dev13 *
+!!! info ""
+
+    New in MPF 0.57.5
 
 Single value, type: `time string (ms) or template`
 ([Instructions for entering time strings](instructions/time_strings.md) and
