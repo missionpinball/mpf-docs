@@ -68,7 +68,7 @@ config. (If you don't include them, the default will be used).
 
 ### key_type:
 
-Single value, type: one of the following options: str, float, int.
+Single value, type: one of the following options: str, float, int, bool.
 Default: `str`
 
 Type of the key. If you want to do math with the variable you need
