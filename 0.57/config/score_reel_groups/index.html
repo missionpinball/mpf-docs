@@ -22955,6 +22955,28 @@ icons & this code generated via https://realfavicongenerator.net
 </li>
         
           <li class="md-nav__item">
+  <a href="#enable_chimes_events" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        enable_chimes_events:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable_chimes_events" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        disable_chimes_events:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#lights_tag" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -48093,6 +48115,28 @@ icons & this code generated via https://realfavicongenerator.net
 </li>
         
           <li class="md-nav__item">
+  <a href="#enable_chimes_events" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        enable_chimes_events:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable_chimes_events" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        disable_chimes_events:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#lights_tag" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -48248,6 +48292,17 @@ of your config. (If you don't include them, the default will be used).</p>
 which are rung when the reel overflows. Start with the highest digit.
 The last entry will be the right most digit. You may use None if there
 is no chime for a digit.</p>
+<h3 id="enable_chimes_events">enable_chimes_events:</h3>
+<p>List of one (or more) device control events
+(<a href="../instructions/device_control_events/">Instructions for entering device control events</a>). Default: <code>ball_started</code></p>
+<p>Event(s) that enable chimes to activate when the corresponding score_reel advances.
+available starting with mpf 0.57.5</p>
+<h3 id="disable_chimes_events">disable_chimes_events:</h3>
+<p>List of one (or more) device control events
+(<a href="../instructions/device_control_events/">Instructions for entering device control events</a>). Default: <code>game_ended</code></p>
+<p>Event(s) that disable chimes activating when the corresponding score_reel advances. Useful for something like a
+night mode for quieter gameplay.
+available starting with mpf 0.57.5</p>
 <h3 id="lights_tag">lights_tag:</h3>
 <p>Single value, type: <code>string</code>. Defaults to empty.</p>
 <p>Lights to turn on when this group is active.</p>
