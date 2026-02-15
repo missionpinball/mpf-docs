@@ -105,7 +105,7 @@ your config. (If you don't include them, the default will be used).
 
 ### allow_multiple_active:
 
-!!! note ""
+!!! info ""
 
     New in MPF 0.57.5
 
