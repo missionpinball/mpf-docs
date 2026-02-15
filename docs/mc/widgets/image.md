@@ -68,6 +68,10 @@ Sets the minimizing (shrinking) scaling method for the image.
 By default linear scaling with smooth appearance. 
 nearest results in pixelated appearance.
 
+For mag_filter and min_filter, the differences between the scaling algorithms can be seen in this image:
+![open menu](../images/image_filter.png)
+
+
 ### fps:
 
 Single value, type: `integer`. Default: `10`.

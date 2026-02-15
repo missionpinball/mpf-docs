@@ -76,6 +76,30 @@ you could swap out assets for different physical machine types without
 having to update your display code.) That said, we expect that 99% of
 people won't use this `file:` setting, which is fine.
 
+### mag_filter: 
+
+!!! info ""
+
+    New in MPF 0.57.5, requires MPF-MC 0.57.2
+
+Single value, type: `string` (linear or nearest). Default: `linear'
+
+Sets the magnification (enlarging) scaling method for the image.  
+By default linear scaling with smooth appearance. 
+nearest results in pixelated appearance.
+
+### min_filter:
+
+!!! info ""
+
+    New in MPF 0.57.5, requires MPF-MC 0.57.2
+
+Single value, type: `string` (linear or nearest). Default: `linear'
+
+Sets the minimizing (shrinking) scaling method for the image.  
+By default linear scaling with smooth appearance. 
+nearest results in pixelated appearance.
+
 ### frame_skips:
 
 List of one (or more) values, each is a type:
