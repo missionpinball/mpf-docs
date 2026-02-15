@@ -48391,9 +48391,9 @@ enter it here unless you want to override that.</p>
 <p>Also, keep in mind that this setting is only a default. You can override
 it for any switch in that switch\'s config.</p>
 <h3 id="mute_unconfigured_switches">mute_unconfigured_switches:</h3>
-<ul>
-<li>available MPF 0.57.4/0.80.0.dev12 *</li>
-</ul>
+<div class="admonition info">
+<p>New in MPF 0.57.4</p>
+</div>
 <p>Single value, boolean, default: <code>false</code></p>
 <p>Before this change, FAST Switches were configured with mode <code>00</code>, meaning they did not report if unconfigured.
 With the release of this config setting, switch inputs on the IO board will default to mode <code>01</code>, meaning they do report to MPF even if no switch device is configured.
