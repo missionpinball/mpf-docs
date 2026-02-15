@@ -103,6 +103,19 @@ sequence_shots:
 The following sections are optional in the `sequence_shots:` section of
 your config. (If you don't include them, the default will be used).
 
+### allow_multiple_active:
+
+!!! note ""
+
+    New in MPF 0.57.5
+
+Single value, type: `boolean` (`true`/`false`). Default: `true`
+
+Sequence shots will track many instances of the sequence occurring at once.
+This is useful for things like orbit shots during multiball, where two balls may start the sequence very quickly, and should credit two orbit sequence hits if they both make it to the end of the sequence.
+
+However, sequence shots that handle things like flipper button code entry may not make sense to track many simultaneous traversals at once. Set this setting to `false` to prevent tracking multiple sequences.
+
 ### cancel_events:
 
 List of one (or more) device control events
