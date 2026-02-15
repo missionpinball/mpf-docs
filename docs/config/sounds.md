@@ -375,7 +375,7 @@ particular sound. When `streaming` is set to `True`, the
 
 ### track:
 
-!!! warning ""
+!!! warning
 
     Deprecated in MPF 0.80. Use `bus` instead.
 

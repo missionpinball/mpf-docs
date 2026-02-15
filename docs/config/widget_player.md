@@ -78,24 +78,11 @@ your config. (If you don't include them, the default will be used).
 
 ### action:
 
-Single value, type: one of the following options: add, remove, update
-Default: `add`
+!!! info ""
 
-#### `add`:
+    New options available in MPF 0.80
 
-The widget or widget group is added to the slide or display target.
-
-#### `remove`:
-
-The widget or widget group is removed from the slide or display target.
-
-#### `update`:
-
-One or more of the widget or widget group's properties is updated.
-
-### action (available in MPF v0.80):
-
-Single value, type: one of the following options: play, remove, update, preload, animation, method
+Single value, type: one of the following options: `play`, `remove`, `update`, `preload`, `animation`, `method`
 Default: `play`
 
 #### `play`:
@@ -122,6 +109,27 @@ If "from_start" is specified, the animation still start at the beginning.
 #### `method`:
 
 If the widget has child and the child has a method, call the method
+
+### action:
+
+!!! warning "Legacy MPF-MC action only supports three options."
+
+    For MPF versions =< 0.57
+
+Single value, type: one of the following options: `add`, `remove`, `update`
+Default: `add`
+
+#### `add`:
+
+The widget or widget group is added to the slide or display target.
+
+#### `remove`:
+
+The widget or widget group is removed from the slide or display target.
+
+#### `update`:
+
+One or more of the widget or widget group's properties is updated.
 
 ### key:
 
