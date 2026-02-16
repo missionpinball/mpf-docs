@@ -11403,10 +11403,21 @@ icons & this code generated via https://realfavicongenerator.net
 </li>
       
         <li class="md-nav__item">
-  <a href="#config" class="md-nav__link">
+  <a href="#config-as-a-coil" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Config
+        Config as a Coil
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#config-as-a-shaker-device" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Config as a Shaker device:
       
     </span>
   </a>
@@ -47940,10 +47951,21 @@ icons & this code generated via https://realfavicongenerator.net
 </li>
       
         <li class="md-nav__item">
-  <a href="#config" class="md-nav__link">
+  <a href="#config-as-a-coil" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Config
+        Config as a Coil
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#config-as-a-shaker-device" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Config as a Shaker device:
       
     </span>
   </a>
@@ -47980,8 +48002,12 @@ icons & this code generated via https://realfavicongenerator.net
 <ul>
 <li><a href="../../config/coils/">coils:</a></li>
 <li><a href="../../config/coil_player/">coil_player:</a></li>
+<li><a href="../../config/shakers/">shakers:</a></li>
 </ul>
-<p>Shaker motors cause vibrations to give the player tactile feedback.</p>
+<p>Shaker motors cause vibrations to give the player tactile feedback.
+Shakers can be implemented through coil or motor control, or using the dedicated <code>shaker</code> device type.
+Currently this device config type is only supported by the FAST system (using the 1313 EXP board),
+so for other integrations, you will need to define your 12v power control as a coil.</p>
 <h2 id="hardware">Hardware</h2>
 <p><a href="../../about/help/">TODO: Add a picture of a shaker</a></p>
 <div class="admonition success">
@@ -48004,7 +48030,7 @@ submit your change. It's easy! <span class="twemoji"><svg xmlns="http://www.w3.o
 </ul>
 <p>Most shaker motors are not meant to be enabled without PWM. Depending on
 the voltage your PWM should have a duty cycle between 10% and 30%.</p>
-<h2 id="config">Config</h2>
+<h2 id="config-as-a-coil">Config as a Coil</h2>
 <p>This is an example on how to use a shaker using coil_player:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">coils</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">c_shaker</span><span class="p">:</span>
@@ -48057,6 +48083,29 @@ the voltage your PWM should have a duty cycle between 10% and 30%.</p>
 <span class="c1">#! post play_show_with_shaker</span>
 <span class="c1">#! advance_time_and_run .5</span>
 <span class="c1">#! assert_event_called test_event</span>
+</code></pre></div>
+<h2 id="config-as-a-shaker-device">Config as a Shaker device:</h2>
+<div class="highlight"><pre><span></span><code><span class="nt">fast</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">exp</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">boards</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">1313board</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">model</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">FP-EXP-1313</span>
+
+<span class="nt">shakers</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">shaker</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1313board-1</span>
+<span class="w">    </span><span class="nt">control_events</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">mid_shaker</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">500ms</span>
+<span class="w">        </span><span class="nt">power</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.25</span>
+<span class="w">      </span><span class="nt">hi_shaker</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2s</span>
+<span class="w">        </span><span class="nt">power</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.75</span>
+
+<span class="nt">event_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_trigger_event</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mid_shaker</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hi_shaker|500ms</span>
 </code></pre></div>
 <hr>
 <div class="admonition question">
