@@ -817,6 +817,7 @@ nav:
       - "sequence_shots:": config/sequence_shots.md
       - "sequences:": config/sequences.md
       - "servos:": config/servos.md
+      - "shakers:": config/shakers.md
       - "shot_control_events:": config/shot_control_events.md
       - "shot_groups:": config/shot_groups.md
       - "shot_profiles:": config/shot_profiles.md

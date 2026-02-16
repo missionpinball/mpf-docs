@@ -122,6 +122,7 @@ These are generally MPF device configs, or other very general settings.
 * [servos:](servos.md)
 * [sequences:](sequences.md)
 * [sequence_shots:](sequence_shots.md)
+* [shakers:](shakers.md)
 * [shot_control_events:](shot_control_events.md)
 * [shot_groups:](shot_groups.md)
 * [shot_profiles:](shot_profiles.md)
