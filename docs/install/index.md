@@ -10,7 +10,7 @@ title: Downloading & Installing MPF
 
 The current stable version of MPF is `0.57.4`, and the upcoming large release is `0.80.0`. 0.57 will enter long-term support after `0.80.0` is released out of beta.
 
-The current beta version of MPF 0.80 is `0.80.0.dev13`, which corresponds with MPF-GMC `0.1.6`, which is necessary to use the latest Godot - `4.5.1`+.
+The current beta version of MPF 0.80 is `0.80.0.dev13`, which corresponds with MPF-GMC `0.1.6`, which is necessary to use Godot versions `4.5.1` and `4.6`.
 
 --8<-- "latest_versions.md"
 

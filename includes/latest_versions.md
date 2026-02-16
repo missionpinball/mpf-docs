@@ -5,6 +5,6 @@ The most updated full installation (known-working on Windows and Linux) as of Fe
 
 * Python 3.14
 * MPF 0.80.0.dev13 (via pip `--pre` option)
-* MPF-GMC 0.1.6 (via Asset Library)
+* MPF-GMC 0.1.6 (via Godot Asset Library)
 * Godot Editor 4.6
 * MPF Monitor 0.57.2
