@@ -18173,6 +18173,34 @@ icons & this code generated via https://realfavicongenerator.net
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#mode-yaml-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mode YAML Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameters
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#carousel_name" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -48031,6 +48059,34 @@ icons & this code generated via https://realfavicongenerator.net
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#mode-yaml-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mode YAML Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameters
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#carousel_name" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -48085,6 +48141,8 @@ icons & this code generated via https://realfavicongenerator.net
 
 <h2 id="node-configuration">Node Configuration</h2>
 <p>Add an <code>MPFCarousel</code> node to your slide and create child nodes for each carousel item you wish to render. You can use the eyeball icon in the <em>Scene</em> panel to preview what each carousel item will look like. Each child node needs to have a name that corresponds to one of the <code>selectable_items:</code> in your MPF config file.</p>
+<p><img alt="image" src="../../images/carousel_children.png"></p>
+<h3 id="mode-yaml-configuration">Mode YAML Configuration</h3>
 <div class="highlight"><pre><span></span><code><span class="c1"># modes/attract/config/attract.yaml</span>
 <span class="nt">mode</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">start_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mode_attract_started</span>
@@ -48100,8 +48158,9 @@ icons & this code generated via https://realfavicongenerator.net
 <span class="w">    </span><span class="nt">next_item_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_flipper_right_active</span>
 <span class="w">    </span><span class="nt">previous_item_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_flipper_left_active</span>
 </code></pre></div>
-<p><img alt="image" src="../../images/carousel_children.png"></p>
 <p>When the MPF Carousel mode selects an item to display, it will post event with the name of the carousel mode and the name of the selected item. The <code>MPFCarousel</code> node will then iterate through its child nodes and hide all children except one with the same name as the selected item.</p>
+<h2 id="parameters">Parameters</h2>
+<p><img alt="image" src="../images/properties-mpf-carousel.png"></p>
 <h3 id="carousel_name">carousel_name:</h3>
 <p>Single value, type <code>String</code>. Default <code>None</code>.</p>
 <p>This value is set in Godot by clicking on the MPFCarousel node, and setting the value under the Inspector for "Carousel Name". This must be the name of the mode in MPF that contains the carousel and will be triggering changes. The name is required so that GMC can correctly identify in case multiple carousels are active at once. Each mode can only contain a single carousel, but multiple modes can contain carousels. The carousel that is shown is determined by the active modes, and the higher priority mode if multiple modes with carousels are running concurrently.</p>

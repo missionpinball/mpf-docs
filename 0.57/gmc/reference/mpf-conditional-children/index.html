@@ -18272,6 +18272,89 @@ icons & this code generated via https://realfavicongenerator.net
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameters
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#condition_value" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        condition_value:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#condition_type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        condition_type:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#max_players" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        max_players:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#min_players" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        min_players:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable_name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        variable_name:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable_type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        variable_type:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -48046,6 +48129,89 @@ icons & this code generated via https://realfavicongenerator.net
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameters
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#condition_value" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        condition_value:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#condition_type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        condition_type:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#max_players" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        max_players:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#min_players" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        min_players:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable_name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        variable_name:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable_type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        variable_type:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -48076,11 +48242,32 @@ icons & this code generated via https://realfavicongenerator.net
 <h2 id="node-configuration">Node Configuration</h2>
 <p>An <code>MPFConditionalChildren</code> node is set up much the same as an <code>MPFConditional</code>, except that the <code>condition_value:</code> is ignored.</p>
 <p>Instead, each direct child of the node has a name that is the effective condition value of that child. Note that names can be strings or numbers, but all children must have unique names and must be evaluated against the same variable.</p>
+<p><img alt="image" src="../images/nodes-mpf-conditional-children.png"></p>
 <h3 id="example">Example</h3>
 <p>Given an <code>MPFConditionalChildren</code> node with <code>variable_type: Current Player</code>, <code>variable_name: ball</code>, and <code>condition_type: Equals</code>, that node would have three children named "1", "2", and "3". Whenever the slide or widget appears, the child with the name equal to the current ball will be shown, and the others will be hidden.</p>
 <p>Or, with <code>variable_type: Event Arg</code> and <code>variable_name: hero</code>, this node would have a number of children with names corresponding to the various heroes. When the slide/widget player is called to play the slide/widget that contains the <code>MPFConditionalChildren</code> node and includes <code>hero: batman</code> in the <code>tokens:</code> configuration, then the child node named "batman" will be shown and the others will be hidden.</p>
 <h3 id="default-fallback">Default / Fallback</h3>
 <p>A special child node can be named <code>__default__</code> with <strong>two underscores</strong> before and after the word "default". If this child node exists and none of the other children match the condition, this child node will be shown as a fallback. If any other child node condition evaluates true, this child node will be hidden.</p>
+<h2 id="parameters">Parameters</h2>
+<p><img alt="image" src="../images/properties-mpf-conditional-children.png"></p>
+<h3 id="condition_value">condition_value:</h3>
+<p>Single value, type: <code>String</code>. Default: <code>None</code></p>
+<p>This parameter is not used with <code>MPFConditionalChildren</code> - it only appears due to common set it shares with <code>MPFConditional</code></p>
+<h3 id="condition_type">condition_type:</h3>
+<p>Single value, type: <code>op</code>. Default: <code>Equals</code></p>
+<p>This is the comparison that will be made between the <code>variable_name</code> value and the <code>condition_value</code>.</p>
+<h3 id="max_players">max_players:</h3>
+<p>Single value, type: <code>integer</code>. Default: <code>0</code></p>
+<p>If greater than zero, the condition will be evaluated only when the total number of players in the game is less than or equal to this value. Otherwise, it will be false and this node will be hidden.</p>
+<h3 id="min_players">min_players:</h3>
+<p>Single value, type: <code>integer</code>. Default: <code>0</code></p>
+<p>If greater than zero, the condition will be evaluated only when the total number of players in the game is greater than or equal to this value. Otherwise, it will be false and this node will be hidden.</p>
+<h3 id="variable_name">variable_name:</h3>
+<p>Single value, type: <code>String</code>. Default: <code>None</code></p>
+<p>This is the name of the variable that the <code>condition_value</code> will be compared to. If the comparison is true, this node will be shown. Otherwise, it will be hidden.</p>
+<h3 id="variable_type">variable_type:</h3>
+<p>Single value, type: <code>String</code>. Default: <code>"Current Player"</code></p>
+<p>This is the source of the variable that will be looked up and compared to.</p>
 <hr>
 <div class="admonition question">
 <p class="admonition-title">Something missing or wrong? You can fix it!</p>

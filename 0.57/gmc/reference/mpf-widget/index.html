@@ -18494,7 +18494,18 @@ icons & this code generated via https://realfavicongenerator.net
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Node Configuration">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameters
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -18514,15 +18525,15 @@ icons & this code generated via https://realfavicongenerator.net
 </li>
       
         <li class="md-nav__item">
-  <a href="#parameters" class="md-nav__link">
+  <a href="#yaml-parameter-overrides" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Parameters
+        YAML Parameter overrides
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Parameters">
+    <nav class="md-nav" aria-label="YAML Parameter overrides">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -48094,7 +48105,18 @@ icons & this code generated via https://realfavicongenerator.net
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Node Configuration">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameters
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -48114,15 +48136,15 @@ icons & this code generated via https://realfavicongenerator.net
 </li>
       
         <li class="md-nav__item">
-  <a href="#parameters" class="md-nav__link">
+  <a href="#yaml-parameter-overrides" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Parameters
+        YAML Parameter overrides
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Parameters">
+    <nav class="md-nav" aria-label="YAML Parameter overrides">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -48231,9 +48253,12 @@ icons & this code generated via https://realfavicongenerator.net
 <p><code>MPFWidget</code> is a Godot Node class provided by the MPF-GMC extension. All scenes that will be used as widgets must derive from the <code>MPFWidget</code> class (i.e. have an <code>MPFWidget</code> node as the scene's root node).</p>
 <p>Widgets are like mini-slides that can be added to and removed from an existing slide using the MPF <code>widget_player:</code> config block. Widgets are reusable, customizable, and great for popups, hints, and notifications.</p>
 <h2 id="node-configuration">Node Configuration</h2>
+<p>An <code>MPFWidget</code> should be used as the root node for any wiget's Godot Scene.</p>
+<h2 id="parameters">Parameters</h2>
+<p><img alt="image" src="../images/properties-mpf-widget.png"></p>
 <h3 id="animation_player">animation_player:</h3>
 <p>An instance of an <code>AnimationPlayer</code> node that one or more animations named "created", "active", and/or "removed". If an <code>AnimationPlayer</code> node is attached and contains any of those animation names, the respective animation will play on the widget when the widget changes to that state.</p>
-<h2 id="parameters">Parameters</h2>
+<h2 id="yaml-parameter-overrides">YAML Parameter overrides</h2>
 <p>Widget instances created by <code>widget_player</code> have initial values that can be overridden with parameters in the slide player configuration.</p>
 <h3 id="context">context:</h3>
 <p>Single value, type: <code>String</code>. Default: the calling mode's name</p>
@@ -48250,8 +48275,8 @@ icons & this code generated via https://realfavicongenerator.net
 <h2 id="methods">Methods</h2>
 <p><code>MPFWidget</code> does not have any public methods exposed, but custom methods can be added to scene scripts that extend <code>MPFWidget</code>. These methods can be triggered from MPF <code>widget_player</code> with the <code>action: method</code> option. These options are the same as for slides, so see the <a href="../slide_player/">slide_player: reference</a> for more details.</p>
 <p>When a custom function is called, two parameters are passed in: <em>settings</em>, the configuration settings from the widget player config, and <em>kwargs</em>, the arguments from the event that triggered the widget player. If you declared any <code>tokens:</code> in your config for the widget player, those will be available as <code>settings.tokens</code>.</p>
-<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="nx">my_custom_method</span><span class="p">(</span><span class="nx">settings</span><span class="p">,</span><span class="w"> </span><span class="nx">kwargs</span><span class="p">):</span>
-<span class="w">    </span><span class="err">#</span><span class="w"> </span><span class="nx">Function</span><span class="w"> </span><span class="nx">does</span><span class="w"> </span><span class="nx">stuff</span><span class="w"> </span><span class="nx">here</span>
+<div class="highlight"><pre><span></span><code><span class="k">func</span><span class="w"> </span><span class="n">my_custom_method</span><span class="p">(</span><span class="n">settings</span><span class="p">,</span><span class="w"> </span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">    </span><span class="c1"># Function does stuff here</span>
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Godot requires parameters for this function</p>

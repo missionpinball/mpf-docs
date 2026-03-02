@@ -48078,18 +48078,18 @@ icons & this code generated via https://realfavicongenerator.net
 <h3 id="create-a-custom-core-script">Create a Custom Core Script</h3>
 <p>To insert your own code into the core GMC scripts, create a new GDScript file that <code>extends</code> from the core script class you want.</p>
 <p>You can then create your own logic for virtual methods, extend existing methods with <code>super()</code>, or overwrite them entirely.</p>
-<div class="highlight"><pre><span></span><code><span class="err">#</span><span class="w"> </span><span class="o">/</span><span class="nx">custom_code</span><span class="o">/</span><span class="nx">my_custom_bcp</span><span class="p">.</span><span class="nx">gd</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># /custom_code/my_custom_bcp.gd</span>
 
-<span class="nx">extends</span><span class="w"> </span><span class="nx">GMCServer</span>
+<span class="k">extends</span><span class="w"> </span><span class="n">GMCServer</span>
 
-<span class="err">#</span><span class="w"> </span><span class="nx">Override</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">virtual</span><span class="w"> </span><span class="nx">method</span>
-<span class="kd">func</span><span class="w"> </span><span class="nx">on_connect</span><span class="p">():</span>
-<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s">"Connection established, running custom startup flow."</span><span class="p">)</span>
+<span class="c1"># Override a virtual method</span>
+<span class="k">func</span><span class="w"> </span><span class="n">on_connect</span><span class="p">():</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s2">"Connection established, running custom startup flow."</span><span class="p">)</span>
 
-<span class="err">#</span><span class="w"> </span><span class="nx">Extend</span><span class="w"> </span><span class="nx">an</span><span class="w"> </span><span class="nx">existing</span><span class="w"> </span><span class="nx">method</span><span class="w"> </span><span class="nx">by</span><span class="w"> </span><span class="nx">calling</span><span class="w"> </span><span class="nx">super</span><span class="p">()</span><span class="w"> </span><span class="nx">and</span><span class="w"> </span><span class="nx">adding</span><span class="w"> </span><span class="nx">custom</span><span class="w"> </span><span class="nx">logic</span>
-<span class="kd">func</span><span class="w"> </span><span class="nx">set_machine_var</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span><span class="w"> </span><span class="nx">String</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="p">&gt;</span><span class="w"> </span><span class="nx">void</span><span class="p">:</span>
-<span class="w">    </span><span class="nx">super</span><span class="p">()</span>
-<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s">"Machine var %s updated to value: %s"</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="p">[</span><span class="nx">name</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="p">])</span>
+<span class="c1"># Extend an existing method by calling super() and adding custom logic</span>
+<span class="k">func</span><span class="w"> </span><span class="n">set_machine_var</span><span class="p">(</span><span class="n">name</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">String</span><span class="p">,</span><span class="w"> </span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nb nb-Type">void</span><span class="p">:</span>
+<span class="w">    </span><span class="n">super</span><span class="p">()</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s2">"Machine var </span><span class="si">%s</span><span class="s2"> updated to value: </span><span class="si">%s</span><span class="s2">"</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="p">[</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">value</span><span class="p">])</span>
 </code></pre></div>
 <h3 id="inject-custom-script-into-gmc">Inject Custom Script into GMC</h3>
 <p>Now that your script is written, you can instruct GMC to use your script instead of the core script by configuring it in <em>gmc.cfg</em>.</p>

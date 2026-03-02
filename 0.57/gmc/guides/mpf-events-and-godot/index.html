@@ -18818,10 +18818,32 @@ icons & this code generated via https://realfavicongenerator.net
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#example-mpfeventhandler" class="md-nav__link">
+  <a href="#step-1-create-the-mpfeventhandler-in-your-slide" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Example MPFEventHandler
+        Step 1: Create the MPFEventHandler in your Slide.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-configure-the-mpfeventhandler-node-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Configure the MPFEventHandler Node Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-godot-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Godot Function
       
     </span>
   </a>
@@ -18830,28 +18852,6 @@ icons & this code generated via https://realfavicongenerator.net
         
       </ul>
     </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-1-create-the-mpfeventhandler-in-godot" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 1: Create the MPFEventHandler in Godot.
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-2-godot-function" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 2: Godot Function
-      
-    </span>
-  </a>
   
 </li>
         
@@ -48127,10 +48127,32 @@ icons & this code generated via https://realfavicongenerator.net
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#example-mpfeventhandler" class="md-nav__link">
+  <a href="#step-1-create-the-mpfeventhandler-in-your-slide" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Example MPFEventHandler
+        Step 1: Create the MPFEventHandler in your Slide.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-configure-the-mpfeventhandler-node-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Configure the MPFEventHandler Node Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-godot-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Godot Function
       
     </span>
   </a>
@@ -48139,28 +48161,6 @@ icons & this code generated via https://realfavicongenerator.net
         
       </ul>
     </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-1-create-the-mpfeventhandler-in-godot" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 1: Create the MPFEventHandler in Godot.
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-2-godot-function" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 2: Godot Function
-      
-    </span>
-  </a>
   
 </li>
         
@@ -48223,16 +48223,19 @@ icons & this code generated via https://realfavicongenerator.net
 <p>See (<a href="../../../config_players/event_player/">here</a>) for more on dynamic event arguments</p>
 <h3 id="mpfeventhandler-linking-mpf-events-to-godot-scripts">MPFEventHandler - Linking MPF Events to Godot Scripts</h3>
 <p>When more is required of Godot than a simple text update, an <a href="../../reference/mpf-event-handler/">MPFEventHandler</a> can be used to link between MPF and a custom Godot script.</p>
-<h4 id="example-mpfeventhandler">Example MPFEventHandler</h4>
-<p><img alt="image" src="../../images/mpf_event_handler.png"></p>
-<h3 id="step-1-create-the-mpfeventhandler-in-godot">Step 1: Create the MPFEventHandler in Godot.</h3>
-<p>The following fields must be set:</p>
+<h4 id="step-1-create-the-mpfeventhandler-in-your-slide">Step 1: Create the MPFEventHandler in your Slide.</h4>
+<p>The example image shows two MPFEventHandlers, one that will target its parent (the Attract Slide node) and one that will target its children.</p>
+<p><img alt="image" src="../../reference/images/nodes-mpf-event-handler-options.png"></p>
+<h4 id="step-2-configure-the-mpfeventhandler-node-parameters">Step 2: Configure the MPFEventHandler Node Parameters</h4>
+<p>Click on the node in the scene tree. In the right side inspector, the following fields must be set:</p>
 <ol>
 <li><code>Event Name</code>: the name of the event that will come from MPF to start things off</li>
 <li><code>Handler Direction</code>: The parent or child node relative to the MPFEventHandler node in Godot. Parent is linked above, child is linked below. This node must have a Godot script attached to it.</li>
 <li><code>Call Method</code>: The name of the function in the script attached to the handler specified in the Handler Direction (either attached to the Parent or the Child).</li>
 </ol>
-<h3 id="step-2-godot-function">Step 2: Godot Function</h3>
+<p>In our example, the parameter settings will look as follows:</p>
+<p><img alt="image" src="../../images/mpf_event_handler.png"></p>
+<h4 id="step-3-godot-function">Step 3: Godot Function</h4>
 <p>Implement the Godot function in the parent or child specified in the handler direction of the MPFEventHandler. You can do this by attaching a script to the parent or child by right-clicking and Attach Script.</p>
 <p><img alt="image" src="../../images/attach_script.png"></p>
 <p>Inside of this new script, you can add the function that you put in the <code>Call Method</code> of Step 1.</p>
@@ -48245,7 +48248,7 @@ icons & this code generated via https://realfavicongenerator.net
 </code></pre></div><p></p>
 <h2 id="sending-events-back-to-mpf">Sending Events back to MPF</h2>
 <p>Typically, Godot will only be used to receive events. In rare instances you may decide to let Godot handle processing and execution of code and will need to feed the results back to MPF. You will need a code execution entry point in Godot, such as MPFEventHandler or a Godot Timer. </p>
-<p>Once Godot is executing your desired function, you can use <code>MPF.server.send_event</code> or <code>MPF.server.send_events_with_args</code> to send your event to MPF. You will need to specify the event name to send as a string and if using arguments, define the kwargs as a Dictionary</p>
+<p>Once Godot is executing your desired function, you can use <code>MPF.server.send_event</code> or <code>MPF.server.send_events_with_args</code> to send your event to MPF. You will need to specify the event name to send as a string and if using arguments, define the kwargs as a Dictionary.</p>
 <p>Example Godot function without arguments:
 </p><div class="highlight"><pre><span></span><code><span class="k">func</span><span class="w"> </span><span class="n">send_lap_time_to_mpf</span><span class="p">():</span>
 <span class="w">    </span><span class="n">MPF</span><span class="o">.</span><span class="n">server</span><span class="o">.</span><span class="n">send_event_with_args</span><span class="p">(</span><span class="s2">"lap_time_from_godot"</span><span class="p">)</span>

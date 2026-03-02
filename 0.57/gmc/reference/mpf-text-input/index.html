@@ -18402,6 +18402,17 @@ icons & this code generated via https://realfavicongenerator.net
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#events-and-mpf-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Events and MPF Integration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#node-configuration" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -18410,7 +18421,18 @@ icons & this code generated via https://realfavicongenerator.net
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Node Configuration">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameters
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -18542,17 +18564,6 @@ icons & this code generated via https://realfavicongenerator.net
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#events-and-mpf-integration" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Events and MPF Integration
-      
-    </span>
-  </a>
   
 </li>
       
@@ -48124,6 +48135,17 @@ icons & this code generated via https://realfavicongenerator.net
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#events-and-mpf-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Events and MPF Integration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#node-configuration" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -48132,7 +48154,18 @@ icons & this code generated via https://realfavicongenerator.net
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Node Configuration">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameters
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -48267,17 +48300,6 @@ icons & this code generated via https://realfavicongenerator.net
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#events-and-mpf-integration" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Events and MPF Integration
-      
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -48305,8 +48327,31 @@ icons & this code generated via https://realfavicongenerator.net
 
 <h1 id="mpftextinput">MPFTextInput</h1>
 <p><code>MPFTextInput</code> is a Godot Node class provided by the MPF-GMC extension. It renders an on-screen keyboard and accepts button inputs to highlight, select, and submit user-input text.</p>
+<h2 id="events-and-mpf-integration">Events and MPF Integration</h2>
+<p>The MPFTextInput included in the default <a href="../../../game_logic/modes/high_score/">high_score mode</a> has event controls already defined.
+These include <code>event_player</code> bindings use the standard flipper and start tags to control the input. If you are adding an <code>MPFTextInput</code> on your own
+to some other slide, or if you want to add more buttons to control the selected items on the high score slide,
+you will need to create a way to post <em><code>text_input</code></em> events with the appropriate <code>action</code> value.</p>
+<p>For example, to allow more switches to control the on-screen keyboard, you could define an <code>event_player</code> that sends the event <em>"text_input"</em> with one of the three supported <code>action</code> values ("left", "right", or "select").</p>
+<div class="highlight"><pre><span></span><code><span class="nt">event_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s_my_additional_left_control_active</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">text_input</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">left</span>
+<span class="w">  </span><span class="nt">s_my_additional_right_control_active</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">text_input</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">right</span>
+<span class="w">  </span><span class="nt">s_another_select_button_active</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">text_input</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">select</span>
+</code></pre></div>
+<p>When the "END" key on the on-screen keyboard is selected, GMC will post an event <em>text_input_&lt;input_name&gt;_complete</em> where input_name is the <code>input_name</code> value of the MPFTextInput node.</p>
+<p>This event will include an argument <code>text</code> with the text string entered by the user.</p>
+<div class="highlight"><pre><span></span><code><span class="o">===</span><span class="s1">'text_input_high_score_complete'</span><span class="o">===</span><span class="w"> </span><span class="nv">Args</span><span class="o">={</span><span class="s1">'text'</span>:<span class="w"> </span><span class="s1">'MY NAME'</span><span class="o">}</span>
+</code></pre></div>
 <h2 id="node-configuration">Node Configuration</h2>
-<p>An <code>MPFTextInput</code> node can be placed anywhere in a slide or widget and is configured with the following properties.</p>
+<p>If you are defining your own <code>MPFTextInput</code>, the node can be placed anywhere in a slide or widget and is configured with the following properties.</p>
+<h2 id="parameters">Parameters</h2>
+<p><img alt="image" src="../images/properties-mpf-text-input.png"></p>
 <h3 id="allow_space">allow_space:</h3>
 <p>Single value, type <code>bool</code>. Default <code>True</code></p>
 <p>If enabled, a special "SPACE" key will be added to the end of the on-screen keyboard for users to input a space.</p>
@@ -48345,27 +48390,6 @@ icons & this code generated via https://realfavicongenerator.net
 <p>Single value, type <code>LabelSettings</code>.</p>
 <p>A <code>LabelSettings</code> resource that will be applied to the special characters (SPACE, DEL, END) of the on-screen keyboard. A saved file can be provided with <em>Quick Load</em>, or a resource created directly within the node by clicking <em>New LabelSettings</em>.</p>
 <p>If no settings are provided, the <code>character_appearance</code> will be applied to the special characters.</p>
-<h2 id="events-and-mpf-integration">Events and MPF Integration</h2>
-<p>The MPFTextInput included in the default <a href="../../../game_logic/modes/high_score/">high_score mode</a> has event controls already defined.
-These included event_player bindings use the standard flipper and start tags to control the input. If you are adding an MPFTextInput on your own
-to some other slide, or if you want to add more buttons to control the selected items on the high score slide,
-you will need to create a way to post <em><code>text_input</code></em> events with the appropriate <code>action</code> value.</p>
-<p>For example, to allow more switches to control the on-screen keyboard, you could define an <code>event_player</code> that sends the event <em>"text_input"</em> with one of the three supported <code>action</code> values ("left", "right", or "select").</p>
-<div class="highlight"><pre><span></span><code><span class="nt">event_player</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">s_my_additional_left_control_active</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">text_input</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">left</span>
-<span class="w">  </span><span class="nt">s_my_additional_right_control_active</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">text_input</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">right</span>
-<span class="w">  </span><span class="nt">s_another_select_button_active</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">text_input</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">select</span>
-</code></pre></div>
-<p>When the END key on the on-screen keyboard is selected, GMC will post an event <em>text_input_&lt;input_name&gt;_complete</em> where input_name is the <code>input_name</code> value of the MPFTextInput node.</p>
-<p>This event will include an argument <code>text</code> with the text string entered by the user.</p>
-<div class="highlight"><pre><span></span><code><span class="o">===</span><span class="s1">'text_input_high_score_complete'</span><span class="o">===</span><span class="w"> </span><span class="nv">Args</span><span class="o">={</span><span class="s1">'text'</span>:<span class="w"> </span><span class="s1">'MY NAME'</span><span class="o">}</span>
-</code></pre></div>
 <hr>
 <div class="admonition question">
 <p class="admonition-title">Something missing or wrong? You can fix it!</p>

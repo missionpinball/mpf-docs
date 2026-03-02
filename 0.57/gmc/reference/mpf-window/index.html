@@ -48085,6 +48085,7 @@ icons & this code generated via https://realfavicongenerator.net
 <p><code>MPFWindow</code> is a Godot Node class provided by the MPF-GMC extension. The entry scene of the GMC project must derive from the <code>MPFWindow</code> class.</p>
 <h2 id="node-configuration">Node Configuration</h2>
 <p>The root instance of <code>MPFWindow</code> is expected to have at least one child node of type <code>MPFDisplay</code>, where slides and widgets will be targeted. If multiple displays are provided and none are explicitly set to <code>is_default</code>, then the first child will be default.</p>
+<p><img alt="image" src="../images/nodes-mpf-window-and-mpf-display.png"></p>
 <h2 id="parameters">Parameters</h2>
 <p>The <code>MPFWindow</code> class does not take any parameters. The overall window dimensions should be configured in the <em>Project &gt; Project Settings &gt; Display &gt; Window &gt; Size</em> menu.</p>
 <h2 id="methods">Methods</h2>
@@ -48094,9 +48095,10 @@ icons & this code generated via https://realfavicongenerator.net
 <p>Then create an <code>MPFDisplay</code> child for each display you want, and give them the appropriate size and position for where they will appear relative to each other.</p>
 <p>To get the displays to appear on the correct monitors, you'll want to lock the top-left corner of the Window scene to the top-left corner of the first (primary) monitor. Use the menu <em>Project &gt; Project Settings &gt; Display &gt; Window &gt; Size</em> and change the <em>Initial Position Type</em> to <code>Absolute</code>.</p>
 <p>You may also need to adjust the window position and fullscreen modes, depending on your operating system.</p>
-<p>~~~ note "Multiple Displays Need Your Help"</p>
-<pre><code>Theoretically everything exists in Godot and GMC to run multiple displays across multiple monitors, but we need folks with multi-display projects to help test and debug. Please share your experience!
-</code></pre>
+<div class="admonition note">
+<p class="admonition-title">Multiple Displays Need Your Help</p>
+<p>Theoretically everything exists in Godot and GMC to run multiple displays across multiple monitors, but we need folks with multi-display projects to help test and debug. Please share your experience!</p>
+</div>
 <hr>
 <div class="admonition question">
 <p class="admonition-title">Something missing or wrong? You can fix it!</p>
