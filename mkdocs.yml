@@ -675,6 +675,7 @@ nav:
     - Guides:
       - 'Migrating to 0.80': install/0.80.md
       - Base Slide and Player Vars: gmc/guides/base-slide-with-score.md
+      - MPF Events and Godot: gmc/guides/mpf-events-and-godot.md
       - Animating Slides and Widgets: gmc/guides/animating-slides-widgets.md
       - Random Sound Pools: gmc/guides/random-sound-pools.md
       - Random Slide Children: gmc/guides/random-slide-children.md
