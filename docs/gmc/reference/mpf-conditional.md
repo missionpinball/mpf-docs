@@ -10,8 +10,9 @@ title: MPFConditional
 
     The `MPFConditional` node does not subscribe to variable changes, and only calculates the condition when first rendering and when updated by an `action: update` call from the slide or widget player
 
-## Node Configuration
+## Parameters
 
+![image](images/properties-mpf-conditional.png)
 
 ### condition_value:
 
@@ -24,7 +25,6 @@ This is the value that the current value of `variable_name` will be compared to.
 Single value, type: `op`. Default: `Equals`
 
 This is the comparison that will be made between the `variable_name` value and the `condition_value`.
-
 
 ### max_players:
 

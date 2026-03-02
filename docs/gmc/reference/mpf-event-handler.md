@@ -11,6 +11,12 @@ summary: A GMC Node for handling MPF events directly in Godot
 
 An `MPFEventHandler` can be placed anywhere in your scene, but must be either the direct parent or direct child of the nodes that will handle the event callback.
 
+![image](images/nodes-mpf-event-handler-options.png)
+
+## Parameters
+
+![image](images/properties-mpf-event-handler.png)
+
 ### event_name:
 
 Single value, type `String`

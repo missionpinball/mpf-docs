@@ -10,7 +10,6 @@ MPF Events are able to be sent to and from Godot via the Godot Media Controller 
 
 Godot is able to receive any event that MPF generates. The simple method is via [MPFVariables](../reference/mpf-variable.md) and using machine or player variables. Godot will automatically listen for updates to those variables and post changes to the corresponding MPFVariable.
 
-
 ### Custom MPF to Godot Events
 
 You can create your own custom MPF events to send to Godot in order to handle more complex operations.
@@ -34,19 +33,25 @@ See ([here](../../config_players/event_player.md)) for more on dynamic event arg
 
 When more is required of Godot than a simple text update, an [MPFEventHandler](../reference/mpf-event-handler.md) can be used to link between MPF and a custom Godot script.
 
-#### Example MPFEventHandler
+#### Step 1: Create the MPFEventHandler in your Slide.
 
-![image](../images/mpf_event_handler.png)
+The example image shows two MPFEventHandlers, one that will target its parent (the Attract Slide node) and one that will target its children.
 
-### Step 1: Create the MPFEventHandler in Godot. 
+![image](../reference/images/nodes-mpf-event-handler-options.png)
 
-The following fields must be set:
+#### Step 2: Configure the MPFEventHandler Node Parameters
+
+Click on the node in the scene tree. In the right side inspector, the following fields must be set:
 
   1. `Event Name`: the name of the event that will come from MPF to start things off
   1. `Handler Direction`: The parent or child node relative to the MPFEventHandler node in Godot. Parent is linked above, child is linked below. This node must have a Godot script attached to it.
   1. `Call Method`: The name of the function in the script attached to the handler specified in the Handler Direction (either attached to the Parent or the Child).
 
-### Step 2: Godot Function
+In our example, the parameter settings will look as follows:
+
+![image](../images/mpf_event_handler.png)
+
+#### Step 3: Godot Function
 
 Implement the Godot function in the parent or child specified in the handler direction of the MPFEventHandler. You can do this by attaching a script to the parent or child by right-clicking and Attach Script.
 
@@ -67,7 +72,7 @@ func update_gas_progress_bar(event_args):
 
 Typically, Godot will only be used to receive events. In rare instances you may decide to let Godot handle processing and execution of code and will need to feed the results back to MPF. You will need a code execution entry point in Godot, such as MPFEventHandler or a Godot Timer. 
 
-Once Godot is executing your desired function, you can use `MPF.server.send_event` or `MPF.server.send_events_with_args` to send your event to MPF. You will need to specify the event name to send as a string and if using arguments, define the kwargs as a Dictionary
+Once Godot is executing your desired function, you can use `MPF.server.send_event` or `MPF.server.send_events_with_args` to send your event to MPF. You will need to specify the event name to send as a string and if using arguments, define the kwargs as a Dictionary.
 
 Example Godot function without arguments:
 ``` gdscript

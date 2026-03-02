@@ -22,6 +22,10 @@ In Part II of the following video, it shows how to configure your Godot MPFCarou
 
 Add an `MPFCarousel` node to your slide and create child nodes for each carousel item you wish to render. You can use the eyeball icon in the *Scene* panel to preview what each carousel item will look like. Each child node needs to have a name that corresponds to one of the `selectable_items:` in your MPF config file.
 
+![image](../images/carousel_children.png)
+
+### Mode YAML Configuration
+
 ``` yaml
 # modes/attract/config/attract.yaml
 mode:
@@ -39,9 +43,12 @@ mode_settings:
     previous_item_events: s_flipper_left_active
 ```
 
-![image](../images/carousel_children.png)
 
 When the MPF Carousel mode selects an item to display, it will post event with the name of the carousel mode and the name of the selected item. The `MPFCarousel` node will then iterate through its child nodes and hide all children except one with the same name as the selected item.
+
+## Parameters
+
+![image](images/properties-mpf-carousel.png)
 
 ### carousel_name:
 

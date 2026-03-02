@@ -10,6 +10,10 @@ title: MPFVariable
 
 An `MPFVariable` node can be placed anywhere in a slide or widget and will automatically update itself based on its configured parameters.
 
+## Parameters
+
+![image](images/properties-mpf-variable.png)
+
 ### comma_separate:
 
 Single value, type: `boolean`. Default: `false`

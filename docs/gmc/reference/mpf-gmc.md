@@ -175,7 +175,7 @@ The template will append the suffix using string substitution if the `value` is 
 
 Examples:
 
-``` go
+``` gdscript
 pluralize("Shot%s Remaining", 1)
 # > "Shot Remaining"
 

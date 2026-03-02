@@ -12,6 +12,10 @@ To get logging from GMC nodes (a.k.a. nodes with class names that start with `MP
 
 An `MPFLogger` node can be added anywhere in a scene. Only GMC nodes that are attached via the `loggers` list will output logs at the selected level.
 
+## Parameters
+
+![image](images/properties-mpf-logger.png)
+
 ### enabled:
 
 Single value, type `bool`. Default `true`.

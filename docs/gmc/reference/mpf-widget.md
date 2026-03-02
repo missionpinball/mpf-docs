@@ -8,14 +8,19 @@ title: MPFWidget
 
 Widgets are like mini-slides that can be added to and removed from an existing slide using the MPF `widget_player:` config block. Widgets are reusable, customizable, and great for popups, hints, and notifications.
 
-
 ## Node Configuration
+
+An `MPFWidget` should be used as the root node for any wiget's Godot Scene.
+
+## Parameters
+
+![image](images/properties-mpf-widget.png)
 
 ### animation_player:
 
 An instance of an `AnimationPlayer` node that one or more animations named "created", "active", and/or "removed". If an `AnimationPlayer` node is attached and contains any of those animation names, the respective animation will play on the widget when the widget changes to that state.
 
-## Parameters
+## YAML Parameter overrides
 
 Widget instances created by `widget_player` have initial values that can be overridden with parameters in the slide player configuration.
 
@@ -49,11 +54,10 @@ This value will be added to the calling mode's priority to determine the overall
 
 When a custom function is called, two parameters are passed in: *settings*, the configuration settings from the widget player config, and *kwargs*, the arguments from the event that triggered the widget player. If you declared any `tokens:` in your config for the widget player, those will be available as `settings.tokens`.
 
-``` go
+``` gdscript
 func my_custom_method(settings, kwargs):
     # Function does stuff here
 ```
-
 
 !!! note "Godot requires parameters for this function"
 

@@ -10,6 +10,8 @@ title: MPFWindow
 
 The root instance of `MPFWindow` is expected to have at least one child node of type `MPFDisplay`, where slides and widgets will be targeted. If multiple displays are provided and none are explicitly set to `is_default`, then the first child will be default.
 
+![image](images/nodes-mpf-window-and-mpf-display.png)
+
 ## Parameters
 
 The `MPFWindow` class does not take any parameters. The overall window dimensions should be configured in the *Project > Project Settings > Display > Window > Size* menu.
@@ -29,6 +31,7 @@ To get the displays to appear on the correct monitors, you'll want to lock the t
 
 You may also need to adjust the window position and fullscreen modes, depending on your operating system.
 
-~~~ note "Multiple Displays Need Your Help"
 
-    Theoretically everything exists in Godot and GMC to run multiple displays across multiple monitors, but we need folks with multi-display projects to help test and debug. Please share your experience!
+!!! note "Multiple Displays Need Your Help"
+
+     Theoretically everything exists in Godot and GMC to run multiple displays across multiple monitors, but we need folks with multi-display projects to help test and debug. Please share your experience!
