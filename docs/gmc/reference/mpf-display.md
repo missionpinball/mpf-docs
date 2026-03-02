@@ -10,7 +10,11 @@ title: MPFDisplay
 
 All `MPFDisplay` instances must be first-level child nodes of the main `MPFWindow` root. The name of the `MPFDisplay` node is the name that can be used in MPF configs as the `target:` value when targeting a slide or widget to a specific display.
 
+![image](images/nodes-mpf-window-and-mpf-display.png)
+
 ## Parameters
+
+![image](images/properties-mpf-display.png)
 
 The Godot Editor *Inspector* panel provides the following parameters for the `MPFDisplay` node:
 

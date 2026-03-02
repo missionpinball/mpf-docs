@@ -10,11 +10,18 @@ Child node selection can be done randomly or sequentially, and tracked globally 
 
 To use a Child Pool, add the node to your scene and place child nodes inside it.
 
+
 !!! note "Children require show/hide methods"
 
     The display of the child nodes is managed by calling `show()` or `hide()` on the respective children. Every Godot `Node2D`, `Node3D`, and `Control` node has these methods built-in, but if you are using a custom class you must ensure that it has `func show()` and `func hide()` defined.
 
 ## Node Configuration
+
+![image](images/nodes-mpf-child-pool.png)
+
+## Parameters
+
+![image](images/properties-mpf-child-pool.png)
 
 ### playback_method:
 

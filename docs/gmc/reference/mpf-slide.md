@@ -8,6 +8,12 @@ title: MPFSlide
 
 ## Node Configuration
 
+A slide should be the root node of the Godot Scene that contains it.
+
+## Parameters
+
+![image](images/properties-mpf-slide.png)
+
 ### animation_player:
 
 An instance of an `AnimationPlayer` node that one or more animations named "created", "active", and/or "removed". If an `AnimationPlayer` node is attached and contains any of those animation names, the respective animation will play on the slide when the slide changes to that state.
@@ -44,7 +50,7 @@ This value will be added to the calling mode's priority to determine the overall
 
 When a custom function is called, two parameters are passed in: *settings*, the configuration settings from the slide player config, and *kwargs*, the arguments from the event that triggered the slide player. If you declared any `tokens:` in your config for the slide player, those will be available as `settings.tokens`.
 
-``` go
+``` gdscript
 func my_custom_method(settings, kwargs):
     # Function does stuff here
 ```

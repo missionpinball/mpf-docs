@@ -21,6 +21,12 @@ In the *Inspector* tab on the right side, you can configure the `MPFSoundAsset` 
 
     Options configured in the `MPFSoundAsset` will be the defaults for this sound, but can be overridden with values in `sound_player` for different behavior when needed.
 
+![image](images/create-resource-mpf-sound-asset.png)
+
+## Parameters
+
+![image](images/properties-mpf-sound-asset.png)
+
 ### stream:
 
 Single value, type: `AudioStream`. Default: `None`

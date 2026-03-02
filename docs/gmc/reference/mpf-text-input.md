@@ -6,9 +6,43 @@ title: MPFTextInput
 
 `MPFTextInput` is a Godot Node class provided by the MPF-GMC extension. It renders an on-screen keyboard and accepts button inputs to highlight, select, and submit user-input text.
 
+## Events and MPF Integration
+
+The MPFTextInput included in the default [high_score mode](../../game_logic/modes/high_score.md) has event controls already defined.
+These include `event_player` bindings use the standard flipper and start tags to control the input. If you are adding an `MPFTextInput` on your own
+to some other slide, or if you want to add more buttons to control the selected items on the high score slide,
+you will need to create a way to post *`text_input`* events with the appropriate `action` value.
+
+For example, to allow more switches to control the on-screen keyboard, you could define an `event_player` that sends the event *"text_input"* with one of the three supported `action` values ("left", "right", or "select").
+
+``` yaml
+event_player:
+  s_my_additional_left_control_active:
+    text_input:
+      action: left
+  s_my_additional_right_control_active:
+    text_input:
+      action: right
+  s_another_select_button_active:
+    text_input:
+      action: select
+```
+
+When the "END" key on the on-screen keyboard is selected, GMC will post an event *text_input_<input_name\>_complete* where input_name is the `input_name` value of the MPFTextInput node.
+
+This event will include an argument `text` with the text string entered by the user.
+
+``` shell
+==='text_input_high_score_complete'=== Args={'text': 'MY NAME'}
+```
+
 ## Node Configuration
 
-An `MPFTextInput` node can be placed anywhere in a slide or widget and is configured with the following properties.
+If you are defining your own `MPFTextInput`, the node can be placed anywhere in a slide or widget and is configured with the following properties.
+
+## Parameters
+
+![image](images/properties-mpf-text-input.png)
 
 ### allow_space:
 
@@ -82,33 +116,3 @@ Single value, type `LabelSettings`.
 A `LabelSettings` resource that will be applied to the special characters (SPACE, DEL, END) of the on-screen keyboard. A saved file can be provided with *Quick Load*, or a resource created directly within the node by clicking *New LabelSettings*.
 
 If no settings are provided, the `character_appearance` will be applied to the special characters.
-
-## Events and MPF Integration
-
-The MPFTextInput included in the default [high_score mode](../../game_logic/modes/high_score.md) has event controls already defined.
-These included event_player bindings use the standard flipper and start tags to control the input. If you are adding an MPFTextInput on your own
-to some other slide, or if you want to add more buttons to control the selected items on the high score slide,
-you will need to create a way to post *`text_input`* events with the appropriate `action` value.
-
-For example, to allow more switches to control the on-screen keyboard, you could define an `event_player` that sends the event *"text_input"* with one of the three supported `action` values ("left", "right", or "select").
-
-``` yaml
-event_player:
-  s_my_additional_left_control_active:
-    text_input:
-      action: left
-  s_my_additional_right_control_active:
-    text_input:
-      action: right
-  s_another_select_button_active:
-    text_input:
-      action: select
-```
-
-When the END key on the on-screen keyboard is selected, GMC will post an event *text_input_<input_name\>_complete* where input_name is the `input_name` value of the MPFTextInput node.
-
-This event will include an argument `text` with the text string entered by the user.
-
-``` shell
-==='text_input_high_score_complete'=== Args={'text': 'MY NAME'}
-```

@@ -10,6 +10,10 @@ title: MPFVideoPlayer
 
 An `MPFVideoPlayer` node can be placed anywhere in a slide or widget and offers the following custom properties.
 
+## Parameters
+
+![image](images/properties-mpf-video-player.png)
+
 ### hide_behavior:
 
 Single value, one of `"Restart"`, "`Pause`", `"Continue"`. Default: `"Restart"`
