@@ -30,7 +30,7 @@ Bonus: there are “fuzz” tests too which are just automated tests that hit al
 
 Consolidate this content to here:
 
-* [Legacy Tutorial - Unit Testing](tutorials/legacy_mc/19_unit_testing.md)
+* [Legacy Tutorial - Unit Testing](../tutorials/legacy_mc/19_unit_testing.md)
 * [Developer Site - Writing Machine Tests](https://developer.missionpinball.org/en/dev/testing/writing_machine_tests.html)
 * [Developer Site - Testing Tutorial](https://developer.missionpinball.org/en/dev/testing/tutorial/2.html)
 
