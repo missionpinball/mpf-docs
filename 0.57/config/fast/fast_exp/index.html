@@ -16,7 +16,7 @@ icons & this code generated via https://realfavicongenerator.net
         <link rel="prev" href="../">
       
       
-        <link rel="next" href="../fast_net/">
+        <link rel="next" href="../fast_exp_board/">
       
       
         
@@ -23992,6 +23992,8 @@ icons & this code generated via https://realfavicongenerator.net
       
         
       
+        
+      
     
     
     
@@ -24190,34 +24192,6 @@ icons & this code generated via https://realfavicongenerator.net
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="boards:">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#model" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        model:
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ignore_led_errors" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ignore_led_errors:
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -24246,6 +24220,34 @@ icons & this code generated via https://realfavicongenerator.net
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fast_exp_board/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    fast:exp:board:
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -48082,34 +48084,6 @@ icons & this code generated via https://realfavicongenerator.net
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="boards:">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#model" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        model:
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ignore_led_errors" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ignore_led_errors:
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -48192,7 +48166,7 @@ to <a href="../../../examples/">config file examples</a> for more examples of re
 <p>Single value, int, default: <code>921600</code></p>
 <p>The connection baud rate.</p>
 <h3 id="boards">boards:</h3>
-<p>Dict of string board names to dicts of EXP board properties. Defaults to empty.</p>
+<p>Subconfig of string board names to <a href="../fast_exp_board/">fast:exp:board</a> configs with your EXP board properties. Defaults to empty.</p>
 <p>Example:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">fast</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">exp</span><span class="p">:</span>
@@ -48203,12 +48177,6 @@ to <a href="../../../examples/">config file examples</a> for more examples of re
 <span class="w">      </span><span class="nt">playfield_0081</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">model</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">FP-EXP-0081</span>
 </code></pre></div>
-<h4 id="model">model:</h4>
-<p>The product number of the IO board. E.G. <code>FP-EXP-0081</code></p>
-<h4 id="ignore_led_errors">ignore_led_errors:</h4>
-<p>Single value, boolean, default: <code>false</code></p>
-<p>If false, LED hex communication decode errors will be raised as errors when encountered from this board.
-If you encounter instability due to these errors, set this to true to silently ignore them.</p>
 <h2 id="using-exp_int">Using exp_int</h2>
 <p>If using a Raspberry Pi connected directly to the Neuron controller, the LED headers on the Neuron will not be available on the normal EXP interface.
 In order to access these Neuron LED headers, you must define a parallel structure to the existing <code>exp:</code> configuration, and move the Neuron definition over to it.</p>
@@ -48304,13 +48272,13 @@ Is something wrong or missing? Is something out of date, or can you explain it b
         
         
           
-          <a href="../fast_net/" class="md-footer__link md-footer__link--next" aria-label="Next: fast:net:">
+          <a href="../fast_exp_board/" class="md-footer__link md-footer__link--next" aria-label="Next: fast:exp:board:">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                fast:net:
+                fast:exp:board:
               </div>
             </div>
             <div class="md-footer__button md-icon">
