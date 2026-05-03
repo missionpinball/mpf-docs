@@ -40345,6 +40345,17 @@ icons & this code generated via https://realfavicongenerator.net
 </li>
       
         <li class="md-nav__item">
+  <a href="#values-in-tokens-can-be-conditional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Values in tokens can be conditional
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#shot-show-tokens" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -48190,6 +48201,17 @@ icons & this code generated via https://realfavicongenerator.net
 </li>
       
         <li class="md-nav__item">
+  <a href="#values-in-tokens-can-be-conditional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Values in tokens can be conditional
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#shot-show-tokens" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -48464,6 +48486,17 @@ play like this:</p>
 <span class="w">      </span><span class="nt">show_tokens</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">led</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led_02</span>
 <span class="w">        </span><span class="nt">color1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">green</span>
+<span class="w">        </span><span class="nt">color2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">blue</span>
+</code></pre></div>
+<h2 id="values-in-tokens-can-be-conditional">Values in tokens can be conditional</h2>
+<p>Values in a token can be conditional too, for example they can depend on the player's score or any other machine or player variable.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">show_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">some_event</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">color_cycle</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">loops</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-1</span>
+<span class="w">      </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">led</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led_02</span>
+<span class="w">        </span><span class="nt">color1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">("green" if (current_player.score) &gt; 1000 else "yellow")</span>
 <span class="w">        </span><span class="nt">color2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">blue</span>
 </code></pre></div>
 <h2 id="shot-show-tokens">Shot show tokens</h2>

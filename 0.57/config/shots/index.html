@@ -48700,19 +48700,19 @@ it might cause issues during multiball.</p>
 <p>In this example an activation of <code>s_other_lane</code> will prevent the shot
 from being hit for two seconds.</p>
 <h3 id="disable_events">disable_events:</h3>
-<p>List of one (or more) device control events
+<p>Comma separated list of one (or more) device control events
 (<a href="../instructions/device_control_events/">Instructions for entering device control events</a>). Defaults to empty.</p>
 <p>Default: <code>None</code></p>
 <p>Events in this list, when posted, disable this shot. If a shot is
 disabled, then hits to it have no effect. (e.g. The shot will remain in
 whatever state it's in.)</p>
 <h3 id="enable_events">enable_events:</h3>
-<p>List of one (or more) device control events
+<p>Comma separated list of one (or more) device control events
 (<a href="../instructions/device_control_events/">Instructions for entering device control events</a>). Defaults to empty.</p>
 <p>Default: <code>None</code></p>
 <p>Events in this list, when posted, enable this shot. If a shot is not
 enabled, then hits to it have no effect. (e.g. The shot will remain in
-whatever state it's in.)</p>
+whatever state it's in.) If this setting is omitted, the shot is enabled by default. However if any value is set for "enable_events:", the shot will be disabled by default and will only be enabled once an enable event occurs.</p>
 <h3 id="hit_events">hit_events:</h3>
 <p>List of one (or more) device control events
 (<a href="../instructions/device_control_events/">Instructions for entering device control events</a>). Defaults to empty.</p>
