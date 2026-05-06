@@ -26,9 +26,17 @@ Match number for player 0
 
 Match number for player 1
 
+#### `match_number1_won`:
+
+True/False for whether player 1 matched.
+
 #### `match_numberX`:
 
 Match number for player X (up to max players)
+
+#### `match_numberX_won`:
+
+True/False for whether player X matched (up to max players).
 
 #### `winner_number`:
 
