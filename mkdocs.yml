@@ -608,83 +608,7 @@ nav:
 
 - Media Controller:
   - mc/index.md
-  - Displays:
-    - mc/displays/index.md
-    - Concepts & Architecture: mc/displays/architecture.md
-    - Display Types:
-      - mc/displays/types.md
-      - LCD: mc/displays/lcd.md
-      - DMD: mc/displays/dmd.md
-      - RGB LED DMD: mc/displays/rgb_dmd.md
-      - Applying the DMD look to a screen: mc/displays/adding_dot_look_to_lcd.md
-      - Alphanumer displays: mc/displays/alpha_numeric.md
-      - Working with Multiple Displays: mc/displays/multiple_screens.md
-
-  - Slides:
-    - mc/slides/index.md
-    - Creating Slides: mc/slides/creating_slides.md
-    - Showing Slides: mc/slides/showing_slides.md
-    - Slide Transitions: mc/slides/transitions.md
-    - mc/creating_your_own.md
-    - mc/mpf_and_mc_different_machines.md
-    - mc/mpfmc.md
-    - mc/multiple_mcs.md
-    - mc/unity_bcp_server.md
-    - mc/slides/display_targets.md
-    - mc/slides/multiplayer_display.md
-    - mc/slides/picture_in_picture.md
-    - mc/slides/split_screen.md
-  - Widgets:
-    - mc/widgets/index.md
-    - Base Settings (for all widgets):
-      - mc/widgets/common_settings.md
-      - mc/widgets/adding_widgets.md
-      - mc/widgets/animation.md
-      - mc/widgets/bitmap_fonts.md
-      - mc/widgets/dmd_fonts.md
-      - mc/widgets/easing.md
-      - mc/widgets/easing_config.md
-      - mc/widgets/expire.md
-      - mc/widgets/fonts.md
-      - mc/widgets/keys.md
-      - mc/widgets/layers.md
-      - mc/widgets/opacity.md
-      - mc/widgets/positioning.md
-      - mc/widgets/reusable_widgets.md
-      - mc/widgets/styles.md
-      - mc/widgets/types.md
-      - mc/widgets/widgets_vs_slides.md
-    - Text:
-      - mc/widgets/text/index.md
-      - Dynamic Text: mc/widgets/text/text_dynamic.md
-      - Text Strings: mc/widgets/text/text_strings.md
-    - Image: mc/widgets/image.md
-    - Video: mc/widgets/video.md
-    - Bezier Curve: mc/widgets/bezier.md
-    - Display (put one display inside another):
-      - mc/widgets/display/index.md
-      - Effects: mc/widgets/display/effects.md
-    - Ellipse: mc/widgets/ellipse.md
-    - Line: mc/widgets/line.md
-    - Points: mc/widgets/points.md
-    - Quad: mc/widgets/quad.md
-    - Rectangle: mc/widgets/rectangle.md
-    - Segment Display Emulator:
-      - mc/widgets/segment_display_emulator/index.md
-      - How To Guide: mc/widgets/segment_display_emulator/how_to.md
-    - Text Input: mc/widgets/text_input.md
-    - Triangle: mc/widgets/triangle.md
-    - Camera: mc/widgets/camera.md
-
-  - Sound & Audio:
-    - mc/sound/index.md
-    - Technical Overview: mc/sound/technical.md
-    - Ducking: mc/sound/ducking.md
-    - Tracks: mc/sound/tracks.md
-    - How to set up sound: mc/sound/basic_setup.md
-    - Tips & tricks: mc/sound/tips_tricks.md
-    - Playing a sound with variations: mc/sound/variations.md
-
+  - 'Migrating from Legacy MC to 0.80 and GMC': install/0.80.md
   - Godot MC:
     - gmc/index.md
     - Installation: gmc/installation.md
@@ -713,7 +637,6 @@ nav:
       - bonus mode_settings: gmc/reference/bonus.md
       - MPF-GMC Singleton: gmc/reference/mpf-gmc.md
     - Guides:
-      - 'Migrating to 0.80': install/0.80.md
       - Base Slide and Player Vars: gmc/guides/base-slide-with-score.md
       - MPF Events and Godot: gmc/guides/mpf-events-and-godot.md
       - Animating Slides and Widgets: gmc/guides/animating-slides-widgets.md
@@ -725,6 +648,84 @@ nav:
       - Display Filter Effects: gmc/guides/window-filters.md
       - Launching MPF Game with Godot: gmc/guides/launching-the-mpf-game-with-godot.md
       - Advanced Custom Code: gmc/guides/advanced-custom-code.md
+
+  - Legacy Media Controller:
+    - Displays:
+      - mc/displays/index.md
+      - Concepts & Architecture: mc/displays/architecture.md
+      - Display Types:
+        - mc/displays/types.md
+        - LCD: mc/displays/lcd.md
+        - DMD: mc/displays/dmd.md
+        - RGB LED DMD: mc/displays/rgb_dmd.md
+        - Applying the DMD look to a screen: mc/displays/adding_dot_look_to_lcd.md
+        - Alphanumer displays: mc/displays/alpha_numeric.md
+        - Working with Multiple Displays: mc/displays/multiple_screens.md
+
+    - Slides:
+      - mc/slides/index.md
+      - Creating Slides: mc/slides/creating_slides.md
+      - Showing Slides: mc/slides/showing_slides.md
+      - Slide Transitions: mc/slides/transitions.md
+      - mc/creating_your_own.md
+      - mc/mpf_and_mc_different_machines.md
+      - mc/mpfmc.md
+      - mc/multiple_mcs.md
+      - mc/unity_bcp_server.md
+      - mc/slides/display_targets.md
+      - mc/slides/multiplayer_display.md
+      - mc/slides/picture_in_picture.md
+      - mc/slides/split_screen.md
+    - Widgets:
+      - mc/widgets/index.md
+      - Base Settings (for all widgets):
+        - mc/widgets/common_settings.md
+        - mc/widgets/adding_widgets.md
+        - mc/widgets/animation.md
+        - mc/widgets/bitmap_fonts.md
+        - mc/widgets/dmd_fonts.md
+        - mc/widgets/easing.md
+        - mc/widgets/easing_config.md
+        - mc/widgets/expire.md
+        - mc/widgets/fonts.md
+        - mc/widgets/keys.md
+        - mc/widgets/layers.md
+        - mc/widgets/opacity.md
+        - mc/widgets/positioning.md
+        - mc/widgets/reusable_widgets.md
+        - mc/widgets/styles.md
+        - mc/widgets/types.md
+        - mc/widgets/widgets_vs_slides.md
+      - Text:
+        - mc/widgets/text/index.md
+        - Dynamic Text: mc/widgets/text/text_dynamic.md
+        - Text Strings: mc/widgets/text/text_strings.md
+      - Image: mc/widgets/image.md
+      - Video: mc/widgets/video.md
+      - Bezier Curve: mc/widgets/bezier.md
+      - Display (put one display inside another):
+        - mc/widgets/display/index.md
+        - Effects: mc/widgets/display/effects.md
+      - Ellipse: mc/widgets/ellipse.md
+      - Line: mc/widgets/line.md
+      - Points: mc/widgets/points.md
+      - Quad: mc/widgets/quad.md
+      - Rectangle: mc/widgets/rectangle.md
+      - Segment Display Emulator:
+        - mc/widgets/segment_display_emulator/index.md
+        - How To Guide: mc/widgets/segment_display_emulator/how_to.md
+      - Text Input: mc/widgets/text_input.md
+      - Triangle: mc/widgets/triangle.md
+      - Camera: mc/widgets/camera.md
+
+    - Sound & Audio:
+      - mc/sound/index.md
+      - Technical Overview: mc/sound/technical.md
+      - Ducking: mc/sound/ducking.md
+      - Tracks: mc/sound/tracks.md
+      - How to set up sound: mc/sound/basic_setup.md
+      - Tips & tricks: mc/sound/tips_tricks.md
+      - Playing a sound with variations: mc/sound/variations.md
 
 - Reference:
   - reference/index.md
