@@ -2,17 +2,14 @@
 title: Media Controllers
 ---
 
-# MPF Media Controller(s)
-
+# The MPF Media Controllers
 
 The core MPF game engine does not handle graphics or audio. Instead, that is
 handled by a completely separate program called a "media controller."
 
-We have created a default media controller called "MPF-MC" (MPF Media Controller)
-that is also based on Python and shares the same config files as MPF. However,
-you don't have to use it. Many people have created their own media controllers
-in other languages (Unity 3D, C#, Godot, Lua versions all exist), or you could
-write your own.
+Two official media controllers exist - MPF-GMC, the Godot plugin, works with MPF 0.80+, and is the modern media controller. Legacy MPF-MC is a Python Kivy project used in versions up through 0.58.
+
+However, you don't have to either of these. Many people have created their own media controllers in other languages (Unity 3D, C#, Lua versions all exist), or you can write your own.
 
 The MPF game engine and media
 controller talk to each other via something called "BCP" which is a
