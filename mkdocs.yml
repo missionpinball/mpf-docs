@@ -608,9 +608,9 @@ nav:
 
 - Media Controller:
   - mc/index.md
-  - 'Migrating from Legacy MC to 0.80 and GMC': install/0.80.md
   - Godot MC:
     - gmc/index.md
+    - 'Migrating from Legacy MC to 0.80 and GMC': install/0.80.md
     - Installation: gmc/installation.md
     - Setup: gmc/setup.md
     - Keyboard: gmc/keyboard.md
@@ -650,6 +650,7 @@ nav:
       - Advanced Custom Code: gmc/guides/advanced-custom-code.md
 
   - Legacy Media Controller:
+    - mc/mpfmc.md
     - Displays:
       - mc/displays/index.md
       - Concepts & Architecture: mc/displays/architecture.md
@@ -667,11 +668,6 @@ nav:
       - Creating Slides: mc/slides/creating_slides.md
       - Showing Slides: mc/slides/showing_slides.md
       - Slide Transitions: mc/slides/transitions.md
-      - mc/creating_your_own.md
-      - mc/mpf_and_mc_different_machines.md
-      - mc/mpfmc.md
-      - mc/multiple_mcs.md
-      - mc/unity_bcp_server.md
       - mc/slides/display_targets.md
       - mc/slides/multiplayer_display.md
       - mc/slides/picture_in_picture.md
@@ -726,6 +722,11 @@ nav:
       - How to set up sound: mc/sound/basic_setup.md
       - Tips & tricks: mc/sound/tips_tricks.md
       - Playing a sound with variations: mc/sound/variations.md
+
+  - mc/creating_your_own.md
+  - mc/mpf_and_mc_different_machines.md
+  - mc/multiple_mcs.md
+  - mc/unity_bcp_server.md
 
 - Reference:
   - reference/index.md
