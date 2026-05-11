@@ -1308,6 +1308,7 @@ nav:
       - mc_reset_phase_3: events/mc_reset_phase_3.md
       - displays_initialized: events/displays_initialized.md
     - Mode Lifecycle Events:
+      - events/modes/index.md
       - mode_(name)_started: events/mode_name_started.md
       - mode_(name)_starting: events/mode_name_starting.md
       - mode_(name)_stopped: events/mode_name_stopped.md
