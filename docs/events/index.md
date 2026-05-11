@@ -361,15 +361,15 @@ will posted an event called *switch_s_left_slingshot_active*.
     * [switch_(name)_active](switch_switch_active.md)
     * [switch_(name)_inactive](switch_switch_inactive.md)
 
-* Mode Lifecycle Events
-    * [mode_(name)_started](mode_name_started.md)
-    * [mode_(name)_starting](mode_name_starting.md) *Queue Event*
-    * [mode_(name)_stopped](mode_name_stopped.md)
-    * [mode_(name)_stopping](mode_name_stopping.md) *Queue Event*
-    * [mode_(name)\_will_start](mode_name_will_start.md)
-    * [mode_(name)\_will_stop](mode_name_will_stop.md)
+* [Mode Lifecycle Events](modes/index.md)
     * See flowchart: [Mode Start Sequence](../flowcharts/mode_start.md)
+    * [mode_(name)\_will_start](mode_name_will_start.md)
+    * [mode_(name)_starting](mode_name_starting.md) *Queue Event*
+    * [mode_(name)_started](mode_name_started.md)
     * See flowchart: [Mode Stop Sequence](../flowcharts/mode_stop.md)
+    * [mode_(name)\_will_stop](mode_name_will_stop.md)
+    * [mode_(name)_stopping](mode_name_stopping.md) *Queue Event*
+    * [mode_(name)_stopped](mode_name_stopped.md)
 
 * Multiplayer Management Events
     * [multiplayer_game](multiplayer_game.md)
