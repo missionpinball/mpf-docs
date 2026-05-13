@@ -96,7 +96,7 @@ Running Godot from the editor has mainly two disadvantages. First of all the edi
 
 ## Export Templates
 
-In order to export your project as an executalbe you first need to make sure that the export templates from Godot are installed. They are not by default installed with the editor. If you have the export temaplates installed you can skip this step, this has to be done only once.
+In order to export your project as an executalbe you first need to make sure that the export templates from Godot are installed. They are not installed by default with the editor. If you have the export temaplates installed you can skip this step, this has to be done only once.
 
 From the Godot menu bar choose Editor --> Manage Export Templates
 
