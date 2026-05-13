@@ -1,6 +1,7 @@
 ---
 title: "Launching the MPF game with Godot"
 ---
+#Lauching Godot - Overview
 
 There are different ways how to launch Godot to be used with MPF. Each way has its own advantages and disadvantages.
 
@@ -26,7 +27,7 @@ Connecting BCP to local_display at localhost:5050 ....
 
 Now start your Godot editor and open your configured project. Once that is done simply press the play button
 
-<img src="../images/godot_play_button.png" alt="Godot Play Button" width="600" />
+<img src="../../images/godot_play_button.png" alt="Godot Play Button" width="600" />
 
 Now MPF will continue its boot up and will be ready to run together with Godot.
 
@@ -100,11 +101,11 @@ In order to export your project as an executalbe you first need to make sure tha
 
 From the Godot menu bar choose Editor --> Manage Export Templates
 
-<img src="../images/godot_export_template_menu.png" alt="Godot Export Templates" width="600" />
+<img src="../../images/godot_export_template_menu.png" alt="Godot Export Templates" width="600" />
 
 In the upcoming window you can either download the export templates from a mirror or install some from a local file.
 
-<img src="../images/godot_install_export.png" alt="Godot Export Template Download" width="600" />
+<img src="../../images/godot_install_export.png" alt="Godot Export Template Download" width="600" />
 
 If you want to install from a file you first have to download the template file from [Godot Downloads](https://godotengine.org/download). In most cases you probably want to download directly from a mirror. These steps are MPF independent and pure Godot functionality. Further information can be found [here](https://docs.godotengine.org/en/latest/tutorials/export/exporting_projects.html)
 
@@ -113,20 +114,20 @@ This export needs to be done every time you change something in your Godot proje
 
 From the Godot menu bar choose Project --> Export
 
-<img src="../images/godot_export_menu.png" alt="Godot Export Menu" width="600" />
+<img src="../../images/godot_export_menu.png" alt="Godot Export Menu" width="600" />
 
 Now you need to select to which target you want to export, where target basically means on what operating system you will run it.
 
-<img src="../images/godot_export_template_menu.png" alt="Godot Export Target" width="600" />
+<img src="../../images/godot_export_template_menu.png" alt="Godot Export Target" width="600" />
 
 In case you see an error like this
 
-<img src="../images/godot_error.png" alt="Godot Missing Export Targets" width="600" />
+<img src="../../images/godot_error.png" alt="Godot Missing Export Targets" width="600" />
 
 then you don't have export templates installed on your system, check above the section on export templates.
 
 In the next step make sure to embed the PCK package, and to select the right architecture:
 
-<img src="../images/godot_export.png" alt="Godot Export" width="600" />
+<img src="../../images/godot_export.png" alt="Godot Export" width="600" />
 
 In the screen above the architecture is arm64 since it was done to run on a Raspberry Pi, you might have to choose a different architecture. Once the file is exported you can start it as an executable (on Linux platforms make it executable with chmod). Note that you can develop your Godot project on some kind of development computer and export it later for a different architecture and copy it to your pinball machine. The Godot executable contains all assets, e.g. sounds, there is no need to copy the sound to an MPF sound folder.
