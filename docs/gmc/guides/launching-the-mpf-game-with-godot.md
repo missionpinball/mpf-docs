@@ -91,7 +91,7 @@ These common [mpf game CLI options](../../running/commands/game.md) can be set o
 MPF game can be run with a variety of options, too many to include custom configurations here in the Godot Editor UI.
 Instead, you can provide any other arguments (like `-l <file>` or `-a`) in the freeform text field called `MPF Args`.
 
-# Running Godot from an exported project
+# Launching Godot from an exported project
 Running Godot from the editor has mainly two disadvantages. First of all the editor needs quite some resources which are not really necessary to run your game. Secondly you always need to press the play button, when running your machine you want to start things automatically in a scripted mode.
 
 ## Export Templates
