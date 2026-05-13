@@ -121,7 +121,7 @@ Now you need to select to which target you want to export, where target basicall
 
 In case you see an error like this
 
-<img src="../images/godot_export_error.png" alt="Godot Missing Export Targets" width="600" />
+<img src="../images/godot_error.png" alt="Godot Missing Export Targets" width="600" />
 
 then you don't have export templates installed on your system, check above the section on export templates.
 
@@ -129,4 +129,4 @@ In the next step make sure to embed the PCK package, and to select the right arc
 
 <img src="../images/godot_export.png" alt="Godot Export" width="600" />
 
-In the screen above the architecture is arm64 since it was done to run on a Raspberry Pi, you might have to choose a different architecture. Once the file is exported you can start is as an executable (on Linux platforms make it executable with chmod). Note that you can develop your Godot project on some kind of development computer and export it later for a different architecture and copy it to your pinball machine. The Godot executable contains all assets, e.g. sounds, there is no need to copy the sound to an MPF sound folder.
+In the screen above the architecture is arm64 since it was done to run on a Raspberry Pi, you might have to choose a different architecture. Once the file is exported you can start it as an executable (on Linux platforms make it executable with chmod). Note that you can develop your Godot project on some kind of development computer and export it later for a different architecture and copy it to your pinball machine. The Godot executable contains all assets, e.g. sounds, there is no need to copy the sound to an MPF sound folder.
