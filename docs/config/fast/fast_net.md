@@ -52,13 +52,13 @@ The board number in the IO loop, starting from 1.
 
 ### baud:
 
-Single value, int, default: `921600`
+Single value, type: `int`, default: `921600`
 
 The connection baud rate.
 
 ### controller:
 
-Single value, string, one of: `neuron`, `nano`, `sys11`, `wpc89`, `wpc95`
+Single value, type: `string`, one of: `neuron`, `nano`, `sys11`, `wpc89`, `wpc95`
 
 The FAST Pinball controller type.
 
@@ -152,7 +152,7 @@ it for any switch in that switch\'s config.
 
     New in MPF 0.57.4
 
-Single value, boolean, default: `false`
+Single value, type: `boolean`, default: `false`
 
 Before this change, FAST Switches were configured with mode `00`, meaning they did not report if unconfigured.
 With the release of this config setting, switch inputs on the IO board will default to mode `01`, meaning they do report to MPF even if no switch device is configured.
@@ -160,13 +160,13 @@ In production mode, or if this setting is set to `true`, unregistered switches w
 
 ### gi_hz:
 
-Single value, int, default: `30`
+Single value, type: `int`, default: `30`
 
 Lights using the light subtype `gi` will use this for their hz setting if unspecified.
 
 ### lamp_hz:
 
-Single value, int, default: `30`
+Single value, type: `int`, default: `30`
 
 Lights using the light subtype `matrix` will use this for their hz setting if unspecified.
 

@@ -21,7 +21,7 @@ A comma-separated list of the serial port names your FAST controller uses.
 
 ### baud:
 
-Single value, int, default: `921600`
+Single value, type: `int`, default: `921600`
 
 The connection baud rate.
 

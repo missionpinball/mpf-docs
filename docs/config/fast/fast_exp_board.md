@@ -163,13 +163,13 @@ Specify the fade default for LEDs on this board. Note that values above the limi
 
 ### led_hz:
 
-Single value, float, default: `30`
+Single value, type: `float`, default: `30`
 
 Specify the refresh rate of the LEDs for this board. Note that values above the limit of 31.25 will be set to the limit.
 
 ### ignore_led_errors:
 
-Single value, boolean, default: `false`
+Single value, type: `boolean`, default: `false`
 
 If false, LED hex communication decode errors will be raised as errors when encountered from this board.
 If you encounter instability due to these errors, set this to true to silently ignore them.
