@@ -65,7 +65,7 @@ The FAST Pinball controller type.
 ### watchdog:
 
 Single value, type: `time string (ms)`
-[Instructions for entering time strings](../instructions/time_strings.md). Default: `1000`
+[Instructions for entering time strings](../instructions/time_strings.md). Default: `500`
 
 The FAST controllers include a "watchdog" timer. A watchdog is a timer
 that is continuously counting down towards zero, and if it ever hits
@@ -85,6 +85,8 @@ essentially the max time a driver could be stuck "on" if MPF crashes.)
 The default is 1 second which is probably fine for almost everyone, and
 you don\'t have to include this section in your config if you want to
 use the default.
+
+Note: The default value until MPF 0.58 and 0.81 was `1000`.
 
 ### default_quick_debounce_open:
 
@@ -169,6 +171,29 @@ Lights using the light subtype `gi` will use this for their hz setting if unspec
 Single value, type: `int`, default: `30`
 
 Lights using the light subtype `matrix` will use this for their hz setting if unspecified.
+
+### soft_power_hold_ms:
+
+Single value, type: `time string (ms)`
+([Instructions for entering time strings](instructions/time_strings.md)). Default: `2500`
+
+!!! info ""
+
+    New in MPF 0.81
+
+The number of milliseconds required to hold a Neuron's soft power switch to initiate a soft power down request.
+
+### soft_power_powerdown_delay:
+
+Single value, type: `time string (ms)`
+([Instructions for entering time strings](instructions/time_strings.md)). Default: `4000`
+
+!!! info ""
+
+    New in MPF 0.81
+
+The number of milliseconds after a successful soft power down request executes that the Neuron will wait before shutting itself off.
+
 
 ## FAST Docs:
 
