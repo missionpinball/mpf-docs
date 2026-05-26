@@ -1276,18 +1276,21 @@ nav:
       - game_will_end: events/game_will_end.md
       - game_will_start: events/game_will_start.md
       - request_to_start_game: events/request_to_start_game.md
-      - shutdown: events/shutdown.md
     - Logic Block Events (Counters, Accruals, Sequences):
       - events/logic_blocks/index.md
       - logicblock_(name)_complete: events/logicblock_name_complete.md
       - logicblock_(name)_hit: events/logicblock_name_hit.md
       - logicblock_(name)_updated: events/logicblock_name_updated.md
       - (logicblock_name)_timeout: events/name_timeout.md
-    - Machine Reset Events:
+    - Machine Lifecycle Events:
       - machine_reset_phase_1: events/machine_reset_phase_1.md
       - machine_reset_phase_2: events/machine_reset_phase_2.md
       - machine_reset_phase_3: events/machine_reset_phase_3.md
       - reset_complete: events/reset_complete.md
+      - shutdown: events/shutdown.md
+      - machine_request_shutdown: events/machine_request_shutdown.md
+      - machine_abort_shutdown: events/machine_abort_shutdown.md
+      - machine_will_shutdown: events/machine_will_shutdown.md
     - MPF Initialization Events:
       - init_done: events/init_done.md
       - init_phase_1: events/init_phase_1.md
@@ -1346,6 +1349,9 @@ nav:
       - twitch_command: events/twitch_command.md
       - twitch_raid: events/twitch_raid.md
       - twitch_subscription: events/twitch_subscription.md
+    - FAST Platform Events:
+      - events/fast/fast_soft_power_switch_active.md
+      - events/fast/fast_soft_power_switch_inactive.md
 
   - Config Players Types:
     - config_players/index.md
