@@ -128,6 +128,8 @@ Events in this list, when posted, cause this diverter to activate.
 Single value, type: `string` name of a [coils:](coils.md) device. Defaults to empty.
 
 The name of the coil that is used to activate your diverter.
+Note that this coil must have a `default_hold_power` configured if the diverter
+has the `type:` of `hold` (which is the default, if you have not otherwise specified.)
 
 ### activation_switches:
 
