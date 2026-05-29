@@ -590,6 +590,7 @@ nav:
     - Mode Start Sequence: flowcharts/mode_start.md
     - Mode Stop Sequence: flowcharts/mode_stop.md
     - Ball End Sequence: flowcharts/ball_end.md
+    - Soft Shutdown: flowcharts/soft_shutdown.md
 
   - Tools:
     - tools/index.md
