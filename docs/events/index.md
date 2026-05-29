@@ -334,10 +334,11 @@ will posted an event called *switch_s_left_slingshot_active*.
     * [machine_reset_phase_3](machine_reset_phase_3.md) *Queue Event*
     * [reset_complete](reset_complete.md)
     * [shutdown](shutdown.md)
+    * See flowchart: [MPF Boot Up / Start Up Sequence](../flowcharts/mpf_boot.md)
     * [machine_request_shutdown](machine_request_shutdown.md) *Boolean Event*
     * [machine_abort_shutdown](machine_abort_shutdown.md)
     * [machine_will_shutdown](machine_will_shutdown.md)
-    * See flowchart: [MPF Boot Up / Start Up Sequence](../flowcharts/mpf_boot.md)
+    * See flowchart: [Soft Shutdown](../flowcharts/soft_shutdown.md)
 
 * MPF Initialization Events
     * [init_done](init_done.md)
