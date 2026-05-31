@@ -48834,7 +48834,9 @@ config. (If you don't include them, the default will be used).</p>
 <p>Events in this list, when posted, cause this diverter to activate.</p>
 <h3 id="activation_coil">activation_coil:</h3>
 <p>Single value, type: <code>string</code> name of a <a href="../coils/">coils:</a> device. Defaults to empty.</p>
-<p>The name of the coil that is used to activate your diverter.</p>
+<p>The name of the coil that is used to activate your diverter.
+Note that this coil must have a <code>default_hold_power</code> configured if the diverter
+has the <code>type:</code> of <code>hold</code> (which is the default, if you have not otherwise specified.)</p>
 <h3 id="activation_switches">activation_switches:</h3>
 <p>List of one (or more) values, each is a type: string name of a
 <a href="../switches/">switches:</a> device. Defaults to
