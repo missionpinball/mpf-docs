@@ -60,10 +60,12 @@ Single value, type: `string` name of a [lights:](lights.md) device. Defaults to 
 
 ### size:
 
-Single value, type: one of the following options: 2digit, 8digit.
+Single value, type: one of the following options: `2digit`, `8digit`, `2digit-rg-swapped`, `8digit-rg-swapped`.
 Default: `8digit`
 
 Make sure to set the right size depending on what hardware you have.
+
+As of MPF `0.58` and `0.81`, lighting hardware that uses RGB-ordered channels (instead of WS2812 native GRB ordering) should use the `*-rg-swapped` variants for correct display. The FAST EXP platform is known to need these alternatives.
 
 ### start_channel:
 
@@ -89,7 +91,7 @@ Defaults to empty.
 
 ### console_log:
 
-Single value, type: one of the following options: none, basic, full.
+Single value, type: one of the following options: `none`, `basic`, `full`.
 Default: `basic`
 
 Log level for the console log for this device.
@@ -103,7 +105,7 @@ performance of MPF.
 
 ### file_log:
 
-Single value, type: one of the following options: none, basic, full.
+Single value, type: one of the following options: `none`, `basic`, `full`.
 Default: `basic`
 
 Log level for the file log for this device.
@@ -116,8 +118,7 @@ Name of this device in service mode.
 
 ### tags:
 
-List of one (or more) values, each is a type: `string`. Defaults to
-empty.
+List of one (or more) values, each is a type: `string`. Defaults to empty.
 
 --8<-- "todo.md"
 
