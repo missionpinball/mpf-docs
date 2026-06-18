@@ -48403,10 +48403,11 @@ assigned to the <code>machine_var</code> and <code>label</code> will be shown in
 <p>The following sections are optional in the <code>settings:</code> section of your
 config. (If you don't include them, the default will be used).</p>
 <h3 id="key_type">key_type:</h3>
-<p>Single value, type: one of the following options: str, float, int.
+<p>Single value, type: one of the following options: <code>str</code>, <code>float</code>, <code>int</code>, <code>bool</code>.
 Default: <code>str</code></p>
 <p>Type of the key. If you want to do math with the variable you need
 either <code>float</code> or <code>int</code>.</p>
+<p>If using <code>bool</code> (available in MPF <code>0.58</code>/<code>0.81</code>), use Python-style True and False, not true and false.</p>
 <h3 id="machine_var">machine_var:</h3>
 <p>Single value, type: <code>string</code>. Defaults to empty.</p>
 <p>Name of the machine variable to use. If this is not set it will use the
