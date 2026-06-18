@@ -1447,6 +1447,24 @@ icons & this code generated via https://realfavicongenerator.net
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    mpf both
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1463,6 +1481,77 @@ icons & this code generated via https://realfavicongenerator.net
   
 
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#godot-media-controller" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Godot Media Controller
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Godot Media Controller">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-g-pathtogodotproject" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        -g path/to/godot/project/
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-g-pathtogodot_executable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        -G path/to/godot_executable
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#legacy-media-controller" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Legacy Media Controller
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -48028,6 +48117,64 @@ icons & this code generated via https://realfavicongenerator.net
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#godot-media-controller" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Godot Media Controller
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Godot Media Controller">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-g-pathtogodotproject" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        -g path/to/godot/project/
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-g-pathtogodot_executable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        -G path/to/godot_executable
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#legacy-media-controller" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Legacy Media Controller
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -48054,17 +48201,35 @@ icons & this code generated via https://realfavicongenerator.net
 <h1 id="mpf-both-command-line-utility">mpf both (command-line utility)</h1>
 <p>Starts both the MPF game engine and the MPF Media Controller from a
 single command window with a single command. This is effectively the
-same as running both <code>mpf game</code> and <code>mpf mc</code>, but more convenient.</p>
+same as running both <code>mpf game</code> and the Godot game (or Legacy MC project) separately,
+but more convenient.</p>
 <p>When you run <code>mpf both</code>, the console log outputs from both MPF and
-MPF-MC will be mingled together in the console window. However the log
+the media controller will be mingled together in the console window. However the log
 files in your machine's <code>/logs</code> folder will still be separate.</p>
-<p>Also note that you can pass command line options to both MPF and MPF-MC
-after the "both" command, like this:</p>
-<div class="highlight"><pre><span></span><code>mpf<span class="w"> </span>both<span class="w"> </span>-v
+<p>Note that the normal <code>mpf game</code> command line options are still available, for example:</p>
+<div class="highlight"><pre><span></span><code>mpf<span class="w"> </span>both<span class="w"> </span>-a<span class="w"> </span>-x
 
-mpf<span class="w"> </span>both<span class="w"> </span>-v<span class="w"> </span>-V<span class="w"> </span>-b
+mpf<span class="w"> </span>both<span class="w"> </span>-vVt
 </code></pre></div>
-<p>etc. See the <a href="../../../game/">mc</a> and
+<h2 id="godot-media-controller">Godot Media Controller</h2>
+<p>When using MPF 0.80+, both accepts two optional parameters, which help the tool find your Godot game project as well as the Godot executable itself.</p>
+<p>Overall your command line call might look like this, in a Windows MINGW64 shell:</p>
+<div class="highlight"><pre><span></span><code>mpf<span class="w"> </span>both<span class="w"> </span>-tX<span class="w"> </span>-g<span class="w"> </span>gmc-project/<span class="w"> </span>-G<span class="w"> </span>~/godot_installs/godot.exe
+</code></pre></div>
+<p><code>both</code> should NOT be used with a Godot project that is configured to <a href="../../../gmc/guides/launching-the-mpf-game-with-godot/">auto-start MPF</a>,
+as this will result in the Godot project attempting to start a second MPF game instance.</p>
+<h3 id="-g-pathtogodotproject"><code>-g path/to/godot/project/</code></h3>
+<p>By default, <code>both</code> will look for a <code>project.godot</code> file in the current working directory (likely your MPF game project folder).
+This is how most MPF+GMC installs are configured, so you will not need to use this option.
+However, if you decided to instead nest your Godot project in a subfolder, use <code>-g &lt;path&gt;</code> to specify the folder path in which <code>project.godot</code> can be found.</p>
+<h3 id="-g-pathtogodot_executable"><code>-G path/to/godot_executable</code></h3>
+<p>By default, <code>both</code> will look for a Godot executable on the path.
+In Windows, this can be achieved by renaming the <code>Godot_&lt;version&gt;.exe</code> file to <code>Godot.exe</code>, and putting a copy in the directory you call <code>mpf both</code> in.
+Or, instead of adding Godot to your game folder directly, you can instead add the executable's folder path to your PATH environment variable.</p>
+<p>Alternatively, you can use the <code>-G</code> option to specify the Godot executable file location directly.</p>
+<h2 id="legacy-media-controller">Legacy Media Controller</h2>
+<p><code>mpf both</code> with mpf-mc allows passing command line options through to the mpf-mc process.</p>
+<p>See the <a href="../../../game/">mc</a> and
 <a href="../mc/">mpf mc (command-line utility)</a> command references for a full list of
 command line options.</p>
 <p>To quit MPF and MPF-MC, either click in the graphical pop up window (so
