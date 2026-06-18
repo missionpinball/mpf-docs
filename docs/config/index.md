@@ -149,6 +149,7 @@ depend on `tags` set on related devices, such as `start` on the start button swi
 * [auditor:](auditor.md)
 * [bonus (mode_settings:)](bonus.md)
 * [credits:](credits.md)
+* [data_manager:](data_manager.md)
 * [high_score:](high_score.md)
 * [logging:](logging.md)
 * [settings:](settings.md)
