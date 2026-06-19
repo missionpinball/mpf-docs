@@ -869,6 +869,7 @@ nav:
       - "auditor:": config/auditor.md
       - "bonus (mode_settings:)": config/bonus.md
       - "credits:": config/credits.md
+      - "data_manager:": config/data_manager.md
       - "high_score:": config/high_score.md
       - "logging:": config/logging.md
       - "settings:": config/settings.md
