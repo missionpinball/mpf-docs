@@ -30,16 +30,9 @@ The order of pixel data (Red, Green, Blue) sent to MPF. If your hardware DMD use
 
 ### resolution:
 
-Single value, type: `Vector2i`.
+Single value, type: `Vector2i`. Default: Display node viewport resolution.
 
-This is the physical resolution of the hardware DMD. Regardless of the size of the display node, the rendered image will be scaled to this specified resolution for the pixel data sent to MPF.
-
-If enabled, this display will render an empty screen if all slides are removed. If disabled (default), this display will persist the current slide even after its removal has been requested, until a new slide is triggered.
-
-This is useful for situations where the game is shifting from one mode to another, and the running mode stops before the new mode starts. The ending mode's *clear* event will trigger the slide to be removed some fraction of a second before the starting mode's *mode_(name)_started* event triggers the new slide to be shown.
-
-That scenario would result in a brief flash of a blank display, which is not desirable for most users. By disabling `allow_empty`, the outgoing slide will remain in the display until the next one replaces it.
-
+This is the physical resolution of the hardware DMD. If specified, the rendered image will be scaled to this resolution for the pixel data sent to MPF (regardless of the size of the display node). If not specified, the display node dimensions will be used.
 
 ### use_gpu:
 
