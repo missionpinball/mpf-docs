@@ -218,6 +218,7 @@ nav:
       - RGB DMDs: hardware/fast/rgb_dmd.md
       - Servos: hardware/fast/servos.md
       - Power Filter Board: hardware/fast/power_filter.md
+      - Cabinet Board 0024: hardware/fast/cabinet_board_0024.md
       - Troubleshooting: hardware/fast/troubleshooting.md
     - Open Pinball Project (OPP):
       - hardware/opp/index.md

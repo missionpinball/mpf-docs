@@ -49,3 +49,4 @@ Video about FAST:
 * [RGB DMDs](rgb_dmd.md)
 * [Servos](servos.md)
 * [Power Filter Board](power_filter.md)
+* [Cabinet Board FP-I/O-0024](cabinet_board_0024.md)
