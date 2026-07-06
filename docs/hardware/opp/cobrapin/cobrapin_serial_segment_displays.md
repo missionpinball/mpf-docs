@@ -218,7 +218,7 @@ neoseg_displays:
     light_template:
       type: w
       subtype: led
-      
+
 segment_displays:
   neoSegTop:
     number: 1
@@ -230,13 +230,13 @@ segment_displays:
       light_groups:
         - neoSeg_0
       type: 14segment
-      
+
 show_player:
   player_score{player_num==1}: #of course for more than 1 player you need to have multiple entries
     p1_score:
       show_tokens:
         txt: "{(players[0].score):d}"
-        
+
 shows:
   p1_score:
   - duration: -1
