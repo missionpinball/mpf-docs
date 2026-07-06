@@ -15371,6 +15371,8 @@ icons & this code generated via https://realfavicongenerator.net
       
         
       
+        
+      
     
     
     
@@ -15494,6 +15496,34 @@ icons & this code generated via https://realfavicongenerator.net
     
   
     Using MPF Monitor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="customization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Customization
   
 
     
@@ -48036,17 +48066,6 @@ icons & this code generated via https://realfavicongenerator.net
 </li>
       
         <li class="md-nav__item">
-  <a href="#road-map-features" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Road Map Features
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#next-steps" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -48112,35 +48131,30 @@ real work on a machine when that machine is not nearby.</p>
 <h2 id="features">Features</h2>
 <ul>
 <li>
-<p>Connects to a live running instance of MPF.</p>
+<p>Connects to a live running instance of MPF, locally or remotely</p>
 </li>
 <li>
-<p>Automatically discovers all the pinball mechs and devices in the
-    game.</p>
+<p>Automatically discovers the pinball mechs and devices in the game.</p>
 </li>
 <li>
 <p>Device state is updated in real time in the "Devices" window.</p>
 </li>
 <li>
-<p>MPF events and their keyword arguments are posted in real time to
-    "Events" window.</p>
+<p>MPF events and their keyword arguments are posted in real time to "Events" window.</p>
 </li>
 <li>
 <p>You can add a photo of your playfield and then drag-and-drop LEDs,
     lights, and switches from the device tree onto the playfield.</p>
 <ul>
 <li>LEDs (circle icons) show their color in real time.</li>
-<li>Lights (circle icons) show their brightness in real time
-    between black and white.</li>
-<li>Switches (square icons) show their state (green = active,
-    black = inactive).</li>
-<li>More device types will become "draggable" in the future.</li>
+<li>Lights (circle icons) show their brightness in real time between black and white.</li>
+<li>Switches (square icons) show their state (green = active, black = inactive).</li>
+<li>Other device types and custom shape choices are available</li>
 </ul>
 </li>
 <li>
 <p>Left-click on a switch to "tap" it (activate &amp; release).
-    Right-click on a switch to "toggle" it (change its state and hold
-    it).</p>
+    Right-click on a switch to "toggle" it (change its state and hold it).</p>
 </li>
 <li>
 <p>Devices added to the playfield image are saved &amp; restored when you
@@ -48156,45 +48170,12 @@ real work on a machine when that machine is not nearby.</p>
     starts and stops.</p>
 </li>
 </ul>
-<h2 id="road-map-features">Road Map Features</h2>
-<p>MPF Monitor is <em>very</em> rough at this point. (Really more of a
-proof-of-concept.) We plan to add more features, including:</p>
-<ul>
-<li>More details for events, including listing registered handlers &amp;
-    making it so you can sort, search, and clear the list.</li>
-<li>Adding all the "game logic" stuff, including modes, shots, shot
-    groups, shot profiles, logic blocks, timers, ball locks, multiballs,
-    achievements, etc.</li>
-<li>Add shows (running shows, step they're on, priority, etc.)</li>
-<li>Add players information (show all player variables and their values)</li>
-<li>A "snapshot" button that can dump the entire current state to a
-    file for debugging later</li>
-<li>Export position (x/y) settings of widgets back to the MPF config</li>
-<li>Connect to MPF-MC to get information about slides, displays,
-    widgets, etc.</li>
-<li>Add color controls to the playfield image to set brightness and
-    color saturation</li>
-<li>Add buttons to enable/disable different types of devices (think of
-    it like "layers" for the playfield image.</li>
-<li>Show additional properties from the selected device (Click a device
-    to see it's full information.)</li>
-<li>Change debug levels of various devices dynamically</li>
-<li>Save the config / layout with a specified file name</li>
-<li>Add multiple playfield views which could each have different devices</li>
-<li>Set colors, shapes, rotation, &amp; sizes of devices (so inserts can be
-    the right shape). Allow configurable "off" colors which can
-    include opacity and "glow" so inserts look like real lights.</li>
-<li>Allow all devices to be added to the playfield image, with custom
-    representation (diverters that animate, flippers that animate, etc.).</li>
-<li>Device state change history that shows what properties changed and when.</li>
-<li>Default (mostly blank) playfield image if no playfield image is specified</li>
-<li>Configurable default options (folder location, playfield image name, etc.)</li>
-</ul>
 <h2 id="next-steps">Next Steps</h2>
 <ul>
 <li><a href="installation/">Installing MPF Monitor</a></li>
 <li><a href="running/">Running the MPF Monitor</a></li>
 <li><a href="devices-and-using/">Monitor: Playfield Devices</a></li>
+<li><a href="customizations.md">Monitor: Customizations</a></li>
 </ul>
 <hr>
 <div class="admonition question">
