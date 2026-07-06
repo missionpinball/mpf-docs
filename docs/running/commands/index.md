@@ -18,10 +18,7 @@ See the specific command reference pages to determine which command line
 options you will need for your particular use cases.
 
 
-
 ### Commands for starting your game
-
-
 
 To start the MPF game engine as well as the media controller, you can use:
 

@@ -23,7 +23,6 @@ player["my_variable"] = 17
 ```
 
 
-
 ## Machine Variables in Code
 
 You can use machine variables by calling into the MPF machine.

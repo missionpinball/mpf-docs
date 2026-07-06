@@ -27,20 +27,20 @@ See:
 * Game Events
     * [game_starting](../game_starting.md) *Queue Event*
     * [game_ending](../game_ending.md) *Queue Event*
-  
+
 * Player Events
     * [player_adding](../player_adding.md) *Queue Event*
     * [player_turn_starting](../player_turn_starting.md) *Queue Event*
     * [player_turn_ending](../player_turn_ending.md) *Queue Event*
-  
+
 * Ball Events
     * [ball_starting](../ball_starting.md) *Queue Event*
     * [ball_ending](../ball_ending.md) *Queue Event*
-  
+
 * Mode Events
     * [mode_(name)_starting](../mode_name_starting.md) *Queue Event*
     * [mode_(name)_stopping](../mode_name_stopping.md) *Queue Event*
-    
+
 * Ball Device Events
     * [balldevice_(name)\_ball_eject_attempt](../balldevice_ball_device_ball_eject_attempt.md) *Queue Event*
 

@@ -9,7 +9,7 @@ The *gmc.cfg* configuration file in your Godot project root contains options for
 !!! note
 
     Currently the Godot engine will remove comments from this file when it chooses to rewrite it.
-    
+
 ### Local Overrides
 
 Any configuration options in *gmc.cfg* can be overridden with a local file *gmc.local.cfg* in the Godot User Data folder. This allows you to commit the primary configuration to version control while still having platform-specific configurations (e.g. MPF executable path and logging levels) on each machine.

@@ -49,7 +49,7 @@ In either scenario, both the `multiball_locks` and the `multiballs` config setti
     balls to be locked and replaced from the trough, but the third ball not 
     to be replaced from the trough (because multiball is starting and all three 
     locked balls will come out as part of that), then set `balls_to_replace: 2`. 
-    
+
     If for some reason the multiball doesn't start automatically on ball 3 
     entering, the game will get stuck with no balls on the playfield!
 
