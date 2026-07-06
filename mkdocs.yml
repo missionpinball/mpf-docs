@@ -597,6 +597,7 @@ nav:
       - Installation: tools/monitor/installation.md
       - Running: tools/monitor/running.md
       - Using MPF Monitor: tools/monitor/devices-and-using.md
+      - Customization: tools/monitor/customization.md
     - Interactive MC: tools/imc.md
     - Service CLI: tools/service_cli.md
     - Show Creator: tools/showcreator.md
