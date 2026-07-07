@@ -44,6 +44,19 @@ you specify the minimum number of balls that need to be installed in
 order for a game to start. Note that it's up to you to make sure your
 game code can handle fewer balls than you might be expecting.
 
+### soft_shutdown_exit_command:
+
+Single value, type: `string`. Default: `None`
+
+!!! info ""
+
+    New in MPF 0.81
+
+When a soft shutdown attempt is requested and succeeds, this optional command will be
+send to the host computer (via subprocess.Popen) for any followup processing that needs to occur.
+This option is intended for use with commands to shut down the host computer.
+
+
 ## Related Pages:
 
 * [machine API Reference](../code/api_reference/core/machine.md)

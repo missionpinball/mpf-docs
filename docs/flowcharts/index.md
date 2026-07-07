@@ -20,3 +20,4 @@ More flowcharts
 * [Mode start](mode_start.md)
 * [Mode stop](mode_stop.md)
 * [Ball end](ball_end.md)
+* [Soft Shutdown](soft_shutdown.md)

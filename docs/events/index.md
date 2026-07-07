@@ -57,7 +57,7 @@ will posted an event called *switch_s_left_slingshot_active*.
     * [balldevice_(name)_broken](balldevice_ball_device_broken.md)
     * [balldevice_(name)\_ejecting_ball](balldevice_ball_device_ejecting_ball.md)
     * [balldevice_ball_missing](balldevice_ball_missing.md)
-    * [balldevice_balls_available](balldevice_balls_available.md)
+    * [balldevice_balls_available](balldevice_balls_available.md) *Boolean Event*
     * [balldevice_captured_from_(captures_from)](balldevice_captured_from_captures_from.md)
 
 * [Ball Hold Events](ball_holds/index.md)
@@ -164,7 +164,7 @@ will posted an event called *switch_s_left_slingshot_active*.
 
 * [Playfield Events](playfields/index.md)
     * [(name)\_ball_count_change](playfield_ball_count_change.md)
-    * [(name)_active](playfield_active.md)
+    * [(name)_active](playfield_active.md) *Boolean Event*
     * [unexpected_ball_on_(playfield_name)](unexpected_ball_on_playfield.md)
     * [sw_(playfield_name)_active](sw_playfield_active.md)
 
@@ -319,8 +319,7 @@ will posted an event called *switch_s_left_slingshot_active*.
     * [game_starting](game_starting.md) *Queue Event*
     * [game_will_end](game_will_end.md)
     * [game_will_start](game_will_start.md)
-    * [request_to_start_game](request_to_start_game.md)
-    * [shutdown](shutdown.md)
+    * [request_to_start_game](request_to_start_game.md) *Boolean Event*
     * See flowchart: [Game Start Sequence](../flowcharts/game_start.md)
 
 * [Logic Block Events (Counters, Accruals, Sequences)](logic_blocks/index.md)
@@ -329,12 +328,17 @@ will posted an event called *switch_s_left_slingshot_active*.
     * [logicblock_(name)_updated](logicblock_name_updated.md)
     * [(logicblock_name)_timeout](name_timeout.md)
 
-* Machine Reset Events
+* Machine Lifecycle Events
     * [machine_reset_phase_1](machine_reset_phase_1.md) *Queue Event*
     * [machine_reset_phase_2](machine_reset_phase_2.md) *Queue Event*
     * [machine_reset_phase_3](machine_reset_phase_3.md) *Queue Event*
     * [reset_complete](reset_complete.md)
+    * [shutdown](shutdown.md)
     * See flowchart: [MPF Boot Up / Start Up Sequence](../flowcharts/mpf_boot.md)
+    * [machine_request_shutdown](machine_request_shutdown.md) *Boolean Event*
+    * [machine_abort_shutdown](machine_abort_shutdown.md)
+    * [machine_will_shutdown](machine_will_shutdown.md)
+    * See flowchart: [Soft Shutdown](../flowcharts/soft_shutdown.md)
 
 * MPF Initialization Events
     * [init_done](init_done.md)
@@ -373,7 +377,7 @@ will posted an event called *switch_s_left_slingshot_active*.
 
 * Multiplayer Management Events
     * [multiplayer_game](multiplayer_game.md)
-    * [player_add_request](player_add_request.md)
+    * [player_add_request](player_add_request.md) *Boolean Event*
     * [player_added](player_added.md)
     * [player_adding](player_adding.md) *Queue Event*
     * [player_turn_ended](player_turn_ended.md)
@@ -404,3 +408,9 @@ will posted an event called *switch_s_left_slingshot_active*.
     * [twitch_command](twitch_command.md)
     * [twitch_raid](twitch_raid.md)
     * [twitch_subscription](twitch_subscription.md)
+
+## Platform-Specific Events
+
+* FAST Platform Events
+    * [fast_soft_power_switch_active](fast/fast_soft_power_switch_active.md)
+    * [fast_soft_power_switch_inactive](fast/fast_soft_power_switch_inactive.md)
