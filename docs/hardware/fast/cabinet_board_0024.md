@@ -4,19 +4,17 @@ title: Cabinet Board FP-I/O-0024
 
 # Cabinet Board FP-I/O-0024
 
-FAST Pinball has full documentation for thier cabinet board on their website:
+FAST Pinball has full documentation for the cabinet board on their website:
 
 * [FAST Cabinet I/O Board](https://fastpinball.com/products/ioboards/cabinet/)
 * [Wiring the Cabinet I/O Board in a FAST Neuron](https://fastpinball.com/wiring/neuron/cabinet-ioboard/)
 
 ## FAST-Recommended MPF configuration
 
-This IO board offers some unique features not seen in other IO boards, and needs some additional configuration to use to its full potential. The key is that this board offers low-voltage driver outputs. These can be used as additional open drains (to simplify wiring) or to control low-voltage devices.
+The 0024 board offers some unique features not seen in other IO boards, and needs some additional configuration to use to its full potential. The key is the low-voltage driver outputs not available on any other IO board. These can be used as additional open drains (to simplify wiring) or to control low-voltage devices. For instance, simple cabinet lights such as Start or Launch can be controlled as single-channel lights with an additional layer of configuration.
 
-The Start button light and coin reject button lights (or other lights) can be controlled as single-channel units with an additional layer of configuration.
-
-Using all of these tricks, we end up with a FAST-recommended (TODO: get the PDF :) ) configuration as follows:
-(Note that `platform: fast` should be specified in your hardware, or you will need to add it to each device config below yourself.)
+Using all of these tricks, we end up with a FAST-recommended configuration as follows:
+(Note these definitions assume `platform: fast` is specified in your hardware configuration. If not, you will need to add it to each device config below yourself.)
 
 ```yaml
 #config_version=6

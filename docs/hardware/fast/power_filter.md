@@ -4,8 +4,7 @@ title: Power Filter Board
 
 # Power Filter Board
 
-FAST Pinball has full documentation for thier power filter board on
-their website:
+FAST Pinball has full documentation for the power filter board on their website:
 
 * [Power Filter Board for FAST Nano machines](https://fastpinball.com/products/power/power-filter-board/)
 * [How to wire your power filter board](https://fastpinball.com/wiring/nano/power-filter-board/)
