@@ -48203,16 +48203,15 @@ icons & this code generated via https://realfavicongenerator.net
 
 
 <h1 id="cabinet-board-fp-io-0024">Cabinet Board FP-I/O-0024</h1>
-<p>FAST Pinball has full documentation for thier cabinet board on their website:</p>
+<p>FAST Pinball has full documentation for the cabinet board on their website:</p>
 <ul>
 <li><a href="https://fastpinball.com/products/ioboards/cabinet/">FAST Cabinet I/O Board</a></li>
 <li><a href="https://fastpinball.com/wiring/neuron/cabinet-ioboard/">Wiring the Cabinet I/O Board in a FAST Neuron</a></li>
 </ul>
 <h2 id="fast-recommended-mpf-configuration">FAST-Recommended MPF configuration</h2>
-<p>This IO board offers some unique features not seen in other IO boards, and needs some additional configuration to use to its full potential. The key is that this board offers low-voltage driver outputs. These can be used as additional open drains (to simplify wiring) or to control low-voltage devices.</p>
-<p>The Start button light and coin reject button lights (or other lights) can be controlled as single-channel units with an additional layer of configuration.</p>
-<p>Using all of these tricks, we end up with a FAST-recommended (TODO: get the PDF :) ) configuration as follows:
-(Note that <code>platform: fast</code> should be specified in your hardware, or you will need to add it to each device config below yourself.)</p>
+<p>The 0024 board offers some unique features not seen in other IO boards, and needs some additional configuration to use to its full potential. The key is the low-voltage driver outputs not available on any other IO board. These can be used as additional open drains (to simplify wiring) or to control low-voltage devices. For instance, simple cabinet lights such as Start or Launch can be controlled as single-channel lights with an additional layer of configuration.</p>
+<p>Using all of these tricks, we end up with a FAST-recommended configuration as follows:
+(Note these definitions assume <code>platform: fast</code> is specified in your hardware configuration. If not, you will need to add it to each device config below yourself.)</p>
 <div class="highlight"><pre><span></span><code><span class="c1">#config_version=6</span>
 
 <span class="c1">### in config/cabinet.yaml:</span>
