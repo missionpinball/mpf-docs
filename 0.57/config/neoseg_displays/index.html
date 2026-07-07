@@ -48618,9 +48618,10 @@ submit your change. It's easy! <span class="twemoji"><svg xmlns="http://www.w3.o
 </div><p></p>
 </div>
 <h3 id="size">size:</h3>
-<p>Single value, type: one of the following options: 2digit, 8digit.
+<p>Single value, type: one of the following options: <code>2digit</code>, <code>8digit</code>, <code>2digit-rg-swapped</code>, <code>8digit-rg-swapped</code>.
 Default: <code>8digit</code></p>
 <p>Make sure to set the right size depending on what hardware you have.</p>
+<p>As of MPF <code>0.58</code> and <code>0.81</code>, lighting hardware that uses RGB-ordered channels (instead of WS2812 native GRB ordering) should use the <code>*-rg-swapped</code> variants for correct display. The FAST EXP platform is known to need these alternatives.</p>
 <h3 id="start_channel">start_channel:</h3>
 <p>Single value, type: <code>string</code>. Defaults to empty.</p>
 <p>The start channel for the first display would be either <code>0-0-0</code> or <code>1-0-0</code>, depending what neo seg connection you use on your Cobra pin. The start channel of the next hardware is
@@ -48655,7 +48656,7 @@ submit your change. It's easy! <span class="twemoji"><svg xmlns="http://www.w3.o
 </div><p></p>
 </div>
 <h3 id="console_log">console_log:</h3>
-<p>Single value, type: one of the following options: none, basic, full.
+<p>Single value, type: one of the following options: <code>none</code>, <code>basic</code>, <code>full</code>.
 Default: <code>basic</code></p>
 <p>Log level for the console log for this device.</p>
 <h3 id="debug">debug:</h3>
@@ -48663,15 +48664,14 @@ Default: <code>basic</code></p>
 <p>Set this to true to see additional debug output. This might impact the
 performance of MPF.</p>
 <h3 id="file_log">file_log:</h3>
-<p>Single value, type: one of the following options: none, basic, full.
+<p>Single value, type: one of the following options: <code>none</code>, <code>basic</code>, <code>full</code>.
 Default: <code>basic</code></p>
 <p>Log level for the file log for this device.</p>
 <h3 id="label">label:</h3>
 <p>Single value, type: <code>string</code>. Default: <code>%</code></p>
 <p>Name of this device in service mode.</p>
 <h3 id="tags">tags:</h3>
-<p>List of one (or more) values, each is a type: <code>string</code>. Defaults to
-empty.</p>
+<p>List of one (or more) values, each is a type: <code>string</code>. Defaults to empty.</p>
 <div class="admonition success">
 <p class="admonition-title">Help us write it!</p>
 <p>This section is unwritten or needs an update or edit. Can you <a href="https://missionpinball.org/latest/about/help">help write it</a>?
