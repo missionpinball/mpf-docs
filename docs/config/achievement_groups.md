@@ -108,7 +108,15 @@ their `show_when_disabled:` setting and to emit (post) events in their
 
 Single value, type: `boolean` (`true`/`false`). Default: `false`
 
---8<-- "todo.md"
+If True, achievements will be selected in the same order as the
+`achievements:` list. When a new achievement needs to be selected, the
+group will rotate right. (See `rotate_right_events:`) If no achievement
+is currently selected, the first "enabled" (or "stopped", if
+`restart_after_stop_possible:` is True) achievement in the
+`achievements:` list will be selected.
+
+With the default setting of False, achievements will be selected
+randomly. (See `select_random_achievement_events:`)
 
 ### disable_while_achievement_started:
 
