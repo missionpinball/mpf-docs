@@ -1,43 +1,48 @@
-Mission Pinball Framework Documentation (mpf-docs)
-==================================================
+# Mission Pinball website & documentation
 
-<img align="right" height="146" src="_static/images/mpf-logo-200.png"/>
+This repo contains all the source code for [MissionPinball.org](https://missionpinball.org), which also includes all user documentation.
 
-This repo is the user documentation for the
-[Mission Pinball Framework](http://missionpinball.org).
+## Technical details
 
-These docs are static HTML, generated from the files in this repo via the
-[Sphinx Python Documentation Generator](https://www.sphinx-doc.org/en/master/) project.
+The MPF website is built using [MkDocs](http://www.mkdocs.org/), a static
+site generator using Markdown files as the source. It uses the
+[Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) theme.
 
-The rendered HTML docs are hosted by [Read the Docs](https://readthedocs.org)
-at <http://docs.missionpinball.org>. You can also download PDF and HTML versions from, there.
+The site is hosted on GitHub Pages, and the `main` branch of this repo controls
+what's published to the live site. A [GitHub workflow](https://github.com/missionpinball/mpf-docs/blob/main/.github/workflows/deploy.yml) is used to automatically
+build and deploy the site whenever a commit or merge is made to the `main` branch.
+You can see the commits and page builds in the [Actions tab](https://github.com/missionpinball/mpf-docs/actions).
 
-Building Docs Locally
----------------------
+## To build / run locally
 
-You can build the docs using **Sphinx**. You will first need to install
-`Python 3.x`. Then install the packages used by this repo. From the root folder of this repo, run
-the following command:
+1. Clone the repo
+2. Open a terminal window and `cd` into the root folder of this repo
+3. `pip install -r requirements.txt` (to install mkdocs and what it needs)
+4. `mkdocs serve` (runs a local web server on port 8000)
 
-    pip3 install -r requirements.txt
+You should be able to access the doc site via your web browser at `localhost:8000`.
 
-You can view the contents of the [requirements.txt](requirements.txt) file to see which packages will be installed.
+## To contribute
 
-### Running Unit Tests
+We would love contributions to the docs! We have a Contributing Guide ([view on GitHub](https://github.com/missionpinball/mpf-docs/blob/main/docs/about/help_docs.md) | [view on the website](https://missionpinball.org/latest/about/help_docs/))
+which explains how to contribute.
 
-To test that MPF can run all the config snippets in the docs and run the
-corresponding unit tests inside the docs (if there is one) type:
+## Configuring site navigation
 
-    make unit
+All the navigation for the site is configured in the `mkdocs.yml` file. This
+is somewhat annoying since it means that if you add a new page, you have to
+go to a completely separate place to set up the nav.
 
-### Compiling HTML
+I tried to use the auto pages plugin to automatically
+create the navigation, and/or at least keep it local to each subfolder, but
+unfortunately our navigation tree is different from our folder hierarchy which
+made that not possible. We may be able to combine both methods, and this is
+something someone could look into.
 
-Compile the docs to `./_build/html/` with the command:
+## Script to build the showcase pages
 
-    make html
+The MPF project showcase is published at [missionpinball.org/latest/showcase](https://missionpinball.org/latest/showcase/).
+The source content for each showcase entry are YAML files [`/showcase`](https://github.com/missionpinball/mpf-docs/tree/main/showcase) folder of this repo. The script [`generate_showcase_pages.py`](https://github.com/missionpinball/mpf-docs/blob/main/build_tools/generate_showcase_pages.py) generates the .md files for each project, and also generates the showcase index
+page.
 
-Licensing
----------
-
-These docs are licensed [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
-MPF and all code licensed [MIT](https://opensource.org/licenses/MIT).
+This script is run automatically as part of the GitHub Actions workflow.

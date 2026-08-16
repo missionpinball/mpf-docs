@@ -1,0 +1,15 @@
+name: Trogdor Pinball
+acronym:
+team: Alex Lobascio
+location: San Francisco, CA, United States
+started: 2024-01-13
+finished:
+images:
+project_type: original
+youtube_video_ids: 90X5NJleYJQ
+documentation_link: http://trogdorpinball.com
+code_link: https://github.com/bosh/trogdor-pinball
+gameplay_link:
+controller: FAST Neuron
+description: >
+  Based on Trogdor the Burninator, of Homestar Runner fame.

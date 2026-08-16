@@ -1,0 +1,20 @@
+# Use this file as a template to add your project
+# It will be included automatically when the site is built
+
+name: Big Shot
+acronym:
+team: Brian Madden, Gabe Knuth
+location: Omaha, NE
+started: 2015-01-01
+finished: 2015-10-20
+images:
+project_type: code_update    # code_update, retheme, original
+youtube_video_ids:      # list of youtube video ids
+documentation_link:  # Link to website or Pinside thread about this project
+code_link:          # Link to GitHub or other code repository
+gameplay_link:     # web link to gameplay videos
+controller: P-ROC   # FAST, cobrapin, P-ROC, P3-ROC, etc.
+description: >
+  EM migration to solid state. The entire insides were removed and replaced
+  with modern electronics. From the outside, you wouldn't know it had been
+  updated. We kept the score reels, etc.

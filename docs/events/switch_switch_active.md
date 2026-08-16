@@ -1,0 +1,17 @@
+---
+title: switch_(name)_active
+---
+
+# switch_(name)\_active
+
+*MPF-MC Event*
+
+Event is posted by [switches:](../config/switches.md)
+
+Posted on MPF-MC only (e.g. not in MPF) when the MC receives a BCP
+"switch" active command. Useful for video modes and graphical menu
+navigation. Note that this is not posted for every switch all the time,
+rather, only for switches that have been configured to send events to
+BCP.
+
+--8<-- "event_no_keywords_notice.md"
