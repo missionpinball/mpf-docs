@@ -63,7 +63,7 @@ Bullet lists are
 
 Italics?
 
-*You can have ChatGPT help you with MD formatting. It's really good at it!*
+*You can have AI help you with MD formatting. It's really good at it!*
 
 What about **bold**?
 
