@@ -4,6 +4,9 @@ title: twitch_raid
 
 # twitch_raid
 
+!!! warning
+
+    The Twitch plugin has been removed in MPF 0.58+ and 0.81+
 
 --8<-- "event.md"
 

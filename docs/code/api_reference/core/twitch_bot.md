@@ -4,6 +4,10 @@ title: API Reference - twitch_bot
 
 # twitch_bot API Reference
 
+!!! warning
+
+    The Twitch plugin has been removed in MPF 0.58+ and 0.81+
+
 `self.machine.twitch_bot`
 
 ``` python

@@ -921,7 +921,7 @@ nav:
       - "system11:": config/system11.md
       - "tic_stepper_settings:": config/tic_stepper_settings.md
       - "trinamics_steprocker:": config/trinamics_steprocker.md
-      - "twitch_client:": config/twitch_client.md
+      - "twitch_client:(removed in 0.58/0.81)": config/twitch_client.md
       - "virtual_platform_start_active_switches:": config/virtual_platform_start_active_switches.md
       - "vpe:": config/vpe.md
 
@@ -1348,7 +1348,7 @@ nav:
       - tilt_clear: events/tilt_clear.md
       - tilt_warning: events/tilt_warning.md
       - tilt_warning_(number): events/tilt_warning_number.md
-    - Twitch Integration Events:
+    - Twitch Integration Events (removed in 0.58/0.81):
       - twitch_bit_donation: events/twitch_bit_donation.md
       - twitch_chat_message: events/twitch_chat_message.md
       - twitch_command: events/twitch_command.md
@@ -1462,7 +1462,7 @@ nav:
       - switch_controller: code/api_reference/core/switch_controller.md
       - switch_player: code/api_reference/core/switch_player.md
       - text_ui: code/api_reference/core/text_ui.md
-      - twitch_bot: code/api_reference/core/twitch_bot.md
+      - twitch_bot (removed in 0.58/0.81): code/api_reference/core/twitch_bot.md
 
     - Devices API Reference:
       - code/api_reference/devices/index.md

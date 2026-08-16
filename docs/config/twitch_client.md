@@ -11,6 +11,11 @@ title: "twitch_client: Config Reference"
 |[machine](instructions/machine_config.md) config files |**YES** :white_check_mark:|
 |[mode](instructions/mode_config.md) config files|**NO** :no_entry_sign:|
 
+!!! warning
+
+    The `twitch_client` device has been removed in MPF 0.58+ and 0.81+
+
+
 The `twitch_client:` section of your config is where you configure the
 built-in Twitch chat monitor.
 
