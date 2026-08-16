@@ -24,6 +24,13 @@ Monitor supports several image formats. By default `<game folder>/monitor/playfi
 passing `-i imagename.etc` will find a file with that name in the `monitor/` folder, and use it instead.
 PNG, JPG, BMP, GIF are supported, though GIF will only show the first frame, no animation.
 
+Use space or comma separated image names if specifying multiple, ex: `-i img1.jpg,img2.png`
+
+### Mass load playfield images
+
+Instead of using the `-i` option to specify files one at a time, if you just want to load all images
+found in the `monitor/` folder, pass the option `-is`.
+
 ### Connect to alternative/remote MPF server
 
 Monitor will attempt to connect to MPF at localhost:5051 by default. To change this,

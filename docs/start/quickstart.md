@@ -10,13 +10,13 @@ This is for people who know what they're doing. If you're lost, check out our fu
 
 ## Quick links and git remotes
 
-Updated: February 2026
+Updated: August 2026
 
 * [Python 3.13](https://www.python.org/downloads/release/python-3143/)
-* [MPF 0.80](https://github.com/missionpinball/mpf/tree/0.80.x) `0.80.0.dev14` - `git@github.com:missionpinball/mpf.git` branch `0.80.x`
-* [MPF-GMC](https://github.com/missionpinball/mpf-gmc) `0.1.6` - `git@github.com:missionpinball/mpf-gmc.git` branch `main`
+* [MPF 0.80](https://github.com/missionpinball/mpf/tree/0.80.x) `0.80.0` - `git@github.com:missionpinball/mpf.git` tag `v0.80.0` (or `0.81.0` testing on branch `dev`)
+* [MPF-GMC](https://github.com/missionpinball/mpf-gmc) `1.0.0` - `git@github.com:missionpinball/mpf-gmc.git` branch `main`
 * [Godot Editor 4.6](https://godotengine.org/download)
-* [MPF Monitor](https://github.com/missionpinball/mpf-monitor) `0.57.2` - `git@github.com:missionpinball/mpf-gmc.git` branch `dev`
+* [MPF Monitor](https://github.com/missionpinball/mpf-monitor) `1.0.0.dev1` - `git@github.com:missionpinball/mpf-monitor.git` branch `1.0.x`
 
 
 ## Quickstart for GMC
