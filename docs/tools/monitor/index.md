@@ -73,4 +73,4 @@ Video about developing your game without hardware:
 * [Installing MPF Monitor](installation.md)
 * [Running the MPF Monitor](running.md)
 * [Monitor: Playfield Devices](devices-and-using.md)
-* [Monitor: Customizations](customizations.md)
+* [Monitor: Customization](customization.md)
