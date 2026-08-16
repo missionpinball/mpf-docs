@@ -5,31 +5,35 @@ title: Running the MPF Monitor
 # Running the MPF Monitor
 
 
-1.  Make sure you installed MPF Monitor first. (You need to actually
-    [run the installer](installation.md).
+1.  Make sure you installed MPF Monitor first. (You need to actually [run the installer](installation.md).
     You can't just run the monitor from the download folder.)
+
 2.  Create a subfolder in your MPF machine folder called `/monitor`
+
 3.  Put an image of your playfield in that folder named `playfield.jpg`
+
 4.  Run MPF monitor from a command prompt via the command `mpf monitor`.
-    Be sure to run this from your machine folder (the same place where
-    you run `mpf both`).
-5.  In a new terminal window, Start MPF and MPF-MC. You can start MPF
-    before or after monitor is started, and leave the monitor running
-    while MPF is not. Note, that certain actions in the monitor are only available while mpf is running.
+    Be sure to run this from your machine folder (the same place where you run `mpf both`).
+
+5.  In a new terminal window, Start MPF and your media controller (MC or GMC). You can start MPF
+    before or after monitor is started, and leave the monitor running while MPF is not.
+    Note that certain actions in the monitor are only available while mpf is running.
+
 6.  MPF Monitor has multiple windows that can be viewed, though not all
     may be enabled by default. The "Inspector" window is the main
     window where you can toggle other windows On and Off. To enable
     different windows, click on the "Monitor" tab. This will show you
     a list of all the different windows you can enable and view:
-    1.  Show device window (this window lists all your switches, shots,
-        targets, etc)
-    2.  Show event window
-    3.  Show playfield window (this window shows your playfield picture)
-    4.  Show mode window
+    1.  Device window (this window lists all your switches, shots, targets, etc)
+    2.  Event window
+    3.  Playfield window (using your playfield picture as background)
+    4.  Mode window
+    5.  Variables window
+
 7.  MPF Monitor should connect to a running MPF instance and populate the devices tree in
     the device window. You can look through this list to see the states
-    of various devices. The columns in each window are sortable and
-    resizeable.
+    of various devices. The columns in each window are sortable and resizeable.
+
 8.  You can drag-and-drop switches and LEDs from the Devices window onto
     the playfield image. When you do this, a config file called
     `/monitor/monitor.yaml` will be created. If you open that file,
@@ -39,16 +43,16 @@ title: Running the MPF Monitor
     You can drag devices that you previously placed on the playfield too
     (there's a half-second delay so you don't accidentally move
     something when you're clicking on it).
-9.  Edit `monitor.yaml` to remove devices from the playfield you don't
-    want anymore.
+
+9.  Edit `monitor.yaml` to remove devices from the playfield you don't want anymore.
+
 10. When you resize or reposition one of the monitor windows, the window
     positioning information will be stored, so the monitor can restore
     the layout the next time you run it.
 
 ## Understanding MPF Monitor folders & files
 
-Here's what your machine folder structure will look like when you're
-using the monitor:
+Here's what your machine folder structure will look like when you're using the monitor:
 
 ![image](images/file-structure.png)
 

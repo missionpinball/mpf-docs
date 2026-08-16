@@ -19,7 +19,7 @@ The MPF Monitor can run on Windows, Mac, and Linux. It uses
 [PyQt6](https://www.riverbankcomputing.com/software/pyqt/intro) (Python
 bindings for Qt6) for its visual framework.
 
-The current version of Monitor is 0.57.2, which works with MPF 0.57 and 0.80.
+The current version of Monitor is 1.0.0, which works with MPF 0.57, 0.58, 0.80, and 0.81.
 
 Here's a screen shot of it in action:
 
@@ -39,34 +39,46 @@ Video about developing your game without hardware:
 
 ## Features
 
+* Works across many versions of MPF via the BCP protocol (BCP version 1.1)
+
+    * Monitor version 1.0 works with MPF 0.57-58, and 0.80-0.81
+    * Monitor version 0.57 also works with these versions (57+)
+
 * Connects to a live running instance of MPF, locally or remotely
+
+    * As of 1.0, standalone install can run without needing MPF itself installed
+    * 0.57 and before require a valid MPF install, which runs monitor via [a subcommand](../../running/commands/monitor.md).
 
 * Automatically discovers the pinball mechs and devices in the game.
 
 * Device state is updated in real time in the "Devices" window.
 
-* MPF events and their keyword arguments are posted in real time to "Events" window.
+* MPF events and their keyword arguments are posted in real time to "Events" window. You can even send events (with params!) back to MPF to test game behaviors.
 
-* You can add a photo of your playfield and then drag-and-drop LEDs,
-    lights, and switches from the device tree onto the playfield.
+* Add photo(s) of your playfield and then drag-and-drop LEDs, lights, and switches from the device tree onto the layout.
 
-    * LEDs (circle icons) show their color in real time.
-    * Lights (circle icons) show their brightness in real time between black and white.
+    * LEDs  (circle icons) show their color in real time.
     * Switches (square icons) show their state (green = active, black = inactive).
     * Other device types and custom shape choices are available
 
-* Left-click on a switch to "tap" it (activate & release).
-    Right-click on a switch to "toggle" it (change its state and hold it).
+* Device interactions:
 
-* Devices added to the playfield image are saved & restored when you
-    restart the monitor.
+    * Left-click on a switch to "tap" it (activate & release).
+    * Right-click on a switch to "toggle" it (change its state and hold it).
+    * Use the Device Inspector and click to modify shape, rotation, and size.
 
-* Window sizes, positions, and which windows are open are remembered
-    and restored on next use.
+* Devices added to the playfield image are saved & restored when you restart the monitor.
 
-* You can start the monitor and leave it running, and it will
-    automatically connect (and disconnect/reconnect) to MPF as MPF
-    starts and stops.
+* Window sizes, positions, and which windows are open are remembered and restored on next use.
+
+* Monitor automatically manages connection with MPF, handling disconnect/reconnect to MPF as the game engine starts and stops.
+
+    * Alternatively, monitor can detect MPF disconnect and quit itself gracefully!
+
+* Sorting and filtering:
+
+    * Data lists support filtering and sorting, and will remember sorting across runs
+    * Playfield display supports quick device layer toggling, and device name filtering. Try regex syntax (start with `/`), or simple prefix shorthand (use `^`)!
 
 ## Next Steps
 

@@ -27,14 +27,7 @@ light, or diverter.
 ## Sorting and filtering devices
 
 * To filter devices, type your keyword in the device search box.
-* Sorting devices:
-    1.  Latest received **Default**
-        * Should match order of MPF config file
-    2.  First received
-    3.  Alphabetical, increasing:
-        * Useful when placing ordered targets, ie: "*ltarget1*",
-            "*ltarget2*", "*ltarget3*"...
-    4.  Alphabetical, decreasing
+* You can support the device list in various ways, and monitor will remember the choice between runs.
 
 ------------------------------------------------------------------------
 
@@ -46,33 +39,27 @@ switch hits to MPF
 ### Enabling Device Inspector
 
 1.  Locate *Inspector* window.
-2.  Enable Device Inspector by clicking the button labeled "Toggle
-    Device Inspector".
+2.  Enable Device Inspector by clicking the button labeled "Toggle Device Inspector".
 3.  Device inspector is enabled. The button will stay "clicked" as an
-    indicator. The *Playfield* window title will change to "Inspector
-    Enabled - Playfield".
+    indicator. The *Playfield* window title will change to "Inspector Enabled - Playfield".
 4.  Changes are saved automatically.
-5.  Disable Device Inspector by clicking again on "Toggle Device
-    Inspector".
+5.  Disable Device Inspector by clicking again on "Toggle Device Inspector".
 
 !!! note
 
-    While device is inspector is enabled, clicks on switches will not be
-    sent to MPF.
+    While device is inspector is enabled, clicks on switches will not be sent to MPF.
 
 ### Viewing the name of a device
 
 1.  Enable Device Inspector.
 2.  On the playfield, select the device you want to view.
-3.  The name of the device will be shown below the "Toggle Device
-    Inspector" button.
+3.  The name of the device will be shown below the "Toggle Device Inspector" button.
 
 ### Changing display properties of device
 
-Depending on your image dimensions switches and lights might be a little
-small or too large. You may also want your device to display as a
-different shape, or rotated to match an insert. You can change the size,
-rotation, and shape of a device.
+Depending on your image dimensions switches and lights might be a little small
+or too large. You may also want your device to display as a different shape, or
+rotated to match an insert. You can change the size, rotation, and shape of a device.
 
 1.  Enable Device Inspector.
 2.  Click on the device you want to change.
@@ -80,8 +67,7 @@ rotation, and shape of a device.
 
 !!! note
 
-    While device is inspector is enabled, clicks on switches will not be
-    sent to MPF.
+    While device is inspector is enabled, clicks on switches will not be sent to MPF.
 
 ### Deleting devices from the playlist
 
@@ -92,8 +78,7 @@ rotation, and shape of a device.
 ### Resetting a device to its defaults
 
 If you would like to clear your changes to a device's parameters, you
-can reset all of them by selecting the device and clicking "Reset to
-Defaults".
+can reset all of them by selecting the device and clicking "Reset to Defaults".
 
 1.  Enable Device Inspector.
 2.  Click on the device you want to reset.
