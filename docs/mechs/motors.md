@@ -13,14 +13,15 @@ Related Config File Sections:
 
 ## Hardware
 
-[TODO: Add a picture of a kickback](../about/help.md)
+[TODO: Add a picture of a motor](../about/help.md)
 
 [Help us to write it](../about/help.md)
 
 ## Config
 
 In this example we configure a motorized drop target bank which can move
-up and down with two position switches.
+up and down with two position switches. The motor type described here uses
+a coil output as its driver, not a dedicated motor control board.
 
 ``` yaml
 switches:
