@@ -11,8 +11,11 @@ title: "motors: Config Reference"
 |[machine](instructions/machine_config.md) config files |**YES** :white_check_mark:|
 |[mode](instructions/mode_config.md) config files|**NO** :no_entry_sign:|
 
-The `motors:` section of your config is where you configure motors with
-position switches.
+The `motors:` section of your config is where you configure motors with position switches,
+using coil outputs from your control board. This is not the same as the [dc_motor:](dc_motors.md) device
+which is used with dedicated dc motor control boards.
+
+The rest of this guide uses "motor" to refer to the coil-driven motor type, never the dc_motor device type.
 
 MPF supports two types of motor devices:
 

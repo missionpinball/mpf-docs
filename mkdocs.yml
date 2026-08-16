@@ -464,10 +464,12 @@ nav:
     - Scoops / Vertical Up Kickers (VUKs) / Saucer holes: mechs/scoops.md
     - Autofire Coils: mechs/autofire_coils.md
     - Accelerometers: mechs/accelerometers.md
-    - Motors: mechs/motors.md
-    - Stepper Motors: mechs/steppers.md
+    - Motors:
+      - Motors (Coil-controlled): mechs/motors.md
+      - Stepper Motors: mechs/steppers.md
+      - Shakers: mechs/shaker.md
+      - DC Motors: mechs/dc_motors.md
     - Slingshot: mechs/slingshots.md
-    - Shakers: mechs/shaker.md
     - Tilt Bob: mechs/tilt_bob.md
   - Game Logic:
     - game_logic/index.md
@@ -800,6 +802,7 @@ nav:
       - "counter_control_events:": config/counter_control_events.md
       - "counters:": config/counters.md
       - "custom_code:": config/custom_code.md
+      - "dc_motors:": config/dc_motors.md
       - "digital_outputs:": config/digital_outputs.md
       - "digital_score_reels:": config/digital_score_reels.md
       - "displays:": config/displays.md
