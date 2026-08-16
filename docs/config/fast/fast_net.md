@@ -175,7 +175,7 @@ Lights using the light subtype `matrix` will use this for their hz setting if un
 ### soft_power_hold_ms:
 
 Single value, type: `time string (ms)`
-([Instructions for entering time strings](instructions/time_strings.md)). Default: `2500`
+([Instructions for entering time strings](../instructions/time_strings.md)). Default: `2500`
 
 !!! info ""
 
@@ -186,7 +186,7 @@ The number of milliseconds required to hold a Neuron's soft power switch to init
 ### soft_power_powerdown_delay:
 
 Single value, type: `time string (ms)`
-([Instructions for entering time strings](instructions/time_strings.md)). Default: `4000`
+([Instructions for entering time strings](../instructions/time_strings.md)). Default: `4000`
 
 !!! info ""
 

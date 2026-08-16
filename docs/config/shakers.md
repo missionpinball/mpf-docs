@@ -60,7 +60,7 @@ See the [How to configure "number:" settings](../hardware/numbers.md) guide for 
 
 ## Optional settings
 
-The following sections are optional in the `servos:` section of your
+The following sections are optional in the `shakers:` section of your
 config. (If you don't include them, the default will be used).
 
 ### default_power:
