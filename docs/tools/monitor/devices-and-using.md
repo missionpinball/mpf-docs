@@ -1,9 +1,26 @@
-# Playfield Devices
+---
+title: Using MPF Monitor - Setting up Devices
+---
+
+# Using MPF Monitor
+
+One of the main purposes of MPF Monitor is to observe the state of your game devices, be it for switch testing, light show previews, or even gameplay simulation. The first step in setting up your playfield is to add devices.
+
+## Video
+
+Introduction video for Monitor and setting up your first devices:
+
+<div class="video-wrapper">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/A_bMPaJux9g" title="MPF Monitor Tutorial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+
+## Playfield Devices
 
 In the context of MPF Monitor, a **device** refers to a switch,
 light, or diverter.
 
-## Adding devices to playfield
+### Adding devices to playfield
 
 1.  Locate the *Devices* window.
 2.  Locate the light or switch you want to add to the playfield.
@@ -13,7 +30,7 @@ light, or diverter.
 
     You can use the search box to filter to the name you are looking for.
 
-## Changing the default size of all devices
+### Changing the default size of all devices
 
 1.  Ensure Device Inspector is disabled.
 2.  Change the size slider or spinbox.
@@ -24,7 +41,7 @@ light, or diverter.
     default size changes. You can reset this for a device by selecting the
     device and clicking "Reset to Defaults".
 
-## Sorting and filtering devices
+### Sorting and filtering devices
 
 * To filter devices, type your keyword in the device search box.
 * You can support the device list in various ways, and monitor will remember the choice between runs.
