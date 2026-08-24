@@ -15832,6 +15832,17 @@ icons & this code generated via https://realfavicongenerator.net
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#videos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Videos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#running-the-showcreator-on-windows" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -48621,6 +48632,17 @@ icons & this code generated via https://realfavicongenerator.net
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#videos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Videos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#running-the-showcreator-on-windows" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -48717,24 +48739,28 @@ icons & this code generated via https://realfavicongenerator.net
 
 
 <h1 id="mpf-showcreator">MPF Showcreator</h1>
-<p>MPF supports playing <a href="../../shows/">light shows</a> out of files in your config folder. Those are human readable
-and can be created by hand. But isn't that a bit cumbersome for larger
-shows? Especially, if you want to swipe over all (or most) of your LEDs
-this might take days. Luckily, there are two tools for that.</p>
+<p>MPF supports playing <a href="../../shows/">light shows</a> out of files in your config folder.
+Those are human readable and can be created by hand.
+But isn't that a bit cumbersome for larger shows?
+Especially, if you want to swipe over all (or most) of your LEDs this might take days.
+Luckily, there are two tools for that.</p>
 <h2 id="a-mpf-showcreator-based-on-playfield-layout">A) MPF Showcreator based on playfield layout</h2>
-<p>The <a href="https://github.com/missionpinball/showcreator">light show generator for
-MPF</a> loads your LED
-positions from the <a href="../monitor/">MPF Monitor</a>
+<p>The <a href="https://github.com/missionpinball/showcreator">light show generator for MPF</a>\
+loads your LED positions from the <a href="../monitor/">MPF Monitor</a>
 config and lets you create show for transitions.</p>
+<h3 id="videos">Videos</h3>
 <p>Video about showcreator:</p>
 <div class="video-wrapper">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/bjDWm_pO9_I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bjDWm_pO9_I" title="Show Creator Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 </div>
 
-<p><a href="../../shows/">Shows</a> in MPF are written
-in YAML and can be used
-<a href="../../config_players/">universally</a> to
-control all kinds of things (such as
+<p>Showcreator Tutorial:</p>
+<div class="video-wrapper">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6Nw2BUEmcX4" title="MPF Showcreator Tutorial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+
+<p><a href="../../shows/">Shows</a> in MPF are written in YAML and can be used
+<a href="../../config_players/">universally</a> to control all kinds of things (such as
 <a href="../../config_players/coil_player/">lights</a>,
 <a href="../../config_players/coil_player/">coils</a>,
 <a href="../../config_players/slide_player/">slides</a>,
@@ -48743,8 +48769,7 @@ control all kinds of things (such as
 and <a href="../../config_players/">more</a>).
 Basically, shows are a list of actions combined with a duration after
 which the next element in the list is played. Here is an example of a
-light show with three lights which sequentially turn blue over one
-second:</p>
+light show with three lights which sequentially turn blue over one second:</p>
 <div class="highlight"><pre><span></span><code><span class="c1">##! show: my_show</span>
 <span class="c1">#show_version=5</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.25</span>
@@ -48768,9 +48793,9 @@ second:</p>
 <span class="w">    </span><span class="nt">l_arrow_2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">blue</span>
 <span class="w">    </span><span class="nt">l_arrow_3</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">blue</span>
 </code></pre></div>
-<p>In this simple example it totally makes sense to create the show by
-hand. You could also throw in <a href="../../shows/tokens/">tokens</a> for the lights and reuse the show all over the machine for
-different light triples.</p>
+<p>In this simple example it totally makes sense to create the show by hand.
+You could also throw in <a href="../../shows/tokens/">tokens</a> for the lights and reuse
+the show all over the machine for different light triples.</p>
 <p>However, imagine you want to swipe over all lights in your machine. That
 would be a lot of text and also hard to get right manually. Luckily,
 Mark, the maker of the <a href="https://pinside.com/pinball/forum/topic/the-nightmare-before-christmas">Nightmare before Christmas custom pinball
@@ -48782,20 +48807,17 @@ a start and an end position and color. Based on that it will create a
 light show for you which contains one section per step (at a defined
 frame rate). Neat right? You might ask: How does it know where my lights
 are located on the playfield?</p>
-<p>Luckily, you probably already have them set if you used the
-<a href="../monitor/">MPF Monitor</a>. It
-allows you to use drag and drop to position all your switches and lights
+<p>Luckily, you probably already have them set if you used the <a href="../monitor/">MPF Monitor</a>.
+It allows you to use drag and drop to position all your switches and lights
 on a playfield image. Those positions are then saved to the
 <code>monitor/monitor.yaml</code> file in your machine folder. All you have to do
 is point the light show creator to the <code>monitor/monitor.yaml</code> file on
 startup.</p>
 <p>You set the start and end positions, rotations, scales and colors of
 that shape anywhere you want over the playfield.</p>
-<p>Here we start with a gradient bar at the top of the playfield in a pink
-color.</p>
+<p>Here we start with a gradient bar at the top of the playfield in a pink color.</p>
 <p><img alt="image" src="../images/showcreator_start.png"></p>
-<p>We want the final position to be here at the bottom, in a darker red
-shade.</p>
+<p>We want the final position to be here at the bottom, in a darker red shade.</p>
 <p><img alt="image" src="../images/showcreator_end.png"></p>
 <p>You can then adjust the length of the animation in milliseconds and
 hence the number of steps in the final show. In this example, the shape
@@ -48816,16 +48838,12 @@ other or effects like multiple spotlights moving across the playfield
 like a hollywood premiere.</p>
 <h3 id="running-the-showcreator-on-windows">Running the showcreator on Windows</h3>
 <ol>
-<li>Checkout or download the
-    <a href="https://github.com/missionpinball/showcreator.git">showcreator</a>
-    repository.</li>
+<li>Checkout or download the <a href="https://github.com/missionpinball/showcreator.git">showcreator</a> repository.</li>
 <li>Double click on led.exe</li>
 </ol>
 <h3 id="running-the-showcreator-on-mac-x64">Running the showcreator on Mac x64</h3>
 <ol>
-<li>Checkout or download the
-    <a href="https://github.com/missionpinball/showcreator.git">showcreator</a>
-    repository.</li>
+<li>Checkout or download the <a href="https://github.com/missionpinball/showcreator.git">showcreator</a> repository.</li>
 <li>Double click on: led mac x64.app (you may not see .app in the name)</li>
 </ol>
 <h3 id="running-the-showcreator-on-linux">Running the showcreator on Linux</h3>
@@ -48864,14 +48882,11 @@ dependencies. After the build is done, you find in the same folder where your so
 <li>M - HOLD for slow motion during segment/set play</li>
 <li>P+SHIFT - play set and create script file</li>
 <li>ESC - quit - Y/N confirm quit</li>
-<li>Left Mouse Button Down over playfield adjusts position of current
-    end (START or FINISH) +SHIFT adjusts both START AND FINISH
-    positions</li>
+<li>Left Mouse Button Down over playfield adjusts position of current end (START or FINISH) +SHIFT adjusts both START AND FINISH positions</li>
 </ul>
 <h3 id="dynamic-shows">Dynamic Shows</h3>
 <p>The tool is handy to render static shows which will not change during
-runtime. If you want to render shows dynamically (using your GPU) you
-can also use
+runtime. If you want to render shows dynamically (using your GPU) you can also use
 <a href="../../config_players/display_light_player/">your lights as display in MC</a> but that will cost much more resources during runtime than
 offline generated shows.</p>
 <h2 id="b-mpf-light-and-show-creator">B) MPF light and show creator</h2>
