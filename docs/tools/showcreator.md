@@ -5,28 +5,36 @@ title: MPF Showcreator
 # MPF Showcreator
 
 
-MPF supports playing [light shows](../shows/index.md) out of files in your config folder. Those are human readable
-and can be created by hand. But isn't that a bit cumbersome for larger
-shows? Especially, if you want to swipe over all (or most) of your LEDs
-this might take days. Luckily, there are two tools for that.
+MPF supports playing [light shows](../shows/index.md) out of files in your config folder.
+Those are human readable and can be created by hand.
+But isn't that a bit cumbersome for larger shows?
+Especially, if you want to swipe over all (or most) of your LEDs this might take days.
+Luckily, there are two tools for that.
 
 ## A) MPF Showcreator based on playfield layout
 
-The [light show generator for
-MPF](https://github.com/missionpinball/showcreator) loads your LED
-positions from the [MPF Monitor](monitor/index.md)
+The [light show generator for MPF](https://github.com/missionpinball/showcreator)\
+loads your LED positions from the [MPF Monitor](monitor/index.md)
 config and lets you create show for transitions.
+
+
+### Videos
 
 Video about showcreator:
 
 <div class="video-wrapper">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/bjDWm_pO9_I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bjDWm_pO9_I" title="Show Creator Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-[Shows](../shows/index.md) in MPF are written
-in YAML and can be used
-[universally](../config_players/index.md) to
-control all kinds of things (such as
+Showcreator Tutorial:
+
+<div class="video-wrapper">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6Nw2BUEmcX4" title="MPF Showcreator Tutorial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+
+[Shows](../shows/index.md) in MPF are written in YAML and can be used
+[universally](../config_players/index.md) to control all kinds of things (such as
 [lights](../config_players/coil_player.md),
 [coils](../config_players/coil_player.md),
 [slides](../config_players/slide_player.md),
@@ -35,8 +43,7 @@ control all kinds of things (such as
 and [more](../config_players/index.md)).
 Basically, shows are a list of actions combined with a duration after
 which the next element in the list is played. Here is an example of a
-light show with three lights which sequentially turn blue over one
-second:
+light show with three lights which sequentially turn blue over one second:
 
 ``` yaml
 ##! show: my_show
@@ -63,9 +70,9 @@ second:
     l_arrow_3: blue
 ```
 
-In this simple example it totally makes sense to create the show by
-hand. You could also throw in [tokens](../shows/tokens.md) for the lights and reuse the show all over the machine for
-different light triples.
+In this simple example it totally makes sense to create the show by hand.
+You could also throw in [tokens](../shows/tokens.md) for the lights and reuse
+the show all over the machine for different light triples.
 
 However, imagine you want to swipe over all lights in your machine. That
 would be a lot of text and also hard to get right manually. Luckily,
@@ -81,9 +88,8 @@ light show for you which contains one section per step (at a defined
 frame rate). Neat right? You might ask: How does it know where my lights
 are located on the playfield?
 
-Luckily, you probably already have them set if you used the
-[MPF Monitor](monitor/index.md). It
-allows you to use drag and drop to position all your switches and lights
+Luckily, you probably already have them set if you used the [MPF Monitor](monitor/index.md).
+It allows you to use drag and drop to position all your switches and lights
 on a playfield image. Those positions are then saved to the
 `monitor/monitor.yaml` file in your machine folder. All you have to do
 is point the light show creator to the `monitor/monitor.yaml` file on
@@ -92,13 +98,11 @@ startup.
 You set the start and end positions, rotations, scales and colors of
 that shape anywhere you want over the playfield.
 
-Here we start with a gradient bar at the top of the playfield in a pink
-color.
+Here we start with a gradient bar at the top of the playfield in a pink color.
 
 ![image](images/showcreator_start.png)
 
-We want the final position to be here at the bottom, in a darker red
-shade.
+We want the final position to be here at the bottom, in a darker red shade.
 
 ![image](images/showcreator_end.png)
 
@@ -126,16 +130,12 @@ like a hollywood premiere.
 
 ### Running the showcreator on Windows
 
-1.  Checkout or download the
-    [showcreator](https://github.com/missionpinball/showcreator.git)
-    repository.
+1.  Checkout or download the [showcreator](https://github.com/missionpinball/showcreator.git) repository.
 2.  Double click on led.exe
 
 ### Running the showcreator on Mac x64
 
-1.  Checkout or download the
-    [showcreator](https://github.com/missionpinball/showcreator.git)
-    repository.
+1.  Checkout or download the [showcreator](https://github.com/missionpinball/showcreator.git) repository.
 2.  Double click on: led mac x64.app (you may not see .app in the name)
 
 ### Running the showcreator on Linux
@@ -187,15 +187,12 @@ Note, that on the console, which might be hidden by the showcreator window, you 
 * M - HOLD for slow motion during segment/set play
 * P+SHIFT - play set and create script file
 * ESC - quit - Y/N confirm quit
-* Left Mouse Button Down over playfield adjusts position of current
-    end (START or FINISH) +SHIFT adjusts both START AND FINISH
-    positions
+* Left Mouse Button Down over playfield adjusts position of current end (START or FINISH) +SHIFT adjusts both START AND FINISH positions
 
 ### Dynamic Shows
 
 The tool is handy to render static shows which will not change during
-runtime. If you want to render shows dynamically (using your GPU) you
-can also use
+runtime. If you want to render shows dynamically (using your GPU) you can also use
 [your lights as display in MC](../config_players/display_light_player.md) but that will cost much more resources during runtime than
 offline generated shows.
 
