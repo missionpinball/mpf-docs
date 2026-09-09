@@ -9,7 +9,8 @@ title: "slide_player: Config Reference"
 | Valid in | |
 |-----|:----:|
 |[machine](instructions/machine_config.md) config files |**YES** :white_check_mark:|
-|[mode](instructions/mode_config.md) config files|**NO** :no_entry_sign:|
+|[mode](instructions/mode_config.md) config files|**NO** :no_entry_sign: (MPF -0.57)|
+|[mode](instructions/mode_config.md) config files|**NO** :white_check_mark: (MPF 0.80+)|
 |[shows](../shows/index.md) & show files|**YES** :white_check_mark:|
 
 The `slide_player:` section of your config is where you configure slides
