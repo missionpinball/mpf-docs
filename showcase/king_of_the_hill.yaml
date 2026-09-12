@@ -1,0 +1,21 @@
+name: King of the Hill Pinball
+acronym: KOTH
+team: Nick Taseris / Houseball Amusements LLC
+location: Seattle, WA, USA
+started: 2024-05-01
+finished:
+images: koth-pinball-1.jpg, koth-pinball-2.jpg
+project_type: original
+youtube_video_ids:
+documentation_link:
+code_link: https://github.com/Ntaseris/KOTH-Pinball
+gameplay_link:
+controller: FAST
+description: >
+  King of the Hill Pinball is a full-size, original homebrew machine designed
+  and programmed by Nick Taseris. This unofficial fan project translates the
+  show's characters, stories, and running jokes into rules, scoring, modes,
+  multiballs, physical mechanisms, lighting, sound, and animation. The game
+  runs on MPF with a Godot/MPF-GMC audiovisual presentation and FAST Pinball
+  hardware. The public source repository documents the software architecture
+  and is intended as a portfolio and reference for other homebrew builders.
