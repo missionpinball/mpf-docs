@@ -1,5 +1,5 @@
 ---
-Reversed Flippers
+title: Reversed Flippers
 ---
 
 ## How to enable "reversed flippers" (novelty mode)

@@ -5,3 +5,5 @@
 # except the files we need which start with _ and the images subfolder
 docs/showcase/*.md
 !docs/showcase/_*
+
+site/
