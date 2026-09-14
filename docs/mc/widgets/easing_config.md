@@ -1,6 +1,3 @@
----
----
-
 ## Config file for the easing GIF
 
 In case you're wondering how we created the easing GIF files, here are
