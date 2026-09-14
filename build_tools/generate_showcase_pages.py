@@ -28,7 +28,7 @@ for filename in os.listdir(showcase_target_dir):
 index_links = []
 
 # Transform each source showcase into a target showcase file
-for filename in os.listdir(showcase_source_dir):
+for filename in sorted(os.listdir(showcase_source_dir), key=lambda s: s.lower()):
     if filename.startswith("_") or not filename.endswith(".yaml"):
         continue
 
