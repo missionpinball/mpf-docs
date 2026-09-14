@@ -2,6 +2,6 @@
 .DS_Store
 
 # ignore all the generated files in the project folder
-# except the files we need which start with _
-docs/showcase/*
+# except the files we need which start with _ and the images subfolder
+docs/showcase/*.md
 !docs/showcase/_*
