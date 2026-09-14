@@ -1,5 +1,6 @@
 ---
 title: {{ name }}, built with MPF
+glightbox: true
 ---
 
 <!-- This file is used as the template for all the individual project pages. -->
@@ -30,8 +31,6 @@ title: {{ name }}, built with MPF
 
 **Finished**: {{ finished }}
 
-**Images**: {{ images }}
-
 **Project type**: {{ project_type }}
 
 {% if documentation_link %}
@@ -49,6 +48,20 @@ title: {{ name }}, built with MPF
 **Description**:
 
 {{ description }}
+
+
+{% if images is string %}
+![{{ name }} Image](images/{{images}}){ width="300" }
+{% else %}
+{% if images %}
+## Gallery
+
+{% for img in images %}
+![{{ name }} Image - {{ loop.index }}](images/{{ img }}){ width="300" }
+{% endfor %}
+{% endif %}
+
+{% endif %}
 
 {% if youtube_video_ids %}
 
