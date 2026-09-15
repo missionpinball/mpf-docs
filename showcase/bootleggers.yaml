@@ -1,0 +1,15 @@
+name: Bootleggers
+acronym:
+team: PinForge
+location: Kentucky
+started: 2025-11-10
+finished:
+images:
+project_type: original
+youtube_video_ids:
+documentation_link: https://www.pinforgepinball.com/
+code_link: https://github.com/PinForge-Pinball/bootleggers
+gameplay_link:
+controller: FAST Neuron
+description: >
+  Original theme created as an open source project so that anyone can build their own copy.
