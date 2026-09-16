@@ -11,22 +11,33 @@ of this feature with its soft power button, but other controllers can take advan
 
 ## Steps
 
+Any MPF game can be configured with a soft power request system.
+The default game logic listens for the event `request_soft_shutdown`, which you can post via an event player:
 
-Post the event: request_soft_shutdown
-Boolean event is posted to allow blocking: machine_request_shutdown
-Either handlers fail it out, and machine_abort_shutdown is posted
-Or handlers do not block, so machine_will_shutdown is posted,
-and then the subsystems are each gracefully exiting and the event loop is completed.
-If a custom script is defined with machine:soft_shutdown_exit_command, then it will be executed asynchronously.
+```yaml
+event_player:
+  my_trigger_event: request_soft_shutdown
+```
+
+The core MPF code in `machine.py` listens for this event, and will post the [boolean event](../events/overview/event_types.md#boolean-events) [*machine_request_shutdown*](../events/machine_request_shutdown.md).
+
+If any handlers return False, the soft powerdown will abort, and the event *machine_abort_shutdown* is posted.
+
+If there are no handlers, or all handlers return True, the powerdown will continue. The event *machine_will_shutdown* is posted and the machine subsystems will begin graceful exit procedures.
+
+Finally, if the config option [machine:soft_shutdown_exit_command](../config/machine.md#soft_shutdown_exit_command) is defined, it will be executed asynchronously.
 
 
-Neuron additional steps:
-The Neuron can also use the request_soft_shutdown event, but it has a native hook to this already.
-If in soft power mode, the watchdog WD: command will automatically detect when the soft power button is pressed,
-it will then report the synthetic switch event fast_soft_power_switch_active
-it will then report the synthetic switch event fast_soft_power_switch_inactive.
+## FAST Neuron integration
 
-If the time between these occurrences is > fast:net:soft_power_hold_time then it will issue request_soft_shutdown, starting the standard loop.
+Games using the FAST Neuron controller can also use the *request_soft_shutdown* event, but MPF also is able to listen to the built-in Soft Power switch provided by the platform.
 
+These functions only operate when using the soft power mode, see the [FAST website](https://fastpinball.com/wiring/neuron/solid-state-relay/) for wiring details.
 
-For non-FAST Neuron systems, or FAST Neurons using standard power (not soft power), the controller will not be automatically shut down at the end.
+If in soft power mode, the watchdog `WD:` command will automatically detect when the soft power button is pressed or released.
+While MPF is running, if the soft power switch is pressed, the synthetic switch event *fast_soft_power_switch_active* will be posted.
+When the switch is released, the synthetic switch event *fast_soft_power_switch_inactive* is posted.
+
+If the time between the button press and release is longer than the config value [fast:net:soft_power_hold_ms](../config/fast/fast_net.md#soft_power_hold_ms) then it will post *request_soft_shutdown*, starting the standard procedure described above.
+
+For non-FAST Neuron systems, or FAST Neurons using standard power (not soft power), the controller will not automatically shut down at the end of the shutdown process.
