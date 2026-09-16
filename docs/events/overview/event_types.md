@@ -51,6 +51,38 @@ Queue Events are categorized in the Events Reference by their device
 or other grouping type, but are also listed together in the
 [Queue Events event listing page](../queue_events/index.md).
 
+## Boolean Events
+
+Boolean events are special events that allow their handlers to decide whether to continue or cancel a behavior. Each handler is called in order, and if any handler returns False, the processing will stop and the code that posted the event will resolve the False pathway.
+
+For example, the event *request_to_start_game* is a boolean event posted attract mode when the start button is pressed. Many MPF subsystems, such as ball management and credit management, listen for this event, and report whether the game is not able to add another player.
+
+The boolean event *player_add_request* is a common one that interactive menus and carousels need to intercept. If you use the start button as a "select" interaction, you may want to ensure that the same button press is not considered to be a player add request. To intercept this, you can use the python snippet:
+
+``` python
+from mpf.core.mode import Mode
+
+class MyMode(Mode):
+  def mode_start(self, **kwargs):
+    """Intercept player_add_request."""
+    self.add_mode_event_handler('player_add_request', self._player_add_request)
+
+  def _player_add_request(self, **kwargs):
+    """Block player adds during carousel modes."""
+    return False
+
+```
+
+Place the python file in your mode's `code/` subfolder. In your mode YAML, add the `code:` to load the python:
+
+``` yaml
+#config_version=6
+
+mode:
+  code: my_mode.MyMode
+```
+
+
 ## Note for Programmers
 
 If you're a programmer and familiar with Python, you'll notice in the
