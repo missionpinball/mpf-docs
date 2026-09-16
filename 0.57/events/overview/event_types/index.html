@@ -28637,6 +28637,17 @@ icons & this code generated via https://realfavicongenerator.net
 </li>
       
         <li class="md-nav__item">
+  <a href="#boolean-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Boolean Events
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#note-for-programmers" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -48583,6 +48594,17 @@ icons & this code generated via https://realfavicongenerator.net
 </li>
       
         <li class="md-nav__item">
+  <a href="#boolean-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Boolean Events
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#note-for-programmers" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -48655,6 +48677,27 @@ sections.</p>
 <p>Queue Events are categorized in the Events Reference by their device
 or other grouping type, but are also listed together in the
 <a href="../../queue_events/">Queue Events event listing page</a>.</p>
+<h2 id="boolean-events">Boolean Events</h2>
+<p>Boolean events are special events that allow their handlers to decide whether to continue or cancel a behavior. Each handler is called in order, and if any handler returns False, the processing will stop and the code that posted the event will resolve the False pathway.</p>
+<p>For example, the event <em>request_to_start_game</em> is a boolean event posted attract mode when the start button is pressed. Many MPF subsystems, such as ball management and credit management, listen for this event, and report whether the game is not able to add another player.</p>
+<p>The boolean event <em>player_add_request</em> is a common one that interactive menus and carousels need to intercept. If you use the start button as a "select" interaction, you may want to ensure that the same button press is not considered to be a player add request. To intercept this, you can use the python snippet:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">mpf.core.mode</span><span class="w"> </span><span class="kn">import</span> <span class="n">Mode</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">MyMode</span><span class="p">(</span><span class="n">Mode</span><span class="p">):</span>
+  <span class="k">def</span><span class="w"> </span><span class="nf">mode_start</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""Intercept player_add_request."""</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">add_mode_event_handler</span><span class="p">(</span><span class="s1">'player_add_request'</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_player_add_request</span><span class="p">)</span>
+
+  <span class="k">def</span><span class="w"> </span><span class="nf">_player_add_request</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""Block player adds during carousel modes."""</span>
+    <span class="k">return</span> <span class="kc">False</span>
+</code></pre></div>
+<p>Place the python file in your mode's <code>code/</code> subfolder. In your mode YAML, add the <code>code:</code> to load the python:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">#config_version=6</span>
+
+<span class="nt">mode</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">code</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my_mode.MyMode</span>
+</code></pre></div>
 <h2 id="note-for-programmers">Note for Programmers</h2>
 <p>If you're a programmer and familiar with Python, you'll notice in the
 source code that there are more types of events than just basic and
