@@ -79,6 +79,11 @@ which is inside the MPF package which sets up default things like which
 modules are loaded, paths used, etc. If for some reason you want to
 override this file, you can do so with the `-C` option.
 
+### -e (*available in 0.81 and 0.58*)
+
+Silence the printing of the command line args to logs. By default MPF will
+info log the command line arguments, to assist with debugging.
+
 ### -h
 
 Displays the command line help and exits. (Pretty much what's on this
