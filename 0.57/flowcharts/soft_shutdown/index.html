@@ -27,7 +27,7 @@ icons & this code generated via https://realfavicongenerator.net
     
     
       
-        <title>MPF Soft Power Down Sequence - The Mission Pinball Framework</title>
+        <title>Soft Power Down Sequence - The Mission Pinball Framework</title>
       
     
     
@@ -102,7 +102,7 @@ icons & this code generated via https://realfavicongenerator.net
     <div data-md-component="skip">
       
         
-        <a href="#mpf-soft-power-down-sequence" class="md-skip">
+        <a href="#soft-power-down-sequence" class="md-skip">
           Skip to content
         </a>
       
@@ -137,7 +137,7 @@ icons & this code generated via https://realfavicongenerator.net
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              MPF Soft Power Down Sequence
+              Soft Power Down Sequence
             
           </span>
         </div>
@@ -48594,7 +48594,7 @@ icons & this code generated via https://realfavicongenerator.net
   
 
 
-<h1 id="mpf-soft-power-down-sequence">MPF Soft Power Down Sequence</h1>
+<h1 id="soft-power-down-sequence">Soft Power Down Sequence</h1>
 <p>The soft power down sequence is a process you can take advantage of to shut down your game process cleanly,
 or even command the entire computer to shut down. The FAST Neuron processor supports a native integration
 of this feature with its soft power button, but other controllers can take advantage of the system as well.</p>
@@ -48605,8 +48605,8 @@ The default game logic listens for the event <code>request_soft_shutdown</code>,
 <span class="w">  </span><span class="nt">my_trigger_event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">request_soft_shutdown</span>
 </code></pre></div>
 <p>The core MPF code in <code>machine.py</code> listens for this event, and will post the <a href="../../events/overview/event_types/#boolean-events">boolean event</a> <a href="../../events/machine_request_shutdown/"><em>machine_request_shutdown</em></a>.</p>
-<p>If any handlers return False, the soft powerdown will abort, and the event <em>machine_abort_shutdown</em> is posted.</p>
-<p>If there are no handlers, or all handlers return True, the powerdown will continue. The event <em>machine_will_shutdown</em> is posted and the machine subsystems will begin graceful exit procedures.</p>
+<p>If any handlers return False, the soft powerdown will abort, and the event <a href="../../events/machine_abort_shutdown/"><em>machine_abort_shutdown</em></a> is posted.</p>
+<p>If there are no handlers, or all handlers return True, the powerdown will continue. The event <a href="../../events/machine_will_shutdown/"><em>machine_will_shutdown</em></a> is posted and the machine subsystems will begin graceful exit procedures.</p>
 <p>Finally, if the config option <a href="../../config/machine/#soft_shutdown_exit_command">machine:soft_shutdown_exit_command</a> is defined, it will be executed asynchronously.</p>
 <h2 id="fast-neuron-integration">FAST Neuron integration</h2>
 <p>Games using the FAST Neuron controller can also use the <em>request_soft_shutdown</em> event, but MPF also is able to listen to the built-in Soft Power switch provided by the platform.</p>
