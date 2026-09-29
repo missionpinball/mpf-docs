@@ -1,8 +1,8 @@
 ---
-title: MPF Soft Power Down Sequence
+title: Soft Power Down Sequence
 ---
 
-# MPF Soft Power Down Sequence
+# Soft Power Down Sequence
 
 The soft power down sequence is a process you can take advantage of to shut down your game process cleanly,
 or even command the entire computer to shut down. The FAST Neuron processor supports a native integration
@@ -21,9 +21,9 @@ event_player:
 
 The core MPF code in `machine.py` listens for this event, and will post the [boolean event](../events/overview/event_types.md#boolean-events) [*machine_request_shutdown*](../events/machine_request_shutdown.md).
 
-If any handlers return False, the soft powerdown will abort, and the event *machine_abort_shutdown* is posted.
+If any handlers return False, the soft powerdown will abort, and the event [*machine_abort_shutdown*](../events/machine_abort_shutdown.md) is posted.
 
-If there are no handlers, or all handlers return True, the powerdown will continue. The event *machine_will_shutdown* is posted and the machine subsystems will begin graceful exit procedures.
+If there are no handlers, or all handlers return True, the powerdown will continue. The event [*machine_will_shutdown*](../events/machine_will_shutdown.md) is posted and the machine subsystems will begin graceful exit procedures.
 
 Finally, if the config option [machine:soft_shutdown_exit_command](../config/machine.md#soft_shutdown_exit_command) is defined, it will be executed asynchronously.
 
