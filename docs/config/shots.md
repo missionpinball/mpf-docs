@@ -239,24 +239,9 @@ Default: `default`
 
 The name of the *shot profile* that will be applied to this shot.
 
-* If you're editing a machine-wide config file , then the profile
-    name specified here will be the default profile for that shot any
-    time a mode-specific config doesn't override it. (If you don't
-    specify a profile name, MPF will assign the shot profile called
-    "default".)
-* If you're in a mode configuration file , then this profile entry is
-    the name of the shot profile that will be applied only when this
-    mode is active. (i.e. it's applied when the mode starts and it's
-    removed when the mode ends.) Like other mode-specific settings, shot
-    profiles take on the priorities of the modes they're in, so if you
-    have a profile from a mode at priority 200 and another from priority
-    300, the profile from the priority 300 mode will be applied. If that
-    mode stops, then the shot will get the profile from the priority 200
-    mode.
-
-Shots can have (and track) multiple profiles at the same time (up to one
-profile per mode). Only the show from the highest-priority profile will
-play though.
+In previous versions of MPF it was possible for a single shot to have many profiles -- this is
+no longer true. Any references in the documentation to multiple shot profiles on a single shot
+definition are mistakes and should be reported as issues on Github.
 
 ### reset_events:
 
@@ -265,9 +250,8 @@ List of one (or more) device control events
 
 Default: `None`
 
-Events in this list, when posted, reset this shot. Resetting a shot
-means that it jumps back to the first state in whatever *shot profile*
-is active at that time.
+Events in this list reset this shot when posted. Resetting a shot
+means that it jumps back to the first state in its shot profile.
 
 ### restart_events:
 
