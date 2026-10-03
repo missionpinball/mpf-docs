@@ -24,10 +24,20 @@ terminate the bus.
 
 Notes:
 
-* Address ID values are numbered starting with zero (Extension
+* Connect the boards as one line, not as a star or loop. Fit a CAN
+    termination jumper at each physical end of the chain. Remove it from
+    every board in the middle. A correctly powered-down chain normally
+    measures about 60 ohms between CAN-H and CAN-L.
+* Set a unique Address ID before powering the chain. Restart a board after
+    changing its DIP switches.
+* EX2 firmware 3.0 is Extension-compatible and can act as the USB-connected
+    controller for a chain. Switch and Lightshow boards remain discoverable
+    downstream over CAN.
+
+* Address ID values are numbered starting with zero (EX2 and Switch
     boards have addresses 0 to 7 while Lightshow boards have addresses
     0 to 3).
-* An Extension board cannot have the same Address ID number as a
+* An EX2 or Switch board cannot have the same Address ID number as a
     Lightshow board (all connected boards must have unique Address ID
     values).
 * You do not have to chain the boards in the same order as their

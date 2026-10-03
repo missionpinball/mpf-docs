@@ -35,9 +35,10 @@ Overview video about serial LEDs:
 
 --8<-- "light_channels_numbers.md"
 
-PKONE assumes RGB or RGBW lights by default (depending upon which
-firmware your Lightshow board is running). For everything else (i.e.
-RGBW) you have to use channels.
+Legacy PKONE firmware assumes RGB or RGBW lights for the whole board.
+Lightshow firmware 3.0 identifies itself as `MIX`; configure each used group
+under `pkone: lightshow_groups:` as described in the
+[PKONE config reference](../../config/pkone.md).
 
 The PKONE Lightshow supports 512 LEDs on eight groups (64 in each
 group).
@@ -82,8 +83,9 @@ lights:
     type: rgbw   # will use red: 0-1-7, green: 0-1-8, blue: 0-1-9, white: 0-1-10
 ```
 
-This method of chaining your LEDs works exactly the same way whether
-your Lightshow board is running RGB or RGBW firmware.
+Do not mix RGB and RGBW pixels within one physical group. Choose one type for
+the group, then use that same `type:` for every light on that group. Different
+groups on a firmware 3.0 board may use different types.
 
 See [WS2811 and WS2812 LEDs in Pinball](../../mechs/lights/ws2812.md) for additional
 details.
