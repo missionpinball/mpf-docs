@@ -11,7 +11,7 @@ Related Config File Sections:
 * [coils:](../../config/coils.md)
 
 To configure coils, drivers, motors, and/or magnets (basically anything
-connected to a PKONE Extension board's driver outputs) with Penny K
+connected to a PKONE EX2 board's coil outputs) with Penny K
 Pinball hardware, you can follow the guides and instructions in the
 [Coils (Solenoids)](../../mechs/coils/index.md) docs.
 
@@ -22,11 +22,10 @@ PKONE hardware that are discussed here.
 
 ## number:
 
-When you're using PKONE Extension boards, drivers plug into individual
-Extension boards. Then the Extension boards are connected together in a
-chain to the controller.
+Coils and drivers connect to EX2 outputs 1-10. Switch and Lightshow boards
+do not expose coil outputs to MPF.
 
-![image](../images/pkone-extension.png)
+![image](../images/pkone-ex2.jpg)
 
 The `number:` setting for each coil/driver is its board's Address ID
 number in the PKONE chain, then the dash, then the coil/driver output
@@ -35,14 +34,14 @@ number (1-10).
 ``` yaml
 coils:
   my_coil:
-    number: 0-1    # Extension board with Address ID 0, coil/driver 1
+    number: 0-1    # EX2 with Address ID 0, coil/driver 1
   some_other_coil:
-    number: 2-10    # Extension board with Address ID 2, coil/driver 10
+    number: 2-10    # EX2 with Address ID 2, coil/driver 10
 ```
 
 Notes:
 
-* The PKONE Extension board Address ID switches can be set from 0 to
+* The PKONE EX2 board Address ID switches can be set from 0 to
     7.
 
 ## Pulse Power

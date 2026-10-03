@@ -9,7 +9,7 @@ Related Config File Sections:
 
 * [servos:](../../config/servos.md)
 
-You can drive up to four servos from any PKONE Extension board.
+You can drive up to four servos from each PKONE EX2 board.
 
 Overview video about [servos](../../mechs/servos/index.md):
 
@@ -23,7 +23,7 @@ When you're using PKONE EX2 boards, servos plug into individual
 EX2 boards. Then the boards are connected together in a
 chain to the controller.
 
-![image](../images/pkone-extension.png)
+![image](../images/pkone-ex2.jpg)
 
 The `number:` setting for each servo is its board's Address ID number
 in the PKONE chain, then the dash, then the servo output number (11-14).
@@ -31,16 +31,16 @@ in the PKONE chain, then the dash, then the servo output number (11-14).
 ``` yaml
 servos:
   servo_1:
-    number: 0-11    # Extension board with Address ID 0, servo 11 (the first one)
+    number: 0-11    # EX2 with Address ID 0, servo 11 (the first one)
   some_other_servo:
-    number: 2-14    # Extension board with Address ID 2, servo 14
+    number: 2-14    # EX2 with Address ID 2, servo 14
 ```
 
 Notes:
 
-* The PKONE Extension board Address ID switches can be set from 0 to
+* The PKONE EX2 board Address ID switches can be set from 0 to
     7.
-* Servos are numbered from 11 to 14 on the PKONE Extension board and
+* Servos are numbered from 11 to 14 on EX2 and
     not from 1 to 4.
 
 All the servo config options are explained in-depth in the

@@ -19,11 +19,13 @@ get with Penny K Pinball PKONE hardware that is discussed here.
 
 ## number:
 
-When you're using PKONE Extension boards, switches plug into individual
-Extension boards. Then the Extension boards are connected together in a
-chain.
+Switch inputs may be connected to either an EX2 or a Switch board. EX2
+provides 30 standard switch inputs plus five opto inputs. The Switch board
+provides 40 switch inputs.
 
-![image](../images/pkone-extension.png)
+![image](../images/pkone-ex2.jpg)
+
+![Switch board connection map](../images/pkone-switch.jpg)
 
 The `number:` setting for each switch is its board's Address ID number
 in the PKONE chain, then the dash, then the switch input number. EX2 has
@@ -32,9 +34,9 @@ inputs 1-35; the Switch board has inputs 1-40.
 ``` yaml
 switches:
   my_switch:
-    number: 0-0    # Extension board at address 0, switch 0
+    number: 0-1    # EX2 board at address 0, switch 1
   some_other_switch:
-    number: 2-24    # Extension board at address 2, switch 24
+    number: 2-24    # EX2 board at address 2, switch 24
 ```
 
 Notes:
@@ -45,9 +47,9 @@ Notes:
     other normally closed (NC) switches. Do not list them as NC
     switches in your configuration as the hardware already inverts the
     values before sending them to MPF.
-* The Switch board reports 40 inputs. Its two physical output connectors
-    are disabled in the current firmware and are intentionally unavailable
-    to MPF.
+* The Switch board reports inputs 1-40. Its two physical coil connectors
+    are disabled by firmware 3.0 and MPF rejects attempts to configure
+    them as coils.
 
 ## What if it did not work?
 
