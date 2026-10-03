@@ -19,8 +19,8 @@ Overview video about [servos](../../mechs/servos/index.md):
 
 ## number:
 
-When you're using PKONE Extension boards, coils plug into individual
-Extension boards. Then the Extension boards are connected together in a
+When you're using PKONE EX2 boards, servos plug into individual
+EX2 boards. Then the boards are connected together in a
 chain to the controller.
 
 ![image](../images/pkone-extension.png)

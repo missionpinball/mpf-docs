@@ -22,6 +22,22 @@ pkone:
   port: com3
 ```
 
+Lightshow firmware 3.0 reports `MIX` and lets every addressable-light group
+use either RGB or RGBW pixels. Declare each group that the machine uses:
+
+``` yaml
+pkone:
+  port: com3
+  lightshow_groups:
+    "1-1": rgb
+    "1-2": rgbw
+```
+
+The key is `board address-group`. Valid board addresses are 0-3 and valid
+groups are 1-8. MPF sends the group type during startup and requires the
+board to acknowledge it before creating LED channels. Legacy RGB-only and
+RGBW-only firmware cannot change type per group.
+
 ## Required settings
 
 The following sections are required in the `pkone:` section of your
@@ -43,6 +59,11 @@ config. (If you don't include them, the default will be used).
 Single value, type: `integer`. Default: `115200`
 
 Baud rate to use on the serial port.
+
+### lightshow_groups:
+
+Dictionary of Lightshow `board address-group` keys to `rgb` or `rgbw`.
+Required for every used group on firmware that identifies itself as `MIX`.
 
 ### console_log:
 

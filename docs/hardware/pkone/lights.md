@@ -9,7 +9,7 @@ Related Config File Sections:
 
 * [lights:](../../config/lights.md)
 
-Up to 45 Simple LED lights are supported on Penny K Pinball PKONE
+Up to 40 Simple LED lights are supported on Penny K Pinball PKONE
 Lightshow boards. Simple LED lights are single channel monochromatic
 LEDs most frequently used under colored inserts in the playfield or
 behind colored artwork behind a backglass.
@@ -41,6 +41,7 @@ Notes:
 
 * The PKONE Lightshow board Address ID switches can be set from 0 to
     3.
+* Simple-light outputs are numbered 1 to 40.
 
 ## subtype:
 

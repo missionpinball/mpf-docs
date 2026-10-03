@@ -39,7 +39,7 @@ details.
 If you got problems with your platform try to enable `debug` first. As
 described in the
 [general debugging section](../../troubleshooting/general_debugging.md) of our
-[troubleshooting guide](../../troubleshooting/index.md) this is done by adding `debug: true` to your `opp` config
+[troubleshooting guide](../../troubleshooting/index.md) this is done by adding `debug: true` to your `pkone` config
 section:
 
 ``` yaml
@@ -49,3 +49,17 @@ pkone:
 
 This will add a lot more debugging and might slow down MPF a bit. We
 recommend to disable/remove it after finishing debugging.
+
+## Startup and watchdog errors
+
+MPF places a deadline on controller reset, board discovery, mixed LED
+configuration and initial switch snapshots. Check the first reported failure
+rather than repeatedly reconnecting:
+
+* A timeout usually means the wrong serial port, a missing board reply, a bad
+  CAN cable or incorrect termination.
+* An address mismatch usually means duplicate DIP-switch addresses.
+* A malformed switch snapshot indicates incompatible firmware or corrupted
+  serial/CAN traffic.
+* A hardware-watchdog timeout stops MPF because the boards have disabled their
+  outputs. Correct the connection and restart MPF before testing again.
