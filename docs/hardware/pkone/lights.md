@@ -17,11 +17,10 @@ behind colored artwork behind a backglass.
 ## number:
 
 When you're using PKONE Lightshow boards, simple LEDs plug into
-individual Lightshow boards. Then the Lightshow boards are connected
-together in a chain with other add-on boards (such as PKONE Extension
-boards) to the controller.
+individual Lightshow boards. The Lightshow boards share the same CAN
+chain as EX2 and Switch boards.
 
-![image](../images/pkone-lightshow.png)
+![image](../images/pkone-lightshow-v3.jpg)
 
 The `number:` setting for each simple LED is its board's Address ID
 number in the PKONE chain, then the dash, then the simple LED output

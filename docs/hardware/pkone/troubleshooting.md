@@ -20,15 +20,16 @@ $ mpf hardware scan
 ## Penny K Pinball Hardware
 
 - Connected Controllers:
-  -> PKONE Nano - Port: com3 at 115200 baud (firmware v1.1, hardware rev 2)
+  -> PKONE EX2 USB connection - Port: com3 at 115200 baud (firmware v3.0, hardware rev 20)
 
-- Extension boards:
-  -> Address ID: 0 (firmware v1.1, hardware rev 2)
-  -> Address ID: 1 (firmware v1.1, hardware rev 2)
+- EX2 boards:
+  -> Address ID: 0 (firmware v3.0, hardware rev 20)
+
+- Switch boards:
+  -> Address ID: 1 (firmware v3.0, hardware rev 20)
 
 - Lightshow boards:
-  -> Address ID: 2 (RGB firmware v1.0, hardware rev 1)
-  -> Address ID: 3 (RGBW firmware v1.0, hardware rev 1)
+  -> Address ID: 2 (MIX firmware v3.0, hardware rev 20)
 ```
 
 See [mpf hardware (command-line utility)](../../running/commands/hardware.md) for

@@ -31,6 +31,7 @@ This MPF documentation was written by:
 * Matt Kemp (<matt@blz.co>)
 * Charles Duncan (nullbuilds)
 * Alex Lobascio (bosh)
+* Mark Kelynack (<mark@pennykpinball.com>)
 
 Want to help with the docs? See our
 [Contributing to MPF's Documentation](help_docs.md) page for
