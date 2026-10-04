@@ -5599,10 +5599,10 @@ icons & this code generated via https://realfavicongenerator.net
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#pkone-nano" class="md-nav__link">
+  <a href="#connect-the-ex2-by-usb" class="md-nav__link">
     <span class="md-ellipsis">
       
-        PKONE Nano
+        Connect the EX2 by USB
       
     </span>
   </a>
@@ -48539,10 +48539,10 @@ icons & this code generated via https://realfavicongenerator.net
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#pkone-nano" class="md-nav__link">
+  <a href="#connect-the-ex2-by-usb" class="md-nav__link">
     <span class="md-ellipsis">
       
-        PKONE Nano
+        Connect the EX2 by USB
       
     </span>
   </a>
@@ -48575,28 +48575,32 @@ icons & this code generated via https://realfavicongenerator.net
 
 
 <h1 id="connecting-pkone-to-your-computer">Connecting PKONE to your Computer</h1>
-<p>This page is about connecting the PKONE system to your computer. It
-roughly covers connecting the bus between the boards.</p>
-<h2 id="pkone-nano">PKONE Nano</h2>
-<p>Connect your PKONE NANO controller to your PC using USB.</p>
-<p><img alt="image" src="../../images/pkone-nano.png"></p>
-<p>Then connect the OUT port of your NANO to the IN port of your first
-board (Extension or Lightshow). Consequently, connect the OUT port of
-the first board to the IN port of your second board (etc.). Be sure each
-Extension board or Lightshow board has a unique Address ID set using the
-Address ID switches on each board. Finally, be sure the last board in
-the chain has the CANBUS Protocol Termination Jumper set to properly
-terminate the bus.</p>
+<p>This page explains how to connect an EX2, Switch and Lightshow chain to
+the computer running MPF.</p>
+<h2 id="connect-the-ex2-by-usb">Connect the EX2 by USB</h2>
+<p>Connect the EX2 USB port to the computer. MPF uses the EX2 as the USB
+connection to the CAN chain.</p>
+<p><img alt="EX2 connection map" src="../../images/pkone-ex2.jpg"></p>
+<p>Connect the EX2 CAN OUT port to the CAN IN port of the next EX2, Switch
+or Lightshow board. Continue from OUT to IN until every board is in one
+line. Give every board a unique Address ID with its DIP switches, then
+restart the boards.</p>
 <p>Notes:</p>
 <ul>
-<li>Address ID values are numbered starting with zero (Extension
-    boards have addresses 0 to 7 while Lightshow boards have addresses
-    0 to 3).</li>
-<li>An Extension board cannot have the same Address ID number as a
-    Lightshow board (all connected boards must have unique Address ID
-    values).</li>
-<li>You do not have to chain the boards in the same order as their
-    Address ID numbers.</li>
+<li>Connect the boards as one line, not as a star or loop. Fit a CAN
+    termination jumper at each physical end of the chain. Remove it from
+    every board in the middle. A correctly powered-down chain normally
+    measures about 60 ohms between CAN-H and CAN-L.</li>
+<li>Set a unique Address ID before powering the chain. Restart a board after
+    changing its DIP switches.</li>
+<li>Use firmware 3.0 or newer on EX2, Switch and Lightshow boards. The <code>X</code>
+    used in an EX2 discovery reply is a wire-protocol identifier retained
+    for compatibility; it does not refer to a separate board product.</li>
+<li>EX2 and Switch addresses range from 0 to 7. Lightshow addresses range
+    from 0 to 3.</li>
+<li>No two boards on the chain may use the same Address ID, even when they
+    are different board types.</li>
+<li>The physical chain order does not have to match Address ID order.</li>
 </ul>
 <hr>
 <div class="admonition question">

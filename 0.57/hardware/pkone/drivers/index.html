@@ -48669,7 +48669,7 @@ icons & this code generated via https://realfavicongenerator.net
 <li><a href="../../../config/coils/">coils:</a></li>
 </ul>
 <p>To configure coils, drivers, motors, and/or magnets (basically anything
-connected to a PKONE Extension board's driver outputs) with Penny K
+connected to a PKONE EX2 board's coil outputs) with Penny K
 Pinball hardware, you can follow the guides and instructions in the
 <a href="../../../mechs/coils/">Coils (Solenoids)</a> docs.</p>
 <div class="admonition warning">
@@ -48695,22 +48695,21 @@ BOARDS.</p>
 <p>There are a few things to know about controlling drivers and coils with
 PKONE hardware that are discussed here.</p>
 <h2 id="number">number:</h2>
-<p>When you're using PKONE Extension boards, drivers plug into individual
-Extension boards. Then the Extension boards are connected together in a
-chain to the controller.</p>
-<p><img alt="image" src="../../images/pkone-extension.png"></p>
+<p>Coils and drivers connect to EX2 outputs 1-10. Switch and Lightshow boards
+do not expose coil outputs to MPF.</p>
+<p><img alt="image" src="../../images/pkone-ex2.jpg"></p>
 <p>The <code>number:</code> setting for each coil/driver is its board's Address ID
 number in the PKONE chain, then the dash, then the coil/driver output
 number (1-10).</p>
 <div class="highlight"><pre><span></span><code><span class="nt">coils</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">my_coil</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0-1</span><span class="w">    </span><span class="c1"># Extension board with Address ID 0, coil/driver 1</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0-1</span><span class="w">    </span><span class="c1"># EX2 with Address ID 0, coil/driver 1</span>
 <span class="w">  </span><span class="nt">some_other_coil</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2-10</span><span class="w">    </span><span class="c1"># Extension board with Address ID 2, coil/driver 10</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2-10</span><span class="w">    </span><span class="c1"># EX2 with Address ID 2, coil/driver 10</span>
 </code></pre></div>
 <p>Notes:</p>
 <ul>
-<li>The PKONE Extension board Address ID switches can be set from 0 to
+<li>The PKONE EX2 board Address ID switches can be set from 0 to
     7.</li>
 </ul>
 <h2 id="pulse-power">Pulse Power</h2>

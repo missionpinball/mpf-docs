@@ -48601,30 +48601,30 @@ icons & this code generated via https://realfavicongenerator.net
 <ul>
 <li><a href="../../../config/servos/">servos:</a></li>
 </ul>
-<p>You can drive up to four servos from any PKONE Extension board.</p>
+<p>You can drive up to four servos from each PKONE EX2 board.</p>
 <p>Overview video about <a href="../../../mechs/servos/">servos</a>:</p>
 <div class="video-wrapper">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/wA6KEODwQ5w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 </div>
 
 <h2 id="number">number:</h2>
-<p>When you're using PKONE Extension boards, coils plug into individual
-Extension boards. Then the Extension boards are connected together in a
+<p>When you're using PKONE EX2 boards, servos plug into individual
+EX2 boards. Then the boards are connected together in a
 chain to the controller.</p>
-<p><img alt="image" src="../../images/pkone-extension.png"></p>
+<p><img alt="image" src="../../images/pkone-ex2.jpg"></p>
 <p>The <code>number:</code> setting for each servo is its board's Address ID number
 in the PKONE chain, then the dash, then the servo output number (11-14).</p>
 <div class="highlight"><pre><span></span><code><span class="nt">servos</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">servo_1</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0-11</span><span class="w">    </span><span class="c1"># Extension board with Address ID 0, servo 11 (the first one)</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0-11</span><span class="w">    </span><span class="c1"># EX2 with Address ID 0, servo 11 (the first one)</span>
 <span class="w">  </span><span class="nt">some_other_servo</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2-14</span><span class="w">    </span><span class="c1"># Extension board with Address ID 2, servo 14</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2-14</span><span class="w">    </span><span class="c1"># EX2 with Address ID 2, servo 14</span>
 </code></pre></div>
 <p>Notes:</p>
 <ul>
-<li>The PKONE Extension board Address ID switches can be set from 0 to
+<li>The PKONE EX2 board Address ID switches can be set from 0 to
     7.</li>
-<li>Servos are numbered from 11 to 14 on the PKONE Extension board and
+<li>Servos are numbered from 11 to 14 on EX2 and
     not from 1 to 4.</li>
 </ul>
 <p>All the servo config options are explained in-depth in the

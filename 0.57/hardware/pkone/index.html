@@ -48512,6 +48512,19 @@ connector locations) as well as overall settings that affect how your
 PKONE hardware performs. (Watch dogs, update speeds, etc.).</p>
 <p>For additional information, please visit the <a href="https://pennykpinball.com">Penny K Pinball
 website</a>.</p>
+<p>Current PKONE firmware supports these boards:</p>
+<ul>
+<li><strong>EX2</strong>: 30 switch inputs, five opto inputs, ten coil outputs and four
+  servo outputs.</li>
+<li><strong>Switch</strong>: 40 switch inputs. Its two physical output connectors are
+  disabled in the current firmware and must not be configured as MPF coils.</li>
+<li><strong>Lightshow</strong>: 40 simple-light outputs and eight addressable-light groups
+  with up to 64 pixels per group. Firmware 3.0 can configure each group as
+  RGB or RGBW.</li>
+</ul>
+<p>Each board on one CAN chain must have a unique Address ID. MPF hardware
+numbers use that Address ID; the permanent board serial number is for
+inventory and does not replace the DIP-switch address in an MPF config.</p>
 <ul>
 <li><a href="connecting/">Connecting PKONE to your Computer</a></li>
 <li><a href="config/">Installing hardware drivers &amp; configuring COM ports</a></li>

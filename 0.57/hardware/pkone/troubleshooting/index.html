@@ -5816,6 +5816,17 @@ icons & this code generated via https://realfavicongenerator.net
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#startup-and-watchdog-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Startup and watchdog errors
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -48571,6 +48582,17 @@ icons & this code generated via https://realfavicongenerator.net
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#startup-and-watchdog-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Startup and watchdog errors
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -48608,15 +48630,16 @@ talking properly to MPF using USB:</p>
 <span class="c1">## Penny K Pinball Hardware</span>
 
 -<span class="w"> </span>Connected<span class="w"> </span>Controllers:
-<span class="w">  </span>-&gt;<span class="w"> </span>PKONE<span class="w"> </span>Nano<span class="w"> </span>-<span class="w"> </span>Port:<span class="w"> </span>com3<span class="w"> </span>at<span class="w"> </span><span class="m">115200</span><span class="w"> </span>baud<span class="w"> </span><span class="o">(</span>firmware<span class="w"> </span>v1.1,<span class="w"> </span>hardware<span class="w"> </span>rev<span class="w"> </span><span class="m">2</span><span class="o">)</span>
+<span class="w">  </span>-&gt;<span class="w"> </span>PKONE<span class="w"> </span>EX2<span class="w"> </span>USB<span class="w"> </span>connection<span class="w"> </span>-<span class="w"> </span>Port:<span class="w"> </span>com3<span class="w"> </span>at<span class="w"> </span><span class="m">115200</span><span class="w"> </span>baud<span class="w"> </span><span class="o">(</span>firmware<span class="w"> </span>v3.0,<span class="w"> </span>hardware<span class="w"> </span>rev<span class="w"> </span><span class="m">20</span><span class="o">)</span>
 
--<span class="w"> </span>Extension<span class="w"> </span>boards:
-<span class="w">  </span>-&gt;<span class="w"> </span>Address<span class="w"> </span>ID:<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">(</span>firmware<span class="w"> </span>v1.1,<span class="w"> </span>hardware<span class="w"> </span>rev<span class="w"> </span><span class="m">2</span><span class="o">)</span>
-<span class="w">  </span>-&gt;<span class="w"> </span>Address<span class="w"> </span>ID:<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">(</span>firmware<span class="w"> </span>v1.1,<span class="w"> </span>hardware<span class="w"> </span>rev<span class="w"> </span><span class="m">2</span><span class="o">)</span>
+-<span class="w"> </span>EX2<span class="w"> </span>boards:
+<span class="w">  </span>-&gt;<span class="w"> </span>Address<span class="w"> </span>ID:<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">(</span>firmware<span class="w"> </span>v3.0,<span class="w"> </span>hardware<span class="w"> </span>rev<span class="w"> </span><span class="m">20</span><span class="o">)</span>
+
+-<span class="w"> </span>Switch<span class="w"> </span>boards:
+<span class="w">  </span>-&gt;<span class="w"> </span>Address<span class="w"> </span>ID:<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">(</span>firmware<span class="w"> </span>v3.0,<span class="w"> </span>hardware<span class="w"> </span>rev<span class="w"> </span><span class="m">20</span><span class="o">)</span>
 
 -<span class="w"> </span>Lightshow<span class="w"> </span>boards:
-<span class="w">  </span>-&gt;<span class="w"> </span>Address<span class="w"> </span>ID:<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="o">(</span>RGB<span class="w"> </span>firmware<span class="w"> </span>v1.0,<span class="w"> </span>hardware<span class="w"> </span>rev<span class="w"> </span><span class="m">1</span><span class="o">)</span>
-<span class="w">  </span>-&gt;<span class="w"> </span>Address<span class="w"> </span>ID:<span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="o">(</span>RGBW<span class="w"> </span>firmware<span class="w"> </span>v1.0,<span class="w"> </span>hardware<span class="w"> </span>rev<span class="w"> </span><span class="m">1</span><span class="o">)</span>
+<span class="w">  </span>-&gt;<span class="w"> </span>Address<span class="w"> </span>ID:<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="o">(</span>MIX<span class="w"> </span>firmware<span class="w"> </span>v3.0,<span class="w"> </span>hardware<span class="w"> </span>rev<span class="w"> </span><span class="m">20</span><span class="o">)</span>
 </code></pre></div>
 <p>See <a href="../../../running/commands/hardware/">mpf hardware (command-line utility)</a> for
 details.</p>
@@ -48624,13 +48647,26 @@ details.</p>
 <p>If you got problems with your platform try to enable <code>debug</code> first. As
 described in the
 <a href="../../../troubleshooting/general_debugging/">general debugging section</a> of our
-<a href="../../../troubleshooting/">troubleshooting guide</a> this is done by adding <code>debug: true</code> to your <code>opp</code> config
+<a href="../../../troubleshooting/">troubleshooting guide</a> this is done by adding <code>debug: true</code> to your <code>pkone</code> config
 section:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">pkone</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">debug</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
 <p>This will add a lot more debugging and might slow down MPF a bit. We
 recommend to disable/remove it after finishing debugging.</p>
+<h2 id="startup-and-watchdog-errors">Startup and watchdog errors</h2>
+<p>MPF places a deadline on controller reset, board discovery, mixed LED
+configuration and initial switch snapshots. Check the first reported failure
+rather than repeatedly reconnecting:</p>
+<ul>
+<li>A timeout usually means the wrong serial port, a missing board reply, a bad
+  CAN cable or incorrect termination.</li>
+<li>An address mismatch usually means duplicate DIP-switch addresses.</li>
+<li>A malformed switch snapshot indicates incompatible firmware or corrupted
+  serial/CAN traffic.</li>
+<li>A hardware-watchdog timeout stops MPF because the boards have disabled their
+  outputs. Correct the connection and restart MPF before testing again.</li>
+</ul>
 <hr>
 <div class="admonition question">
 <p class="admonition-title">Something missing or wrong? You can fix it!</p>

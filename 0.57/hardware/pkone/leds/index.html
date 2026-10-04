@@ -48711,7 +48711,7 @@ to drive dozens of LEDs from a single data wire. These LEDs are
 generally known as "WS2812" (or similar). You can buy them from many
 different companies, and they're what's sold as the "NeoPixel" brand
 of products from Adafruit. (They have all different shapes and sizes.)</p>
-<p><img alt="image" src="../../images/pkone-lightshow.png"></p>
+<p><img alt="image" src="../../images/pkone-lightshow-v3.jpg"></p>
 <p>Most of the settings in the <a href="../../../mechs/lights/">Lights</a> documentation apply to LEDs connected to PKONE Lightshow
 boards, however there are a few PKONE-specific things to know.</p>
 <p>Overview video about serial LEDs:</p>
@@ -48738,9 +48738,10 @@ those channels using the <code>channels</code> setting or use <code>start_channe
 setting for configuring lights in the common platform way. For instance
 a platform for GIs will configure single channel white lights or a
 serial LED controller will configure RGB lights with three channels.</p>
-<p>PKONE assumes RGB or RGBW lights by default (depending upon which
-firmware your Lightshow board is running). For everything else (i.e.
-RGBW) you have to use channels.</p>
+<p>Legacy PKONE firmware assumes RGB or RGBW lights for the whole board.
+Lightshow firmware 3.0 identifies itself as <code>MIX</code>; configure each used group
+under <code>pkone: lightshow_groups:</code> as described in the
+<a href="../../../config/pkone/">PKONE config reference</a>.</p>
 <p>The PKONE Lightshow supports 512 LEDs on eight groups (64 in each
 group).</p>
 <h3 id="light-numbers">Light Numbers</h3>
@@ -48776,8 +48777,9 @@ for you (please note the <code>type</code> setting is required when using
 <span class="w">    </span><span class="nt">subtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led</span>
 <span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rgbw</span><span class="w">   </span><span class="c1"># will use red: 0-1-7, green: 0-1-8, blue: 0-1-9, white: 0-1-10</span>
 </code></pre></div>
-<p>This method of chaining your LEDs works exactly the same way whether
-your Lightshow board is running RGB or RGBW firmware.</p>
+<p>Do not mix RGB and RGBW pixels within one physical group. Choose one type for
+the group, then use that same <code>type:</code> for every light on that group. Different
+groups on a firmware 3.0 board may use different types.</p>
 <p>See <a href="../../../mechs/lights/ws2812/">WS2811 and WS2812 LEDs in Pinball</a> for additional
 details.</p>
 <h2 id="color-correction">Color Correction</h2>

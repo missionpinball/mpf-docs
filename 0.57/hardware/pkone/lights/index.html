@@ -48623,16 +48623,15 @@ icons & this code generated via https://realfavicongenerator.net
 <ul>
 <li><a href="../../../config/lights/">lights:</a></li>
 </ul>
-<p>Up to 45 Simple LED lights are supported on Penny K Pinball PKONE
+<p>Up to 40 Simple LED lights are supported on Penny K Pinball PKONE
 Lightshow boards. Simple LED lights are single channel monochromatic
 LEDs most frequently used under colored inserts in the playfield or
 behind colored artwork behind a backglass.</p>
 <h2 id="number">number:</h2>
 <p>When you're using PKONE Lightshow boards, simple LEDs plug into
-individual Lightshow boards. Then the Lightshow boards are connected
-together in a chain with other add-on boards (such as PKONE Extension
-boards) to the controller.</p>
-<p><img alt="image" src="../../images/pkone-lightshow.png"></p>
+individual Lightshow boards. The Lightshow boards share the same CAN
+chain as EX2 and Switch boards.</p>
+<p><img alt="image" src="../../images/pkone-lightshow-v3.jpg"></p>
 <p>The <code>number:</code> setting for each simple LED is its board's Address ID
 number in the PKONE chain, then the dash, then the simple LED output
 number.</p>
@@ -48648,6 +48647,7 @@ number.</p>
 <ul>
 <li>The PKONE Lightshow board Address ID switches can be set from 0 to
     3.</li>
+<li>Simple-light outputs are numbered 1 to 40.</li>
 </ul>
 <h2 id="subtype">subtype:</h2>
 <p>Single value, type: <code>string</code>. Defaults to empty.</p>

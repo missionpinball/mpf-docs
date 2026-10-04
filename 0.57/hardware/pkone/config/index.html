@@ -5668,10 +5668,10 @@ icons & this code generated via https://realfavicongenerator.net
 </li>
         
           <li class="md-nav__item">
-  <a href="#finding-the-com-ports-on-max-or-linux" class="md-nav__link">
+  <a href="#finding-the-com-ports-on-mac-or-linux" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Finding the COM ports on Max or Linux
+        Finding the COM ports on Mac or Linux
       
     </span>
   </a>
@@ -48650,10 +48650,10 @@ icons & this code generated via https://realfavicongenerator.net
 </li>
         
           <li class="md-nav__item">
-  <a href="#finding-the-com-ports-on-max-or-linux" class="md-nav__link">
+  <a href="#finding-the-com-ports-on-mac-or-linux" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Finding the COM ports on Max or Linux
+        Finding the COM ports on Mac or Linux
       
     </span>
   </a>
@@ -48719,13 +48719,13 @@ icons & this code generated via https://realfavicongenerator.net
 <li><a href="../../../config/hardware/">hardware:</a></li>
 <li><a href="../../../config/pkone/">pkone:</a></li>
 </ul>
-<p>This guide explains how to configure MPF to work with a Penny K Pinball
-controller (PKONE NANO) and add-on boards.</p>
+<p>This guide explains how to configure MPF to work with a PKONE EX2 and
+the EX2, Switch and Lightshow boards on its CAN chain.</p>
 <h2 id="1-install-the-usb-driver">1. Install the USB driver</h2>
-<p>PKONE Pinball controllers use a USB chip from STM. On most operating
+<p>PKONE EX2 boards use STM32 USB. On most operating
 systems the driver is built-in (Windows 10, Linux, MacOS), so there is
 no need to download and install the STM driver.</p>
-<p>Once this is done, when you plug in and power on your PKONE controller,
+<p>Once this is done, when you plug in and power on your EX2,
 you should see some kind of notification that new hardware has been
 detected. What exactly you see will depend on what OS you have.</p>
 <p>TODO: Finish this section</p>
@@ -48736,14 +48736,14 @@ platform as <code>pkone</code> in your machine-wide config file, like this:</p>
 <span class="w">  </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pkone</span>
 </code></pre></div>
 <h2 id="3-find-the-pkone-com-port">3. Find the PKONE COM port</h2>
-<p>Even though the PKONE controllers are USB devices, they use "virtual"
-COM ports to communicate with the host computer running MPF. On your
+<p>Although EX2 is a USB device, it uses a virtual
+COM port to communicate with the host computer running MPF. On your
 computer, if you look at your list of ports and then connect and power
-on your PKONE controller, you should see a new port appear. The exact
+on your EX2, you should see a new port appear. The exact
 name and number of this port will vary depending on your computer, what
-other devices you have, and which port you plug the PKONE controller
+other devices you have, and which port you plug the EX2
 into.</p>
-<p>You need to tell MPF which port is used for the PKONE Controller, and
+<p>You need to tell MPF which port is used for the EX2, and
 the first step to doing that is to figure out what the port names are on
 your system:</p>
 <h3 id="finding-the-com-ports-on-windows">Finding the COM ports on Windows</h3>
@@ -48751,11 +48751,11 @@ your system:</p>
 Start button (or whatever it's called now) and choose "Device
 Manager" from the popup menu.</p>
 <p>Then expand the "Ports (COM &amp; LPT)" menu section to see which ports
-the FAST Controller is using. The easiest way to do this is to open the
-Device Manager to that section, then plug your PKONE Controller in (or
+the EX2 is using. The easiest way to do this is to open the
+Device Manager to that section, then plug your EX2 in (or
 power it on) and just see which port name appears.</p>
 <p>The port name will start with "COM" and then be a number.</p>
-<h3 id="finding-the-com-ports-on-max-or-linux">Finding the COM ports on Max or Linux</h3>
+<h3 id="finding-the-com-ports-on-mac-or-linux">Finding the COM ports on Mac or Linux</h3>
 <p>On Mac or Linux, it's easiest to find the port numbers via the terminal
 window (or console window). To do that, open a new window and run the
 following command:</p>
@@ -48774,7 +48774,7 @@ then a number. (The number will be different on every system.)</p>
 <p>Next you need to add the port to your machine config file. To do this,
 create a new section called <code>pkone:</code>, and then add a <code>port:</code> setting
 under it.</p>
-<p>Then if you have a PKONE Nano controller, enter the name of the port.</p>
+<p>Then enter the EX2 virtual serial port name.</p>
 <p>So an example for Windows might look like this:</p>
 <pre><code>pkone:
     port: com3

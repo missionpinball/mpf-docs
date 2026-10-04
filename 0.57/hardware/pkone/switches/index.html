@@ -48608,26 +48608,31 @@ follow the guides and instructions in the
 <p>However there are a few things to know and some additional options you
 get with Penny K Pinball PKONE hardware that is discussed here.</p>
 <h2 id="number">number:</h2>
-<p>When you're using PKONE Extension boards, switches plug into individual
-Extension boards. Then the Extension boards are connected together in a
-chain.</p>
-<p><img alt="image" src="../../images/pkone-extension.png"></p>
+<p>Switch inputs may be connected to either an EX2 or a Switch board. EX2
+provides 30 standard switch inputs plus five opto inputs. The Switch board
+provides 40 switch inputs.</p>
+<p><img alt="image" src="../../images/pkone-ex2.jpg"></p>
+<p><img alt="Switch board connection map" src="../../images/pkone-switch.jpg"></p>
 <p>The <code>number:</code> setting for each switch is its board's Address ID number
-in the PKONE chain, then the dash, then the switch input number (1-35).</p>
+in the PKONE chain, then the dash, then the switch input number. EX2 has
+inputs 1-35; the Switch board has inputs 1-40.</p>
 <div class="highlight"><pre><span></span><code><span class="nt">switches</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">my_switch</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0-0</span><span class="w">    </span><span class="c1"># Extension board at address 0, switch 0</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0-1</span><span class="w">    </span><span class="c1"># EX2 board at address 0, switch 1</span>
 <span class="w">  </span><span class="nt">some_other_switch</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2-24</span><span class="w">    </span><span class="c1"># Extension board at address 2, switch 24</span>
+<span class="w">    </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2-24</span><span class="w">    </span><span class="c1"># EX2 board at address 2, switch 24</span>
 </code></pre></div>
 <p>Notes:</p>
 <ul>
-<li>The PKONE Extension board Address ID switches can be set from 0 to
+<li>The PKONE EX2 and Switch board Address ID switches can be set from 0 to
     7.</li>
-<li>Switches 31-35 are setup in the hardware to support optos and
+<li>EX2 inputs 31-35 are set up in the hardware to support optos and
     other normally closed (NC) switches. Do not list them as NC
     switches in your configuration as the hardware already inverts the
     values before sending them to MPF.</li>
+<li>The Switch board reports inputs 1-40. Its two physical coil connectors
+    are disabled by firmware 3.0 and MPF rejects attempts to configure
+    them as coils.</li>
 </ul>
 <h2 id="what-if-it-did-not-work">What if it did not work?</h2>
 <p>Have a look at our

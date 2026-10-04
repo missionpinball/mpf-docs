@@ -25077,6 +25077,17 @@ icons & this code generated via https://realfavicongenerator.net
 </li>
         
           <li class="md-nav__item">
+  <a href="#lightshow_groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        lightshow_groups:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#console_log" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -48690,6 +48701,17 @@ icons & this code generated via https://realfavicongenerator.net
 </li>
         
           <li class="md-nav__item">
+  <a href="#lightshow_groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        lightshow_groups:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#console_log" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -48807,6 +48829,18 @@ if you have Penny K Pinball PKONE hardware.</p>
 <div class="highlight"><pre><span></span><code><span class="nt">pkone</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">com3</span>
 </code></pre></div>
+<p>Lightshow firmware 3.0 reports <code>MIX</code> and lets every addressable-light group
+use either RGB or RGBW pixels. Declare each group that the machine uses:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">pkone</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">com3</span>
+<span class="w">  </span><span class="nt">lightshow_groups</span><span class="p">:</span>
+<span class="w">    </span><span class="s">"1-1"</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rgb</span>
+<span class="w">    </span><span class="s">"1-2"</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rgbw</span>
+</code></pre></div>
+<p>The key is <code>board address-group</code>. Valid board addresses are 0-3 and valid
+groups are 1-8. MPF sends the group type during startup and requires the
+board to acknowledge it before creating LED channels. Legacy RGB-only and
+RGBW-only firmware cannot change type per group.</p>
 <h2 id="required-settings">Required settings</h2>
 <p>The following sections are required in the <code>pkone:</code> section of your
 config:</p>
@@ -48819,6 +48853,9 @@ config. (If you don't include them, the default will be used).</p>
 <h3 id="baud">baud:</h3>
 <p>Single value, type: <code>integer</code>. Default: <code>115200</code></p>
 <p>Baud rate to use on the serial port.</p>
+<h3 id="lightshow_groups">lightshow_groups:</h3>
+<p>Dictionary of Lightshow <code>board address-group</code> keys to <code>rgb</code> or <code>rgbw</code>.
+Required for every used group on firmware that identifies itself as <code>MIX</code>.</p>
 <h3 id="console_log">console_log:</h3>
 <p>Single value, type: one of the following options: none, basic, full.
 Default: <code>none</code></p>
