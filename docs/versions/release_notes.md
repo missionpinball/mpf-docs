@@ -9,6 +9,69 @@ Here's the history of the various release versions and changes of the Mission Pi
 Note you can also click the "Assets" section at the end of the notes for each release
 to download the PDF or HTML versions of the documentation for that specific release.
 
+## Development versions
+
+### `0.81.0.dev*` and `0.58.0.dev*`
+
+Pending release: Late October, 2026
+
+Versions 81 and 58 represent the same changes made from 0.80.1 to 0.81.0 and 0.57.6 to 0.58.0.
+
+There are minor breaking changes, but for most developers this upgrade should be relatively low-effort.
+Those changes are:
+* FAST EXP requires firmware 0.48 at minimum on all boards
+* Builtin Twitch plugin was removed
+* some logger defaults may have changed - file and console logs are now separately filterable, but settings that were not correctly applying before may now be taking effect.
+
+### New Features
+* added Boolean as a settings type
+* implement `dc_motor` device with `MotorPlatformInterface`
+* add soft power down trigger event and callback
+* add new monitored properties: switch numbers, magnet enabled state
+* echo the cli params by default during `mpf game` run, allow `-e` to silence
+* add `shot:delay_events_list` to allow more options for temporarily blocking shot handling
+* added `state_machine:repost_start_events_on_restore` and `state_machine_states:events_when_restored`
+* add `data_manager:use_fsync` option
+
+### New Platform Features
+* FAST EXP `ER` command support - Breaking change on lighting configuration (requires EXP firmware 0.48+)
+* FAST soft power button hooks into generic soft power down system (`WP` command support)
+* FAST `dc_motor` implementation
+* Add `vpx_reset` BCP subcommand for VPX-driven state reset
+* Update PinProc for Python 3.13 and 3.14
+* PKONE firmware 3.0 support
+* add configs for Neoseg displays on FAST EXP light control hardware
+
+### Improvements
+* add "enabled" monitoring to magnets
+* include `*_won` event arguments for each player on match_has_match and match_no_match
+* allow `**_kwargs` instead of `**kwargs` in custom event handlers
+* utility function `string_to_ms` should not crash with more obvious cases
+* DeviceManager initialization: catch exceptions instead of hanging
+* use the machine error log when receiving SIGINT
+* change yaml interface to use thread locals
+* replace `pkg_resources.iter_entry_points` with `importlib.metadata.entry_points`
+* improve duplicate light address detected error message
+
+### Platform Improvements
+* info log before each EXP board validation during initialization
+* FAST base communicator log configuration uses debug boolean instead of string
+* handle FAST serial response timeout/retry that froze startup on a lost reply
+* include EXP board info in FAST `get_info_string`
+
+### Bug Fixes
+* Fix EventReferenceParser for Python 3.14 (ast.Str → ast.Constant)
+* FAST: clamp LED fade brightness to fix binascii 'Odd-length string' crash
+* Conditional-only handler cleanup (addresses stalls during ball end cleanup)
+* failed machine initialization performs crash style shutdown
+* fix logging level filtering so that file-only or console-only logging is possible
+* Auditor treats event and player variable selections as set (avoid duplicate logging of `game_ended` and more)
+* fix broken conditional compares (`0 > x > 1`)
+* Reset combo switch state when containing mode stops
+
+### Breaking Changes
+* removed Twitch plugin
+
 ## 0.80.1 (and 0.57.6)
 Release: September 28, 2026
 
