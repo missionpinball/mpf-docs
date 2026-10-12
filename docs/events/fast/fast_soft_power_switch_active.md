@@ -9,7 +9,7 @@ title: fast_soft_power_switch_active
 
 !!! info ""
 
-    Event available in MPF 0.81
+    Event new in MPF 0.81
 
 Event is posted by the FAST Neuron's soft power switch when it is pressed.
 

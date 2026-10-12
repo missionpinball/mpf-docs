@@ -130,7 +130,7 @@ The start state of your state machine.
 
 !!! info ""
 
-    Configuration property available in MPF 0.81/0.58
+    Configuration property new in MPF 0.81/0.58
 
 Single value, type: `boolean`(`true`/`false`). Default: `false`
 

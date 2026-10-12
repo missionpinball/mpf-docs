@@ -14,6 +14,9 @@ title: "data_manager: Config Reference"
 The *data_manager:* section of the machine configuration file lets you
 control how the data manager saves data.
 
+!!! info ""
+
+    data_manager configuration is available starting in MPF 0.81/0.58
 
 ``` yaml
 data_manager:

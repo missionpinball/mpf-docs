@@ -9,7 +9,7 @@ title: machine_request_shutdown
 
 !!! info ""
 
-    Event available in MPF 0.81
+    Event new in MPF 0.81
 
 This is a *Boolean Event* posted by the machine when
 a soft shutdown request has been made. Components may
