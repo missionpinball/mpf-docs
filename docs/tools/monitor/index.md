@@ -29,7 +29,7 @@ Here's a screen shot of it in action:
     moving balls or anything. But it does enough that you can use it to do
     real work on a machine when that machine is not nearby.
 
-![image](images/mpf-monitor.jpg)
+![image](images/mpf-monitor.png)
 
 Video about developing your game without hardware:
 
