@@ -5,9 +5,9 @@ title: Installing MPF on Linux
 
 # Installing MPF on Linux
 
-!!! warning "MPF 0.80 is Coming Soon"
+!!! warning "MPF 0.80 is Available"
 
-    This installation guide is for MPF 0.57 and the legacy MC, which is being replaced in the upcoming MPF 0.80 with the Godot MC. If you are just getting started with MPF, we recommend you [install MPF 0.80](../index.md) instead.
+    This installation guide is for MPF 0.57 and the legacy MC, which has been replaced in MPF 0.80 with the Godot MC. If you are just getting started with MPF, we recommend you [install MPF 0.80](index.md) instead.
 
 ## OS Preparation
 

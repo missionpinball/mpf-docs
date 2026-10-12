@@ -36,13 +36,18 @@ Pi) in their machine to run MPF.
 
 ## What Python version can I use with MPF?
 
-The stable version (0.57, currently on 0.57.5) of MPF can be used with Python versions 3.8-3.12.
+The current revision (0.80.1) of MPF supports Python 3.10 - 3.14, and does not support the legacy Media Controller (mpf-mc).
+The new media controller for 0.80 is called GMC, and is in active development.
+
+The legacy version (0.57, currently on 0.57.6) of MPF can be used with Python versions 3.8-3.12.
 We walk you through getting Python installed in our [installation documentation](../install/index.md).
 
 The previous version of MPF, 0.56. is only compatible with Python from version 3.7 through 3.9.
 
-The next revision (0.80.0) of MPF supports Python 3.10 - 3.14, and does not support the legacy Media Controller.
-The new media controller for 0.80 is called GMC, and is in active development.
+The development revision of MPF is 0.81, which also supports Python 3.10 - 3.14. Version 0.80+ all support the GMC Godot integration. The legacy version backports will move to 0.58 when main development releases 0.81.
+
+You can also follow the MPF github branch directly, `dev` is the active development branch and the standard target for most pull requests.
+
 
 ## Should I use the stable version or development version?
 
@@ -58,4 +63,12 @@ You can install older versions of MPF by specifying them with pip, like this:
 
 ```sh
 pip install mpf==0.56.0.dev33
+```
+
+```sh
+pip install mpf==0.57.5
+```
+
+```sh
+pip install mpf==0.81.0.dev7
 ```

@@ -8,7 +8,7 @@ title: Installing GMC
 
     Because GMC is brand new, you will likely be the first to encounter a scenario or request a feature. Having your project in a repository means that GMC developers can clone and run your game to quickly identify and fix issues, understand your goals, and validate requested features against your code. This is the fastest and smoothest way to make GMC better!
 
-## Upgrading a Legacy MPF-MC project (on 0.57.5) to GMC
+## Upgrading a Legacy MPF-MC project (on 0.57.6) to GMC
 
 For details regarding updating an existing project built on the 0.57 and earlier Media Controller (MPF-MC), see the
 [Migrating to MPF 0.80 and Godot GMC](../install/0.80.md).

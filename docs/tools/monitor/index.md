@@ -19,7 +19,7 @@ The MPF Monitor can run on Windows, Mac, and Linux. It uses
 [PyQt6](https://www.riverbankcomputing.com/software/pyqt/intro) (Python
 bindings for Qt6) for its visual framework.
 
-The current version of Monitor is 1.0.0, which works with MPF 0.57, 0.58, 0.80, and 0.81.
+The current version of Monitor is 1.0.1, which works with MPF 0.57, 0.58, 0.80, and 0.81.
 
 Here's a screen shot of it in action:
 
@@ -41,7 +41,7 @@ Video about developing your game without hardware:
 
 * Works across many versions of MPF via the BCP protocol (BCP version 1.1)
 
-    * Monitor version 1.0 works with MPF 0.57-58, and 0.80-0.81
+    * Monitor version 1.0 works with MPF 0.57-58+, and 0.80-0.81+
     * Monitor version 0.57 also works with these versions (57+)
 
 * Connects to a live running instance of MPF, locally or remotely

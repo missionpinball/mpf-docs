@@ -6,9 +6,8 @@ title: Welcome to The Mission Pinball Framework!
 
 *Open source software for powering real pinball machines!*
 
-## Current version: 0.80.0 released April 25, 2026
-
-## Long Term support version: 0.57.5 released April 25, 2026
+## Current version: `0.80.1` <small>released September 28, 2026</small>
+## Long Term support: `0.57.6` <small>released September 28, 2026</small>
 
 The **Mission Pinball Framework** (MPF) is a free Python-based pinball software
 framework used to run real pinball machines! It is compatible with
@@ -68,7 +67,7 @@ Pinball machines, control systems, and pinball mechs.
 
 ## Tutorial
   * [Tutorial for MPF 0.56/0.57](tutorials/legacy_mc/index.md)
-  * Tutorial for MPF 0.80 coming soon!
+  * Tutorial for MPF 0.80+ coming soon!
 
 ## Game Programming
 

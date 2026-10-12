@@ -8,7 +8,7 @@ title: Downloading & Installing MPF
 
 # Installing MPF 0.80 or 0.57
 
-The current stable version of MPF is `0.80.0`. The long term legacy support version is `0.57.5`. MPF 0.80.0 requires the Godot MPF-GMC plugin to be version `1.0.0`.
+The current stable version of MPF is `0.80.1`. The long term legacy support version is `0.57.6`. MPF 0.80.1 requires the Godot MPF-GMC plugin to be version `1.0.0`.
 
 --8<-- "latest_versions.md"
 

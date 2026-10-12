@@ -16,7 +16,7 @@ Updated: September 2026
 * [MPF 0.80](https://github.com/missionpinball/mpf/tree/0.80.x) `0.80.0` - `git@github.com:missionpinball/mpf.git` tag `v0.80.0` (or `0.81.0.dev4` testing on branch `dev`)
 * [MPF-GMC](https://github.com/missionpinball/mpf-gmc) `1.0.0` - `git@github.com:missionpinball/mpf-gmc.git` branch `main`
 * [Godot Editor 4.7](https://godotengine.org/download)
-* [MPF Monitor](https://github.com/missionpinball/mpf-monitor) `1.0.0` - `git@github.com:missionpinball/mpf-monitor.git` branch `dev`
+* [MPF Monitor](https://github.com/missionpinball/mpf-monitor) `1.0.1` - `git@github.com:missionpinball/mpf-monitor.git` branch `dev`
 
 
 ## Quickstart for GMC

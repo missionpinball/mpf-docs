@@ -56,10 +56,10 @@ Specification of the remote breakout boards.
 
 Single value, type: `list`. Defaults to empty.
 
-!!! note "This feature is not yet available and will require multiple upgrade steps"
+!!! note "This feature requires upgrade steps"
 
     `led_ports` configuration is only supported on FAST EXP firmware 0.48, and as such
-    requires upgrading to MPF version `0.58.0.dev1` or `0.81.0.dev1` via git or manual install.
+    requires upgrading to at least MPF version `0.58.0.dev1` or `0.81.0.dev1` via git or manual install.
     To prepare for this support, you should upgrade to `0.57.5` or `0.80.0` and upgrade all EXP
     firmware to 0.48, which is mandatory on 0.58 and 0.81 even if not using any custom header definitions.
 
