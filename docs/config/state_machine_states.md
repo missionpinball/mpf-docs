@@ -28,15 +28,27 @@ used).
 
 List of one (or more) events.
 
-The event will be posted when the state machine enters this state. This
+These events will be posted when the state machine enters this state. This
 is the entry action for this state in your finite state machine.
 
 ### events_when_stopped:
 
 List of one (or more) events.
 
-The event will be posted when the state machine leaves this state. This
+These events will be posted when the state machine leaves this state. This
 is the exit action for this state in your finite state machine.
+
+### events_when_restored:
+
+!!! info ""
+
+    Configuration property available in MPF 0.81/0.58
+
+List of one (or more) events.
+
+These events will be posted when the state machine is restored to this state.
+This happens when the mode containing your state machine is stopped and then started again.
+For example, if a mode is active across balls for a player, or is stopped and restarted within a single ball.
 
 ### label:
 
