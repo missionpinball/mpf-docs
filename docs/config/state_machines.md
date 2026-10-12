@@ -126,6 +126,17 @@ Single value, type: `string`. Default: `start`
 
 The start state of your state machine.
 
+### repost_start_events_on_restore:
+
+!!! info ""
+
+    Configuration property available in MPF 0.81/0.58
+
+Single value, type: `boolean`(`true`/`false`). Default: `false`
+
+If enabled, the `events_when_started` for a state will be posted whenever that state is restored.
+States are restored when a state machine that is part of a mode has its mode start, which can be across balls or within the same playing ball.
+
 ### console_log:
 
 Single value, type: one of the following options: none, basic, full.
