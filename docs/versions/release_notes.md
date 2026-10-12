@@ -29,7 +29,7 @@ Those changes are:
 * add soft power down trigger event and callback
 * add new monitored properties: switch numbers, magnet enabled state
 * echo the cli params by default during `mpf game` run, allow `-e` to silence
-* add `shot:delay_events_list` to allow more options for temporarily blocking shot handling
+* add `shot:delay_event_list` to allow more options for temporarily blocking shot handling
 * added `state_machine:repost_start_events_on_restore` and `state_machine_states:events_when_restored`
 * add `data_manager:use_fsync` option
 
