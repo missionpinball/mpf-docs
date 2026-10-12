@@ -23720,6 +23720,17 @@ icons & this code generated via https://realfavicongenerator.net
 </li>
         
           <li class="md-nav__item">
+  <a href="#events_when_restored" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        events_when_restored:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#label" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -48634,6 +48645,17 @@ icons & this code generated via https://realfavicongenerator.net
 </li>
         
           <li class="md-nav__item">
+  <a href="#events_when_restored" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        events_when_restored:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#label" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -48732,12 +48754,20 @@ section of your config. (If you don't include them, the default will be
 used).</p>
 <h3 id="events_when_started">events_when_started:</h3>
 <p>List of one (or more) events.</p>
-<p>The event will be posted when the state machine enters this state. This
+<p>These events will be posted when the state machine enters this state. This
 is the entry action for this state in your finite state machine.</p>
 <h3 id="events_when_stopped">events_when_stopped:</h3>
 <p>List of one (or more) events.</p>
-<p>The event will be posted when the state machine leaves this state. This
+<p>These events will be posted when the state machine leaves this state. This
 is the exit action for this state in your finite state machine.</p>
+<h3 id="events_when_restored">events_when_restored:</h3>
+<div class="admonition info">
+<p>Configuration property new in MPF 0.81/0.58</p>
+</div>
+<p>List of one (or more) events.</p>
+<p>These events will be posted when the state machine is restored to this state.
+This happens when the mode containing your state machine is stopped and then started again.
+For example, if a mode is active across balls for a player, or is stopped and restarted within a single ball.</p>
 <h3 id="label">label:</h3>
 <p>Single value, type: <code>string</code>.</p>
 <p>The full name/description of this state.</p>

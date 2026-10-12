@@ -48727,20 +48727,22 @@ their machine, they install a dedicated computer (or even a Raspberry
 Pi) in their machine to run MPF.</p>
 <h2 id="latest-versions">Latest Versions</h2>
 <p>If you are creating a new game and are installing all of the MPF tools from scratch, you should start with the most up-to-date versions of everything you can. This will ensure you have the latest features and bug fixes, and are the easiest for the community to support.
-The most updated full installation (known-working on Windows and Linux) as of September 2026 is:</p>
+The most updated full installation (known-working on Windows and Linux) as of October 2026 is:</p>
 <ul>
 <li>Python 3.14</li>
-<li>MPF 0.80.0 (via pip)</li>
+<li>MPF 0.80.1 (via pip)</li>
 <li>MPF-GMC 1.0.0 (via Godot Asset Library)</li>
-<li>Godot Editor 4.7</li>
-<li>MPF Monitor 1.0.0</li>
+<li>Godot Editor 4.7.2</li>
+<li>MPF Monitor 1.0.1</li>
 </ul>
 <h2 id="what-python-version-can-i-use-with-mpf">What Python version can I use with MPF?</h2>
-<p>The stable version (0.57, currently on 0.57.5) of MPF can be used with Python versions 3.8-3.12.
+<p>The current revision (0.80.1) of MPF supports Python 3.10 - 3.14, and does not support the legacy Media Controller (mpf-mc).
+The new media controller for 0.80 is called GMC, and is in active development.</p>
+<p>The legacy version (0.57, currently on 0.57.6) of MPF can be used with Python versions 3.8-3.12.
 We walk you through getting Python installed in our <a href="../../install/">installation documentation</a>.</p>
 <p>The previous version of MPF, 0.56. is only compatible with Python from version 3.7 through 3.9.</p>
-<p>The next revision (0.80.0) of MPF supports Python 3.10 - 3.14, and does not support the legacy Media Controller.
-The new media controller for 0.80 is called GMC, and is in active development.</p>
+<p>The development revision of MPF is 0.81, which also supports Python 3.10 - 3.14. Version 0.80+ all support the GMC Godot integration. The legacy version backports will move to 0.58 when main development releases 0.81.</p>
+<p>You can also follow the MPF github branch directly, <code>dev</code> is the active development branch and the standard target for most pull requests.</p>
 <h2 id="should-i-use-the-stable-version-or-development-version">Should I use the stable version or development version?</h2>
 <p>We recommend that people use the latest "stable" (or "release")
 version of MPF unless you need specific features from the "dev" (next) version.</p>
@@ -48749,6 +48751,10 @@ version of MPF unless you need specific features from the "dev" (next) version.<
 <a href="../../versions/docs/">prior version documentation bundles</a>.</p>
 <p>You can install older versions of MPF by specifying them with pip, like this:</p>
 <div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span><span class="nv">mpf</span><span class="o">==</span><span class="m">0</span>.56.0.dev33
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span><span class="nv">mpf</span><span class="o">==</span><span class="m">0</span>.57.5
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span><span class="nv">mpf</span><span class="o">==</span><span class="m">0</span>.81.0.dev7
 </code></pre></div>
 <hr>
 <div class="admonition question">

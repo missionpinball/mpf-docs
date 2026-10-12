@@ -23837,6 +23837,17 @@ icons & this code generated via https://realfavicongenerator.net
 </li>
         
           <li class="md-nav__item">
+  <a href="#repost_start_events_on_restore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        repost_start_events_on_restore:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#console_log" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -48800,6 +48811,17 @@ icons & this code generated via https://realfavicongenerator.net
 </li>
         
           <li class="md-nav__item">
+  <a href="#repost_start_events_on_restore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        repost_start_events_on_restore:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#console_log" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -49019,6 +49041,13 @@ restart.</p>
 <h3 id="starting_state">starting_state:</h3>
 <p>Single value, type: <code>string</code>. Default: <code>start</code></p>
 <p>The start state of your state machine.</p>
+<h3 id="repost_start_events_on_restore">repost_start_events_on_restore:</h3>
+<div class="admonition info">
+<p>Configuration property new in MPF 0.81/0.58</p>
+</div>
+<p>Single value, type: <code>boolean</code>(<code>true</code>/<code>false</code>). Default: <code>false</code></p>
+<p>If enabled, the <code>events_when_started</code> for a state will be posted whenever that state is restored.
+States are restored when a state machine that is part of a mode has its mode start, which can be across balls or within the same playing ball.</p>
 <h3 id="console_log">console_log:</h3>
 <p>Single value, type: one of the following options: none, basic, full.
 Default: <code>basic</code></p>
