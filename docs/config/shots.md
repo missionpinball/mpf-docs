@@ -177,7 +177,7 @@ from being hit for two seconds.
 
 !!! info ""
 
-    Configuration property available in MPF 0.81/0.58
+    Configuration property new in MPF 0.81/0.58
 
 List of one (or more) device control events
 ([Instructions for entering device control events](instructions/device_control_events.md)). Defaults to empty.

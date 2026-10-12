@@ -9,7 +9,7 @@ title: machine_will_shutdown
 
 !!! info ""
 
-    Event available in MPF 0.81
+    Event new in MPF 0.81
 
 Posted when soft shutdown request has been made and
 was not blocked by any handlers, meaning the machine

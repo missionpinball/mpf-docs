@@ -42,7 +42,7 @@ is the exit action for this state in your finite state machine.
 
 !!! info ""
 
-    Configuration property available in MPF 0.81/0.58
+    Configuration property new in MPF 0.81/0.58
 
 List of one (or more) events.
 

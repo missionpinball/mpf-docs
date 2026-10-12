@@ -2,13 +2,13 @@
 title: Downloading & Installing MPF
 ---
 
-!!! note "New MPF Coming Soon!"
+!!! note "MPF with Godot!"
 
-    The next major release of MPF will be 0.80 and is coming soon! This exciting advancement offers a brand-new media controller based on the powerful Godot game engine. If you are just getting started with MPF, consider giving 0.80 a try!
+    0.80 is fully released! This exciting advancement offers a brand-new media controller based on the powerful Godot game engine. If you are just getting started with MPF, consider giving 0.80 a try!
 
 # Installing MPF 0.80 or 0.57
 
-The current stable version of MPF is `0.80.1`. The long term legacy support version is `0.57.6`. MPF 0.80.1 requires the Godot MPF-GMC plugin to be version `1.0.0`.
+The current stable version of MPF is `0.80.1`. The long term legacy support version is `0.57.6`. MPF `0.80.1` requires the Godot MPF-GMC plugin to be version `1.0.0`.
 
 --8<-- "latest_versions.md"
 
@@ -91,6 +91,9 @@ pip install -e .
 
 Now when inside your virtual environment, you can run MPF simply by typing `mpf` while in your machine folder. Typing `pip list` will reveal that the MPF module is being run directly from the repo folder on your computer. To update MPF, navigate inside the MPF repo folder and type `git fetch` and `git pull`.
 
+!!! note for coders
+
+    MPF is actively developed on the `dev` branch. If you would like to contribute, please send pull requests to `dev`!
 
 ***Advantages of Expert Installation:***
 
