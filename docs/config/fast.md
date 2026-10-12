@@ -14,7 +14,7 @@ title: "fast: Config Reference"
 
 # 2026 Documentation Update
 
-The following config documentation is relevant for MPF 0.57.5 and 0.80.0.
+The following config documentation is relevant for MPF 0.57.5+ and 0.80+.
 
 Last updated: April 26, 2026.
 

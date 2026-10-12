@@ -4,13 +4,22 @@ title: MPF Release Notes
 
 # MPF Release Notes
 
+Here's the history of the various release versions and changes of the Mission Pinball Framework.
 
-Here's the history of the various release versions and changes of the
-Mission Pinball Framework.
+Note you can also click the "Assets" section at the end of the notes for each release
+to download the PDF or HTML versions of the documentation for that specific release.
 
-Note you can also click the "Assets" section at the end of the notes
-for each release to download the PDF or HTML versions of the
-documentation for that specific release.
+## 0.80.1 (and 0.57.6)
+Release: September 28, 2026
+
+Mainline version 0.80.1 has minor bugfixes and updates PROC. Version 0.57.6 contains the same fixes, retroactively applied on 0.57.5
+
+### New Features
+* pinproc updated for Pythons 3.13 and 3.14
+
+### Bug Fixes
+* fix OutgoingBallsHandler logmixin bug
+* fix Auditor counting multiple instances of the same event (commonly `game_ended` getting double counted)
 
 ## 0.80.0
 
