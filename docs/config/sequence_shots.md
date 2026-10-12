@@ -142,15 +142,13 @@ them.
 List of one (or more) device control events
 ([Instructions for entering device control events](instructions/device_control_events.md)). Defaults to empty.
 
-Events which will temporarily prevent new sequences from starting. Same
-as `delay_switch_list` but with events.
+Events which will temporarily prevent new sequences from starting. Same as `delay_switch_list` but with events.
 
 ### delay_switch_list:
 
 One or more sub-entries. Each in the format of string name of a
 [switches:](switches.md) device :
-`time string (ms)`
-([Instructions for entering time strings](instructions/time_strings.md))
+`time string (ms)` ([Instructions for entering time strings](instructions/time_strings.md))
 
 Switches which will temporarily prevent new sequences from starting.
 This lets you specify a switch along with a time value that will prevent
@@ -167,8 +165,7 @@ A sequence of events which will complete the sequence.
 ### playfield:
 
 Single value, type: `string` name of a
-[playfields:](playfields.md) device. Default:
-`playfield`
+[playfields:](playfields.md) device. Default: `playfield`
 
 The playfield this sequence is on.
 

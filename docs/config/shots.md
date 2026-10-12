@@ -173,6 +173,17 @@ shots:
 In this example an activation of `s_other_lane` will prevent the shot
 from being hit for two seconds.
 
+### delay_event_list:
+
+!!! info ""
+
+    Configuration property available in MPF 0.81/0.58
+
+List of one (or more) device control events
+([Instructions for entering device control events](instructions/device_control_events.md)). Defaults to empty.
+
+Events which will temporarily prevent new sequences from starting. Same as `delay_switch` but with events.
+
 ### disable_events:
 
 Comma separated list of one (or more) device control events
