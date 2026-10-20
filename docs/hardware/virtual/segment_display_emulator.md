@@ -28,7 +28,8 @@ Video about segment displays:
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Jyf3jxGXnTw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-For more information visit the following pages: \*
-[How to setup and use the virtual segment display emulator](../../mc/widgets/segment_display_emulator/how_to.md) \*
-[Segment Display Emulator widget](../../mc/widgets/segment_display_emulator/index.md) \* [Segment Display Platforms in MPF](../segment_display_platforms.md) \*
-[Segment Display player](../../config_players/segment_display_player.md)
+For more information visit the following pages:
+* [How to setup and use the virtual segment display emulator](../../mc/widgets/segment_display_emulator/how_to.md)
+* [Segment Display Emulator widget](../../mc/widgets/segment_display_emulator/index.md)
+* [Segment Display Platforms in MPF](../segment_display_platforms.md)
+* [Segment Display player](../../config_players/segment_display_player.md)
