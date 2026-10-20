@@ -48634,19 +48634,19 @@ Parameters:</p>
 <ul>
 <li><strong>audit_class</strong> – A string of the section we want this event to be logged to.</li>
 <li><strong>event</strong> – A string name of the event we're auditing.</li>
-<li><strong>**kwargs</strong> – Not used, but included since some of the audit events might include random kwargs.</li>
+<li>**<strong>kwargs</strong> – Not used, but included since some of the audit events might include random kwargs.</li>
 </ul>
 <p><code>audit_event(eventname, **kwargs)</code></p>
 <p>Record this event in the audit log.
 Parameters:</p>
 <ul>
 <li><strong>eventname</strong> – The string name of the event.</li>
-<li><strong>**kwargs</strong> – not used, but included since some types of events include kwargs.</li>
+<li>**<strong>kwargs</strong> – not used, but included since some types of events include kwargs.</li>
 </ul>
 <p><code>audit_player(**kwargs)</code></p>
 <p>Write player data to the audit log. Typically this is only called at the end of a game.</p>
 <p>Parameters:
-* <strong>**kwargs</strong> – not used, but included since some types of events include kwargs.</p>
+* **<strong>kwargs</strong> – not used, but included since some types of events include kwargs.</p>
 <p><code>audit_shot(name, profile, state)</code></p>
 <p>Record shot hit.</p>
 <p><code>audit_switch(change: mpf.core.switch_controller.MonitoredSwitchChange)</code></p>
@@ -48658,7 +48658,7 @@ Parameters:</p>
 <p>This method lets you enable the auditor so it only records things when you want it to. Typically this is called at the beginning of a game.</p>
 <p>Parameters:</p>
 <ul>
-<li><strong>**kwargs</strong> – No function here. They just exist to allow this method to be registered as a handler for events that might contain keyword arguments.</li>
+<li>**<strong>kwargs</strong> – No function here. They just exist to allow this method to be registered as a handler for events that might contain keyword arguments.</li>
 </ul>
 <p><code>enabled</code></p>
 <p>Attribute that's viewed by other core components to let them know they should send auditing events. Set this via the enable() and disable() methods.</p>

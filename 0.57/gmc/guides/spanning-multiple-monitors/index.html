@@ -48683,7 +48683,7 @@ icons & this code generated via https://realfavicongenerator.net
 <li><strong>Embed Subwindows</strong>: Off</li>
 </ul>
 <p>In the example images, we will configure the project for two 1600x900 displays, so 3200x900 overall.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/additional_display_project_display_settings.png" data-desc-position="bottom"><img alt="image" src="../../images/additional_display_project_display_settings.png" width="300"></a></p>
+<p></p>
 <h2 id="create-a-custom-window-scene">Create a custom Window scene</h2>
 <p>GMC uses a scene with an <code>MPFWindow</code> root node as the entry point for all displays and slides. There is a default <em>window.tscn</em> included in GMC that works for single-screen projects, but for a multi-screen project you'll need to create your own.</p>
 <p>In your project root <em>/slides</em> folder create a new scene with <code>MPFWindow</code> as the root node and save the scene (probably as <em>window.tscn</em> but you may choose something else).</p>
@@ -48699,12 +48699,12 @@ as that is the location for the GMC default assets.</p>
 </div>
 <p>Right-click on your new scene in the <em>FileSystem</em> window and select <strong>Set as Main Scene</strong>. This can be confirmed in the project settings.</p>
 <p>In the example images, we use the name "window_override", stored in our <code>&lt;gmc project root&gt;/slides/overrides/</code>.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/additional_display_project_main_scene.png" data-desc-position="bottom"><img alt="image" src="../../images/additional_display_project_main_scene.png" width="300"></a></p>
+<p></p>
 <h2 id="create-main-display">Create Main Display</h2>
 <p>The first display will be run on the main screen, and doesn't require extra setup. In your scene tree add a new node of type <code>MPFDisplay</code> and give it a name (this name will be how it's targeted in MPF <code>slide_player</code> ex: 'primary').</p>
 <p>In the <em>Inspector</em> panel set <code>is_default</code> to true and select an initial slide. For most use cases, the default GMC initial slide will work (<em>/addons/mpf-gmc/slides/startup.tscn</em>). Expand the <em>Layout &gt; Transform</em> section and set the size to be the dimensions of the main monitor.</p>
 <p>In the example image, we are setting up the first of two displays, "a_display" and "b_display".</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/additional_display_mpfwindow_and_mpfdisplay.png" data-desc-position="bottom"><img alt="image" src="../../images/additional_display_mpfwindow_and_mpfdisplay.png" width="300"></a></p>
+<p></p>
 <h2 id="create-a-window-container">Create a Window Container</h2>
 <p>The second display will run on a separate monitor, so Godot must be configured to generate a new application window on that monitor.</p>
 <p>Under your main Window root node, create a new node of type <code>Window</code> (just the default Godot <code>Window</code>, not the custom GMC <code>MPFWindow</code>).</p>
@@ -48720,9 +48720,9 @@ as that is the location for the GMC default assets.</p>
 <li><strong>Unresizable</strong>: On</li>
 <li><strong>Borderless</strong>: On</li>
 </ul>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/additional_display_window_node.png" data-desc-position="bottom"><img alt="image" src="../../images/additional_display_window_node.png" width="300"></a></p>
+<p></p>
 <p>Now create a new <code>MPFDisplay</code> child node of this <code>Window</code>. Set the same Initial Slide as the other, and under <em>Layout &gt; Transform &gt; Size</em> set the dimensions of the second monitor. Give this node a name that you will reference in MPF to target it (ex: 'mini-display').</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/additional_display_mpfdisplay_node.png" data-desc-position="bottom"><img alt="image" src="../../images/additional_display_mpfdisplay_node.png" width="300"></a></p>
+<p></p>
 <p>In the Editor scene view, you should now see two copies of the MPF logo, one for each display.</p>
 <p>You may need to change the layout positions of either of the display nodes a few times to get everything placed properly,
 and if you are programming and testing on one computer, you may need to make layout and sizing changes when you switch to the

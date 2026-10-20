@@ -48617,7 +48617,7 @@ icons & this code generated via https://realfavicongenerator.net
 <li><strong>event</strong> – String name of the event you're adding a handler for. Since events are text strings, they don't have to be pre-defined.</li>
 <li><strong>handler</strong> – The method that will be called when the event is fired.</li>
 <li><strong>priority</strong> – An arbitrary integer value that defines what order the handlers will be called in. The default is 1, so if you have a handler that you want to be called first, add it here with a priority of 2. (Or 3 or 10 or 100000.) The numbers don't matter. They're called from highest to lowest. (i.e. priority 100 is called before priority 1.)</li>
-<li><strong>**kwargs</strong> – Any any additional keyword/argument pairs entered here will be attached to the handler and called whenever that handler is called. Note these are in addition to kwargs that could be passed as part of the event post. If there's a conflict, the event-level ones will win.</li>
+<li>**<strong>kwargs</strong> – Any any additional keyword/argument pairs entered here will be attached to the handler and called whenever that handler is called. Note these are in addition to kwargs that could be passed as part of the event post. If there's a conflict, the event-level ones will win.</li>
 </ul>
 <p>Returns a EventHandlerKey to the handler which you can use to later remove the handler via remove_handler_by_key. Though you don't need to remove the handler since the whole point of this method is they're automatically removed when the mode stops.</p>
 <p>Note that if you do add a handler via this method and then remove it manually, that's ok too.</p>
@@ -48667,7 +48667,7 @@ icons & this code generated via https://realfavicongenerator.net
 <ul>
 <li><strong>mode_priority</strong> – Integer value of what you want this mode to run at. If you don't specify one, it will use the “Mode: priority” setting from this mode's configuration file.</li>
 <li><strong>callback</strong> – Callback to call when this mode has been started.</li>
-<li><strong>**kwargs</strong> – Catch-all since this mode might start from events with who-knows-what keyword arguments.</li>
+<li>**<strong>kwargs</strong> – Catch-all since this mode might start from events with who-knows-what keyword arguments.</li>
 </ul>
 <p>Warning: You can safely call this method, but do not override it in your mode code. If you want to write your own mode code by subclassing Mode, put whatever code you want to run when this mode starts in the mode_start method which will be called automatically.</p>
 <p><code>start_button_pressed()</code></p>
@@ -48683,7 +48683,7 @@ icons & this code generated via https://realfavicongenerator.net
 <p>Parameters:</p>
 <ul>
 <li><strong>callback</strong> – Method which will be called once this mode has stopped. Will only be called when the mode is running (includes currently stopping)</li>
-<li><strong>**kwargs</strong> – Catch-all since this mode might start from events with who-knows-what keyword arguments.</li>
+<li>**<strong>kwargs</strong> – Catch-all since this mode might start from events with who-knows-what keyword arguments.</li>
 </ul>
 <p>Warning: You can safely call this method, but do not override it in your mode code. If you want to write your own mode code by subclassing Mode, put whatever code you want to run when this mode stops in the mode_stop method which will be called automatically.</p>
 <p>Returns true if the mode is running. Otherwise false.</p>

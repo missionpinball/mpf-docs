@@ -48629,7 +48629,7 @@ icons & this code generated via https://realfavicongenerator.net
 <li><strong>load_method</strong> – The method that will be called when this mode code loads.</li>
 <li><strong>config_section_name</strong> – An optional string for the section of the configuration file that will be passed to the load_method when it's called.</li>
 <li><strong>priority</strong> – Int of the relative priority which allows remote methods to be called in a specific order. Default is 0. Higher values will be called first.</li>
-<li><strong>**kwargs</strong> – Any additional keyword arguments specified will be passed to the load_method.</li>
+<li>**<strong>kwargs</strong> – Any additional keyword arguments specified will be passed to the load_method.</li>
 </ul>
 <p>Note that these methods will be called once, when the mode code is first initialized during the MPF boot process.</p>
 <p><code>register_start_method(start_method, config_section_name=None, priority=0, **kwargs)</code></p>
@@ -48639,7 +48639,7 @@ icons & this code generated via https://realfavicongenerator.net
 <li><strong>start_method</strong> – The method that will be called when this mode code loads.</li>
 <li><strong>config_section_name</strong> – An optional string for the section of the configuration file that will be passed to the start_method when it's called.</li>
 <li><strong>priority</strong> – Int of the relative priority which allows remote methods to be called in a specific order. Default is 0. Higher values will be called first.</li>
-<li><strong>**kwargs</strong> – Any additional keyword arguments specified will be passed to the start_method.</li>
+<li>**<strong>kwargs</strong> – Any additional keyword arguments specified will be passed to the start_method.</li>
 </ul>
 <p><code>remove_start_method(start_method, config_section_name=None, priority=0, **kwargs)</code></p>
 <p>Remove an existing start method.</p>

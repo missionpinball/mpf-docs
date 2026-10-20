@@ -48665,7 +48665,7 @@ The most updated full installation (known-working on Windows and Linux) as of Oc
 <p class="admonition-title">Using MPF Sound Pools</p>
 <p>If you have a large project with many <code>sound_pools:</code> defined in MPF configs, it is <em>possible</em> to continue using them until you migrate them to GMC. This hack is not officially supported, and may have unintended side-effects, so use with caution.</p>
 <p>To enable sound pools in config files, you will need to install the legacy MPF-MC in your virtual environment with <code>pip install mpf-mc</code>. This will cause the MC to inject the sound pool configurations into MPF 0.80</p>
-<p><strong>Note:</strong> While MPF will manage the sound pools, it will not be able to map sound pool sound names to files configured in a <code>sounds:</code> config section (which is no longer supported). Your sound pools <strong>*must</strong> use the name of the sound file as the sound name or GMC will not be able to find the correct file.</p>
+<p><strong>Note:</strong> While MPF will manage the sound pools, it will not be able to map sound pool sound names to files configured in a <code>sounds:</code> config section (which is no longer supported). Your sound pools *<strong>must</strong> use the name of the sound file as the sound name or GMC will not be able to find the correct file.</p>
 </div>
 <h3 id="deprecated-config-sections">Deprecated Config Sections</h3>
 <p>The config sections used by MPF-MC are deprecated with the upgrade to <code>0.80.0.dev12</code> and must be removed.
