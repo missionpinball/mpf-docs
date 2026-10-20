@@ -29,6 +29,7 @@ Video about segment displays:
 </div>
 
 For more information visit the following pages:
+
 * [How to setup and use the virtual segment display emulator](../../mc/widgets/segment_display_emulator/how_to.md)
 * [Segment Display Emulator widget](../../mc/widgets/segment_display_emulator/index.md)
 * [Segment Display Platforms in MPF](../segment_display_platforms.md)
