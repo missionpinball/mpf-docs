@@ -4,9 +4,9 @@ title: "slide_player:"
 
 # slide_player:
 
-!!! caution "MPF 0.80 & GMC"
+!!! caution "MPF 0.80+ & GMC"
 
-    This config reference is for the upcoming MPF 0.80 release and the GMC media controller. For generating slides in MPF 0.57, see the [current slide_player reference](../../config/slide_player.md).
+    This config reference is for MPF 0.80+ and the GMC media controller. For generating slides in MPF 0.57, see the [current slide_player reference](../../config/slide_player.md).
 
 <!-- --8<-- "config_section.md" # The note below is duplicate to the include, but the link paths are different so the include does not work-->
 ??? note "This is a config file reference. Click for instructions."

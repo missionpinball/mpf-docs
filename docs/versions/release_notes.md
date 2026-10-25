@@ -9,16 +9,15 @@ Here's the history of the various release versions and changes of the Mission Pi
 Note you can also click the "Assets" section at the end of the notes for each release
 to download the PDF or HTML versions of the documentation for that specific release.
 
-## Development versions
+## `0.81.0` and `0.58.0`
 
-### `0.81.0.dev*` and `0.58.0.dev*`
+Release: October 25, 2026
 
-Pending release: Late October, 2026
-
-Versions 81 and 58 represent the same changes made from 0.80.1 to 0.81.0 and 0.57.6 to 0.58.0.
+Versions 81 and 58 represent the same changes made from `0.80.1` to `0.81.0` and `0.57.6` to `0.58.0`.
 
 There are minor breaking changes, but for most developers this upgrade should be relatively low-effort.
 Those changes are:
+
 * FAST EXP requires firmware 0.48 at minimum on all boards
 * Builtin Twitch plugin was removed
 * some logger defaults may have changed - file and console logs are now separately filterable, but settings that were not correctly applying before may now be taking effect.

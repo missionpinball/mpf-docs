@@ -6,8 +6,8 @@ title: Welcome to The Mission Pinball Framework!
 
 *Open source software for powering real pinball machines!*
 
-## Current version: `0.80.1` <small>released September 28, 2026</small>
-## Long Term support: `0.57.6` <small>released September 28, 2026</small>
+## Current version: `0.81.0` <small>released October 25, 2026</small>
+## Long Term support: `0.58.0` <small>released October 25, 2026</small>
 
 <br>
 
