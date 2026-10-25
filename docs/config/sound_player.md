@@ -72,7 +72,7 @@ Single value, type: `time string (secs)`
 
 !!! warning ""
 
-    `about_to_finish_time` is not implemented in MPF 0.80
+    `about_to_finish_time` is not implemented in MPF 0.80+
 
 See: [`sounds:about_to_finish_time`](sounds.md#about_to_finish_time)
 
@@ -232,7 +232,7 @@ use_sound_setting. Default: `use_sound_setting`
 
 !!! warning ""
 
-    `mode_end_action` is not implemented in MPF 0.80
+    `mode_end_action` is not implemented in MPF 0.80+
 
 Please refer to the [sounds:mode_end_action](sounds.md#mode_end_action) documentation for details about this setting as it just
 overwrites the setting in your sound.

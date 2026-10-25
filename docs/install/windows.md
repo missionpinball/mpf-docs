@@ -9,7 +9,7 @@ This process walks through installing MPF 0.57 a Windows machine.
 
 !!! warning "MPF 0.80 is Available"
 
-    This installation guide is for MPF 0.57 and the legacy MC, which has been replaced in MPF 0.80 with the Godot MC. If you are just getting started with MPF, we recommend you [install MPF 0.80](index.md) instead.
+    This installation guide is for MPF 0.57 and the legacy MC, which has been replaced in MPF 0.80 with the Godot MC. If you are just getting started with MPF, we recommend you [install MPF 0.80+](index.md) instead.
 
 Note that installing MPF is more complicated than a normal application.
 This is because MPF is a development tool you use to create your pinball
@@ -52,8 +52,8 @@ MPF 0.57 requires Python 3.9, 3.10, 3.11, or 3.12.
 MPF can run on 3.8, but the MPF-MC audio doesn't work on Windows in
 those versions. So you should use Python 3.9.
 
-MPF 0.80 requires Python 3.10 - 3.13, with 3.14 support planned.
-If you plan on upgrading your MPF 0.57 project to 0.80, you should
+MPF 0.80+ requires Python 3.10 - 3.14.
+If you plan on upgrading your MPF 0.57/0.58 project to 0.80+, you should
 pick a Python version that will be able to carry forward during
 the upgrade.
 

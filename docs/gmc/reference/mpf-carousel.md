@@ -6,7 +6,7 @@ title: MPFCarousel
 
 The `MPFCarousel` node works in tandem with the MPF Carousel mode to support dynamic content switching based on rotation events (a timer, flipper presses, or anything else).
 
-!!! note "Requires MPF 0.80"
+!!! note "Requires MPF 0.80+"
 
     The MPF 0.80 events that drive the `MPFCarousel` are changed from those in MPF 0.57. If you have an existing MPF 0.5 carousel you may need to update your event handlers.
 

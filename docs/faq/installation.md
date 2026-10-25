@@ -36,17 +36,20 @@ Pi) in their machine to run MPF.
 
 ## What Python version can I use with MPF?
 
-The current revision (0.80.1) of MPF supports Python 3.10 - 3.14, and does not support the legacy Media Controller (mpf-mc).
-The new media controller for 0.80 is called GMC, and is in active development.
+The current revision (0.81.0) of MPF supports Python 3.10 - 3.14, and does not support the legacy Media Controller (mpf-mc).
+The new media controller for 0.80+ is called GMC, and is in active development.
 
-The legacy version (0.57, currently on 0.57.6) of MPF can be used with Python versions 3.8-3.12.
+The legacy version (0.58, currently on 0.58.0) of MPF can be used with Python versions 3.10-3.14.
 We walk you through getting Python installed in our [installation documentation](../install/index.md).
 
-The previous version of MPF, 0.56. is only compatible with Python from version 3.7 through 3.9.
+The previous version of MPF, 0.57. is compatible with Python from version 3.8 through 3.14.
+Even older, MPF 0.56 is only compatible with Python from version 3.7 through 3.9.
 
-The development revision of MPF is 0.81, which also supports Python 3.10 - 3.14. Version 0.80+ all support the GMC Godot integration. The legacy version backports will move to 0.58 when main development releases 0.81.
+The development revision of MPF is 0.82, which also supports Python 3.10 - 3.14. Version 0.80+ all support the GMC Godot integration.
 
-You can also follow the MPF github branch directly, `dev` is the active development branch and the standard target for most pull requests.
+Most features that are built on 0.82+ will be backported to 0.59 in parallel, but some features will begin to diverge between the 5x series and the 8x series.
+
+You can also follow the MPF Github branch directly, `dev` is the active development branch and the standard target for bugfixes and new feature pull requests.
 
 
 ## Should I use the stable version or development version?
@@ -66,7 +69,7 @@ pip install mpf==0.56.0.dev33
 ```
 
 ```sh
-pip install mpf==0.57.5
+pip install mpf==0.57.6
 ```
 
 ```sh
