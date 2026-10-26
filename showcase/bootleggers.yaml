@@ -5,8 +5,10 @@ location: Kentucky
 started: 2025-11-10
 finished:
 images:
+  - bootleggers-1.jpg
+  - bootleggers-2.jpg
 project_type: original
-youtube_video_ids:
+youtube_video_ids: A-FtfFG9HvU
 documentation_link: https://www.pinforgepinball.com/
 code_link: https://github.com/PinForge-Pinball/bootleggers
 gameplay_link:
