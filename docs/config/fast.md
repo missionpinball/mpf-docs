@@ -59,8 +59,9 @@ The following documentation was current in mid 2023, some settings and structure
 The `fast:` section of your machine-wide config is where you configure
 hardware options that are specific to the FAST Pinball Controller. Note
 that we have a how to guide which includes
-[all the FAST-specific settings](../hardware/fast/index.md) throughout your entire config file, so be sure to read that
+[all the FAST-specific settings](../hardware/fast_nano/index.md) throughout your entire config file, so be sure to read that
 if you have FAST hardware.
+<!-- TODO relink fast to general guide -->
 
 
 ### ports:
@@ -165,4 +166,5 @@ Max backlog for the RGB port to prevent overflows in the FAST CPU.
 
 ## Related How To guides
 
-* [How to configure MPF for FAST Pinball hardware](../hardware/fast/index.md)
+* [How to configure MPF for FAST Pinball Nano hardware](../hardware/fast_nano/index.md)
+<!-- TODO relink fast to general guide -->

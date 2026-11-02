@@ -206,20 +206,21 @@ nav:
   - Pinball Controllers:
     - hardware/pinball_controllers.md
     - FAST Pinball:
-      - hardware/fast/index.md
-      - Connecting FAST to your Computer: hardware/fast/connecting.md
-      - Installing hardware drivers & configuring COM ports: hardware/fast/config.md
       - Switches: hardware/fast/switches.md
-      - Coils/Drivers/Magnets/Motors: hardware/fast/drivers.md
-      - Flippers, Slingshots, Pop Bumpers, and other "quick response" devices: hardware/fast/hw_rules.md
-      - LEDs: hardware/fast/leds.md
-      - Matrix Lights: hardware/fast/lights.md
       - Traditional (single color) DMDs: hardware/fast/dmd.md
       - RGB DMDs: hardware/fast/rgb_dmd.md
-      - Servos: hardware/fast/servos.md
       - Power Filter Board: hardware/fast/power_filter.md
       - Cabinet Board 0024: hardware/fast/cabinet_board_0024.md
       - Troubleshooting: hardware/fast/troubleshooting.md
+      - Nano Controller:
+        - hardware/fast_nano/index.md
+        - Connecting FAST Nano to your Computer: hardware/fast_nano/connecting.md
+        - Installing hardware drivers & configuring COM ports: hardware/fast_nano/config.md
+        - Nano Coils/Drivers/Magnets/Motors: hardware/fast_nano/drivers.md
+        - Nano Flippers, Slingshots, Pop Bumpers, and other "quick response" devices: hardware/fast_nano/hw_rules.md
+        - LEDs: hardware/fast_nano/leds.md
+        - Nano Matrix Lights: hardware/fast_nano/lights.md
+        - Nano Servos: hardware/fast_nano/servos.md
     - Open Pinball Project (OPP):
       - hardware/opp/index.md
       - Troubleshooting OPP: hardware/opp/troubleshooting.md

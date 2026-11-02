@@ -38,15 +38,20 @@ Video about FAST:
 <iframe width="560" height="315" src="https://www.youtube.com/embed/uS_dNWOL8mw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-* [Connecting FAST to your Computer](connecting.md)
+### Nano-specific guides
+
+* [Connecting FAST Nano to your Computer](connecting.md)
 * [Installing hardware drivers & configuring COM ports](config.md)
-* [Switches](switches.md)
 * [Coils/Drivers/Magnets/Motors](drivers.md)
 * [Flippers, Slingshots, Pop Bumpers, and other "quick response" devices](hw_rules.md)
 * [LEDs](leds.md)
 * [Matrix Lights](lights.md)
-* [Traditional (single color) DMDs](dmd.md)
-* [RGB DMDs](rgb_dmd.md)
 * [Servos](servos.md)
-* [Power Filter Board](power_filter.md)
-* [Cabinet Board FP-I/O-0024](cabinet_board_0024.md)
+
+### General FAST guides
+
+* [Traditional (single color) DMDs](../fast/dmd.md)
+* [Switches](../fast/switches.md)
+* [Power Filter Board](../fast/power_filter.md)
+* [RGB DMDs](../fast/rgb_dmd.md)
+* [Cabinet Board FP-I/O-0024](../fast/cabinet_board_0024.md)

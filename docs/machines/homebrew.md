@@ -17,7 +17,8 @@ If you want to use MPF
 to power a new *custom* pinball machine that you build yourself, you
 should buy new custom driver boards. There are a few common choices:
 
-* [FAST Pinball](../hardware/fast/index.md)
+<!-- TODO relink fast to general guide -->
+* [FAST Pinball - Nano controller](../hardware/fast_nano/index.md)
 * [CobraPin Pinball Controller](../hardware/opp/cobrapin/index.md)
 * [Multimorphic P3-Roc](../hardware/multimorphic/index.md)
 * [Open Pinball Project (OPP)](../hardware/opp/index.md)

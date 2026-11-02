@@ -36,4 +36,4 @@ coils:
 Some platforms allow you to fine tune the recycle time.
 
 * [recycle_factor for OPP](../../hardware/opp/drivers.md)
-* [recycle_ms for FAST](../../hardware/fast/drivers.md)
+* [recycle_ms for FAST Nano](../../hardware/fast_nano/drivers.md)
