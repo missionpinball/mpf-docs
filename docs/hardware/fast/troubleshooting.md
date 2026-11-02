@@ -41,7 +41,7 @@ about the command.
 ## Stuck on Drivers
 
 See the section about
-[Replacing FETs on FAST Driver Boards](drivers.md) if you suspect burned FETs.
+[Replacing FETs on FAST Driver Boards](../fast_nano/drivers.md) if you suspect burned FETs.
 
 ## Permission Denied on Linux
 
@@ -59,16 +59,13 @@ can create a udev rule or add your user to the dialout group:
 sudo usermod -a -G dialout $USER
 ```
 
-After a restart of your PC MPF should be able to access that serial
-port.
+After a restart of your PC MPF should be able to access that serial port.
 
 ## Enable Debugging
 
-If you got problems with your platform try to enable `debug` first. As
-described in the
+If you got problems with your platform try to enable `debug` first. As described in the
 [general debugging section](../../troubleshooting/general_debugging.md) of our
-[troubleshooting guide](../../troubleshooting/index.md) this is done by adding `debug: true` to your `fast` config
-section:
+[troubleshooting guide](../../troubleshooting/index.md) this is done by adding `debug: true` to your `fast` config section:
 
 ``` yaml
 fast:

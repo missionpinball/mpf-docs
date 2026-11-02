@@ -37,4 +37,5 @@ will be ignored to prevent overheating the coil.
 
 ## Related How To guides
 
-* [How to configure MPF for FAST Pinball hardware](../hardware/fast/index.md)
+* [How to configure MPF for FAST Pinball Nano hardware](../hardware/fast_nano/index.md)
+<!-- TODO relink fast to general guide -->

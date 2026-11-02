@@ -26,7 +26,8 @@ documentation, but here are the links all in one place to make it easy.
 
 ## Drivers / Coils
 
-* [FAST Pinball](fast/drivers.md)
+<!-- TODO relink fast to general guide -->
+* [FAST Pinball - Nano](fast_nano/drivers.md)
 * [P-ROC / P3-ROC](multimorphic/drivers.md)
 * [Open Pinball Project (OPP)](opp/drivers.md)
 * [Stern SPIKE](spike/drivers.md)
@@ -34,7 +35,7 @@ documentation, but here are the links all in one place to make it easy.
 
 ## LEDs
 
-* [FAST Pinball](fast/leds.md)
+* [FAST Pinball - Nano](fast_nano/leds.md)
 * [P-ROC / P3-ROC (PD-LED)](multimorphic/leds.md)
 * [Open Pinball Project (OPP)](opp/leds.md)
 * [Stern SPIKE](spike/leds.md)
@@ -51,6 +52,7 @@ documentation, but here are the links all in one place to make it easy.
 
 ## Servos
 
-* [FAST Pinball (Servo daughterboard)](fast/servos.md)
+<!-- TODO relink fast to general guide -->
+* [FAST Pinball (Nano Servo daughterboard)](fast_nano/servos.md)
 * [I2C servo controllers](i2c_servo.md)
 * [Pololu Maestro](pololu_maestro.md)

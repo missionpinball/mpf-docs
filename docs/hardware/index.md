@@ -72,7 +72,8 @@ Reach out in the [forum](../community/index.md) if you need help.
 You'll need to pick one of these three as the main interface between
 MPF and your pinball machine.
 
-  * [FAST Pinball](fast/index.md)
+<!-- TODO relink fast to general guide -->
+  * [FAST Pinball](fast_nano/index.md)
     * Neuron, Nano, and Retro Controllers
     * All I/O Boards (Playfield & Cabinet Controller)
     * Expansion Boards & EXP Bus (LEDs, servos, motors, etc.)
@@ -231,7 +232,8 @@ and hardware that MPF supports:
 * [LISY platform](lisy/index.md)
 * [Arduino Pinball Controller](apc/index.md)
 * [P-ROC/P3-ROC](multimorphic/index.md)
-* [FAST Pinball](fast/index.md)
+<!-- TODO relink fast to general guide -->
+* [FAST Pinball - Nano controller](fast_nano/index.md)
 * [Stern SPIKE / SPIKE 2](spike/index.md)
 * [Penny K Pinball PKONE Platform](pkone/index.md)
 * [snux/index FadeCandy RGB LED controllers](fadecandy/index.md)

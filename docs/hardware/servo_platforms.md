@@ -8,10 +8,10 @@ title: Servo Platforms in MPF
 The following platforms allow controlling
 [servos](../mechs/servos/index.md) in MPF:
 
-* [FAST servo daughter boards](fast/servos.md)
+<!-- TODO relink fast to general guide -->
+* [FAST Nano servo daughter boards](fast_nano/servos.md)
 * [PCA9685/PCA9635-based servo controllers via I2C](i2c_servo.md)
-* [Raspberry Pi](rpi.md) - Remote
-    via network or locally using pigpio
+* [Raspberry Pi](rpi.md) - Remote via network or locally using pigpio
 * [Pololu Maestro](pololu_maestro.md)
 * [P3-Roc and P-Roc via PD-LED](multimorphic/servos.md)
 * [Penny K Pinball PKONE Extension boards](pkone/servos.md)
