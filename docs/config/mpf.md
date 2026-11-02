@@ -147,7 +147,3 @@ after a switch turned inactive.
 Single value, type: `string`. Default: `sw_%`
 
 This event will be posted for all tags after a switch turned active.
-
-## Related How To guides
-
-* [How to configure LEDs (FAST Pinball)](../hardware/fast/leds.md)

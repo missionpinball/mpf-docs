@@ -13,7 +13,8 @@ title: "fast_switches: Config Reference"
 
 The `fast_switches:` section of your config is where you configure
 platform specific details about switches when using
-[fast hardware](../hardware/fast/index.md).
+[FAST Nano hardware](../hardware/fast_nano/index.md).
+<!-- TODO relink fast to general guide -->
 
 ``` yaml
 switches:
@@ -45,4 +46,5 @@ Set the switch debounce time for opening the switch.
 
 ## Related How To guides
 
-* [How to configure MPF for FAST Pinball hardware](../hardware/fast/index.md)
+* [How to configure MPF for FAST Pinball hardware](../hardware/fast_nano/index.md)
+<!-- TODO relink fast to general guide -->
