@@ -77,21 +77,28 @@ Single value, type: `time string (secs)`
 See: [`sounds:about_to_finish_time`](sounds.md#about_to_finish_time)
 
 ### action:
+This setting has different property names between Legacy MC and GMC.
 
-Single value, type: one of the following options: play, stop,
-stop_looping, load, unload. Default: `play`
+Single value, type: one of the following options: `play`, `stop`, `loop_stop`, `replace`. Default: `play`
 
 The `action:` setting controls what action will be performed on the
 specified sound. Options for `action:` are:
 
-* `play` - The specified sound will be played. Any optional parameter
-    values will override the sound's settings.
+* `play` - The specified sound will be played on the default or specified bus.
+* `loop_stop` - Looping will be canceled for all currently playing
+    instances of the specified sound (the sound will continue to play to
+    the end of the current loop). In addition, any queued instances of
+    the sound awaiting playback will be removed/canceled.
 * `stop` - All currently playing and queued instances of the specified
     sound will stopped/canceled. Any optional parameter values will be
-    ignored as the stop action takes no parameters. There is currently
-    no way to stop specific instances of a particular sound while
-    leaving others playing, but that is on the list to be implemented in
-    a future version.
+    ignored as the stop action takes no parameters.
+* `replace` - *new in MPF 0.80* - All sounds currently playing on the
+    specified bus are stopped, and the replacing sound is played.
+
+#### Legacy Media Controller settings:
+
+Legacy MC supports the additional actions: `stop_looping` (instead of `loop_stop`), `load`, `unload`.
+
 * `stop_looping` - Looping will be canceled for all currently playing
     instances of the specified sound (the sound will continue to play to
     the end of the current loop). In addition, any queued instances of
@@ -101,10 +108,8 @@ specified sound. Options for `action:` are:
     if the sound is already loaded.
 * `unload` - Unloads the specified sound or sound pool from memory.
     All instances of the sound or sound pool will be immediately
-    stopped. The request is ignored if the sound is not currently
-    loaded.
-* `replace` - *new in MPF 0.80* - All sounds currently playing on the
-    specified bus are stopped, and the replacing sound is played.
+    stopped. The request is ignored if the sound is not currently loaded.
+
 
 ### block:
 
@@ -152,26 +157,6 @@ Single value, type: `time string (secs)`
 When the triggering event occurs, delay for a certain amount of time
 before playing the sound.
 
-### events_when_about_to_finish:
-
-List of one (or more) events. Those will be posted by the device.
-Default: `use_sound_setting`
-
-!!! warning ""
-
-    `events_when_about_to_finish` is not implemented in MPF 0.80
-
-Please refer to the [sounds:events_when_about_to_finish](sounds.md#events_when_about_to_finish) documentation for details about this setting as it just
-overwrites the setting in your sound.
-
-### events_when_looping:
-
-List of one (or more) events. Those will be posted by the device.
-Default: `use_sound_setting`
-
-Please refer to the [sounds:events_when_looping](sounds.md#events_when_looping) documentation for details about this setting as it just
-overwrites the setting in your sound.
-
 ### events_when_played:
 
 List of one (or more) events. Those will be posted by the device.
@@ -212,7 +197,9 @@ Used to reference this sound entry when stopping/pausing/resuming it.
 
 ### loops:
 
-Single value, type: `int_or_token`. Defaults to empty.
+Single value, type: `int_or_token`. Defaults to empty. Use -1 to loop forever.
+
+Note that looping forever may not issue `events_when_looping` events depending on encoding and media controller specific details.
 
 Please refer to the [sounds:loops](sounds.md#loops) documentation for details about this setting as it just
 overwrites the setting in your sound.
@@ -223,6 +210,69 @@ Single value, type: `time string (secs)`
 ([Instructions for entering time strings](instructions/time_strings.md)). Default: `-1`
 
 Please refer to the [sounds:max_queue_time](sounds.md#max_queue_time) documentation for details about this setting as it just
+overwrites the setting in your sound.
+
+### priority:
+
+Single value, type: `int_or_token`. Defaults to empty.
+
+Please refer to the [sounds:priority](sounds.md#priority) documentation for details about this setting as it just
+overwrites the setting in your sound.
+
+### start_at:
+
+Single value, type: `time string (secs)`
+([Instructions for entering time strings](instructions/time_strings.md)). Defaults to empty.
+
+Please refer to the [sounds:start_at](sounds.md#start_at) documentation for details about this setting as it just
+overwrites the setting in your sound.
+
+### volume:
+
+Single value, type: `gain setting` (-inf, db, or float between 0.0 and
+1.0). Defaults to empty.
+
+Please refer to the [sounds:volume](sounds.md#volume) documentation for details about this setting as it just
+overwrites the setting in your sound.
+
+## Legacy Media Controller (mpf-mc) settings:
+
+These settings were used in MPF until 0.80, and are not compatible with mpf-gmc.
+
+### about_to_finish_time:
+
+Single value, type: `time string (secs)`
+([Instructions for entering time strings](instructions/time_strings.md)). Defaults to empty.
+
+!!! warning ""
+
+    `about_to_finish_time` is not implemented in MPF 0.80
+
+Please refer to the [sounds:about_to_finish_time](sounds.md#about_to_finish_time) documentation for details about this setting as it just
+overwrites the setting in your sound.
+
+### events_when_about_to_finish:
+
+List of one (or more) events. Those will be posted by the device.
+Default: `use_sound_setting`
+
+!!! warning ""
+
+    `events_when_about_to_finish` is not implemented in MPF 0.80
+
+Please refer to the [sounds:events_when_about_to_finish](sounds.md#events_when_about_to_finish) documentation for details about this setting as it just
+overwrites the setting in your sound.
+
+### events_when_looping:
+
+List of one (or more) events. Those will be posted by the device.
+Default: `use_sound_setting`
+
+!!! warning ""
+
+    `events_when_looping` is intended for legacy mpf-mc, and is not yet reimplemented for MPF 0.80.
+
+Please refer to the [sounds:events_when_looping](sounds.md#events_when_looping) documentation for details about this setting as it just
 overwrites the setting in your sound.
 
 ### mode_end_action:
@@ -241,22 +291,11 @@ overwrites the setting in your sound.
 
 Single value, type: `float_or_token`. Defaults to empty.
 
+!!! warning ""
+
+    Deprecated in MPF 0.80. Use ducking settings instead.
+
 Please refer to the [sounds:pan](sounds.md#pan) documentation for details about this setting as it just
-overwrites the setting in your sound.
-
-### priority:
-
-Single value, type: `int_or_token`. Defaults to empty.
-
-Please refer to the [sounds:priority](sounds.md#priority) documentation for details about this setting as it just
-overwrites the setting in your sound.
-
-### start_at:
-
-Single value, type: `time string (secs)`
-([Instructions for entering time strings](instructions/time_strings.md)). Defaults to empty.
-
-Please refer to the [sounds:start_at](sounds.md#start_at) documentation for details about this setting as it just
 overwrites the setting in your sound.
 
 ### track:
@@ -268,14 +307,6 @@ overwrites the setting in your sound.
 Single value, type: `string`. Defaults to empty.
 
 Please refer to the [sounds:track](sounds.md#track) documentation for details about this setting as it just
-overwrites the setting in your sound.
-
-### volume:
-
-Single value, type: `gain setting` (-inf, db, or float between 0.0 and
-1.0). Defaults to empty.
-
-Please refer to the [sounds:volume](sounds.md#volume) documentation for details about this setting as it just
 overwrites the setting in your sound.
 
 ## Related How To guides
