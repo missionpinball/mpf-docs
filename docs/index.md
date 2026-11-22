@@ -9,6 +9,8 @@ title: Welcome to The Mission Pinball Framework!
 ## Current version: `0.81.0` <small>released October 25, 2026</small>
 ## Long Term support: `0.58.0` <small>released October 25, 2026</small>
 
+[Release Notes](versions/release_notes.md){ .md-button }
+
 <br>
 
 The **Mission Pinball Framework** (MPF) is a free Python-based pinball software
