@@ -13,7 +13,7 @@ to download the PDF or HTML versions of the documentation for that specific rele
 
 Release: October 25, 2026
 
-Versions 81 and 58 represent the same changes made from `0.80.1` to `0.81.0` and `0.57.6` to `0.58.0`.
+These versions are the next feature releases after 80 and 57. `0.81.0` is to `0.80.1` as `0.58.0` is to `0.57.6`.
 
 There are minor breaking changes, but for most developers this upgrade should be relatively low-effort.
 Those changes are:
