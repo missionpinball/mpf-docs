@@ -1,3 +1,4 @@
+properdocs
 mkdocs-material
 mike
 mkdocs-glightbox
