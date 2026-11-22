@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap');
+
+/* set site-wide colors */
+:root > * {
+    --md-primary-fg-color:        #D63E29;
+    --md-accent-fg-color:         #D63E29; /* button color on hover */
+    --md-default-fg-color--light: hsla(0, 0%, 0%, 0.87); /* text in light mode */
+  }
+
+  /* dark mode colors */
+  [data-md-color-scheme="slate"] {
+    --md-default-fg-color--light: hsla(0, 0%, 100%, 0.87); /* text */
+    --md-default-bg-color: #202020; /* background */
+    --md-typeset-a-color: #D63E29; /* link color */
+  }
+
+  /* For YouTube or other video embeds, auto scales it nicely */
+.video-wrapper {
+  position: relative;
+  display: block;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+}
+.video-wrapper > iframe {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Change the font of the header */
+.md-header__topic:first-child {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+/* Make all h1 text a bit heavier */
+.md-typeset h1 {
+  font-weight: 600;
+}
+
+/* Make all h2 text a bit heavier */
+.md-typeset h2 {
+  font-weight: 600;
+}
+
+/* Logo in the header */
+.md-header__button.md-logo img {
+  height: 1.5rem; /* default is 1.2rem */
+}
