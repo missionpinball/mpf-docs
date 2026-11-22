@@ -2,14 +2,14 @@
 title: MPF Release Notes
 ---
 
-# MPF Release Notes
+# MPF Release Notes ([on Github](https://github.com/missionpinball/mpf/releases))
 
 Here's the history of the various release versions and changes of the Mission Pinball Framework.
 
 Note you can also click the "Assets" section at the end of the notes for each release
 to download the PDF or HTML versions of the documentation for that specific release.
 
-## `0.81.0` and `0.58.0`
+## [`0.81.0` and `0.58.0`](https://github.com/missionpinball/mpf/releases/tag/v0.81.0)
 
 Release: October 25, 2026
 
@@ -71,7 +71,7 @@ Those changes are:
 ### Breaking Changes
 * removed Twitch plugin
 
-## 0.80.1 (and 0.57.6)
+## [0.80.1 (and 0.57.6)](https://github.com/missionpinball/mpf/releases/tag/v0.80.1)
 Release: September 28, 2026
 
 Mainline version 0.80.1 has minor bugfixes and updates PROC. Version 0.57.6 contains the same fixes, retroactively applied on 0.57.5
@@ -83,7 +83,7 @@ Mainline version 0.80.1 has minor bugfixes and updates PROC. Version 0.57.6 cont
 * fix OutgoingBallsHandler logmixin bug
 * fix Auditor counting multiple instances of the same event (commonly `game_ended` getting double counted)
 
-## 0.80.0
+## [0.80.0](https://github.com/missionpinball/mpf/releases#release-v0.80.0)
 
 Release: April 25, 2026
 
@@ -97,7 +97,7 @@ Release: April 25, 2026
 * To see all of the mandatory changes required to upgrade your MPF-MC based project (0.57 and before) to GMC, see the [Upgrade Guide](../install/0.80.md)
 * It is recommended if upgrading a pre 0.80 project to 0.80 to do a stepwise upgrade to 0.57.5 first, test game functionality in general, and then upgrade from 0.57.5 to 0.80.0
 
-## 0.57.5
+## [0.57.5](https://github.com/missionpinball/mpf/releases/tag/v0.57.5)
 
 Release: April 25, 2026
 
@@ -128,7 +128,7 @@ This means that it is the best version to upgrade to as a last step _before_ upg
 ### Breaking Changes
  * upgrade pillow dependency to 10.4
 
-## 0.57.4
+## [0.57.4](https://github.com/missionpinball/mpf/releases/tag/v0.57.4)
 
 Release: Jan 19, 2026
 
@@ -317,7 +317,7 @@ values in quotes. This process takes less than an hour and is documented in the
 * Custom code: The `scriptlets` class is deprecated; use `custom_code` instead
 
 
-## 0.56
+## [0.56](https://github.com/missionpinball/mpf/releases/tag/v0.56.0)
 
 Released: January 15, 2023
 
@@ -379,7 +379,7 @@ Released: January 15, 2023
 * Add niceties to achievement_group by @Samdal in https://github.com/missionpinball/mpf/pull/1646
 * Bump requests from 2.22.0 to 2.28.2 by @dependabot in https://github.com/missionpinball/mpf/pull/1678
 
-## 0.55
+## [0.55](https://github.com/missionpinball/mpf/releases/tag/0.55)
 
 Released: June 25, 2021
 
