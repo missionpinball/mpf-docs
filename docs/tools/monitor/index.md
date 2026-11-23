@@ -19,7 +19,7 @@ The MPF Monitor can run on Windows, Mac, and Linux. It uses
 [PyQt6](https://www.riverbankcomputing.com/software/pyqt/intro) (Python
 bindings for Qt6) for its visual framework.
 
-The current version of Monitor is 1.0.1, which works with MPF 0.57, 0.58, 0.80, and 0.81.
+The current version of Monitor is 1.0.1, which works with MPF 0.57 and up (including 0.58, 0.80-83, and in the future, 1.0).
 
 Here's a screen shot of it in action:
 
