@@ -79,6 +79,15 @@ which is inside the MPF package which sets up default things like which
 modules are loaded, paths used, etc. If for some reason you want to
 override this file, you can do so with the `-C` option.
 
+### --color\[=format\] (*available in 0.82 and 0.59*)
+
+Add color formatting to the console log (from -t). In version .82/59, the default is "none".
+In 0.83 the default is "basic". In 1.0 additional formatters may be provided and set as default.
+
+### --no-color (*available in 0.82 and 0.59*)
+
+Explicitly disable console log color formatting.
+
 ### -e (*available in 0.81 and 0.58*)
 
 Silence the printing of the command line args to logs. By default MPF will
