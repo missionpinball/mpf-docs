@@ -49690,6 +49690,10 @@ your config. (If you don't include them, the default will be used).</p>
 <p>Single value, type: <code>boolean</code> (<code>true</code>/<code>false</code>). Default: <code>true</code></p>
 <p>If a ball randomly shows up in this device, should it be automatically
 ejected?</p>
+<p>As of <code>0.82</code> / <code>0.59</code> <code>auto_fire_on_unexpected_ball</code> can use dynamic values to change runtime behavior of the auto eject.
+This requires that <code>mechanical_eject</code> is set to True, otherwise the device will eject to avoid holding the ball anyway.</p>
+<p>Also note that you can use <a href="../instructions/dynamic_values/">dynamic values</a>
+here if you want to do math or use settings to make this configurable.</p>
 <h3 id="ball_capacity">ball_capacity:</h3>
 <p>Unknown type. See description below.</p>
 <p>Optional value for how many balls this device can hold. You only need to
