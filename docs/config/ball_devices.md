@@ -32,6 +32,11 @@ Single value, type: `boolean` (`true`/`false`). Default: `true`
 If a ball randomly shows up in this device, should it be automatically
 ejected?
 
+As of `0.82` / `0.59` `auto_fire_on_unexpected_ball` can use dynamic values to change runtime behavior of the auto eject.
+This requires that `mechanical_eject` is set to True, otherwise the device will eject to avoid holding the ball anyway.
+
+--8<-- "template_setting.md"
+
 ### ball_capacity:
 
 Unknown type. See description below.
