@@ -53,45 +53,36 @@ for example.)
 
 Single value, type: `boolean` (Yes/No or True/False). Default: `false`
 
-Lets you control whether hits to this shot are propagated down to lower
-priority modes. The default value is true if you don't specify this,
-meaning that blocking is enabled
+Lets you control whether hits to a shot using this profile block hits
+to other enabled shots sharing the same switch in lower-priority modes.
+The default value is `false` if you don't specify this, meaning that
+blocking is NOT enabled.
 
-If you have `block: true` in a shot profile, then hits to that shot when
-that profile is applied only are registered in the highest mode where
-that shot is enabled. If you set `block: false`, then when a shot is hit
-in one mode it will also look down to lower priority modes where that
-shot is enabled. If that lower priority mode has a different profile
-applied then it will also register a hit event based on that profile.
-This will continue until it reaches a level with `block: true` or until
-it reaches the end of the mode list.
+If you have `block: true` in a shot profile, then when a shot using
+that profile is hit, it blocks lower-priority modes' shots on the same
+switch from also registering a hit. If you set `block: false`, then the
+hit will propagate down to enabled shots on that switch in lower-priority
+modes. This will continue until it reaches a shot whose profile has
+`block: true` or until it reaches the end of the mode list.
 
 This is better explained with an example.
 
-Imagine you have four lanes at the top of your machine which you use in
-your base mode in a normal lane-change fashion. (Lanes are unlit by
-default, hit a lane and they light, complete all four lanes for an
-award.) Now imagine you also use those lanes for a skillshot where one
-of the lanes is flashing and you try to hit it while the skillshot is
-enabled. In this case, you'd have different shot profiles for each
-mode, perhaps the default profile in your base mode (with unlit->lit
-states) and a skillshot profile in your skill shot mode (with
-flashing->complete states).
+Imagine you have four top lanes which you use in your base mode in a
+normal lane-change fashion (e.g., `base_lane_1` through `base_lane_4`,
+using the default profile with `unlit` -> `lit` states). Now imagine you
+also define separate shots in a skillshot mode using those same switches
+(e.g., `skillshot_lane_1` through `skillshot_lane_4`, using a skillshot
+profile with `flashing` -> `complete` states).
 
-By default, if the player hits the a lane when the skill shot mode is
-running, the skillshot profile is the active profile so it's the shot
-that gets the hit. But then when the skill shot mode ends, the lane the
-player just hit is not lit, since that shot profile was not active when
-it was hit. (In other words, the skillshot blocked the hit event.) So if
-you add `block: false` to your skillshot shot profile, then when the
-shot is hit when the skill shot mode is running, it will receive the hit
-and advance the shot from flashing to complete. Then the lower base mode
-will also get the shot, and it will advance its state from unlit to lit.
-The lights for the shot will only reflect the skillshot lights since
-it's the higher priority, however, you will get
-*yourshot_skillshot_flashing_hit* and *yourshot_default_unlit_hit*
-events since both the hits registered because you set the skillshot
-profile not to block the hit.
+By default, if the player hits a lane while the skillshot mode is
+running, the higher-priority skillshot gets the hit and blocks the
+lower-priority base mode shot from registering it. If you add
+`block: false` to your skillshot profile, then hitting the lane advances
+the skillshot from `flashing` to `complete` *and* lets the hit propagate
+down to the base mode shot, advancing it from `unlit` to `lit`. Both
+*skillshot_lane_1_skillshot_flashing_hit* and
+*base_lane_1_default_unlit_hit* events will be posted.
+
 
 ### loop:
 

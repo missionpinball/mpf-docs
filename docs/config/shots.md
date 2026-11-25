@@ -24,10 +24,10 @@ the shot starts unlit, then when it's hit it becomes complete. Or a
 shot profile might specify that it's flashing slowly, and each hit
 makes it flash faster and faster until it's been hit enough times, etc.
 
-You can specify different shot profile on a per-mode basis, meaning a
-shot can have one behavior in the base mode and then take on another
-behavior when a higher-priority mode is started. The tracking of various
-states of the shot profiles is maintained on a per-mode basis.
+Shots are defined per-mode, and each shot has a single shot profile. If
+you want the same physical switch or target to have different shot
+behavior in another mode, define a separate shot (with a unique name) in
+that mode and assign it a different shot profile.
 
 You can group multiple shots together into *shot groups* for group-level
 functionality like posting events when all the shots in a group in the
@@ -230,8 +230,9 @@ Single value, type: `boolean` (`true`/`false`). Default: `true`
 Single value, type: `boolean` (`true`/`false`). Default: `true`
 
 Whether this shot should persist its enable state in a player variable.
-If set to `True` this will also persist the state into the next ball of
-the same player.
+If set to `True` this will also persist the enabled/disabled-status into
+the next ball of the same player.
+This is unrelated to the shot profile state for the shot.
 
 ### playfield:
 

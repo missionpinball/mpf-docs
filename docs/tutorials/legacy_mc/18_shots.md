@@ -407,9 +407,9 @@ real machine) should result in the following sequence of total score
 
 ## 4. Add a second mode and score the shot from there
 
-One of the most powerful features of shot profiles is that shots can
-have multiple profiles defined at the same time (with each active mode
-having the ability to apply its own profile).
+Because shots are defined per-mode, you can react to a shot from any
+active mode or define a separate shot on the same switch in a higher-priority
+mode with its own shot profile.
 
 To illustrate this, we're going to create a new mode, called "mode2".
 So go ahead and create a `mode2` folder in your `modes` folder, then add
@@ -520,26 +520,19 @@ When you stop mode2 (with the `M` key), that removes the scoring from
 mode2, but since the base mode is still running, you still get the
 scoring from there.
 
-## 5. Configure a new shot profile in mode2
+## 5. Configure a new shot and shot profile in mode2
 
-In the previous step, we added a new mode and accessed the shot from
-within that mode, but that new mode still used the same shot profile as
-the base mode.
+In the previous step, we added a new mode and scored `my_first_shot_hit`
+from within that mode, while `base` mode's shot profile still tracked the
+shot's state and lights.
 
-However, it's also possible to create a brand-new shot profile in a
-mode that will be applied to the shot when that mode is active.
-
-This is useful if you want to "override" a shot profile from a lower
-mode based on a higher priority mode. For example, maybe you have a
-stand-up target in your base mode that you're using for some basic
-scoring. But then in a jackpot mode, you want that target to flash a
-light instead of just the regular on/off behavior from the base mode.
-You would do this by applying a different shot profile in the jackpot
-mode.
+However, if you want a higher-priority mode to track its own state,
+lights, and scoring on that same switch, you can define a separate shot
+in `mode2` using that switch and assign it a new shot profile.
 
 To illustrate this, open up your `mode2.yaml` file and:
 
-1.  Updated the `variable_player:` section from the example below
+1.  Update the `variable_player:` section from the example below
 2.  Add the `shots:` section from below
 3.  Add the `shot_profiles:` section from below
 
@@ -575,7 +568,7 @@ shot_profiles:
 Save your files and run your game again, pressing the following keys:
 
 * `S` - starts the game
-* `Q` - hits your shot, score jumps to 100,
+* `Q` - hits your shot, score jumps to 100
 * `Q` - hits your shot, score jumps to 1100
 * `N` - starts mode2. You should see a 1-second green message showing
     this
@@ -587,11 +580,11 @@ Save your files and run your game again, pressing the following keys:
 * `Q` - hits your shot, score jumps to 11,400
 * `Q` - hits your shot, score jumps to 12,400
 
-Let's deconstruct the changes to the `mode2.yaml` config file too see
+Let's deconstruct the changes to the `mode2.yaml` config file to see
 what's going on.
 
-First, notice that we added a `shots:` section and then added
-"my_first_shot" to it, like this:
+First, notice that we added a `shots:` section with a new shot named
+`my_first_shot_mode2` using the same `s_right_inlane` switch:
 
 ``` yaml
 ##! mode: mode2
@@ -606,20 +599,17 @@ First, notice that we added a `shots:` section and then added
 #!     loop: false
 #!     block: true
 shots:
-  my_first_shot:
+  my_first_shot_mode2:
+    switch: s_right_inlane
     profile: mode2
 ```
 
-However, unlike the "my_first_shot" entry in the base mode config, in
-the mode2 config we did NOT redefine the `switch:` or `show_tokens:`
-entries. Instead, we just added the `profile:` setting and told it to
-use a profile called `mode2`.
-
-So what this means is that we're not creating a new shot or changing
-the configuration of the shot, rather, we're just saying that when
-mode2 is active, we want to apply a different shot profile to the shot.
-(Remember that settings from mode configuration files are only active
-when that mode is active.)
+Each shot in MPF is defined within a single mode and has one shot profile.
+By creating `my_first_shot_mode2` in `mode2` with the same switch, this
+shot is only active while `mode2` is running and tracks its state
+independently from `my_first_shot` in `base` mode. (Note that you would
+also add `show_tokens:` if you want `my_first_shot_mode2` to drive a
+light or LED while active.)
 
 Next, take a look at the `shot_profiles:` section:
 
@@ -646,24 +636,19 @@ In this case, we defined a profile called `mode2` which has two states:
 this case that will play the show at 5x speed, so we'll see a very fast
 flashing.
 
-Also note that we added `block: true` to this profile. That means that
-when this profile is active, any shot profiles from lower priority modes
-will be disabled. Since mode2 runs at priority 200, the profile
-"my_first_profile" which we assigned in the base mode config
-(base.yaml) will be blocked.
+Also note that we added `block: true` to this profile. Because `mode2`
+runs at priority 200 (higher than `base` mode's priority 100), `block: true`
+prevents hits on `s_right_inlane` from propagating down to `my_first_shot`
+in `base` mode while `my_first_shot_mode2` is enabled.
 
-And, since the variable_player events in the base mode are based on the
-shot being hit with the "my_first_profile" applied, this is why when
-mode2 is running, we don't get the variable_player events from the base
-mode. Those events are not posted because my_first_profile is not active
-because the higher priority profile attached to the shot in mode2 is
-blocking it.
+Since `my_first_shot` in `base` mode is blocked while `mode2` is running,
+its `my_first_shot_my_first_profile_*_hit` events are not posted and `base`
+mode does not advance its shot or score points.
 
-If you were to remove the `block: true` from the mode2 profile in the
-mode2 config, then when you hit the shot while mode2 was active then you
-would get the scoring from both the base mode and mode2 mode applied.
-
-(not done writing yet...)
+If you were to remove `block: true` from the `mode2` profile (or set
+`block: false`), then hitting `s_right_inlane` while `mode2` is active
+would register on both shots, applying the scoring from both `mode2` and
+`base` mode.
 
 Next steps to write
 
