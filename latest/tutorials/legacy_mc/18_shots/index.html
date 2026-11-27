@@ -8195,10 +8195,10 @@ icons & this code generated via https://realfavicongenerator.net
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-configure-a-new-shot-profile-in-mode2" class="md-nav__link">
+  <a href="#5-configure-a-new-shot-and-shot-profile-in-mode2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5. Configure a new shot profile in mode2
+        5. Configure a new shot and shot profile in mode2
       
     </span>
   </a>
@@ -48764,10 +48764,10 @@ icons & this code generated via https://realfavicongenerator.net
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-configure-a-new-shot-profile-in-mode2" class="md-nav__link">
+  <a href="#5-configure-a-new-shot-and-shot-profile-in-mode2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5. Configure a new shot profile in mode2
+        5. Configure a new shot and shot profile in mode2
       
     </span>
   </a>
@@ -49137,9 +49137,9 @@ real machine) should result in the following sequence of total score
 (one for each hit): 100, 1100, 1100, 1200, 2200, 2200, 2300, 3300,
 3300...</p>
 <h2 id="4-add-a-second-mode-and-score-the-shot-from-there">4. Add a second mode and score the shot from there</h2>
-<p>One of the most powerful features of shot profiles is that shots can
-have multiple profiles defined at the same time (with each active mode
-having the ability to apply its own profile).</p>
+<p>Because shots are defined per-mode, you can react to a shot from any
+active mode or define a separate shot on the same switch in a higher-priority
+mode with its own shot profile.</p>
 <p>To illustrate this, we're going to create a new mode, called "mode2".
 So go ahead and create a <code>mode2</code> folder in your <code>modes</code> folder, then add
 the <code>config</code> folder into that folder, and then create the <code>mode2.yaml</code>
@@ -49231,22 +49231,16 @@ scoring depending on what state the shot is in.</p>
 <p>When you stop mode2 (with the <code>M</code> key), that removes the scoring from
 mode2, but since the base mode is still running, you still get the
 scoring from there.</p>
-<h2 id="5-configure-a-new-shot-profile-in-mode2">5. Configure a new shot profile in mode2</h2>
-<p>In the previous step, we added a new mode and accessed the shot from
-within that mode, but that new mode still used the same shot profile as
-the base mode.</p>
-<p>However, it's also possible to create a brand-new shot profile in a
-mode that will be applied to the shot when that mode is active.</p>
-<p>This is useful if you want to "override" a shot profile from a lower
-mode based on a higher priority mode. For example, maybe you have a
-stand-up target in your base mode that you're using for some basic
-scoring. But then in a jackpot mode, you want that target to flash a
-light instead of just the regular on/off behavior from the base mode.
-You would do this by applying a different shot profile in the jackpot
-mode.</p>
+<h2 id="5-configure-a-new-shot-and-shot-profile-in-mode2">5. Configure a new shot and shot profile in mode2</h2>
+<p>In the previous step, we added a new mode and scored <code>my_first_shot_hit</code>
+from within that mode, while <code>base</code> mode's shot profile still tracked the
+shot's state and lights.</p>
+<p>However, if you want a higher-priority mode to track its own state,
+lights, and scoring on that same switch, you can define a separate shot
+in <code>mode2</code> using that switch and assign it a new shot profile.</p>
 <p>To illustrate this, open up your <code>mode2.yaml</code> file and:</p>
 <ol>
-<li>Updated the <code>variable_player:</code> section from the example below</li>
+<li>Update the <code>variable_player:</code> section from the example below</li>
 <li>Add the <code>shots:</code> section from below</li>
 <li>Add the <code>shot_profiles:</code> section from below</li>
 </ol>
@@ -49280,7 +49274,7 @@ mode.</p>
 <p>Save your files and run your game again, pressing the following keys:</p>
 <ul>
 <li><code>S</code> - starts the game</li>
-<li><code>Q</code> - hits your shot, score jumps to 100,</li>
+<li><code>Q</code> - hits your shot, score jumps to 100</li>
 <li><code>Q</code> - hits your shot, score jumps to 1100</li>
 <li><code>N</code> - starts mode2. You should see a 1-second green message showing
     this</li>
@@ -49292,10 +49286,10 @@ mode.</p>
 <li><code>Q</code> - hits your shot, score jumps to 11,400</li>
 <li><code>Q</code> - hits your shot, score jumps to 12,400</li>
 </ul>
-<p>Let's deconstruct the changes to the <code>mode2.yaml</code> config file too see
+<p>Let's deconstruct the changes to the <code>mode2.yaml</code> config file to see
 what's going on.</p>
-<p>First, notice that we added a <code>shots:</code> section and then added
-"my_first_shot" to it, like this:</p>
+<p>First, notice that we added a <code>shots:</code> section with a new shot named
+<code>my_first_shot_mode2</code> using the same <code>s_right_inlane</code> switch:</p>
 <div class="highlight"><pre><span></span><code><span class="c1">##! mode: mode2</span>
 <span class="c1">#! shot_profiles:</span>
 <span class="c1">#!   mode2:</span>
@@ -49308,18 +49302,16 @@ what's going on.</p>
 <span class="c1">#!     loop: false</span>
 <span class="c1">#!     block: true</span>
 <span class="nt">shots</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">my_first_shot</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_first_shot_mode2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">switch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s_right_inlane</span>
 <span class="w">    </span><span class="nt">profile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mode2</span>
 </code></pre></div>
-<p>However, unlike the "my_first_shot" entry in the base mode config, in
-the mode2 config we did NOT redefine the <code>switch:</code> or <code>show_tokens:</code>
-entries. Instead, we just added the <code>profile:</code> setting and told it to
-use a profile called <code>mode2</code>.</p>
-<p>So what this means is that we're not creating a new shot or changing
-the configuration of the shot, rather, we're just saying that when
-mode2 is active, we want to apply a different shot profile to the shot.
-(Remember that settings from mode configuration files are only active
-when that mode is active.)</p>
+<p>Each shot in MPF is defined within a single mode and has one shot profile.
+By creating <code>my_first_shot_mode2</code> in <code>mode2</code> with the same switch, this
+shot is only active while <code>mode2</code> is running and tracks its state
+independently from <code>my_first_shot</code> in <code>base</code> mode. (Note that you would
+also add <code>show_tokens:</code> if you want <code>my_first_shot_mode2</code> to drive a
+light or LED while active.)</p>
 <p>Next, take a look at the <code>shot_profiles:</code> section:</p>
 <div class="highlight"><pre><span></span><code><span class="c1">##! mode: mode2</span>
 <span class="nt">shot_profiles</span><span class="p">:</span>
@@ -49341,21 +49333,17 @@ when that mode is active.)</p>
 <a href="../../../config/show_player/">show_player:</a> settings there. In
 this case that will play the show at 5x speed, so we'll see a very fast
 flashing.</p>
-<p>Also note that we added <code>block: true</code> to this profile. That means that
-when this profile is active, any shot profiles from lower priority modes
-will be disabled. Since mode2 runs at priority 200, the profile
-"my_first_profile" which we assigned in the base mode config
-(base.yaml) will be blocked.</p>
-<p>And, since the variable_player events in the base mode are based on the
-shot being hit with the "my_first_profile" applied, this is why when
-mode2 is running, we don't get the variable_player events from the base
-mode. Those events are not posted because my_first_profile is not active
-because the higher priority profile attached to the shot in mode2 is
-blocking it.</p>
-<p>If you were to remove the <code>block: true</code> from the mode2 profile in the
-mode2 config, then when you hit the shot while mode2 was active then you
-would get the scoring from both the base mode and mode2 mode applied.</p>
-<p>(not done writing yet...)</p>
+<p>Also note that we added <code>block: true</code> to this profile. Because <code>mode2</code>
+runs at priority 200 (higher than <code>base</code> mode's priority 100), <code>block: true</code>
+prevents hits on <code>s_right_inlane</code> from propagating down to <code>my_first_shot</code>
+in <code>base</code> mode while <code>my_first_shot_mode2</code> is enabled.</p>
+<p>Since <code>my_first_shot</code> in <code>base</code> mode is blocked while <code>mode2</code> is running,
+its <code>my_first_shot_my_first_profile_*_hit</code> events are not posted and <code>base</code>
+mode does not advance its shot or score points.</p>
+<p>If you were to remove <code>block: true</code> from the <code>mode2</code> profile (or set
+<code>block: false</code>), then hitting <code>s_right_inlane</code> while <code>mode2</code> is active
+would register on both shots, applying the scoring from both <code>mode2</code> and
+<code>base</code> mode.</p>
 <p>Next steps to write</p>
 <ul>
 <li>Show tokens</li>

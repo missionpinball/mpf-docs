@@ -49157,10 +49157,10 @@ happens when its hit. For example the shot profile might specify that
 the shot starts unlit, then when it's hit it becomes complete. Or a
 shot profile might specify that it's flashing slowly, and each hit
 makes it flash faster and faster until it's been hit enough times, etc.</p>
-<p>You can specify different shot profile on a per-mode basis, meaning a
-shot can have one behavior in the base mode and then take on another
-behavior when a higher-priority mode is started. The tracking of various
-states of the shot profiles is maintained on a per-mode basis.</p>
+<p>Shots are defined per-mode, and each shot has a single shot profile. If
+you want the same physical switch or target to have different shot
+behavior in another mode, define a separate shot (with a unique name) in
+that mode and assign it a different shot profile.</p>
 <p>You can group multiple shots together into <em>shot groups</em> for group-level
 functionality like posting events when all the shots in a group in the
 same state (lit, unlit, complete, etc.) and for rotating the states of
@@ -49209,8 +49209,7 @@ will be the name for this shot which is used throughout your machine.
 Remember that everything with at least one switch and a "state" is a
 shot, so standups, rollovers, inlane/outlines, ramps, loops... You will
 have lots of shots in your game.</p>
-<p>Each shot in your <code>shots:</code> section can have the following config options
-set:</p>
+<p>Each shot in your <code>shots:</code> section can have the following config options set:</p>
 <h2 id="optional-settings">Optional settings</h2>
 <p>The following sections are optional in the <code>shots:</code> section of your
 config. (If you don't include them, the default will be used).</p>
@@ -49231,8 +49230,7 @@ state (like selecting a shot to be active for skill shot).</p>
 <p>List of one (or more) values, each is a type:
 <a href="../shot_control_events/">shot_control_events:</a>. Defaults to empty.</p>
 <p>Control events to change the state of this shot. This supports jumping
-to state to a value that is specified. This is a <code>0</code> index, so the first
-state is <code>0</code>.</p>
+to state to a value that is specified. This is a <code>0</code> index, so the first state is <code>0</code>.</p>
 <p>For instance in the following example <code>set_state_one</code> will set the state
 to <code>1</code>, which is the second state:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">shots</span><span class="p">:</span>
@@ -49243,8 +49241,7 @@ to <code>1</code>, which is the second state:</p>
 </code></pre></div>
 <h3 id="delay_switch">delay_switch:</h3>
 <p>One or more sub-entries. Each in the format of string name of a
-<a href="../switches/">switches:</a> device :
-<code>time string (ms)</code>
+<a href="../switches/">switches:</a> device : <code>time string (ms)</code>
 (<a href="../instructions/time_strings/">Instructions for entering time strings</a>)</p>
 <p>A dictionary of switches and times which prevent hits for a certain
 time. You can use this if you got another lane feeding into your shot
@@ -49278,8 +49275,7 @@ it might cause issues during multiball.</p>
 <span class="c1">#! advance_time_and_run .1</span>
 <span class="c1">#! assert_event_called my_shot_hit</span>
 </code></pre></div>
-<p>In this example an activation of <code>s_other_lane</code> will prevent the shot
-from being hit for two seconds.</p>
+<p>In this example an activation of <code>s_other_lane</code> will prevent the shot from being hit for two seconds.</p>
 <h3 id="delay_event_list">delay_event_list:</h3>
 <div class="admonition info">
 <p>Configuration property new in MPF 0.81/0.58</p>
@@ -49292,15 +49288,15 @@ from being hit for two seconds.</p>
 (<a href="../instructions/device_control_events/">Instructions for entering device control events</a>). Defaults to empty.</p>
 <p>Default: <code>None</code></p>
 <p>Events in this list, when posted, disable this shot. If a shot is
-disabled, then hits to it have no effect. (e.g. The shot will remain in
-whatever state it's in.)</p>
+disabled, then hits to it have no effect. (e.g. The shot will remain in whatever state it's in.)</p>
 <h3 id="enable_events">enable_events:</h3>
 <p>Comma separated list of one (or more) device control events
 (<a href="../instructions/device_control_events/">Instructions for entering device control events</a>). Defaults to empty.</p>
 <p>Default: <code>None</code></p>
 <p>Events in this list, when posted, enable this shot. If a shot is not
 enabled, then hits to it have no effect. (e.g. The shot will remain in
-whatever state it's in.) If this setting is omitted, the shot is enabled by default. However if any value is set for "enable_events:", the shot will be disabled by default and will only be enabled once an enable event occurs.</p>
+whatever state it's in.) If this setting is omitted, the shot is enabled by default.
+However if any value is set for "enable_events:",the shot will be disabled by default and will only be enabled once an enable event occurs.</p>
 <h3 id="hit_events">hit_events:</h3>
 <p>List of one (or more) device control events
 (<a href="../instructions/device_control_events/">Instructions for entering device control events</a>). Defaults to empty.</p>
@@ -49308,8 +49304,7 @@ whatever state it's in.) If this setting is omitted, the shot is enabled by defa
 <p>Events in this list, when posted, cause this shot to be "hit". This is
 effectively the same thing as if the ball activated the switch
 associated with this shot, (or that the entire switch sequence has been
-completed), except it comes in via an event instead of from a switch
-activity.</p>
+completed), except it comes in via an event instead of from a switch activity.</p>
 <h3 id="mark_playfield_active">mark_playfield_active:</h3>
 <p>Single value, type: <code>boolean</code> (<code>true</code>/<code>false</code>). Default: <code>true</code></p>
 <div class="admonition success">
@@ -49326,52 +49321,31 @@ submit your change. It's easy! <span class="twemoji"><svg xmlns="http://www.w3.o
 <h3 id="persist_enable">persist_enable:</h3>
 <p>Single value, type: <code>boolean</code> (<code>true</code>/<code>false</code>). Default: <code>true</code></p>
 <p>Whether this shot should persist its enable state in a player variable.
-If set to <code>True</code> this will also persist the state into the next ball of
-the same player.</p>
+If set to <code>True</code> this will also persist the enabled/disabled-status into the next ball of the same player.
+This is unrelated to the shot profile state for the shot.</p>
 <h3 id="playfield">playfield:</h3>
-<p>Single value, type: <code>string</code> name of a
-<a href="../playfields/">playfields:</a> device. Default:
-<code>playfield</code></p>
+<p>Single value, type: <code>string</code> name of a <a href="../playfields/">playfields:</a> device. Default: <code>playfield</code></p>
 <p>On which playfield is this shot? This is only relevant when you have
 multiple playfields. It is used mostly for ball search.</p>
 <h3 id="profile">profile:</h3>
-<p>Single value, type: <code>string</code> name of a
-<a href="../shot_profiles/">shot_profiles:</a> device.
+<p>Single value, type: <code>string</code> name of a <a href="../shot_profiles/">shot_profiles:</a> device.
 Default: <code>default</code></p>
 <p>The name of the <em>shot profile</em> that will be applied to this shot.</p>
-<ul>
-<li>If you're editing a machine-wide config file , then the profile
-    name specified here will be the default profile for that shot any
-    time a mode-specific config doesn't override it. (If you don't
-    specify a profile name, MPF will assign the shot profile called
-    "default".)</li>
-<li>If you're in a mode configuration file , then this profile entry is
-    the name of the shot profile that will be applied only when this
-    mode is active. (i.e. it's applied when the mode starts and it's
-    removed when the mode ends.) Like other mode-specific settings, shot
-    profiles take on the priorities of the modes they're in, so if you
-    have a profile from a mode at priority 200 and another from priority
-    300, the profile from the priority 300 mode will be applied. If that
-    mode stops, then the shot will get the profile from the priority 200
-    mode.</li>
-</ul>
-<p>Shots can have (and track) multiple profiles at the same time (up to one
-profile per mode). Only the show from the highest-priority profile will
-play though.</p>
+<p>In previous versions of MPF it was possible for a single shot to have many profiles -- this is
+no longer true. Instead, to use different profiles on the same switch and lights, you must
+define multiple different shot configurations with different profiles, and enable and disable them as appropriate.</p>
 <h3 id="reset_events">reset_events:</h3>
 <p>List of one (or more) device control events
 (<a href="../instructions/device_control_events/">Instructions for entering device control events</a>). Defaults to empty.</p>
 <p>Default: <code>None</code></p>
-<p>Events in this list, when posted, reset this shot. Resetting a shot
-means that it jumps back to the first state in whatever <em>shot profile</em>
-is active at that time.</p>
+<p>Events in this list reset this shot when posted. Resetting a shot
+means that it jumps back to the first state in its shot profile.</p>
 <h3 id="restart_events">restart_events:</h3>
 <p>List of one (or more) device control events
 (<a href="../instructions/device_control_events/">Instructions for entering device control events</a>). Defaults to empty.</p>
 <p>Default: <code>None</code></p>
 <p>Events in this list, when posted, restart this shot. Restarting a shot
-is equivalent to resetting and then enabling the shot, done with a
-single event.</p>
+is equivalent to resetting and then enabling the shot, done with a single event.</p>
 <h3 id="show_tokens">show_tokens:</h3>
 <p>One or more sub-entries. Each in the format of <code>string</code> : template_str</p>
 <p>A subsection containing key-value pairs that are passed to the show
@@ -49426,13 +49400,11 @@ check if there are <code>enable_events</code>. The shot will start disabled in t
 case or enabled otherwise.</p>
 <h3 id="switch">switch:</h3>
 <p>List of one (or more) values, each is a type: string name of a
-<a href="../switches/">switches:</a> device. Defaults to
-empty.</p>
+<a href="../switches/">switches:</a> device. Defaults to empty.</p>
 <p>The name of the switch (or a list of switches) for this shot. You can
 use multiple switches if the shot happens to have multiple switches,
 though this is rare. (Maybe there are two standups on the sides of a
-ramp that you always want to be the same so you just create them as one
-logical shot?)</p>
+ramp that you always want to be the same so you just create them as one logical shot?)</p>
 <p>Do <em>not</em> enter multiple switches here for different shots, like for a
 bank of rollover lanes. In that case you would set up each shot as its
 own shot here and then group them via <code>shot_groups:</code>.</p>
@@ -49443,8 +49415,7 @@ just in case you have a shot where you want any of the switches being
 hit to count as that shot being hit.</p>
 <h3 id="switches">switches:</h3>
 <p>List of one (or more) values, each is a type: string name of a
-<a href="../switches/">switches:</a> device. Defaults to
-empty.</p>
+<a href="../switches/">switches:</a> device. Defaults to empty.</p>
 <p>This setting is the same as the <code>switch:</code> setting above. You can
 technically enter a single switch or a list of switches in either the
 <code>switch:</code> setting or the <code>switches:</code> setting, but we include both since
@@ -49457,19 +49428,16 @@ Default: <code>basic</code></p>
 <h3 id="debug">debug:</h3>
 <p>Single value, type: <code>boolean</code> (<code>true</code>/<code>false</code>). Default: <code>false</code></p>
 <p>Set this to <em>true</em> to add lots of logging information about this shot to
-the debug log. This is helpful when you're trying to troubleshoot
-problems with this shot.</p>
+the debug log. This is helpful when you're trying to troubleshoot problems with this shot.</p>
 <h3 id="file_log">file_log:</h3>
 <p>Single value, type: one of the following options: none, basic, full.
 Default: <code>basic</code></p>
 <p>Log level for the file log for this device.</p>
 <h3 id="label">label:</h3>
 <p>Single value, type: <code>string</code>. Default: <code>%</code></p>
-<p>The plain-English name for this device that will show up in operator
-menus and trouble reports.</p>
+<p>The plain-English name for this device that will show up in operator menus and trouble reports.</p>
 <h3 id="tags">tags:</h3>
-<p>List of one (or more) values, each is a type: <code>string</code>. Defaults to
-empty.</p>
+<p>List of one (or more) values, each is a type: <code>string</code>. Defaults to empty.</p>
 <p>A list of one or more tags that apply to this device. Tags allow you to
 access groups of devices by tag name.</p>
 <h2 id="related-how-to-guides">Related How To guides</h2>
