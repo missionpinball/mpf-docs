@@ -82,8 +82,7 @@ Remember that everything with at least one switch and a "state" is a
 shot, so standups, rollovers, inlane/outlines, ramps, loops... You will
 have lots of shots in your game.
 
-Each shot in your `shots:` section can have the following config options
-set:
+Each shot in your `shots:` section can have the following config options set:
 
 ## Optional settings
 
@@ -113,8 +112,7 @@ List of one (or more) values, each is a type:
 [shot_control_events:](shot_control_events.md). Defaults to empty.
 
 Control events to change the state of this shot. This supports jumping
-to state to a value that is specified. This is a `0` index, so the first
-state is `0`.
+to state to a value that is specified. This is a `0` index, so the first state is `0`.
 
 For instance in the following example `set_state_one` will set the state
 to `1`, which is the second state:
@@ -130,8 +128,7 @@ shots:
 ### delay_switch:
 
 One or more sub-entries. Each in the format of string name of a
-[switches:](switches.md) device :
-`time string (ms)`
+[switches:](switches.md) device : `time string (ms)`
 ([Instructions for entering time strings](instructions/time_strings.md))
 
 A dictionary of switches and times which prevent hits for a certain
@@ -170,8 +167,7 @@ shots:
 #! assert_event_called my_shot_hit
 ```
 
-In this example an activation of `s_other_lane` will prevent the shot
-from being hit for two seconds.
+In this example an activation of `s_other_lane` will prevent the shot from being hit for two seconds.
 
 ### delay_event_list:
 
@@ -192,8 +188,7 @@ Comma separated list of one (or more) device control events
 Default: `None`
 
 Events in this list, when posted, disable this shot. If a shot is
-disabled, then hits to it have no effect. (e.g. The shot will remain in
-whatever state it's in.)
+disabled, then hits to it have no effect. (e.g. The shot will remain in whatever state it's in.)
 
 ### enable_events:
 
@@ -204,7 +199,8 @@ Default: `None`
 
 Events in this list, when posted, enable this shot. If a shot is not
 enabled, then hits to it have no effect. (e.g. The shot will remain in
-whatever state it's in.) If this setting is omitted, the shot is enabled by default. However if any value is set for "enable_events:", the shot will be disabled by default and will only be enabled once an enable event occurs.
+whatever state it's in.) If this setting is omitted, the shot is enabled by default.
+However if any value is set for "enable_events:",the shot will be disabled by default and will only be enabled once an enable event occurs.
 
 ### hit_events:
 
@@ -216,8 +212,7 @@ Default: `None`
 Events in this list, when posted, cause this shot to be "hit". This is
 effectively the same thing as if the ball activated the switch
 associated with this shot, (or that the entire switch sequence has been
-completed), except it comes in via an event instead of from a switch
-activity.
+completed), except it comes in via an event instead of from a switch activity.
 
 ### mark_playfield_active:
 
@@ -230,30 +225,26 @@ Single value, type: `boolean` (`true`/`false`). Default: `true`
 Single value, type: `boolean` (`true`/`false`). Default: `true`
 
 Whether this shot should persist its enable state in a player variable.
-If set to `True` this will also persist the enabled/disabled-status into
-the next ball of the same player.
+If set to `True` this will also persist the enabled/disabled-status into the next ball of the same player.
 This is unrelated to the shot profile state for the shot.
 
 ### playfield:
 
-Single value, type: `string` name of a
-[playfields:](playfields.md) device. Default:
-`playfield`
+Single value, type: `string` name of a [playfields:](playfields.md) device. Default: `playfield`
 
 On which playfield is this shot? This is only relevant when you have
 multiple playfields. It is used mostly for ball search.
 
 ### profile:
 
-Single value, type: `string` name of a
-[shot_profiles:](shot_profiles.md) device.
+Single value, type: `string` name of a [shot_profiles:](shot_profiles.md) device.
 Default: `default`
 
 The name of the *shot profile* that will be applied to this shot.
 
 In previous versions of MPF it was possible for a single shot to have many profiles -- this is
-no longer true. Any references in the documentation to multiple shot profiles on a single shot
-definition are mistakes and should be reported as issues on Github.
+no longer true. Instead, to use different profiles on the same switch and lights, you must
+define multiple different shot configurations with different profiles, and enable and disable them as appropriate.
 
 ### reset_events:
 
@@ -273,8 +264,7 @@ List of one (or more) device control events
 Default: `None`
 
 Events in this list, when posted, restart this shot. Restarting a shot
-is equivalent to resetting and then enabling the shot, done with a
-single event.
+is equivalent to resetting and then enabling the shot, done with a single event.
 
 ### show_tokens:
 
@@ -347,14 +337,12 @@ case or enabled otherwise.
 ### switch:
 
 List of one (or more) values, each is a type: string name of a
-[switches:](switches.md) device. Defaults to
-empty.
+[switches:](switches.md) device. Defaults to empty.
 
 The name of the switch (or a list of switches) for this shot. You can
 use multiple switches if the shot happens to have multiple switches,
 though this is rare. (Maybe there are two standups on the sides of a
-ramp that you always want to be the same so you just create them as one
-logical shot?)
+ramp that you always want to be the same so you just create them as one logical shot?)
 
 Do *not* enter multiple switches here for different shots, like for a
 bank of rollover lanes. In that case you would set up each shot as its
@@ -369,8 +357,7 @@ hit to count as that shot being hit.
 ### switches:
 
 List of one (or more) values, each is a type: string name of a
-[switches:](switches.md) device. Defaults to
-empty.
+[switches:](switches.md) device. Defaults to empty.
 
 This setting is the same as the `switch:` setting above. You can
 technically enter a single switch or a list of switches in either the
@@ -390,8 +377,7 @@ Log level for the console log for this device.
 Single value, type: `boolean` (`true`/`false`). Default: `false`
 
 Set this to *true* to add lots of logging information about this shot to
-the debug log. This is helpful when you're trying to troubleshoot
-problems with this shot.
+the debug log. This is helpful when you're trying to troubleshoot problems with this shot.
 
 ### file_log:
 
@@ -404,13 +390,11 @@ Log level for the file log for this device.
 
 Single value, type: `string`. Default: `%`
 
-The plain-English name for this device that will show up in operator
-menus and trouble reports.
+The plain-English name for this device that will show up in operator menus and trouble reports.
 
 ### tags:
 
-List of one (or more) values, each is a type: `string`. Defaults to
-empty.
+List of one (or more) values, each is a type: `string`. Defaults to empty.
 
 A list of one or more tags that apply to this device. Tags allow you to
 access groups of devices by tag name.
