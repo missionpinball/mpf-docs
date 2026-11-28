@@ -19964,8 +19964,6 @@ icons & this code generated via https://realfavicongenerator.net
       
         
       
-        
-      
     
     
     
@@ -20417,34 +20415,6 @@ icons & this code generated via https://realfavicongenerator.net
   
   
     <li class="md-nav__item">
-      <a href="../../config/instructions/express_config/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Config player "express" configs
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../config/instructions/lists/" class="md-nav__link">
         
   
@@ -20577,6 +20547,8 @@ icons & this code generated via https://realfavicongenerator.net
       
         
       
+        
+      
     
     
     
@@ -20627,6 +20599,34 @@ icons & this code generated via https://realfavicongenerator.net
           </label>
           <ul class="md-nav__list" data-md-scrollfix="">
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../config/config_players/express_config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Express configs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -40901,6 +40901,23 @@ icons & this code generated via https://realfavicongenerator.net
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Tokens can be values too">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#light_player-token-support-in-shows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Light_player token support in shows
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -48757,6 +48774,23 @@ icons & this code generated via https://realfavicongenerator.net
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Tokens can be values too">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#light_player-token-support-in-shows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Light_player token support in shows
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -49046,6 +49080,43 @@ play like this:</p>
 <span class="w">        </span><span class="nt">led</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">led_02</span>
 <span class="w">        </span><span class="nt">color1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">green</span>
 <span class="w">        </span><span class="nt">color2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">blue</span>
+</code></pre></div>
+<h3 id="light_player-token-support-in-shows">Light_player token support in shows</h3>
+<p>The <a href="../../config/config_players/express_config/">light_player express config</a> syntax allows for use in shows with tokens for both color and hardcoded fades.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">show_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">some_event</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">two_color</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">led</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my_led</span>
+<span class="w">        </span><span class="nt">color1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
+<span class="w">        </span><span class="nt">color2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">blue</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1">##! show: two_color</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">(led)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(color1)-f100ms</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">(led)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(color2)-f50ms</span>
+</code></pre></div>
+<p>In MPF 0.59 and 0.82+, fade may also be specified with a separate token.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">show_player</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">some_event</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">two_color_v2</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">show_tokens</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">led</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my_led</span>
+<span class="w">        </span><span class="nt">color1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red</span>
+<span class="w">        </span><span class="nt">fade1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100ms</span>
+<span class="w">        </span><span class="nt">color2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">blue</span>
+<span class="w">        </span><span class="nt">fade2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">50ms</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1">##! show: two_color_v2</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">(led)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(color1)-f(fade1)</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">lights</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">(led)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(color2)-f(fade2)</span>
 </code></pre></div>
 <h2 id="values-in-tokens-can-be-conditional">Values in tokens can be conditional</h2>
 <p>Values in a token can be conditional too, for example they can depend on the player's score or any other machine or player variable.</p>
