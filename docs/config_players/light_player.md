@@ -149,7 +149,7 @@ In `play_rainbow_show_via_tag` we reference (two) lights via the tag
 ### Fade lights between steps
 
 There are two syntax to express fades. Short syntax which is
-`(color)-f(time)(unit)` (i.e. `red-f200ms`) or extended syntax which is
+`(color)-f(fade-time)` (i.e. `red-f200ms`) or extended syntax which is
 a dict with two entries for `color` and `fade`. Here is an example for
 the short syntax:
 
