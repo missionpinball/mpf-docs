@@ -225,6 +225,55 @@ show_player:
         color1: green
         color2: blue
 ```
+
+### Light_player token support in shows
+
+The [light_player express config](../config/config_players/express_config.md) syntax allows for use in shows with tokens for both color and hardcoded fades.
+
+``` yaml
+show_player:
+  some_event:
+    two_color:
+      show_tokens:
+        led: my_led
+        color1: red
+        color2: blue
+```
+
+``` yaml
+##! show: two_color
+- time: 0
+  lights:
+    (led): (color1)-f100ms
+- time: 1
+  lights:
+    (led): (color2)-f50ms
+```
+
+In MPF 0.59 and 0.82+, fade may also be specified with a separate token.
+
+``` yaml
+show_player:
+  some_event:
+    two_color_v2:
+      show_tokens:
+        led: my_led
+        color1: red
+        fade1: 100ms
+        color2: blue
+        fade2: 50ms
+```
+
+``` yaml
+##! show: two_color_v2
+- time: 0
+  lights:
+    (led): (color1)-f(fade1)
+- time: 1
+  lights:
+    (led): (color2)-f(fade2)
+```
+
 ## Values in tokens can be conditional
 
 Values in a token can be conditional too, for example they can depend on the player's score or any other machine or player variable.
