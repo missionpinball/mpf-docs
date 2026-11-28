@@ -43,7 +43,7 @@ whereas the second has a complete nested sub-configuration.
 
 The first example shows the "express" config, while the second shows
 the full config. (What's an "express config?" Details
-[here](instructions/express_config.md).
+[here](config_players/express_config.md).
 
 The coil player's express config is the "pulse" action.
 

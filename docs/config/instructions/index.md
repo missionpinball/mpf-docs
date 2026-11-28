@@ -22,7 +22,6 @@ This section contains instructions for how to do various things in config files.
 * [Text Templates](text_templates.md)
 
 * [Specifying Colors in Config Files](colors.md)
-* [Config player "express" configs](express_config.md)
 * [How to add lists to config files](lists.md)
 
 * [Gamma correction in MPF](gamma_correction.md)
@@ -31,5 +30,6 @@ This section contains instructions for how to do various things in config files.
 ## Additional Resources:
 
 * [Config Players in Machine/Mode files and Show files](../config_players/index.md)
+* [Config player "express" configs](../config_players/express_config.md)
 * [Show Configuration Format](../../shows/format.md)
 * [Creating Shows in Config Files](../../shows/config_shows.md)

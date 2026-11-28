@@ -754,13 +754,13 @@ nav:
       - How to enter time strings in config files: config/instructions/time_strings.md
       - Text Templates: config/instructions/text_templates.md
       - Specifying Colors in Config Files: config/instructions/colors.md
-      - Config player "express" configs: config/instructions/express_config.md
       - How to add lists to config files: config/instructions/lists.md
       - Gamma correction in MPF: config/instructions/gamma_correction.md
       - How to enter gain values in config files: config/instructions/gain_values.md
 
     - '"Config Player" Config Reference':
       - config/config_players/index.md
+      - "Express configs": config/config_players/express_config.md
       - "blinkenlight_player:": config/blinkenlight_player.md
       - "coil_player:": config/coil_player.md
       - "display_light_player:": config/display_light_player.md

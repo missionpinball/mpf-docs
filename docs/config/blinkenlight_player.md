@@ -59,7 +59,7 @@ Example blinkenlight player from a show:
 
 The first example shows the full config, while the second shows the
 "express" config. (What's an "express config?" Details
-[here](instructions/express_config.md).
+[here](config_players/express_config.md).
 
 The blinkenlight player's express config is the "add" action.
 
