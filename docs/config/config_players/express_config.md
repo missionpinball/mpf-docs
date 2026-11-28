@@ -1,8 +1,8 @@
 ---
-title: Config player "express" configs
+title: Config Player - Express Configs
 ---
 
-# Config player "express" configs
+# Config player - Express Configs
 
 Config_players support two general formats for specifying their behavior, full and express.
 The express format is used for common or simple cases, to reduce how much structure you need in your yaml files.
@@ -192,7 +192,7 @@ In shows, the light names (or tags) and colors may be specified with tokens. In 
 show_player:
   event1:
     my_show:
-      tokens:
+      show_tokens:
         light_group_1: light_1
         color: blue
         fade_rate: 50ms

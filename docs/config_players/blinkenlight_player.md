@@ -55,7 +55,7 @@ Note that the `some_event` example has a shortened config than the
 config. The blinkenlight's express config is the same thing as doing an
 "add" action with the color you specify. It's just a shorter way to
 do the same thing. You can read more about express configs
-[here](../config/instructions/express_config.md). Also, see the section below called Express Config for more
+[here](../config/config_players/express_config.md). Also, see the section below called Express Config for more
 information on the express config.
 
 To use a blinkenlight player, you first have to define a blinkenlight
